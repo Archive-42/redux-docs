@@ -39,8 +39,8 @@
     - <a href="../official/tutorials/fundamentals/part-7-standard-patterns.html" class="menu__link">Standard Redux Patterns</a>
     - <a href="../official/tutorials/fundamentals/part-8-modern-redux.html" class="menu__link">Modern Redux with Redux Toolkit</a>
 - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Recipes</a>
-    - <a href="immutable-update-patterns.html" class="menu__link menu__link--active active">Immutable Update Patterns</a>
-    - <a href="initializing-state.html" class="menu__link">Initializing State</a>
+  - <a href="immutable-update-patterns.html" class="menu__link menu__link--active active">Immutable Update Patterns</a>
+  - <a href="initializing-state.html" class="menu__link">Initializing State</a>
 - <a href="#!" class="menu__link menu__link--sublist">Understanding Redux</a>
   - <a href="#!" class="menu__link menu__link--sublist">Thinking in Redux</a>
     - <a href="../official/understanding/thinking-in-redux/motivation.html" class="menu__link">Motivation</a>
@@ -350,4 +350,3 @@ Initializing State »
 - [![Deploys by Netlify](../../../www.netlify.com/img/global/badges/netlify-color-accent.svg)](../../../www.netlify.com/index.html)
 
 <a href="../official/index.html" class="footerLogoLink_MyFc"><img src="../official/../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
-

@@ -22,13 +22,7 @@
 
 
 
-<li><a href="https://redux.js.org/api/api-reference" class="menu__link">API Reference</a></li>
-<li><a href="https://redux.js.org/api/createstore" class="menu__link">createStore</a></li>
-<li><a href="https://redux.js.org/api/store" class="menu__link">Store</a></li>
-<li><a href="https://redux.js.org/api/combinereducers" class="menu__link">combineReducers</a></li>
-<li><a href="https://redux.js.org/api/applymiddleware" class="menu__link menu__link--active active">applyMiddleware</a></li>
-<li><a href="https://redux.js.org/api/bindactioncreators" class="menu__link">bindActionCreators</a></li>
-<li><a href="https://redux.js.org/api/compose" class="menu__link">compose</a></li>
+
 <h1 id="applymiddleware...middleware"><span id="applymiddlewaremiddleware" class="anchor enhancedAnchor_2LWZ"></span><code class="language-js" >applyMiddleware(...middleware)</code><a href="#applymiddlewaremiddleware" class="hash-link" title="Direct link to heading">#</a></h1>
 <p>Middleware is the suggested way to extend Redux with custom functionality. Middleware lets you wrap the store’s <a href="https://redux.js.org/api/store#dispatchaction"><code class="language-js" >dispatch</code></a> method for fun and profit. The key feature of middleware is that it is composable. Multiple middleware can be combined together, where each middleware requires no knowledge of what comes before or after it in the chain.</p>
 <p>The most common use case for middleware is to support asynchronous actions without much boilerplate code or a dependency on a library like <a href="https://github.com/Reactive-Extensions/RxJS">Rx</a>. It does so by letting you dispatch <a href="https://redux.js.org/understanding/thinking-in-redux/glossary#async-action">async actions</a> in addition to normal actions.</p>
