@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>using-object-spread-operator</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+
+  </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
+
+<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
+    </head>
+<body>
+
+<ul>
+
+<ul>
+
+
+
+<ul>
+
+
+
+
+<li><a href="usage-with-typescript.html" class="menu__link">Usage With TypeScript</a></li>
+<li><a href="migrating-to-redux.html" class="menu__link">Migrating to Redux</a></li>
+<li><a href="using-object-spread-operator.html" class="menu__link menu__link--active active">Using Object Spread Operator</a></li>
+<li><a href="code-splitting.html" class="menu__link">Code Splitting</a></li>
+
+<ul>
+
+</ul></li>
+</ul></li>
+
+
+
+</ul></li>
+
+<ul>
+
+</ul></li>
+</ul></li>
+<li><a href="#!" class="menu__link menu__link--sublist">FAQ</a>
+<ul>
+
+</ul></li>
+
+<ul>
+
+</ul></li>
+
+
+</ul></li>
+<li><a href="#!" class="menu__link menu__link--sublist">Redux Toolkit</a>
+<ul>
+
+</ul></li>
+</ul>
+<h1 id="using-object-spread-operator"><span id="using-object-spread-operator" class="anchor enhancedAnchor_2LWZ"></span>Using Object Spread Operator<a href="#using-object-spread-operator" class="hash-link" title="Direct link to heading">#</a></h1>
+<p>Since one of the core tenets of Redux is to never mutate state, you’ll often find yourself using <a href="../../developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign.html"><code class="language-js >Object.assign()</code></a> to create copies of objects with new or updated values. For example, in the <code class="language-js >todoApp</code> below <code class="language-js >Object.assign()</code> is used to return a new <code class="language-js >state</code> object with an updated <code class="language-js >visibilityFilter</code> property:</p>
+<p><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">todoApp</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state </span><span class="token parameter operator" style="color: #f8f8f2">=</span><span class="token parameter"> initialState</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">switch</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">type</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token keyword" style="color: #f92672">case</span><span class="token plain"> </span><span class="token constant" style="color: #f92672">SET_VISIBILITY_FILTER</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token known-class-name class-name">Object</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">assign</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
+<p><span class="token plain"> visibilityFilter</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">filter</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> state</span></p>
+<p><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span></p>
+<p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
+<p>Copy</p>
+<p>While effective, using <code class="language-js >Object.assign()</code> can quickly make simple reducers difficult to read given its rather verbose syntax.</p>
+<p>An alternative approach is to use the <a href="../../github.com/tc39/proposal-object-rest-spread.html">object spread syntax</a> recently added to the JavaScript specification. It lets you use the spread (<code class="language-js >...</code>) operator to copy enumerable properties from one object to another in a more succinct way. The object spread operator is conceptually similar to the ES6 <a href="../../developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax.html">array spread operator</a>. We can simplify the <code class="language-js >todoApp</code> example above by using the object spread syntax:</p>
+<p><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">todoApp</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state </span><span class="token parameter operator" style="color: #f8f8f2">=</span><span class="token parameter"> initialState</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">switch</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">type</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token keyword" style="color: #f92672">case</span><span class="token plain"> </span><span class="token constant" style="color: #f92672">SET_VISIBILITY_FILTER</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> </span><span class="token spread operator" style="color: #f8f8f2">…</span><span class="token plain">state</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> visibilityFilter</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">filter</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> state</span></p>
+<p><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span></p>
+<p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
+<p>Copy</p>
+<p>The advantage of using the object spread syntax becomes more apparent when you’re composing complex objects. Below <code class="language-js >getAddedIds</code> maps an array of <code class="language-js >id</code> values to an array of objects with values returned from <code class="language-js >getProduct</code> and <code class="language-js >getQuantity</code>.</p>
+<p><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">getAddedIds</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">cart</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">map</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">id</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token known-class-name class-name">Object</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">assign</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">getProduct</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">products</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> id</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
+<p><span class="token plain"> quantity</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">getQuantity</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">cart</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> id</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span></p>
+<p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">)</span></p>
+<p>Copy</p>
+<p>Object spread lets us simplify the above <code class="language-js >map</code> call to:</p>
+<p><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">getAddedIds</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">cart</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">map</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">id</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token spread operator" style="color: #f8f8f2">…</span><span class="token method function property-access" style="color: #e6d874">getProduct</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">products</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> id</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span></p>
+<p><span class="token plain"> quantity</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">getQuantity</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">cart</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> id</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span></p>
+<p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span></p>
+<p>Copy</p>
+<p>While the object spread syntax is a <a href="../../github.com/tc39/proposal-object-rest-spread.html#status-of-this-proposal">Stage 4</a> proposal for ECMAScript and accepted for the 2018 specification release, you will still need to use a transpiler such as <a href="../../babeljs.io/index.html">Babel</a> to use it in production systems. You should use the <a href="../../github.com/babel/babel/tree/master/packages/babel-preset-env.html"><code class="language-js >env</code></a> preset, install <a href="../../babeljs.io/docs/en/babel-plugin-proposal-object-rest-spread.html"><code class="language-js >@babel/plugin-proposal-object-rest-spread</code></a> and add it individually to the <code class="language-js >plugins</code> array in your <code class="language-js >.babelrc</code>.</p>
+<p><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token property" style="color: #f92672">“presets”</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">[</span><span class="token string" style="color: #a6e22e">“<span class="citation" data-cites="babel/preset-env">@babel/preset-env</span>”</span><span class="token punctuation" style="color: #f8f8f2">]</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token property" style="color: #f92672">“plugins”</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">[</span><span class="token string" style="color: #a6e22e">“<span class="citation" data-cites="babel/plugin-proposal-object-rest-spread">@babel/plugin-proposal-object-rest-spread</span>”</span><span class="token punctuation" style="color: #f8f8f2">]</span><span class="token plain"></span></p>
+<p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
+<p>Copy</p>
+<blockquote>
+<h5 id="note-on-object-spread-operator"><span id="note-on-object-spread-operator" class="anchor enhancedAnchor_2LWZ"></span>Note on Object Spread Operator<a href="#note-on-object-spread-operator" class="hash-link" title="Direct link to heading">#</a></h5>
+</blockquote>
+<blockquote>
+<p>Like the Array Spread Operator, the Object Spread Operator creates a <a href="../../developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax.html#Spread_in_object_literals">shallow clone</a> of the original object. In other words, for multidimensional source objects, elements in the copied object at a depth greater than one are mere references to the source object (with the exception of <a href="../../developer.mozilla.org/en-US/docs/Glossary/Primitive.html">primitives</a>, which are copied). Thus, you cannot reliably use the Object Spread Operator (<code class="language-js >...</code>) for deep cloning objects.</p>
+</blockquote>
+<p><a href="migrating-to-redux.html" class="pagination-nav__link"></a></p>
+
+<p>« Migrating to Redux</p>
+<p><a href="reducing-boilerplate.html" class="pagination-nav__link"></a></p>
+
+<p>Reducing Boilerplate »</p>
+
+
+</ul>
+
+
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>isolating-redux-sub-apps</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+
+  </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
+
+<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
+    </head>
+<body>
+
+<ul>
+
+<ul>
+
+
+
+<ul>
+
+
+
+
+class="menu__link">Implementing Undo History</a></li>
+<li><a href="isolating-redux-sub-apps.html" class="menu__link menu__link--active active">Isolating Redux Sub-Apps</a></li>
+<li><a href="code-splitting.html" class="menu__link">Code Splitting</a></li>
+
+<ul>
+
+</ul></li>
+</ul></li>
+
+
+
+</ul></li>
+
+<ul>
+
+</ul></li>
+</ul></li>
+<li><a href="#!" class="menu__link menu__link--sublist">FAQ</a>
+<ul>
+
+</ul></li>
+
+<ul>
+
+</ul></li>
+
+
+</ul></li>
+<li><a href="#!" class="menu__link menu__link--sublist">Redux Toolkit</a>
+<ul>
+
+</ul></li>
+</ul>
+<h1 id="isolating-redux-sub-apps"><span id="isolating-redux-sub-apps" class="anchor enhancedAnchor_2LWZ"></span>Isolating Redux Sub-Apps<a href="#isolating-redux-sub-apps" class="hash-link" title="Direct link to heading">#</a></h1>
+<p>Consider the case of a “big” app (contained in a <code class="language-js >&lt;BigApp&gt;</code> component) that embeds smaller “sub-apps” (contained in <code class="language-js >&lt;SubApp&gt;</code> components):</p>
+<p><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">React</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> </span><span class="token imports maybe-class-name">Component</span><span class="token imports"> </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘react’</span><span class="token plain"></span></p>
+<p><span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">SubApp</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘./subapp’</span><span class="token plain"></span></p>
+<p><span class="token plain" style="display: inline-block"> </span></p>
+<p><span class="token plain"></span><span class="token keyword" style="color: #f92672">class</span><span class="token plain"> </span><span class="token class-name">BigApp</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">extends</span><span class="token plain"> </span><span class="token class-name">Component</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token function" style="color: #e6d874">render</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token plain">div</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token maybe-class-name">SubApp</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">/</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token maybe-class-name">SubApp</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">/</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token maybe-class-name">SubApp</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">/</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token operator" style="color: #f8f8f2">/</span><span class="token plain">div</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span></p>
+<p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
+<p>Copy</p>
+<p>These <code class="language-js >&lt;SubApp&gt;</code>s will be completely independent. They won’t share data or actions, and won’t see or communicate with each other.</p>
+<p>It’s best not to mix this approach with standard Redux reducer composition. For typical web apps, stick with reducer composition. For “product hubs”, “dashboards”, or enterprise software that groups disparate tools into a unified package, give the sub-app approach a try.</p>
+<p>The sub-app approach is also useful for large teams that are divided by product or feature verticals. These teams can ship sub-apps independently or in combination with an enclosing “app shell”.</p>
+<p>Below is a sub-app’s root connected component. As usual, it can render more components, connected or not, as children. Usually we’d render it in <code class="language-js >&lt;Provider&gt;</code> and be done with it.</p>
+<p><span class="token keyword" style="color: #f92672">class</span><span class="token plain"> </span><span class="token class-name">App</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">extends</span><span class="token plain"> </span><span class="token class-name">Component</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> </span><span class="token spread operator" style="color: #f8f8f2">…</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span></p>
+<p><span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">connect</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">mapStateToProps</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token maybe-class-name">App</span><span class="token punctuation" style="color: #f8f8f2">)</span></p>
+<p>Copy</p>
+<p>However, we don’t have to call <code class="language-js >ReactDOM.render(&lt;Provider&gt;&lt;App /&gt;&lt;/Provider&gt;)</code> if we’re interested in hiding the fact that the sub-app component is a Redux app.</p>
+<p>Maybe we want to be able to run multiple instances of it in the same “bigger” app and keep it as a complete black box, with Redux being an implementation detail.</p>
+<p>To hide Redux behind a React API, we can wrap it in a special component that initializes the store in the constructor:</p>
+<p><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">React</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> </span><span class="token imports maybe-class-name">Component</span><span class="token imports"> </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘react’</span><span class="token plain"></span></p>
+<p><span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> </span><span class="token imports maybe-class-name">Provider</span><span class="token imports"> </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘react-redux’</span><span class="token plain"></span></p>
+<p><span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘redux’</span><span class="token plain"></span></p>
+<p><span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">reducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘./reducers’</span><span class="token plain"></span></p>
+<p><span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">App</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘./App’</span><span class="token plain"></span></p>
+<p><span class="token plain" style="display: inline-block"> </span></p>
+<p><span class="token plain"></span><span class="token keyword" style="color: #f92672">class</span><span class="token plain"> </span><span class="token class-name">SubApp</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">extends</span><span class="token plain"> </span><span class="token class-name">Component</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token function" style="color: #e6d874">constructor</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">props</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token keyword" style="color: #f92672">super</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">props</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token keyword" style="color: #f92672">this</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">store</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createStore</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">reducer</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span></p>
+<p><span class="token plain" style="display: inline-block"> </span></p>
+<p><span class="token plain"> </span><span class="token function" style="color: #e6d874">render</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token maybe-class-name">Provider</span><span class="token plain"> store</span><span class="token operator" style="color: #f8f8f2">=</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token keyword" style="color: #f92672">this</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">store</span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token maybe-class-name">App</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">/</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token operator" style="color: #f8f8f2">/</span><span class="token maybe-class-name">Provider</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span></p>
+<p><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span></p>
+<p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
+<p>Copy</p>
+<p>This way every instance will be independent.</p>
+<p>This pattern is <em>not</em> recommended for parts of the same app that share data. However, it can be useful when the bigger app has zero access to the smaller apps’ internals, and we’d like to keep the fact that they are implemented with Redux as an implementation detail. Each component instance will have its own store, so they won’t “know” about each other.</p>
+<p><a href="implementing-undo-history.html" class="pagination-nav__link"></a></p>
+
+<p>« Implementing Undo History</p>
+<p><a href="code-splitting.html" class="pagination-nav__link"></a></p>
+
+<p>Code Splitting »</p>
+
+
+</ul>
+
+
+
+</body>
+</html>

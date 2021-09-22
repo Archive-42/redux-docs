@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>api-reference</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+
+  </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
+
+<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
+    </head>
+<body>
+
+<p><a href="../introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="../tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="api-reference.html" class="navbar__item navbar__link navbar__link--active">API</a><a href="../faq.html" class="navbar__item navbar__link">FAQ</a><a href="../style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a></p>
+
+
+
+
+<ul>
+<li><a href="../introduction/getting-started.html" class="menu__link">Getting Started</a></li>
+<li><a href="../tutorials/essentials/part-1-overview-concepts.html" class="menu__link">Tutorial</a></li>
+<li><a href="api-reference.html" class="menu__link navbar__link--active">API</a></li>
+<li><a href="../faq.html" class="menu__link">FAQ</a></li>
+<li><a href="../style-guide/style-guide.html" class="menu__link">Best Practices</a></li>
+<li><a href="../official/github.com/reduxjs/redux.html" class="menu__link">GitHub</a></li>
+<li><p><a href="../introduction/getting-started.html#help-and-discussion" class="menu__link">Need help?</a></p></li>
+<li><a href="#!" class="menu__link menu__link--sublist">Introduction</a>
+<ul>
+
+
+
+<ul>
+
+
+
+</ul></li>
+</ul></li>
+<li><a href="#!" class="menu__link menu__link--sublist">Recipes</a>
+<ul>
+<li><a href="../recipes/recipe-index.html" class="menu__link">Recipes: Index</a></li>
+<li><a href="../recipes/configuring-your-store.html" class="menu__link">Configuring Your Store</a></li>
+<li><a href="../recipes/usage-with-typescript.html" class="menu__link">Usage With TypeScript</a></li>
+<li><a href="../recipes/migrating-to-redux.html" class="menu__link">Migrating to Redux</a></li>
+<li><a href="../recipes/using-object-spread-operator.html" class="menu__link">Using Object Spread Operator</a></li>
+<li><a href="../recipes/reducing-boilerplate.html" class="menu__link">Reducing Boilerplate</a></li>
+<li><a href="../recipes/server-rendering.html" class="menu__link">Server Rendering</a></li>
+<li><a href="../recipes/writing-tests.html" class="menu__link">Writing Tests</a></li>
+<li><a href="../recipes/computing-derived-data.html" class="menu__link">Computing Derived Data</a></li>
+<li><a href="../recipes/implementing-undo-history.html" class="menu__link">Implementing Undo History</a></li>
+<li><a href="../recipes/isolating-redux-sub-apps.html" class="menu__link">Isolating Redux Sub-Apps</a></li>
+<li><a href="../recipes/code-splitting.html" class="menu__link">Code Splitting</a></li>
+<li><a href="../recipes/troubleshooting.html" class="menu__link">Troubleshooting</a></li>
+<li><a href="#!" class="menu__link menu__link--sublist">Structuring Reducers</a>
+<ul>
+<li><a href="../recipes/structuring-reducers/structuring-reducers.html" class="menu__link">Structuring Reducers</a></li>
+<li><a href="../recipes/structuring-reducers/prerequisite-concepts.html" class="menu__link">Prerequisite Concepts</a></li>
+<li><a href="../recipes/structuring-reducers/basic-reducer-structure.html" class="menu__link">Basic Reducer Structure</a></li>
+<li><a href="../recipes/structuring-reducers/splitting-reducer-logic.html" class="menu__link">Splitting Reducer Logic</a></li>
+<li><a href="../recipes/structuring-reducers/refactoring-reducer-example.html" class="menu__link">Refactoring Reducers Example</a></li>
+<li><a href="../recipes/structuring-reducers/using-combinereducers.html" class="menu__link">Using combineReducers</a></li>
+<li><a href="../recipes/structuring-reducers/beyond-combinereducers.html" class="menu__link">Beyond combineReducers</a></li>
+<li><a href="../recipes/structuring-reducers/normalizing-state-shape.html" class="menu__link">Normalizing State Shape</a></li>
+<li><a href="../recipes/structuring-reducers/updating-normalized-data.html" class="menu__link">Updating Normalized Data</a></li>
+<li><a href="../recipes/structuring-reducers/reusing-reducer-logic.html" class="menu__link">Reusing Reducer Logic</a></li>
+<li><a href="../recipes/structuring-reducers/immutable-update-patterns.html" class="menu__link">Immutable Update Patterns</a></li>
+<li><a href="../recipes/structuring-reducers/initializing-state.html" class="menu__link">Initializing State</a></li>
+</ul></li>
+</ul></li>
+
+
+
+</ul></li>
+
+<ul>
+
+</ul></li>
+</ul></li>
+<li><a href="#!" class="menu__link menu__link--sublist">FAQ</a>
+<ul>
+
+</ul></li>
+
+<ul>
+
+</ul></li>
+<li><a href="#!" class="menu__link menu__link--sublist menu__link--active">API Reference</a>
+<ul>
+<li><a href="api-reference.html" class="menu__link menu__link--active active">API Reference</a></li>
+<li><a href="createstore.html" class="menu__link">createStore</a></li>
+<li><a href="store.html" class="menu__link">Store</a></li>
+<li><a href="combinereducers.html" class="menu__link">combineReducers</a></li>
+<li><a href="applymiddleware.html" class="menu__link">applyMiddleware</a></li>
+<li><a href="bindactioncreators.html" class="menu__link">bindActionCreators</a></li>
+<li><a href="compose.html" class="menu__link">compose</a></li>
+</ul></li>
+<li><a href="#!" class="menu__link menu__link--sublist">Redux Toolkit</a>
+<ul>
+
+</ul></li>
+</ul>
+<h1 id="api-reference"><span id="api-reference" class="anchor enhancedAnchor_2LWZ"></span>API Reference<a href="#api-reference" class="hash-link" title="Direct link to heading">#</a></h1>
+<p>The Redux API surface is tiny. Redux defines a set of contracts for you to implement (such as <a href="../understanding/thinking-in-redux/glossary.html#reducer">reducers</a>) and provides a few helper functions to tie these contracts together.</p>
+<p>This section documents the complete Redux API. Keep in mind that Redux is only concerned with managing the state. In a real app, you’ll also want to use UI bindings like <a href="../../github.com/reduxjs/react-redux.html">react-redux</a>.</p>
+<h3 id="top-level-exports"><span id="top-level-exports" class="anchor enhancedAnchor_2LWZ"></span>Top-Level Exports<a href="#top-level-exports" class="hash-link" title="Direct link to heading">#</a></h3>
+<ul>
+<li><a href="createstore.html">createStore(reducer, [preloadedState], [enhancer])</a></li>
+<li><a href="combinereducers.html">combineReducers(reducers)</a></li>
+<li><a href="applymiddleware.html">applyMiddleware(…middlewares)</a></li>
+<li><a href="bindactioncreators.html">bindActionCreators(actionCreators, dispatch)</a></li>
+<li><a href="compose.html">compose(…functions)</a></li>
+</ul>
+<h3 id="store-api"><span id="store-api" class="anchor enhancedAnchor_2LWZ"></span>Store API<a href="#store-api" class="hash-link" title="Direct link to heading">#</a></h3>
+<ul>
+<li><a href="store.html">Store</a>
+<ul>
+<li><a href="store.html#getState">getState()</a></li>
+<li><a href="store.html#dispatchaction">dispatch(action)</a></li>
+<li><a href="store.html#subscribelistener">subscribe(listener)</a></li>
+<li><a href="store.html#replacereducernextreducer">replaceReducer(nextReducer)</a></li>
+</ul></li>
+</ul>
+<h3 id="importing"><span id="importing" class="anchor enhancedAnchor_2LWZ"></span>Importing<a href="#importing" class="hash-link" title="Direct link to heading">#</a></h3>
+<p>Every function described above is a top-level export. You can import any of them like this:</p>
+<h4 id="es6"><span id="es6" class="anchor enhancedAnchor_2LWZ"></span>ES6<a href="#es6" class="hash-link" title="Direct link to heading">#</a></h4>
+<p><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘redux’</span></p>
+<p>Copy</p>
+<h4 id="es5-commonjs"><span id="es5-commonjs" class="anchor enhancedAnchor_2LWZ"></span>ES5 (CommonJS)<a href="#es5-commonjs" class="hash-link" title="Direct link to heading">#</a></h4>
+<p><span class="token keyword" style="color: #f92672">var</span><span class="token plain"> createStore </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">require</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">‘redux’</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">createStore</span></p>
+<p>Copy</p>
+<h4 id="es5-umd-build"><span id="es5-umd-build" class="anchor enhancedAnchor_2LWZ"></span>ES5 (UMD build)<a href="#es5-umd-build" class="hash-link" title="Direct link to heading">#</a></h4>
+<p><span class="token keyword" style="color: #f92672">var</span><span class="token plain"> createStore </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token maybe-class-name">Redux</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">createStore</span></p>
+<p>Copy</p>
+<p><a href="../style-guide/style-guide.html" class="pagination-nav__link"></a></p>
+
+<p>« Style Guide</p>
+<p><a href="createstore.html" class="pagination-nav__link"></a></p>
+
+<p>createStore »</p>
+<ul>
+<li><a href="#top-level-exports" class="table-of-contents__link">Top-Level Exports</a></li>
+<li><a href="#store-api" class="table-of-contents__link">Store API</a></li>
+<li><a href="#importing" class="table-of-contents__link">Importing</a></li>
+</ul>
+
+<ul>
+<li><a href="../introduction/getting-started.html" class="footer__link-item">Getting Started</a></li>
+<li><a href="../tutorials/essentials/part-1-overview-concepts.html" class="footer__link-item">Tutorial</a></li>
+<li><a href="../faq.html" class="footer__link-item">FAQ</a></li>
+<li><a href="api-reference.html" class="footer__link-item">API Reference</a></li>
+</ul>
+
+<ul>
+
+</ul>
+
+
+
+</body>
+</html>

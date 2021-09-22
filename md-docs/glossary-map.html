@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Markmap</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #mindmap {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.1.5/dist/style.min.css"
+    />
+  </head>
+  <body>
+    <svg id="mindmap"></svg>
+    <script src="https://cdn.jsdelivr.net/npm/d3@6.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.1.5/dist/index.umd.min.js"></script>
+    <script>
+      ((r) => {
+        setTimeout(r);
+      })(() => {
+        const { markmap, mm } = window;
+        const toolbar = new markmap.Toolbar();
+        toolbar.attach(mm);
+        const el = toolbar.render();
+        el.setAttribute("style", "position:absolute;bottom:20px;right:20px");
+        document.body.append(el);
+      });
+    </script>
+    <script>
+      ((getMarkmap, getOptions, data) => {
+        const { Markmap } = getMarkmap();
+        window.mm = Markmap.create(
+          "svg#mindmap",
+          getOptions == null ? void 0 : getOptions(),
+          data
+        );
+      })(() => window.markmap, null, {
+        t: "root",
+        d: 0,
+        v: "",
+        c: [
+          {
+            t: "paragraph",
+            d: 1,
+            p: { lines: [0, 1] },
+            v: '<a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>',
+          },
+          {
+            t: "paragraph",
+            d: 1,
+            p: { lines: [2, 3] },
+            v: '<a href="../official/introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="../official/tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../official/api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../official/faq.html" class="navbar__item navbar__link">FAQ</a><a href="../official/style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/../github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../official/introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>',
+          },
+          {
+            t: "paragraph",
+            d: 1,
+            p: { lines: [4, 5] },
+            v: '<span class="toggle_71bT">🌜</span>',
+          },
+          {
+            t: "paragraph",
+            d: 1,
+            p: { lines: [6, 7] },
+            v: '<span class="toggle_71bT">🌞</span>',
+          },
+          {
+            t: "paragraph",
+            d: 1,
+            p: { lines: [8, 9] },
+            v: '<span class="DocSearch-Button-Placeholder">Search</span>',
+          },
+          {
+            t: "paragraph",
+            d: 1,
+            p: { lines: [10, 11] },
+            v: '<a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>',
+          },
+          {
+            t: "bullet_list",
+            d: 1,
+            p: { lines: [12, 108] },
+            v: "",
+            c: [
+              {
+                t: "list_item",
+                d: 2,
+                p: { lines: [12, 13] },
+                v: '<a href="../official/introduction/getting-started.html" class="menu__link">Getting Started</a>',
+              },
+              {
+                t: "list_item",
+                d: 2,
+                p: { lines: [13, 14] },
+                v: '<a href="../official/tutorials/essentials/part-1-overview-concepts.html" class="menu__link">Tutorial</a>',
+              },
+              {
+                t: "list_item",
+                d: 2,
+                p: { lines: [14, 15] },
+                v: '<a href="../official/api/api-reference.html" class="menu__link">API</a>',
+              },
+              {
+                t: "list_item",
+                d: 2,
+                p: { lines: [15, 16] },
+                v: '<a href="../official/faq.html" class="menu__link">FAQ</a>',
+              },
+              {
+                t: "list_item",
+                d: 2,
+                p: { lines: [16, 17] },
+                v: '<a href="../official/style-guide/style-guide.html" class="menu__link">Best Practices</a>',
+              },
+              {
+                t: "list_item",
+                d: 2,
+                p: { lines: [17, 18] },
+                v: '<a href="../official/../github.com/reduxjs/redux.html" class="menu__link">GitHub</a>',
+              },
+              {
+                t: "list_item",
+                d: 2,
+                p: { lines: [18, 19] },
+                v: '<a href="../official/introduction/getting-started.html#help-and-discussion" class="menu__link">Need help?</a>',
+              },
+              {
+                t: "list_item",
+                d: 2,
+                p: { lines: [20, 21] },
+                v: '<a href="#!" class="menu__link menu__link--sublist">Introduction</a>',
+                c: [
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [21, 22] },
+                    v: '<a href="../official/introduction/getting-started.html" class="menu__link">Getting Started with Redux</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [22, 23] },
+                    v: '<a href="../official/introduction/installation.html" class="menu__link">Installation</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [23, 24] },
+                    v: '<a href="../official/introduction/core-concepts.html" class="menu__link">Core Concepts</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [24, 25] },
+                    v: '<a href="../official/introduction/learning-resources.html" class="menu__link">Learning Resources</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [25, 26] },
+                    v: '<a href="../official/introduction/ecosystem.html" class="menu__link">Ecosystem</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [26, 27] },
+                    v: '<a href="../official/introduction/examples.html" class="menu__link">Examples</a>',
+                  },
+                ],
+              },
+              {
+                t: "list_item",
+                d: 2,
+                p: { lines: [27, 28] },
+                v: '<a href="#!" class="menu__link menu__link--sublist">Tutorials</a>',
+                c: [
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [28, 29] },
+                    v: '<a href="../official/tutorials/index.html" class="menu__link">Tutorials Index</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [29, 30] },
+                    v: '<a href="../official/tutorials/quick-start.html" class="menu__link">Quick Start</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [30, 31] },
+                    v: '<a href="../official/tutorials/typescript-quick-start.html" class="menu__link">TypeScript Quick Start</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [31, 32] },
+                    v: '<a href="#!" class="menu__link menu__link--sublist">Redux Essentials</a>',
+                    c: [
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [32, 33] },
+                        v: '<a href="../official/tutorials/essentials/part-1-overview-concepts.html" class="menu__link">Redux Overview and Concepts</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [33, 34] },
+                        v: '<a href="../official/tutorials/essentials/part-2-app-structure.html" class="menu__link">Redux App Structure</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [34, 35] },
+                        v: '<a href="../official/tutorials/essentials/part-3-data-flow.html" class="menu__link">Basic Redux Data Flow</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [35, 36] },
+                        v: '<a href="../official/tutorials/essentials/part-4-using-data.html" class="menu__link">Using Redux Data</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [36, 37] },
+                        v: '<a href="../official/tutorials/essentials/part-5-async-logic.html" class="menu__link">Async Logic and Data Fetching</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [37, 38] },
+                        v: '<a href="../official/tutorials/essentials/part-6-performance-normalization.html" class="menu__link">Performance and Normalizing Data</a>',
+                      },
+                    ],
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [38, 39] },
+                    v: '<a href="#!" class="menu__link menu__link--sublist">Redux Fundamentals</a>',
+                    c: [
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [39, 40] },
+                        v: '<a href="../official/tutorials/fundamentals/part-1-overview.html" class="menu__link">Redux Overview</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [40, 41] },
+                        v: '<a href="../official/tutorials/fundamentals/part-2-concepts-data-flow.html" class="menu__link">Redux Concepts and Data Flow</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [41, 42] },
+                        v: '<a href="../official/tutorials/fundamentals/part-3-state-actions-reducers.html" class="menu__link">State, Actions, and Reducers</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [42, 43] },
+                        v: '<a href="../official/tutorials/fundamentals/part-4-store.html" class="menu__link">Store</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [43, 44] },
+                        v: '<a href="../official/tutorials/fundamentals/part-5-ui-react.html" class="menu__link">UI and React</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [44, 45] },
+                        v: '<a href="../official/tutorials/fundamentals/part-6-async-logic.html" class="menu__link">Async Logic and Data Fetching</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [45, 46] },
+                        v: '<a href="../official/tutorials/fundamentals/part-7-standard-patterns.html" class="menu__link">Standard Redux Patterns</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [46, 47] },
+                        v: '<a href="../official/tutorials/fundamentals/part-8-modern-redux.html" class="menu__link">Modern Redux with Redux Toolkit</a>',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                t: "list_item",
+                d: 2,
+                p: { lines: [47, 48] },
+                v: '<a href="#!" class="menu__link menu__link--sublist">Recipes</a>',
+                c: [
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [48, 49] },
+                    v: '<a href="../official/recipes/recipe-index.html" class="menu__link">Recipes: Index</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [49, 50] },
+                    v: '<a href="../official/recipes/configuring-your-store.html" class="menu__link">Configuring Your Store</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [50, 51] },
+                    v: '<a href="../official/recipes/usage-with-typescript.html" class="menu__link">Usage With TypeScript</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [51, 52] },
+                    v: '<a href="../official/recipes/migrating-to-redux.html" class="menu__link">Migrating to Redux</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [52, 53] },
+                    v: '<a href="../official/recipes/using-object-spread-operator.html" class="menu__link">Using Object Spread Operator</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [53, 54] },
+                    v: '<a href="../official/recipes/reducing-boilerplate.html" class="menu__link">Reducing Boilerplate</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [54, 55] },
+                    v: '<a href="../official/recipes/server-rendering.html" class="menu__link">Server Rendering</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [55, 56] },
+                    v: '<a href="../official/recipes/writing-tests.html" class="menu__link">Writing Tests</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [56, 57] },
+                    v: '<a href="../official/recipes/computing-derived-data.html" class="menu__link">Computing Derived Data</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [57, 58] },
+                    v: '<a href="../official/recipes/implementing-undo-history.html" class="menu__link">Implementing Undo History</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [58, 59] },
+                    v: '<a href="../official/recipes/isolating-redux-sub-apps.html" class="menu__link">Isolating Redux Sub-Apps</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [59, 60] },
+                    v: '<a href="../official/recipes/code-splitting.html" class="menu__link">Code Splitting</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [60, 61] },
+                    v: '<a href="../official/recipes/troubleshooting.html" class="menu__link">Troubleshooting</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [61, 62] },
+                    v: '<a href="#!" class="menu__link menu__link--sublist">Structuring Reducers</a>',
+                    c: [
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [62, 63] },
+                        v: '<a href="../official/recipes/structuring-reducers/structuring-reducers.html" class="menu__link">Structuring Reducers</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [63, 64] },
+                        v: '<a href="../official/recipes/structuring-reducers/prerequisite-concepts.html" class="menu__link">Prerequisite Concepts</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [64, 65] },
+                        v: '<a href="../official/recipes/structuring-reducers/basic-reducer-structure.html" class="menu__link">Basic Reducer Structure</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [65, 66] },
+                        v: '<a href="../official/recipes/structuring-reducers/splitting-reducer-logic.html" class="menu__link">Splitting Reducer Logic</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [66, 67] },
+                        v: '<a href="../official/recipes/structuring-reducers/refactoring-reducer-example.html" class="menu__link">Refactoring Reducers Example</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [67, 68] },
+                        v: '<a href="../official/recipes/structuring-reducers/using-combinereducers.html" class="menu__link">Using combineReducers</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [68, 69] },
+                        v: '<a href="../official/recipes/structuring-reducers/beyond-combinereducers.html" class="menu__link">Beyond combineReducers</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [69, 70] },
+                        v: '<a href="../official/recipes/structuring-reducers/normalizing-state-shape.html" class="menu__link">Normalizing State Shape</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [70, 71] },
+                        v: '<a href="../official/recipes/structuring-reducers/updating-normalized-data.html" class="menu__link">Updating Normalized Data</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [71, 72] },
+                        v: '<a href="../official/recipes/structuring-reducers/reusing-reducer-logic.html" class="menu__link">Reusing Reducer Logic</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [72, 73] },
+                        v: '<a href="../official/recipes/structuring-reducers/immutable-update-patterns.html" class="menu__link">Immutable Update Patterns</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [73, 74] },
+                        v: '<a href="../official/recipes/structuring-reducers/initializing-state.html" class="menu__link">Initializing State</a>',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                t: "list_item",
+                d: 2,
+                p: { lines: [74, 75] },
+                v: '<a href="#!" class="menu__link menu__link--sublist menu__link--active">Understanding Redux</a>',
+                c: [
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [75, 76] },
+                    v: '<a href="#!" class="menu__link menu__link--sublist menu__link--active">Thinking in Redux</a>',
+                    c: [
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [76, 77] },
+                        v: '<a href="motivation.html" class="menu__link">Motivation</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [77, 78] },
+                        v: '<a href="three-principles.html" class="menu__link">Three Principles</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [78, 79] },
+                        v: '<a href="glossary.html" class="menu__link menu__link--active active">Glossary</a>',
+                      },
+                    ],
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [79, 80] },
+                    v: '<a href="#!" class="menu__link menu__link--sublist">History and Design</a>',
+                    c: [
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [80, 81] },
+                        v: '<a href="../history-and-design/prior-art.html" class="menu__link">Prior Art</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 6,
+                        p: { lines: [81, 82] },
+                        v: '<a href="../history-and-design/middleware.html" class="menu__link">Middleware</a>',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                t: "list_item",
+                d: 2,
+                p: { lines: [82, 83] },
+                v: '<a href="#!" class="menu__link menu__link--sublist">FAQ</a>',
+                c: [
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [83, 84] },
+                    v: '<a href="../official/faq.html" class="menu__link">FAQ Index</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [84, 85] },
+                    v: '<a href="../official/faq/general.html" class="menu__link">General</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [85, 86] },
+                    v: '<a href="../official/faq/reducers.html" class="menu__link">Reducers</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [86, 87] },
+                    v: '<a href="../official/faq/organizing-state.html" class="menu__link">Organizing State</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [87, 88] },
+                    v: '<a href="../official/faq/store-setup.html" class="menu__link">Store Setup</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [88, 89] },
+                    v: '<a href="../official/faq/actions.html" class="menu__link">Actions</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [89, 90] },
+                    v: '<a href="../official/faq/immutable-data.html" class="menu__link">Immutable Data</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [90, 91] },
+                    v: '<a href="../official/faq/code-structure.html" class="menu__link">Code Structure</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [91, 92] },
+                    v: '<a href="../official/faq/performance.html" class="menu__link">Performance</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [92, 93] },
+                    v: '<a href="../official/faq/design-decisions.html" class="menu__link">Design Decisions</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [93, 94] },
+                    v: '<a href="../official/faq/react-redux.html" class="menu__link">React Redux</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [94, 95] },
+                    v: '<a href="../official/faq/miscellaneous.html" class="menu__link">Miscellaneous</a>',
+                  },
+                ],
+              },
+              {
+                t: "list_item",
+                d: 2,
+                p: { lines: [95, 96] },
+                v: '<a href="#!" class="menu__link menu__link--sublist">Style Guide</a>',
+                c: [
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [96, 97] },
+                    v: '<a href="../official/style-guide/style-guide.html" class="menu__link">Style Guide: Best Practices</a>',
+                  },
+                ],
+              },
+              {
+                t: "list_item",
+                d: 2,
+                p: { lines: [97, 98] },
+                v: '<a href="#!" class="menu__link menu__link--sublist">API Reference</a>',
+                c: [
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [98, 99] },
+                    v: '<a href="../official/api/api-reference.html" class="menu__link">API Reference</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [99, 100] },
+                    v: '<a href="../official/api/createstore.html" class="menu__link">createStore</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [100, 101] },
+                    v: '<a href="../official/api/store.html" class="menu__link">Store</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [101, 102] },
+                    v: '<a href="../official/api/combinereducers.html" class="menu__link">combineReducers</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [102, 103] },
+                    v: '<a href="../official/api/applymiddleware.html" class="menu__link">applyMiddleware</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [103, 104] },
+                    v: '<a href="../official/api/bindactioncreators.html" class="menu__link">bindActionCreators</a>',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [104, 105] },
+                    v: '<a href="../official/api/compose.html" class="menu__link">compose</a>',
+                  },
+                ],
+              },
+              {
+                t: "list_item",
+                d: 2,
+                p: { lines: [105, 106] },
+                v: '<a href="#!" class="menu__link menu__link--sublist">Redux Toolkit</a>',
+                c: [
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [106, 107] },
+                    v: '<a href="../official/redux-toolkit/overview.html" class="menu__link">Redux Toolkit: Overview</a>',
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            t: "heading",
+            d: 1,
+            p: { lines: [108, 109] },
+            v: '<span id="glossary" class="anchor enhancedAnchor_2LWZ"></span>Glossary<a href="#glossary" class="hash-link" title="Direct link to heading">#</a>',
+            c: [
+              {
+                t: "heading",
+                d: 2,
+                p: { lines: [112, 113] },
+                v: '<span id="state" class="anchor enhancedAnchor_2LWZ"></span>State<a href="#state" class="hash-link" title="Direct link to heading">#</a>',
+              },
+              {
+                t: "heading",
+                d: 2,
+                p: { lines: [122, 123] },
+                v: '<span id="action" class="anchor enhancedAnchor_2LWZ"></span>Action<a href="#action" class="hash-link" title="Direct link to heading">#</a>',
+              },
+              {
+                t: "heading",
+                d: 2,
+                p: { lines: [136, 137] },
+                v: '<span id="reducer" class="anchor enhancedAnchor_2LWZ"></span>Reducer<a href="#reducer" class="hash-link" title="Direct link to heading">#</a>',
+              },
+              {
+                t: "heading",
+                d: 2,
+                p: { lines: [152, 153] },
+                v: '<span id="dispatching-function" class="anchor enhancedAnchor_2LWZ"></span>Dispatching Function<a href="#dispatching-function" class="hash-link" title="Direct link to heading">#</a>',
+              },
+              {
+                t: "heading",
+                d: 2,
+                p: { lines: [168, 169] },
+                v: '<span id="action-creator" class="anchor enhancedAnchor_2LWZ"></span>Action Creator<a href="#action-creator" class="hash-link" title="Direct link to heading">#</a>',
+              },
+              {
+                t: "heading",
+                d: 2,
+                p: { lines: [180, 181] },
+                v: '<span id="async-action" class="anchor enhancedAnchor_2LWZ"></span>Async Action<a href="#async-action" class="hash-link" title="Direct link to heading">#</a>',
+              },
+              {
+                t: "heading",
+                d: 2,
+                p: { lines: [188, 189] },
+                v: '<span id="middleware" class="anchor enhancedAnchor_2LWZ"></span>Middleware<a href="#middleware" class="hash-link" title="Direct link to heading">#</a>',
+              },
+              {
+                t: "heading",
+                d: 2,
+                p: { lines: [202, 203] },
+                v: '<span id="store" class="anchor enhancedAnchor_2LWZ"></span>Store<a href="#store" class="hash-link" title="Direct link to heading">#</a>',
+                c: [
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [220, 221] },
+                    v: '<a href="../../api/store.html#dispatchaction"><code>dispatch(action)</code></a> is the base dispatch function described above.',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [221, 222] },
+                    v: '<a href="../../api/store.html#getState"><code>getState()</code></a> returns the current state of the store.',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [222, 223] },
+                    v: '<a href="../../api/store.html#subscribelistener"><code>subscribe(listener)</code></a> registers a function to be called on state changes.',
+                  },
+                  {
+                    t: "list_item",
+                    d: 4,
+                    p: { lines: [223, 224] },
+                    v: '<a href="../../api/store.html#replacereducernextreducer"><code>replaceReducer(nextReducer)</code></a> can be used to implement hot reloading and code splitting. Most likely you won\'t use it.',
+                  },
+                ],
+              },
+              {
+                t: "heading",
+                d: 2,
+                p: { lines: [227, 228] },
+                v: '<span id="store-creator" class="anchor enhancedAnchor_2LWZ"></span>Store creator<a href="#store-creator" class="hash-link" title="Direct link to heading">#</a>',
+              },
+              {
+                t: "heading",
+                d: 2,
+                p: { lines: [235, 236] },
+                v: '<span id="store-enhancer" class="anchor enhancedAnchor_2LWZ"></span>Store enhancer<a href="#store-enhancer" class="hash-link" title="Direct link to heading">#</a>',
+                c: [
+                  {
+                    t: "bullet_list",
+                    d: 3,
+                    p: { lines: [261, 272] },
+                    v: "",
+                    c: [
+                      {
+                        t: "list_item",
+                        d: 4,
+                        p: { lines: [261, 262] },
+                        v: '<a href="#state" class="table-of-contents__link">State</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 4,
+                        p: { lines: [262, 263] },
+                        v: '<a href="#action" class="table-of-contents__link">Action</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 4,
+                        p: { lines: [263, 264] },
+                        v: '<a href="#reducer" class="table-of-contents__link">Reducer</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 4,
+                        p: { lines: [264, 265] },
+                        v: '<a href="#dispatching-function" class="table-of-contents__link">Dispatching Function</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 4,
+                        p: { lines: [265, 266] },
+                        v: '<a href="#action-creator" class="table-of-contents__link">Action Creator</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 4,
+                        p: { lines: [266, 267] },
+                        v: '<a href="#async-action" class="table-of-contents__link">Async Action</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 4,
+                        p: { lines: [267, 268] },
+                        v: '<a href="#middleware" class="table-of-contents__link">Middleware</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 4,
+                        p: { lines: [268, 269] },
+                        v: '<a href="#store" class="table-of-contents__link">Store</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 4,
+                        p: { lines: [269, 270] },
+                        v: '<a href="#store-creator" class="table-of-contents__link">Store creator</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 4,
+                        p: { lines: [270, 271] },
+                        v: '<a href="#store-enhancer" class="table-of-contents__link">Store enhancer</a>',
+                      },
+                    ],
+                  },
+                  {
+                    t: "heading",
+                    d: 3,
+                    p: { lines: [272, 273] },
+                    v: "Docs",
+                    c: [
+                      {
+                        t: "list_item",
+                        d: 5,
+                        p: { lines: [274, 275] },
+                        v: '<a href="../official/introduction/getting-started.html" class="footer__link-item">Getting Started</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 5,
+                        p: { lines: [275, 276] },
+                        v: '<a href="../official/tutorials/essentials/part-1-overview-concepts.html" class="footer__link-item">Tutorial</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 5,
+                        p: { lines: [276, 277] },
+                        v: '<a href="../official/faq.html" class="footer__link-item">FAQ</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 5,
+                        p: { lines: [277, 278] },
+                        v: '<a href="../official/api/api-reference.html" class="footer__link-item">API Reference</a>',
+                      },
+                    ],
+                  },
+                  {
+                    t: "heading",
+                    d: 3,
+                    p: { lines: [279, 280] },
+                    v: "Community",
+                    c: [
+                      {
+                        t: "list_item",
+                        d: 5,
+                        p: { lines: [281, 282] },
+                        v: '<a href="../official/../discord.com/invite/0ZcbPKXt5bZ6au5t.html" class="footer__link-item">Reactiflux Discord</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 5,
+                        p: { lines: [282, 283] },
+                        v: '<a href="../official/../stackoverflow.com/questions/tagged/redux.html" class="footer__link-item">Stack Overflow</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 5,
+                        p: { lines: [283, 284] },
+                        v: '<a href="../official/introduction/getting-started.html#help-and-discussion" class="footer__link-item">Feedback</a>',
+                      },
+                    ],
+                  },
+                  {
+                    t: "heading",
+                    d: 3,
+                    p: { lines: [285, 286] },
+                    v: "More",
+                    c: [
+                      {
+                        t: "list_item",
+                        d: 5,
+                        p: { lines: [287, 288] },
+                        v: '<a href="../official/../github.com/reduxjs/redux.html" class="footer__link-item">GitHub</a>',
+                      },
+                      {
+                        t: "list_item",
+                        d: 5,
+                        p: { lines: [288, 289] },
+                        v: '<a href="../../../www.netlify.com/index.html"><img src="../../../www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify"></a>',
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+        p: {},
+      });
+    </script>
+  </body>
+</html>
