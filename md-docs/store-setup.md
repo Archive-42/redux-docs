@@ -1,7 +1,19 @@
-<a href="../index.html" class="navbar__brand"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
+<a href="../index.html" class="navbar__brand">
+<img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" />
+<strong>Redux</strong>
+</a>
 
-<a href="../introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="../tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../faq.html" class="navbar__item navbar__link navbar__link--active">FAQ</a><a href="../style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-<a href="../index.html" class="navbar__brand"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
+<a href="../introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a>
+<a href="../tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a>
+<a href="../api/api-reference.html" class="navbar__item navbar__link">API</a>
+<a href="../faq.html" class="navbar__item navbar__link navbar__link--active">FAQ</a>
+<a href="../style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a>
+<a href="../official/github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a>
+<a href="../introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
+<a href="../index.html" class="navbar__brand">
+<img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" />
+<strong>Redux</strong>
+</a>
 
 - <a href="#!" class="menu__link menu__link--sublist">Introduction</a>
   - <a href="../introduction/getting-started.html" class="menu__link">Getting Started with Redux</a>
@@ -91,9 +103,11 @@
 - <a href="#!" class="menu__link menu__link--sublist">Redux Toolkit</a>
   - <a href="../redux-toolkit/overview.html" class="menu__link">Redux Toolkit: Overview</a>
 
-# <span id="redux-faq-store-setup" class="anchor enhancedAnchor_2LWZ"></span>Redux FAQ: Store Setup<a href="#redux-faq-store-setup" class="hash-link" title="Direct link to heading">#</a>
+# <span id="redux-faq-store-setup" class="anchor enhancedAnchor_2LWZ">
+</span>Redux FAQ: Store Setup<a href="#redux-faq-store-setup" class="hash-link" title="Direct link to heading">#</a>
 
-## <span id="table-of-contents" class="anchor enhancedAnchor_2LWZ"></span>Table of Contents<a href="#table-of-contents" class="hash-link" title="Direct link to heading">#</a>
+## <span id="table-of-contents" class="anchor enhancedAnchor_2LWZ">
+</span>Table of Contents<a href="#table-of-contents" class="hash-link" title="Direct link to heading">#</a>
 
 - [Redux FAQ: Store Setup](#redux-faq-store-setup)
   - [Table of Contents](#table-of-contents)
@@ -105,9 +119,11 @@
     - [How do I subscribe to only a portion of the state? Can I get the dispatched action as part of the subscription?](#how-do-i-subscribe-to-only-a-portion-of-the-state-can-i-get-the-dispatched-action-as-part-of-the-subscription)
       - [Further information](#further-information-2)
 
-## <span id="store-setup" class="anchor enhancedAnchor_2LWZ"></span>Store Setup<a href="#store-setup" class="hash-link" title="Direct link to heading">#</a>
+## <span id="store-setup" class="anchor enhancedAnchor_2LWZ">
+</span>Store Setup<a href="#store-setup" class="hash-link" title="Direct link to heading">#</a>
 
-### <span id="can-or-should-i-create-multiple-stores-can-i-import-my-store-directly-and-use-it-in-components-myself" class="anchor enhancedAnchor_2LWZ"></span>Can or should I create multiple stores? Can I import my store directly, and use it in components myself?<a href="#can-or-should-i-create-multiple-stores-can-i-import-my-store-directly-and-use-it-in-components-myself" class="hash-link" title="Direct link to heading">#</a>
+### <span id="can-or-should-i-create-multiple-stores-can-i-import-my-store-directly-and-use-it-in-components-myself" class="anchor enhancedAnchor_2LWZ">
+</span>Can or should I create multiple stores? Can I import my store directly, and use it in components myself?<a href="#can-or-should-i-create-multiple-stores-can-i-import-my-store-directly-and-use-it-in-components-myself" class="hash-link" title="Direct link to heading">#</a>
 
 The original Flux pattern describes having multiple “stores” in an app, each one holding a different area of domain data. This can introduce issues such as needing to have one store “`waitFor`” another store to update. This is not necessary in Redux because the separation between data domains is already achieved by splitting a single reducer into smaller reducers.
 
@@ -124,7 +140,8 @@ Similarly, while you _can_ reference your store instance by importing it directl
 
 With [React Redux](../../github.com/reduxjs/react-redux.html), the wrapper classes generated by the `connect()` function do actually look for `props.store` if it exists, but it's best if you wrap your root component in `<Provider store={store}>` and let React Redux worry about passing the store down. This way components don't need to worry about importing a store module, and isolating a Redux app or enabling server rendering is much easier to do later.
 
-#### <span id="further-information" class="anchor enhancedAnchor_2LWZ"></span>Further information<a href="#further-information" class="hash-link" title="Direct link to heading">#</a>
+#### <span id="further-information" class="anchor enhancedAnchor_2LWZ">
+</span>Further information<a href="#further-information" class="hash-link" title="Direct link to heading">#</a>
 
 **Documentation**
 
@@ -137,13 +154,15 @@ With [React Redux](../../github.com/reduxjs/react-redux.html), the wrapper class
 - [Stack Overflow: Accessing Redux state in an action creator](../../stackoverflow.com/questions/35667249/accessing-redux-state-in-an-action-creator.html)
 - [Gist: Breaking out of Redux paradigm to isolate apps](../../gist.github.com/gaearon/eeee2f619620ab7b55673a4ee2bf8400.html)
 
-### <span id="is-it-ok-to-have-more-than-one-middleware-chain-in-my-store-enhancer-what-is-the-difference-between-next-and-dispatch-in-a-middleware-function" class="anchor enhancedAnchor_2LWZ"></span>Is it OK to have more than one middleware chain in my store enhancer? What is the difference between `next` and `dispatch` in a middleware function?<a href="#is-it-ok-to-have-more-than-one-middleware-chain-in-my-store-enhancer-what-is-the-difference-between-next-and-dispatch-in-a-middleware-function" class="hash-link" title="Direct link to heading">#</a>
+### <span id="is-it-ok-to-have-more-than-one-middleware-chain-in-my-store-enhancer-what-is-the-difference-between-next-and-dispatch-in-a-middleware-function" class="anchor enhancedAnchor_2LWZ">
+</span>Is it OK to have more than one middleware chain in my store enhancer? What is the difference between `next` and `dispatch` in a middleware function?<a href="#is-it-ok-to-have-more-than-one-middleware-chain-in-my-store-enhancer-what-is-the-difference-between-next-and-dispatch-in-a-middleware-function" class="hash-link" title="Direct link to heading">#</a>
 
 Redux middleware act like a linked list. Each middleware function can either call `next(action)` to pass an action along to the next middleware in line, call `dispatch(action)` to restart the processing at the beginning of the list, or do nothing at all to stop the action from being processed further.
 
 This chain of middleware is defined by the arguments passed to the `applyMiddleware` function used when creating a store. Defining multiple chains will not work correctly, as they would have distinctly different `dispatch` references and the different chains would effectively be disconnected.
 
-#### <span id="further-information-1" class="anchor enhancedAnchor_2LWZ"></span>Further information<a href="#further-information-1" class="hash-link" title="Direct link to heading">#</a>
+#### <span id="further-information-1" class="anchor enhancedAnchor_2LWZ">
+</span>Further information<a href="#further-information-1" class="hash-link" title="Direct link to heading">#</a>
 
 **Documentation**
 
@@ -156,7 +175,8 @@ This chain of middleware is defined by the arguments passed to the `applyMiddlew
 - [Understanding Redux Middleware](../../medium.com/%40meagle/understanding-87566abcfb7a.html)
 - [Exploring Redux Middleware](../../blog.krawaller.se/posts/exploring-redux-middleware/index.html)
 
-### <span id="how-do-i-subscribe-to-only-a-portion-of-the-state-can-i-get-the-dispatched-action-as-part-of-the-subscription" class="anchor enhancedAnchor_2LWZ"></span>How do I subscribe to only a portion of the state? Can I get the dispatched action as part of the subscription?<a href="#how-do-i-subscribe-to-only-a-portion-of-the-state-can-i-get-the-dispatched-action-as-part-of-the-subscription" class="hash-link" title="Direct link to heading">#</a>
+### <span id="how-do-i-subscribe-to-only-a-portion-of-the-state-can-i-get-the-dispatched-action-as-part-of-the-subscription" class="anchor enhancedAnchor_2LWZ">
+</span>How do I subscribe to only a portion of the state? Can I get the dispatched action as part of the subscription?<a href="#how-do-i-subscribe-to-only-a-portion-of-the-state-can-i-get-the-dispatched-action-as-part-of-the-subscription" class="hash-link" title="Direct link to heading">#</a>
 
 Redux provides a single `store.subscribe` method for notifying listeners that the store has updated. Listener callbacks do not receive the current state as an argument—it is simply an indication that _something_ has changed. The subscriber logic can then call `getState()` to get the current state value.
 
@@ -164,7 +184,8 @@ This API is intended as a low-level primitive with no dependencies or complicati
 
 The new state is not passed to the listeners in order to simplify implementing store enhancers such as the Redux DevTools. In addition, subscribers are intended to react to the state value itself, not the action. Middleware can be used if the action is important and needs to be handled specifically.
 
-#### <span id="further-information-2" class="anchor enhancedAnchor_2LWZ"></span>Further information<a href="#further-information-2" class="hash-link" title="Direct link to heading">#</a>
+#### <span id="further-information-2" class="anchor enhancedAnchor_2LWZ">
+</span>Further information<a href="#further-information-2" class="hash-link" title="Direct link to heading">#</a>
 
 **Documentation**
 
@@ -183,11 +204,13 @@ The new state is not passed to the listeners in order to simplify implementing s
 
 - [Redux Addons Catalog: Store Change Subscriptions](../../github.com/markerikson/redux-ecosystem-links/blob/master/store.html#store-change-subscriptions)
 
-<a href="organizing-state.html" class="pagination-nav__link"></a>
+<a href="organizing-state.html" class="pagination-nav__link">
+</a>
 
 « Organizing State
 
-<a href="actions.html" class="pagination-nav__link"></a>
+<a href="actions.html" class="pagination-nav__link">
+</a>
 
 Next
 
@@ -217,6 +240,9 @@ Actions »
 - <a href="../official/github.com/reduxjs/redux.html" class="footer__link-item">GitHub</a>
 - [![Deploys by Netlify](../../www.netlify.com/img/global/badges/netlify-color-accent.svg)](../../www.netlify.com/index.html)
 
-<a href="../index.html" class="footerLogoLink_MyFc"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" /><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
+<a href="../index.html" class="footerLogoLink_MyFc">
+<img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
+<img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" />
+</a>
 
 

@@ -200,7 +200,8 @@
     </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
+<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js">
+</script>
     </head>
   <body>
     <header id="title-block-header">
@@ -211,15 +212,19 @@
     <p>
       The
       <strong
-        ><a href="https://discord.gg/0ZcbPKXt5bZ6au5t"
+        >
+<a href="https://discord.gg/0ZcbPKXt5bZ6au5t"
           >#redux channel</a
-        ></strong
+        >
+</strong
       >
       of the
       <strong
-        ><a href="http://www.reactiflux.com"
+        >
+<a href="http://www.reactiflux.com"
           >Reactiflux Discord community</a
-        ></strong
+        >
+</strong
       >
       is our official resource for all questions related to learning and using
       Redux. Reactiflux is a great place to hang out, ask questions, and learn -
@@ -229,9 +234,11 @@
       You can also ask questions on
       <a href="https://stackoverflow.com">Stack Overflow</a> using the
       <strong
-        ><a href="https://stackoverflow.com/questions/tagged/redux"
+        >
+<a href="https://stackoverflow.com/questions/tagged/redux"
           >#redux tag</a
-        ></strong
+        >
+</strong
       >.
     </p>
     <h3 id="my-views-arent-updating">My views aren’t updating!</h3>
@@ -266,7 +273,9 @@
       </li>
       <li>
         Make sure you didn’t forget to wrap your root or some other ancestor
-        component in <a href="#provider-store"><code class="language-js" >&lt;Provider&gt;</code></a
+        component in <a href="#provider-store">
+<code class="language-js" >&lt;Provider&gt;</code>
+</a
         >.
       </li>
       <li>
@@ -301,21 +310,41 @@
       You can prevent the warning by setting the
       <code class="language-js" >@jest-environment</code> for a single test file:
     </p>
-    <pre class="language-js  class="jsx"><code class="language-js" >// my.test.jsx
+    <pre class="language-js  class="jsx">
+<code class="language-js" >// my.test.jsx
 /**
  * @jest-environment node
- */</code></pre>
+ */</code>
+</pre>
     <p>Or by setting it globally:</p>
     <div class="sourceCode" id="cb2">
       <pre class="language-js 
         class="sourceCode js"
-      ><code class="language-js  class="sourceCode javascript"><a class="sourceLine" id="cb2-1" title="1"><span class="co">// package.json</span></a>
-<a class="sourceLine" id="cb2-2" title="2"><span class="op">{</span></a>
-<a class="sourceLine" id="cb2-3" title="3">  <span class="st">&quot;name&quot;</span><span class="op">:</span> <span class="st">&quot;my-project&quot;</span><span class="op">,</span></a>
-<a class="sourceLine" id="cb2-4" title="4">  <span class="st">&quot;jest&quot;</span><span class="op">:</span> <span class="op">{</span></a>
-<a class="sourceLine" id="cb2-5" title="5">    <span class="st">&quot;testEnvironment&quot;</span><span class="op">:</span> <span class="st">&quot;node&quot;</span></a>
-<a class="sourceLine" id="cb2-6" title="6">  <span class="op">}</span></a>
-<a class="sourceLine" id="cb2-7" title="7"><span class="op">}</span></a></code></pre>
+      >
+<code class="language-js  class="sourceCode javascript">
+<a class="sourceLine" id="cb2-1" title="1">
+<span class="co">// package.json</span>
+</a>
+<a class="sourceLine" id="cb2-2" title="2">
+<span class="op">{</span>
+</a>
+<a class="sourceLine" id="cb2-3" title="3">  <span class="st">&quot;name&quot;</span>
+<span class="op">:</span> <span class="st">&quot;my-project&quot;</span>
+<span class="op">,</span>
+</a>
+<a class="sourceLine" id="cb2-4" title="4">  <span class="st">&quot;jest&quot;</span>
+<span class="op">:</span> <span class="op">{</span>
+</a>
+<a class="sourceLine" id="cb2-5" title="5">    <span class="st">&quot;testEnvironment&quot;</span>
+<span class="op">:</span> <span class="st">&quot;node&quot;</span>
+</a>
+<a class="sourceLine" id="cb2-6" title="6">  <span class="op">}</span>
+</a>
+<a class="sourceLine" id="cb2-7" title="7">
+<span class="op">}</span>
+</a>
+</code>
+</pre>
     </div>
     <p>
       See https://github.com/facebook/react/issues/14927#issuecomment-490426131

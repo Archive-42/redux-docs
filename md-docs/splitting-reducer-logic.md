@@ -1,7 +1,17 @@
-<a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
+<a href="../official/index.html" class="navbar__brand">
+<strong>Redux</strong>
+</a>
 
-<a href="../official/introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="../official/tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../official/api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../official/faq.html" class="navbar__item navbar__link">FAQ</a><a href="../official/style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/../github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../official/introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-<a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
+<a href="../official/introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a>
+<a href="../official/tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a>
+<a href="../official/api/api-reference.html" class="navbar__item navbar__link">API</a>
+<a href="../official/faq.html" class="navbar__item navbar__link">FAQ</a>
+<a href="../official/style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a>
+<a href="../official/../github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a>
+<a href="../official/introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
+<a href="../official/index.html" class="navbar__brand">
+<strong>Redux</strong>
+</a>
 
 - <a href="../official/introduction/getting-started.html" class="menu__link">Getting Started</a>
 - <a href="../official/tutorials/essentials/part-1-overview-concepts.html" class="menu__link">Tutorial</a>
@@ -83,7 +93,8 @@
 - <a href="#!" class="menu__link menu__link--sublist">Redux Toolkit</a>
   - <a href="../official/redux-toolkit/overview.html" class="menu__link">Redux Toolkit: Overview</a>
 
-# <span id="splitting-up-reducer-logic" class="anchor enhancedAnchor_2LWZ"></span>Splitting Up Reducer Logic<a href="#splitting-up-reducer-logic" class="hash-link" title="Direct link to heading">#</a>
+# <span id="splitting-up-reducer-logic" class="anchor enhancedAnchor_2LWZ">
+</span>Splitting Up Reducer Logic<a href="#splitting-up-reducer-logic" class="hash-link" title="Direct link to heading">#</a>
 
 For any meaningful application, putting _all_ your update logic into a single reducer function is quickly going to become unmaintainable. While there's no single rule for how long a function should be, it's generally agreed that functions should be relatively short and ideally only do one specific thing. Because of this, it's good programming practice to take pieces of code that are very long or do many different things, and break them into smaller pieces that are easier to understand.
 
@@ -107,11 +118,13 @@ The term "_sub-reducer_" has also been used in various discussions to mean any f
 
 Breaking down a complex process into smaller, more understandable parts is usually described with the term **_[functional decomposition](../../../stackoverflow.com/questions/947874/what-is-functional-decomposition.html)_**. This term and concept can be applied generically to any code. However, in Redux it is _very_ common to structure reducer logic using approach \#3, where update logic is delegated to other functions based on slice of state. Redux refers to this concept as **_reducer composition_**, and it is by far the most widely-used approach to structuring reducer logic. In fact, it's so common that Redux includes a utility function called [`combineReducers()`](../../api/combinereducers.html), which specifically abstracts the process of delegating work to other reducer functions based on slices of state. However, it's important to note that it is not the _only_ pattern that can be used. In fact, it's entirely possible to use all three approaches for splitting up logic into functions, and usually a good idea as well. The [Refactoring Reducers](refactoring-reducer-example.html) section shows some examples of this in action.
 
-<a href="basic-reducer-structure.html" class="pagination-nav__link"></a>
+<a href="basic-reducer-structure.html" class="pagination-nav__link">
+</a>
 
 « Basic Reducer Structure
 
-<a href="refactoring-reducer-example.html" class="pagination-nav__link"></a>
+<a href="refactoring-reducer-example.html" class="pagination-nav__link">
+</a>
 
 Next
 
@@ -135,5 +148,6 @@ Refactoring Reducers Example »
 - <a href="../official/../github.com/reduxjs/redux.html" class="footer__link-item">GitHub</a>
 - [![Deploys by Netlify](../../../www.netlify.com/img/global/badges/netlify-color-accent.svg)](../../../www.netlify.com/index.html)
 
-<a href="../official/index.html" class="footerLogoLink_MyFc"><img src="../official/../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
+<a href="../official/index.html" class="footerLogoLink_MyFc">
+<img src="../official/../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
 

@@ -200,18 +200,26 @@
     </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
+<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js">
+</script>
     </head>
   <body>
     <header id="title-block-header">
       <h1 class="title">connectAdvanced</h1>
     </header>
     <p> </p>
-    <h1 id="connectadvanced"><code class="language-js" >connectAdvanced()</code></h1>
+    <h1 id="connectadvanced">
+<code class="language-js" >connectAdvanced()</code>
+</h1>
     <div class="sourceCode" id="cb1">
       <pre class="language-js 
         class="sourceCode js"
-      ><code class="language-js  class="sourceCode javascript"><a class="sourceLine" id="cb1-1" title="1"><span class="at">connectAdvanced</span>(selectorFactory<span class="op">,</span> connectOptions<span class="op">?</span>)</a></code></pre>
+      >
+<code class="language-js  class="sourceCode javascript">
+<a class="sourceLine" id="cb1-1" title="1">
+<span class="at">connectAdvanced</span>(selectorFactory<span class="op">,</span> connectOptions<span class="op">?</span>)</a>
+</code>
+</pre>
     </div>
     <p>
       Connects a React component to a Redux store. It is the base for
@@ -234,7 +242,10 @@
         <code class="language-js" >connect</code> was reimplemented as a specific set of parameters
         to <code class="language-js" >connectAdvanced</code>. However,
         <a href="https://github.com/reduxjs/react-redux/issues/1236"
-          ><strong><code class="language-js" >connectAdvanced</code> is now deprecated</strong></a
+          >
+<strong>
+<code class="language-js" >connectAdvanced</code> is now deprecated</strong>
+</a
         >
         and will eventually be removed in a future major version of React Redux.
       </p>
@@ -315,7 +326,10 @@
         </ul>
       </li>
     </ul>
-    <p><a id="connectAdvanced-returns"></a></p>
+    <p>
+<a id="connectAdvanced-returns">
+</a>
+</p>
     <h2 id="returns">Returns</h2>
     <p>
       A higher-order React component class that builds props from the store
@@ -350,7 +364,10 @@
         </p>
       </li>
     </ul>
-    <p><a id="connectAdvanced-examples"></a></p>
+    <p>
+<a id="connectAdvanced-examples">
+</a>
+</p>
     <h3 id="examples">Examples</h3>
     <h3
       id="inject-todos-of-a-specific-user-depending-on-props-and-inject-props.userid-into-the-action"
@@ -361,25 +378,49 @@
     <div class="sourceCode" id="cb2">
       <pre class="language-js 
         class="sourceCode js"
-      ><code class="language-js  class="sourceCode javascript"><a class="sourceLine" id="cb2-1" title="1"><span class="im">import</span> <span class="op">*</span> <span class="im">as</span> actionCreators <span class="im">from</span> <span class="st">&#39;./actionCreators&#39;</span></a>
-<a class="sourceLine" id="cb2-2" title="2"><span class="im">import</span> <span class="op">{</span> bindActionCreators <span class="op">}</span> <span class="im">from</span> <span class="st">&#39;redux&#39;</span></a>
-<a class="sourceLine" id="cb2-3" title="3"></a>
-<a class="sourceLine" id="cb2-4" title="4"><span class="kw">function</span> <span class="at">selectorFactory</span>(dispatch) <span class="op">{</span></a>
-<a class="sourceLine" id="cb2-5" title="5">  <span class="kw">let</span> ownProps <span class="op">=</span> <span class="op">{}</span></a>
-<a class="sourceLine" id="cb2-6" title="6">  <span class="kw">let</span> result <span class="op">=</span> <span class="op">{}</span></a>
-<a class="sourceLine" id="cb2-7" title="7"></a>
+      >
+<code class="language-js  class="sourceCode javascript">
+<a class="sourceLine" id="cb2-1" title="1">
+<span class="im">import</span> <span class="op">*</span> <span class="im">as</span> actionCreators <span class="im">from</span> <span class="st">&#39;./actionCreators&#39;</span>
+</a>
+<a class="sourceLine" id="cb2-2" title="2">
+<span class="im">import</span> <span class="op">{</span> bindActionCreators <span class="op">}</span> <span class="im">from</span> <span class="st">&#39;redux&#39;</span>
+</a>
+<a class="sourceLine" id="cb2-3" title="3">
+</a>
+<a class="sourceLine" id="cb2-4" title="4">
+<span class="kw">function</span> <span class="at">selectorFactory</span>(dispatch) <span class="op">{</span>
+</a>
+<a class="sourceLine" id="cb2-5" title="5">  <span class="kw">let</span> ownProps <span class="op">=</span> <span class="op">{}</span>
+</a>
+<a class="sourceLine" id="cb2-6" title="6">  <span class="kw">let</span> result <span class="op">=</span> <span class="op">{}</span>
+</a>
+<a class="sourceLine" id="cb2-7" title="7">
+</a>
 <a class="sourceLine" id="cb2-8" title="8">  <span class="kw">const</span> actions <span class="op">=</span> <span class="at">bindActionCreators</span>(actionCreators<span class="op">,</span> dispatch)</a>
-<a class="sourceLine" id="cb2-9" title="9">  <span class="kw">const</span> addTodo <span class="op">=</span> (text) <span class="kw">=&gt;</span> <span class="va">actions</span>.<span class="at">addTodo</span>(<span class="va">ownProps</span>.<span class="at">userId</span><span class="op">,</span> text)</a>
-<a class="sourceLine" id="cb2-10" title="10"></a>
-<a class="sourceLine" id="cb2-11" title="11">  <span class="cf">return</span> (nextState<span class="op">,</span> nextOwnProps) <span class="kw">=&gt;</span> <span class="op">{</span></a>
+<a class="sourceLine" id="cb2-9" title="9">  <span class="kw">const</span> addTodo <span class="op">=</span> (text) <span class="kw">=&gt;</span> <span class="va">actions</span>.<span class="at">addTodo</span>(<span class="va">ownProps</span>.<span class="at">userId</span>
+<span class="op">,</span> text)</a>
+<a class="sourceLine" id="cb2-10" title="10">
+</a>
+<a class="sourceLine" id="cb2-11" title="11">  <span class="cf">return</span> (nextState<span class="op">,</span> nextOwnProps) <span class="kw">=&gt;</span> <span class="op">{</span>
+</a>
 <a class="sourceLine" id="cb2-12" title="12">    <span class="kw">const</span> todos <span class="op">=</span> <span class="va">nextState</span>.<span class="at">todos</span>[<span class="va">nextOwnProps</span>.<span class="at">userId</span>]</a>
-<a class="sourceLine" id="cb2-13" title="13">    <span class="kw">const</span> nextResult <span class="op">=</span> <span class="op">{</span> ...<span class="at">nextOwnProps</span><span class="op">,</span> todos<span class="op">,</span> addTodo <span class="op">}</span></a>
+<a class="sourceLine" id="cb2-13" title="13">    <span class="kw">const</span> nextResult <span class="op">=</span> <span class="op">{</span> ...<span class="at">nextOwnProps</span>
+<span class="op">,</span> todos<span class="op">,</span> addTodo <span class="op">}</span>
+</a>
 <a class="sourceLine" id="cb2-14" title="14">    ownProps <span class="op">=</span> nextOwnProps</a>
-<a class="sourceLine" id="cb2-15" title="15">    <span class="cf">if</span> (<span class="op">!</span><span class="at">shallowEqual</span>(result<span class="op">,</span> nextResult)) result <span class="op">=</span> nextResult</a>
+<a class="sourceLine" id="cb2-15" title="15">    <span class="cf">if</span> (<span class="op">!</span>
+<span class="at">shallowEqual</span>(result<span class="op">,</span> nextResult)) result <span class="op">=</span> nextResult</a>
 <a class="sourceLine" id="cb2-16" title="16">    <span class="cf">return</span> result</a>
-<a class="sourceLine" id="cb2-17" title="17">  <span class="op">}</span></a>
-<a class="sourceLine" id="cb2-18" title="18"><span class="op">}</span></a>
-<a class="sourceLine" id="cb2-19" title="19"><span class="im">export</span> <span class="im">default</span> <span class="at">connectAdvanced</span>(selectorFactory)(TodoApp)</a></code></pre>
+<a class="sourceLine" id="cb2-17" title="17">  <span class="op">}</span>
+</a>
+<a class="sourceLine" id="cb2-18" title="18">
+<span class="op">}</span>
+</a>
+<a class="sourceLine" id="cb2-19" title="19">
+<span class="im">export</span> <span class="im">default</span> <span class="at">connectAdvanced</span>(selectorFactory)(TodoApp)</a>
+</code>
+</pre>
     </div>
   </body>
 </html>

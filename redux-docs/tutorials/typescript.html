@@ -76,7 +76,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
+<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js">
+</script>
     </head>
 <body>
 <header id="title-block-header">
@@ -91,8 +92,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>:::</p>
 <p>:::info Prerequisites</p>
 <ul>
-<li>Knowledge of React <a href="https://reactjs.org/docs/hooks-intro.html">Hooks</a></li>
-<li>Understanding of <a href="https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow">Redux terms and concepts</a></li>
+<li>Knowledge of React <a href="https://reactjs.org/docs/hooks-intro.html">Hooks</a>
+</li>
+<li>Understanding of <a href="https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow">Redux terms and concepts</a>
+</li>
 <li>Understanding of TypeScript syntax and concepts</li>
 </ul>
 <p>:::</p>
@@ -100,12 +103,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Welcome to the React Redux TypeScript Quick Start tutorial! <strong>This tutorial will briefly show how to use TypeScript with Redux Toolkit</strong>.</p>
 <p>This page focuses on just how to set up the TypeScript aspects . For explanations of what Redux is, how it works, and full examples of how to use Redux, see <a href="https://redux.js.org/tutorials/index">the Redux core docs tutorials</a>.</p>
 <p>Redux Toolkit is already written in TypeScript, so its TS type definitions are built in.</p>
-<p><a href="https://react-redux.js.org">React Redux</a> has its type definitions in a separate <a href="https://npm.im/@types/react-redux"><code class="language-js" >@types/react-redux</code> typedefs package</a> on NPM. In addition to typing the library functions, the types also export some helpers to make it easier to write typesafe interfaces between your Redux store and your React components.</p>
+<p>
+<a href="https://react-redux.js.org">React Redux</a> has its type definitions in a separate <a href="https://npm.im/@types/react-redux">
+<code class="language-js" >@types/react-redux</code> typedefs package</a> on NPM. In addition to typing the library functions, the types also export some helpers to make it easier to write typesafe interfaces between your Redux store and your React components.</p>
 <p>As of React Redux v7.2.3, the <code class="language-js" >react-redux</code> package has a dependency on <code class="language-js" >@types/react-redux</code>, so the type definitions will be automatically installed with the library. Otherwise, you’ll need to manually install them yourself (typically <code class="language-js" >npm install @types/react-redux</code> ).</p>
 <p>The <a href="https://github.com/reduxjs/cra-template-redux-typescript">Redux+TS template for Create-React-App</a> comes with a working example of these patterns already configured.</p>
 <h2 id="project-setup">Project Setup</h2>
 <h3 id="define-root-state-and-dispatch-types">Define Root State and Dispatch Types</h3>
-<p><a href="https://redux-toolkit.js.org/api/configureStore">Redux Toolkit’s <code class="language-js" >configureStore</code> API</a> should not need any additional typings. You will, however, want to extract the <code class="language-js" >RootState</code> type and the <code class="language-js" >Dispatch</code> type so that they can be referenced as needed. Inferring these types from the store itself means that they correctly update as you add more state slices or modify middleware settings.</p>
+<p>
+<a href="https://redux-toolkit.js.org/api/configureStore">Redux Toolkit’s <code class="language-js" >configureStore</code> API</a> should not need any additional typings. You will, however, want to extract the <code class="language-js" >RootState</code> type and the <code class="language-js" >Dispatch</code> type so that they can be referenced as needed. Inferring these types from the store itself means that they correctly update as you add more state slices or modify middleware settings.</p>
 <p>Since those are types, it’s safe to export them directly from your store setup file such as <code class="language-js" >app/store.ts</code> and import them directly into other files.</p>
 <p>```ts title=“app/store.ts” import { configureStore } from ‘<span class="citation" data-cites="reduxjs/toolkit">@reduxjs/toolkit</span>’ // …</p>
 <p>const store = configureStore({ reducer: { posts: postsReducer, comments: commentsReducer, users: usersReducer, }, })</p>
@@ -133,10 +139,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>export default counterSlice.reducer ```</p>
 <p>The generated action creators will be correctly typed to accept a <code class="language-js" >payload</code> argument based on the <code class="language-js" >PayloadAction&lt;T&gt;</code> type you provided for the reducer. For example, <code class="language-js" >incrementByAmount</code> requires a <code class="language-js" >number</code> as its argument.</p>
 <p>In some cases, <a href="https://github.com/reduxjs/redux-toolkit/pull/827">TypeScript may unnecessarily tighten the type of the initial state</a>. If that happens, you can work around it by casting the initial state using <code class="language-js" >as</code>, instead of declaring the type of the variable:</p>
-<div class="sourceCode" id="cb1"><pre class="language-js  class="sourceCode ts"><code class="language-js  class="sourceCode typescript"><a class="sourceLine" id="cb1-1" title="1"><span class="co">// Workaround: cast state instead of declaring variable type</span></a>
-<a class="sourceLine" id="cb1-2" title="2"><span class="kw">const</span> initialState <span class="op">=</span> <span class="op">{</span></a>
-<a class="sourceLine" id="cb1-3" title="3">  value<span class="op">:</span> <span class="dv">0</span><span class="op">,</span></a>
-<a class="sourceLine" id="cb1-4" title="4"><span class="op">}</span> <span class="im">as</span> CounterState</a></code></pre></div>
+<div class="sourceCode" id="cb1">
+<pre class="language-js  class="sourceCode ts">
+<code class="language-js  class="sourceCode typescript">
+<a class="sourceLine" id="cb1-1" title="1">
+<span class="co">// Workaround: cast state instead of declaring variable type</span>
+</a>
+<a class="sourceLine" id="cb1-2" title="2">
+<span class="kw">const</span> initialState <span class="op">=</span> <span class="op">{</span>
+</a>
+<a class="sourceLine" id="cb1-3" title="3">  value<span class="op">:</span> <span class="dv">0</span>
+<span class="op">,</span>
+</a>
+<a class="sourceLine" id="cb1-4" title="4">
+<span class="op">}</span> <span class="im">as</span> CounterState</a>
+</code>
+</pre>
+</div>
 <h3 id="use-typed-hooks-in-components">Use Typed Hooks in Components</h3>
 <p>In component files, import the pre-typed hooks instead of the standard hooks from React-Redux.</p>
 <p>```tsx title=“features/counter/Counter.tsx” import React, { useState } from ‘react’</p>

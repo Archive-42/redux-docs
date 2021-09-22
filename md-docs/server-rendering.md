@@ -1,7 +1,19 @@
-<a href="../index.html" class="navbar__brand"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
+<a href="../index.html" class="navbar__brand">
+<img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" />
+<strong>Redux</strong>
+</a>
 
-<a href="../introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="../tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../faq.html" class="navbar__item navbar__link">FAQ</a><a href="../style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-<a href="../index.html" class="navbar__brand"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
+<a href="../introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a>
+<a href="../tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a>
+<a href="../api/api-reference.html" class="navbar__item navbar__link">API</a>
+<a href="../faq.html" class="navbar__item navbar__link">FAQ</a>
+<a href="../style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a>
+<a href="../official/github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a>
+<a href="../introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
+<a href="../index.html" class="navbar__brand">
+<img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" />
+<strong>Redux</strong>
+</a>
 
 - <a href="../introduction/getting-started.html" class="menu__link">Getting Started</a>
 - <a href="../tutorials/essentials/part-1-overview-concepts.html" class="menu__link">Tutorial</a>
@@ -99,13 +111,15 @@
 - <a href="#!" class="menu__link menu__link--sublist">Redux Toolkit</a>
   - <a href="../redux-toolkit/overview.html" class="menu__link">Redux Toolkit: Overview</a>
 
-# <span id="server-rendering" class="anchor enhancedAnchor_2LWZ"></span>Server Rendering<a href="#server-rendering" class="hash-link" title="Direct link to heading">#</a>
+# <span id="server-rendering" class="anchor enhancedAnchor_2LWZ">
+</span>Server Rendering<a href="#server-rendering" class="hash-link" title="Direct link to heading">#</a>
 
 The most common use case for server-side rendering is to handle the _initial render_ when a user (or search engine crawler) first requests our app. When the server receives the request, it renders the required component(s) into an HTML string, and then sends it as a response to the client. From that point on, the client takes over rendering duties.
 
 We will use React in the examples below, but the same techniques can be used with other view frameworks that can render on the server.
 
-### <span id="redux-on-the-server" class="anchor enhancedAnchor_2LWZ"></span>Redux on the Server<a href="#redux-on-the-server" class="hash-link" title="Direct link to heading">#</a>
+### <span id="redux-on-the-server" class="anchor enhancedAnchor_2LWZ">
+</span>Redux on the Server<a href="#redux-on-the-server" class="hash-link" title="Direct link to heading">#</a>
 
 When using Redux with server rendering, we must also send the state of our app along in our response, so the client can use it as the initial state. This is important because, if we preload any data before generating the HTML, we want the client to also have access to this data. Otherwise, the markup generated on the client won't match the server markup, and the client would have to load the data again.
 
@@ -118,73 +132,249 @@ To send the data down to the client, we need to:
 
 On the client side, a new Redux store will be created and initialized with the state provided from the server. Redux's **_only_** job on the server side is to provide the **initial state** of our app.
 
-## <span id="setting-up" class="anchor enhancedAnchor_2LWZ"></span>Setting Up<a href="#setting-up" class="hash-link" title="Direct link to heading">#</a>
+## <span id="setting-up" class="anchor enhancedAnchor_2LWZ">
+</span>Setting Up<a href="#setting-up" class="hash-link" title="Direct link to heading">#</a>
 
 In the following recipe, we are going to look at how to set up server-side rendering. We'll use the simplistic [Counter app](../../github.com/reduxjs/redux/tree/master/examples/counter.html) as a guide and show how the server can render state ahead of time based on the request.
 
-### <span id="install-packages" class="anchor enhancedAnchor_2LWZ"></span>Install Packages<a href="#install-packages" class="hash-link" title="Direct link to heading">#</a>
+### <span id="install-packages" class="anchor enhancedAnchor_2LWZ">
+</span>Install Packages<a href="#install-packages" class="hash-link" title="Direct link to heading">#</a>
 
 For this example, we'll be using [Express](../../expressjs.com/index.html) as a simple web server. We also need to install the React bindings for Redux, since they are not included in Redux by default.
 
-<span class="token plain">npm install express react-redux</span>## <span id="the-server-side" class="anchor enhancedAnchor_2LWZ"></span>The Server Side<a href="#the-server-side" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain">npm install express react-redux</span>## <span id="the-server-side" class="anchor enhancedAnchor_2LWZ">
+</span>The Server Side<a href="#the-server-side" class="hash-link" title="Direct link to heading">#</a>
 
 The following is the outline for what our server side is going to look like. We are going to set up an [Express middleware](../../expressjs.com/guide/using-middleware.html) using [app.use](../../expressjs.com/api.html#app.use) to handle all requests that come in to our server. If you're unfamiliar with Express or middleware, just know that our handleRender function will be called every time the server receives a request.
 
 Additionally, as we are using ES6 and JSX syntax, we will need to compile with [Babel](../../babeljs.io/index.html) (see [this example of a Node Server with Babel](../../github.com/babel/example-node-server.html)) and the [React preset](../../babeljs.io/docs/plugins/preset-react/index.html).
 
-##### <span id="serverjs" class="anchor enhancedAnchor_2LWZ"></span>`server.js`<a href="#serverjs" class="hash-link" title="Direct link to heading">#</a>
+##### <span id="serverjs" class="anchor enhancedAnchor_2LWZ">
+</span>`server.js`<a href="#serverjs" class="hash-link" title="Direct link to heading">#</a>
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >path</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'path'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span>
+<span class="token plain"> </span>
+<span >path</span>
+<span class="token plain"> </span>
+<span class="token keyword module" style="color: #f92672">from</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'path'</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">Express</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'express'</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword module" style="color: #f92672">import</span>
+<span class="token plain"> </span>
+<span class="token imports maybe-class-name">Express</span>
+<span class="token plain"> </span>
+<span class="token keyword module" style="color: #f92672">from</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'express'</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">React</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react'</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword module" style="color: #f92672">import</span>
+<span class="token plain"> </span>
+<span class="token imports maybe-class-name">React</span>
+<span class="token plain"> </span>
+<span class="token keyword module" style="color: #f92672">from</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'react'</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword module" style="color: #f92672">import</span>
+<span class="token plain"> </span>
+<span class="token imports punctuation" style="color: #f8f8f2">{</span>
+<span > createStore </span>
+<span class="token imports punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain"> </span>
+<span class="token keyword module" style="color: #f92672">from</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'redux'</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > </span><span class="token imports maybe-class-name">Provider</span><span > </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-redux'</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword module" style="color: #f92672">import</span>
+<span class="token plain"> </span>
+<span class="token imports punctuation" style="color: #f8f8f2">{</span>
+<span > </span>
+<span class="token imports maybe-class-name">Provider</span>
+<span > </span>
+<span class="token imports punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain"> </span>
+<span class="token keyword module" style="color: #f92672">from</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'react-redux'</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >counterApp</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./reducers'</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword module" style="color: #f92672">import</span>
+<span class="token plain"> </span>
+<span >counterApp</span>
+<span class="token plain"> </span>
+<span class="token keyword module" style="color: #f92672">from</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'./reducers'</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">App</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./containers/App'</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword module" style="color: #f92672">import</span>
+<span class="token plain"> </span>
+<span class="token imports maybe-class-name">App</span>
+<span class="token plain"> </span>
+<span class="token keyword module" style="color: #f92672">from</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'./containers/App'</span>
+<span class="token plain">
+</span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> app </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function maybe-class-name" style="color: #e6d874">Express</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword" style="color: #f92672">const</span>
+<span class="token plain"> app </span>
+<span class="token operator" style="color: #f8f8f2">=</span>
+<span class="token plain"> </span>
+<span class="token function maybe-class-name" style="color: #e6d874">Express</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> port </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">3000</span><span class="token plain"></span>
-
-<span class="token plain" style="display: inline-block"> </span>
-
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">//Serve static files</span><span class="token plain"></span>
-
-<span class="token plain">app</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">use</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'/static'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token maybe-class-name">Express</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">static</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'static'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
-
-<span class="token plain" style="display: inline-block"> </span>
-
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// This is fired every time the server side receives a request</span><span class="token plain"></span>
-
-<span class="token plain">app</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">use</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">handleRender</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
-
-<span class="token plain" style="display: inline-block"> </span>
-
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// We are going to fill these out in the sections to follow</span><span class="token plain"></span>
-
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">handleRender</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">req</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> res</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
-
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">/\* ... \*/</span><span class="token plain"></span>
-
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
-
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">renderFullPage</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">html</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> preloadedState</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
-
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">/\* ... \*/</span><span class="token plain"></span>
-
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword" style="color: #f92672">const</span>
+<span class="token plain"> port </span>
+<span class="token operator" style="color: #f8f8f2">=</span>
+<span class="token plain"> </span>
+<span class="token number" style="color: #ae81ff">3000</span>
+<span class="token plain">
+</span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain">app</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">listen</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">port</span><span class="token punctuation" style="color: #f8f8f2">)</span>### <span id="handling-the-request" class="anchor enhancedAnchor_2LWZ"></span>Handling the Request<a href="#handling-the-request" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain">
+</span>
+<span class="token comment" style="color: #c6cad2">//Serve static files</span>
+<span class="token plain">
+</span>
+
+<span class="token plain">app</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span  style="color: #e6d874">use</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token string" style="color: #a6e22e">'/static'</span>
+<span class="token punctuation" style="color: #f8f8f2">,</span>
+<span class="token plain"> </span>
+<span class="token maybe-class-name">Express</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span  style="color: #e6d874">static</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token string" style="color: #a6e22e">'static'</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain">
+</span>
+
+<span class="token plain" style="display: inline-block"> </span>
+
+<span class="token plain">
+</span>
+<span class="token comment" style="color: #c6cad2">// This is fired every time the server side receives a request</span>
+<span class="token plain">
+</span>
+
+<span class="token plain">app</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span  style="color: #e6d874">use</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token plain">handleRender</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain">
+</span>
+
+<span class="token plain" style="display: inline-block"> </span>
+
+<span class="token plain">
+</span>
+<span class="token comment" style="color: #c6cad2">// We are going to fill these out in the sections to follow</span>
+<span class="token plain">
+</span>
+
+<span class="token plain">
+</span>
+<span class="token keyword" style="color: #f92672">function</span>
+<span class="token plain"> </span>
+<span class="token function" style="color: #e6d874">handleRender</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token parameter">req</span>
+<span class="token parameter punctuation" style="color: #f8f8f2">,</span>
+<span class="token parameter"> res</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain">
+</span>
+
+<span class="token plain"> </span>
+<span class="token comment" style="color: #c6cad2">/\* ... \*/</span>
+<span class="token plain">
+</span>
+
+<span class="token plain">
+</span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain">
+</span>
+
+<span class="token plain">
+</span>
+<span class="token keyword" style="color: #f92672">function</span>
+<span class="token plain"> </span>
+<span class="token function" style="color: #e6d874">renderFullPage</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token parameter">html</span>
+<span class="token parameter punctuation" style="color: #f8f8f2">,</span>
+<span class="token parameter"> preloadedState</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain">
+</span>
+
+<span class="token plain"> </span>
+<span class="token comment" style="color: #c6cad2">/\* ... \*/</span>
+<span class="token plain">
+</span>
+
+<span class="token plain">
+</span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain">
+</span>
+
+<span class="token plain" style="display: inline-block"> </span>
+
+<span class="token plain">app</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span  style="color: #e6d874">listen</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token plain">port</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>### <span id="handling-the-request" class="anchor enhancedAnchor_2LWZ">
+</span>Handling the Request<a href="#handling-the-request" class="hash-link" title="Direct link to heading">#</a>
 
 The first thing that we need to do on every request is to create a new Redux store instance. The only purpose of this store instance is to provide the initial state of our application.
 
@@ -194,43 +384,147 @@ The key step in server side rendering is to render the initial HTML of our compo
 
 We then get the initial state from our Redux store using [`store.getState()`](../api/store.html#getState). We will see how this is passed along in our `renderFullPage` function.
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > renderToString </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-dom/server'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span>
+<span class="token plain"> </span>
+<span class="token imports punctuation" style="color: #f8f8f2">{</span>
+<span > renderToString </span>
+<span class="token imports punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain"> </span>
+<span class="token keyword module" style="color: #f92672">from</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'react-dom/server'</span>
+<span class="token plain">
+</span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">handleRender</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">req</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> res</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword" style="color: #f92672">function</span>
+<span class="token plain"> </span>
+<span class="token function" style="color: #e6d874">handleRender</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token parameter">req</span>
+<span class="token parameter punctuation" style="color: #f8f8f2">,</span>
+<span class="token parameter"> res</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Create a new Redux store instance</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token comment" style="color: #c6cad2">// Create a new Redux store instance</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> store </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createStore</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">counterApp</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">const</span>
+<span class="token plain"> store </span>
+<span class="token operator" style="color: #f8f8f2">=</span>
+<span class="token plain"> </span>
+<span class="token function" style="color: #e6d874">createStore</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token plain">counterApp</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain">
+</span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Render the component to a string</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token comment" style="color: #c6cad2">// Render the component to a string</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> html </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">renderToString</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">const</span>
+<span class="token plain"> html </span>
+<span class="token operator" style="color: #f8f8f2">=</span>
+<span class="token plain"> </span>
+<span class="token function" style="color: #e6d874">renderToString</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token maybe-class-name">Provider</span><span class="token plain"> store</span><span class="token operator" style="color: #f8f8f2">=</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token operator" style="color: #f8f8f2">&lt;</span>
+<span class="token maybe-class-name">Provider</span>
+<span class="token plain"> store</span>
+<span class="token operator" style="color: #f8f8f2">=</span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain">store</span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token operator" style="color: #f8f8f2">&gt;</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token maybe-class-name">App</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">/</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token operator" style="color: #f8f8f2">&lt;</span>
+<span class="token maybe-class-name">App</span>
+<span class="token plain"> </span>
+<span class="token operator" style="color: #f8f8f2">/</span>
+<span class="token operator" style="color: #f8f8f2">&gt;</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token operator" style="color: #f8f8f2">/</span><span class="token maybe-class-name">Provider</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token operator" style="color: #f8f8f2">&lt;</span>
+<span class="token operator" style="color: #f8f8f2">/</span>
+<span class="token maybe-class-name">Provider</span>
+<span class="token operator" style="color: #f8f8f2">&gt;</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain">
+</span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Grab the initial state from our Redux store</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token comment" style="color: #c6cad2">// Grab the initial state from our Redux store</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> preloadedState </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">const</span>
+<span class="token plain"> preloadedState </span>
+<span class="token operator" style="color: #f8f8f2">=</span>
+<span class="token plain"> store</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span  style="color: #e6d874">getState</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain">
+</span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Send the rendered page back to the client</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token comment" style="color: #c6cad2">// Send the rendered page back to the client</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> res</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">send</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token function" style="color: #e6d874">renderFullPage</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">html</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> preloadedState</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> res</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span  style="color: #e6d874">send</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token function" style="color: #e6d874">renderFullPage</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token plain">html</span>
+<span class="token punctuation" style="color: #f8f8f2">,</span>
+<span class="token plain"> preloadedState</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>### <span id="inject-initial-component-html-and-state" class="anchor enhancedAnchor_2LWZ"></span>Inject Initial Component HTML and State<a href="#inject-initial-component-html-and-state" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain">
+</span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>### <span id="inject-initial-component-html-and-state" class="anchor enhancedAnchor_2LWZ">
+</span>Inject Initial Component HTML and State<a href="#inject-initial-component-html-and-state" class="hash-link" title="Direct link to heading">#</a>
 
 The final step on the server side is to inject our initial component HTML and initial state into a template to be rendered on the client side. To pass along the state, we add a `<script>` tag that will attach `preloadedState` to `window.__PRELOADED_STATE__`.
 
@@ -238,9 +532,25 @@ The `preloadedState` will then be available on the client side by accessing `win
 
 We also include our bundle file for the client-side application via a script tag. This is whatever output your bundling tool provides for your client entry point. It may be a static file or a URL to a hot reloading development server.
 
-<span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">renderFullPage</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">html</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> preloadedState</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token keyword" style="color: #f92672">function</span>
+<span class="token plain"> </span>
+<span class="token function" style="color: #e6d874">renderFullPage</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token parameter">html</span>
+<span class="token parameter punctuation" style="color: #f8f8f2">,</span>
+<span class="token parameter"> preloadedState</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token template-string template-punctuation string" style="color: #a6e22e">\`</span><span class="token template-string string" style="color: #a6e22e"></span>
+<span class="token plain"> </span>
+<span class="token keyword control-flow" style="color: #f92672">return</span>
+<span class="token plain"> </span>
+<span class="token template-string template-punctuation string" style="color: #a6e22e">\`</span>
+<span class="token template-string string" style="color: #a6e22e">
+</span>
 
 <span class="token template-string string" style="color: #a6e22e"> &lt;!doctype html&gt;</span>
 
@@ -254,7 +564,11 @@ We also include our bundle file for the client-side application via a script tag
 
 <span class="token template-string string" style="color: #a6e22e"> &lt;body&gt;</span>
 
-<span class="token template-string string" style="color: #a6e22e"> &lt;div id="root"&gt;</span><span class="token template-string interpolation interpolation-punctuation punctuation" style="color: #f8f8f2">${</span><span class="token template-string interpolation">html</span><span class="token template-string interpolation interpolation-punctuation punctuation" style="color: #f8f8f2">}</span><span class="token template-string string" style="color: #a6e22e">&lt;/div&gt;</span>
+<span class="token template-string string" style="color: #a6e22e"> &lt;div id="root"&gt;</span>
+<span class="token template-string interpolation interpolation-punctuation punctuation" style="color: #f8f8f2">${</span>
+<span class="token template-string interpolation">html</span>
+<span class="token template-string interpolation interpolation-punctuation punctuation" style="color: #f8f8f2">}</span>
+<span class="token template-string string" style="color: #a6e22e">&lt;/div&gt;</span>
 
 <span class="token template-string string" style="color: #a6e22e"> &lt;script&gt;</span>
 
@@ -262,13 +576,39 @@ We also include our bundle file for the client-side application via a script tag
 
 <span class="token template-string string" style="color: #a6e22e"> // https://redux.js.org/recipes/server-rendering/\#security-considerations</span>
 
-<span class="token template-string string" style="color: #a6e22e"> window.\_\_PRELOADED_STATE\_\_ = </span><span class="token template-string interpolation interpolation-punctuation punctuation" style="color: #f8f8f2">${</span><span class="token template-string interpolation constant" style="color: #f92672">JSON</span><span class="token template-string interpolation punctuation" style="color: #f8f8f2">.</span><span class="token template-string interpolation function" style="color: #e6d874">stringify</span><span class="token template-string interpolation punctuation" style="color: #f8f8f2">(</span><span class="token template-string interpolation">preloadedState</span><span class="token template-string interpolation punctuation" style="color: #f8f8f2">)</span><span class="token template-string interpolation punctuation" style="color: #f8f8f2">.</span><span class="token template-string interpolation function" style="color: #e6d874">replace</span><span class="token template-string interpolation punctuation" style="color: #f8f8f2">(</span><span class="token template-string interpolation"></span>
+<span class="token template-string string" style="color: #a6e22e"> window.\_\_PRELOADED_STATE\_\_ = </span>
+<span class="token template-string interpolation interpolation-punctuation punctuation" style="color: #f8f8f2">${</span>
+<span class="token template-string interpolation constant" style="color: #f92672">JSON</span>
+<span class="token template-string interpolation punctuation" style="color: #f8f8f2">.</span>
+<span class="token template-string interpolation function" style="color: #e6d874">stringify</span>
+<span class="token template-string interpolation punctuation" style="color: #f8f8f2">(</span>
+<span class="token template-string interpolation">preloadedState</span>
+<span class="token template-string interpolation punctuation" style="color: #f8f8f2">)</span>
+<span class="token template-string interpolation punctuation" style="color: #f8f8f2">.</span>
+<span class="token template-string interpolation function" style="color: #e6d874">replace</span>
+<span class="token template-string interpolation punctuation" style="color: #f8f8f2">(</span>
+<span class="token template-string interpolation">
+</span>
 
-<span class="token template-string interpolation"> </span><span class="token template-string interpolation regex regex-delimiter" style="color: #fd971f">/</span><span class="token template-string interpolation regex regex-source language-regex" style="color: #fd971f">&lt;</span><span class="token template-string interpolation regex regex-delimiter" style="color: #fd971f">/</span><span class="token template-string interpolation regex regex-flags" style="color: #fd971f">g</span><span class="token template-string interpolation punctuation" style="color: #f8f8f2">,</span><span class="token template-string interpolation"></span>
+<span class="token template-string interpolation"> </span>
+<span class="token template-string interpolation regex regex-delimiter" style="color: #fd971f">/</span>
+<span class="token template-string interpolation regex regex-source language-regex" style="color: #fd971f">&lt;</span>
+<span class="token template-string interpolation regex regex-delimiter" style="color: #fd971f">/</span>
+<span class="token template-string interpolation regex regex-flags" style="color: #fd971f">g</span>
+<span class="token template-string interpolation punctuation" style="color: #f8f8f2">,</span>
+<span class="token template-string interpolation">
+</span>
 
-<span class="token template-string interpolation"> </span><span class="token template-string interpolation string" style="color: #a6e22e">'\\\\u003c'</span><span class="token template-string interpolation"></span>
+<span class="token template-string interpolation"> </span>
+<span class="token template-string interpolation string" style="color: #a6e22e">'\\\\u003c'</span>
+<span class="token template-string interpolation">
+</span>
 
-<span class="token template-string interpolation"> </span><span class="token template-string interpolation punctuation" style="color: #f8f8f2">)</span><span class="token template-string interpolation interpolation-punctuation punctuation" style="color: #f8f8f2">}</span><span class="token template-string string" style="color: #a6e22e"></span>
+<span class="token template-string interpolation"> </span>
+<span class="token template-string interpolation punctuation" style="color: #f8f8f2">)</span>
+<span class="token template-string interpolation interpolation-punctuation punctuation" style="color: #f8f8f2">}</span>
+<span class="token template-string string" style="color: #a6e22e">
+</span>
 
 <span class="token template-string string" style="color: #a6e22e"> &lt;/script&gt;</span>
 
@@ -278,59 +618,214 @@ We also include our bundle file for the client-side application via a script tag
 
 <span class="token template-string string" style="color: #a6e22e"> &lt;/html&gt;</span>
 
-<span class="token template-string string" style="color: #a6e22e"> </span><span class="token template-string template-punctuation string" style="color: #a6e22e">\`</span><span class="token plain"></span>
+<span class="token template-string string" style="color: #a6e22e"> </span>
+<span class="token template-string template-punctuation string" style="color: #a6e22e">\`</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>## <span id="the-client-side" class="anchor enhancedAnchor_2LWZ"></span>The Client Side<a href="#the-client-side" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain">
+</span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>## <span id="the-client-side" class="anchor enhancedAnchor_2LWZ">
+</span>The Client Side<a href="#the-client-side" class="hash-link" title="Direct link to heading">#</a>
 
 The client side is very straightforward. All we need to do is grab the initial state from `window.__PRELOADED_STATE__`, and pass it to our [`createStore()`](../api/createstore.html) function as the initial state.
 
 Let's take a look at our new client file:
 
-#### <span id="clientjs" class="anchor enhancedAnchor_2LWZ"></span>`client.js`<a href="#clientjs" class="hash-link" title="Direct link to heading">#</a>
+#### <span id="clientjs" class="anchor enhancedAnchor_2LWZ">
+</span>`client.js`<a href="#clientjs" class="hash-link" title="Direct link to heading">#</a>
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">React</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span>
+<span class="token plain"> </span>
+<span class="token imports maybe-class-name">React</span>
+<span class="token plain"> </span>
+<span class="token keyword module" style="color: #f92672">from</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'react'</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > hydrate </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-dom'</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword module" style="color: #f92672">import</span>
+<span class="token plain"> </span>
+<span class="token imports punctuation" style="color: #f8f8f2">{</span>
+<span > hydrate </span>
+<span class="token imports punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain"> </span>
+<span class="token keyword module" style="color: #f92672">from</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'react-dom'</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword module" style="color: #f92672">import</span>
+<span class="token plain"> </span>
+<span class="token imports punctuation" style="color: #f8f8f2">{</span>
+<span > createStore </span>
+<span class="token imports punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain"> </span>
+<span class="token keyword module" style="color: #f92672">from</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'redux'</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > </span><span class="token imports maybe-class-name">Provider</span><span > </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-redux'</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword module" style="color: #f92672">import</span>
+<span class="token plain"> </span>
+<span class="token imports punctuation" style="color: #f8f8f2">{</span>
+<span > </span>
+<span class="token imports maybe-class-name">Provider</span>
+<span > </span>
+<span class="token imports punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain"> </span>
+<span class="token keyword module" style="color: #f92672">from</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'react-redux'</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">App</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./containers/App'</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword module" style="color: #f92672">import</span>
+<span class="token plain"> </span>
+<span class="token imports maybe-class-name">App</span>
+<span class="token plain"> </span>
+<span class="token keyword module" style="color: #f92672">from</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'./containers/App'</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >counterApp</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./reducers'</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword module" style="color: #f92672">import</span>
+<span class="token plain"> </span>
+<span >counterApp</span>
+<span class="token plain"> </span>
+<span class="token keyword module" style="color: #f92672">from</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'./reducers'</span>
+<span class="token plain">
+</span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Grab the state from a global variable injected into the server-generated HTML</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token comment" style="color: #c6cad2">// Grab the state from a global variable injected into the server-generated HTML</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> preloadedState </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token dom variable" style="color: #f8f8f2">window</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">\_\_PRELOADED_STATE\_\_</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword" style="color: #f92672">const</span>
+<span class="token plain"> preloadedState </span>
+<span class="token operator" style="color: #f8f8f2">=</span>
+<span class="token plain"> </span>
+<span class="token dom variable" style="color: #f8f8f2">window</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span class="token property-access">\_\_PRELOADED_STATE\_\_</span>
+<span class="token plain">
+</span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Allow the passed state to be garbage-collected</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token comment" style="color: #c6cad2">// Allow the passed state to be garbage-collected</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">delete</span><span class="token plain"> </span><span class="token dom variable" style="color: #f8f8f2">window</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">\_\_PRELOADED_STATE\_\_</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword" style="color: #f92672">delete</span>
+<span class="token plain"> </span>
+<span class="token dom variable" style="color: #f8f8f2">window</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span class="token property-access">\_\_PRELOADED_STATE\_\_</span>
+<span class="token plain">
+</span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Create Redux store with initial state</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token comment" style="color: #c6cad2">// Create Redux store with initial state</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> store </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createStore</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">counterApp</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> preloadedState</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword" style="color: #f92672">const</span>
+<span class="token plain"> store </span>
+<span class="token operator" style="color: #f8f8f2">=</span>
+<span class="token plain"> </span>
+<span class="token function" style="color: #e6d874">createStore</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token plain">counterApp</span>
+<span class="token punctuation" style="color: #f8f8f2">,</span>
+<span class="token plain"> preloadedState</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain">
+</span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token function" style="color: #e6d874">hydrate</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token function" style="color: #e6d874">hydrate</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token maybe-class-name">Provider</span><span class="token plain"> store</span><span class="token operator" style="color: #f8f8f2">=</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token operator" style="color: #f8f8f2">&lt;</span>
+<span class="token maybe-class-name">Provider</span>
+<span class="token plain"> store</span>
+<span class="token operator" style="color: #f8f8f2">=</span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain">store</span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token operator" style="color: #f8f8f2">&gt;</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token maybe-class-name">App</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">/</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token operator" style="color: #f8f8f2">&lt;</span>
+<span class="token maybe-class-name">App</span>
+<span class="token plain"> </span>
+<span class="token operator" style="color: #f8f8f2">/</span>
+<span class="token operator" style="color: #f8f8f2">&gt;</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token operator" style="color: #f8f8f2">/</span><span class="token maybe-class-name">Provider</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token operator" style="color: #f8f8f2">&lt;</span>
+<span class="token operator" style="color: #f8f8f2">/</span>
+<span class="token maybe-class-name">Provider</span>
+<span class="token operator" style="color: #f8f8f2">&gt;</span>
+<span class="token punctuation" style="color: #f8f8f2">,</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token dom variable" style="color: #f8f8f2">document</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getElementById</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'root'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token dom variable" style="color: #f8f8f2">document</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span  style="color: #e6d874">getElementById</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token string" style="color: #a6e22e">'root'</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">)</span>You can set up your build tool of choice (Webpack, Browserify, etc.) to compile a bundle file into `static/bundle.js`.
+<span class="token plain">
+</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>You can set up your build tool of choice (Webpack, Browserify, etc.) to compile a bundle file into `static/bundle.js`.
 
 When the page loads, the bundle file will be started up and [`ReactDOM.hydrate()`](../../reactjs.org/docs/react-dom.html#hydrate) will reuse the server-rendered HTML. This will connect our newly-started React instance to the virtual DOM used on the server. Since we have the same initial state for our Redux store and used the same code for all our view components, the result will be the same real DOM.
 
@@ -338,31 +833,100 @@ And that's it! That is all we need to do to implement server side rendering.
 
 But the result is pretty vanilla. It essentially renders a static view from dynamic code. What we need to do next is build an initial state dynamically to allow that rendered view to be dynamic.
 
-## <span id="preparing-the-initial-state" class="anchor enhancedAnchor_2LWZ"></span>Preparing the Initial State<a href="#preparing-the-initial-state" class="hash-link" title="Direct link to heading">#</a>
+## <span id="preparing-the-initial-state" class="anchor enhancedAnchor_2LWZ">
+</span>Preparing the Initial State<a href="#preparing-the-initial-state" class="hash-link" title="Direct link to heading">#</a>
 
 Because the client side executes ongoing code, it can start with an empty initial state and obtain any necessary state on demand and over time. On the server side, rendering is synchronous and we only get one shot to render our view. We need to be able to compile our initial state during the request, which will have to react to input and obtain external state (such as that from an API or database).
 
-### <span id="processing-request-parameters" class="anchor enhancedAnchor_2LWZ"></span>Processing Request Parameters<a href="#processing-request-parameters" class="hash-link" title="Direct link to heading">#</a>
+### <span id="processing-request-parameters" class="anchor enhancedAnchor_2LWZ">
+</span>Processing Request Parameters<a href="#processing-request-parameters" class="hash-link" title="Direct link to heading">#</a>
 
 The only input for server side code is the request made when loading up a page in your app in your browser. You may choose to configure the server during its boot (such as when you are running in a development vs. production environment), but that configuration is static.
 
 The request contains information about the URL requested, including any query parameters, which will be useful when using something like [React Router](../../github.com/ReactTraining/react-router.html). It can also contain headers with inputs like cookies or authorization, or POST body data. Let's see how we can set the initial counter state based on a query parameter.
 
-#### <span id="serverjs-1" class="anchor enhancedAnchor_2LWZ"></span>`server.js`<a href="#serverjs-1" class="hash-link" title="Direct link to heading">#</a>
+#### <span id="serverjs-1" class="anchor enhancedAnchor_2LWZ">
+</span>`server.js`<a href="#serverjs-1" class="hash-link" title="Direct link to heading">#</a>
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >qs</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'qs'</span><span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Add this at the top of the file</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span>
+<span class="token plain"> </span>
+<span >qs</span>
+<span class="token plain"> </span>
+<span class="token keyword module" style="color: #f92672">from</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'qs'</span>
+<span class="token plain"> </span>
+<span class="token comment" style="color: #c6cad2">// Add this at the top of the file</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > renderToString </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-dom/server'</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword module" style="color: #f92672">import</span>
+<span class="token plain"> </span>
+<span class="token imports punctuation" style="color: #f8f8f2">{</span>
+<span > renderToString </span>
+<span class="token imports punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain"> </span>
+<span class="token keyword module" style="color: #f92672">from</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'react-dom/server'</span>
+<span class="token plain">
+</span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">handleRender</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">req</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> res</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword" style="color: #f92672">function</span>
+<span class="token plain"> </span>
+<span class="token function" style="color: #e6d874">handleRender</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token parameter">req</span>
+<span class="token parameter punctuation" style="color: #f8f8f2">,</span>
+<span class="token parameter"> res</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Read the counter from the request, if provided</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token comment" style="color: #c6cad2">// Read the counter from the request, if provided</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> params </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> qs</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">parse</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">req</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">query</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">const</span>
+<span class="token plain"> params </span>
+<span class="token operator" style="color: #f8f8f2">=</span>
+<span class="token plain"> qs</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span  style="color: #e6d874">parse</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token plain">req</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span class="token property-access">query</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> counter </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">parseInt</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">params</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">counter</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">10</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">||</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">0</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">const</span>
+<span class="token plain"> counter </span>
+<span class="token operator" style="color: #f8f8f2">=</span>
+<span class="token plain"> </span>
+<span class="token function" style="color: #e6d874">parseInt</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token plain">params</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span class="token property-access">counter</span>
+<span class="token punctuation" style="color: #f8f8f2">,</span>
+<span class="token plain"> </span>
+<span class="token number" style="color: #ae81ff">10</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain"> </span>
+<span class="token operator" style="color: #f8f8f2">||</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">0</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 

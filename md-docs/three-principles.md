@@ -1,7 +1,17 @@
-<a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
+<a href="../official/index.html" class="navbar__brand">
+<strong>Redux</strong>
+</a>
 
-<a href="../official/introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="../official/tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../official/api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../official/faq.html" class="navbar__item navbar__link">FAQ</a><a href="../official/style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/../github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../official/introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-<a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
+<a href="../official/introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a>
+<a href="../official/tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a>
+<a href="../official/api/api-reference.html" class="navbar__item navbar__link">API</a>
+<a href="../official/faq.html" class="navbar__item navbar__link">FAQ</a>
+<a href="../official/style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a>
+<a href="../official/../github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a>
+<a href="../official/introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
+<a href="../official/index.html" class="navbar__brand">
+<strong>Redux</strong>
+</a>
 
 - <a href="../official/introduction/getting-started.html" class="menu__link">Getting Started</a>
 - <a href="../official/tutorials/essentials/part-1-overview-concepts.html" class="menu__link">Tutorial</a>
@@ -99,21 +109,36 @@
 - <a href="#!" class="menu__link menu__link--sublist">Redux Toolkit</a>
   - <a href="../official/redux-toolkit/overview.html" class="menu__link">Redux Toolkit: Overview</a>
 
-# <span id="three-principles" class="anchor enhancedAnchor_2LWZ"></span>Three Principles<a href="#three-principles" class="hash-link" title="Direct link to heading">#</a>
+# <span id="three-principles" class="anchor enhancedAnchor_2LWZ">
+</span>Three Principles<a href="#three-principles" class="hash-link" title="Direct link to heading">#</a>
 
 Redux can be described in three fundamental principles:
 
-### <span id="single-source-of-truth" class="anchor enhancedAnchor_2LWZ"></span>Single source of truth<a href="#single-source-of-truth" class="hash-link" title="Direct link to heading">#</a>
+### <span id="single-source-of-truth" class="anchor enhancedAnchor_2LWZ">
+</span>Single source of truth<a href="#single-source-of-truth" class="hash-link" title="Direct link to heading">#</a>
 
 **The [global state](glossary.html#state) of your application is stored in an object tree within a single [store](glossary.html#store).**
 
 This makes it easy to create universal apps, as the state from your server can be serialized and hydrated into the client with no extra coding effort. A single state tree also makes it easier to debug or inspect an application; it also enables you to persist your app's state in development, for a faster development cycle. Some functionality which has been traditionally difficult to implement - Undo/Redo, for example - can suddenly become trivial to implement, if all of your state is stored in a single tree.
 
-<span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token console class-name">console</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span  style="color: #e6d874">log</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token plain">store</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span  style="color: #e6d874">getState</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain">
+</span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">/\* Prints</span>
+<span class="token plain">
+</span>
+<span class="token comment" style="color: #c6cad2">/\* Prints</span>
 
 <span class="token comment" style="color: #c6cad2">{</span>
 
@@ -141,111 +166,391 @@ This makes it easy to create universal apps, as the state from your server can b
 
 <span class="token comment" style="color: #c6cad2">}</span>
 
-<span class="token comment" style="color: #c6cad2">\*/</span>### <span id="state-is-read-only" class="anchor enhancedAnchor_2LWZ"></span>State is read-only<a href="#state-is-read-only" class="hash-link" title="Direct link to heading">#</a>
+<span class="token comment" style="color: #c6cad2">\*/</span>### <span id="state-is-read-only" class="anchor enhancedAnchor_2LWZ">
+</span>State is read-only<a href="#state-is-read-only" class="hash-link" title="Direct link to heading">#</a>
 
 **The only way to change the state is to emit an [action](glossary.html), an object describing what happened.**
 
 This ensures that neither the views nor the network callbacks will ever write directly to the state. Instead, they express an intent to transform the state. Because all changes are centralized and happen one by one in a strict order, there are no subtle race conditions to watch out for. As actions are just plain objects, they can be logged, serialized, stored, and later replayed for debugging or testing purposes.
 
-<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain">store</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span  style="color: #e6d874">dispatch</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'COMPLETE_TODO'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
+<span class="token plain"> type</span>
+<span class="token operator" style="color: #f8f8f2">:</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'COMPLETE_TODO'</span>
+<span class="token punctuation" style="color: #f8f8f2">,</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> index</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token plain"></span>
+<span class="token plain"> index</span>
+<span class="token operator" style="color: #f8f8f2">:</span>
+<span class="token plain"> </span>
+<span class="token number" style="color: #ae81ff">1</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain">
+</span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain">store</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span  style="color: #e6d874">dispatch</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'SET_VISIBILITY_FILTER'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
+<span class="token plain"> type</span>
+<span class="token operator" style="color: #f8f8f2">:</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'SET_VISIBILITY_FILTER'</span>
+<span class="token punctuation" style="color: #f8f8f2">,</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> filter</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'SHOW_COMPLETED'</span><span class="token plain"></span>
+<span class="token plain"> filter</span>
+<span class="token operator" style="color: #f8f8f2">:</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'SHOW_COMPLETED'</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>### <span id="changes-are-made-with-pure-functions" class="anchor enhancedAnchor_2LWZ"></span>Changes are made with pure functions<a href="#changes-are-made-with-pure-functions" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain">
+</span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>### <span id="changes-are-made-with-pure-functions" class="anchor enhancedAnchor_2LWZ">
+</span>Changes are made with pure functions<a href="#changes-are-made-with-pure-functions" class="hash-link" title="Direct link to heading">#</a>
 
 **To specify how the state tree is transformed by actions, you write pure [reducers](glossary.html#reducer).**
 
 Reducers are just pure functions that take the previous state and an action, and return the next state. Remember to return new state objects, instead of mutating the previous state. You can start with a single reducer, and as your app grows, split it off into smaller reducers that manage specific parts of the state tree. Because reducers are just functions, you can control the order in which they are called, pass additional data, or even make reusable reducers for common tasks such as pagination.
 
-<span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">visibilityFilter</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">state </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'SHOW_ALL'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token keyword" style="color: #f92672">function</span>
+<span class="token plain"> </span>
+<span class="token function" style="color: #e6d874">visibilityFilter</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token plain">state </span>
+<span class="token operator" style="color: #f8f8f2">=</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'SHOW_ALL'</span>
+<span class="token punctuation" style="color: #f8f8f2">,</span>
+<span class="token plain"> action</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">switch</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">type</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token keyword control-flow" style="color: #f92672">switch</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token plain">action</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span class="token property-access">type</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">case</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'SET_VISIBILITY_FILTER'</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">case</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'SET_VISIBILITY_FILTER'</span>
+<span class="token operator" style="color: #f8f8f2">:</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">filter</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token keyword control-flow" style="color: #f92672">return</span>
+<span class="token plain"> action</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span class="token property-access">filter</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token keyword module" style="color: #f92672">default</span>
+<span class="token operator" style="color: #f8f8f2">:</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> state</span>
+<span class="token plain"> </span>
+<span class="token keyword control-flow" style="color: #f92672">return</span>
+<span class="token plain"> state</span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain">
+</span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">todos</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state </span><span class="token parameter operator" style="color: #f8f8f2">=</span><span class="token parameter"> </span><span class="token parameter punctuation" style="color: #f8f8f2">\[</span><span class="token parameter punctuation" style="color: #f8f8f2">\]</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword" style="color: #f92672">function</span>
+<span class="token plain"> </span>
+<span class="token function" style="color: #e6d874">todos</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token parameter">state </span>
+<span class="token parameter operator" style="color: #f8f8f2">=</span>
+<span class="token parameter"> </span>
+<span class="token parameter punctuation" style="color: #f8f8f2">\[</span>
+<span class="token parameter punctuation" style="color: #f8f8f2">\]</span>
+<span class="token parameter punctuation" style="color: #f8f8f2">,</span>
+<span class="token parameter"> action</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">switch</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">type</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token keyword control-flow" style="color: #f92672">switch</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token plain">action</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span class="token property-access">type</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">case</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'ADD_TODO'</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">case</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'ADD_TODO'</span>
+<span class="token operator" style="color: #f8f8f2">:</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token keyword control-flow" style="color: #f92672">return</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">\[</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token spread operator" style="color: #f8f8f2">...</span><span class="token plain">state</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token spread operator" style="color: #f8f8f2">...</span>
+<span class="token plain">state</span>
+<span class="token punctuation" style="color: #f8f8f2">,</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> text</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">text</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
+<span class="token plain"> text</span>
+<span class="token operator" style="color: #f8f8f2">:</span>
+<span class="token plain"> action</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span class="token property-access">text</span>
+<span class="token punctuation" style="color: #f8f8f2">,</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> completed</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token boolean" style="color: #ae81ff">false</span><span class="token plain"></span>
+<span class="token plain"> completed</span>
+<span class="token operator" style="color: #f8f8f2">:</span>
+<span class="token plain"> </span>
+<span class="token boolean" style="color: #ae81ff">false</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">\]</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">case</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'COMPLETE_TODO'</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">case</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'COMPLETE_TODO'</span>
+<span class="token operator" style="color: #f8f8f2">:</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">map</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">todo</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> index</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token keyword control-flow" style="color: #f92672">return</span>
+<span class="token plain"> state</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span  style="color: #e6d874">map</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token parameter">todo</span>
+<span class="token parameter punctuation" style="color: #f8f8f2">,</span>
+<span class="token parameter"> index</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain"> </span>
+<span class="token arrow operator" style="color: #f8f8f2">=&gt;</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">if</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">index </span><span class="token operator" style="color: #f8f8f2">===</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">index</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token keyword control-flow" style="color: #f92672">if</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token plain">index </span>
+<span class="token operator" style="color: #f8f8f2">===</span>
+<span class="token plain"> action</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span class="token property-access">index</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token known-class-name class-name">Object</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">assign</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> todo</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token keyword control-flow" style="color: #f92672">return</span>
+<span class="token plain"> </span>
+<span class="token known-class-name class-name">Object</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span  style="color: #e6d874">assign</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token punctuation" style="color: #f8f8f2">,</span>
+<span class="token plain"> todo</span>
+<span class="token punctuation" style="color: #f8f8f2">,</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> completed</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token boolean" style="color: #ae81ff">true</span><span class="token plain"></span>
+<span class="token plain"> completed</span>
+<span class="token operator" style="color: #f8f8f2">:</span>
+<span class="token plain"> </span>
+<span class="token boolean" style="color: #ae81ff">true</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> todo</span>
+<span class="token plain"> </span>
+<span class="token keyword control-flow" style="color: #f92672">return</span>
+<span class="token plain"> todo</span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token keyword module" style="color: #f92672">default</span>
+<span class="token operator" style="color: #f8f8f2">:</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> state</span>
+<span class="token plain"> </span>
+<span class="token keyword control-flow" style="color: #f92672">return</span>
+<span class="token plain"> state</span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain">
+</span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > combineReducers</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword module" style="color: #f92672">import</span>
+<span class="token plain"> </span>
+<span class="token imports punctuation" style="color: #f8f8f2">{</span>
+<span > combineReducers</span>
+<span class="token imports punctuation" style="color: #f8f8f2">,</span>
+<span > createStore </span>
+<span class="token imports punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain"> </span>
+<span class="token keyword module" style="color: #f92672">from</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'redux'</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> reducer </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">combineReducers</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> visibilityFilter</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> todos </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword" style="color: #f92672">const</span>
+<span class="token plain"> reducer </span>
+<span class="token operator" style="color: #f8f8f2">=</span>
+<span class="token plain"> </span>
+<span class="token function" style="color: #e6d874">combineReducers</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain"> visibilityFilter</span>
+<span class="token punctuation" style="color: #f8f8f2">,</span>
+<span class="token plain"> todos </span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> store </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createStore</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">reducer</span><span class="token punctuation" style="color: #f8f8f2">)</span>That's it! Now you know what Redux is all about.
+<span class="token plain">
+</span>
+<span class="token keyword" style="color: #f92672">const</span>
+<span class="token plain"> store </span>
+<span class="token operator" style="color: #f8f8f2">=</span>
+<span class="token plain"> </span>
+<span class="token function" style="color: #e6d874">createStore</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token plain">reducer</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>That's it! Now you know what Redux is all about.
 
-<a href="motivation.html" class="pagination-nav__link"></a>
+<a href="motivation.html" class="pagination-nav__link">
+</a>
 
 « Motivation
 
-<a href="glossary.html" class="pagination-nav__link"></a>
+<a href="glossary.html" class="pagination-nav__link">
+</a>
 
 Next
 
@@ -273,5 +578,6 @@ Glossary »
 - <a href="../official/../github.com/reduxjs/redux.html" class="footer__link-item">GitHub</a>
 - [![Deploys by Netlify](../../../www.netlify.com/img/global/badges/netlify-color-accent.svg)](../../../www.netlify.com/index.html)
 
-<a href="../official/index.html" class="footerLogoLink_MyFc"><img src="../official/../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
+<a href="../official/index.html" class="footerLogoLink_MyFc">
+<img src="../official/../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
 

@@ -76,7 +76,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
+<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js">
+</script>
     </head>
 <body>
 <header id="title-block-header">
@@ -91,9 +92,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>:::</p>
 <p>:::info Prerequisites</p>
 <ul>
-<li>Familiarity with <a href="https://www.taniarascia.com/es6-syntax-and-feature-overview/">ES6 syntax and features</a></li>
-<li>Knowledge of React terminology: <a href="https://reactjs.org/docs/introducing-jsx.html">JSX</a>, <a href="https://reactjs.org/docs/state-and-lifecycle.html">State</a>, <a href="https://reactjs.org/docs/components-and-props.html">Function Components, Props</a>, and <a href="https://reactjs.org/docs/hooks-intro.html">Hooks</a></li>
-<li>Understanding of <a href="https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow">Redux terms and concepts</a></li>
+<li>Familiarity with <a href="https://www.taniarascia.com/es6-syntax-and-feature-overview/">ES6 syntax and features</a>
+</li>
+<li>Knowledge of React terminology: <a href="https://reactjs.org/docs/introducing-jsx.html">JSX</a>, <a href="https://reactjs.org/docs/state-and-lifecycle.html">State</a>, <a href="https://reactjs.org/docs/components-and-props.html">Function Components, Props</a>, and <a href="https://reactjs.org/docs/hooks-intro.html">Hooks</a>
+</li>
+<li>Understanding of <a href="https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow">Redux terms and concepts</a>
+</li>
 </ul>
 <p>:::</p>
 <h2 id="introduction">Introduction</h2>
@@ -105,7 +109,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 id="usage-summary">Usage Summary</h2>
 <h3 id="install-redux-toolkit-and-react-redux">Install Redux Toolkit and React Redux</h3>
 <p>Add the Redux Toolkit and React Redux packages to your project:</p>
-<div class="sourceCode" id="cb1"><pre class="language-js  class="sourceCode sh"><code class="language-js  class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">npm</span> install @reduxjs/toolkit react-redux</a></code></pre></div>
+<div class="sourceCode" id="cb1">
+<pre class="language-js  class="sourceCode sh">
+<code class="language-js  class="sourceCode bash">
+<a class="sourceLine" id="cb1-1" title="1">
+<span class="ex">npm</span> install @reduxjs/toolkit react-redux</a>
+</code>
+</pre>
+</div>
 <h3 id="create-a-redux-store">Create a Redux Store</h3>
 <p>Create a file named <code class="language-js" >src/app/store.js</code>. Import the <code class="language-js" >configureStore</code> API from Redux Toolkit. We’ll start by creating an empty Redux store, and exporting it:</p>
 <p>```js title=“app/store.js” import { configureStore } from ‘<span class="citation" data-cites="reduxjs/toolkit">@reduxjs/toolkit</span>’</p>
@@ -133,7 +144,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>export function Counter() { const count = useSelector((state) =&gt; state.counter.value) const dispatch = useDispatch()</p>
 return (
 <div>
-<pre class="language-js" ><code class="language-js" >  &lt;div&gt;
+<pre class="language-js" >
+<code class="language-js" >  &lt;div&gt;
     &lt;button
       aria-label=&quot;Increment value&quot;
       onClick={() =&gt; dispatch(increment())}
@@ -148,7 +160,8 @@ return (
       Decrement
     &lt;/button&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</code>
+</pre>
 <p>) } ```</p>
 <p>Now, any time you click the “Increment” and "Decrement buttons:</p>
 <ul>
@@ -160,27 +173,41 @@ return (
 <p>That was a brief overview of how to set up and use Redux Toolkit with React. Recapping the details:</p>
 <p>:::tip Summary</p>
 <ul>
-<li><strong>Create a Redux store with <code class="language-js" >configureStore</code></strong>
+<li>
+<strong>Create a Redux store with <code class="language-js" >configureStore</code>
+</strong>
 <ul>
-<li><code class="language-js" >configureStore</code> accepts a <code class="language-js" >reducer</code> function as a named argument</li>
-<li><code class="language-js" >configureStore</code> automatically sets up the store with good default settings</li>
-</ul></li>
-<li><strong>Provide the Redux store to the React application components</strong>
+<li>
+<code class="language-js" >configureStore</code> accepts a <code class="language-js" >reducer</code> function as a named argument</li>
+<li>
+<code class="language-js" >configureStore</code> automatically sets up the store with good default settings</li>
+</ul>
+</li>
+<li>
+<strong>Provide the Redux store to the React application components</strong>
 <ul>
-<li>Put a React Redux <code class="language-js" >&lt;Provider&gt;</code> component around your <code class="language-js" >&lt;App /&gt;</code></li>
-<li>Pass the Redux store as <code class="language-js" >&lt;Provider store={store}&gt;</code></li>
-</ul></li>
-<li><strong>Create a Redux “slice” reducer with <code class="language-js" >createSlice</code></strong>
+<li>Put a React Redux <code class="language-js" >&lt;Provider&gt;</code> component around your <code class="language-js" >&lt;App /&gt;</code>
+</li>
+<li>Pass the Redux store as <code class="language-js" >&lt;Provider store={store}&gt;</code>
+</li>
+</ul>
+</li>
+<li>
+<strong>Create a Redux “slice” reducer with <code class="language-js" >createSlice</code>
+</strong>
 <ul>
 <li>Call <code class="language-js" >createSlice</code> with a string name, an initial state, and named reducer functions</li>
 <li>Reducer functions may “mutate” the state using Immer</li>
 <li>Export the generated slice reducer and action creators</li>
-</ul></li>
-<li><strong>Use the React Redux <code class="language-js" >useSelector/useDispatch</code> hooks in React components</strong>
+</ul>
+</li>
+<li>
+<strong>Use the React Redux <code class="language-js" >useSelector/useDispatch</code> hooks in React components</strong>
 <ul>
 <li>Read data from the store with the <code class="language-js" >useSelector</code> hook</li>
 <li>Get the <code class="language-js" >dispatch</code> function with the <code class="language-js" >useDispatch</code> hook, and dispatch actions as needed</li>
-</ul></li>
+</ul>
+</li>
 </ul>
 <p>:::</p>
 <h3 id="full-counter-app-example">Full Counter App Example</h3>
@@ -189,6 +216,8 @@ return (
 <iframe class="codesandbox" src="https://codesandbox.io/embed/github/reduxjs/redux-essentials-counter-example/tree/master/?fontsize=14&amp;hidenavigation=1&amp;module=%2Fsrc%2Ffeatures%2Fcounter%2FcounterSlice.js&amp;theme=dark&amp;runonclick=1" title="redux-essentials-example" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin">
 </iframe>
 <h2 id="whats-next">What’s Next?</h2>
-<p>We recommend going through <a href="https://redux.js.org/tutorials/index"><strong>the “Redux Essentials” and “Redux Fundamentals” tutorials in the Redux core docs</strong></a>, which will give you a complete understanding of how Redux works, what Redux Toolkit and React Redux do, and how to use it correctly.</p>
+<p>We recommend going through <a href="https://redux.js.org/tutorials/index">
+<strong>the “Redux Essentials” and “Redux Fundamentals” tutorials in the Redux core docs</strong>
+</a>, which will give you a complete understanding of how Redux works, what Redux Toolkit and React Redux do, and how to use it correctly.</p>
 </body>
 </html>

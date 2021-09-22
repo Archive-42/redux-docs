@@ -200,7 +200,8 @@
     </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
+<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js">
+</script>
     </head>
   <body>
     <header id="title-block-header">
@@ -239,28 +240,52 @@
       for
       <a href="https://github.com/facebook/create-react-app">Create React App</a
       >, which takes advantage of
-      <strong><a href="https://redux-toolkit.js.org/">Redux Toolkit</a></strong>
+      <strong>
+<a href="https://redux-toolkit.js.org/">Redux Toolkit</a>
+</strong>
       and React Redux’s integration with React components.
     </p>
     <div class="sourceCode" id="cb1">
       <pre class="language-js 
         class="sourceCode bash"
-      ><code class="language-js  class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="co"># Redux + Plain JS template</span></a>
-<a class="sourceLine" id="cb1-2" title="2"><span class="ex">npx</span> create-react-app my-app --template redux</a>
-<a class="sourceLine" id="cb1-3" title="3"></a>
-<a class="sourceLine" id="cb1-4" title="4"><span class="co"># Redux + TypeScript template</span></a>
-<a class="sourceLine" id="cb1-5" title="5"><span class="ex">npx</span> create-react-app my-app --template redux-typescript</a></code></pre>
+      >
+<code class="language-js  class="sourceCode bash">
+<a class="sourceLine" id="cb1-1" title="1">
+<span class="co"># Redux + Plain JS template</span>
+</a>
+<a class="sourceLine" id="cb1-2" title="2">
+<span class="ex">npx</span> create-react-app my-app --template redux</a>
+<a class="sourceLine" id="cb1-3" title="3">
+</a>
+<a class="sourceLine" id="cb1-4" title="4">
+<span class="co"># Redux + TypeScript template</span>
+</a>
+<a class="sourceLine" id="cb1-5" title="5">
+<span class="ex">npx</span> create-react-app my-app --template redux-typescript</a>
+</code>
+</pre>
     </div>
     <h3 id="an-existing-react-app">An Existing React App</h3>
     <p>To use React Redux with your React app, install it as a dependency:</p>
     <div class="sourceCode" id="cb2">
       <pre class="language-js 
         class="sourceCode bash"
-      ><code class="language-js  class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="co"># If you use npm:</span></a>
-<a class="sourceLine" id="cb2-2" title="2"><span class="ex">npm</span> install react-redux</a>
-<a class="sourceLine" id="cb2-3" title="3"></a>
-<a class="sourceLine" id="cb2-4" title="4"><span class="co"># Or if you use Yarn:</span></a>
-<a class="sourceLine" id="cb2-5" title="5"><span class="ex">yarn</span> add react-redux</a></code></pre>
+      >
+<code class="language-js  class="sourceCode bash">
+<a class="sourceLine" id="cb2-1" title="1">
+<span class="co"># If you use npm:</span>
+</a>
+<a class="sourceLine" id="cb2-2" title="2">
+<span class="ex">npm</span> install react-redux</a>
+<a class="sourceLine" id="cb2-3" title="3">
+</a>
+<a class="sourceLine" id="cb2-4" title="4">
+<span class="co"># Or if you use Yarn:</span>
+</a>
+<a class="sourceLine" id="cb2-5" title="5">
+<span class="ex">yarn</span> add react-redux</a>
+</code>
+</pre>
     </div>
     <p>
       You’ll also need to
@@ -280,15 +305,23 @@
     <div class="sourceCode" id="cb3">
       <pre class="language-js 
         class="sourceCode bash"
-      ><code class="language-js  class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">npm</span> install @types/react-redux</a></code></pre>
+      >
+<code class="language-js  class="sourceCode bash">
+<a class="sourceLine" id="cb3-1" title="1">
+<span class="ex">npm</span> install @types/react-redux</a>
+</code>
+</pre>
     </div>
     <h2 id="api-overview">API Overview</h2>
-    <h3 id="provider"><code class="language-js" >Provider</code></h3>
+    <h3 id="provider">
+<code class="language-js" >Provider</code>
+</h3>
     <p>
       React Redux includes a <code class="language-js" >&lt;Provider /&gt;</code> component, which
       makes the Redux store available to the rest of your app:
     </p>
-    <pre class="language-js  class="jsx"><code class="language-js" >import React from &#39;react&#39;
+    <pre class="language-js  class="jsx">
+<code class="language-js" >import React from &#39;react&#39;
 import ReactDOM from &#39;react-dom&#39;
 
 import { Provider } from &#39;react-redux&#39;
@@ -302,7 +335,8 @@ ReactDOM.render(
     &lt;App /&gt;
   &lt;/Provider&gt;,
   rootElement
-)</code></pre>
+)</code>
+</pre>
     <h3 id="hooks">Hooks</h3>
     <p>
       React Redux provides a pair of custom React hooks that allow your React
@@ -313,7 +347,8 @@ ReactDOM.render(
       to updates, while <code class="language-js" >useDispatch</code> returns the store’s
       <code class="language-js" >dispatch</code> method to let you dispatch actions.
     </p>
-    <pre class="language-js  class="jsx"><code class="language-js" >import React from &#39;react&#39;
+    <pre class="language-js  class="jsx">
+<code class="language-js" >import React from &#39;react&#39;
 import { useSelector, useDispatch } from &#39;react-redux&#39;
 import {
   decrement,
@@ -350,7 +385,8 @@ export function Counter() {
       {/* omit additional rendering output here */}
     &lt;/div&gt;
   )
-}</code></pre>
+}</code>
+</pre>
     <h2 id="learning-react-redux">Learning React Redux</h2>
     <h3 id="learn-modern-redux-livestream">Learn Modern Redux Livestream</h3>
     <p>
@@ -376,15 +412,19 @@ export function Counter() {
     <p>
       The
       <strong
-        ><a href="https://discord.gg/0ZcbPKXt5bZ6au5t"
+        >
+<a href="https://discord.gg/0ZcbPKXt5bZ6au5t"
           >#redux channel</a
-        ></strong
+        >
+</strong
       >
       of the
       <strong
-        ><a href="http://www.reactiflux.com"
+        >
+<a href="http://www.reactiflux.com"
           >Reactiflux Discord community</a
-        ></strong
+        >
+</strong
       >
       is our official resource for all questions related to learning and using
       Redux. Reactiflux is a great place to hang out, ask questions, and learn -
@@ -394,9 +434,11 @@ export function Counter() {
       You can also ask questions on
       <a href="https://stackoverflow.com">Stack Overflow</a> using the
       <strong
-        ><a href="https://stackoverflow.com/questions/tagged/redux"
+        >
+<a href="https://stackoverflow.com/questions/tagged/redux"
           >#redux tag</a
-        ></strong
+        >
+</strong
       >.
     </p>
     <h2 id="docs-translations">Docs Translations</h2>

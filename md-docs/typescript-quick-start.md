@@ -1,7 +1,19 @@
-<a href="../index.html" class="navbar__brand"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
+<a href="../index.html" class="navbar__brand">
+<img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" />
+<strong>Redux</strong>
+</a>
 
-<a href="../introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../faq.html" class="navbar__item navbar__link">FAQ</a><a href="../style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-<a href="../index.html" class="navbar__brand"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
+<a href="../introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a>
+<a href="essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a>
+<a href="../api/api-reference.html" class="navbar__item navbar__link">API</a>
+<a href="../faq.html" class="navbar__item navbar__link">FAQ</a>
+<a href="../style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a>
+<a href="../official/github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a>
+<a href="../introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
+<a href="../index.html" class="navbar__brand">
+<img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" />
+<strong>Redux</strong>
+</a>
 
 - <a href="../introduction/getting-started.html" class="menu__link">Getting Started</a>
 - <a href="essentials/part-1-overview-concepts.html" class="menu__link">Tutorial</a>
@@ -99,7 +111,8 @@
 - <a href="#!" class="menu__link menu__link--sublist">Redux Toolkit</a>
   - <a href="../redux-toolkit/overview.html" class="menu__link">Redux Toolkit: Overview</a>
 
-# <span id="redux-toolkit-typescript-quick-start" class="anchor enhancedAnchor_2LWZ"></span>Redux Toolkit TypeScript Quick Start<a href="#redux-toolkit-typescript-quick-start" class="hash-link" title="Direct link to heading">#</a>
+# <span id="redux-toolkit-typescript-quick-start" class="anchor enhancedAnchor_2LWZ">
+</span>Redux Toolkit TypeScript Quick Start<a href="#redux-toolkit-typescript-quick-start" class="hash-link" title="Direct link to heading">#</a>
 
 ##### <span class="admonition-icon"> </span>What You'll Learn
 
@@ -111,7 +124,8 @@
 - Understanding of [Redux terms and concepts](fundamentals/part-2-concepts-data-flow.html)
 - Understanding of TypeScript syntax and concepts
 
-## <span id="introduction" class="anchor enhancedAnchor_2LWZ"></span>Introduction<a href="#introduction" class="hash-link" title="Direct link to heading">#</a>
+## <span id="introduction" class="anchor enhancedAnchor_2LWZ">
+</span>Introduction<a href="#introduction" class="hash-link" title="Direct link to heading">#</a>
 
 Welcome to the Redux Toolkit TypeScript Quick Start tutorial! **This tutorial will briefly show how to use TypeScript with Redux Toolkit**.
 
@@ -125,9 +139,11 @@ As of React Redux v7.2.3, the `react-redux` package has a dependency on `@types/
 
 The [Redux+TS template for Create-React-App](../../github.com/reduxjs/cra-template-redux-typescript.html) comes with a working example of these patterns already configured.
 
-## <span id="project-setup" class="anchor enhancedAnchor_2LWZ"></span>Project Setup<a href="#project-setup" class="hash-link" title="Direct link to heading">#</a>
+## <span id="project-setup" class="anchor enhancedAnchor_2LWZ">
+</span>Project Setup<a href="#project-setup" class="hash-link" title="Direct link to heading">#</a>
 
-### <span id="define-root-state-and-dispatch-types" class="anchor enhancedAnchor_2LWZ"></span>Define Root State and Dispatch Types<a href="#define-root-state-and-dispatch-types" class="hash-link" title="Direct link to heading">#</a>
+### <span id="define-root-state-and-dispatch-types" class="anchor enhancedAnchor_2LWZ">
+</span>Define Root State and Dispatch Types<a href="#define-root-state-and-dispatch-types" class="hash-link" title="Direct link to heading">#</a>
 
 [Redux Toolkit's `configureStore` API](../../redux-toolkit.js.org/api/configureStore.html) should not need any additional typings. You will, however, want to extract the `RootState` type and the `Dispatch` type so that they can be referenced as needed. Inferring these types from the store itself means that they correctly update as you add more state slices or modify middleware settings.
 
@@ -135,35 +151,124 @@ Since those are types, it's safe to export them directly from your store setup f
 
 app/store.ts
 
-<span class="token keyword" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > configureStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
+<span class="token keyword" style="color: #f92672">import</span>
+<span class="token plain"> </span>
+<span class="token imports punctuation" style="color: #f8f8f2">{</span>
+<span > configureStore </span>
+<span class="token imports punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">from</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// ...</span><span class="token plain"></span>
-
-<span class="token plain" style="display: inline-block"> </span>
-
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> store </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">configureStore</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
-
-<span class="token plain"> reducer</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
-
-<span class="token plain"> posts</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> postsReducer</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
-
-<span class="token plain"> comments</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> commentsReducer</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
-
-<span class="token plain"> users</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> usersReducer</span>
-
-<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
-
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token comment" style="color: #c6cad2">// ...</span>
+<span class="token plain">
+</span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Infer the \`RootState\` and \`AppDispatch\` types from the store itself</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword" style="color: #f92672">const</span>
+<span class="token plain"> store </span>
+<span class="token operator" style="color: #f8f8f2">=</span>
+<span class="token plain"> </span>
+<span class="token function" style="color: #e6d874">configureStore</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">type</span><span class="token plain"> </span><span class="token class-name maybe-class-name">RootState</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token maybe-class-name">ReturnType</span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token keyword" style="color: #f92672">typeof</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">getState</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token plain"></span>
+<span class="token plain"> reducer</span>
+<span class="token operator" style="color: #f8f8f2">:</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}</span><span class="token plain"></span>
+<span class="token plain"> posts</span>
+<span class="token operator" style="color: #f8f8f2">:</span>
+<span class="token plain"> postsReducer</span>
+<span class="token punctuation" style="color: #f8f8f2">,</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">type</span><span class="token plain"> </span><span class="token class-name maybe-class-name">AppDispatch</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">typeof</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">dispatch</span>### <span id="define-typed-hooks" class="anchor enhancedAnchor_2LWZ"></span>Define Typed Hooks<a href="#define-typed-hooks" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"> comments</span>
+<span class="token operator" style="color: #f8f8f2">:</span>
+<span class="token plain"> commentsReducer</span>
+<span class="token punctuation" style="color: #f8f8f2">,</span>
+<span class="token plain">
+</span>
+
+<span class="token plain"> users</span>
+<span class="token operator" style="color: #f8f8f2">:</span>
+<span class="token plain"> usersReducer</span>
+
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain">
+</span>
+
+<span class="token plain">
+</span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain">
+</span>
+
+<span class="token plain" style="display: inline-block"> </span>
+
+<span class="token plain">
+</span>
+<span class="token comment" style="color: #c6cad2">// Infer the \`RootState\` and \`AppDispatch\` types from the store itself</span>
+<span class="token plain">
+</span>
+
+<span class="token plain">
+</span>
+<span class="token keyword" style="color: #f92672">export</span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">type</span>
+<span class="token plain"> </span>
+<span class="token class-name maybe-class-name">RootState</span>
+<span class="token plain"> </span>
+<span class="token operator" style="color: #f8f8f2">=</span>
+<span class="token plain"> </span>
+<span class="token maybe-class-name">ReturnType</span>
+<span class="token operator" style="color: #f8f8f2">&lt;</span>
+<span class="token keyword" style="color: #f92672">typeof</span>
+<span class="token plain"> store</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span class="token property-access">getState</span>
+<span class="token operator" style="color: #f8f8f2">&gt;</span>
+<span class="token plain">
+</span>
+
+<span class="token plain">
+</span>
+<span class="token comment" style="color: #c6cad2">// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}</span>
+<span class="token plain">
+</span>
+
+<span class="token plain">
+</span>
+<span class="token keyword" style="color: #f92672">export</span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">type</span>
+<span class="token plain"> </span>
+<span class="token class-name maybe-class-name">AppDispatch</span>
+<span class="token plain"> </span>
+<span class="token operator" style="color: #f8f8f2">=</span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">typeof</span>
+<span class="token plain"> store</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span class="token property-access">dispatch</span>### <span id="define-typed-hooks" class="anchor enhancedAnchor_2LWZ">
+</span>Define Typed Hooks<a href="#define-typed-hooks" class="hash-link" title="Direct link to heading">#</a>
 
 While it's possible to import the `RootState` and `AppDispatch` types into each component, it's **better to create typed versions of the `useDispatch` and `useSelector` hooks for usage in your application**. . This is important for a couple reasons:
 
@@ -174,19 +279,95 @@ Since these are actual variables, not types, it's important to define them in a 
 
 app/hooks.ts
 
-<span class="token keyword" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > </span><span class="token imports maybe-class-name">TypedUseSelectorHook</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > useDispatch</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > useSelector </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-redux'</span><span class="token plain"></span>
+<span class="token keyword" style="color: #f92672">import</span>
+<span class="token plain"> </span>
+<span class="token imports punctuation" style="color: #f8f8f2">{</span>
+<span > </span>
+<span class="token imports maybe-class-name">TypedUseSelectorHook</span>
+<span class="token imports punctuation" style="color: #f8f8f2">,</span>
+<span > useDispatch</span>
+<span class="token imports punctuation" style="color: #f8f8f2">,</span>
+<span > useSelector </span>
+<span class="token imports punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">from</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'react-redux'</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">import</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">type</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> </span><span class="token maybe-class-name">RootState</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token maybe-class-name">AppDispatch</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./store'</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword" style="color: #f92672">import</span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">type</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain"> </span>
+<span class="token maybe-class-name">RootState</span>
+<span class="token punctuation" style="color: #f8f8f2">,</span>
+<span class="token plain"> </span>
+<span class="token maybe-class-name">AppDispatch</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">from</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'./store'</span>
+<span class="token plain">
+</span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Use throughout your app instead of plain \`useDispatch\` and \`useSelector\`</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token comment" style="color: #c6cad2">// Use throughout your app instead of plain \`useDispatch\` and \`useSelector\`</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">useAppDispatch</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token generic-function function" style="color: #e6d874">useDispatch</span><span class="token generic-function generic class-name operator" style="color: #f8f8f2">&lt;</span><span class="token generic-function generic class-name maybe-class-name">AppDispatch</span><span class="token generic-function generic class-name operator" style="color: #f8f8f2">&gt;</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword" style="color: #f92672">export</span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">const</span>
+<span class="token plain"> </span>
+<span class="token function-variable function" style="color: #e6d874">useAppDispatch</span>
+<span class="token plain"> </span>
+<span class="token operator" style="color: #f8f8f2">=</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain"> </span>
+<span class="token arrow operator" style="color: #f8f8f2">=&gt;</span>
+<span class="token plain"> </span>
+<span class="token generic-function function" style="color: #e6d874">useDispatch</span>
+<span class="token generic-function generic class-name operator" style="color: #f8f8f2">&lt;</span>
+<span class="token generic-function generic class-name maybe-class-name">AppDispatch</span>
+<span class="token generic-function generic class-name operator" style="color: #f8f8f2">&gt;</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> useAppSelector</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token maybe-class-name">TypedUseSelectorHook</span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token maybe-class-name">RootState</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> useSelector</span>## <span id="application-usage" class="anchor enhancedAnchor_2LWZ"></span>Application Usage<a href="#application-usage" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain">
+</span>
+<span class="token keyword" style="color: #f92672">export</span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">const</span>
+<span class="token plain"> useAppSelector</span>
+<span class="token operator" style="color: #f8f8f2">:</span>
+<span class="token plain"> </span>
+<span class="token maybe-class-name">TypedUseSelectorHook</span>
+<span class="token operator" style="color: #f8f8f2">&lt;</span>
+<span class="token maybe-class-name">RootState</span>
+<span class="token operator" style="color: #f8f8f2">&gt;</span>
+<span class="token plain"> </span>
+<span class="token operator" style="color: #f8f8f2">=</span>
+<span class="token plain"> useSelector</span>## <span id="application-usage" class="anchor enhancedAnchor_2LWZ">
+</span>Application Usage<a href="#application-usage" class="hash-link" title="Direct link to heading">#</a>
 
-### <span id="define-slice-state-and-action-types" class="anchor enhancedAnchor_2LWZ"></span>Define Slice State and Action Types<a href="#define-slice-state-and-action-types" class="hash-link" title="Direct link to heading">#</a>
+### <span id="define-slice-state-and-action-types" class="anchor enhancedAnchor_2LWZ">
+</span>Define Slice State and Action Types<a href="#define-slice-state-and-action-types" class="hash-link" title="Direct link to heading">#</a>
 
 Each slice file should define a type for its initial state value, so that `createSlice` can correctly infer the type of `state` in each case reducer.
 
@@ -196,127 +377,481 @@ You can safely import the `RootState` type from the store file here. It's a circ
 
 features/counter/counterSlice.ts
 
-<span class="token keyword" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > createSlice</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > </span><span class="token imports maybe-class-name">PayloadAction</span><span > </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
+<span class="token keyword" style="color: #f92672">import</span>
+<span class="token plain"> </span>
+<span class="token imports punctuation" style="color: #f8f8f2">{</span>
+<span > createSlice</span>
+<span class="token imports punctuation" style="color: #f8f8f2">,</span>
+<span > </span>
+<span class="token imports maybe-class-name">PayloadAction</span>
+<span > </span>
+<span class="token imports punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">from</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">import</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">type</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> </span><span class="token maybe-class-name">RootState</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../../app/store'</span><span class="token plain"></span>
-
-<span class="token plain" style="display: inline-block"> </span>
-
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Define a type for the slice state</span><span class="token plain"></span>
-
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">interface</span><span class="token plain"> </span><span class="token class-name maybe-class-name">CounterState</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
-
-<span class="token plain"> value</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token builtin" style="color: #a6e22e">number</span><span class="token plain"></span>
-
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
-
-<span class="token plain" style="display: inline-block"> </span>
-
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Define the initial state using that type</span><span class="token plain"></span>
-
-<span class="token plain"></span><span class="token class-name keyword" style="color: #f92672">const</span><span class="token plain"> initialState</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token maybe-class-name">CounterState</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
-
-<span class="token plain"> value</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">0</span><span class="token plain"></span>
-
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
-
-<span class="token plain" style="display: inline-block"> </span>
-
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> counterSlice </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createSlice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
-
-<span class="token plain"> name</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'counter'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
-
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// \`createSlice\` will infer the state type from the \`initialState\` argument</span><span class="token plain"></span>
-
-<span class="token plain"> initialState</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
-
-<span class="token plain"> reducers</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
-
-<span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">increment</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> state </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
-
-<span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">value</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">+=</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token plain"></span>
-
-<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
-
-<span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">decrement</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> state </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
-
-<span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">value</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">-=</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token plain"></span>
-
-<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
-
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Use the PayloadAction type to declare the contents of \`action.payload\`</span><span class="token plain"></span>
-
-<span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">incrementByAmount</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">state</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> action</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token maybe-class-name">PayloadAction</span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token builtin" style="color: #a6e22e">number</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
-
-<span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">value</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">+=</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">payload</span><span class="token plain"></span>
-
-<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
-
-<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
-
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword" style="color: #f92672">import</span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">type</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain"> </span>
+<span class="token maybe-class-name">RootState</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">from</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'../../app/store'</span>
+<span class="token plain">
+</span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> increment</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> decrement</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> incrementByAmount </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> counterSlice</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">actions</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token comment" style="color: #c6cad2">// Define a type for the slice state</span>
+<span class="token plain">
+</span>
+
+<span class="token plain">
+</span>
+<span class="token keyword" style="color: #f92672">interface</span>
+<span class="token plain"> </span>
+<span class="token class-name maybe-class-name">CounterState</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain">
+</span>
+
+<span class="token plain"> value</span>
+<span class="token operator" style="color: #f8f8f2">:</span>
+<span class="token plain"> </span>
+<span class="token builtin" style="color: #a6e22e">number</span>
+<span class="token plain">
+</span>
+
+<span class="token plain">
+</span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain">
+</span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Other code such as selectors can use the imported \`RootState\` type</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token comment" style="color: #c6cad2">// Define the initial state using that type</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token class-name keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">selectCount</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">state</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token maybe-class-name">RootState</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">counter</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">value</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token class-name keyword" style="color: #f92672">const</span>
+<span class="token plain"> initialState</span>
+<span class="token operator" style="color: #f8f8f2">:</span>
+<span class="token plain"> </span>
+<span class="token maybe-class-name">CounterState</span>
+<span class="token plain"> </span>
+<span class="token operator" style="color: #f8f8f2">=</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain">
+</span>
+
+<span class="token plain"> value</span>
+<span class="token operator" style="color: #f8f8f2">:</span>
+<span class="token plain"> </span>
+<span class="token number" style="color: #ae81ff">0</span>
+<span class="token plain">
+</span>
+
+<span class="token plain">
+</span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain">
+</span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">default</span><span class="token plain"> counterSlice</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">reducer</span>The generated action creators will be correctly typed to accept a `payload` argument based on the `PayloadAction<T>` type you provided for the reducer. For example, `incrementByAmount` requires a `number` as its argument.
+<span class="token plain">
+</span>
+<span class="token keyword" style="color: #f92672">export</span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">const</span>
+<span class="token plain"> counterSlice </span>
+<span class="token operator" style="color: #f8f8f2">=</span>
+<span class="token plain"> </span>
+<span class="token function" style="color: #e6d874">createSlice</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain">
+</span>
+
+<span class="token plain"> name</span>
+<span class="token operator" style="color: #f8f8f2">:</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'counter'</span>
+<span class="token punctuation" style="color: #f8f8f2">,</span>
+<span class="token plain">
+</span>
+
+<span class="token plain"> </span>
+<span class="token comment" style="color: #c6cad2">// \`createSlice\` will infer the state type from the \`initialState\` argument</span>
+<span class="token plain">
+</span>
+
+<span class="token plain"> initialState</span>
+<span class="token punctuation" style="color: #f8f8f2">,</span>
+<span class="token plain">
+</span>
+
+<span class="token plain"> reducers</span>
+<span class="token operator" style="color: #f8f8f2">:</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain">
+</span>
+
+<span class="token plain"> </span>
+<span class="token function-variable function" style="color: #e6d874">increment</span>
+<span class="token operator" style="color: #f8f8f2">:</span>
+<span class="token plain"> state </span>
+<span class="token arrow operator" style="color: #f8f8f2">=&gt;</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain">
+</span>
+
+<span class="token plain"> state</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span class="token property-access">value</span>
+<span class="token plain"> </span>
+<span class="token operator" style="color: #f8f8f2">+=</span>
+<span class="token plain"> </span>
+<span class="token number" style="color: #ae81ff">1</span>
+<span class="token plain">
+</span>
+
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token punctuation" style="color: #f8f8f2">,</span>
+<span class="token plain">
+</span>
+
+<span class="token plain"> </span>
+<span class="token function-variable function" style="color: #e6d874">decrement</span>
+<span class="token operator" style="color: #f8f8f2">:</span>
+<span class="token plain"> state </span>
+<span class="token arrow operator" style="color: #f8f8f2">=&gt;</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain">
+</span>
+
+<span class="token plain"> state</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span class="token property-access">value</span>
+<span class="token plain"> </span>
+<span class="token operator" style="color: #f8f8f2">-=</span>
+<span class="token plain"> </span>
+<span class="token number" style="color: #ae81ff">1</span>
+<span class="token plain">
+</span>
+
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token punctuation" style="color: #f8f8f2">,</span>
+<span class="token plain">
+</span>
+
+<span class="token plain"> </span>
+<span class="token comment" style="color: #c6cad2">// Use the PayloadAction type to declare the contents of \`action.payload\`</span>
+<span class="token plain">
+</span>
+
+<span class="token plain"> </span>
+<span class="token function-variable function" style="color: #e6d874">incrementByAmount</span>
+<span class="token operator" style="color: #f8f8f2">:</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token plain">state</span>
+<span class="token punctuation" style="color: #f8f8f2">,</span>
+<span class="token plain"> action</span>
+<span class="token operator" style="color: #f8f8f2">:</span>
+<span class="token plain"> </span>
+<span class="token maybe-class-name">PayloadAction</span>
+<span class="token operator" style="color: #f8f8f2">&lt;</span>
+<span class="token builtin" style="color: #a6e22e">number</span>
+<span class="token operator" style="color: #f8f8f2">&gt;</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain"> </span>
+<span class="token arrow operator" style="color: #f8f8f2">=&gt;</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain">
+</span>
+
+<span class="token plain"> state</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span class="token property-access">value</span>
+<span class="token plain"> </span>
+<span class="token operator" style="color: #f8f8f2">+=</span>
+<span class="token plain"> action</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span class="token property-access">payload</span>
+<span class="token plain">
+</span>
+
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain">
+</span>
+
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain">
+</span>
+
+<span class="token plain">
+</span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain">
+</span>
+
+<span class="token plain" style="display: inline-block"> </span>
+
+<span class="token plain">
+</span>
+<span class="token keyword" style="color: #f92672">export</span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">const</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain"> increment</span>
+<span class="token punctuation" style="color: #f8f8f2">,</span>
+<span class="token plain"> decrement</span>
+<span class="token punctuation" style="color: #f8f8f2">,</span>
+<span class="token plain"> incrementByAmount </span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain"> </span>
+<span class="token operator" style="color: #f8f8f2">=</span>
+<span class="token plain"> counterSlice</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span class="token property-access">actions</span>
+<span class="token plain">
+</span>
+
+<span class="token plain" style="display: inline-block"> </span>
+
+<span class="token plain">
+</span>
+<span class="token comment" style="color: #c6cad2">// Other code such as selectors can use the imported \`RootState\` type</span>
+<span class="token plain">
+</span>
+
+<span class="token plain">
+</span>
+<span class="token class-name keyword" style="color: #f92672">export</span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">const</span>
+<span class="token plain"> </span>
+<span class="token function-variable function" style="color: #e6d874">selectCount</span>
+<span class="token plain"> </span>
+<span class="token operator" style="color: #f8f8f2">=</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token plain">state</span>
+<span class="token operator" style="color: #f8f8f2">:</span>
+<span class="token plain"> </span>
+<span class="token maybe-class-name">RootState</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain"> </span>
+<span class="token arrow operator" style="color: #f8f8f2">=&gt;</span>
+<span class="token plain"> state</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span class="token property-access">counter</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span class="token property-access">value</span>
+<span class="token plain">
+</span>
+
+<span class="token plain" style="display: inline-block"> </span>
+
+<span class="token plain">
+</span>
+<span class="token keyword" style="color: #f92672">export</span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">default</span>
+<span class="token plain"> counterSlice</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span class="token property-access">reducer</span>The generated action creators will be correctly typed to accept a `payload` argument based on the `PayloadAction<T>` type you provided for the reducer. For example, `incrementByAmount` requires a `number` as its argument.
 
 In some cases, [TypeScript may unnecessarily tighten the type of the initial state](../../github.com/reduxjs/redux-toolkit/pull/827.html). If that happens, you can work around it by casting the initial state using `as`, instead of declaring the type of the variable:
 
-<span class="token comment" style="color: #c6cad2">// Workaround: cast state instead of declaring variable type</span><span class="token plain"></span>
+<span class="token comment" style="color: #c6cad2">// Workaround: cast state instead of declaring variable type</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> initialState </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword" style="color: #f92672">const</span>
+<span class="token plain"> initialState </span>
+<span class="token operator" style="color: #f8f8f2">=</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> value</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">0</span><span class="token plain"></span>
+<span class="token plain"> value</span>
+<span class="token operator" style="color: #f8f8f2">:</span>
+<span class="token plain"> </span>
+<span class="token number" style="color: #ae81ff">0</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">as</span><span class="token plain"> </span><span class="token maybe-class-name">CounterState</span>### <span id="use-typed-hooks-in-components" class="anchor enhancedAnchor_2LWZ"></span>Use Typed Hooks in Components<a href="#use-typed-hooks-in-components" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain">
+</span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">as</span>
+<span class="token plain"> </span>
+<span class="token maybe-class-name">CounterState</span>### <span id="use-typed-hooks-in-components" class="anchor enhancedAnchor_2LWZ">
+</span>Use Typed Hooks in Components<a href="#use-typed-hooks-in-components" class="hash-link" title="Direct link to heading">#</a>
 
 In component files, import the pre-typed hooks instead of the standard hooks from React-Redux.
 
 features/counter/Counter.tsx
 
-<span class="token keyword" style="color: #f92672">import</span><span class="token plain"> </span><span class="token maybe-class-name">React</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> useState </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react'</span><span class="token plain"></span>
+<span class="token keyword" style="color: #f92672">import</span>
+<span class="token plain"> </span>
+<span class="token maybe-class-name">React</span>
+<span class="token punctuation" style="color: #f8f8f2">,</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain"> useState </span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">from</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'react'</span>
+<span class="token plain">
+</span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">import</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> useAppSelector</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> useAppDispatch </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'app/hooks'</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword" style="color: #f92672">import</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain"> useAppSelector</span>
+<span class="token punctuation" style="color: #f8f8f2">,</span>
+<span class="token plain"> useAppDispatch </span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">from</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'app/hooks'</span>
+<span class="token plain">
+</span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">import</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> decrement</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> increment </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./counterSlice'</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword" style="color: #f92672">import</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain"> decrement</span>
+<span class="token punctuation" style="color: #f8f8f2">,</span>
+<span class="token plain"> increment </span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">from</span>
+<span class="token plain"> </span>
+<span class="token string" style="color: #a6e22e">'./counterSlice'</span>
+<span class="token plain">
+</span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function maybe-class-name" style="color: #e6d874">Counter</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain">
+</span>
+<span class="token keyword" style="color: #f92672">export</span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">function</span>
+<span class="token plain"> </span>
+<span class="token function maybe-class-name" style="color: #e6d874">Counter</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain"> </span>
+<span class="token punctuation" style="color: #f8f8f2">{</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// The \`state\` arg is correctly typed as \`RootState\` already</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token comment" style="color: #c6cad2">// The \`state\` arg is correctly typed as \`RootState\` already</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> count </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">useAppSelector</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token plain">counter</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token plain">value</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">const</span>
+<span class="token plain"> count </span>
+<span class="token operator" style="color: #f8f8f2">=</span>
+<span class="token plain"> </span>
+<span class="token function" style="color: #e6d874">useAppSelector</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token parameter">state</span>
+<span class="token plain"> </span>
+<span class="token operator" style="color: #f8f8f2">=&gt;</span>
+<span class="token plain"> state</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span class="token plain">counter</span>
+<span class="token punctuation" style="color: #f8f8f2">.</span>
+<span class="token plain">value</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> dispatch </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">useAppDispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token keyword" style="color: #f92672">const</span>
+<span class="token plain"> dispatch </span>
+<span class="token operator" style="color: #f8f8f2">=</span>
+<span class="token plain"> </span>
+<span class="token function" style="color: #e6d874">useAppDispatch</span>
+<span class="token punctuation" style="color: #f8f8f2">(</span>
+<span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain">
+</span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// omit rendering logic</span><span class="token plain"></span>
+<span class="token plain"> </span>
+<span class="token comment" style="color: #c6cad2">// omit rendering logic</span>
+<span class="token plain">
+</span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>## <span id="whats-next" class="anchor enhancedAnchor_2LWZ"></span>What's Next?<a href="#whats-next" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain">
+</span>
+<span class="token punctuation" style="color: #f8f8f2">}</span>## <span id="whats-next" class="anchor enhancedAnchor_2LWZ">
+</span>What's Next?<a href="#whats-next" class="hash-link" title="Direct link to heading">#</a>
 
 See [the "Usage with TypeScript" page](../recipes/usage-with-typescript.html) for extended details on how to use Redux Toolkit's APIs with TypeScript.
 
-<a href="quick-start.html" class="pagination-nav__link"></a>
+<a href="quick-start.html" class="pagination-nav__link">
+</a>
 
 « Quick Start
 
-<a href="essentials/part-1-overview-concepts.html" class="pagination-nav__link"></a>
+<a href="essentials/part-1-overview-concepts.html" class="pagination-nav__link">
+</a>
 
 Next
 
@@ -349,6 +884,9 @@ Redux Essentials, Part 1: Redux Overview and Concepts »
 - <a href="../official/github.com/reduxjs/redux.html" class="footer__link-item">GitHub</a>
 - [![Deploys by Netlify](../../www.netlify.com/img/global/badges/netlify-color-accent.svg)](../../www.netlify.com/index.html)
 
-<a href="../index.html" class="footerLogoLink_MyFc"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" /><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
+<a href="../index.html" class="footerLogoLink_MyFc">
+<img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
+<img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" />
+</a>
 
 

@@ -1,7 +1,17 @@
-<a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
+<a href="../official/index.html" class="navbar__brand">
+<strong>Redux</strong>
+</a>
 
-<a href="../official/introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="../official/tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../official/api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../official/faq.html" class="navbar__item navbar__link">FAQ</a><a href="../official/style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/../github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../official/introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-<a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
+<a href="../official/introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a>
+<a href="../official/tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a>
+<a href="../official/api/api-reference.html" class="navbar__item navbar__link">API</a>
+<a href="../official/faq.html" class="navbar__item navbar__link">FAQ</a>
+<a href="../official/style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a>
+<a href="../official/../github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a>
+<a href="../official/introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
+<a href="../official/index.html" class="navbar__brand">
+<strong>Redux</strong>
+</a>
 
 - <a href="../official/introduction/getting-started.html" class="menu__link">Getting Started</a>
 - <a href="../official/tutorials/essentials/part-1-overview-concepts.html" class="menu__link">Tutorial</a>
@@ -87,7 +97,8 @@
 - <a href="#!" class="menu__link menu__link--sublist">Redux Toolkit</a>
   - <a href="../official/redux-toolkit/overview.html" class="menu__link">Redux Toolkit: Overview</a>
 
-# <span id="structuring-reducers" class="anchor enhancedAnchor_2LWZ"></span>Structuring Reducers<a href="#structuring-reducers" class="hash-link" title="Direct link to heading">#</a>
+# <span id="structuring-reducers" class="anchor enhancedAnchor_2LWZ">
+</span>Structuring Reducers<a href="#structuring-reducers" class="hash-link" title="Direct link to heading">#</a>
 
 At its core, Redux is really a fairly simple design pattern: all your "write" logic goes into a single function, and the only way to run that logic is to give Redux a plain object that describes something that has happened. The Redux store calls that write logic function and passes in the current state tree and the descriptive object, the write logic function returns some new state tree, and the Redux store notifies any subscribers that the state tree has changed.
 
@@ -95,17 +106,20 @@ Redux puts some basic constraints on how that write logic function should work. 
 
 Beyond that, Redux does not really care how you actually structure your logic inside that reducer function, as long as it obeys those basic rules. This is both a source of freedom and a source of confusion. However, there are a number of common patterns that are widely used when writing reducers, as well as a number of related topics and concepts to be aware of. As an application grows, these patterns play a crucial role in managing reducer code complexity, handling real-world data, and optimizing UI performance.
 
-### <span id="prerequisite-concepts-for-writing-reducers" class="anchor enhancedAnchor_2LWZ"></span>Prerequisite Concepts for Writing Reducers<a href="#prerequisite-concepts-for-writing-reducers" class="hash-link" title="Direct link to heading">#</a>
+### <span id="prerequisite-concepts-for-writing-reducers" class="anchor enhancedAnchor_2LWZ">
+</span>Prerequisite Concepts for Writing Reducers<a href="#prerequisite-concepts-for-writing-reducers" class="hash-link" title="Direct link to heading">#</a>
 
 Some of these concepts are already described elsewhere in the Redux documentation. Others are generic and applicable outside of Redux itself, and there are numerous existing articles that cover these concepts in detail. These concepts and techniques form the foundation of writing solid Redux reducer logic.
 
 It is vital that these Prerequisite Concepts are **thoroughly understood** before moving on to more advanced and Redux-specific techniques. A recommended reading list is available at:
 
-#### <span id="prerequisite-concepts" class="anchor enhancedAnchor_2LWZ"></span>[Prerequisite Concepts](prerequisite-concepts.html)<a href="#prerequisite-concepts" class="hash-link" title="Direct link to heading">#</a>
+#### <span id="prerequisite-concepts" class="anchor enhancedAnchor_2LWZ">
+</span>[Prerequisite Concepts](prerequisite-concepts.html)<a href="#prerequisite-concepts" class="hash-link" title="Direct link to heading">#</a>
 
 Standard Redux architecture relies on using plain JS objects and arrays for your state. If you're using an alternate approach for some reason, the details may differ based on your approach, but many of the principles will still apply.
 
-### <span id="reducer-concepts-and-techniques" class="anchor enhancedAnchor_2LWZ"></span>Reducer Concepts and Techniques<a href="#reducer-concepts-and-techniques" class="hash-link" title="Direct link to heading">#</a>
+### <span id="reducer-concepts-and-techniques" class="anchor enhancedAnchor_2LWZ">
+</span>Reducer Concepts and Techniques<a href="#reducer-concepts-and-techniques" class="hash-link" title="Direct link to heading">#</a>
 
 - [Basic Reducer Structure](basic-reducer-structure.html)
 - [Splitting Reducer Logic](splitting-reducer-logic.html)
@@ -118,11 +132,13 @@ Standard Redux architecture relies on using plain JS objects and arrays for your
 - [Immutable Update Patterns](immutable-update-patterns.html)
 - [Initializing State](initializing-state.html)
 
-<a href="../troubleshooting.html" class="pagination-nav__link"></a>
+<a href="../troubleshooting.html" class="pagination-nav__link">
+</a>
 
 « Troubleshooting
 
-<a href="prerequisite-concepts.html" class="pagination-nav__link"></a>
+<a href="prerequisite-concepts.html" class="pagination-nav__link">
+</a>
 
 Next
 
@@ -149,5 +165,6 @@ Prerequisite Concepts »
 - <a href="../official/../github.com/reduxjs/redux.html" class="footer__link-item">GitHub</a>
 - [![Deploys by Netlify](../../../www.netlify.com/img/global/badges/netlify-color-accent.svg)](../../../www.netlify.com/index.html)
 
-<a href="../official/index.html" class="footerLogoLink_MyFc"><img src="../official/../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
+<a href="../official/index.html" class="footerLogoLink_MyFc">
+<img src="../official/../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
 

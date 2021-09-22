@@ -200,7 +200,8 @@
     </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
+<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js">
+</script>
     </head>
   <body>
     <header id="title-block-header">
@@ -223,12 +224,19 @@
         this component needs.
       </li>
     </ul>
-    <h2 id="defining-mapstatetoprops">Defining <code class="language-js" >mapStateToProps</code></h2>
-    <p><code class="language-js" >mapStateToProps</code> should be defined as a function:</p>
+    <h2 id="defining-mapstatetoprops">Defining <code class="language-js" >mapStateToProps</code>
+</h2>
+    <p>
+<code class="language-js" >mapStateToProps</code> should be defined as a function:</p>
     <div class="sourceCode" id="cb1">
       <pre class="language-js 
         class="sourceCode js"
-      ><code class="language-js  class="sourceCode javascript"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">function</span> <span class="at">mapStateToProps</span>(state<span class="op">,</span> ownProps<span class="op">?</span>)</a></code></pre>
+      >
+<code class="language-js  class="sourceCode javascript">
+<a class="sourceLine" id="cb1-1" title="1">
+<span class="kw">function</span> <span class="at">mapStateToProps</span>(state<span class="op">,</span> ownProps<span class="op">?</span>)</a>
+</code>
+</pre>
     </div>
     <p>
       It should take a first argument called <code class="language-js" >state</code>, optionally a
@@ -258,13 +266,18 @@
     <h3 id="arguments">Arguments</h3>
     <ol type="1">
       <li>
-        <strong><code class="language-js" >state</code></strong>
+        <strong>
+<code class="language-js" >state</code>
+</strong>
       </li>
       <li>
-        <strong><code class="language-js" >ownProps</code> (optional)</strong>
+        <strong>
+<code class="language-js" >ownProps</code> (optional)</strong>
       </li>
     </ol>
-    <h4 id="state"><code class="language-js" >state</code></h4>
+    <h4 id="state">
+<code class="language-js" >state</code>
+</h4>
     <p>
       The first argument to a <code class="language-js" >mapStateToProps</code> function is the
       entire Redux store state (the same value returned by a call to
@@ -280,16 +293,32 @@
     <div class="sourceCode" id="cb2">
       <pre class="language-js 
         class="sourceCode js"
-      ><code class="language-js  class="sourceCode javascript"><a class="sourceLine" id="cb2-1" title="1"><span class="co">// TodoList.js</span></a>
-<a class="sourceLine" id="cb2-2" title="2"></a>
-<a class="sourceLine" id="cb2-3" title="3"><span class="kw">function</span> <span class="at">mapStateToProps</span>(state) <span class="op">{</span></a>
+      >
+<code class="language-js  class="sourceCode javascript">
+<a class="sourceLine" id="cb2-1" title="1">
+<span class="co">// TodoList.js</span>
+</a>
+<a class="sourceLine" id="cb2-2" title="2">
+</a>
+<a class="sourceLine" id="cb2-3" title="3">
+<span class="kw">function</span> <span class="at">mapStateToProps</span>(state) <span class="op">{</span>
+</a>
 <a class="sourceLine" id="cb2-4" title="4">  <span class="kw">const</span> <span class="op">{</span> todos <span class="op">}</span> <span class="op">=</span> state</a>
-<a class="sourceLine" id="cb2-5" title="5">  <span class="cf">return</span> <span class="op">{</span> <span class="dt">todoList</span><span class="op">:</span> <span class="va">todos</span>.<span class="at">allIds</span> <span class="op">}</span></a>
-<a class="sourceLine" id="cb2-6" title="6"><span class="op">}</span></a>
-<a class="sourceLine" id="cb2-7" title="7"></a>
-<a class="sourceLine" id="cb2-8" title="8"><span class="im">export</span> <span class="im">default</span> <span class="at">connect</span>(mapStateToProps)(TodoList)</a></code></pre>
+<a class="sourceLine" id="cb2-5" title="5">  <span class="cf">return</span> <span class="op">{</span> <span class="dt">todoList</span>
+<span class="op">:</span> <span class="va">todos</span>.<span class="at">allIds</span> <span class="op">}</span>
+</a>
+<a class="sourceLine" id="cb2-6" title="6">
+<span class="op">}</span>
+</a>
+<a class="sourceLine" id="cb2-7" title="7">
+</a>
+<a class="sourceLine" id="cb2-8" title="8">
+<span class="im">export</span> <span class="im">default</span> <span class="at">connect</span>(mapStateToProps)(TodoList)</a>
+</code>
+</pre>
     </div>
-    <h4 id="ownprops-optional"><code class="language-js" >ownProps</code> (optional)</h4>
+    <h4 id="ownprops-optional">
+<code class="language-js" >ownProps</code> (optional)</h4>
     <p>
       You may define the function with a second argument, <code class="language-js" >ownProps</code>,
       if your component needs the data from its own props to retrieve data from
@@ -299,21 +328,44 @@
     <div class="sourceCode" id="cb3">
       <pre class="language-js 
         class="sourceCode js"
-      ><code class="language-js  class="sourceCode javascript"><a class="sourceLine" id="cb3-1" title="1"><span class="co">// Todo.js</span></a>
-<a class="sourceLine" id="cb3-2" title="2"></a>
-<a class="sourceLine" id="cb3-3" title="3"><span class="kw">function</span> <span class="at">mapStateToProps</span>(state<span class="op">,</span> ownProps) <span class="op">{</span></a>
+      >
+<code class="language-js  class="sourceCode javascript">
+<a class="sourceLine" id="cb3-1" title="1">
+<span class="co">// Todo.js</span>
+</a>
+<a class="sourceLine" id="cb3-2" title="2">
+</a>
+<a class="sourceLine" id="cb3-3" title="3">
+<span class="kw">function</span> <span class="at">mapStateToProps</span>(state<span class="op">,</span> ownProps) <span class="op">{</span>
+</a>
 <a class="sourceLine" id="cb3-4" title="4">  <span class="kw">const</span> <span class="op">{</span> visibilityFilter <span class="op">}</span> <span class="op">=</span> state</a>
-<a class="sourceLine" id="cb3-5" title="5">  <span class="co">// ownProps would look like { &quot;id&quot; : 123 }</span></a>
+<a class="sourceLine" id="cb3-5" title="5">  <span class="co">// ownProps would look like { &quot;id&quot; : 123 }</span>
+</a>
 <a class="sourceLine" id="cb3-6" title="6">  <span class="kw">const</span> <span class="op">{</span> id <span class="op">}</span> <span class="op">=</span> ownProps</a>
 <a class="sourceLine" id="cb3-7" title="7">  <span class="kw">const</span> todo <span class="op">=</span> <span class="at">getTodoById</span>(state<span class="op">,</span> id)</a>
-<a class="sourceLine" id="cb3-8" title="8"></a>
-<a class="sourceLine" id="cb3-9" title="9">  <span class="co">// component receives additionally:</span></a>
-<a class="sourceLine" id="cb3-10" title="10">  <span class="cf">return</span> <span class="op">{</span> todo<span class="op">,</span> visibilityFilter <span class="op">}</span></a>
-<a class="sourceLine" id="cb3-11" title="11"><span class="op">}</span></a>
-<a class="sourceLine" id="cb3-12" title="12"></a>
-<a class="sourceLine" id="cb3-13" title="13"><span class="co">// Later, in your application, a parent component renders:</span></a>
-<a class="sourceLine" id="cb3-14" title="14"><span class="op">;&lt;</span>ConnectedTodo id<span class="op">={</span><span class="dv">123</span><span class="op">}</span> /&gt;</a>
-<a class="sourceLine" id="cb3-15" title="15"><span class="co">// and your component receives props.id, props.todo, and props.visibilityFilter</span></a></code></pre>
+<a class="sourceLine" id="cb3-8" title="8">
+</a>
+<a class="sourceLine" id="cb3-9" title="9">  <span class="co">// component receives additionally:</span>
+</a>
+<a class="sourceLine" id="cb3-10" title="10">  <span class="cf">return</span> <span class="op">{</span> todo<span class="op">,</span> visibilityFilter <span class="op">}</span>
+</a>
+<a class="sourceLine" id="cb3-11" title="11">
+<span class="op">}</span>
+</a>
+<a class="sourceLine" id="cb3-12" title="12">
+</a>
+<a class="sourceLine" id="cb3-13" title="13">
+<span class="co">// Later, in your application, a parent component renders:</span>
+</a>
+<a class="sourceLine" id="cb3-14" title="14">
+<span class="op">;&lt;</span>ConnectedTodo id<span class="op">={</span>
+<span class="dv">123</span>
+<span class="op">}</span> /&gt;</a>
+<a class="sourceLine" id="cb3-15" title="15">
+<span class="co">// and your component receives props.id, props.todo, and props.visibilityFilter</span>
+</a>
+</code>
+</pre>
     </div>
     <p>
       You do not need to include values from <code class="language-js" >ownProps</code> in the object
@@ -339,15 +391,37 @@
     <div class="sourceCode" id="cb4">
       <pre class="language-js 
         class="sourceCode js"
-      ><code class="language-js  class="sourceCode javascript"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">function</span> <span class="at">mapStateToProps</span>(state) <span class="op">{</span></a>
-<a class="sourceLine" id="cb4-2" title="2">  <span class="cf">return</span> <span class="op">{</span></a>
-<a class="sourceLine" id="cb4-3" title="3">    <span class="dt">a</span><span class="op">:</span> <span class="dv">42</span><span class="op">,</span></a>
-<a class="sourceLine" id="cb4-4" title="4">    <span class="dt">todos</span><span class="op">:</span> <span class="va">state</span>.<span class="at">todos</span><span class="op">,</span></a>
-<a class="sourceLine" id="cb4-5" title="5">    <span class="dt">filter</span><span class="op">:</span> <span class="va">state</span>.<span class="at">visibilityFilter</span><span class="op">,</span></a>
-<a class="sourceLine" id="cb4-6" title="6">  <span class="op">}</span></a>
-<a class="sourceLine" id="cb4-7" title="7"><span class="op">}</span></a>
-<a class="sourceLine" id="cb4-8" title="8"></a>
-<a class="sourceLine" id="cb4-9" title="9"><span class="co">// component will receive: props.a, props.todos, and props.filter</span></a></code></pre>
+      >
+<code class="language-js  class="sourceCode javascript">
+<a class="sourceLine" id="cb4-1" title="1">
+<span class="kw">function</span> <span class="at">mapStateToProps</span>(state) <span class="op">{</span>
+</a>
+<a class="sourceLine" id="cb4-2" title="2">  <span class="cf">return</span> <span class="op">{</span>
+</a>
+<a class="sourceLine" id="cb4-3" title="3">    <span class="dt">a</span>
+<span class="op">:</span> <span class="dv">42</span>
+<span class="op">,</span>
+</a>
+<a class="sourceLine" id="cb4-4" title="4">    <span class="dt">todos</span>
+<span class="op">:</span> <span class="va">state</span>.<span class="at">todos</span>
+<span class="op">,</span>
+</a>
+<a class="sourceLine" id="cb4-5" title="5">    <span class="dt">filter</span>
+<span class="op">:</span> <span class="va">state</span>.<span class="at">visibilityFilter</span>
+<span class="op">,</span>
+</a>
+<a class="sourceLine" id="cb4-6" title="6">  <span class="op">}</span>
+</a>
+<a class="sourceLine" id="cb4-7" title="7">
+<span class="op">}</span>
+</a>
+<a class="sourceLine" id="cb4-8" title="8">
+</a>
+<a class="sourceLine" id="cb4-9" title="9">
+<span class="co">// component will receive: props.a, props.todos, and props.filter</span>
+</a>
+</code>
+</pre>
     </div>
     <blockquote>
       <p>
@@ -455,14 +529,20 @@
       </colgroup>
       <thead>
         <tr class="header">
-          <th></th>
-          <th><code class="language-js" >(state) =&gt; stateProps</code></th>
-          <th><code class="language-js" >(state, ownProps) =&gt; stateProps</code></th>
+          <th>
+</th>
+          <th>
+<code class="language-js" >(state) =&gt; stateProps</code>
+</th>
+          <th>
+<code class="language-js" >(state, ownProps) =&gt; stateProps</code>
+</th>
         </tr>
       </thead>
       <tbody>
         <tr class="odd">
-          <td><code class="language-js" >mapStateToProps</code> runs when:</td>
+          <td>
+<code class="language-js" >mapStateToProps</code> runs when:</td>
           <td>store <code class="language-js" >state</code> changes</td>
           <td>
             store <code class="language-js" >state</code> changes <br />
@@ -498,9 +578,12 @@
         Creating new arrays with <code class="language-js" >someArray.map()</code> or
         <code class="language-js" >someArray.filter()</code>
       </li>
-      <li>Merging arrays with <code class="language-js" >array.concat</code></li>
-      <li>Selecting portion of an array with <code class="language-js" >array.slice</code></li>
-      <li>Copying values with <code class="language-js" >Object.assign</code></li>
+      <li>Merging arrays with <code class="language-js" >array.concat</code>
+</li>
+      <li>Selecting portion of an array with <code class="language-js" >array.slice</code>
+</li>
+      <li>Copying values with <code class="language-js" >Object.assign</code>
+</li>
       <li>
         Copying values with the spread operator
         <code class="language-js" >{ ...oldState, ...newData }</code>
@@ -610,7 +693,8 @@
       There are some edge cases around this behavior.
       <strong
         >The number of mandatory arguments determines whether
-        <code class="language-js" >mapStateToProps</code> will receive <code class="language-js" >ownProps</code></strong
+        <code class="language-js" >mapStateToProps</code> will receive <code class="language-js" >ownProps</code>
+</strong
       >.
     </p>
     <p>
@@ -621,14 +705,30 @@
     <div class="sourceCode" id="cb5">
       <pre class="language-js 
         class="sourceCode js"
-      ><code class="language-js  class="sourceCode javascript"><a class="sourceLine" id="cb5-1" title="1"><span class="kw">function</span> <span class="at">mapStateToProps</span>(state) <span class="op">{</span></a>
-<a class="sourceLine" id="cb5-2" title="2">  <span class="va">console</span>.<span class="at">log</span>(state) <span class="co">// state</span></a>
-<a class="sourceLine" id="cb5-3" title="3">  <span class="va">console</span>.<span class="at">log</span>(<span class="kw">arguments</span>[<span class="dv">1</span>]) <span class="co">// undefined</span></a>
-<a class="sourceLine" id="cb5-4" title="4"><span class="op">}</span></a>
-<a class="sourceLine" id="cb5-5" title="5"><span class="kw">const</span> mapStateToProps <span class="op">=</span> (state<span class="op">,</span> ownProps <span class="op">=</span> <span class="op">{}</span>) <span class="kw">=&gt;</span> <span class="op">{</span></a>
-<a class="sourceLine" id="cb5-6" title="6">  <span class="va">console</span>.<span class="at">log</span>(state) <span class="co">// state</span></a>
-<a class="sourceLine" id="cb5-7" title="7">  <span class="va">console</span>.<span class="at">log</span>(ownProps) <span class="co">// {}</span></a>
-<a class="sourceLine" id="cb5-8" title="8"><span class="op">}</span></a></code></pre>
+      >
+<code class="language-js  class="sourceCode javascript">
+<a class="sourceLine" id="cb5-1" title="1">
+<span class="kw">function</span> <span class="at">mapStateToProps</span>(state) <span class="op">{</span>
+</a>
+<a class="sourceLine" id="cb5-2" title="2">  <span class="va">console</span>.<span class="at">log</span>(state) <span class="co">// state</span>
+</a>
+<a class="sourceLine" id="cb5-3" title="3">  <span class="va">console</span>.<span class="at">log</span>(<span class="kw">arguments</span>[<span class="dv">1</span>]) <span class="co">// undefined</span>
+</a>
+<a class="sourceLine" id="cb5-4" title="4">
+<span class="op">}</span>
+</a>
+<a class="sourceLine" id="cb5-5" title="5">
+<span class="kw">const</span> mapStateToProps <span class="op">=</span> (state<span class="op">,</span> ownProps <span class="op">=</span> <span class="op">{}</span>) <span class="kw">=&gt;</span> <span class="op">{</span>
+</a>
+<a class="sourceLine" id="cb5-6" title="6">  <span class="va">console</span>.<span class="at">log</span>(state) <span class="co">// state</span>
+</a>
+<a class="sourceLine" id="cb5-7" title="7">  <span class="va">console</span>.<span class="at">log</span>(ownProps) <span class="co">// {}</span>
+</a>
+<a class="sourceLine" id="cb5-8" title="8">
+<span class="op">}</span>
+</a>
+</code>
+</pre>
     </div>
     <p>
       It <em>will</em> receive <code class="language-js" >ownProps</code> when the formal definition
@@ -637,23 +737,49 @@
     <div class="sourceCode" id="cb6">
       <pre class="language-js 
         class="sourceCode js"
-      ><code class="language-js  class="sourceCode javascript"><a class="sourceLine" id="cb6-1" title="1"><span class="kw">function</span> <span class="at">mapStateToProps</span>(state<span class="op">,</span> ownProps) <span class="op">{</span></a>
-<a class="sourceLine" id="cb6-2" title="2">  <span class="va">console</span>.<span class="at">log</span>(state) <span class="co">// state</span></a>
-<a class="sourceLine" id="cb6-3" title="3">  <span class="va">console</span>.<span class="at">log</span>(ownProps) <span class="co">// ownProps</span></a>
-<a class="sourceLine" id="cb6-4" title="4"><span class="op">}</span></a>
-<a class="sourceLine" id="cb6-5" title="5"></a>
-<a class="sourceLine" id="cb6-6" title="6"><span class="kw">function</span> <span class="at">mapStateToProps</span>() <span class="op">{</span></a>
-<a class="sourceLine" id="cb6-7" title="7">  <span class="va">console</span>.<span class="at">log</span>(<span class="kw">arguments</span>[<span class="dv">0</span>]) <span class="co">// state</span></a>
-<a class="sourceLine" id="cb6-8" title="8">  <span class="va">console</span>.<span class="at">log</span>(<span class="kw">arguments</span>[<span class="dv">1</span>]) <span class="co">// ownProps</span></a>
-<a class="sourceLine" id="cb6-9" title="9"><span class="op">}</span></a>
-<a class="sourceLine" id="cb6-10" title="10"></a>
-<a class="sourceLine" id="cb6-11" title="11"><span class="kw">function</span> <span class="at">mapStateToProps</span>(...<span class="at">args</span>) <span class="op">{</span></a>
-<a class="sourceLine" id="cb6-12" title="12">  <span class="va">console</span>.<span class="at">log</span>(args[<span class="dv">0</span>]) <span class="co">// state</span></a>
-<a class="sourceLine" id="cb6-13" title="13">  <span class="va">console</span>.<span class="at">log</span>(args[<span class="dv">1</span>]) <span class="co">// ownProps</span></a>
-<a class="sourceLine" id="cb6-14" title="14"><span class="op">}</span></a></code></pre>
+      >
+<code class="language-js  class="sourceCode javascript">
+<a class="sourceLine" id="cb6-1" title="1">
+<span class="kw">function</span> <span class="at">mapStateToProps</span>(state<span class="op">,</span> ownProps) <span class="op">{</span>
+</a>
+<a class="sourceLine" id="cb6-2" title="2">  <span class="va">console</span>.<span class="at">log</span>(state) <span class="co">// state</span>
+</a>
+<a class="sourceLine" id="cb6-3" title="3">  <span class="va">console</span>.<span class="at">log</span>(ownProps) <span class="co">// ownProps</span>
+</a>
+<a class="sourceLine" id="cb6-4" title="4">
+<span class="op">}</span>
+</a>
+<a class="sourceLine" id="cb6-5" title="5">
+</a>
+<a class="sourceLine" id="cb6-6" title="6">
+<span class="kw">function</span> <span class="at">mapStateToProps</span>() <span class="op">{</span>
+</a>
+<a class="sourceLine" id="cb6-7" title="7">  <span class="va">console</span>.<span class="at">log</span>(<span class="kw">arguments</span>[<span class="dv">0</span>]) <span class="co">// state</span>
+</a>
+<a class="sourceLine" id="cb6-8" title="8">  <span class="va">console</span>.<span class="at">log</span>(<span class="kw">arguments</span>[<span class="dv">1</span>]) <span class="co">// ownProps</span>
+</a>
+<a class="sourceLine" id="cb6-9" title="9">
+<span class="op">}</span>
+</a>
+<a class="sourceLine" id="cb6-10" title="10">
+</a>
+<a class="sourceLine" id="cb6-11" title="11">
+<span class="kw">function</span> <span class="at">mapStateToProps</span>(...<span class="at">args</span>) <span class="op">{</span>
+</a>
+<a class="sourceLine" id="cb6-12" title="12">  <span class="va">console</span>.<span class="at">log</span>(args[<span class="dv">0</span>]) <span class="co">// state</span>
+</a>
+<a class="sourceLine" id="cb6-13" title="13">  <span class="va">console</span>.<span class="at">log</span>(args[<span class="dv">1</span>]) <span class="co">// ownProps</span>
+</a>
+<a class="sourceLine" id="cb6-14" title="14">
+<span class="op">}</span>
+</a>
+</code>
+</pre>
     </div>
     <h2 id="links-and-references">Links and References</h2>
-    <p><strong>Tutorials</strong></p>
+    <p>
+<strong>Tutorials</strong>
+</p>
     <ul>
       <li>
         <a
@@ -670,7 +796,9 @@
         >
       </li>
     </ul>
-    <p><strong>Performance</strong></p>
+    <p>
+<strong>Performance</strong>
+</p>
     <ul>
       <li>
         <a href="https://twitter.com/leeb/status/746733697093668864"
@@ -691,7 +819,9 @@
         >
       </li>
     </ul>
-    <p><strong>Q&amp;A</strong></p>
+    <p>
+<strong>Q&amp;A</strong>
+</p>
     <ul>
       <li>
         <a

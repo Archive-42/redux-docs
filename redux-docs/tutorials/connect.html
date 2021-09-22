@@ -200,7 +200,8 @@
     </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
+<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js">
+</script>
     </head>
   <body>
     <header id="title-block-header">
@@ -234,7 +235,9 @@
         We’re working on a new tutorial that will introduce the hooks APIs.
         Until then, we suggest reading
         <a href="https://redux.js.org/tutorials/fundamentals/part-5-ui-react"
-          ><strong>Redux Fundamentals, Part 5: UI and React</strong></a
+          >
+<strong>Redux Fundamentals, Part 5: UI and React</strong>
+</a
         >
         for a hooks tutorial.
       </p>
@@ -244,18 +247,23 @@
       example by creating a todo list app.
     </p>
     <h2 id="a-todo-list-example">A Todo List Example</h2>
-    <p><strong>Jump to</strong></p>
+    <p>
+<strong>Jump to</strong>
+</p>
     <ul>
       <li>
         🤞
         <a href="https://codesandbox.io/s/9on71rvnyo">Just show me the code</a>
       </li>
-      <li>👆 <a href="#providing-the-store">Providing the store</a></li>
+      <li>👆 <a href="#providing-the-store">Providing the store</a>
+</li>
       <li>
         ✌️ <a href="#connecting-the-components">Connecting the Component</a>
       </li>
     </ul>
-    <p><strong>The React UI Components</strong></p>
+    <p>
+<strong>The React UI Components</strong>
+</p>
     <p>We have implemented our React UI components as follows:</p>
     <ul>
       <li>
@@ -316,11 +324,16 @@
           </li>
         </ul>
       </li>
-      <li><code class="language-js" >constants</code> holds the constants data for our app.</li>
+      <li>
+<code class="language-js" >constants</code> holds the constants data for our app.</li>
       <li>And finally <code class="language-js" >index</code> renders our app to the DOM.</li>
     </ul>
-    <p><br /></p>
-    <p><strong>The Redux Store</strong></p>
+    <p>
+<br />
+</p>
+    <p>
+<strong>The Redux Store</strong>
+</p>
     <p>
       The Redux portion of the application has been set up using the
       <a href="https://redux.js.org">patterns recommended in the Redux docs</a>:
@@ -425,7 +438,9 @@
       source code of the UI components and the unconnected Redux store described
       above.
     </p>
-    <p><br /></p>
+    <p>
+<br />
+</p>
     <p>
       We will now show how to connect this store to our app using React Redux.
     </p>
@@ -435,7 +450,8 @@
       this, we wrap our app with the <code class="language-js" >&lt;Provider /&gt;</code> API
       provided by React Redux.
     </p>
-    <pre class="language-js  class="jsx"><code class="language-js" >// index.js
+    <pre class="language-js  class="jsx">
+<code class="language-js" >// index.js
 import React from &#39;react&#39;
 import ReactDOM from &#39;react-dom&#39;
 import TodoApp from &#39;./TodoApp&#39;
@@ -449,13 +465,16 @@ ReactDOM.render(
     &lt;TodoApp /&gt;
   &lt;/Provider&gt;,
   rootElement
-)</code></pre>
+)</code>
+</pre>
     <p>
       Notice how our <code class="language-js" >&lt;TodoApp /&gt;</code> is now wrapped with the
       <code class="language-js" >&lt;Provider /&gt;</code> with <code class="language-js" >store</code> passed in as a
       prop.
     </p>
-    <p><img src="https://i.imgur.com/LV0XvwA.png" /></p>
+    <p>
+<img src="https://i.imgur.com/LV0XvwA.png" />
+</p>
     <h3 id="connecting-the-components">Connecting the Components</h3>
     <p>
       React Redux provides a <code class="language-js" >connect</code> function for you to read
@@ -494,21 +513,46 @@ ReactDOM.render(
     <div class="sourceCode" id="cb2">
       <pre class="language-js 
         class="sourceCode js"
-      ><code class="language-js  class="sourceCode javascript"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">const</span> mapStateToProps <span class="op">=</span> (state<span class="op">,</span> ownProps) <span class="kw">=&gt;</span> (<span class="op">{</span></a>
-<a class="sourceLine" id="cb2-2" title="2">  <span class="co">// ... computed data from state and optionally ownProps</span></a>
-<a class="sourceLine" id="cb2-3" title="3"><span class="op">}</span>)</a>
-<a class="sourceLine" id="cb2-4" title="4"></a>
-<a class="sourceLine" id="cb2-5" title="5"><span class="kw">const</span> mapDispatchToProps <span class="op">=</span> <span class="op">{</span></a>
-<a class="sourceLine" id="cb2-6" title="6">  <span class="co">// ... normally is an object full of action creators</span></a>
-<a class="sourceLine" id="cb2-7" title="7"><span class="op">}</span></a>
-<a class="sourceLine" id="cb2-8" title="8"></a>
-<a class="sourceLine" id="cb2-9" title="9"><span class="co">// `connect` returns a new function that accepts the component to wrap:</span></a>
-<a class="sourceLine" id="cb2-10" title="10"><span class="kw">const</span> connectToStore <span class="op">=</span> <span class="at">connect</span>(mapStateToProps<span class="op">,</span> mapDispatchToProps)</a>
-<a class="sourceLine" id="cb2-11" title="11"><span class="co">// and that function returns the connected, wrapper component:</span></a>
-<a class="sourceLine" id="cb2-12" title="12"><span class="kw">const</span> ConnectedComponent <span class="op">=</span> <span class="at">connectToStore</span>(Component)</a>
-<a class="sourceLine" id="cb2-13" title="13"></a>
-<a class="sourceLine" id="cb2-14" title="14"><span class="co">// We normally do both in one step, like this:</span></a>
-<a class="sourceLine" id="cb2-15" title="15"><span class="at">connect</span>(mapStateToProps<span class="op">,</span> mapDispatchToProps)(Component)</a></code></pre>
+      >
+<code class="language-js  class="sourceCode javascript">
+<a class="sourceLine" id="cb2-1" title="1">
+<span class="kw">const</span> mapStateToProps <span class="op">=</span> (state<span class="op">,</span> ownProps) <span class="kw">=&gt;</span> (<span class="op">{</span>
+</a>
+<a class="sourceLine" id="cb2-2" title="2">  <span class="co">// ... computed data from state and optionally ownProps</span>
+</a>
+<a class="sourceLine" id="cb2-3" title="3">
+<span class="op">}</span>)</a>
+<a class="sourceLine" id="cb2-4" title="4">
+</a>
+<a class="sourceLine" id="cb2-5" title="5">
+<span class="kw">const</span> mapDispatchToProps <span class="op">=</span> <span class="op">{</span>
+</a>
+<a class="sourceLine" id="cb2-6" title="6">  <span class="co">// ... normally is an object full of action creators</span>
+</a>
+<a class="sourceLine" id="cb2-7" title="7">
+<span class="op">}</span>
+</a>
+<a class="sourceLine" id="cb2-8" title="8">
+</a>
+<a class="sourceLine" id="cb2-9" title="9">
+<span class="co">// `connect` returns a new function that accepts the component to wrap:</span>
+</a>
+<a class="sourceLine" id="cb2-10" title="10">
+<span class="kw">const</span> connectToStore <span class="op">=</span> <span class="at">connect</span>(mapStateToProps<span class="op">,</span> mapDispatchToProps)</a>
+<a class="sourceLine" id="cb2-11" title="11">
+<span class="co">// and that function returns the connected, wrapper component:</span>
+</a>
+<a class="sourceLine" id="cb2-12" title="12">
+<span class="kw">const</span> ConnectedComponent <span class="op">=</span> <span class="at">connectToStore</span>(Component)</a>
+<a class="sourceLine" id="cb2-13" title="13">
+</a>
+<a class="sourceLine" id="cb2-14" title="14">
+<span class="co">// We normally do both in one step, like this:</span>
+</a>
+<a class="sourceLine" id="cb2-15" title="15">
+<span class="at">connect</span>(mapStateToProps<span class="op">,</span> mapDispatchToProps)(Component)</a>
+</code>
+</pre>
     </div>
     <p>
       Let’s work on <code class="language-js" >&lt;AddTodo /&gt;</code> first. It needs to trigger
@@ -520,19 +564,44 @@ ReactDOM.render(
     <div class="sourceCode" id="cb3">
       <pre class="language-js 
         class="sourceCode js"
-      ><code class="language-js  class="sourceCode javascript"><a class="sourceLine" id="cb3-1" title="1"><span class="co">// redux/actions.js</span></a>
-<a class="sourceLine" id="cb3-2" title="2"><span class="im">import</span> <span class="op">{</span> ADD_TODO <span class="op">}</span> <span class="im">from</span> <span class="st">&#39;./actionTypes&#39;</span></a>
-<a class="sourceLine" id="cb3-3" title="3"></a>
-<a class="sourceLine" id="cb3-4" title="4"><span class="kw">let</span> nextTodoId <span class="op">=</span> <span class="dv">0</span></a>
-<a class="sourceLine" id="cb3-5" title="5"><span class="im">export</span> <span class="kw">const</span> addTodo <span class="op">=</span> (content) <span class="kw">=&gt;</span> (<span class="op">{</span></a>
-<a class="sourceLine" id="cb3-6" title="6">  <span class="dt">type</span><span class="op">:</span> ADD_TODO<span class="op">,</span></a>
-<a class="sourceLine" id="cb3-7" title="7">  <span class="dt">payload</span><span class="op">:</span> <span class="op">{</span></a>
-<a class="sourceLine" id="cb3-8" title="8">    <span class="dt">id</span><span class="op">:</span> <span class="op">++</span>nextTodoId<span class="op">,</span></a>
-<a class="sourceLine" id="cb3-9" title="9">    content<span class="op">,</span></a>
-<a class="sourceLine" id="cb3-10" title="10">  <span class="op">},</span></a>
-<a class="sourceLine" id="cb3-11" title="11"><span class="op">}</span>)</a>
-<a class="sourceLine" id="cb3-12" title="12"></a>
-<a class="sourceLine" id="cb3-13" title="13"><span class="co">// ... other actions</span></a></code></pre>
+      >
+<code class="language-js  class="sourceCode javascript">
+<a class="sourceLine" id="cb3-1" title="1">
+<span class="co">// redux/actions.js</span>
+</a>
+<a class="sourceLine" id="cb3-2" title="2">
+<span class="im">import</span> <span class="op">{</span> ADD_TODO <span class="op">}</span> <span class="im">from</span> <span class="st">&#39;./actionTypes&#39;</span>
+</a>
+<a class="sourceLine" id="cb3-3" title="3">
+</a>
+<a class="sourceLine" id="cb3-4" title="4">
+<span class="kw">let</span> nextTodoId <span class="op">=</span> <span class="dv">0</span>
+</a>
+<a class="sourceLine" id="cb3-5" title="5">
+<span class="im">export</span> <span class="kw">const</span> addTodo <span class="op">=</span> (content) <span class="kw">=&gt;</span> (<span class="op">{</span>
+</a>
+<a class="sourceLine" id="cb3-6" title="6">  <span class="dt">type</span>
+<span class="op">:</span> ADD_TODO<span class="op">,</span>
+</a>
+<a class="sourceLine" id="cb3-7" title="7">  <span class="dt">payload</span>
+<span class="op">:</span> <span class="op">{</span>
+</a>
+<a class="sourceLine" id="cb3-8" title="8">    <span class="dt">id</span>
+<span class="op">:</span> <span class="op">++</span>nextTodoId<span class="op">,</span>
+</a>
+<a class="sourceLine" id="cb3-9" title="9">    content<span class="op">,</span>
+</a>
+<a class="sourceLine" id="cb3-10" title="10">  <span class="op">},</span>
+</a>
+<a class="sourceLine" id="cb3-11" title="11">
+<span class="op">}</span>)</a>
+<a class="sourceLine" id="cb3-12" title="12">
+</a>
+<a class="sourceLine" id="cb3-13" title="13">
+<span class="co">// ... other actions</span>
+</a>
+</code>
+</pre>
     </div>
     <p>
       By passing it to <code class="language-js" >connect</code>, our component receives it as a
@@ -541,17 +610,39 @@ ReactDOM.render(
     <div class="sourceCode" id="cb4">
       <pre class="language-js 
         class="sourceCode js"
-      ><code class="language-js  class="sourceCode javascript"><a class="sourceLine" id="cb4-1" title="1"><span class="co">// components/AddTodo.js</span></a>
-<a class="sourceLine" id="cb4-2" title="2"></a>
-<a class="sourceLine" id="cb4-3" title="3"><span class="co">// ... other imports</span></a>
-<a class="sourceLine" id="cb4-4" title="4"><span class="im">import</span> <span class="op">{</span> connect <span class="op">}</span> <span class="im">from</span> <span class="st">&#39;react-redux&#39;</span></a>
-<a class="sourceLine" id="cb4-5" title="5"><span class="im">import</span> <span class="op">{</span> addTodo <span class="op">}</span> <span class="im">from</span> <span class="st">&#39;../redux/actions&#39;</span></a>
-<a class="sourceLine" id="cb4-6" title="6"></a>
-<a class="sourceLine" id="cb4-7" title="7"><span class="kw">class</span> AddTodo <span class="kw">extends</span> <span class="va">React</span>.<span class="at">Component</span> <span class="op">{</span></a>
-<a class="sourceLine" id="cb4-8" title="8">  <span class="co">// ... component implementation</span></a>
-<a class="sourceLine" id="cb4-9" title="9"><span class="op">}</span></a>
-<a class="sourceLine" id="cb4-10" title="10"></a>
-<a class="sourceLine" id="cb4-11" title="11"><span class="im">export</span> <span class="im">default</span> <span class="at">connect</span>(<span class="kw">null</span><span class="op">,</span> <span class="op">{</span> addTodo <span class="op">}</span>)(AddTodo)</a></code></pre>
+      >
+<code class="language-js  class="sourceCode javascript">
+<a class="sourceLine" id="cb4-1" title="1">
+<span class="co">// components/AddTodo.js</span>
+</a>
+<a class="sourceLine" id="cb4-2" title="2">
+</a>
+<a class="sourceLine" id="cb4-3" title="3">
+<span class="co">// ... other imports</span>
+</a>
+<a class="sourceLine" id="cb4-4" title="4">
+<span class="im">import</span> <span class="op">{</span> connect <span class="op">}</span> <span class="im">from</span> <span class="st">&#39;react-redux&#39;</span>
+</a>
+<a class="sourceLine" id="cb4-5" title="5">
+<span class="im">import</span> <span class="op">{</span> addTodo <span class="op">}</span> <span class="im">from</span> <span class="st">&#39;../redux/actions&#39;</span>
+</a>
+<a class="sourceLine" id="cb4-6" title="6">
+</a>
+<a class="sourceLine" id="cb4-7" title="7">
+<span class="kw">class</span> AddTodo <span class="kw">extends</span> <span class="va">React</span>.<span class="at">Component</span> <span class="op">{</span>
+</a>
+<a class="sourceLine" id="cb4-8" title="8">  <span class="co">// ... component implementation</span>
+</a>
+<a class="sourceLine" id="cb4-9" title="9">
+<span class="op">}</span>
+</a>
+<a class="sourceLine" id="cb4-10" title="10">
+</a>
+<a class="sourceLine" id="cb4-11" title="11">
+<span class="im">export</span> <span class="im">default</span> <span class="at">connect</span>(<span class="kw">null</span>
+<span class="op">,</span> <span class="op">{</span> addTodo <span class="op">}</span>)(AddTodo)</a>
+</code>
+</pre>
     </div>
     <p>
       Notice now that <code class="language-js" >&lt;AddTodo /&gt;</code> is wrapped with a parent
@@ -559,12 +650,15 @@ ReactDOM.render(
       <code class="language-js" >&lt;AddTodo /&gt;</code> now gains one prop: the
       <code class="language-js" >addTodo</code> action.
     </p>
-    <p><img src="https://i.imgur.com/u6aXbwl.png" /></p>
+    <p>
+<img src="https://i.imgur.com/u6aXbwl.png" />
+</p>
     <p>
       We also need to implement the <code class="language-js" >handleAddTodo</code> function to let
       it dispatch the <code class="language-js" >addTodo</code> action and reset the input
     </p>
-    <pre class="language-js  class="jsx"><code class="language-js" >// components/AddTodo.js
+    <pre class="language-js  class="jsx">
+<code class="language-js" >// components/AddTodo.js
 
 import React from &#39;react&#39;
 import { connect } from &#39;react-redux&#39;
@@ -596,7 +690,8 @@ class AddTodo extends React.Component {
   }
 }
 
-export default connect(null, { addTodo })(AddTodo)</code></pre>
+export default connect(null, { addTodo })(AddTodo)</code>
+</pre>
     <p>
       Now our <code class="language-js" >&lt;AddTodo /&gt;</code> is connected to the store. When we
       add a todo it would dispatch an action to change the store. We are not
@@ -604,9 +699,13 @@ export default connect(null, { addTodo })(AddTodo)</code></pre>
       If you have the Redux DevTools Extension hooked up, you should see the
       action being dispatched:
     </p>
-    <p><img src="https://i.imgur.com/kHvkqhI.png" /></p>
+    <p>
+<img src="https://i.imgur.com/kHvkqhI.png" />
+</p>
     <p>You should also see that the store has changed accordingly:</p>
-    <p><img src="https://i.imgur.com/yx27RVC.png" /></p>
+    <p>
+<img src="https://i.imgur.com/yx27RVC.png" />
+</p>
     <p>
       The <code class="language-js" >&lt;TodoList /&gt;</code> component is responsible for rendering
       the list of todos. Therefore, it needs to read data from the store. We
@@ -625,23 +724,52 @@ export default connect(null, { addTodo })(AddTodo)</code></pre>
     <div class="sourceCode" id="cb6">
       <pre class="language-js 
         class="sourceCode js"
-      ><code class="language-js  class="sourceCode javascript"><a class="sourceLine" id="cb6-1" title="1"><span class="co">// components/TodoList.js</span></a>
-<a class="sourceLine" id="cb6-2" title="2"></a>
-<a class="sourceLine" id="cb6-3" title="3"><span class="co">// ...other imports</span></a>
-<a class="sourceLine" id="cb6-4" title="4"><span class="im">import</span> <span class="op">{</span> connect <span class="op">}</span> <span class="im">from</span> <span class="st">&quot;react-redux&quot;</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb6-5" title="5"></a>
-<a class="sourceLine" id="cb6-6" title="6"><span class="kw">const</span> TodoList <span class="op">=</span> <span class="co">// ... UI component implementation</span></a>
-<a class="sourceLine" id="cb6-7" title="7"></a>
-<a class="sourceLine" id="cb6-8" title="8"><span class="kw">const</span> mapStateToProps <span class="op">=</span> state <span class="kw">=&gt;</span> <span class="op">{</span></a>
-<a class="sourceLine" id="cb6-9" title="9">  <span class="kw">const</span> <span class="op">{</span> byIds<span class="op">,</span> allIds <span class="op">}</span> <span class="op">=</span> <span class="va">state</span>.<span class="at">todos</span> <span class="op">||</span> <span class="op">{};</span></a>
-<a class="sourceLine" id="cb6-10" title="10">  <span class="kw">const</span> todos <span class="op">=</span></a>
-<a class="sourceLine" id="cb6-11" title="11">    allIds <span class="op">&amp;&amp;</span> <span class="va">allIds</span>.<span class="at">length</span></a>
+      >
+<code class="language-js  class="sourceCode javascript">
+<a class="sourceLine" id="cb6-1" title="1">
+<span class="co">// components/TodoList.js</span>
+</a>
+<a class="sourceLine" id="cb6-2" title="2">
+</a>
+<a class="sourceLine" id="cb6-3" title="3">
+<span class="co">// ...other imports</span>
+</a>
+<a class="sourceLine" id="cb6-4" title="4">
+<span class="im">import</span> <span class="op">{</span> connect <span class="op">}</span> <span class="im">from</span> <span class="st">&quot;react-redux&quot;</span>
+<span class="op">;</span>
+</a>
+<a class="sourceLine" id="cb6-5" title="5">
+</a>
+<a class="sourceLine" id="cb6-6" title="6">
+<span class="kw">const</span> TodoList <span class="op">=</span> <span class="co">// ... UI component implementation</span>
+</a>
+<a class="sourceLine" id="cb6-7" title="7">
+</a>
+<a class="sourceLine" id="cb6-8" title="8">
+<span class="kw">const</span> mapStateToProps <span class="op">=</span> state <span class="kw">=&gt;</span> <span class="op">{</span>
+</a>
+<a class="sourceLine" id="cb6-9" title="9">  <span class="kw">const</span> <span class="op">{</span> byIds<span class="op">,</span> allIds <span class="op">}</span> <span class="op">=</span> <span class="va">state</span>.<span class="at">todos</span> <span class="op">||</span> <span class="op">{};</span>
+</a>
+<a class="sourceLine" id="cb6-10" title="10">  <span class="kw">const</span> todos <span class="op">=</span>
+</a>
+<a class="sourceLine" id="cb6-11" title="11">    allIds <span class="op">&amp;&amp;</span> <span class="va">allIds</span>.<span class="at">length</span>
+</a>
 <a class="sourceLine" id="cb6-12" title="12">      <span class="op">?</span> <span class="va">allIds</span>.<span class="at">map</span>(id <span class="kw">=&gt;</span> (byIds <span class="op">?</span> <span class="op">{</span> ...<span class="at">byIds</span>[id]<span class="op">,</span> id <span class="op">}</span> : <span class="kw">null</span>))</a>
-<a class="sourceLine" id="cb6-13" title="13">      : <span class="kw">null</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb6-14" title="14">  <span class="cf">return</span> <span class="op">{</span> todos <span class="op">};</span></a>
-<a class="sourceLine" id="cb6-15" title="15"><span class="op">};</span></a>
-<a class="sourceLine" id="cb6-16" title="16"></a>
-<a class="sourceLine" id="cb6-17" title="17"><span class="im">export</span> <span class="im">default</span> <span class="at">connect</span>(mapStateToProps)(TodoList)<span class="op">;</span></a></code></pre>
+<a class="sourceLine" id="cb6-13" title="13">      : <span class="kw">null</span>
+<span class="op">;</span>
+</a>
+<a class="sourceLine" id="cb6-14" title="14">  <span class="cf">return</span> <span class="op">{</span> todos <span class="op">};</span>
+</a>
+<a class="sourceLine" id="cb6-15" title="15">
+<span class="op">};</span>
+</a>
+<a class="sourceLine" id="cb6-16" title="16">
+</a>
+<a class="sourceLine" id="cb6-17" title="17">
+<span class="im">export</span> <span class="im">default</span> <span class="at">connect</span>(mapStateToProps)(TodoList)<span class="op">;</span>
+</a>
+</code>
+</pre>
     </div>
     <p>
       Luckily we have a selector that does exactly this. We may simply import
@@ -650,31 +778,72 @@ export default connect(null, { addTodo })(AddTodo)</code></pre>
     <div class="sourceCode" id="cb7">
       <pre class="language-js 
         class="sourceCode js"
-      ><code class="language-js  class="sourceCode javascript"><a class="sourceLine" id="cb7-1" title="1"><span class="co">// redux/selectors.js</span></a>
-<a class="sourceLine" id="cb7-2" title="2"></a>
-<a class="sourceLine" id="cb7-3" title="3"><span class="im">export</span> <span class="kw">const</span> getTodosState <span class="op">=</span> (store) <span class="kw">=&gt;</span> <span class="va">store</span>.<span class="at">todos</span></a>
-<a class="sourceLine" id="cb7-4" title="4"></a>
-<a class="sourceLine" id="cb7-5" title="5"><span class="im">export</span> <span class="kw">const</span> getTodoList <span class="op">=</span> (store) <span class="kw">=&gt;</span></a>
+      >
+<code class="language-js  class="sourceCode javascript">
+<a class="sourceLine" id="cb7-1" title="1">
+<span class="co">// redux/selectors.js</span>
+</a>
+<a class="sourceLine" id="cb7-2" title="2">
+</a>
+<a class="sourceLine" id="cb7-3" title="3">
+<span class="im">export</span> <span class="kw">const</span> getTodosState <span class="op">=</span> (store) <span class="kw">=&gt;</span> <span class="va">store</span>.<span class="at">todos</span>
+</a>
+<a class="sourceLine" id="cb7-4" title="4">
+</a>
+<a class="sourceLine" id="cb7-5" title="5">
+<span class="im">export</span> <span class="kw">const</span> getTodoList <span class="op">=</span> (store) <span class="kw">=&gt;</span>
+</a>
 <a class="sourceLine" id="cb7-6" title="6">  <span class="at">getTodosState</span>(store) <span class="op">?</span> <span class="at">getTodosState</span>(store).<span class="at">allIds</span> : []</a>
-<a class="sourceLine" id="cb7-7" title="7"></a>
-<a class="sourceLine" id="cb7-8" title="8"><span class="im">export</span> <span class="kw">const</span> getTodoById <span class="op">=</span> (store<span class="op">,</span> id) <span class="kw">=&gt;</span></a>
-<a class="sourceLine" id="cb7-9" title="9">  <span class="at">getTodosState</span>(store) <span class="op">?</span> <span class="op">{</span> ...<span class="at">getTodosState</span>(store).<span class="at">byIds</span>[id]<span class="op">,</span> id <span class="op">}</span> : <span class="op">{}</span></a>
-<a class="sourceLine" id="cb7-10" title="10"></a>
-<a class="sourceLine" id="cb7-11" title="11"><span class="im">export</span> <span class="kw">const</span> getTodos <span class="op">=</span> (store) <span class="kw">=&gt;</span></a>
-<a class="sourceLine" id="cb7-12" title="12">  <span class="at">getTodoList</span>(store).<span class="at">map</span>((id) <span class="kw">=&gt;</span> <span class="at">getTodoById</span>(store<span class="op">,</span> id))</a></code></pre>
+<a class="sourceLine" id="cb7-7" title="7">
+</a>
+<a class="sourceLine" id="cb7-8" title="8">
+<span class="im">export</span> <span class="kw">const</span> getTodoById <span class="op">=</span> (store<span class="op">,</span> id) <span class="kw">=&gt;</span>
+</a>
+<a class="sourceLine" id="cb7-9" title="9">  <span class="at">getTodosState</span>(store) <span class="op">?</span> <span class="op">{</span> ...<span class="at">getTodosState</span>(store).<span class="at">byIds</span>[id]<span class="op">,</span> id <span class="op">}</span> : <span class="op">{}</span>
+</a>
+<a class="sourceLine" id="cb7-10" title="10">
+</a>
+<a class="sourceLine" id="cb7-11" title="11">
+<span class="im">export</span> <span class="kw">const</span> getTodos <span class="op">=</span> (store) <span class="kw">=&gt;</span>
+</a>
+<a class="sourceLine" id="cb7-12" title="12">  <span class="at">getTodoList</span>(store).<span class="at">map</span>((id) <span class="kw">=&gt;</span> <span class="at">getTodoById</span>(store<span class="op">,</span> id))</a>
+</code>
+</pre>
     </div>
     <div class="sourceCode" id="cb8">
       <pre class="language-js 
         class="sourceCode js"
-      ><code class="language-js  class="sourceCode javascript"><a class="sourceLine" id="cb8-1" title="1"><span class="co">// components/TodoList.js</span></a>
-<a class="sourceLine" id="cb8-2" title="2"></a>
-<a class="sourceLine" id="cb8-3" title="3"><span class="co">// ...other imports</span></a>
-<a class="sourceLine" id="cb8-4" title="4"><span class="im">import</span> <span class="op">{</span> connect <span class="op">}</span> <span class="im">from</span> <span class="st">&quot;react-redux&quot;</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb8-5" title="5"><span class="im">import</span> <span class="op">{</span> getTodos <span class="op">}</span> <span class="im">from</span> <span class="st">&quot;../redux/selectors&quot;</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb8-6" title="6"></a>
-<a class="sourceLine" id="cb8-7" title="7"><span class="kw">const</span> TodoList <span class="op">=</span> <span class="co">// ... UI component implementation</span></a>
-<a class="sourceLine" id="cb8-8" title="8"></a>
-<a class="sourceLine" id="cb8-9" title="9"><span class="im">export</span> <span class="im">default</span> <span class="at">connect</span>(state <span class="kw">=&gt;</span> (<span class="op">{</span> <span class="dt">todos</span><span class="op">:</span> <span class="at">getTodos</span>(state) <span class="op">}</span>))(TodoList)<span class="op">;</span></a></code></pre>
+      >
+<code class="language-js  class="sourceCode javascript">
+<a class="sourceLine" id="cb8-1" title="1">
+<span class="co">// components/TodoList.js</span>
+</a>
+<a class="sourceLine" id="cb8-2" title="2">
+</a>
+<a class="sourceLine" id="cb8-3" title="3">
+<span class="co">// ...other imports</span>
+</a>
+<a class="sourceLine" id="cb8-4" title="4">
+<span class="im">import</span> <span class="op">{</span> connect <span class="op">}</span> <span class="im">from</span> <span class="st">&quot;react-redux&quot;</span>
+<span class="op">;</span>
+</a>
+<a class="sourceLine" id="cb8-5" title="5">
+<span class="im">import</span> <span class="op">{</span> getTodos <span class="op">}</span> <span class="im">from</span> <span class="st">&quot;../redux/selectors&quot;</span>
+<span class="op">;</span>
+</a>
+<a class="sourceLine" id="cb8-6" title="6">
+</a>
+<a class="sourceLine" id="cb8-7" title="7">
+<span class="kw">const</span> TodoList <span class="op">=</span> <span class="co">// ... UI component implementation</span>
+</a>
+<a class="sourceLine" id="cb8-8" title="8">
+</a>
+<a class="sourceLine" id="cb8-9" title="9">
+<span class="im">export</span> <span class="im">default</span> <span class="at">connect</span>(state <span class="kw">=&gt;</span> (<span class="op">{</span> <span class="dt">todos</span>
+<span class="op">:</span> <span class="at">getTodos</span>(state) <span class="op">}</span>))(TodoList)<span class="op">;</span>
+</a>
+</code>
+</pre>
     </div>
     <p>
       We recommend encapsulating any complex lookups or computations of data in
@@ -700,7 +869,9 @@ export default connect(null, { addTodo })(AddTodo)</code></pre>
       turn render them to the screen. Now try adding a todo. It should come up
       on our todo list!
     </p>
-    <p><img src="https://i.imgur.com/N68xvrG.png" /></p>
+    <p>
+<img src="https://i.imgur.com/N68xvrG.png" />
+</p>
     <p>
       We will connect more components. Before we do this, let’s pause and learn
       a bit more about <code class="language-js" >connect</code> first.
@@ -721,7 +892,8 @@ export default connect(null, { addTodo })(AddTodo)</code></pre>
       </colgroup>
       <thead>
         <tr class="header">
-          <th></th>
+          <th>
+</th>
           <th>Do Not Subscribe to the Store</th>
           <th>Subscribe to the Store</th>
         </tr>
@@ -729,12 +901,18 @@ export default connect(null, { addTodo })(AddTodo)</code></pre>
       <tbody>
         <tr class="odd">
           <td>Do Not Inject Action Creators</td>
-          <td><code class="language-js" >connect()(Component)</code></td>
-          <td><code class="language-js" >connect(mapStateToProps)(Component)</code></td>
+          <td>
+<code class="language-js" >connect()(Component)</code>
+</td>
+          <td>
+<code class="language-js" >connect(mapStateToProps)(Component)</code>
+</td>
         </tr>
         <tr class="even">
           <td>Inject Action Creators</td>
-          <td><code class="language-js" >connect(null, mapDispatchToProps)(Component)</code></td>
+          <td>
+<code class="language-js" >connect(null, mapDispatchToProps)(Component)</code>
+</td>
           <td>
             <code class="language-js" >connect(mapStateToProps, mapDispatchToProps)(Component)</code>
           </td>
@@ -749,7 +927,8 @@ export default connect(null, { addTodo })(AddTodo)</code></pre>
       component will:
     </p>
     <ul>
-      <li><em>not</em> re-render when the store changes</li>
+      <li>
+<em>not</em> re-render when the store changes</li>
       <li>
         receive <code class="language-js" >props.dispatch</code> that you may use to manually
         dispatch action
@@ -758,8 +937,16 @@ export default connect(null, { addTodo })(AddTodo)</code></pre>
     <div class="sourceCode" id="cb9">
       <pre class="language-js 
         class="sourceCode js"
-      ><code class="language-js  class="sourceCode javascript"><a class="sourceLine" id="cb9-1" title="1"><span class="co">// ... Component</span></a>
-<a class="sourceLine" id="cb9-2" title="2"><span class="im">export</span> <span class="im">default</span> <span class="at">connect</span>()(Component) <span class="co">// Component will receive `dispatch` (just like our &lt;TodoList /&gt;!)</span></a></code></pre>
+      >
+<code class="language-js  class="sourceCode javascript">
+<a class="sourceLine" id="cb9-1" title="1">
+<span class="co">// ... Component</span>
+</a>
+<a class="sourceLine" id="cb9-2" title="2">
+<span class="im">export</span> <span class="im">default</span> <span class="at">connect</span>()(Component) <span class="co">// Component will receive `dispatch` (just like our &lt;TodoList /&gt;!)</span>
+</a>
+</code>
+</pre>
     </div>
     <h4 id="subscribe-to-the-store-and-do-not-inject-action-creators">
       Subscribe to the store and do not inject action creators
@@ -781,9 +968,18 @@ export default connect(null, { addTodo })(AddTodo)</code></pre>
     <div class="sourceCode" id="cb10">
       <pre class="language-js 
         class="sourceCode js"
-      ><code class="language-js  class="sourceCode javascript"><a class="sourceLine" id="cb10-1" title="1"><span class="co">// ... Component</span></a>
-<a class="sourceLine" id="cb10-2" title="2"><span class="kw">const</span> mapStateToProps <span class="op">=</span> (state) <span class="kw">=&gt;</span> <span class="va">state</span>.<span class="at">partOfState</span></a>
-<a class="sourceLine" id="cb10-3" title="3"><span class="im">export</span> <span class="im">default</span> <span class="at">connect</span>(mapStateToProps)(Component)</a></code></pre>
+      >
+<code class="language-js  class="sourceCode javascript">
+<a class="sourceLine" id="cb10-1" title="1">
+<span class="co">// ... Component</span>
+</a>
+<a class="sourceLine" id="cb10-2" title="2">
+<span class="kw">const</span> mapStateToProps <span class="op">=</span> (state) <span class="kw">=&gt;</span> <span class="va">state</span>.<span class="at">partOfState</span>
+</a>
+<a class="sourceLine" id="cb10-3" title="3">
+<span class="im">export</span> <span class="im">default</span> <span class="at">connect</span>(mapStateToProps)(Component)</a>
+</code>
+</pre>
     </div>
     <h4 id="do-not-subscribe-to-the-store-and-inject-action-creators">
       Do not subscribe to the store and inject action creators
@@ -793,7 +989,8 @@ export default connect(null, { addTodo })(AddTodo)</code></pre>
       <code class="language-js" >mapDispatchToProps</code>, your component will:
     </p>
     <ul>
-      <li><em>not</em> re-render when the store changes</li>
+      <li>
+<em>not</em> re-render when the store changes</li>
       <li>
         receive each of the action creators you inject with
         <code class="language-js" >mapDispatchToProps</code> as props and automatically dispatch the
@@ -803,9 +1000,19 @@ export default connect(null, { addTodo })(AddTodo)</code></pre>
     <div class="sourceCode" id="cb11">
       <pre class="language-js 
         class="sourceCode js"
-      ><code class="language-js  class="sourceCode javascript"><a class="sourceLine" id="cb11-1" title="1"><span class="im">import</span> <span class="op">{</span> addTodo <span class="op">}</span> <span class="im">from</span> <span class="st">&#39;./actionCreators&#39;</span></a>
-<a class="sourceLine" id="cb11-2" title="2"><span class="co">// ... Component</span></a>
-<a class="sourceLine" id="cb11-3" title="3"><span class="im">export</span> <span class="im">default</span> <span class="at">connect</span>(<span class="kw">null</span><span class="op">,</span> <span class="op">{</span> addTodo <span class="op">}</span>)(Component)</a></code></pre>
+      >
+<code class="language-js  class="sourceCode javascript">
+<a class="sourceLine" id="cb11-1" title="1">
+<span class="im">import</span> <span class="op">{</span> addTodo <span class="op">}</span> <span class="im">from</span> <span class="st">&#39;./actionCreators&#39;</span>
+</a>
+<a class="sourceLine" id="cb11-2" title="2">
+<span class="co">// ... Component</span>
+</a>
+<a class="sourceLine" id="cb11-3" title="3">
+<span class="im">export</span> <span class="im">default</span> <span class="at">connect</span>(<span class="kw">null</span>
+<span class="op">,</span> <span class="op">{</span> addTodo <span class="op">}</span>)(Component)</a>
+</code>
+</pre>
     </div>
     <h4 id="subscribe-to-the-store-and-inject-action-creators">
       Subscribe to the store and inject action creators
@@ -829,10 +1036,21 @@ export default connect(null, { addTodo })(AddTodo)</code></pre>
     <div class="sourceCode" id="cb12">
       <pre class="language-js 
         class="sourceCode js"
-      ><code class="language-js  class="sourceCode javascript"><a class="sourceLine" id="cb12-1" title="1"><span class="im">import</span> <span class="op">*</span> <span class="im">as</span> actionCreators <span class="im">from</span> <span class="st">&#39;./actionCreators&#39;</span></a>
-<a class="sourceLine" id="cb12-2" title="2"><span class="co">// ... Component</span></a>
-<a class="sourceLine" id="cb12-3" title="3"><span class="kw">const</span> mapStateToProps <span class="op">=</span> (state) <span class="kw">=&gt;</span> <span class="va">state</span>.<span class="at">partOfState</span></a>
-<a class="sourceLine" id="cb12-4" title="4"><span class="im">export</span> <span class="im">default</span> <span class="at">connect</span>(mapStateToProps<span class="op">,</span> actionCreators)(Component)</a></code></pre>
+      >
+<code class="language-js  class="sourceCode javascript">
+<a class="sourceLine" id="cb12-1" title="1">
+<span class="im">import</span> <span class="op">*</span> <span class="im">as</span> actionCreators <span class="im">from</span> <span class="st">&#39;./actionCreators&#39;</span>
+</a>
+<a class="sourceLine" id="cb12-2" title="2">
+<span class="co">// ... Component</span>
+</a>
+<a class="sourceLine" id="cb12-3" title="3">
+<span class="kw">const</span> mapStateToProps <span class="op">=</span> (state) <span class="kw">=&gt;</span> <span class="va">state</span>.<span class="at">partOfState</span>
+</a>
+<a class="sourceLine" id="cb12-4" title="4">
+<span class="im">export</span> <span class="im">default</span> <span class="at">connect</span>(mapStateToProps<span class="op">,</span> actionCreators)(Component)</a>
+</code>
+</pre>
     </div>
     <p>
       These four cases cover the most basic usages of <code class="language-js" >connect</code>. To
@@ -854,21 +1072,47 @@ export default connect(null, { addTodo })(AddTodo)</code></pre>
     <div class="sourceCode" id="cb13">
       <pre class="language-js 
         class="sourceCode js"
-      ><code class="language-js  class="sourceCode javascript"><a class="sourceLine" id="cb13-1" title="1"><span class="co">// components/Todo.js</span></a>
-<a class="sourceLine" id="cb13-2" title="2"></a>
-<a class="sourceLine" id="cb13-3" title="3"><span class="co">// ... other imports</span></a>
-<a class="sourceLine" id="cb13-4" title="4"><span class="im">import</span> <span class="op">{</span> connect <span class="op">}</span> <span class="im">from</span> <span class="st">&quot;react-redux&quot;</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb13-5" title="5"><span class="im">import</span> <span class="op">{</span> toggleTodo <span class="op">}</span> <span class="im">from</span> <span class="st">&quot;../redux/actions&quot;</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb13-6" title="6"></a>
-<a class="sourceLine" id="cb13-7" title="7"><span class="kw">const</span> Todo <span class="op">=</span> <span class="co">// ... component implementation</span></a>
-<a class="sourceLine" id="cb13-8" title="8"></a>
-<a class="sourceLine" id="cb13-9" title="9"><span class="im">export</span> <span class="im">default</span> <span class="at">connect</span>(</a>
-<a class="sourceLine" id="cb13-10" title="10">  <span class="kw">null</span><span class="op">,</span></a>
-<a class="sourceLine" id="cb13-11" title="11">  <span class="op">{</span> toggleTodo <span class="op">}</span></a>
-<a class="sourceLine" id="cb13-12" title="12">)(Todo)<span class="op">;</span></a></code></pre>
+      >
+<code class="language-js  class="sourceCode javascript">
+<a class="sourceLine" id="cb13-1" title="1">
+<span class="co">// components/Todo.js</span>
+</a>
+<a class="sourceLine" id="cb13-2" title="2">
+</a>
+<a class="sourceLine" id="cb13-3" title="3">
+<span class="co">// ... other imports</span>
+</a>
+<a class="sourceLine" id="cb13-4" title="4">
+<span class="im">import</span> <span class="op">{</span> connect <span class="op">}</span> <span class="im">from</span> <span class="st">&quot;react-redux&quot;</span>
+<span class="op">;</span>
+</a>
+<a class="sourceLine" id="cb13-5" title="5">
+<span class="im">import</span> <span class="op">{</span> toggleTodo <span class="op">}</span> <span class="im">from</span> <span class="st">&quot;../redux/actions&quot;</span>
+<span class="op">;</span>
+</a>
+<a class="sourceLine" id="cb13-6" title="6">
+</a>
+<a class="sourceLine" id="cb13-7" title="7">
+<span class="kw">const</span> Todo <span class="op">=</span> <span class="co">// ... component implementation</span>
+</a>
+<a class="sourceLine" id="cb13-8" title="8">
+</a>
+<a class="sourceLine" id="cb13-9" title="9">
+<span class="im">export</span> <span class="im">default</span> <span class="at">connect</span>(</a>
+<a class="sourceLine" id="cb13-10" title="10">  <span class="kw">null</span>
+<span class="op">,</span>
+</a>
+<a class="sourceLine" id="cb13-11" title="11">  <span class="op">{</span> toggleTodo <span class="op">}</span>
+</a>
+<a class="sourceLine" id="cb13-12" title="12">)(Todo)<span class="op">;</span>
+</a>
+</code>
+</pre>
     </div>
     <p>Now our todo’s can be toggled complete. We’re almost there!</p>
-    <p><img src="https://i.imgur.com/4UBXYtj.png" /></p>
+    <p>
+<img src="https://i.imgur.com/4UBXYtj.png" />
+</p>
     <p>Finally, let’s implement our <code class="language-js" >VisibilityFilters</code> feature.</p>
     <p>
       The <code class="language-js" >&lt;VisibilityFilters /&gt;</code> component needs to be able to
@@ -883,21 +1127,50 @@ export default connect(null, { addTodo })(AddTodo)</code></pre>
     <div class="sourceCode" id="cb14">
       <pre class="language-js 
         class="sourceCode js"
-      ><code class="language-js  class="sourceCode javascript"><a class="sourceLine" id="cb14-1" title="1"><span class="co">// components/VisibilityFilters.js</span></a>
-<a class="sourceLine" id="cb14-2" title="2"></a>
-<a class="sourceLine" id="cb14-3" title="3"><span class="co">// ... other imports</span></a>
-<a class="sourceLine" id="cb14-4" title="4"><span class="im">import</span> <span class="op">{</span> connect <span class="op">}</span> <span class="im">from</span> <span class="st">&quot;react-redux&quot;</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb14-5" title="5"><span class="im">import</span> <span class="op">{</span> setFilter <span class="op">}</span> <span class="im">from</span> <span class="st">&quot;../redux/actions&quot;</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb14-6" title="6"></a>
-<a class="sourceLine" id="cb14-7" title="7"><span class="kw">const</span> VisibilityFilters <span class="op">=</span> <span class="co">// ... component implementation</span></a>
-<a class="sourceLine" id="cb14-8" title="8"></a>
-<a class="sourceLine" id="cb14-9" title="9"><span class="kw">const</span> mapStateToProps <span class="op">=</span> state <span class="kw">=&gt;</span> <span class="op">{</span></a>
-<a class="sourceLine" id="cb14-10" title="10">  <span class="cf">return</span> <span class="op">{</span> <span class="dt">activeFilter</span><span class="op">:</span> <span class="va">state</span>.<span class="at">visibilityFilter</span> <span class="op">};</span></a>
-<a class="sourceLine" id="cb14-11" title="11"><span class="op">};</span></a>
-<a class="sourceLine" id="cb14-12" title="12"><span class="im">export</span> <span class="im">default</span> <span class="at">connect</span>(</a>
-<a class="sourceLine" id="cb14-13" title="13">  mapStateToProps<span class="op">,</span></a>
-<a class="sourceLine" id="cb14-14" title="14">  <span class="op">{</span> setFilter <span class="op">}</span></a>
-<a class="sourceLine" id="cb14-15" title="15">)(VisibilityFilters)<span class="op">;</span></a></code></pre>
+      >
+<code class="language-js  class="sourceCode javascript">
+<a class="sourceLine" id="cb14-1" title="1">
+<span class="co">// components/VisibilityFilters.js</span>
+</a>
+<a class="sourceLine" id="cb14-2" title="2">
+</a>
+<a class="sourceLine" id="cb14-3" title="3">
+<span class="co">// ... other imports</span>
+</a>
+<a class="sourceLine" id="cb14-4" title="4">
+<span class="im">import</span> <span class="op">{</span> connect <span class="op">}</span> <span class="im">from</span> <span class="st">&quot;react-redux&quot;</span>
+<span class="op">;</span>
+</a>
+<a class="sourceLine" id="cb14-5" title="5">
+<span class="im">import</span> <span class="op">{</span> setFilter <span class="op">}</span> <span class="im">from</span> <span class="st">&quot;../redux/actions&quot;</span>
+<span class="op">;</span>
+</a>
+<a class="sourceLine" id="cb14-6" title="6">
+</a>
+<a class="sourceLine" id="cb14-7" title="7">
+<span class="kw">const</span> VisibilityFilters <span class="op">=</span> <span class="co">// ... component implementation</span>
+</a>
+<a class="sourceLine" id="cb14-8" title="8">
+</a>
+<a class="sourceLine" id="cb14-9" title="9">
+<span class="kw">const</span> mapStateToProps <span class="op">=</span> state <span class="kw">=&gt;</span> <span class="op">{</span>
+</a>
+<a class="sourceLine" id="cb14-10" title="10">  <span class="cf">return</span> <span class="op">{</span> <span class="dt">activeFilter</span>
+<span class="op">:</span> <span class="va">state</span>.<span class="at">visibilityFilter</span> <span class="op">};</span>
+</a>
+<a class="sourceLine" id="cb14-11" title="11">
+<span class="op">};</span>
+</a>
+<a class="sourceLine" id="cb14-12" title="12">
+<span class="im">export</span> <span class="im">default</span> <span class="at">connect</span>(</a>
+<a class="sourceLine" id="cb14-13" title="13">  mapStateToProps<span class="op">,</span>
+</a>
+<a class="sourceLine" id="cb14-14" title="14">  <span class="op">{</span> setFilter <span class="op">}</span>
+</a>
+<a class="sourceLine" id="cb14-15" title="15">)(VisibilityFilters)<span class="op">;</span>
+</a>
+</code>
+</pre>
     </div>
     <p>
       Meanwhile, we also need to update our
@@ -910,43 +1183,86 @@ export default connect(null, { addTodo })(AddTodo)</code></pre>
     <div class="sourceCode" id="cb15">
       <pre class="language-js 
         class="sourceCode js"
-      ><code class="language-js  class="sourceCode javascript"><a class="sourceLine" id="cb15-1" title="1"><span class="co">// redux/selectors.js</span></a>
-<a class="sourceLine" id="cb15-2" title="2"></a>
-<a class="sourceLine" id="cb15-3" title="3"><span class="co">// ... other selectors</span></a>
-<a class="sourceLine" id="cb15-4" title="4"><span class="im">export</span> <span class="kw">const</span> getTodosByVisibilityFilter <span class="op">=</span> (store<span class="op">,</span> visibilityFilter) <span class="kw">=&gt;</span> <span class="op">{</span></a>
+      >
+<code class="language-js  class="sourceCode javascript">
+<a class="sourceLine" id="cb15-1" title="1">
+<span class="co">// redux/selectors.js</span>
+</a>
+<a class="sourceLine" id="cb15-2" title="2">
+</a>
+<a class="sourceLine" id="cb15-3" title="3">
+<span class="co">// ... other selectors</span>
+</a>
+<a class="sourceLine" id="cb15-4" title="4">
+<span class="im">export</span> <span class="kw">const</span> getTodosByVisibilityFilter <span class="op">=</span> (store<span class="op">,</span> visibilityFilter) <span class="kw">=&gt;</span> <span class="op">{</span>
+</a>
 <a class="sourceLine" id="cb15-5" title="5">  <span class="kw">const</span> allTodos <span class="op">=</span> <span class="at">getTodos</span>(store)</a>
-<a class="sourceLine" id="cb15-6" title="6">  <span class="cf">switch</span> (visibilityFilter) <span class="op">{</span></a>
-<a class="sourceLine" id="cb15-7" title="7">    <span class="cf">case</span> <span class="va">VISIBILITY_FILTERS</span>.<span class="at">COMPLETED</span><span class="op">:</span></a>
+<a class="sourceLine" id="cb15-6" title="6">  <span class="cf">switch</span> (visibilityFilter) <span class="op">{</span>
+</a>
+<a class="sourceLine" id="cb15-7" title="7">    <span class="cf">case</span> <span class="va">VISIBILITY_FILTERS</span>.<span class="at">COMPLETED</span>
+<span class="op">:</span>
+</a>
 <a class="sourceLine" id="cb15-8" title="8">      <span class="cf">return</span> <span class="va">allTodos</span>.<span class="at">filter</span>((todo) <span class="kw">=&gt;</span> <span class="va">todo</span>.<span class="at">completed</span>)</a>
-<a class="sourceLine" id="cb15-9" title="9">    <span class="cf">case</span> <span class="va">VISIBILITY_FILTERS</span>.<span class="at">INCOMPLETE</span><span class="op">:</span></a>
-<a class="sourceLine" id="cb15-10" title="10">      <span class="cf">return</span> <span class="va">allTodos</span>.<span class="at">filter</span>((todo) <span class="kw">=&gt;</span> <span class="op">!</span><span class="va">todo</span>.<span class="at">completed</span>)</a>
-<a class="sourceLine" id="cb15-11" title="11">    <span class="cf">case</span> <span class="va">VISIBILITY_FILTERS</span>.<span class="at">ALL</span><span class="op">:</span></a>
-<a class="sourceLine" id="cb15-12" title="12">    <span class="cf">default</span><span class="op">:</span></a>
+<a class="sourceLine" id="cb15-9" title="9">    <span class="cf">case</span> <span class="va">VISIBILITY_FILTERS</span>.<span class="at">INCOMPLETE</span>
+<span class="op">:</span>
+</a>
+<a class="sourceLine" id="cb15-10" title="10">      <span class="cf">return</span> <span class="va">allTodos</span>.<span class="at">filter</span>((todo) <span class="kw">=&gt;</span> <span class="op">!</span>
+<span class="va">todo</span>.<span class="at">completed</span>)</a>
+<a class="sourceLine" id="cb15-11" title="11">    <span class="cf">case</span> <span class="va">VISIBILITY_FILTERS</span>.<span class="at">ALL</span>
+<span class="op">:</span>
+</a>
+<a class="sourceLine" id="cb15-12" title="12">    <span class="cf">default</span>
+<span class="op">:</span>
+</a>
 <a class="sourceLine" id="cb15-13" title="13">      <span class="cf">return</span> allTodos</a>
-<a class="sourceLine" id="cb15-14" title="14">  <span class="op">}</span></a>
-<a class="sourceLine" id="cb15-15" title="15"><span class="op">}</span></a></code></pre>
+<a class="sourceLine" id="cb15-14" title="14">  <span class="op">}</span>
+</a>
+<a class="sourceLine" id="cb15-15" title="15">
+<span class="op">}</span>
+</a>
+</code>
+</pre>
     </div>
     <p>And connecting to the store with the help of the selector:</p>
     <div class="sourceCode" id="cb16">
       <pre class="language-js 
         class="sourceCode js"
-      ><code class="language-js  class="sourceCode javascript"><a class="sourceLine" id="cb16-1" title="1"><span class="co">// components/TodoList.js</span></a>
-<a class="sourceLine" id="cb16-2" title="2"></a>
-<a class="sourceLine" id="cb16-3" title="3"><span class="co">// ...</span></a>
-<a class="sourceLine" id="cb16-4" title="4"></a>
-<a class="sourceLine" id="cb16-5" title="5"><span class="kw">const</span> mapStateToProps <span class="op">=</span> (state) <span class="kw">=&gt;</span> <span class="op">{</span></a>
+      >
+<code class="language-js  class="sourceCode javascript">
+<a class="sourceLine" id="cb16-1" title="1">
+<span class="co">// components/TodoList.js</span>
+</a>
+<a class="sourceLine" id="cb16-2" title="2">
+</a>
+<a class="sourceLine" id="cb16-3" title="3">
+<span class="co">// ...</span>
+</a>
+<a class="sourceLine" id="cb16-4" title="4">
+</a>
+<a class="sourceLine" id="cb16-5" title="5">
+<span class="kw">const</span> mapStateToProps <span class="op">=</span> (state) <span class="kw">=&gt;</span> <span class="op">{</span>
+</a>
 <a class="sourceLine" id="cb16-6" title="6">  <span class="kw">const</span> <span class="op">{</span> visibilityFilter <span class="op">}</span> <span class="op">=</span> state</a>
 <a class="sourceLine" id="cb16-7" title="7">  <span class="kw">const</span> todos <span class="op">=</span> <span class="at">getTodosByVisibilityFilter</span>(state<span class="op">,</span> visibilityFilter)</a>
-<a class="sourceLine" id="cb16-8" title="8">  <span class="cf">return</span> <span class="op">{</span> todos <span class="op">}</span></a>
-<a class="sourceLine" id="cb16-9" title="9"><span class="op">}</span></a>
-<a class="sourceLine" id="cb16-10" title="10"></a>
-<a class="sourceLine" id="cb16-11" title="11"><span class="im">export</span> <span class="im">default</span> <span class="at">connect</span>(mapStateToProps)(TodoList)</a></code></pre>
+<a class="sourceLine" id="cb16-8" title="8">  <span class="cf">return</span> <span class="op">{</span> todos <span class="op">}</span>
+</a>
+<a class="sourceLine" id="cb16-9" title="9">
+<span class="op">}</span>
+</a>
+<a class="sourceLine" id="cb16-10" title="10">
+</a>
+<a class="sourceLine" id="cb16-11" title="11">
+<span class="im">export</span> <span class="im">default</span> <span class="at">connect</span>(mapStateToProps)(TodoList)</a>
+</code>
+</pre>
     </div>
     <p>
       Now we’ve finished a very simple example of a todo app with React Redux.
       All our components are connected! Isn’t that nice? 🎉🎊
     </p>
-    <p><img src="https://i.imgur.com/ONqer2R.png" /></p>
+    <p>
+<img src="https://i.imgur.com/ONqer2R.png" />
+</p>
     <h2 id="links">Links</h2>
     <ul>
       <li>
@@ -982,7 +1298,8 @@ export default connect(null, { addTodo })(AddTodo)</code></pre>
     </ul>
     <h2 id="get-more-help">Get More Help</h2>
     <ul>
-      <li><a href="https://www.reactiflux.com">Reactiflux</a> Redux channel</li>
+      <li>
+<a href="https://www.reactiflux.com">Reactiflux</a> Redux channel</li>
       <li>
         <a href="https://stackoverflow.com/questions/tagged/react-redux"
           >StackOverflow</a
