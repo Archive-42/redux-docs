@@ -2,185 +2,181 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
   <meta charset="utf-8" />
-
+  <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>glossary</title>
   <style type="text/css">
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
       span.underline{text-decoration: underline;}
-
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
-
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
-    </head>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+</head>
 <body>
-<li><a href="../official/tutorials/fundamentals/part-1-overview.html" class="menu__link">Redux Overview</a></li>
-<li><a href="../official/tutorials/fundamentals/part-2-concepts-data-flow.html" class="menu__link">Redux Concepts and Data Flow</a></li>
-<li><a href="../official/tutorials/fundamentals/part-3-state-actions-reducers.html" class="menu__link">State, Actions, and Reducers</a></li>
-<li><a href="../official/tutorials/fundamentals/part-4-store.html" class="menu__link">Store</a></li>
-<li><a href="../official/tutorials/fundamentals/part-5-ui-react.html" class="menu__link">UI and React</a></li>
-<li><a href="../official/tutorials/fundamentals/part-6-async-logic.html" class="menu__link">Async Logic and Data Fetching</a></li>
-<li><a href="../official/tutorials/fundamentals/part-7-standard-patterns.html" class="menu__link">Standard Redux Patterns</a></li>
-<li><a href="../official/tutorials/fundamentals/part-8-modern-redux.html" class="menu__link">Modern Redux with Redux Toolkit</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#!" class="menu__link menu__link--sublist">Recipes</a>
-<ul>
-<li><a href="../official/recipes/recipe-index.html" class="menu__link">Recipes: Index</a></li>
-<li><a href="../official/recipes/configuring-your-store.html" class="menu__link">Configuring Your Store</a></li>
-<li><a href="../official/recipes/usage-with-typescript.html" class="menu__link">Usage With TypeScript</a></li>
-<li><a href="../official/recipes/migrating-to-redux.html" class="menu__link">Migrating to Redux</a></li>
-<li><a href="../official/recipes/using-object-spread-operator.html" class="menu__link">Using Object Spread Operator</a></li>
-<li><a href="../official/recipes/reducing-boilerplate.html" class="menu__link">Reducing Boilerplate</a></li>
-<li><a href="../official/recipes/server-rendering.html" class="menu__link">Server Rendering</a></li>
-<li><a href="../official/recipes/writing-tests.html" class="menu__link">Writing Tests</a></li>
-<li><a href="../official/recipes/computing-derived-data.html" class="menu__link">Computing Derived Data</a></li>
-<li><a href="../official/recipes/implementing-undo-history.html" class="menu__link">Implementing Undo History</a></li>
-<li><a href="../official/recipes/isolating-redux-sub-apps.html" class="menu__link">Isolating Redux Sub-Apps</a></li>
-<li><a href="../official/recipes/code-splitting.html" class="menu__link">Code Splitting</a></li>
-<li><a href="../official/recipes/troubleshooting.html" class="menu__link">Troubleshooting</a></li>
-<li><a href="#!" class="menu__link menu__link--sublist">Structuring Reducers</a>
-<ul>
-<li><a href="../official/recipes/structuring-reducers/structuring-reducers.html" class="menu__link">Structuring Reducers</a></li>
-<li><a href="../official/recipes/structuring-reducers/prerequisite-concepts.html" class="menu__link">Prerequisite Concepts</a></li>
-<li><a href="../official/recipes/structuring-reducers/basic-reducer-structure.html" class="menu__link">Basic Reducer Structure</a></li>
-<li><a href="../official/recipes/structuring-reducers/splitting-reducer-logic.html" class="menu__link">Splitting Reducer Logic</a></li>
-<li><a href="../official/recipes/structuring-reducers/refactoring-reducer-example.html" class="menu__link">Refactoring Reducers Example</a></li>
-<li><a href="../official/recipes/structuring-reducers/using-combinereducers.html" class="menu__link">Using combineReducers</a></li>
-<li><a href="../official/recipes/structuring-reducers/beyond-combinereducers.html" class="menu__link">Beyond combineReducers</a></li>
-<li><a href="../official/recipes/structuring-reducers/normalizing-state-shape.html" class="menu__link">Normalizing State Shape</a></li>
-<li><a href="../official/recipes/structuring-reducers/updating-normalized-data.html" class="menu__link">Updating Normalized Data</a></li>
-<li><a href="../official/recipes/structuring-reducers/reusing-reducer-logic.html" class="menu__link">Reusing Reducer Logic</a></li>
-<li><a href="../official/recipes/structuring-reducers/immutable-update-patterns.html" class="menu__link">Immutable Update Patterns</a></li>
-<li><a href="../official/recipes/structuring-reducers/initializing-state.html" class="menu__link">Initializing State</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#!" class="menu__link menu__link--sublist menu__link--active">Understanding Redux</a>
-<ul>
-<li><a href="#!" class="menu__link menu__link--sublist menu__link--active">Thinking in Redux</a>
-<ul>
-<li><a href="motivation.html" class="menu__link">Motivation</a></li>
-<li><a href="three-principles.html" class="menu__link">Three Principles</a></li>
-<li><a href="glossary.html" class="menu__link menu__link--active active">Glossary</a></li>
-</ul></li>
-
-<ul>
-<li><a href="../history-and-design/prior-art.html" class="menu__link">Prior Art</a></li>
-<li><a href="../history-and-design/middleware.html" class="menu__link">Middleware</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#!" class="menu__link menu__link--sublist">FAQ</a>
-<ul>
-<ul>
-<li><a href="../official/redux-toolkit/overview.html" class="menu__link">Redux Toolkit: Overview</a></li>
-</ul></li>
-</ul>
-<h1 id="glossary"><span id="glossary" class="anchor enhancedAnchor_2LWZ"></span>Glossary<a href="#glossary" class="hash-link" title="Direct link to heading">#</a></h1>
-<p>This is a glossary of the core terms in Redux, along with their type signatures. The types are documented using <a href="../../../flow.org/en/docs/types/index.html">Flow notation</a>.</p>
-<h2 id="state"><span id="state" class="anchor enhancedAnchor_2LWZ"></span>State<a href="#state" class="hash-link" title="Direct link to heading">#</a></h2>
-<p><span class="token plain">type </span><span class="token maybe-class-name">State</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> any</span></p>
-<p>Copy</p>
-<p><em>State</em> (also called the <em>state tree</em>) is a broad term, but in the Redux API it usually refers to the single state value that is managed by the store and returned by <a href="../../api/store.html#getState"><code class="language-js" >getState()</code></a>. It represents the entire state of a Redux application, which is often a deeply nested object.</p>
+<h1 id="glossary">Glossary</h1>
+<p>This is a glossary of the core terms in Redux, along with their type signatures. The types are documented using</p>
+<p># <a href="https://flowtype.org/docs/quick-reference.html">Flow notation</a></p>
+<p>Adding type annotations is an important part of your interaction with Flow.</p>
+<p>Flow has a powerful ability to infer the types of your programs. The majority of your code can rely on it. Still, there are places where you’ll want to add types.</p>
+<p>Imagine the following <code>concat</code> function for concatenating two strings together.</p>
+<div class="line-block"></div>
+<p>1 2 3</p>
+<div class="line-block"></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">function</span> <span class="at">concat</span>(a<span class="op">,</span> b) <span class="op">{</span></a>
+<a class="sourceLine" id="cb1-2" title="2">  <span class="cf">return</span> a <span class="op">+</span> b<span class="op">;</span></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="op">}</span></a></code></pre></div>
+<div class="line-block"></div>
+<p>When you use this function, Flow knows exactly what is going on.</p>
+<div class="line-block"></div>
+<p>1</p>
+<div class="line-block"></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><a class="sourceLine" id="cb2-1" title="1"><span class="at">concat</span>(<span class="st">&quot;A&quot;</span><span class="op">,</span> <span class="st">&quot;B&quot;</span>)<span class="op">;</span> <span class="co">// Works!</span></a></code></pre></div>
+<div class="line-block"></div>
+<p>However, you can use the <code>+</code> operator on strings or numbers, so this would also be valid.</p>
+<div class="line-block"></div>
+<p>1</p>
+<div class="line-block"></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode js"><code class="sourceCode javascript"><a class="sourceLine" id="cb3-1" title="1"><span class="at">concat</span>(<span class="dv">1</span><span class="op">,</span> <span class="dv">2</span>)<span class="op">;</span> <span class="co">// Works!</span></a></code></pre></div>
+<div class="line-block"></div>
+<p>But suppose you only want to allow strings in your function. For that you can add types.</p>
+<div class="line-block"></div>
+<p>1 2 3</p>
+<div class="line-block"></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode js"><code class="sourceCode javascript"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">function</span> <span class="at">concat</span>(a<span class="op">:</span> string<span class="op">,</span> b<span class="op">:</span> string) <span class="op">{</span></a>
+<a class="sourceLine" id="cb4-2" title="2">  <span class="cf">return</span> a <span class="op">+</span> b<span class="op">;</span></a>
+<a class="sourceLine" id="cb4-3" title="3"><span class="op">}</span></a></code></pre></div>
+<div class="line-block"></div>
+<p>Now you’ll get a warning from Flow if you try to use numbers.</p>
+<div class="line-block"></div>
+<p>1 2 3 4 5 6 7</p>
+<div class="line-block"></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode js"><code class="sourceCode javascript"><a class="sourceLine" id="cb5-1" title="1"><span class="co">// @flow</span></a>
+<a class="sourceLine" id="cb5-2" title="2"><span class="kw">function</span> <span class="at">concat</span>(a<span class="op">:</span> string<span class="op">,</span> b<span class="op">:</span> string) <span class="op">{</span></a>
+<a class="sourceLine" id="cb5-3" title="3">  <span class="cf">return</span> a <span class="op">+</span> b<span class="op">;</span></a>
+<a class="sourceLine" id="cb5-4" title="4"><span class="op">}</span></a>
+<a class="sourceLine" id="cb5-5" title="5"></a>
+<a class="sourceLine" id="cb5-6" title="6"><span class="at">concat</span>(<span class="st">&quot;A&quot;</span><span class="op">,</span> <span class="st">&quot;B&quot;</span>)<span class="op">;</span> <span class="co">// Works!</span></a>
+<a class="sourceLine" id="cb5-7" title="7"><span class="at">concat</span>(<span class="dv">1</span><span class="op">,</span> <span class="dv">2</span>)<span class="op">;</span> <span class="co">// Error!</span></a></code></pre></div>
+<div class="line-block"></div>
+<p>Setting up “boundaries” with your types means you can tell Flow your intent on top of the inference it already does.</p>
+<p>This guide will teach you the syntax and semantics of all the different types you can have in Flow.</p>
+<hr />
+<hr />
+<h2 id="statelink-to-docs">State<a href="https://redux.js.org/understanding/thinking-in-redux/glossary#state"><strong>(Link To Docs)</strong></a></h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode js"><code class="sourceCode javascript"><a class="sourceLine" id="cb6-1" title="1">type State <span class="op">=</span> any<span class="op">;</span></a></code></pre></div>
+<p><em>State</em> (also called the <em>state tree</em>) is a broad term, but in the Redux API it usually refers to the single state value that is managed by the store and returned by <a href="https://redux.js.org/api/store#getState"><code>getState()</code></a>. It represents the entire state of a Redux application, which is often a deeply nested object.</p>
 <p>By convention, the top-level state is an object or some other key-value collection like a Map, but technically it can be any type. Still, you should do your best to keep the state serializable. Don’t put anything inside it that you can’t easily turn into JSON.</p>
-<h2 id="action"><span id="action" class="anchor enhancedAnchor_2LWZ"></span>Action<a href="#action" class="hash-link" title="Direct link to heading">#</a></h2>
-<p><span class="token plain">type </span><span class="token maybe-class-name">Action</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token known-class-name class-name">Object</span></p>
-<p>Copy</p>
-<p>An <em>action</em> is a plain object that represents an intention to change the state. Actions are the only way to get data into the store. Any data, whether from UI events, network callbacks, or other sources such as WebSockets needs to eventually be dispatched as actions.</p>
-<p>Actions must have a <code class="language-js" >type</code> field that indicates the type of action being performed. Types can be defined as constants and imported from another module. It’s better to use strings for <code class="language-js" >type</code> than <a href="../../../developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol.html">Symbols</a> because strings are serializable.</p>
-<p>Other than <code class="language-js" >type</code>, the structure of an action object is really up to you. If you’re interested, check out <a href="../../../github.com/redux-utilities/flux-standard-action.html">Flux Standard Action</a> for recommendations on how actions should be constructed.</p>
-<p>See also <a href="#async-action">async action</a> below.</p>
-<h2 id="reducer"><span id="reducer" class="anchor enhancedAnchor_2LWZ"></span>Reducer<a href="#reducer" class="hash-link" title="Direct link to heading">#</a></h2>
-<p><span class="token plain">type </span><span class="token maybe-class-name">Reducer</span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token constant" style="color: #f92672">S</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token constant" style="color: #f92672">A</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state</span><span class="token parameter operator" style="color: #f8f8f2">:</span><span class="token parameter"> S</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> action</span><span class="token parameter operator" style="color: #f8f8f2">:</span><span class="token parameter"> A</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token constant" style="color: #f92672">S</span></p>
-<p>Copy</p>
-<p>A <em>reducer</em> (also called a <em>reducing function</em>) is a function that accepts an accumulation and a value and returns a new accumulation. They are used to reduce a collection of values down to a single value.</p>
-<p>Reducers are not unique to Redux—they are a fundamental concept in functional programming. Even most non-functional languages, like JavaScript, have a built-in API for reducing. In JavaScript, it’s <a href="../../../developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce-2.html"><code class="language-js" >Array.prototype.reduce()</code></a>.</p>
-<p>In Redux, the accumulated value is the state object, and the values being accumulated are actions. Reducers calculate a new state given the previous state and an action. They must be <em>pure functions</em>—functions that return the exact same output for given inputs. They should also be free of side-effects. This is what enables exciting features like hot reloading and time travel.</p>
+<h2 id="actionlink-to-docs">Action<a href="https://redux.js.org/understanding/thinking-in-redux/glossary#action"><strong>(Link To Docs)</strong></a></h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode js"><code class="sourceCode javascript"><a class="sourceLine" id="cb7-1" title="1">type Action <span class="op">=</span> Object<span class="op">;</span></a></code></pre></div>
+<p>An <em>action</em> is a plain object that represents an intention to change the state. Actions are the only way to get data into the store. Any data, whether from UI events, network callbacks, or other sources such as WebSockets needs to eventually be dispatched as actions.</p>
+<p>Actions must have a <code>type</code> field that indicates the type of action being performed. Types can be defined as constants and imported from another module. It’s better to use strings for <code>type</code> than <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbols</a> because strings are serializable.</p>
+<p>Other than <code>type</code>, the structure of an action object is really up to you. If you’re interested, check out <a href="https://github.com/acdlite/flux-standard-action">Flux Standard Action</a> for recommendations on how actions should be constructed.</p>
+<p>See also <a href="https://redux.js.org/understanding/thinking-in-redux/glossary#async-action">async action</a> below.</p>
+<h2 id="reducerlink-to-docs">Reducer<a href="https://redux.js.org/understanding/thinking-in-redux/glossary#reducer"><strong>(Link To Docs)</strong></a></h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode js"><code class="sourceCode javascript"><a class="sourceLine" id="cb8-1" title="1">type Reducer<span class="op">&lt;</span>S<span class="op">,</span> A<span class="op">&gt;</span> <span class="op">=</span> (state<span class="op">:</span> S<span class="op">,</span> action<span class="op">:</span> A) <span class="kw">=&gt;</span> S<span class="op">;</span></a></code></pre></div>
+<p>A <em>reducer</em> (also called a <em>reducing function</em>) is a function that accepts an accumulation and a value and returns a new accumulation. They are used to reduce a collection of values down to a single value.</p>
+<p>Reducers are not unique to Redux—they are a fundamental concept in functional programming. Even most non-functional languages, like JavaScript, have a built-in API for reducing. In JavaScript, it’s <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce"><code>Array.prototype.reduce()</code></a>.</p>
+<p>In Redux, the accumulated value is the state object, and the values being accumulated are actions. Reducers calculate a new state given the previous state and an action. They must be <em>pure functions</em>—functions that return the exact same output for given inputs. They should also be free of side-effects. This is what enables exciting features like hot reloading and time travel.</p>
 <p>Reducers are the most important concept in Redux.</p>
 <p><em>Do not put API calls into reducers.</em></p>
-<h2 id="dispatching-function"><span id="dispatching-function" class="anchor enhancedAnchor_2LWZ"></span>Dispatching Function<a href="#dispatching-function" class="hash-link" title="Direct link to heading">#</a></h2>
-<p><span class="token plain">type </span><span class="token function-variable function maybe-class-name" style="color: #e6d874">BaseDispatch</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">a</span><span class="token parameter operator" style="color: #f8f8f2">:</span><span class="token parameter"> Action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token maybe-class-name">Action</span><span class="token plain"></span></p>
-<p><span class="token plain">type </span><span class="token function-variable function maybe-class-name" style="color: #e6d874">Dispatch</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">a</span><span class="token parameter operator" style="color: #f8f8f2">:</span><span class="token parameter"> Action </span><span class="token parameter operator" style="color: #f8f8f2">|</span><span class="token parameter"> AsyncAction</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> any</span></p>
-<p>Copy</p>
-<p>A <em>dispatching function</em> (or simply <em>dispatch function</em>) is a function that accepts an action or an <a href="#async-action">async action</a>; it then may or may not dispatch one or more actions to the store.</p>
-<p>We must distinguish between dispatching functions in general and the base <a href="../../api/store.html#dispatchaction"><code class="language-js" >dispatch</code></a> function provided by the store instance without any middleware.</p>
-<p>The base dispatch function <em>always</em> synchronously sends an action to the store’s reducer, along with the previous state returned by the store, to calculate a new state. It expects actions to be plain objects ready to be consumed by the reducer.</p>
-<p><a href="#middleware">Middleware</a> wraps the base dispatch function. It allows the dispatch function to handle <a href="#async-action">async actions</a> in addition to actions. Middleware may transform, delay, ignore, or otherwise interpret actions or async actions before passing them to the next middleware. See below for more information.</p>
-<h2 id="action-creator"><span id="action-creator" class="anchor enhancedAnchor_2LWZ"></span>Action Creator<a href="#action-creator" class="hash-link" title="Direct link to heading">#</a></h2>
-<p><span class="token plain">type </span><span class="token maybe-class-name">ActionCreator</span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token constant" style="color: #f92672">A</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token constant" style="color: #f92672">P</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">extends</span><span class="token plain"> </span><span class="token class-name">any</span><span class="token punctuation" style="color: #f8f8f2">[</span><span class="token punctuation" style="color: #f8f8f2">]</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> any</span><span class="token punctuation" style="color: #f8f8f2">[</span><span class="token punctuation" style="color: #f8f8f2">]</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter operator" style="color: #f8f8f2">…</span><span class="token parameter">args</span><span class="token parameter operator" style="color: #f8f8f2">:</span><span class="token parameter"> P</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token maybe-class-name">Action</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">|</span><span class="token plain"> </span><span class="token maybe-class-name">AsyncAction</span></p>
-<p>Copy</p>
-<p>An <em>action creator</em> is, quite simply, a function that creates an action. Do not confuse the two terms—again, an action is a payload of information, and an action creator is a factory that creates an action.</p>
-<p>Calling an action creator only produces an action, but does not dispatch it. You need to call the store’s <a href="../../api/store.html#dispatchaction"><code class="language-js" >dispatch</code></a> function to actually cause the mutation. Sometimes we say <em>bound action creators</em> to mean functions that call an action creator and immediately dispatch its result to a specific store instance.</p>
-<p>If an action creator needs to read the current state, perform an API call, or cause a side effect, like a routing transition, it should return an <a href="#async-action">async action</a> instead of an action.</p>
-<h2 id="async-action"><span id="async-action" class="anchor enhancedAnchor_2LWZ"></span>Async Action<a href="#async-action" class="hash-link" title="Direct link to heading">#</a></h2>
-<p><span class="token plain">type </span><span class="token maybe-class-name">AsyncAction</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> any</span></p>
-<p>Copy</p>
-<p>An <em>async action</em> is a value that is sent to a dispatching function, but is not yet ready for consumption by the reducer. It will be transformed by <a href="#middleware">middleware</a> into an action (or a series of actions) before being sent to the base <a href="../../api/store.html#dispatchaction"><code class="language-js" >dispatch()</code></a> function. Async actions may have different types, depending on the middleware you use. They are often asynchronous primitives, like a Promise or a thunk, which are not passed to the reducer immediately, but trigger action dispatches once an operation has completed.</p>
-<h2 id="middleware"><span id="middleware" class="anchor enhancedAnchor_2LWZ"></span>Middleware<a href="#middleware" class="hash-link" title="Direct link to heading">#</a></h2>
-<p><span class="token plain">type </span><span class="token maybe-class-name">MiddlewareAPI</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> dispatch</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token maybe-class-name">Dispatch</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">getState</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token maybe-class-name">State</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span></p>
-<p><span class="token plain">type </span><span class="token function-variable function maybe-class-name" style="color: #e6d874">Middleware</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">api</span><span class="token parameter operator" style="color: #f8f8f2">:</span><span class="token parameter"> MiddlewareAPI</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">next</span><span class="token parameter operator" style="color: #f8f8f2">:</span><span class="token parameter"> Dispatch</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token maybe-class-name">Dispatch</span></p>
-<p>Copy</p>
-<p>A middleware is a higher-order function that composes a <a href="#dispatching-function">dispatch function</a> to return a new dispatch function. It often turns <a href="#async-action">async actions</a> into actions.</p>
+<h2 id="dispatching-functionlink-to-docs">Dispatching Function<a href="https://redux.js.org/understanding/thinking-in-redux/glossary#dispatching-function"><strong>(Link To Docs)</strong></a></h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode js"><code class="sourceCode javascript"><a class="sourceLine" id="cb9-1" title="1">type BaseDispatch <span class="op">=</span> (a<span class="op">:</span> Action) <span class="kw">=&gt;</span> Actiontype Dispatch <span class="op">=</span> (a<span class="op">:</span> Action <span class="op">|</span> AsyncAction) <span class="kw">=&gt;</span> any</a></code></pre></div>
+<p>A <em>dispatching function</em> (or simply <em>dispatch function</em>) is a function that accepts an action or an <a href="https://redux.js.org/understanding/thinking-in-redux/glossary#async-action">async action</a>; it then may or may not dispatch one or more actions to the store.</p>
+<p>We must distinguish between dispatching functions in general and the base <a href="https://redux.js.org/api/store#dispatchaction"><code>dispatch</code></a> function provided by the store instance without any middleware.</p>
+<p>The base dispatch function <em>always</em> synchronously sends an action to the store’s reducer, along with the previous state returned by the store, to calculate a new state. It expects actions to be plain objects ready to be consumed by the reducer.</p>
+<p><a href="https://redux.js.org/understanding/thinking-in-redux/glossary#middleware">Middleware</a> wraps the base dispatch function. It allows the dispatch function to handle <a href="https://redux.js.org/understanding/thinking-in-redux/glossary#async-action">async actions</a> in addition to actions. Middleware may transform, delay, ignore, or otherwise interpret actions or async actions before passing them to the next middleware. See below for more information.</p>
+<h2 id="action-creatorlink-to-docs">Action Creator<a href="https://redux.js.org/understanding/thinking-in-redux/glossary#action-creator"><strong>(Link To Docs)</strong></a></h2>
+<div class="sourceCode" id="cb10"><pre class="sourceCode js"><code class="sourceCode javascript"><a class="sourceLine" id="cb10-1" title="1">type ActionCreator<span class="op">&lt;</span>A<span class="op">,</span> P <span class="kw">extends</span> any[] <span class="op">=</span> any[]<span class="op">&gt;</span> <span class="op">=</span> (...<span class="at">args</span><span class="op">:</span> P) <span class="kw">=&gt;</span> Action <span class="op">|</span> AsyncAction</a></code></pre></div>
+<p>An <em>action creator</em> is, quite simply, a function that creates an action. Do not confuse the two terms—again, an action is a payload of information, and an action creator is a factory that creates an action.</p>
+<p>Calling an action creator only produces an action, but does not dispatch it. You need to call the store’s <a href="https://redux.js.org/api/store#dispatchaction"><code>dispatch</code></a> function to actually cause the mutation. Sometimes we say <em>bound action creators</em> to mean functions that call an action creator and immediately dispatch its result to a specific store instance.</p>
+<p>If an action creator needs to read the current state, perform an API call, or cause a side effect, like a routing transition, it should return an <a href="https://redux.js.org/understanding/thinking-in-redux/glossary#async-action">async action</a> instead of an action.</p>
+<h2 id="async-actionlink-to-docs">Async Action<a href="https://redux.js.org/understanding/thinking-in-redux/glossary#async-action"><strong>(Link To Docs)</strong></a></h2>
+<div class="sourceCode" id="cb11"><pre class="sourceCode js"><code class="sourceCode javascript"><a class="sourceLine" id="cb11-1" title="1">type AsyncAction <span class="op">=</span> any<span class="op">;</span></a></code></pre></div>
+<p>An <em>async action</em> is a value that is sent to a dispatching function, but is not yet ready for consumption by the reducer. It will be transformed by <a href="https://redux.js.org/understanding/thinking-in-redux/glossary#middleware">middleware</a> into an action (or a series of actions) before being sent to the base <a href="https://redux.js.org/api/store#dispatchaction"><code>dispatch()</code></a> function. Async actions may have different types, depending on the middleware you use. They are often asynchronous primitives, like a Promise or a thunk, which are not passed to the reducer immediately, but trigger action dispatches once an operation has completed.</p>
+<h2 id="middlewarelink-to-docs">Middleware<a href="https://redux.js.org/understanding/thinking-in-redux/glossary#middleware"><strong>(Link To Docs)</strong></a></h2>
+<div class="sourceCode" id="cb12"><pre class="sourceCode js"><code class="sourceCode javascript"><a class="sourceLine" id="cb12-1" title="1">type MiddlewareAPI <span class="op">=</span> <span class="op">{</span> <span class="dt">dispatch</span><span class="op">:</span> Dispatch<span class="op">,</span> <span class="dt">getState</span><span class="op">:</span> () <span class="kw">=&gt;</span> State <span class="op">}</span>type Middleware <span class="op">=</span> (api<span class="op">:</span> MiddlewareAPI) <span class="kw">=&gt;</span> (next<span class="op">:</span> Dispatch) <span class="kw">=&gt;</span> Dispatch</a></code></pre></div>
+<p>A middleware is a higher-order function that composes a <a href="https://redux.js.org/understanding/thinking-in-redux/glossary#dispatching-function">dispatch function</a> to return a new dispatch function. It often turns <a href="https://redux.js.org/understanding/thinking-in-redux/glossary#async-action">async actions</a> into actions.</p>
 <p>Middleware is composable using function composition. It is useful for logging actions, performing side effects like routing, or turning an asynchronous API call into a series of synchronous actions.</p>
-<p>See <a href="../../api/applymiddleware.html"><code class="language-js" >applyMiddleware(...middlewares)</code></a> for a detailed look at middleware.</p>
-<h2 id="store"><span id="store" class="anchor enhancedAnchor_2LWZ"></span>Store<a href="#store" class="hash-link" title="Direct link to heading">#</a></h2>
-<p><span class="token plain">type </span><span class="token maybe-class-name">Store</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
-<p><span class="token plain"> dispatch</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token maybe-class-name">Dispatch</span><span class="token plain"></span></p>
-<p><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">getState</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token maybe-class-name">State</span><span class="token plain"></span></p>
-<p><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">subscribe</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token function-variable function" style="color: #e6d874">listener</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">void</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">void</span><span class="token plain"></span></p>
-<p><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">replaceReducer</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">reducer</span><span class="token parameter operator" style="color: #f8f8f2">:</span><span class="token parameter"> Reducer</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">void</span><span class="token plain"></span></p>
-<p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
-<p>Copy</p>
+<p>See <a href="https://redux.js.org/api/applymiddleware"><code>applyMiddleware(...middlewares)</code></a> for a detailed look at middleware.</p>
+<h2 id="storelink-to-docs">Store<a href="https://redux.js.org/understanding/thinking-in-redux/glossary#store"><strong>(Link To Docs)</strong></a></h2>
+<div class="sourceCode" id="cb13"><pre class="sourceCode js"><code class="sourceCode javascript"><a class="sourceLine" id="cb13-1" title="1">type Store <span class="op">=</span> <span class="op">{</span>  <span class="dt">dispatch</span><span class="op">:</span> Dispatch  <span class="dt">getState</span><span class="op">:</span> () <span class="kw">=&gt;</span> State  <span class="dt">subscribe</span><span class="op">:</span> (<span class="dt">listener</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="kw">void</span>) <span class="kw">=&gt;</span> () <span class="kw">=&gt;</span> <span class="kw">void</span>  <span class="dt">replaceReducer</span><span class="op">:</span> (<span class="dt">reducer</span><span class="op">:</span> Reducer) <span class="kw">=&gt;</span> <span class="kw">void</span><span class="op">}</span></a></code></pre></div>
 <p>A store is an object that holds the application’s state tree. There should only be a single store in a Redux app, as the composition happens on the reducer level.</p>
 <ul>
-<li><a href="../../api/store.html#dispatchaction"><code class="language-js" >dispatch(action)</code></a> is the base dispatch function described above.</li>
-<li><a href="../../api/store.html#getState"><code class="language-js" >getState()</code></a> returns the current state of the store.</li>
-<li><a href="../../api/store.html#subscribelistener"><code class="language-js" >subscribe(listener)</code></a> registers a function to be called on state changes.</li>
-<li><a href="../../api/store.html#replacereducernextreducer"><code class="language-js" >replaceReducer(nextReducer)</code></a> can be used to implement hot reloading and code splitting. Most likely you won’t use it.</li>
+<li><a href="https://redux.js.org/api/store#dispatchaction"><code>dispatch(action)</code></a> is the base dispatch function described above.</li>
+<li><a href="https://redux.js.org/api/store#getState"><code>getState()</code></a> returns the current state of the store.</li>
+<li><a href="https://redux.js.org/api/store#subscribelistener"><code>subscribe(listener)</code></a> registers a function to be called on state changes.</li>
+<li><a href="https://redux.js.org/api/store#replacereducernextreducer"><code>replaceReducer(nextReducer)</code></a> can be used to implement hot reloading and code splitting. Most likely you won’t use it.</li>
 </ul>
-<p>See the complete <a href="../../api/store.html#dispatchaction">store API reference</a> for more details.</p>
-<h2 id="store-creator"><span id="store-creator" class="anchor enhancedAnchor_2LWZ"></span>Store creator<a href="#store-creator" class="hash-link" title="Direct link to heading">#</a></h2>
-<p><span class="token plain">type </span><span class="token function-variable function maybe-class-name" style="color: #e6d874">StoreCreator</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">reducer</span><span class="token parameter operator" style="color: #f8f8f2">:</span><span class="token parameter"> Reducer</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> preloadedState</span><span class="token parameter operator" style="color: #f8f8f2">:</span><span class="token parameter"> </span><span class="token parameter operator" style="color: #f8f8f2">?</span><span class="token parameter">State</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token maybe-class-name">Store</span></p>
-<p>Copy</p>
-<p>A store creator is a function that creates a Redux store. Like with dispatching function, we must distinguish the base store creator, <a href="../../api/createstore.html"><code class="language-js" >createStore(reducer, preloadedState)</code></a> exported from the Redux package, from store creators that are returned from the store enhancers.</p>
-<h2 id="store-enhancer"><span id="store-enhancer" class="anchor enhancedAnchor_2LWZ"></span>Store enhancer<a href="#store-enhancer" class="hash-link" title="Direct link to heading">#</a></h2>
-<p><span class="token plain">type </span><span class="token function-variable function maybe-class-name" style="color: #e6d874">StoreEnhancer</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">next</span><span class="token parameter operator" style="color: #f8f8f2">:</span><span class="token parameter"> StoreCreator</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token maybe-class-name">StoreCreator</span></p>
-<p>Copy</p>
-<p>A store enhancer is a higher-order function that composes a store creator to return a new, enhanced store creator. This is similar to middleware in that it allows you to alter the store interface in a composable way.</p>
-<p>Store enhancers are much the same concept as higher-order components in React, which are also occasionally called “component enhancers”.</p>
-<p>Because a store is not an instance, but rather a plain-object collection of functions, copies can be easily created and modified without mutating the original store. There is an example in <a href="../../api/compose.html"><code class="language-js" >compose</code></a> documentation demonstrating that.</p>
-<p>Most likely you’ll never write a store enhancer, but you may use the one provided by the <a href="../../../github.com/reduxjs/redux-devtools.html">developer tools</a>. It is what makes time travel possible without the app being aware it is happening. Amusingly, the <a href="../../api/applymiddleware.html">Redux middleware implementation</a> is itself a store enhancer.</p>
-<p><a href="three-principles.html" class="pagination-nav__link"></a></p>
-
-<p>« Three Principles</p>
-<p><a href="../history-and-design/prior-art.html" class="pagination-nav__link"></a></p>
-
-<p>Prior Art »</p>
-<ul>
-<li><a href="#state" class="table-of-contents__link">State</a></li>
-<li><a href="#action" class="table-of-contents__link">Action</a></li>
-<li><a href="#reducer" class="table-of-contents__link">Reducer</a></li>
-<li><a href="#dispatching-function" class="table-of-contents__link">Dispatching Function</a></li>
-<li><a href="#action-creator" class="table-of-contents__link">Action Creator</a></li>
-<li><a href="#async-action" class="table-of-contents__link">Async Action</a></li>
-<li><a href="#middleware" class="table-of-contents__link">Middleware</a></li>
-<li><a href="#store" class="table-of-contents__link">Store</a></li>
-<li><a href="#store-creator" class="table-of-contents__link">Store creator</a></li>
-<li><a href="#store-enhancer" class="table-of-contents__link">Store enhancer</a></li>
-</ul>
-
-<ul>
-<li><a href="../official/introduction/getting-started.html" class="footer__link-item">Getting Started</a></li>
-<li><a href="../official/tutorials/essentials/part-1-overview-concepts.html" class="footer__link-item">Tutorial</a></li>
-<li><a href="../official/faq.html" class="footer__link-item">FAQ</a></li>
-<li><a href="../official/api/api-reference.html" class="footer__link-item">API Reference</a></li>
-</ul>
-
-<ul>
-
-</ul>
-
-
+<p>See the complete <a href="https://redux.js.org/api/store#dispatchaction">store API reference</a> for more details.</p>
+<h2 id="store-creatorlink-to-docs">Store creator<a href="https://redux.js.org/understanding/thinking-in-redux/glossary#store-creator"><strong>(Link To Docs)</strong></a></h2>
+<div class="sourceCode" id="cb14"><pre class="sourceCode js"><code class="sourceCode javascript"><a class="sourceLine" id="cb14-1" title="1">type StoreCreator <span class="op">=</span> (reducer<span class="op">:</span> Reducer<span class="op">,</span> preloadedState<span class="op">:</span> <span class="op">?</span>State) <span class="kw">=&gt;</span> Store<span class="op">;</span></a></code></pre></div>
+<p>A store creator is a function that creates a Redux store. Like with dispatching function, we must distinguish the base store creator, <a href="https://redux.js.org/api/createstore"><code>createStore(reducer, preloadedState)</code></a> exported from the Redux package, from store creators that are returned from the store enhancers.</p>
+<h2 id="store-enhancerlink-to-docs">Store enhancer<a href="https://redux.js.org/understanding/thinking-in-redux/glossary#store-enhancer"><strong>(Link To Docs)</strong></a></h2>
+<div class="sourceCode" id="cb15"><pre class="sourceCode js"><code class="sourceCode javascript"><a class="sourceLine" id="cb15-1" title="1">type StoreEnhancer <span class="op">=</span> (next<span class="op">:</span> StoreCreator) <span class="kw">=&gt;</span> StoreCreator<span class="op">;</span></a></code></pre></div>
+<p>Because a store is not an instance, but rather a plain-object collection of functions, copies can be easily created and modified without mutating the original store. There is an example in <a href="https://redux.js.org/api/compose"><code>compose</code></a> documentation demonstrating that.</p>
+<p>Most likely you’ll never write a store enhancer, but you may use the one provided by the <a href="https://github.com/reduxjs/redux-devtools">developer tools</a>. It is what makes time travel possible without the app being aware it is happening. Amusingly, the <a href="https://redux.js.org/api/applymiddleware">Redux middleware implementation</a> is itself a store enhancer.</p>
 </body>
 </html>

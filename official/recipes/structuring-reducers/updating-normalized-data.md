@@ -4,51 +4,52 @@ Menu
 
 <a href="../../index.html" class="navbar__brand"><img src="../../../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><img src="../../../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m navbar__logo" /><strong>Redux</strong></a><a href="../../index.html" class="navbar__brand"><img src="../../../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><img src="../../../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m navbar__logo" /><strong>Redux</strong></a>
 
-- <a href="basic-reducer-structure.html" class="menu__link">Basic Reducer Structure</a>
-  - <a href="splitting-reducer-logic.html" class="menu__link">Splitting Reducer Logic</a>
-  - <a href="refactoring-reducer-example.html" class="menu__link">Refactoring Reducers Example</a>
-  - <a href="using-combinereducers.html" class="menu__link">Using combineReducers</a>
-  - <a href="beyond-combinereducers.html" class="menu__link">Beyond combineReducers</a>
-  - <a href="normalizing-state-shape.html" class="menu__link">Normalizing State Shape</a>
-  - <a href="updating-normalized-data.html" class="menu__link menu__link--active active">Updating Normalized Data</a>
-  - <a href="reusing-reducer-logic.html" class="menu__link">Reusing Reducer Logic</a>
-  - <a href="immutable-update-patterns.html" class="menu__link">Immutable Update Patterns</a>
-  - <a href="initializing-state.html" class="menu__link">Initializing State</a>
-- <a href="#!" class="menu__link menu__link--sublist">Understanding Redux</a>
-  - <a href="#!" class="menu__link menu__link--sublist">Thinking in Redux</a>
-    - <a href="../../understanding/thinking-in-redux/motivation.html" class="menu__link">Motivation</a>
-    - <a href="../../understanding/thinking-in-redux/three-principles.html" class="menu__link">Three Principles</a>
-    - <a href="../../understanding/thinking-in-redux/glossary.html" class="menu__link">Glossary</a>
-  - <a href="#!" class="menu__link menu__link--sublist">History and Design</a>
-    - <a href="../../understanding/history-and-design/prior-art.html" class="menu__link">Prior Art</a>
-    - <a href="../../understanding/history-and-design/middleware.html" class="menu__link">Middleware</a>
-- <a href="#!" class="menu__link menu__link--sublist">FAQ</a>
+-   <a href="basic-reducer-structure.html" class="menu__link">Basic Reducer Structure</a>
+    -   <a href="splitting-reducer-logic.html" class="menu__link">Splitting Reducer Logic</a>
+    -   <a href="refactoring-reducer-example.html" class="menu__link">Refactoring Reducers Example</a>
+    -   <a href="using-combinereducers.html" class="menu__link">Using combineReducers</a>
+    -   <a href="beyond-combinereducers.html" class="menu__link">Beyond combineReducers</a>
+    -   <a href="normalizing-state-shape.html" class="menu__link">Normalizing State Shape</a>
+    -   <a href="updating-normalized-data.html" class="menu__link menu__link--active active">Updating Normalized Data</a>
+    -   <a href="reusing-reducer-logic.html" class="menu__link">Reusing Reducer Logic</a>
+    -   <a href="immutable-update-patterns.html" class="menu__link">Immutable Update Patterns</a>
+    -   <a href="initializing-state.html" class="menu__link">Initializing State</a>
+-   <a href="#!" class="menu__link menu__link--sublist">Understanding Redux</a>
+    -   <a href="#!" class="menu__link menu__link--sublist">Thinking in Redux</a>
+        -   <a href="../../understanding/thinking-in-redux/motivation.html" class="menu__link">Motivation</a>
+        -   <a href="../../understanding/thinking-in-redux/three-principles.html" class="menu__link">Three Principles</a>
+        -   <a href="../../understanding/thinking-in-redux/glossary.html" class="menu__link">Glossary</a>
+    -   <a href="#!" class="menu__link menu__link--sublist">History and Design</a>
+        -   <a href="../../understanding/history-and-design/prior-art.html" class="menu__link">Prior Art</a>
+        -   <a href="../../understanding/history-and-design/middleware.html" class="menu__link">Middleware</a>
+-   <a href="#!" class="menu__link menu__link--sublist">FAQ</a>
 
-  - <a href="../../faq.html" class="menu__link">FAQ Index</a>
-  - <a href="../../faq/general.html" class="menu__link">General</a>
-  - <a href="../../faq/reducers.html" class="menu__link">Reducers</a>
-  - <a href="../../faq/organizing-state.html" class="menu__link">Organizing State</a>
-  - <a href="../../faq/store-setup.html" class="menu__link">Store Setup</a>
-  - <a href="../../faq/actions.html" class="menu__link">Actions</a>
-  - <a href="../../faq/immutable-data.html" class="menu__link">Immutable Data</a>
-  - <a href="../../faq/code-structure.html" class="menu__link">Code Structure</a>
-  - <a href="../../faq/performance.html" class="menu__link">Performance</a>
-  - <a href="../../faq/design-decisions.html" class="menu__link">Design Decisions</a>
+    -   <a href="../../faq.html" class="menu__link">FAQ Index</a>
+    -   <a href="../../faq/general.html" class="menu__link">General</a>
+    -   <a href="../../faq/reducers.html" class="menu__link">Reducers</a>
+    -   <a href="../../faq/organizing-state.html" class="menu__link">Organizing State</a>
+    -   <a href="../../faq/store-setup.html" class="menu__link">Store Setup</a>
+    -   <a href="../../faq/actions.html" class="menu__link">Actions</a>
+    -   <a href="../../faq/immutable-data.html" class="menu__link">Immutable Data</a>
+    -   <a href="../../faq/code-structure.html" class="menu__link">Code Structure</a>
+    -   <a href="../../faq/performance.html" class="menu__link">Performance</a>
+    -   <a href="../../faq/design-decisions.html" class="menu__link">Design Decisions</a>
 
-- <a href="#!" class="menu__link menu__link--sublist">Style Guide</a>
-  - <a href="../../style-guide/style-guide.html" class="menu__link">Style Guide: Best Practices</a>
-- <a href="#!" class="menu__link menu__link--sublist">API Reference</a>
-  - <a href="../../api/api-reference.html" class="menu__link">API Reference</a># <span id="managing-normalized-data" class="anchor enhancedAnchor_2LWZ"></span>Managing Normalized Data<a href="#managing-normalized-data" class="hash-link" title="Direct link to heading">#</a>
+-   <a href="#!" class="menu__link menu__link--sublist">Style Guide</a>
+    -   <a href="../../style-guide/style-guide.html" class="menu__link">Style Guide: Best Practices</a>
+-   <a href="#!" class="menu__link menu__link--sublist">API Reference</a>
+    -   <a href="../../api/api-reference.html" class="menu__link">API Reference</a>\# <span id="managing-normalized-data" class="anchor enhancedAnchor_2LWZ"></span>Managing Normalized Data<a href="#managing-normalized-data" class="hash-link" title="Direct link to heading">#</a>
 
-As mentioned in [Normalizing State Shape](normalizing-state-shape.html), the Normalizr library is frequently used to transform nested response data into a normalized shape suitable for integration into the store. However, that doesn't address the issue of executing further updates to that normalized data as it's being used elsewhere in the application. There are a variety of different approaches that you can use, based on your own preference. We'll use the example of handling mutations for Comments on a Post.
+As mentioned in [Normalizing State Shape](normalizing-state-shape.html), the Normalizr library is frequently used to transform nested response data into a normalized shape suitable for integration into the store. However, that doesn’t address the issue of executing further updates to that normalized data as it’s being used elsewhere in the application. There are a variety of different approaches that you can use, based on your own preference. We’ll use the example of handling mutations for Comments on a Post.
 
-## <span id="standard-approaches" class="anchor enhancedAnchor_2LWZ"></span>Standard Approaches<a href="#standard-approaches" class="hash-link" title="Direct link to heading">#</a>
+<span id="standard-approaches" class="anchor enhancedAnchor_2LWZ"></span>Standard Approaches<a href="#standard-approaches" class="hash-link" title="Direct link to heading">#</a>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### <span id="simple-merging" class="anchor enhancedAnchor_2LWZ"></span>Simple Merging<a href="#simple-merging" class="hash-link" title="Direct link to heading">#</a>
 
 One approach is to merge the contents of the action into the existing state. In this case, we can use deep recursive merge, not just a shallow copy, to allow for actions with partial items to update stored items. The Lodash `merge` function can handle this for us:
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >merge</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'lodash/merge'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span>merge<span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘lodash/merge’</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -70,11 +71,11 @@ One approach is to merge the contents of the action into the existing state. In 
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span>This requires the least amount of work on the reducer side, but does require that the action creator potentially do a fair amount of work to organize the data into the correct shape before the action is dispatched. It also doesn't handle trying to delete an item.
+<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span>This requires the least amount of work on the reducer side, but does require that the action creator potentially do a fair amount of work to organize the data into the correct shape before the action is dispatched. It also doesn’t handle trying to delete an item.
 
 ### <span id="slice-reducer-composition" class="anchor enhancedAnchor_2LWZ"></span>Slice Reducer Composition<a href="#slice-reducer-composition" class="hash-link" title="Direct link to heading">#</a>
 
-If we have a nested tree of slice reducers, each slice reducer will need to know how to respond to this action appropriately. We will need to include all the relevant data in the action. We need to update the correct Post object with the comment's ID, create a new Comment object using that ID as a key, and include the Comment's ID in the list of all Comment IDs. Here's how the pieces for this might fit together:
+If we have a nested tree of slice reducers, each slice reducer will need to know how to respond to this action appropriately. We will need to include all the relevant data in the action. We need to update the correct Post object with the comment’s ID, create a new Comment object using that ID as a key, and include the Comment’s ID in the list of all Comment IDs. Here’s how the pieces for this might fit together:
 
 <span class="token comment" style="color: #c6cad2">// actions.js</span><span class="token plain"></span>
 
@@ -82,13 +83,13 @@ If we have a nested tree of slice reducers, each slice reducer will need to know
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Generate a unique ID for this comment</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> commentId </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">generateId</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'comment'</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> commentId </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">generateId</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">‘comment’</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
 
-<span class="token plain"> type</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'ADD_COMMENT'</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span class="token plain"> type</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘ADD\_COMMENT’</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
 
 <span class="token plain"> payload</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
 
@@ -124,15 +125,15 @@ If we have a nested tree of slice reducers, each slice reducer will need to know
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token spread operator" style="color: #000000">...</span><span class="token plain">state</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token spread operator" style="color: #000000">…</span><span class="token plain">state</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Update our Post object with a new "comments" array</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Update our Post object with a new “comments” array</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #000000">\[</span><span class="token plain">postId</span><span class="token punctuation" style="color: #000000">\]</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token spread operator" style="color: #000000">...</span><span class="token plain">post</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token spread operator" style="color: #000000">…</span><span class="token plain">post</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
 
-<span class="token plain"> comments</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> post</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">comments</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">concat</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">commentId</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span class="token plain"> comments</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> post</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">comments</span><span class="token punctuation" style="color: #000000">.</span><span style="color: #e6d874">concat</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">commentId</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
 
@@ -146,7 +147,7 @@ If we have a nested tree of slice reducers, each slice reducer will need to know
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">switch</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">type</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">case</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'ADD_COMMENT'</span><span class="token operator" style="color: #000000">:</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">case</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘ADD\_COMMENT’</span><span class="token operator" style="color: #000000">:</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">addComment</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">state</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
 
@@ -198,7 +199,7 @@ If we have a nested tree of slice reducers, each slice reducer will need to know
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token spread operator" style="color: #000000">...</span><span class="token plain">state</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token spread operator" style="color: #000000">…</span><span class="token plain">state</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #000000">\[</span><span class="token plain">commentId</span><span class="token punctuation" style="color: #000000">\]</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> comment</span>
 
@@ -212,7 +213,7 @@ If we have a nested tree of slice reducers, each slice reducer will need to know
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">switch</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">type</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">case</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'ADD_COMMENT'</span><span class="token operator" style="color: #000000">:</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">case</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘ADD\_COMMENT’</span><span class="token operator" style="color: #000000">:</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">addCommentEntry</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">state</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
 
@@ -232,9 +233,9 @@ If we have a nested tree of slice reducers, each slice reducer will need to know
 
 <span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> commentId </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> payload</span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Just append the new Comment's ID to the list of all IDs</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Just append the new Comment’s ID to the list of all IDs</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">concat</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">commentId</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span style="color: #e6d874">concat</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">commentId</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
 
@@ -244,7 +245,7 @@ If we have a nested tree of slice reducers, each slice reducer will need to know
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">switch</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">type</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">case</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'ADD_COMMENT'</span><span class="token operator" style="color: #000000">:</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">case</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘ADD\_COMMENT’</span><span class="token operator" style="color: #000000">:</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">addCommentId</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">state</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
 
@@ -264,23 +265,24 @@ If we have a nested tree of slice reducers, each slice reducer will need to know
 
 <span class="token plain"> allIds</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> allComments</span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span>The example is a bit long, because it's showing how all the different slice reducers and case reducers fit together. Note the delegation involved here. The `postsById` slice reducer delegates the work for this case to `addComment`, which inserts the new Comment's ID into the correct Post item. Meanwhile, both the `commentsById` and `allComments` slice reducers have their own case reducers, which update the Comments lookup table and list of all Comment IDs appropriately.
+<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span>The example is a bit long, because it’s showing how all the different slice reducers and case reducers fit together. Note the delegation involved here. The `postsById` slice reducer delegates the work for this case to `addComment`, which inserts the new Comment’s ID into the correct Post item. Meanwhile, both the `commentsById` and `allComments` slice reducers have their own case reducers, which update the Comments lookup table and list of all Comment IDs appropriately.
 
-## <span id="other-approaches" class="anchor enhancedAnchor_2LWZ"></span>Other Approaches<a href="#other-approaches" class="hash-link" title="Direct link to heading">#</a>
+<span id="other-approaches" class="anchor enhancedAnchor_2LWZ"></span>Other Approaches<a href="#other-approaches" class="hash-link" title="Direct link to heading">#</a>
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### <span id="task-based-updates" class="anchor enhancedAnchor_2LWZ"></span>Task-Based Updates<a href="#task-based-updates" class="hash-link" title="Direct link to heading">#</a>
 
-Since reducers are just functions, there's an infinite number of ways to split up this logic. While using slice reducers is the most common, it's also possible to organize behavior in a more task-oriented structure. Because this will often involve more nested updates, you may want to use an immutable update utility library like [dot-prop-immutable](../../../github.com/debitoor/dot-prop-immutable.html) or [object-path-immutable](../../../github.com/mariocasciaro/object-path-immutable.html) to simplify the update statements. Here's an example of what that might look like:
+Since reducers are just functions, there’s an infinite number of ways to split up this logic. While using slice reducers is the most common, it’s also possible to organize behavior in a more task-oriented structure. Because this will often involve more nested updates, you may want to use an immutable update utility library like [dot-prop-immutable](../../../github.com/debitoor/dot-prop-immutable.html) or [object-path-immutable](../../../github.com/mariocasciaro/object-path-immutable.html) to simplify the update statements. Here’s an example of what that might look like:
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >posts</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">"./postsReducer"</span><span class="token punctuation" style="color: #000000">;</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span>posts<span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">“./postsReducer”</span><span class="token punctuation" style="color: #000000">;</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >comments</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">"./commentsReducer"</span><span class="token punctuation" style="color: #000000">;</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span>comments<span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">“./commentsReducer”</span><span class="token punctuation" style="color: #000000">;</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >dotProp</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">"dot-prop-immutable"</span><span class="token punctuation" style="color: #000000">;</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span>dotProp<span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">“dot-prop-immutable”</span><span class="token punctuation" style="color: #000000">;</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #000000">{</span><span >combineReducers</span><span class="token imports punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">"redux"</span><span class="token punctuation" style="color: #000000">;</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #000000">{</span>combineReducers<span class="token imports punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">“redux”</span><span class="token punctuation" style="color: #000000">;</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >reduceReducers</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">"reduce-reducers"</span><span class="token punctuation" style="color: #000000">;</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span>reduceReducers<span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">“reduce-reducers”</span><span class="token punctuation" style="color: #000000">;</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -306,19 +308,19 @@ Since reducers are just functions, there's an infinite number of ways to split u
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// State here is the entire combined state</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> updatedWithPostState </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> dotProp</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">set</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> updatedWithPostState </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> dotProp</span><span class="token punctuation" style="color: #000000">.</span><span style="color: #e6d874">set</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain"></span>
 
 <span class="token plain"> state</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token template-string template-punctuation string" style="color: #a6e22e">\`</span><span class="token template-string string" style="color: #a6e22e">posts.byId.</span><span class="token template-string interpolation interpolation-punctuation punctuation" style="color: #000000">${</span><span class="token template-string interpolation">postId</span><span class="token template-string interpolation interpolation-punctuation punctuation" style="color: #000000">}</span><span class="token template-string string" style="color: #a6e22e">.comments</span><span class="token template-string template-punctuation string" style="color: #a6e22e">\`</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token parameter">comments</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> comments</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">concat</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">commentId</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token parameter">comments</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> comments</span><span class="token punctuation" style="color: #000000">.</span><span style="color: #e6d874">concat</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">commentId</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">;</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> updatedWithCommentsTable </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> dotProp</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">set</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> updatedWithCommentsTable </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> dotProp</span><span class="token punctuation" style="color: #000000">.</span><span style="color: #e6d874">set</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain"></span>
 
 <span class="token plain"> updatedWithPostState</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
 
@@ -330,13 +332,13 @@ Since reducers are just functions, there's an infinite number of ways to split u
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> updatedWithCommentsList </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> dotProp</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">set</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> updatedWithCommentsList </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> dotProp</span><span class="token punctuation" style="color: #000000">.</span><span style="color: #e6d874">set</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain"></span>
 
 <span class="token plain"> updatedWithCommentsTable</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token template-string template-punctuation string" style="color: #a6e22e">\`</span><span class="token template-string string" style="color: #a6e22e">comments.allIds</span><span class="token template-string template-punctuation string" style="color: #a6e22e">\`</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token parameter">allIds</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> allIds</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">concat</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">commentId</span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">;</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token parameter">allIds</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> allIds</span><span class="token punctuation" style="color: #000000">.</span><span style="color: #e6d874">concat</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">commentId</span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">;</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">;</span><span class="token plain"></span>
 
@@ -350,7 +352,7 @@ Since reducers are just functions, there's an infinite number of ways to split u
 
 <span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> featureReducers </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createReducer</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token constant" style="color: #f92672">ADD_COMMENT</span><span class="token plain"> </span><span class="token operator" style="color: #000000">:</span><span class="token plain"> addComment</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token constant" style="color: #f92672">ADD\_COMMENT</span><span class="token plain"> </span><span class="token operator" style="color: #000000">:</span><span class="token plain"> addComment</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">;</span><span class="token plain"></span>
 
@@ -362,17 +364,17 @@ Since reducers are just functions, there's an infinite number of ways to split u
 
 <span class="token plain"> featureReducers</span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">;</span>This approach makes it very clear what's happening for the `"ADD_COMMENTS"` case, but it does require nested updating logic, and some specific knowledge of the state tree shape. Depending on how you want to compose your reducer logic, this may or may not be desired.
+<span class="token plain"></span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">;</span>This approach makes it very clear what’s happening for the `"ADD_COMMENTS"` case, but it does require nested updating logic, and some specific knowledge of the state tree shape. Depending on how you want to compose your reducer logic, this may or may not be desired.
 
 ### <span id="redux-orm" class="anchor enhancedAnchor_2LWZ"></span>Redux-ORM<a href="#redux-orm" class="hash-link" title="Direct link to heading">#</a>
 
-The [Redux-ORM](../../../github.com/redux-orm/redux-orm.html) library provides a very useful abstraction layer for managing normalized data in a Redux store. It allows you to declare Model classes and define relations between them. It can then generate the empty "tables" for your data types, act as a specialized selector tool for looking up the data, and perform immutable updates on that data.
+The [Redux-ORM](../../../github.com/redux-orm/redux-orm.html) library provides a very useful abstraction layer for managing normalized data in a Redux store. It allows you to declare Model classes and define relations between them. It can then generate the empty “tables” for your data types, act as a specialized selector tool for looking up the data, and perform immutable updates on that data.
 
-There's a couple ways Redux-ORM can be used to perform updates. First, the Redux-ORM docs suggest defining reducer functions on each Model subclass, then including the auto-generated combined reducer function into your store:
+There’s a couple ways Redux-ORM can be used to perform updates. First, the Redux-ORM docs suggest defining reducer functions on each Model subclass, then including the auto-generated combined reducer function into your store:
 
 <span class="token comment" style="color: #c6cad2">// models.js</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> </span><span class="token maybe-class-name">Model</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> fk</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> attr</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token constant" style="color: #f92672">ORM</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux-orm'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> </span><span class="token maybe-class-name">Model</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> fk</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> attr</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token constant" style="color: #f92672">ORM</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘redux-orm’</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -396,9 +398,9 @@ There's a couple ways Redux-ORM can be used to perform updates. First, the Redux
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">switch</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">type</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">case</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'CREATE_POST'</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">case</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘CREATE\_POST’</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token maybe-class-name">Post</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">create</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token maybe-class-name">Post</span><span class="token punctuation" style="color: #000000">.</span><span style="color: #e6d874">create</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">break</span><span class="token plain"></span>
 
@@ -410,7 +412,7 @@ There's a couple ways Redux-ORM can be used to perform updates. First, the Redux
 
 <span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token maybe-class-name">Post</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">modelName</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'Post'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token maybe-class-name">Post</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">modelName</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘Post’</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -428,11 +430,11 @@ There's a couple ways Redux-ORM can be used to perform updates. First, the Redux
 
 <span class="token plain"> postId</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">fk</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
 
-<span class="token plain"> to</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'Post'</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// must be the same as Post.modelName</span><span class="token plain"></span>
+<span class="token plain"> to</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘Post’</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// must be the same as Post.modelName</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword module" style="color: #f92672">as</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'post'</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// name for accessor (comment.post)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword module" style="color: #f92672">as</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘post’</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// name for accessor (comment.post)</span><span class="token plain"></span>
 
-<span class="token plain"> relatedName</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'comments'</span><span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// name for backward accessor (post.comments)</span><span class="token plain"></span>
+<span class="token plain"> relatedName</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘comments’</span><span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// name for backward accessor (post.comments)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
 
@@ -446,9 +448,9 @@ There's a couple ways Redux-ORM can be used to perform updates. First, the Redux
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">switch</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">type</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">case</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'ADD_COMMENT'</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">case</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘ADD\_COMMENT’</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token maybe-class-name">Comment</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">create</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token maybe-class-name">Comment</span><span class="token punctuation" style="color: #000000">.</span><span style="color: #e6d874">create</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">break</span><span class="token plain"></span>
 
@@ -460,7 +462,7 @@ There's a couple ways Redux-ORM can be used to perform updates. First, the Redux
 
 <span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token maybe-class-name">Comment</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">modelName</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'Comment'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token maybe-class-name">Comment</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">modelName</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘Comment’</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -468,17 +470,17 @@ There's a couple ways Redux-ORM can be used to perform updates. First, the Redux
 
 <span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> orm </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">new</span><span class="token plain"> </span><span class="token class-name">ORM</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
 
-<span class="token plain">orm</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">register</span><span class="token punctuation" style="color: #000000">(</span><span class="token maybe-class-name">Post</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token maybe-class-name">Comment</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span class="token plain">orm</span><span class="token punctuation" style="color: #000000">.</span><span style="color: #e6d874">register</span><span class="token punctuation" style="color: #000000">(</span><span class="token maybe-class-name">Post</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token maybe-class-name">Comment</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// main.js</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #000000">{</span><span > createStore</span><span class="token imports punctuation" style="color: #000000">,</span><span > combineReducers </span><span class="token imports punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #000000">{</span> createStore<span class="token imports punctuation" style="color: #000000">,</span> combineReducers <span class="token imports punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘redux’</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #000000">{</span><span > createReducer </span><span class="token imports punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux-orm'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #000000">{</span> createReducer <span class="token imports punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘redux-orm’</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #000000">{</span><span > orm </span><span class="token imports punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./models'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #000000">{</span> orm <span class="token imports punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘./models’</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -486,7 +488,7 @@ There's a couple ways Redux-ORM can be used to perform updates. First, the Redux
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Insert the auto-generated Redux-ORM reducer. This will</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// initialize our model "tables", and hook up the reducer</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// initialize our model “tables”, and hook up the reducer</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// logic we defined on each Model subclass</span><span class="token plain"></span>
 
@@ -498,15 +500,15 @@ There's a couple ways Redux-ORM can be used to perform updates. First, the Redux
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Dispatch an action to create a Post instance</span><span class="token plain"></span>
 
-<span class="token plain">store</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span class="token plain">store</span><span class="token punctuation" style="color: #000000">.</span><span style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
 
-<span class="token plain"> type</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'CREATE_POST'</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span class="token plain"> type</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘CREATE\_POST’</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
 
 <span class="token plain"> payload</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
 
 <span class="token plain"> id</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
 
-<span class="token plain"> name</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'Test Post Please Ignore'</span><span class="token plain"></span>
+<span class="token plain"> name</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘Test Post Please Ignore’</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
 
@@ -516,15 +518,15 @@ There's a couple ways Redux-ORM can be used to perform updates. First, the Redux
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Dispatch an action to create a Comment instance as a child of that Post</span><span class="token plain"></span>
 
-<span class="token plain">store</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span class="token plain">store</span><span class="token punctuation" style="color: #000000">.</span><span style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
 
-<span class="token plain"> type</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'ADD_COMMENT'</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span class="token plain"> type</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘ADD\_COMMENT’</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
 
 <span class="token plain"> payload</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
 
 <span class="token plain"> id</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">123</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
 
-<span class="token plain"> text</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'This is a comment'</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span class="token plain"> text</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘This is a comment’</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
 
 <span class="token plain"> postId</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token plain"></span>
 
@@ -534,11 +536,11 @@ There's a couple ways Redux-ORM can be used to perform updates. First, the Redux
 
 Another variation on this is to use Redux-ORM as an abstraction layer within a single case reducer:
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #000000">{</span><span > orm </span><span class="token imports punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./models'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #000000">{</span> orm <span class="token imports punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘./models’</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Assume this case reducer is being used in our "entities" slice reducer,</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Assume this case reducer is being used in our “entities” slice reducer,</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// and we do not have reducers defined on our Redux-ORM Model subclasses</span><span class="token plain"></span>
 
@@ -546,11 +548,11 @@ Another variation on this is to use Redux-ORM as an abstraction layer within a s
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Start an immutable session</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> session </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> orm</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">session</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">entitiesState</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> session </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> orm</span><span class="token punctuation" style="color: #000000">.</span><span style="color: #e6d874">session</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">entitiesState</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"> session</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access maybe-class-name">Comment</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">create</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span class="token plain"> session</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access maybe-class-name">Comment</span><span class="token punctuation" style="color: #000000">.</span><span style="color: #e6d874">create</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -560,13 +562,13 @@ Another variation on this is to use Redux-ORM as an abstraction layer within a s
 
 <span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span>By using the session interface you can now use relationship accessors to directly access referenced models:
 
-<span class="token keyword" style="color: #f92672">const</span><span class="token plain"> session </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> orm</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">session</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span class="token keyword" style="color: #f92672">const</span><span class="token plain"> session </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> orm</span><span class="token punctuation" style="color: #000000">.</span><span style="color: #e6d874">session</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #000000">.</span><span style="color: #e6d874">getState</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> comment </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> session</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access maybe-class-name">Comment</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">first</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Comment instance</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> comment </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> session</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access maybe-class-name">Comment</span><span class="token punctuation" style="color: #000000">.</span><span style="color: #e6d874">first</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Comment instance</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> post </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> comment </span><span class="token comment" style="color: #c6cad2">// Post instance</span><span class="token plain"></span>
 
-<span class="token plain">post</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">comments</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">filter</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">c</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> c</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">text</span><span class="token plain"> </span><span class="token operator" style="color: #000000">===</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'This is a comment'</span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">count</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// 1</span>Overall, Redux-ORM provides a very useful set of abstractions for defining relations between data types, creating the "tables" in our state, retrieving and denormalizing relational data, and applying immutable updates to relational data.
+<span class="token plain">post</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">comments</span><span class="token punctuation" style="color: #000000">.</span><span style="color: #e6d874">filter</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">c</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> c</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">text</span><span class="token plain"> </span><span class="token operator" style="color: #000000">===</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘This is a comment’</span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">.</span><span style="color: #e6d874">count</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// 1</span>Overall, Redux-ORM provides a very useful set of abstractions for defining relations between data types, creating the “tables” in our state, retrieving and denormalizing relational data, and applying immutable updates to relational data.
 
 <a href="normalizing-state-shape.html" class="pagination-nav__link"></a>
 
@@ -578,11 +580,11 @@ Next
 
 Reusing Reducer Logic »
 
-- <a href="#standard-approaches" class="table-of-contents__link">Standard Approaches</a>
-  - <a href="#simple-merging" class="table-of-contents__link">Simple Merging</a>
-  - <a href="#slice-reducer-composition" class="table-of-contents__link">Slice Reducer Composition</a>
-- <a href="#other-approaches" class="table-of-contents__link">Other Approaches</a>
-  - <a href="#task-based-updates" class="table-of-contents__link">Task-Based Updates</a>
-  - <a href="#redux-orm" class="table-of-contents__link">Redux-ORM</a>
+-   <a href="#standard-approaches" class="table-of-contents__link">Standard Approaches</a>
+    -   <a href="#simple-merging" class="table-of-contents__link">Simple Merging</a>
+    -   <a href="#slice-reducer-composition" class="table-of-contents__link">Slice Reducer Composition</a>
+-   <a href="#other-approaches" class="table-of-contents__link">Other Approaches</a>
+    -   <a href="#task-based-updates" class="table-of-contents__link">Task-Based Updates</a>
+    -   <a href="#redux-orm" class="table-of-contents__link">Redux-ORM</a>
 
-<img src="../../../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
+<img src="../../../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" />
