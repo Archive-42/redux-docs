@@ -26,10 +26,12 @@ Menu
   - <a href="../introduction/ecosystem.html" class="menu__link">Ecosystem</a>
   - <a href="../introduction/examples.html" class="menu__link">Examples</a>
 - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Tutorials</a>
+
   - <a href="index.html" class="menu__link">Tutorials Index</a>
   - <a href="quick-start.html" class="menu__link menu__link--active active">Quick Start</a>
   - <a href="typescript-quick-start.html" class="menu__link">TypeScript Quick Start</a>
   - <a href="#!" class="menu__link menu__link--sublist">Redux Essentials</a>
+
     - <a href="essentials/part-1-overview-concepts.html" class="menu__link">Redux Overview and Concepts</a>
     - <a href="essentials/part-2-app-structure.html" class="menu__link">Redux App Structure</a>
     - <a href="essentials/part-3-data-flow.html" class="menu__link">Basic Redux Data Flow</a>
@@ -72,6 +74,7 @@ Menu
     - <a href="../recipes/structuring-reducers/reusing-reducer-logic.html" class="menu__link">Reusing Reducer Logic</a>
     - <a href="../recipes/structuring-reducers/immutable-update-patterns.html" class="menu__link">Immutable Update Patterns</a>
     - <a href="../recipes/structuring-reducers/initializing-state.html" class="menu__link">Initializing State</a>
+
 - <a href="#!" class="menu__link menu__link--sublist">Understanding Redux</a>
   - <a href="#!" class="menu__link menu__link--sublist">Thinking in Redux</a>
     - <a href="../understanding/thinking-in-redux/motivation.html" class="menu__link">Motivation</a>
@@ -136,21 +139,21 @@ The [Redux+JS template for Create-React-App](../../github.com/reduxjs/cra-templa
 
 Add the Redux Toolkit and React-Redux packages to your project:
 
-<span class="token plain">npm install @reduxjs/toolkit react-redux</span>### <span id="create-a-redux-store" class="anchor enhancedAnchor_2LWZ"></span>Create a Redux Store<a href="#create-a-redux-store" class="hash-link" title="Direct link to heading">#</a>
+<span >npm install @reduxjs/toolkit react-redux</span>### <span id="create-a-redux-store" class="anchor enhancedAnchor_2LWZ"></span>Create a Redux Store<a href="#create-a-redux-store" class="hash-link" title="Direct link to heading">#</a>
 
 Create a file named `src/app/store.js`. Import the `configureStore` API from Redux Toolkit. We'll start by creating an empty Redux store, and exporting it:
 
 app/store.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #000000">{</span><span > configureStore </span><span class="token imports punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span > </span><span class="token imports punctuation" style="color: #000000">{</span><span > configureStore </span><span class="token imports punctuation" style="color: #000000">}</span><span > </span><span class="token keyword module" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">configureStore</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">export</span><span > </span><span class="token keyword module" style="color: #f92672">default</span><span > </span><span class="token function" style="color: #e6d874">configureStore</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> reducer</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > reducer</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span>This creates a Redux store, and also automatically configure the Redux DevTools extension so that you can inspect the store while developing.
+<span ></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span>This creates a Redux store, and also automatically configure the Redux DevTools extension so that you can inspect the store while developing.
 
 ### <span id="provide-the-redux-store-to-react" class="anchor enhancedAnchor_2LWZ"></span>Provide the Redux Store to React<a href="#provide-the-redux-store-to-react" class="hash-link" title="Direct link to heading">#</a>
 
@@ -158,31 +161,31 @@ Once the store is created, we can make it available to our React components by p
 
 index.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">React</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span > </span><span class="token imports maybe-class-name">React</span><span > </span><span class="token keyword module" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'react'</span><span ></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">ReactDOM</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-dom'</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">import</span><span > </span><span class="token imports maybe-class-name">ReactDOM</span><span > </span><span class="token keyword module" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'react-dom'</span><span ></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./index.css'</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">import</span><span > </span><span class="token string" style="color: #a6e22e">'./index.css'</span><span ></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">App</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./App'</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">import</span><span > </span><span class="token imports maybe-class-name">App</span><span > </span><span class="token keyword module" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'./App'</span><span ></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >store</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./app/store'</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">import</span><span > </span><span >store</span><span > </span><span class="token keyword module" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'./app/store'</span><span ></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #000000">{</span><span > </span><span class="token imports maybe-class-name">Provider</span><span > </span><span class="token imports punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-redux'</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">import</span><span > </span><span class="token imports punctuation" style="color: #000000">{</span><span > </span><span class="token imports maybe-class-name">Provider</span><span > </span><span class="token imports punctuation" style="color: #000000">}</span><span > </span><span class="token keyword module" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'react-redux'</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token maybe-class-name">ReactDOM</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">render</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain"></span>
+<span ></span><span class="token maybe-class-name">ReactDOM</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">render</span><span class="token punctuation" style="color: #000000">(</span><span ></span>
 
-<span class="token plain"> </span><span class="token operator" style="color: #000000">&lt;</span><span class="token maybe-class-name">Provider</span><span class="token plain"> store</span><span class="token operator" style="color: #000000">=</span><span class="token punctuation" style="color: #000000">{</span><span class="token plain">store</span><span class="token punctuation" style="color: #000000">}</span><span class="token operator" style="color: #000000">&gt;</span><span class="token plain"></span>
+<span > </span><span class="token operator" style="color: #000000">&lt;</span><span class="token maybe-class-name">Provider</span><span > store</span><span class="token operator" style="color: #000000">=</span><span class="token punctuation" style="color: #000000">{</span><span >store</span><span class="token punctuation" style="color: #000000">}</span><span class="token operator" style="color: #000000">&gt;</span><span ></span>
 
-<span class="token plain"> </span><span class="token operator" style="color: #000000">&lt;</span><span class="token maybe-class-name">App</span><span class="token plain"> </span><span class="token operator" style="color: #000000">/</span><span class="token operator" style="color: #000000">&gt;</span><span class="token plain"></span>
+<span > </span><span class="token operator" style="color: #000000">&lt;</span><span class="token maybe-class-name">App</span><span > </span><span class="token operator" style="color: #000000">/</span><span class="token operator" style="color: #000000">&gt;</span><span ></span>
 
-<span class="token plain"> </span><span class="token operator" style="color: #000000">&lt;</span><span class="token operator" style="color: #000000">/</span><span class="token maybe-class-name">Provider</span><span class="token operator" style="color: #000000">&gt;</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token operator" style="color: #000000">&lt;</span><span class="token operator" style="color: #000000">/</span><span class="token maybe-class-name">Provider</span><span class="token operator" style="color: #000000">&gt;</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> </span><span class="token dom variable" style="color: #000000">document</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">getElementById</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'root'</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token dom variable" style="color: #000000">document</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">getElementById</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'root'</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">)</span>### <span id="create-a-redux-state-slice" class="anchor enhancedAnchor_2LWZ"></span>Create a Redux State Slice<a href="#create-a-redux-state-slice" class="hash-link" title="Direct link to heading">#</a>
+<span ></span><span class="token punctuation" style="color: #000000">)</span>### <span id="create-a-redux-state-slice" class="anchor enhancedAnchor_2LWZ"></span>Create a Redux State Slice<a href="#create-a-redux-state-slice" class="hash-link" title="Direct link to heading">#</a>
 
 Add a new file named `src/features/counter/counterSlice.js`. In that file, import the `createSlice` API from Redux Toolkit.
 
@@ -192,143 +195,143 @@ Redux requires that [we write all state updates immutably, by making copies of d
 
 features/counter/counterSlice.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #000000">{</span><span > createSlice </span><span class="token imports punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span > </span><span class="token imports punctuation" style="color: #000000">{</span><span > createSlice </span><span class="token imports punctuation" style="color: #000000">}</span><span > </span><span class="token keyword module" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> counterSlice </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createSlice</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">export</span><span > </span><span class="token keyword" style="color: #f92672">const</span><span > counterSlice </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token function" style="color: #e6d874">createSlice</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> name</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'counter'</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > name</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token string" style="color: #a6e22e">'counter'</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> initialState</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > initialState</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> value</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">0</span><span class="token plain"></span>
+<span > value</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token number" style="color: #ae81ff">0</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> reducers</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > reducers</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">increment</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token parameter">state</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token function-variable function" style="color: #e6d874">increment</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token parameter">state</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Redux Toolkit allows us to write "mutating" logic in reducers. It</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// Redux Toolkit allows us to write "mutating" logic in reducers. It</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// doesn't actually mutate the state because it uses the Immer library,</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// doesn't actually mutate the state because it uses the Immer library,</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// which detects changes to a "draft state" and produces a brand new</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// which detects changes to a "draft state" and produces a brand new</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// immutable state based off those changes</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// immutable state based off those changes</span><span ></span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">value</span><span class="token plain"> </span><span class="token operator" style="color: #000000">+=</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token plain"></span>
+<span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">value</span><span > </span><span class="token operator" style="color: #000000">+=</span><span > </span><span class="token number" style="color: #ae81ff">1</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">decrement</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token parameter">state</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token function-variable function" style="color: #e6d874">decrement</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token parameter">state</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">value</span><span class="token plain"> </span><span class="token operator" style="color: #000000">-=</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token plain"></span>
+<span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">value</span><span > </span><span class="token operator" style="color: #000000">-=</span><span > </span><span class="token number" style="color: #ae81ff">1</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">incrementByAmount</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token function-variable function" style="color: #e6d874">incrementByAmount</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">value</span><span class="token plain"> </span><span class="token operator" style="color: #000000">+=</span><span class="token plain"> action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token plain"></span>
+<span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">value</span><span > </span><span class="token operator" style="color: #000000">+=</span><span > action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Action creators are generated for each case reducer function</span><span class="token plain"></span>
+<span ></span><span class="token comment" style="color: #c6cad2">// Action creators are generated for each case reducer function</span><span ></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> increment</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> decrement</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> incrementByAmount </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> counterSlice</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">actions</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">export</span><span > </span><span class="token keyword" style="color: #f92672">const</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span > increment</span><span class="token punctuation" style="color: #000000">,</span><span > decrement</span><span class="token punctuation" style="color: #000000">,</span><span > incrementByAmount </span><span class="token punctuation" style="color: #000000">}</span><span > </span><span class="token operator" style="color: #000000">=</span><span > counterSlice</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">actions</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> counterSlice</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">reducer</span>### <span id="add-slice-reducers-to-the-store" class="anchor enhancedAnchor_2LWZ"></span>Add Slice Reducers to the Store<a href="#add-slice-reducers-to-the-store" class="hash-link" title="Direct link to heading">#</a>
+<span ></span><span class="token keyword module" style="color: #f92672">export</span><span > </span><span class="token keyword module" style="color: #f92672">default</span><span > counterSlice</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">reducer</span>### <span id="add-slice-reducers-to-the-store" class="anchor enhancedAnchor_2LWZ"></span>Add Slice Reducers to the Store<a href="#add-slice-reducers-to-the-store" class="hash-link" title="Direct link to heading">#</a>
 
 Next, we need to import the reducer function from the counter slice and add it to our store. By defining a field inside the `reducers` parameter, we tell the store to use this slice reducer function to handle all updates to that state.
 
 app/store.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #000000">{</span><span > configureStore </span><span class="token imports punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span > </span><span class="token imports punctuation" style="color: #000000">{</span><span > configureStore </span><span class="token imports punctuation" style="color: #000000">}</span><span > </span><span class="token keyword module" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span ></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >counterReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../features/counter/counterSlice'</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">import</span><span > </span><span >counterReducer</span><span > </span><span class="token keyword module" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'../features/counter/counterSlice'</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">configureStore</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">export</span><span > </span><span class="token keyword module" style="color: #f92672">default</span><span > </span><span class="token function" style="color: #e6d874">configureStore</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> reducer</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > reducer</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> counter</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> counterReducer</span>
+<span > counter</span><span class="token operator" style="color: #000000">:</span><span > counterReducer</span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span>### <span id="use-redux-state-and-actions-in-react-components" class="anchor enhancedAnchor_2LWZ"></span>Use Redux State and Actions in React Components<a href="#use-redux-state-and-actions-in-react-components" class="hash-link" title="Direct link to heading">#</a>
+<span ></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span>### <span id="use-redux-state-and-actions-in-react-components" class="anchor enhancedAnchor_2LWZ"></span>Use Redux State and Actions in React Components<a href="#use-redux-state-and-actions-in-react-components" class="hash-link" title="Direct link to heading">#</a>
 
 Now we can use the React-Redux hooks to let React components interact with the Redux store. We can read data from the store with `useSelector`, and dispatch actions using `useDispatch`. Create a `src/features/counter/Counter.js` file with a `<Counter>` component inside, then import that component into `App.js` and render it inside of `<App>`.
 
 features/counter/Counter.js
 
-<span class="token keyword" style="color: #f92672">import</span><span class="token plain"> React</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> useState </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react'</span><span class="token plain"></span>
+<span class="token keyword" style="color: #f92672">import</span><span > React</span><span class="token punctuation" style="color: #000000">,</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span > useState </span><span class="token punctuation" style="color: #000000">}</span><span > </span><span class="token keyword" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'react'</span><span ></span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">import</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> useSelector</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> useDispatch </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-redux'</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">import</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span > useSelector</span><span class="token punctuation" style="color: #000000">,</span><span > useDispatch </span><span class="token punctuation" style="color: #000000">}</span><span > </span><span class="token keyword" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'react-redux'</span><span ></span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">import</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> decrement</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> increment </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./counterSlice'</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">import</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span > decrement</span><span class="token punctuation" style="color: #000000">,</span><span > increment </span><span class="token punctuation" style="color: #000000">}</span><span > </span><span class="token keyword" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'./counterSlice'</span><span ></span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">import</span><span class="token plain"> styles </span><span class="token keyword" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./Counter.module.css'</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">import</span><span > styles </span><span class="token keyword" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'./Counter.module.css'</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">Counter</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">export</span><span > </span><span class="token keyword" style="color: #f92672">function</span><span > </span><span class="token function" style="color: #e6d874">Counter</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> count </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">useSelector</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=&gt;</span><span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token plain">counter</span><span class="token punctuation" style="color: #000000">.</span><span class="token plain">value</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > count </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token function" style="color: #e6d874">useSelector</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span > </span><span class="token operator" style="color: #000000">=&gt;</span><span > state</span><span class="token punctuation" style="color: #000000">.</span><span >counter</span><span class="token punctuation" style="color: #000000">.</span><span >value</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> dispatch </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">useDispatch</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > dispatch </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token function" style="color: #e6d874">useDispatch</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">(</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">return</span><span > </span><span class="token punctuation" style="color: #000000">(</span><span ></span>
 
-<span class="token plain"> </span><span class="token tag punctuation" style="color: #000000">&lt;</span><span class="token tag" style="color: #f92672">div</span><span class="token tag punctuation" style="color: #000000">&gt;</span><span class="token plain"></span>
+<span > </span><span class="token tag punctuation" style="color: #000000">&lt;</span><span class="token tag" style="color: #f92672">div</span><span class="token tag punctuation" style="color: #000000">&gt;</span><span ></span>
 
-<span class="token plain"> </span><span class="token tag punctuation" style="color: #000000">&lt;</span><span class="token tag" style="color: #f92672">div</span><span class="token tag punctuation" style="color: #000000">&gt;</span><span class="token plain"></span>
+<span > </span><span class="token tag punctuation" style="color: #000000">&lt;</span><span class="token tag" style="color: #f92672">div</span><span class="token tag punctuation" style="color: #000000">&gt;</span><span ></span>
 
-<span class="token plain"> </span><span class="token tag punctuation" style="color: #000000">&lt;</span><span class="token tag" style="color: #f92672">button</span><span class="token tag" style="color: #f92672"></span>
+<span > </span><span class="token tag punctuation" style="color: #000000">&lt;</span><span class="token tag" style="color: #f92672">button</span><span class="token tag" style="color: #f92672"></span>
 
 <span class="token tag" style="color: #f92672"> </span><span class="token tag attr-name" style="color: #a6e22e">aria-label</span><span class="token tag attr-value punctuation attr-equals" style="color: #000000">=</span><span class="token tag attr-value punctuation" style="color: #000000">"</span><span class="token tag attr-value" style="color: #e6d874">Increment value</span><span class="token tag attr-value punctuation" style="color: #000000">"</span><span class="token tag" style="color: #f92672"></span>
 
 <span class="token tag" style="color: #f92672"> </span><span class="token tag attr-name" style="color: #a6e22e">onClick</span><span class="token tag script language-javascript script-punctuation punctuation" style="color: #000000">=</span><span class="token tag script language-javascript punctuation" style="color: #000000">{</span><span class="token tag script language-javascript punctuation" style="color: #000000">(</span><span class="token tag script language-javascript punctuation" style="color: #000000">)</span><span class="token tag script language-javascript" style="color: #f92672"> </span><span class="token tag script language-javascript operator" style="color: #000000">=&gt;</span><span class="token tag script language-javascript" style="color: #f92672"> </span><span class="token tag script language-javascript function" style="color: #e6d874">dispatch</span><span class="token tag script language-javascript punctuation" style="color: #000000">(</span><span class="token tag script language-javascript function" style="color: #e6d874">increment</span><span class="token tag script language-javascript punctuation" style="color: #000000">(</span><span class="token tag script language-javascript punctuation" style="color: #000000">)</span><span class="token tag script language-javascript punctuation" style="color: #000000">)</span><span class="token tag script language-javascript punctuation" style="color: #000000">}</span><span class="token tag" style="color: #f92672"></span>
 
-<span class="token tag" style="color: #f92672"> </span><span class="token tag punctuation" style="color: #000000">&gt;</span><span class="token plain"></span>
+<span class="token tag" style="color: #f92672"> </span><span class="token tag punctuation" style="color: #000000">&gt;</span><span ></span>
 
-<span class="token plain"> Increment</span>
+<span > Increment</span>
 
-<span class="token plain"> </span><span class="token tag punctuation" style="color: #000000">&lt;/</span><span class="token tag" style="color: #f92672">button</span><span class="token tag punctuation" style="color: #000000">&gt;</span><span class="token plain"></span>
+<span > </span><span class="token tag punctuation" style="color: #000000">&lt;/</span><span class="token tag" style="color: #f92672">button</span><span class="token tag punctuation" style="color: #000000">&gt;</span><span ></span>
 
-<span class="token plain"> </span><span class="token tag punctuation" style="color: #000000">&lt;</span><span class="token tag" style="color: #f92672">span</span><span class="token tag punctuation" style="color: #000000">&gt;</span><span class="token punctuation" style="color: #000000">{</span><span class="token plain">count</span><span class="token punctuation" style="color: #000000">}</span><span class="token tag punctuation" style="color: #000000">&lt;/</span><span class="token tag" style="color: #f92672">span</span><span class="token tag punctuation" style="color: #000000">&gt;</span><span class="token plain"></span>
+<span > </span><span class="token tag punctuation" style="color: #000000">&lt;</span><span class="token tag" style="color: #f92672">span</span><span class="token tag punctuation" style="color: #000000">&gt;</span><span class="token punctuation" style="color: #000000">{</span><span >count</span><span class="token punctuation" style="color: #000000">}</span><span class="token tag punctuation" style="color: #000000">&lt;/</span><span class="token tag" style="color: #f92672">span</span><span class="token tag punctuation" style="color: #000000">&gt;</span><span ></span>
 
-<span class="token plain"> </span><span class="token tag punctuation" style="color: #000000">&lt;</span><span class="token tag" style="color: #f92672">button</span><span class="token tag" style="color: #f92672"></span>
+<span > </span><span class="token tag punctuation" style="color: #000000">&lt;</span><span class="token tag" style="color: #f92672">button</span><span class="token tag" style="color: #f92672"></span>
 
 <span class="token tag" style="color: #f92672"> </span><span class="token tag attr-name" style="color: #a6e22e">aria-label</span><span class="token tag attr-value punctuation attr-equals" style="color: #000000">=</span><span class="token tag attr-value punctuation" style="color: #000000">"</span><span class="token tag attr-value" style="color: #e6d874">Decrement value</span><span class="token tag attr-value punctuation" style="color: #000000">"</span><span class="token tag" style="color: #f92672"></span>
 
 <span class="token tag" style="color: #f92672"> </span><span class="token tag attr-name" style="color: #a6e22e">onClick</span><span class="token tag script language-javascript script-punctuation punctuation" style="color: #000000">=</span><span class="token tag script language-javascript punctuation" style="color: #000000">{</span><span class="token tag script language-javascript punctuation" style="color: #000000">(</span><span class="token tag script language-javascript punctuation" style="color: #000000">)</span><span class="token tag script language-javascript" style="color: #f92672"> </span><span class="token tag script language-javascript operator" style="color: #000000">=&gt;</span><span class="token tag script language-javascript" style="color: #f92672"> </span><span class="token tag script language-javascript function" style="color: #e6d874">dispatch</span><span class="token tag script language-javascript punctuation" style="color: #000000">(</span><span class="token tag script language-javascript function" style="color: #e6d874">decrement</span><span class="token tag script language-javascript punctuation" style="color: #000000">(</span><span class="token tag script language-javascript punctuation" style="color: #000000">)</span><span class="token tag script language-javascript punctuation" style="color: #000000">)</span><span class="token tag script language-javascript punctuation" style="color: #000000">}</span><span class="token tag" style="color: #f92672"></span>
 
-<span class="token tag" style="color: #f92672"> </span><span class="token tag punctuation" style="color: #000000">&gt;</span><span class="token plain"></span>
+<span class="token tag" style="color: #f92672"> </span><span class="token tag punctuation" style="color: #000000">&gt;</span><span ></span>
 
-<span class="token plain"> Decrement</span>
+<span > Decrement</span>
 
-<span class="token plain"> </span><span class="token tag punctuation" style="color: #000000">&lt;/</span><span class="token tag" style="color: #f92672">button</span><span class="token tag punctuation" style="color: #000000">&gt;</span><span class="token plain"></span>
+<span > </span><span class="token tag punctuation" style="color: #000000">&lt;/</span><span class="token tag" style="color: #f92672">button</span><span class="token tag punctuation" style="color: #000000">&gt;</span><span ></span>
 
-<span class="token plain"> </span><span class="token tag punctuation" style="color: #000000">&lt;/</span><span class="token tag" style="color: #f92672">div</span><span class="token tag punctuation" style="color: #000000">&gt;</span><span class="token plain"></span>
+<span > </span><span class="token tag punctuation" style="color: #000000">&lt;/</span><span class="token tag" style="color: #f92672">div</span><span class="token tag punctuation" style="color: #000000">&gt;</span><span ></span>
 
-<span class="token plain"> </span><span class="token tag punctuation" style="color: #000000">&lt;/</span><span class="token tag" style="color: #f92672">div</span><span class="token tag punctuation" style="color: #000000">&gt;</span><span class="token plain"></span>
+<span > </span><span class="token tag punctuation" style="color: #000000">&lt;/</span><span class="token tag" style="color: #f92672">div</span><span class="token tag punctuation" style="color: #000000">&gt;</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span>Now, any time you click the "Increment" and "Decrement buttons:
+<span ></span><span class="token punctuation" style="color: #000000">}</span>Now, any time you click the "Increment" and "Decrement buttons:
 
 - The corresponding Redux action will be dispatched to the store
 - The counter slice reducer will see the actions and update its state
@@ -406,5 +409,3 @@ TypeScript Quick Start »
 - [![Deploys by Netlify](../../www.netlify.com/img/global/badges/netlify-color-accent.svg)](../../www.netlify.com/index.html)
 
 <a href="../index.html" class="footerLogoLink_MyFc"><img src="../../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" /><img src="../../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
-
-

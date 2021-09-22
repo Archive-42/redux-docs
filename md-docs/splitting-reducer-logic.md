@@ -29,10 +29,12 @@
   - <a href="../official/introduction/ecosystem.html" class="menu__link">Ecosystem</a>
   - <a href="../official/introduction/examples.html" class="menu__link">Examples</a>
 - <a href="#!" class="menu__link menu__link--sublist">Tutorials</a>
+
   - <a href="../official/tutorials/index.html" class="menu__link">Tutorials Index</a>
   - <a href="../official/tutorials/quick-start.html" class="menu__link">Quick Start</a>
   - <a href="../official/tutorials/typescript-quick-start.html" class="menu__link">TypeScript Quick Start</a>
   - <a href="#!" class="menu__link menu__link--sublist">Redux Essentials</a>
+
     - <a href="../official/tutorials/essentials/part-1-overview-concepts.html" class="menu__link">Redux Overview and Concepts</a>
     - <a href="../official/tutorials/essentials/part-2-app-structure.html" class="menu__link">Redux App Structure</a>
     - <a href="../official/tutorials/essentials/part-3-data-flow.html" class="menu__link">Basic Redux Data Flow</a>
@@ -48,6 +50,7 @@
     - <a href="../official/tutorials/fundamentals/part-6-async-logic.html" class="menu__link">Async Logic and Data Fetching</a>
     - <a href="../official/tutorials/fundamentals/part-7-standard-patterns.html" class="menu__link">Standard Redux Patterns</a>
     - <a href="../official/tutorials/fundamentals/part-8-modern-redux.html" class="menu__link">Modern Redux with Redux Toolkit</a>
+
 - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Recipes</a>
   - <a href="basic-reducer-structure.html" class="menu__link">Basic Reducer Structure</a>
     - <a href="splitting-reducer-logic.html" class="menu__link menu__link--active active">Splitting Reducer Logic</a>
@@ -94,6 +97,7 @@
   - <a href="../official/redux-toolkit/overview.html" class="menu__link">Redux Toolkit: Overview</a>
 
 # <span id="splitting-up-reducer-logic" class="anchor enhancedAnchor_2LWZ">
+
 </span>Splitting Up Reducer Logic<a href="#splitting-up-reducer-logic" class="hash-link" title="Direct link to heading">#</a>
 
 For any meaningful application, putting _all_ your update logic into a single reducer function is quickly going to become unmaintainable. While there's no single rule for how long a function should be, it's generally agreed that functions should be relatively short and ideally only do one specific thing. Because of this, it's good programming practice to take pieces of code that are very long or do many different things, and break them into smaller pieces that are easier to understand.
@@ -150,4 +154,3 @@ Refactoring Reducers Example »
 
 <a href="../official/index.html" class="footerLogoLink_MyFc">
 <img src="../official/../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
-

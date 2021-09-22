@@ -3,6 +3,7 @@
 Menu
 
 <a href="../../index.html" class="navbar__brand"><img src="../../../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><img src="../../../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m navbar__logo" /><strong>Redux</strong></a>- <a href="../../api/api-reference.html" class="menu__link">API</a>
+
 - <a href="../../faq.html" class="menu__link">FAQ</a>
 - <a href="../../style-guide/style-guide.html" class="menu__link">Best Practices</a>
 - <a href="../../../github.com/reduxjs/redux.html" class="menu__link">GitHub</a>
@@ -18,10 +19,12 @@ Menu
   - <a href="../../introduction/ecosystem.html" class="menu__link">Ecosystem</a>
   - <a href="../../introduction/examples.html" class="menu__link">Examples</a>
 - <a href="#!" class="menu__link menu__link--sublist">Tutorials</a>
+
   - <a href="../../tutorials/index.html" class="menu__link">Tutorials Index</a>
   - <a href="../../tutorials/quick-start.html" class="menu__link">Quick Start</a>
   - <a href="../../tutorials/typescript-quick-start.html" class="menu__link">TypeScript Quick Start</a>
   - <a href="#!" class="menu__link menu__link--sublist">Redux Essentials</a>
+
     - <a href="../../tutorials/essentials/part-1-overview-concepts.html" class="menu__link">Redux Overview and Concepts</a>
     - <a href="../../tutorials/essentials/part-2-app-structure.html" class="menu__link">Redux App Structure</a>
     - <a href="../../tutorials/essentials/part-3-data-flow.html" class="menu__link">Basic Redux Data Flow</a>
@@ -38,11 +41,8 @@ Menu
     - <a href="../../tutorials/fundamentals/part-7-standard-patterns.html" class="menu__link">Standard Redux Patterns</a>
     - <a href="../../tutorials/fundamentals/part-8-modern-redux.html" class="menu__link">Modern Redux with Redux Toolkit</a>
 
-
-
     - <a href="motivation.html" class="menu__link menu__link--active active">Motivation</a>
     - <a href="three-principles.html" class="menu__link">Three Principles</a>
-
 
 # <span id="motivation" class="anchor enhancedAnchor_2LWZ"></span>Motivation<a href="#motivation" class="hash-link" title="Direct link to heading">#</a>
 
@@ -66,10 +66,4 @@ Next
 
 Three Principles »
 
-
-
-
-
 <img src="../../../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
-
-

@@ -96,37 +96,37 @@ Before we dive into some actual code, let's talk about some of the terms and con
 
 Let's start by looking at a small React counter component. It tracks a number in component state, and increments the number when a button is clicked:
 
-<span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">Counter</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span class="token keyword" style="color: #f92672">function</span><span > </span><span class="token function" style="color: #e6d874">Counter</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// State: a counter value</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// State: a counter value</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">\[</span><span class="token plain">counter</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> setCounter</span><span class="token punctuation" style="color: #000000">\]</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">useState</span><span class="token punctuation" style="color: #000000">(</span><span class="token number" style="color: #ae81ff">0</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > </span><span class="token punctuation" style="color: #000000">\[</span><span >counter</span><span class="token punctuation" style="color: #000000">,</span><span > setCounter</span><span class="token punctuation" style="color: #000000">\]</span><span > </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token function" style="color: #e6d874">useState</span><span class="token punctuation" style="color: #000000">(</span><span class="token number" style="color: #ae81ff">0</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Action: code that causes an update to the state when something happens</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// Action: code that causes an update to the state when something happens</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">increment</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > </span><span class="token function-variable function" style="color: #e6d874">increment</span><span > </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token operator" style="color: #000000">=&gt;</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">setCounter</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">prevCounter</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=&gt;</span><span class="token plain"> prevCounter </span><span class="token operator" style="color: #000000">+</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token function" style="color: #e6d874">setCounter</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">prevCounter</span><span > </span><span class="token operator" style="color: #000000">=&gt;</span><span > prevCounter </span><span class="token operator" style="color: #000000">+</span><span > </span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// View: the UI definition</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// View: the UI definition</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">(</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">return</span><span > </span><span class="token punctuation" style="color: #000000">(</span><span ></span>
 
-<span class="token plain"> </span><span class="token tag punctuation" style="color: #000000">&lt;</span><span class="token tag" style="color: #f92672">div</span><span class="token tag punctuation" style="color: #000000">&gt;</span><span class="token plain"></span>
+<span > </span><span class="token tag punctuation" style="color: #000000">&lt;</span><span class="token tag" style="color: #f92672">div</span><span class="token tag punctuation" style="color: #000000">&gt;</span><span ></span>
 
-<span class="token plain"> Value</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain">counter</span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token tag punctuation" style="color: #000000">&lt;</span><span class="token tag" style="color: #f92672">button</span><span class="token tag" style="color: #f92672"> </span><span class="token tag attr-name" style="color: #a6e22e">onClick</span><span class="token tag script language-javascript script-punctuation punctuation" style="color: #000000">=</span><span class="token tag script language-javascript punctuation" style="color: #000000">{</span><span class="token tag script language-javascript" style="color: #f92672">increment</span><span class="token tag script language-javascript punctuation" style="color: #000000">}</span><span class="token tag punctuation" style="color: #000000">&gt;</span><span class="token plain">Increment</span><span class="token tag punctuation" style="color: #000000">&lt;/</span><span class="token tag" style="color: #f92672">button</span><span class="token tag punctuation" style="color: #000000">&gt;</span><span class="token plain"></span>
+<span > Value</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span >counter</span><span class="token punctuation" style="color: #000000">}</span><span > </span><span class="token tag punctuation" style="color: #000000">&lt;</span><span class="token tag" style="color: #f92672">button</span><span class="token tag" style="color: #f92672"> </span><span class="token tag attr-name" style="color: #a6e22e">onClick</span><span class="token tag script language-javascript script-punctuation punctuation" style="color: #000000">=</span><span class="token tag script language-javascript punctuation" style="color: #000000">{</span><span class="token tag script language-javascript" style="color: #f92672">increment</span><span class="token tag script language-javascript punctuation" style="color: #000000">}</span><span class="token tag punctuation" style="color: #000000">&gt;</span><span >Increment</span><span class="token tag punctuation" style="color: #000000">&lt;/</span><span class="token tag" style="color: #f92672">button</span><span class="token tag punctuation" style="color: #000000">&gt;</span><span ></span>
 
-<span class="token plain"> </span><span class="token tag punctuation" style="color: #000000">&lt;/</span><span class="token tag" style="color: #f92672">div</span><span class="token tag punctuation" style="color: #000000">&gt;</span><span class="token plain"></span>
+<span > </span><span class="token tag punctuation" style="color: #000000">&lt;/</span><span class="token tag" style="color: #f92672">div</span><span class="token tag punctuation" style="color: #000000">&gt;</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span>It is a self-contained app with the following parts:
+<span ></span><span class="token punctuation" style="color: #000000">}</span>It is a self-contained app with the following parts:
 
 - The **state**, the source of truth that drives our app;
 - The **view**, a declarative description of the UI based on the current state
@@ -155,81 +155,81 @@ This is the basic idea behind Redux: a single centralized place to contain the g
 
 JavaScript objects and arrays are all mutable by default. If I create an object, I can change the contents of its fields. If I create an array, I can change the contents as well:
 
-<span class="token keyword" style="color: #f92672">const</span><span class="token plain"> obj </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> a</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> b</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">2</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span class="token keyword" style="color: #f92672">const</span><span > obj </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span > a</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #000000">,</span><span > b</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token number" style="color: #ae81ff">2</span><span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// still the same object outside, but the contents have changed</span><span class="token plain"></span>
+<span ></span><span class="token comment" style="color: #c6cad2">// still the same object outside, but the contents have changed</span><span ></span>
 
-<span class="token plain">obj</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">b</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">3</span><span class="token plain"></span>
+<span >obj</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">b</span><span > </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token number" style="color: #ae81ff">3</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> arr </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">\[</span><span class="token string" style="color: #a6e22e">'a'</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'b'</span><span class="token punctuation" style="color: #000000">\]</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">const</span><span > arr </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token punctuation" style="color: #000000">\[</span><span class="token string" style="color: #a6e22e">'a'</span><span class="token punctuation" style="color: #000000">,</span><span > </span><span class="token string" style="color: #a6e22e">'b'</span><span class="token punctuation" style="color: #000000">\]</span><span ></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// In the same way, we can change the contents of this array</span><span class="token plain"></span>
+<span ></span><span class="token comment" style="color: #c6cad2">// In the same way, we can change the contents of this array</span><span ></span>
 
-<span class="token plain">arr</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">push</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'c'</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span >arr</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">push</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'c'</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain">arr</span><span class="token punctuation" style="color: #000000">\[</span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #000000">\]</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'d'</span>This is called _mutating_ the object or array. It's the same object or array reference in memory, but now the contents inside the object have changed.
+<span >arr</span><span class="token punctuation" style="color: #000000">\[</span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #000000">\]</span><span > </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token string" style="color: #a6e22e">'d'</span>This is called _mutating_ the object or array. It's the same object or array reference in memory, but now the contents inside the object have changed.
 
 **In order to update values immutably, your code must make _copies_ of existing objects/arrays, and then modify the copies**.
 
 We can do this by hand using JavaScript's array / object spread operators, as well as array methods that return new copies of the array instead of mutating the original array:
 
-<span class="token keyword" style="color: #f92672">const</span><span class="token plain"> obj </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span class="token keyword" style="color: #f92672">const</span><span > obj </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> a</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > a</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// To safely update obj.a.c, we have to copy each piece</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// To safely update obj.a.c, we have to copy each piece</span><span ></span>
 
-<span class="token plain"> c</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">3</span><span class="token plain"></span>
+<span > c</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token number" style="color: #ae81ff">3</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> b</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">2</span><span class="token plain"></span>
+<span > b</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token number" style="color: #ae81ff">2</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span ></span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> obj2 </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">const</span><span > obj2 </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// copy obj</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// copy obj</span><span ></span>
 
-<span class="token plain"> </span><span class="token spread operator" style="color: #000000">...</span><span class="token plain">obj</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token spread operator" style="color: #000000">...</span><span >obj</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// overwrite a</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// overwrite a</span><span ></span>
 
-<span class="token plain"> a</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > a</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// copy obj.a</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// copy obj.a</span><span ></span>
 
-<span class="token plain"> </span><span class="token spread operator" style="color: #000000">...</span><span class="token plain">obj</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">a</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token spread operator" style="color: #000000">...</span><span >obj</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">a</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// overwrite c</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// overwrite c</span><span ></span>
 
-<span class="token plain"> c</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">42</span><span class="token plain"></span>
+<span > c</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token number" style="color: #ae81ff">42</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span ></span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> arr </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">\[</span><span class="token string" style="color: #a6e22e">'a'</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'b'</span><span class="token punctuation" style="color: #000000">\]</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">const</span><span > arr </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token punctuation" style="color: #000000">\[</span><span class="token string" style="color: #a6e22e">'a'</span><span class="token punctuation" style="color: #000000">,</span><span > </span><span class="token string" style="color: #a6e22e">'b'</span><span class="token punctuation" style="color: #000000">\]</span><span ></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Create a new copy of arr, with "c" appended to the end</span><span class="token plain"></span>
+<span ></span><span class="token comment" style="color: #c6cad2">// Create a new copy of arr, with "c" appended to the end</span><span ></span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> arr2 </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> arr</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">concat</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'c'</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">const</span><span > arr2 </span><span class="token operator" style="color: #000000">=</span><span > arr</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">concat</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'c'</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// or, we can make a copy of the original array:</span><span class="token plain"></span>
+<span ></span><span class="token comment" style="color: #c6cad2">// or, we can make a copy of the original array:</span><span ></span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> arr3 </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> arr</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">slice</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">const</span><span > arr3 </span><span class="token operator" style="color: #000000">=</span><span > arr</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">slice</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// and mutate the copy:</span><span class="token plain"></span>
+<span ></span><span class="token comment" style="color: #c6cad2">// and mutate the copy:</span><span ></span>
 
-<span class="token plain">arr3</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">push</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'c'</span><span class="token punctuation" style="color: #000000">)</span>**Redux expects that all state updates are done immutably**. We'll look at where and how this is important a bit later, as well as some easier ways to write immutable update logic.
+<span >arr3</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">push</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'c'</span><span class="token punctuation" style="color: #000000">)</span>**Redux expects that all state updates are done immutably**. We'll look at where and how this is important a bit later, as well as some easier ways to write immutable update logic.
 
 ##### <span class="admonition-icon"> </span>Want to Know More?
 
@@ -252,13 +252,13 @@ An action object can have other fields with additional information about what ha
 
 A typical action object might look like this:
 
-<span class="token keyword" style="color: #f92672">const</span><span class="token plain"> addTodoAction </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span class="token keyword" style="color: #f92672">const</span><span > addTodoAction </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> type</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos/todoAdded'</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > type</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token string" style="color: #a6e22e">'todos/todoAdded'</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> payload</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'Buy milk'</span><span class="token plain"></span>
+<span > payload</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token string" style="color: #a6e22e">'Buy milk'</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span>### <span id="reducers" class="anchor enhancedAnchor_2LWZ"></span>Reducers<a href="#reducers" class="hash-link" title="Direct link to heading">#</a>
+<span ></span><span class="token punctuation" style="color: #000000">}</span>### <span id="reducers" class="anchor enhancedAnchor_2LWZ"></span>Reducers<a href="#reducers" class="hash-link" title="Direct link to heading">#</a>
 
 A **reducer** is a function that receives the current `state` and an `action` object, decides how to update the state if necessary, and returns the new state: `(state, action) => newState`. **You can think of a reducer as an event listener which handles events based on the received action (event) type.**
 
@@ -282,35 +282,35 @@ The logic inside reducer functions typically follows the same series of steps:
 
 Here's a small example of a reducer, showing the steps that each reducer should follow:
 
-<span class="token keyword" style="color: #f92672">const</span><span class="token plain"> initialState </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> value</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">0</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span class="token keyword" style="color: #f92672">const</span><span > initialState </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span > value</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token number" style="color: #ae81ff">0</span><span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">counterReducer</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state </span><span class="token parameter operator" style="color: #000000">=</span><span class="token parameter"> initialState</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">function</span><span > </span><span class="token function" style="color: #e6d874">counterReducer</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state </span><span class="token parameter operator" style="color: #000000">=</span><span class="token parameter"> initialState</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Check to see if the reducer cares about this action</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// Check to see if the reducer cares about this action</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">if</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">type</span><span class="token plain"> </span><span class="token operator" style="color: #000000">===</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'counter/incremented'</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token keyword control-flow" style="color: #f92672">if</span><span > </span><span class="token punctuation" style="color: #000000">(</span><span >action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">type</span><span > </span><span class="token operator" style="color: #000000">===</span><span > </span><span class="token string" style="color: #a6e22e">'counter/incremented'</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// If so, make a copy of \`state\`</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// If so, make a copy of \`state\`</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token keyword control-flow" style="color: #f92672">return</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token spread operator" style="color: #000000">...</span><span class="token plain">state</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token spread operator" style="color: #000000">...</span><span >state</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// and update the copy with the new value</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// and update the copy with the new value</span><span ></span>
 
-<span class="token plain"> value</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">value</span><span class="token plain"> </span><span class="token operator" style="color: #000000">+</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token plain"></span>
+<span > value</span><span class="token operator" style="color: #000000">:</span><span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">value</span><span > </span><span class="token operator" style="color: #000000">+</span><span > </span><span class="token number" style="color: #ae81ff">1</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// otherwise return the existing state unchanged</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// otherwise return the existing state unchanged</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> state</span>
+<span > </span><span class="token keyword control-flow" style="color: #f92672">return</span><span > state</span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span>Reducers can use any kind of logic inside to decide what the new state should be: `if/else`, `switch`, loops, and so on.
+<span ></span><span class="token punctuation" style="color: #000000">}</span>Reducers can use any kind of logic inside to decide what the new state should be: `if/else`, `switch`, loops, and so on.
 
 #### Detailed Explanation: Why Are They Called 'Reducers?'
 
@@ -325,63 +325,63 @@ The first time that the callback runs, there isn't a `previousResult` available,
 
 If we wanted to add together an array of numbers to find out what the total is, we could write a reduce callback that looks like this:
 
-<span class="token keyword" style="color: #f92672">const</span><span class="token plain"> numbers </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">\[</span><span class="token number" style="color: #ae81ff">2</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">5</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">8</span><span class="token punctuation" style="color: #000000">\]</span><span class="token plain"></span>
+<span class="token keyword" style="color: #f92672">const</span><span > numbers </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token punctuation" style="color: #000000">\[</span><span class="token number" style="color: #ae81ff">2</span><span class="token punctuation" style="color: #000000">,</span><span > </span><span class="token number" style="color: #ae81ff">5</span><span class="token punctuation" style="color: #000000">,</span><span > </span><span class="token number" style="color: #ae81ff">8</span><span class="token punctuation" style="color: #000000">\]</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">addNumbers</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">previousResult</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> currentItem</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">const</span><span > </span><span class="token function-variable function" style="color: #e6d874">addNumbers</span><span > </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">previousResult</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> currentItem</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token console class-name">console</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> previousResult</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> currentItem </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token console class-name">console</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span > previousResult</span><span class="token punctuation" style="color: #000000">,</span><span > currentItem </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> previousResult </span><span class="token operator" style="color: #000000">+</span><span class="token plain"> currentItem</span>
+<span > </span><span class="token keyword control-flow" style="color: #f92672">return</span><span > previousResult </span><span class="token operator" style="color: #000000">+</span><span > currentItem</span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span ></span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> initialValue </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">0</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">const</span><span > initialValue </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token number" style="color: #ae81ff">0</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> total </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> numbers</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">reduce</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">addNumbers</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> initialValue</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">const</span><span > total </span><span class="token operator" style="color: #000000">=</span><span > numbers</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">reduce</span><span class="token punctuation" style="color: #000000">(</span><span >addNumbers</span><span class="token punctuation" style="color: #000000">,</span><span > initialValue</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// {previousResult: 0, currentItem: 2}</span><span class="token plain"></span>
+<span ></span><span class="token comment" style="color: #c6cad2">// {previousResult: 0, currentItem: 2}</span><span ></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// {previousResult: 2, currentItem: 5}</span><span class="token plain"></span>
+<span ></span><span class="token comment" style="color: #c6cad2">// {previousResult: 2, currentItem: 5}</span><span ></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// {previousResult: 7, currentItem: 8}</span><span class="token plain"></span>
+<span ></span><span class="token comment" style="color: #c6cad2">// {previousResult: 7, currentItem: 8}</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">total</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #000000">(</span><span >total</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// 15</span>Notice that this `addNumbers` "reduce callback" function doesn't need to keep track of anything itself. It takes the `previousResult` and `currentItem` arguments, does something with them, and returns a new result value.
+<span ></span><span class="token comment" style="color: #c6cad2">// 15</span>Notice that this `addNumbers` "reduce callback" function doesn't need to keep track of anything itself. It takes the `previousResult` and `currentItem` arguments, does something with them, and returns a new result value.
 
 **A Redux reducer function is exactly the same idea as this "reduce callback" function!** It takes a "previous result" (the `state`), and the "current item" (the `action` object), decides a new state value based on those arguments, and returns that new state.
 
 If we were to create an array of Redux actions, call `reduce()`, and pass in a reducer function, we'd get a final result the same way:
 
-<span class="token keyword" style="color: #f92672">const</span><span class="token plain"> actions </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">\[</span><span class="token plain"></span>
+<span class="token keyword" style="color: #f92672">const</span><span > actions </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token punctuation" style="color: #000000">\[</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> type</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'counter/incremented'</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">{</span><span > type</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token string" style="color: #a6e22e">'counter/incremented'</span><span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> type</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'counter/incremented'</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">{</span><span > type</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token string" style="color: #a6e22e">'counter/incremented'</span><span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> type</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'counter/incremented'</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">{</span><span > type</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token string" style="color: #a6e22e">'counter/incremented'</span><span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">\]</span><span class="token plain"></span>
+<span ></span><span class="token punctuation" style="color: #000000">\]</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> initialState </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> value</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">0</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">const</span><span > initialState </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span > value</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token number" style="color: #ae81ff">0</span><span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> finalResult </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> actions</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">reduce</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">counterReducer</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> initialState</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">const</span><span > finalResult </span><span class="token operator" style="color: #000000">=</span><span > actions</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">reduce</span><span class="token punctuation" style="color: #000000">(</span><span >counterReducer</span><span class="token punctuation" style="color: #000000">,</span><span > initialState</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">finalResult</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #000000">(</span><span >finalResult</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// {value: 3}</span>We can say that **Redux reducers reduce a set of actions (over time) into a single state**. The difference is that with `Array.reduce()` it happens all at once, and with Redux, it happens over the lifetime of your running app.
+<span ></span><span class="token comment" style="color: #c6cad2">// {value: 3}</span>We can say that **Redux reducers reduce a set of actions (over time) into a single state**. The difference is that with `Array.reduce()` it happens all at once, and with Redux, it happens over the lifetime of your running app.
 
 ### <span id="store" class="anchor enhancedAnchor_2LWZ"></span>Store<a href="#store" class="hash-link" title="Direct link to heading">#</a>
 
@@ -389,41 +389,41 @@ The current Redux application state lives in an object called the **store** .
 
 The store is created by passing in a reducer, and has a method called `getState` that returns the current state value:
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #000000">{</span><span > configureStore </span><span class="token imports punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span > </span><span class="token imports punctuation" style="color: #000000">{</span><span > configureStore </span><span class="token imports punctuation" style="color: #000000">}</span><span > </span><span class="token keyword module" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> store </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">configureStore</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> reducer</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> counterReducer </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">const</span><span > store </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token function" style="color: #e6d874">configureStore</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span > reducer</span><span class="token operator" style="color: #000000">:</span><span > counterReducer </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #000000">(</span><span >store</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// {value: 0}</span>### <span id="dispatch" class="anchor enhancedAnchor_2LWZ"></span>Dispatch<a href="#dispatch" class="hash-link" title="Direct link to heading">#</a>
+<span ></span><span class="token comment" style="color: #c6cad2">// {value: 0}</span>### <span id="dispatch" class="anchor enhancedAnchor_2LWZ"></span>Dispatch<a href="#dispatch" class="hash-link" title="Direct link to heading">#</a>
 
 The Redux store has a method called `dispatch`. **The only way to update the state is to call `store.dispatch()` and pass in an action object**. The store will run its reducer function and save the new state value inside, and we can call `getState()` to retrieve the updated value:
 
-<span class="token plain">store</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> type</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'counter/incremented'</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span >store</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span > type</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token string" style="color: #a6e22e">'counter/incremented'</span><span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #000000">(</span><span >store</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// {value: 1}</span>**You can think of dispatching actions as "triggering an event"** in the application. Something happened, and we want the store to know about it. Reducers act like event listeners, and when they hear an action they are interested in, they update the state in response.
+<span ></span><span class="token comment" style="color: #c6cad2">// {value: 1}</span>**You can think of dispatching actions as "triggering an event"** in the application. Something happened, and we want the store to know about it. Reducers act like event listeners, and when they hear an action they are interested in, they update the state in response.
 
 ### <span id="selectors" class="anchor enhancedAnchor_2LWZ"></span>Selectors<a href="#selectors" class="hash-link" title="Direct link to heading">#</a>
 
 **Selectors** are functions that know how to extract specific pieces of information from a store state value. As an application grows bigger, this can help avoid repeating logic as different parts of the app need to read the same data:
 
-<span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">selectCounterValue</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token parameter">state</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">value</span><span class="token plain"></span>
+<span class="token keyword" style="color: #f92672">const</span><span > </span><span class="token function-variable function" style="color: #e6d874">selectCounterValue</span><span > </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token parameter">state</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">value</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> currentValue </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">selectCounterValue</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">const</span><span > currentValue </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token function" style="color: #e6d874">selectCounterValue</span><span class="token punctuation" style="color: #000000">(</span><span >store</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">currentValue</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #000000">(</span><span >currentValue</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// 2</span>## <span id="core-concepts-and-principles" class="anchor enhancedAnchor_2LWZ"></span>Core Concepts and Principles<a href="#core-concepts-and-principles" class="hash-link" title="Direct link to heading">#</a>
+<span ></span><span class="token comment" style="color: #c6cad2">// 2</span>## <span id="core-concepts-and-principles" class="anchor enhancedAnchor_2LWZ"></span>Core Concepts and Principles<a href="#core-concepts-and-principles" class="hash-link" title="Direct link to heading">#</a>
 
 Overall, we can summarize the intent behind Redux's design in three core concepts:
 

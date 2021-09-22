@@ -19,10 +19,12 @@
   - <a href="../official/introduction/ecosystem.html" class="menu__link">Ecosystem</a>
   - <a href="../official/introduction/examples.html" class="menu__link">Examples</a>
 - <a href="#!" class="menu__link menu__link--sublist">Tutorials</a>
+
   - <a href="../official/tutorials/index.html" class="menu__link">Tutorials Index</a>
   - <a href="../official/tutorials/quick-start.html" class="menu__link">Quick Start</a>
   - <a href="../official/tutorials/typescript-quick-start.html" class="menu__link">TypeScript Quick Start</a>
   - <a href="#!" class="menu__link menu__link--sublist">Redux Essentials</a>
+
     - <a href="../official/tutorials/essentials/part-1-overview-concepts.html" class="menu__link">Redux Overview and Concepts</a>
     - <a href="../official/tutorials/essentials/part-2-app-structure.html" class="menu__link">Redux App Structure</a>
     - <a href="../official/tutorials/essentials/part-3-data-flow.html" class="menu__link">Basic Redux Data Flow</a>
@@ -38,6 +40,7 @@
     - <a href="../official/tutorials/fundamentals/part-6-async-logic.html" class="menu__link">Async Logic and Data Fetching</a>
     - <a href="../official/tutorials/fundamentals/part-7-standard-patterns.html" class="menu__link">Standard Redux Patterns</a>
     - <a href="../official/tutorials/fundamentals/part-8-modern-redux.html" class="menu__link">Modern Redux with Redux Toolkit</a>
+
 - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Recipes</a>
   - <a href="immutable-update-patterns.html" class="menu__link menu__link--active active">Immutable Update Patterns</a>
   - <a href="initializing-state.html" class="menu__link">Initializing State</a>

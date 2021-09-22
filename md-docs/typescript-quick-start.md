@@ -31,10 +31,12 @@
   - <a href="../introduction/ecosystem.html" class="menu__link">Ecosystem</a>
   - <a href="../introduction/examples.html" class="menu__link">Examples</a>
 - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Tutorials</a>
+
   - <a href="index.html" class="menu__link">Tutorials Index</a>
   - <a href="quick-start.html" class="menu__link">Quick Start</a>
   - <a href="typescript-quick-start.html" class="menu__link menu__link--active active">TypeScript Quick Start</a>
   - <a href="#!" class="menu__link menu__link--sublist">Redux Essentials</a>
+
     - <a href="essentials/part-1-overview-concepts.html" class="menu__link">Redux Overview and Concepts</a>
     - <a href="essentials/part-2-app-structure.html" class="menu__link">Redux App Structure</a>
     - <a href="essentials/part-3-data-flow.html" class="menu__link">Basic Redux Data Flow</a>
@@ -77,6 +79,7 @@
     - <a href="../recipes/structuring-reducers/reusing-reducer-logic.html" class="menu__link">Reusing Reducer Logic</a>
     - <a href="../recipes/structuring-reducers/immutable-update-patterns.html" class="menu__link">Immutable Update Patterns</a>
     - <a href="../recipes/structuring-reducers/initializing-state.html" class="menu__link">Initializing State</a>
+
 - <a href="#!" class="menu__link menu__link--sublist">Understanding Redux</a>
   - <a href="#!" class="menu__link menu__link--sublist">Thinking in Redux</a>
     - <a href="../understanding/thinking-in-redux/motivation.html" class="menu__link">Motivation</a>
@@ -112,6 +115,7 @@
   - <a href="../redux-toolkit/overview.html" class="menu__link">Redux Toolkit: Overview</a>
 
 # <span id="redux-toolkit-typescript-quick-start" class="anchor enhancedAnchor_2LWZ">
+
 </span>Redux Toolkit TypeScript Quick Start<a href="#redux-toolkit-typescript-quick-start" class="hash-link" title="Direct link to heading">#</a>
 
 ##### <span class="admonition-icon"> </span>What You'll Learn
@@ -125,6 +129,7 @@
 - Understanding of TypeScript syntax and concepts
 
 ## <span id="introduction" class="anchor enhancedAnchor_2LWZ">
+
 </span>Introduction<a href="#introduction" class="hash-link" title="Direct link to heading">#</a>
 
 Welcome to the Redux Toolkit TypeScript Quick Start tutorial! **This tutorial will briefly show how to use TypeScript with Redux Toolkit**.
@@ -140,9 +145,11 @@ As of React Redux v7.2.3, the `react-redux` package has a dependency on `@types/
 The [Redux+TS template for Create-React-App](../../github.com/reduxjs/cra-template-redux-typescript.html) comes with a working example of these patterns already configured.
 
 ## <span id="project-setup" class="anchor enhancedAnchor_2LWZ">
+
 </span>Project Setup<a href="#project-setup" class="hash-link" title="Direct link to heading">#</a>
 
 ### <span id="define-root-state-and-dispatch-types" class="anchor enhancedAnchor_2LWZ">
+
 </span>Define Root State and Dispatch Types<a href="#define-root-state-and-dispatch-types" class="hash-link" title="Direct link to heading">#</a>
 
 [Redux Toolkit's `configureStore` API](../../redux-toolkit.js.org/api/configureStore.html) should not need any additional typings. You will, however, want to extract the `RootState` type and the `Dispatch` type so that they can be referenced as needed. Inferring these types from the store itself means that they correctly update as you add more state slices or modify middleware settings.
@@ -367,6 +374,7 @@ app/hooks.ts
 </span>Application Usage<a href="#application-usage" class="hash-link" title="Direct link to heading">#</a>
 
 ### <span id="define-slice-state-and-action-types" class="anchor enhancedAnchor_2LWZ">
+
 </span>Define Slice State and Action Types<a href="#define-slice-state-and-action-types" class="hash-link" title="Direct link to heading">#</a>
 
 Each slice file should define a type for its initial state value, so that `createSlice` can correctly infer the type of `state` in each case reducer.
@@ -888,5 +896,3 @@ Redux Essentials, Part 1: Redux Overview and Concepts »
 <img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
 <img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" />
 </a>
-
-

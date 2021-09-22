@@ -29,10 +29,12 @@
   - <a href="../official/introduction/ecosystem.html" class="menu__link">Ecosystem</a>
   - <a href="../official/introduction/examples.html" class="menu__link">Examples</a>
 - <a href="#!" class="menu__link menu__link--sublist">Tutorials</a>
+
   - <a href="../official/tutorials/index.html" class="menu__link">Tutorials Index</a>
   - <a href="../official/tutorials/quick-start.html" class="menu__link">Quick Start</a>
   - <a href="../official/tutorials/typescript-quick-start.html" class="menu__link">TypeScript Quick Start</a>
   - <a href="#!" class="menu__link menu__link--sublist">Redux Essentials</a>
+
     - <a href="../official/tutorials/essentials/part-1-overview-concepts.html" class="menu__link">Redux Overview and Concepts</a>
     - <a href="../official/tutorials/essentials/part-2-app-structure.html" class="menu__link">Redux App Structure</a>
     - <a href="../official/tutorials/essentials/part-3-data-flow.html" class="menu__link">Basic Redux Data Flow</a>
@@ -75,14 +77,17 @@
     - <a href="../official/recipes/structuring-reducers/reusing-reducer-logic.html" class="menu__link">Reusing Reducer Logic</a>
     - <a href="../official/recipes/structuring-reducers/immutable-update-patterns.html" class="menu__link">Immutable Update Patterns</a>
     - <a href="../official/recipes/structuring-reducers/initializing-state.html" class="menu__link">Initializing State</a>
+
 - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Understanding Redux</a>
+
   - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Thinking in Redux</a>
 
-
     - <a href="glossary.html" class="menu__link">Glossary</a>
+
   - <a href="#!" class="menu__link menu__link--sublist">History and Design</a>
     - <a href="../history-and-design/prior-art.html" class="menu__link">Prior Art</a>
     - <a href="../history-and-design/middleware.html" class="menu__link">Middleware</a>
+
 - <a href="#!" class="menu__link menu__link--sublist">FAQ</a>
   - <a href="../official/faq.html" class="menu__link">FAQ Index</a>
   - <a href="../official/faq/general.html" class="menu__link">General</a>
@@ -110,11 +115,13 @@
   - <a href="../official/redux-toolkit/overview.html" class="menu__link">Redux Toolkit: Overview</a>
 
 # <span id="three-principles" class="anchor enhancedAnchor_2LWZ">
+
 </span>Three Principles<a href="#three-principles" class="hash-link" title="Direct link to heading">#</a>
 
 Redux can be described in three fundamental principles:
 
 ### <span id="single-source-of-truth" class="anchor enhancedAnchor_2LWZ">
+
 </span>Single source of truth<a href="#single-source-of-truth" class="hash-link" title="Direct link to heading">#</a>
 
 **The [global state](glossary.html#state) of your application is stored in an object tree within a single [store](glossary.html#store).**
@@ -580,4 +587,3 @@ Glossary »
 
 <a href="../official/index.html" class="footerLogoLink_MyFc">
 <img src="../official/../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
-

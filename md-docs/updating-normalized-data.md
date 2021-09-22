@@ -29,10 +29,12 @@
   - <a href="../official/introduction/ecosystem.html" class="menu__link">Ecosystem</a>
   - <a href="../official/introduction/examples.html" class="menu__link">Examples</a>
 - <a href="#!" class="menu__link menu__link--sublist">Tutorials</a>
+
   - <a href="../official/tutorials/index.html" class="menu__link">Tutorials Index</a>
   - <a href="../official/tutorials/quick-start.html" class="menu__link">Quick Start</a>
   - <a href="../official/tutorials/typescript-quick-start.html" class="menu__link">TypeScript Quick Start</a>
   - <a href="#!" class="menu__link menu__link--sublist">Redux Essentials</a>
+
     - <a href="../official/tutorials/essentials/part-1-overview-concepts.html" class="menu__link">Redux Overview and Concepts</a>
     - <a href="../official/tutorials/essentials/part-2-app-structure.html" class="menu__link">Redux App Structure</a>
     - <a href="../official/tutorials/essentials/part-3-data-flow.html" class="menu__link">Basic Redux Data Flow</a>
@@ -48,6 +50,7 @@
     - <a href="../official/tutorials/fundamentals/part-6-async-logic.html" class="menu__link">Async Logic and Data Fetching</a>
     - <a href="../official/tutorials/fundamentals/part-7-standard-patterns.html" class="menu__link">Standard Redux Patterns</a>
     - <a href="../official/tutorials/fundamentals/part-8-modern-redux.html" class="menu__link">Modern Redux with Redux Toolkit</a>
+
 - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Recipes</a>
   - <a href="basic-reducer-structure.html" class="menu__link">Basic Reducer Structure</a>
     - <a href="splitting-reducer-logic.html" class="menu__link">Splitting Reducer Logic</a>
@@ -94,14 +97,17 @@
   - <a href="../official/redux-toolkit/overview.html" class="menu__link">Redux Toolkit: Overview</a>
 
 # <span id="managing-normalized-data" class="anchor enhancedAnchor_2LWZ">
+
 </span>Managing Normalized Data<a href="#managing-normalized-data" class="hash-link" title="Direct link to heading">#</a>
 
 As mentioned in [Normalizing State Shape](normalizing-state-shape.html), the Normalizr library is frequently used to transform nested response data into a normalized shape suitable for integration into the store. However, that doesn't address the issue of executing further updates to that normalized data as it's being used elsewhere in the application. There are a variety of different approaches that you can use, based on your own preference. We'll use the example of handling mutations for Comments on a Post.
 
 ## <span id="standard-approaches" class="anchor enhancedAnchor_2LWZ">
+
 </span>Standard Approaches<a href="#standard-approaches" class="hash-link" title="Direct link to heading">#</a>
 
 ### <span id="simple-merging" class="anchor enhancedAnchor_2LWZ">
+
 </span>Simple Merging<a href="#simple-merging" class="hash-link" title="Direct link to heading">#</a>
 
 One approach is to merge the contents of the action into the existing state. In this case, we can use deep recursive merge, not just a shallow copy, to allow for actions with partial items to update stored items. The Lodash `merge` function can handle this for us:
@@ -223,6 +229,7 @@ One approach is to merge the contents of the action into the existing state. In 
 <span class="token punctuation" style="color: #f8f8f2">}</span>This requires the least amount of work on the reducer side, but does require that the action creator potentially do a fair amount of work to organize the data into the correct shape before the action is dispatched. It also doesn't handle trying to delete an item.
 
 ### <span id="slice-reducer-composition" class="anchor enhancedAnchor_2LWZ">
+
 </span>Slice Reducer Composition<a href="#slice-reducer-composition" class="hash-link" title="Direct link to heading">#</a>
 
 If we have a nested tree of slice reducers, each slice reducer will need to know how to respond to this action appropriately. We will need to include all the relevant data in the action. We need to update the correct Post object with the comment's ID, create a new Comment object using that ID as a key, and include the Comment's ID in the list of all Comment IDs. Here's how the pieces for this might fit together:
@@ -932,9 +939,11 @@ If we have a nested tree of slice reducers, each slice reducer will need to know
 <span class="token punctuation" style="color: #f8f8f2">)</span>The example is a bit long, because it's showing how all the different slice reducers and case reducers fit together. Note the delegation involved here. The `postsById` slice reducer delegates the work for this case to `addComment`, which inserts the new Comment's ID into the correct Post item. Meanwhile, both the `commentsById` and `allComments` slice reducers have their own case reducers, which update the Comments lookup table and list of all Comment IDs appropriately.
 
 ## <span id="other-approaches" class="anchor enhancedAnchor_2LWZ">
+
 </span>Other Approaches<a href="#other-approaches" class="hash-link" title="Direct link to heading">#</a>
 
 ### <span id="task-based-updates" class="anchor enhancedAnchor_2LWZ">
+
 </span>Task-Based Updates<a href="#task-based-updates" class="hash-link" title="Direct link to heading">#</a>
 
 Since reducers are just functions, there's an infinite number of ways to split up this logic. While using slice reducers is the most common, it's also possible to organize behavior in a more task-oriented structure. Because this will often involve more nested updates, you may want to use an immutable update utility library like [dot-prop-immutable](../../../github.com/debitoor/dot-prop-immutable.html) or [object-path-immutable](../../../github.com/mariocasciaro/object-path-immutable.html) to simplify the update statements. Here's an example of what that might look like:
@@ -1306,6 +1315,7 @@ Since reducers are just functions, there's an infinite number of ways to split u
 <span class="token punctuation" style="color: #f8f8f2">;</span>This approach makes it very clear what's happening for the `"ADD_COMMENTS"` case, but it does require nested updating logic, and some specific knowledge of the state tree shape. Depending on how you want to compose your reducer logic, this may or may not be desired.
 
 ### <span id="redux-orm" class="anchor enhancedAnchor_2LWZ">
+
 </span>Redux-ORM<a href="#redux-orm" class="hash-link" title="Direct link to heading">#</a>
 
 The [Redux-ORM](../../../github.com/redux-orm/redux-orm.html) library provides a very useful abstraction layer for managing normalized data in a Redux store. It allows you to declare Model classes and define relations between them. It can then generate the empty "tables" for your data types, act as a specialized selector tool for looking up the data, and perform immutable updates on that data.
@@ -2169,4 +2179,3 @@ Reusing Reducer Logic »
 
 <a href="../official/index.html" class="footerLogoLink_MyFc">
 <img src="../official/../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
-

@@ -26,10 +26,12 @@ Menu
   - <a href="../introduction/ecosystem.html" class="menu__link">Ecosystem</a>
   - <a href="../introduction/examples.html" class="menu__link">Examples</a>
 - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Tutorials</a>
+
   - <a href="index.html" class="menu__link menu__link--active active">Tutorials Index</a>
   - <a href="quick-start.html" class="menu__link">Quick Start</a>
   - <a href="typescript-quick-start.html" class="menu__link">TypeScript Quick Start</a>
   - <a href="#!" class="menu__link menu__link--sublist">Redux Essentials</a>
+
     - <a href="essentials/part-1-overview-concepts.html" class="menu__link">Redux Overview and Concepts</a>
     - <a href="essentials/part-2-app-structure.html" class="menu__link">Redux App Structure</a>
     - <a href="essentials/part-3-data-flow.html" class="menu__link">Basic Redux Data Flow</a>
@@ -72,6 +74,7 @@ Menu
     - <a href="../recipes/structuring-reducers/reusing-reducer-logic.html" class="menu__link">Reusing Reducer Logic</a>
     - <a href="../recipes/structuring-reducers/immutable-update-patterns.html" class="menu__link">Immutable Update Patterns</a>
     - <a href="../recipes/structuring-reducers/initializing-state.html" class="menu__link">Initializing State</a>
+
 - <a href="#!" class="menu__link menu__link--sublist">Understanding Redux</a>
   - <a href="#!" class="menu__link menu__link--sublist">Thinking in Redux</a>
     - <a href="../understanding/thinking-in-redux/motivation.html" class="menu__link">Motivation</a>
@@ -160,5 +163,3 @@ Quick Start »
 - [![Deploys by Netlify](../../www.netlify.com/img/global/badges/netlify-color-accent.svg)](../../www.netlify.com/index.html)
 
 <a href="../index.html" class="footerLogoLink_MyFc"><img src="../../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" /><img src="../../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
-
-

@@ -31,10 +31,12 @@
   - <a href="../introduction/ecosystem.html" class="menu__link">Ecosystem</a>
   - <a href="../introduction/examples.html" class="menu__link">Examples</a>
 - <a href="#!" class="menu__link menu__link--sublist">Tutorials</a>
+
   - <a href="../tutorials/index.html" class="menu__link">Tutorials Index</a>
   - <a href="../tutorials/quick-start.html" class="menu__link">Quick Start</a>
   - <a href="../tutorials/typescript-quick-start.html" class="menu__link">TypeScript Quick Start</a>
   - <a href="#!" class="menu__link menu__link--sublist">Redux Essentials</a>
+
     - <a href="../tutorials/essentials/part-1-overview-concepts.html" class="menu__link">Redux Overview and Concepts</a>
     - <a href="../tutorials/essentials/part-2-app-structure.html" class="menu__link">Redux App Structure</a>
     - <a href="../tutorials/essentials/part-3-data-flow.html" class="menu__link">Basic Redux Data Flow</a>
@@ -50,6 +52,7 @@
     - <a href="../tutorials/fundamentals/part-6-async-logic.html" class="menu__link">Async Logic and Data Fetching</a>
     - <a href="../tutorials/fundamentals/part-7-standard-patterns.html" class="menu__link">Standard Redux Patterns</a>
     - <a href="../tutorials/fundamentals/part-8-modern-redux.html" class="menu__link">Modern Redux with Redux Toolkit</a>
+
 - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Recipes</a>
   - <a href="recipe-index.html" class="menu__link">Recipes: Index</a>
   - <a href="configuring-your-store.html" class="menu__link">Configuring Your Store</a>
@@ -112,6 +115,7 @@
   - <a href="../redux-toolkit/overview.html" class="menu__link">Redux Toolkit: Overview</a>
 
 # <span id="using-object-spread-operator" class="anchor enhancedAnchor_2LWZ">
+
 </span>Using Object Spread Operator<a href="#using-object-spread-operator" class="hash-link" title="Direct link to heading">#</a>
 
 Since one of the core tenets of Redux is to never mutate state, you'll often find yourself using [`Object.assign()`](../../developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign.html) to create copies of objects with new or updated values. For example, in the `todoApp` below `Object.assign()` is used to return a new `state` object with an updated `visibilityFilter` property:
@@ -461,5 +465,3 @@ Reducing Boilerplate »
 <img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
 <img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" />
 </a>
-
-

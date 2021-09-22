@@ -31,10 +31,12 @@
   - <a href="../introduction/ecosystem.html" class="menu__link">Ecosystem</a>
   - <a href="../introduction/examples.html" class="menu__link">Examples</a>
 - <a href="#!" class="menu__link menu__link--sublist">Tutorials</a>
+
   - <a href="../tutorials/index.html" class="menu__link">Tutorials Index</a>
   - <a href="../tutorials/quick-start.html" class="menu__link">Quick Start</a>
   - <a href="../tutorials/typescript-quick-start.html" class="menu__link">TypeScript Quick Start</a>
   - <a href="#!" class="menu__link menu__link--sublist">Redux Essentials</a>
+
     - <a href="../tutorials/essentials/part-1-overview-concepts.html" class="menu__link">Redux Overview and Concepts</a>
     - <a href="../tutorials/essentials/part-2-app-structure.html" class="menu__link">Redux App Structure</a>
     - <a href="../tutorials/essentials/part-3-data-flow.html" class="menu__link">Basic Redux Data Flow</a>
@@ -77,6 +79,7 @@
     - <a href="../recipes/structuring-reducers/reusing-reducer-logic.html" class="menu__link">Reusing Reducer Logic</a>
     - <a href="../recipes/structuring-reducers/immutable-update-patterns.html" class="menu__link">Immutable Update Patterns</a>
     - <a href="../recipes/structuring-reducers/initializing-state.html" class="menu__link">Initializing State</a>
+
 - <a href="#!" class="menu__link menu__link--sublist">Understanding Redux</a>
   - <a href="#!" class="menu__link menu__link--sublist">Thinking in Redux</a>
     - <a href="../understanding/thinking-in-redux/motivation.html" class="menu__link">Motivation</a>
@@ -112,9 +115,11 @@
   - <a href="../redux-toolkit/overview.html" class="menu__link">Redux Toolkit: Overview</a>
 
 # <span id="redux-style-guide" class="anchor enhancedAnchor_2LWZ">
+
 </span>Redux Style Guide<a href="#redux-style-guide" class="hash-link" title="Direct link to heading">#</a>
 
 ## <span id="introduction" class="anchor enhancedAnchor_2LWZ">
+
 </span>Introduction<a href="#introduction" class="hash-link" title="Direct link to heading">#</a>
 
 This is the official style guide for writing Redux code. **It lists our recommended patterns, best practices, and suggested approaches for writing Redux applications.**
@@ -128,29 +133,35 @@ With that in mind, **we've put together this list of recommendations to help you
 Finally, we'd like to thank the Vue documentation authors for writing the [Vue Style Guide page](../../vuejs.org/v2/style-guide/index.html), which was the inspiration for this page.
 
 ## <span id="rule-categories" class="anchor enhancedAnchor_2LWZ">
+
 </span>Rule Categories<a href="#rule-categories" class="hash-link" title="Direct link to heading">#</a>
 
 We've divided these rules into three categories:
 
 ### <span id="priority-a-essential" class="anchor enhancedAnchor_2LWZ">
+
 </span>Priority A: Essential<a href="#priority-a-essential" class="hash-link" title="Direct link to heading">#</a>
 
 **These rules help prevent errors, so learn and abide by them at all costs**. Exceptions may exist, but should be very rare and only be made by those with expert knowledge of both JavaScript and Redux.
 
 ### <span id="priority-b-strongly-recommended" class="anchor enhancedAnchor_2LWZ">
+
 </span>Priority B: Strongly Recommended<a href="#priority-b-strongly-recommended" class="hash-link" title="Direct link to heading">#</a>
 
 These rules have been found to improve readability and/or developer experience in most projects. Your code will still run if you violate them, but violations should be rare and well-justified. **Follow these rules whenever it is reasonably possible**.
 
 ### <span id="priority-c-recommended" class="anchor enhancedAnchor_2LWZ">
+
 </span>Priority C: Recommended<a href="#priority-c-recommended" class="hash-link" title="Direct link to heading">#</a>
 
 Where multiple, equally good options exist, an arbitrary choice can be made to ensure consistency. In these rules, **we describe each acceptable option and suggest a default choice**. That means you can feel free to make a different choice in your own codebase, as long as you're consistent and have a good reason. Please do have a good reason though!
 
 ## <span id="priority-a-rules-essential" class="anchor enhancedAnchor_2LWZ">
+
 </span>Priority A Rules: Essential<a href="#priority-a-rules-essential" class="hash-link" title="Direct link to heading">#</a>
 
 ### <span id="do-not-mutate-state" class="anchor enhancedAnchor_2LWZ">
+
 </span>Do Not Mutate State<a href="#do-not-mutate-state" class="hash-link" title="Direct link to heading">#</a>
 
 Mutating state is the most common cause of bugs in Redux applications, including components failing to re-render properly, and will also break time-travel debugging in the Redux DevTools. **Actual mutation of state values should always be avoided**, both inside reducers and in all other application code.
@@ -160,6 +171,7 @@ Use tools such as [`redux-immutable-state-invariant`](../../github.com/leoasis/r
 > **Note**: it is okay to modify _copies_ of existing values - that is a normal part of writing immutable update logic. Also, if you are using the Immer library for immutable updates, writing "mutating" logic is acceptable because the real data isn't being mutated - Immer safely tracks changes and generates immutably-updated values internally.
 
 ### <span id="reducers-must-not-have-side-effects" class="anchor enhancedAnchor_2LWZ">
+
 </span>Reducers Must Not Have Side Effects<a href="#reducers-must-not-have-side-effects" class="hash-link" title="Direct link to heading">#</a>
 
 Reducer functions should _only_ depend on their `state` and `action` arguments, and should only calculate and return a new state value based on those arguments. **They must not execute any kind of asynchronous logic (AJAX calls, timeouts, promises), generate random values (`Date.now()`, `Math.random()`), modify variables outside the reducer, or run other code that affects things outside the scope of the reducer function**.
@@ -173,6 +185,7 @@ The purpose of this rule is to guarantee that reducers will behave predictably w
 There are some gray areas to this rule. Strictly speaking, code such as `console.log(state)` is a side effect, but in practice has no effect on how the application behaves.
 
 ### <span id="do-not-put-non-serializable-values-in-state-or-actions" class="anchor enhancedAnchor_2LWZ">
+
 </span>Do Not Put Non-Serializable Values in State or Actions<a href="#do-not-put-non-serializable-values-in-state-or-actions" class="hash-link" title="Direct link to heading">#</a>
 
 **Avoid putting non-serializable values such as Promises, Symbols, Maps/Sets, functions, or class instances into the Redux store state or dispatched actions**. This ensures that capabilities such as debugging via the Redux DevTools will work as expected. It also ensures that the UI will update as expected.
@@ -180,6 +193,7 @@ There are some gray areas to this rule. Strictly speaking, code such as `console
 > **Exception**: you may put non-serializable values in actions _if_ the action will be intercepted and stopped by a middleware before it reaches the reducers. Middleware such as `redux-thunk` and `redux-promise` are examples of this.
 
 ### <span id="only-one-redux-store-per-app" class="anchor enhancedAnchor_2LWZ">
+
 </span>Only One Redux Store Per App<a href="#only-one-redux-store-per-app" class="hash-link" title="Direct link to heading">#</a>
 
 **A standard Redux application should only have a single Redux store instance, which will be used by the whole application**. It should typically be defined in a separate file such as `store.js`.
@@ -187,9 +201,11 @@ There are some gray areas to this rule. Strictly speaking, code such as `console
 Ideally, no app logic will import the store directly. It should be passed to a React component tree via `<Provider>`, or referenced indirectly via middleware such as thunks. In rare cases, you may need to import it into other logic files, but this should be a last resort.
 
 ## <span id="priority-b-rules-strongly-recommended" class="anchor enhancedAnchor_2LWZ">
+
 </span>Priority B Rules: Strongly Recommended<a href="#priority-b-rules-strongly-recommended" class="hash-link" title="Direct link to heading">#</a>
 
 ### <span id="use-redux-toolkit-for-writing-redux-logic" class="anchor enhancedAnchor_2LWZ">
+
 </span>Use Redux Toolkit for Writing Redux Logic<a href="#use-redux-toolkit-for-writing-redux-logic" class="hash-link" title="Direct link to heading">#</a>
 
 **[Redux Toolkit](../redux-toolkit/overview.html) is our recommended toolset for using Redux**. It has functions that build in our suggested best practices, including setting up the store to catch mutations and enable the Redux DevTools Extension, simplifying immutable update logic with Immer, and more.
@@ -197,6 +213,7 @@ Ideally, no app logic will import the store directly. It should be passed to a R
 You are not required to use RTK with Redux, and you are free to use other approaches if desired, but **using RTK will simplify your logic and ensure that your application is set up with good defaults**.
 
 ### <span id="use-immer-for-writing-immutable-updates" class="anchor enhancedAnchor_2LWZ">
+
 </span>Use Immer for Writing Immutable Updates<a href="#use-immer-for-writing-immutable-updates" class="hash-link" title="Direct link to heading">#</a>
 
 Writing immutable update logic by hand is frequently difficult and prone to errors. [Immer](../../immerjs.github.io/immer/index.html) allows you to write simpler immutable updates using "mutative" logic, and even freezes your state in development to catch mutations elsewhere in the app. **We recommend using Immer for writing immutable update logic, preferably as part of [Redux Toolkit](../redux-toolkit/overview.html)**.
@@ -205,6 +222,7 @@ Writing immutable update logic by hand is frequently difficult and prone to erro
 </span>
 
 ### <span id="structure-files-as-feature-folders-with-single-file-logic" class="anchor enhancedAnchor_2LWZ">
+
 </span>Structure Files as Feature Folders with Single-File Logic<a href="#structure-files-as-feature-folders-with-single-file-logic" class="hash-link" title="Direct link to heading">#</a>
 
 Redux itself does not care about how your application's folders and files are structured. However, co-locating logic for a given feature in one place typically makes it easier to maintain that code.
@@ -234,6 +252,7 @@ An example folder structure might look something like:
 `/features` has folders that contain all functionality related to a specific feature. In this example, `todosSlice.ts` is a "duck"-style file that contains a call to RTK's `createSlice()` function, and exports the slice reducer and action creators.
 
 ### <span id="put-as-much-logic-as-possible-in-reducers" class="anchor enhancedAnchor_2LWZ">
+
 </span>Put as Much Logic as Possible in Reducers<a href="#put-as-much-logic-as-possible-in-reducers" class="hash-link" title="Direct link to heading">#</a>
 
 Wherever possible, **try to put as much of the logic for calculating a new state into the appropriate reducer, rather than in the code that prepares and dispatches the action** (like a click handler). This helps ensure that more of the actual app logic is easily testable, enables more effective use of time-travel debugging, and helps avoid common mistakes that can lead to mutations and bugs.
@@ -521,6 +540,7 @@ The Redux core does not actually care whether a new state value is calculated in
 - Finally, putting logic in reducers means you know where to look for the update logic, instead of having it scattered in random other parts of the application code.
 
 ### <span id="reducers-should-own-the-state-shape" class="anchor enhancedAnchor_2LWZ">
+
 </span>Reducers Should Own the State Shape<a href="#reducers-should-own-the-state-shape" class="hash-link" title="Direct link to heading">#</a>
 
 The Redux root state is owned and calculated by the single root reducer function. For maintainability, that reducer is intended to be split up by key/value "slices", with **each "slice reducer" being responsible for providing an initial value and calculating the updates to that slice of the state**.
@@ -702,6 +722,7 @@ This could be at least partly fixed if the reducer has some validation checks to
 Use of static typing does make this kind of code safer and somewhat more acceptable. If the reducer knows that `action` is a `PayloadAction<User>`, then it _should_ be safe to do `return action.payload`.
 
 ### <span id="name-state-slices-based-on-the-stored-data" class="anchor enhancedAnchor_2LWZ">
+
 </span>Name State Slices Based On the Stored Data<a href="#name-state-slices-based-on-the-stored-data" class="hash-link" title="Direct link to heading">#</a>
 
 As mentioned in [Reducers Should Own the State Shape](#reducers-should-own-the-state-shape) , the standard approach for splitting reducer logic is based on "slices" of state. Correspondingly, `combineReducers` is the standard function for joining those slice reducers into a larger reducer function.
@@ -824,6 +845,7 @@ Instead, define key names that only relate to the data inside. We suggest using 
 <span class="token punctuation" style="color: #f8f8f2">)</span>It's a bit more typing, but it results in the most understandable code and state definition.
 
 ### <span id="organize-state-structure-based-on-data-types-not-components" class="anchor enhancedAnchor_2LWZ">
+
 </span>Organize State Structure Based on Data Types, Not Components<a href="#organize-state-structure-based-on-data-types-not-components" class="hash-link" title="Direct link to heading">#</a>
 
 Root state slices should be defined and named based on the major data types or areas of functionality in your application, not based on which specific components you have in your UI. This is because there is not a strict 1:1 correlation between data in the Redux store and components in the UI, and many components may need to access the same data. Think of the state tree as a sort of global database that any part of the app can access to read just the pieces of state needed in that component.
@@ -831,6 +853,7 @@ Root state slices should be defined and named based on the major data types or a
 For example, a blogging app might need to track who is logged in, information on authors and posts, and perhaps some info on what screen is active. A good state structure might look like `{auth, posts, users, ui}`. A bad structure would be something like `{loginScreen, usersList, postsList}`.
 
 ### <span id="treat-reducers-as-state-machines" class="anchor enhancedAnchor_2LWZ">
+
 </span>Treat Reducers as State Machines<a href="#treat-reducers-as-state-machines" class="hash-link" title="Direct link to heading">#</a>
 
 Many Redux reducers are written "unconditionally". They only look at the dispatched action and calculate a new state value, without basing any of the logic on what the current state might be. This can cause bugs, as some actions may not be "valid" conceptually at certain times depending on the rest of the app logic. For example, a "request succeeded" action should only have a new value calculated if the state says that it's already "loading", or an "update this item" action should only be dispatched if there is an item marked as "being edited".
@@ -1226,6 +1249,7 @@ Typically, reducer logic is written by taking the action into account first. Whe
 <span class="token punctuation" style="color: #f8f8f2">}</span>Now, since you're defining behavior per state instead of per action, you also prevent impossible transitions. For instance, a `FETCH_USER` action should have no effect when `status === LOADING_STATUS`, and you can enforce that, instead of accidentally introducing edge-cases.
 
 ### <span id="normalize-complex-nestedrelational-state" class="anchor enhancedAnchor_2LWZ">
+
 </span>Normalize Complex Nested/Relational State<a href="#normalize-complex-nestedrelational-state" class="hash-link" title="Direct link to heading">#</a>
 
 Many applications need to cache complex data in the store. That data is often received in a nested form from an API, or has relations between different entities in the data (such as a blog that contains Users, Posts, and Comments).
@@ -1233,6 +1257,7 @@ Many applications need to cache complex data in the store. That data is often re
 **Prefer storing that data in [a "normalized" form](../recipes/structuring-reducers/normalizing-state-shape.html) in the store**. This makes it easier to look up items based on their ID and update a single item in the store, and ultimately leads to better performance patterns.
 
 ### <span id="model-actions-as-events-not-setters" class="anchor enhancedAnchor_2LWZ">
+
 </span>Model Actions as Events, Not Setters<a href="#model-actions-as-events-not-setters" class="hash-link" title="Direct link to heading">#</a>
 
 Redux does not care what the contents of the `action.type` field are - it just has to be defined. It is legal to write action types in present tense (`"users/update"`), past tense (`"users/updated"`), described as an event (`"upload/progress"`), or treated as a "setter" (`"users/setUserName"`). It is up to you to determine what a given action means in your application, and how you model those actions.
@@ -1371,6 +1396,7 @@ The "event" approach only really needed a single action to be dispatched, and it
 With the "setter" approach, the client code needed to know more about what the actual structure of the state is, what the "right" values should be, and ended up actually having to dispatch multiple actions to finish the "transaction".
 
 ### <span id="write-meaningful-action-names" class="anchor enhancedAnchor_2LWZ">
+
 </span>Write Meaningful Action Names<a href="#write-meaningful-action-names" class="hash-link" title="Direct link to heading">#</a>
 
 The `action.type` field serves two main purposes:
@@ -1381,6 +1407,7 @@ The `action.type` field serves two main purposes:
 Per [Model Actions as "Events"](#model-actions-as-events-not-setters), the actual contents of the `type` field do not matter to Redux itself. However, the `type` value _does_ matter to you, the developer. **Actions should be written with meaningful, informative, descriptive type fields**. Ideally, you should be able to read through a list of dispatched action types, and have a good understanding of what happened in the application without even looking at the contents of each action. Avoid using very generic action names like `"SET_DATA"` or `"UPDATE_STORE"`, as they don't provide meaningful information on what happened.
 
 ### <span id="allow-many-reducers-to-respond-to-the-same-action" class="anchor enhancedAnchor_2LWZ">
+
 </span>Allow Many Reducers to Respond to the Same Action<a href="#allow-many-reducers-to-respond-to-the-same-action" class="hash-link" title="Direct link to heading">#</a>
 
 Redux reducer logic is intended to be split into many smaller reducers, each independently updating their own portion of the state tree, and all composed back together to form the root reducer function. When a given action is dispatched, it might be handled by all, some, or none of the reducers.
@@ -1388,6 +1415,7 @@ Redux reducer logic is intended to be split into many smaller reducers, each ind
 As part of this, you are encouraged to **have many reducer functions all handle the same action separately** if possible. In practice, experience has shown that most actions are typically only handled by a single reducer function, which is fine. But, modeling actions as "events" and allowing many reducers to respond to those actions will typically allow your application's codebase to scale better, and minimize the number of times you need to dispatch multiple actions to accomplish one meaningful update.
 
 ### <span id="avoid-dispatching-many-actions-sequentially" class="anchor enhancedAnchor_2LWZ">
+
 </span>Avoid Dispatching Many Actions Sequentially<a href="#avoid-dispatching-many-actions-sequentially" class="hash-link" title="Direct link to heading">#</a>
 
 **Avoid dispatching many actions in a row to accomplish a larger conceptual "transaction"**. This is legal, but will usually result in multiple relatively expensive UI updates, and some of the intermediate states could be potentially invalid by other parts of the application logic. Prefer dispatching a single "event"-type action that results in all of the appropriate state updates at once, or consider use of action batching addons to dispatch multiple actions with only a single UI update at the end.
@@ -1403,6 +1431,7 @@ In addition, multiple dispatches that are conceptually part of a larger "transac
 If multiple dispatches are truly necessary, consider batching the updates in some way. Depending on your use case, this may just be batching React's own renders (possibly using [`batch()` from React-Redux](../../react-redux.js.org/api/batch.html)), debouncing the store notification callbacks, or grouping many actions into a larger single dispatch that only results in one subscriber notification. See [the FAQ entry on "reducing store update events"](../faq/performance.html#how-can-i-reduce-the-number-of-store-update-events) for additional examples and links to related addons.
 
 ### <span id="evaluate-where-each-piece-of-state-should-live" class="anchor enhancedAnchor_2LWZ">
+
 </span>Evaluate Where Each Piece of State Should Live<a href="#evaluate-where-each-piece-of-state-should-live" class="hash-link" title="Direct link to heading">#</a>
 
 The ["Three Principles of Redux"](../understanding/thinking-in-redux/three-principles.html) says that "the state of your whole application is stored in a single tree". This phrasing has been over-interpreted. It does not mean that literally _every_ value in the entire app _must_ be kept in the Redux store. Instead, **there should be a single place to find all values that _you_ consider to be global and app-wide**. Values that are "local" should generally be kept in the nearest UI component instead.
@@ -1410,6 +1439,7 @@ The ["Three Principles of Redux"](../understanding/thinking-in-redux/three-princ
 Because of this, it is up to you as a developer to decide what state should actually live in the Redux store, and what should stay in component state. **[Use these rules of thumb to help evaluate each piece of state and decide where it should live](../faq/organizing-state.html#do-i-have-to-put-all-my-state-into-redux-should-i-ever-use-reacts-setstate)**.
 
 ### <span id="use-the-react-redux-hooks-api" class="anchor enhancedAnchor_2LWZ">
+
 </span>Use the React-Redux Hooks API<a href="#use-the-react-redux-hooks-api" class="hash-link" title="Direct link to heading">#</a>
 
 **Prefer using [the React-Redux hooks API (`useSelector` and `useDispatch`)](../../react-redux.js.org/api/hooks.html) as the default way to interact with a Redux store from your React components**. While the classic `connect` API still works fine and will continue to be supported, the hooks API is generally easier to use in several ways. The hooks have less indirection, less code to write, and are simpler to use with TypeScript than `connect` is.
@@ -1436,6 +1466,7 @@ For more details, see Redux maintainer Mark Erikson's post and conference talk o
 Also see the [React-Redux hooks API docs](../../react-redux.js.org/api/hooks.html) for info on how to correctly optimize components and handle rare edge cases.
 
 ### <span id="connect-more-components-to-read-data-from-the-store" class="anchor enhancedAnchor_2LWZ">
+
 </span>Connect More Components to Read Data from the Store<a href="#connect-more-components-to-read-data-from-the-store" class="hash-link" title="Direct link to heading">#</a>
 
 Prefer having more UI components subscribed to the Redux store and reading data at a more granular level. This typically leads to better UI performance, as fewer components will need to render when a given piece of state changes.
@@ -1445,11 +1476,13 @@ For example, rather than just connecting a `<UserList>` component and reading th
 This applies for both the React-Redux `connect()` API and the `useSelector()` hook.
 
 ### <span id="use-the-object-shorthand-form-of-mapdispatch-with-connect" class="anchor enhancedAnchor_2LWZ">
+
 </span>Use the Object Shorthand Form of `mapDispatch` with `connect`<a href="#use-the-object-shorthand-form-of-mapdispatch-with-connect" class="hash-link" title="Direct link to heading">#</a>
 
 The `mapDispatch` argument to `connect` can be defined as either a function that receives `dispatch` as an argument, or an object containing action creators. **We recommend always using [the "object shorthand" form of `mapDispatch`](../../react-redux.js.org/using-react-redux/connect-mapdispatch.html#defining-mapdispatchtoprops-as-an-object)**, as it simplifies the code considerably. There is almost never a real need to write `mapDispatch` as a function.
 
 ### <span id="call-useselector-multiple-times-in-function-components" class="anchor enhancedAnchor_2LWZ">
+
 </span>Call `useSelector` Multiple Times in Function Components<a href="#call-useselector-multiple-times-in-function-components" class="hash-link" title="Direct link to heading">#</a>
 
 **When retrieving data using the `useSelector` hook, prefer calling `useSelector` many times and retrieving smaller amounts of data, instead of having a single larger `useSelector` call that returns multiple results in an object**. Unlike `mapState`, `useSelector` is not required to return an object, and having selectors read smaller values means it is less likely that a given state change will cause this component to render.
@@ -1457,11 +1490,13 @@ The `mapDispatch` argument to `connect` can be defined as either a function that
 However, try to find an appropriate balance of granularity. If a single component does need all fields in a slice of the state , just write one `useSelector` that returns that whole slice instead of separate selectors for each individual field.
 
 ### <span id="use-static-typing" class="anchor enhancedAnchor_2LWZ">
+
 </span>Use Static Typing<a href="#use-static-typing" class="hash-link" title="Direct link to heading">#</a>
 
 **Use a static type system like TypeScript or Flow rather than plain JavaScript**. The type systems will catch many common mistakes, improve the documentation of your code, and ultimately lead to better long-term maintainability. While Redux and React-Redux were originally designed with plain JS in mind, both work well with TS and Flow. Redux Toolkit is specifically written in TS and is designed to provide good type safety with a minimal amount of additional type declarations.
 
 ### <span id="use-the-redux-devtools-extension-for-debugging" class="anchor enhancedAnchor_2LWZ">
+
 </span>Use the Redux DevTools Extension for Debugging<a href="#use-the-redux-devtools-extension-for-debugging" class="hash-link" title="Direct link to heading">#</a>
 
 **Configure your Redux store to enable [debugging with the Redux DevTools Extension](../../github.com/zalmoxisus/redux-devtools-extension.html)**. It allows you to view:
@@ -1477,6 +1512,7 @@ In addition, the DevTools allows you to do "time-travel debugging", stepping bac
 **Redux was specifically designed to enable this kind of debugging, and the DevTools are one of the most powerful reasons to use Redux**.
 
 ### <span id="use-plain-javascript-objects-for-state" class="anchor enhancedAnchor_2LWZ">
+
 </span>Use Plain JavaScript Objects for State<a href="#use-plain-javascript-objects-for-state" class="hash-link" title="Direct link to heading">#</a>
 
 Prefer using plain JavaScript objects and arrays for your state tree, rather than specialized libraries like Immutable.js. While there are some potential benefits to using Immutable.js, most of the commonly stated goals such as easy reference comparisons are a property of immutable updates in general, and do not require a specific library. This also keeps bundle sizes smaller and reduces complexity from data type conversions.
@@ -1508,9 +1544,11 @@ The strongest remaining reason to use Immutable.js is fast updates of _very_ lar
 Overall, Immutable.js adds too much overhead for too little practical benefit. Immer is a much better option.
 
 ## <span id="priority-c-rules-recommended" class="anchor enhancedAnchor_2LWZ">
+
 </span>Priority C Rules: Recommended<a href="#priority-c-rules-recommended" class="hash-link" title="Direct link to heading">#</a>
 
 ### <span id="write-action-types-as-domaineventname" class="anchor enhancedAnchor_2LWZ">
+
 </span>Write Action Types as `domain/eventName`<a href="#write-action-types-as-domaineventname" class="hash-link" title="Direct link to heading">#</a>
 
 The original Redux docs and examples generally used a "SCREAMING_SNAKE_CASE" convention for defining action types, such as `"ADD_TODO"` and `"INCREMENT"`. This matches typical conventions in most programming languages for declaring constant values. The downside is that the uppercase strings can be hard to read.
@@ -1520,6 +1558,7 @@ Other communities have adopted other conventions, usually with some indication o
 Redux Toolkit's `createSlice` function currently generates action types that look like `"domain/action"`, such as `"todos/addTodo"`. Going forward, **we suggest using the `"domain/action"` convention for readability**.
 
 ### <span id="write-actions-using-the-flux-standard-action-convention" class="anchor enhancedAnchor_2LWZ">
+
 </span>Write Actions Using the Flux Standard Action Convention<a href="#write-actions-using-the-flux-standard-action-convention" class="hash-link" title="Direct link to heading">#</a>
 
 The original "Flux Architecture" documentation only specified that action objects should have a `type` field, and did not give any further guidance on what kinds of fields or naming conventions should be used for fields in actions. To provide consistency, Andrew Clark created a convention called ["Flux Standard Actions"](../../github.com/redux-utilities/flux-standard-action.html) early in Redux's development. Summarized, the FSA convention says that actions:
@@ -1535,6 +1574,7 @@ Many libraries in the Redux ecosystem have adopted the FSA convention, and Redux
 > **Note**: The FSA spec says that "error" actions should set `error: true`, and use the same action type as the "valid" form of the action. In practice, most developers write separate action types for the "success" and "error" cases. Either is acceptable.
 
 ### <span id="use-action-creators" class="anchor enhancedAnchor_2LWZ">
+
 </span>Use Action Creators<a href="#use-action-creators" class="hash-link" title="Direct link to heading">#</a>
 
 "Action creator" functions started with the original "Flux Architecture" approach. With Redux, action creators are not strictly required. Components and other logic can always call `dispatch({type: "some/action"})` with the action object written inline.
@@ -1544,6 +1584,7 @@ However, using action creators provides consistency, especially in cases where s
 **Prefer using action creators for dispatching any actions**. However, rather than writing action creators by hand, **we recommend using the `createSlice` function from Redux Toolkit, which will generate action creators and action types automatically**.
 
 ### <span id="use-thunks-for-async-logic" class="anchor enhancedAnchor_2LWZ">
+
 </span>Use Thunks for Async Logic<a href="#use-thunks-for-async-logic" class="hash-link" title="Direct link to heading">#</a>
 
 Redux was designed to be extensible, and the middleware API was specifically created to allow different forms of async logic to be plugged into the Redux store. That way, users wouldn't be forced to learn a specific library like RxJS if it wasn't appropriate for their needs.
@@ -1555,6 +1596,7 @@ This led to a wide variety of Redux async middleware addons being created, and t
 If you have truly complex async workflows that involve things like cancelation, debouncing, running logic after a given action was dispatched, or "background-thread"-type behavior, then consider adding more powerful async middleware like Redux-Saga or Redux-Observable.
 
 ### <span id="move-complex-logic-outside-components" class="anchor enhancedAnchor_2LWZ">
+
 </span>Move Complex Logic Outside Components<a href="#move-complex-logic-outside-components" class="hash-link" title="Direct link to heading">#</a>
 
 We have traditionally suggested keeping as much logic as possible outside components. That was partly due to encouraging the "container/presentational" pattern, where many components simply accept data as props and display UI accordingly, but also because dealing with async logic in class component lifecycle methods can become difficult to maintain.
@@ -1564,6 +1606,7 @@ We have traditionally suggested keeping as much logic as possible outside compon
 However, **the use of React hooks does make it somewhat easier to manage logic like data fetching directly inside a component**, and this may replace the need for thunks in some cases.
 
 ### <span id="use-selector-functions-to-read-from-store-state" class="anchor enhancedAnchor_2LWZ">
+
 </span>Use Selector Functions to Read from Store State<a href="#use-selector-functions-to-read-from-store-state" class="hash-link" title="Direct link to heading">#</a>
 
 "Selector functions" are a powerful tool for encapsulating reading values from the Redux store state and deriving further data from those values. In addition, libraries like Reselect enable creating memoized selector functions that only recalculate results when the inputs have changed, which is an important aspect of optimizing performance.
@@ -1573,11 +1616,13 @@ However, **the use of React hooks does make it somewhat easier to manage logic l
 However, don't feel that you _must_ write selector functions for every field in your state. Find a reasonable balance for granularity, based on how often fields are accessed and updated, and how much actual benefit the selectors are providing in your application.
 
 ### <span id="name-selector-functions-as-selectthing" class="anchor enhancedAnchor_2LWZ">
+
 </span>Name Selector Functions as `selectThing`<a href="#name-selector-functions-as-selectthing" class="hash-link" title="Direct link to heading">#</a>
 
 **We recommend prefixing selector function names with the word `select`**, combined with a description of the value being selected. Examples of this would be `selectTodos`, `selectVisibleTodos`, and `selectTodoById`.
 
 ### <span id="avoid-putting-form-state-in-redux" class="anchor enhancedAnchor_2LWZ">
+
 </span>Avoid Putting Form State In Redux<a href="#avoid-putting-form-state-in-redux" class="hash-link" title="Direct link to heading">#</a>
 
 **Most form state shouldn't go in Redux**. In most use cases, the data is not truly global, is not being cached, and is not being used by multiple components at once. In addition, connecting forms to Redux often involves dispatching actions on every single change event, which causes performance overhead and provides no real benefit. (You probably don't need to time-travel backwards one character from `name: "Mark"` to `name: "Mar"`.)
@@ -1626,21 +1671,21 @@ API Reference »
   - <a href="#use-the-react-redux-hooks-api" class="table-of-contents__link">Use the React-Redux Hooks API</a>
   - <a href="#connect-more-components-to-read-data-from-the-store" class="table-of-contents__link">Connect More Components to Read Data from the Store</a>
   - <a href="#use-the-object-shorthand-form-of-mapdispatch-with-connect" class="table-of-contents__link">Use the Object Shorthand Form of <code class="language-js >mapDispatch</code> with <code class="language-js >connect</code>
-</a>
+    </a>
   - <a href="#call-useselector-multiple-times-in-function-components" class="table-of-contents__link">Call <code class="language-js >useSelector</code> Multiple Times in Function Components</a>
   - <a href="#use-static-typing" class="table-of-contents__link">Use Static Typing</a>
   - <a href="#use-the-redux-devtools-extension-for-debugging" class="table-of-contents__link">Use the Redux DevTools Extension for Debugging</a>
   - <a href="#use-plain-javascript-objects-for-state" class="table-of-contents__link">Use Plain JavaScript Objects for State</a>
 - <a href="#priority-c-rules-recommended" class="table-of-contents__link">Priority C Rules: Recommended</a>
   - <a href="#write-action-types-as-domaineventname" class="table-of-contents__link">Write Action Types as <code class="language-js >domain/eventName</code>
-</a>
+    </a>
   - <a href="#write-actions-using-the-flux-standard-action-convention" class="table-of-contents__link">Write Actions Using the Flux Standard Action Convention</a>
   - <a href="#use-action-creators" class="table-of-contents__link">Use Action Creators</a>
   - <a href="#use-thunks-for-async-logic" class="table-of-contents__link">Use Thunks for Async Logic</a>
   - <a href="#move-complex-logic-outside-components" class="table-of-contents__link">Move Complex Logic Outside Components</a>
   - <a href="#use-selector-functions-to-read-from-store-state" class="table-of-contents__link">Use Selector Functions to Read from Store State</a>
   - <a href="#name-selector-functions-as-selectthing" class="table-of-contents__link">Name Selector Functions as <code class="language-js >selectThing</code>
-</a>
+    </a>
   - <a href="#avoid-putting-form-state-in-redux" class="table-of-contents__link">Avoid Putting Form State In Redux</a>
 
 #### Docs
@@ -1665,5 +1710,3 @@ API Reference »
 <img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
 <img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" />
 </a>
-
-

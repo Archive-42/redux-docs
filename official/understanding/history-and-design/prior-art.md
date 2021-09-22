@@ -24,10 +24,12 @@ Menu
   - <a href="../../introduction/ecosystem.html" class="menu__link">Ecosystem</a>
   - <a href="../../introduction/examples.html" class="menu__link">Examples</a>
 - <a href="#!" class="menu__link menu__link--sublist">Tutorials</a>
+
   - <a href="../../tutorials/index.html" class="menu__link">Tutorials Index</a>
   - <a href="../../tutorials/quick-start.html" class="menu__link">Quick Start</a>
   - <a href="../../tutorials/typescript-quick-start.html" class="menu__link">TypeScript Quick Start</a>
   - <a href="#!" class="menu__link menu__link--sublist">Redux Essentials</a>
+
     - <a href="../../tutorials/essentials/part-1-overview-concepts.html" class="menu__link">Redux Overview and Concepts</a>
     - <a href="../../tutorials/essentials/part-2-app-structure.html" class="menu__link">Redux App Structure</a>
     - <a href="../../tutorials/essentials/part-3-data-flow.html" class="menu__link">Basic Redux Data Flow</a>
@@ -44,7 +46,6 @@ Menu
     - <a href="../../tutorials/fundamentals/part-7-standard-patterns.html" class="menu__link">Standard Redux Patterns</a>
     - <a href="../../tutorials/fundamentals/part-8-modern-redux.html" class="menu__link">Modern Redux with Redux Toolkit</a>
 
-
     - <a href="../../recipes/structuring-reducers/structuring-reducers.html" class="menu__link">Structuring Reducers</a>
     - <a href="../../recipes/structuring-reducers/prerequisite-concepts.html" class="menu__link">Prerequisite Concepts</a>
     - <a href="../../recipes/structuring-reducers/basic-reducer-structure.html" class="menu__link">Basic Reducer Structure</a>
@@ -57,6 +58,7 @@ Menu
     - <a href="../../recipes/structuring-reducers/reusing-reducer-logic.html" class="menu__link">Reusing Reducer Logic</a>
     - <a href="../../recipes/structuring-reducers/immutable-update-patterns.html" class="menu__link">Immutable Update Patterns</a>
     - <a href="../../recipes/structuring-reducers/initializing-state.html" class="menu__link">Initializing State</a>
+
 - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Understanding Redux</a>
   - <a href="#!" class="menu__link menu__link--sublist">Thinking in Redux</a>
     - <a href="../thinking-in-redux/motivation.html" class="menu__link">Motivation</a>
@@ -76,8 +78,6 @@ Menu
   - <a href="../../faq/code-structure.html" class="menu__link">Code Structure</a>
   - <a href="../../faq/performance.html" class="menu__link">Performance</a>
   - <a href="../../faq/design-decisions.html" class="menu__link">Design Decisions</a>
- 
-
 
 # <span id="prior-art" class="anchor enhancedAnchor_2LWZ"></span>Prior Art<a href="#prior-art" class="hash-link" title="Direct link to heading">#</a>
 
@@ -125,23 +125,23 @@ Unlike Immutable, Baobab doesn't yet implement any special efficient data struct
 
 Does it make sense to use Redux together with RxJS? Sure! They work great together. For example, it is easy to expose a Redux store as an observable:
 
-<span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">toObservable</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">store</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span class="token keyword" style="color: #f92672">function</span><span > </span><span class="token function" style="color: #e6d874">toObservable</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">store</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token keyword control-flow" style="color: #f92672">return</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">subscribe</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter punctuation" style="color: #000000">{</span><span class="token parameter"> next </span><span class="token parameter punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token function" style="color: #e6d874">subscribe</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter punctuation" style="color: #000000">{</span><span class="token parameter"> next </span><span class="token parameter punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> unsubscribe </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> store</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">subscribe</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">next</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > unsubscribe </span><span class="token operator" style="color: #000000">=</span><span > store</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">subscribe</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > </span><span class="token function" style="color: #e6d874">next</span><span class="token punctuation" style="color: #000000">(</span><span >store</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">next</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token function" style="color: #e6d874">next</span><span class="token punctuation" style="color: #000000">(</span><span >store</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> unsubscribe </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token keyword control-flow" style="color: #f92672">return</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span > unsubscribe </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span>Similarly, you can compose different asynchronous streams to turn them into actions before feeding them to `store.dispatch()`.
+<span ></span><span class="token punctuation" style="color: #000000">}</span>Similarly, you can compose different asynchronous streams to turn them into actions before feeding them to `store.dispatch()`.
 
 The question is: do you really need Redux if you already use Rx? Maybe not. It's not hard to [re-implement Redux in Rx](../../../github.com/jas-chen/rx-redux.html). Some say it's a two-liner using Rx `.scan()` method. It may very well be!
 
@@ -163,10 +163,4 @@ Middleware »
 - <a href="#baobab" class="table-of-contents__link">Baobab</a>
 - <a href="#rxjs" class="table-of-contents__link">RxJS</a>
 
-
-
-
-
 <img src="../../../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
-
-

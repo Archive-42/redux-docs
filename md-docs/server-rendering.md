@@ -31,10 +31,12 @@
   - <a href="../introduction/ecosystem.html" class="menu__link">Ecosystem</a>
   - <a href="../introduction/examples.html" class="menu__link">Examples</a>
 - <a href="#!" class="menu__link menu__link--sublist">Tutorials</a>
+
   - <a href="../tutorials/index.html" class="menu__link">Tutorials Index</a>
   - <a href="../tutorials/quick-start.html" class="menu__link">Quick Start</a>
   - <a href="../tutorials/typescript-quick-start.html" class="menu__link">TypeScript Quick Start</a>
   - <a href="#!" class="menu__link menu__link--sublist">Redux Essentials</a>
+
     - <a href="../tutorials/essentials/part-1-overview-concepts.html" class="menu__link">Redux Overview and Concepts</a>
     - <a href="../tutorials/essentials/part-2-app-structure.html" class="menu__link">Redux App Structure</a>
     - <a href="../tutorials/essentials/part-3-data-flow.html" class="menu__link">Basic Redux Data Flow</a>
@@ -50,6 +52,7 @@
     - <a href="../tutorials/fundamentals/part-6-async-logic.html" class="menu__link">Async Logic and Data Fetching</a>
     - <a href="../tutorials/fundamentals/part-7-standard-patterns.html" class="menu__link">Standard Redux Patterns</a>
     - <a href="../tutorials/fundamentals/part-8-modern-redux.html" class="menu__link">Modern Redux with Redux Toolkit</a>
+
 - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Recipes</a>
   - <a href="recipe-index.html" class="menu__link">Recipes: Index</a>
   - <a href="configuring-your-store.html" class="menu__link">Configuring Your Store</a>
@@ -112,6 +115,7 @@
   - <a href="../redux-toolkit/overview.html" class="menu__link">Redux Toolkit: Overview</a>
 
 # <span id="server-rendering" class="anchor enhancedAnchor_2LWZ">
+
 </span>Server Rendering<a href="#server-rendering" class="hash-link" title="Direct link to heading">#</a>
 
 The most common use case for server-side rendering is to handle the _initial render_ when a user (or search engine crawler) first requests our app. When the server receives the request, it renders the required component(s) into an HTML string, and then sends it as a response to the client. From that point on, the client takes over rendering duties.
@@ -119,6 +123,7 @@ The most common use case for server-side rendering is to handle the _initial ren
 We will use React in the examples below, but the same techniques can be used with other view frameworks that can render on the server.
 
 ### <span id="redux-on-the-server" class="anchor enhancedAnchor_2LWZ">
+
 </span>Redux on the Server<a href="#redux-on-the-server" class="hash-link" title="Direct link to heading">#</a>
 
 When using Redux with server rendering, we must also send the state of our app along in our response, so the client can use it as the initial state. This is important because, if we preload any data before generating the HTML, we want the client to also have access to this data. Otherwise, the markup generated on the client won't match the server markup, and the client would have to load the data again.
@@ -133,11 +138,13 @@ To send the data down to the client, we need to:
 On the client side, a new Redux store will be created and initialized with the state provided from the server. Redux's **_only_** job on the server side is to provide the **initial state** of our app.
 
 ## <span id="setting-up" class="anchor enhancedAnchor_2LWZ">
+
 </span>Setting Up<a href="#setting-up" class="hash-link" title="Direct link to heading">#</a>
 
 In the following recipe, we are going to look at how to set up server-side rendering. We'll use the simplistic [Counter app](../../github.com/reduxjs/redux/tree/master/examples/counter.html) as a guide and show how the server can render state ahead of time based on the request.
 
 ### <span id="install-packages" class="anchor enhancedAnchor_2LWZ">
+
 </span>Install Packages<a href="#install-packages" class="hash-link" title="Direct link to heading">#</a>
 
 For this example, we'll be using [Express](../../expressjs.com/index.html) as a simple web server. We also need to install the React bindings for Redux, since they are not included in Redux by default.
@@ -150,6 +157,7 @@ The following is the outline for what our server side is going to look like. We 
 Additionally, as we are using ES6 and JSX syntax, we will need to compile with [Babel](../../babeljs.io/index.html) (see [this example of a Node Server with Babel](../../github.com/babel/example-node-server.html)) and the [React preset](../../babeljs.io/docs/plugins/preset-react/index.html).
 
 ##### <span id="serverjs" class="anchor enhancedAnchor_2LWZ">
+
 </span>`server.js`<a href="#serverjs" class="hash-link" title="Direct link to heading">#</a>
 
 <span class="token keyword module" style="color: #f92672">import</span>
@@ -633,6 +641,7 @@ The client side is very straightforward. All we need to do is grab the initial s
 Let's take a look at our new client file:
 
 #### <span id="clientjs" class="anchor enhancedAnchor_2LWZ">
+
 </span>`client.js`<a href="#clientjs" class="hash-link" title="Direct link to heading">#</a>
 
 <span class="token keyword module" style="color: #f92672">import</span>
@@ -834,11 +843,13 @@ And that's it! That is all we need to do to implement server side rendering.
 But the result is pretty vanilla. It essentially renders a static view from dynamic code. What we need to do next is build an initial state dynamically to allow that rendered view to be dynamic.
 
 ## <span id="preparing-the-initial-state" class="anchor enhancedAnchor_2LWZ">
+
 </span>Preparing the Initial State<a href="#preparing-the-initial-state" class="hash-link" title="Direct link to heading">#</a>
 
 Because the client side executes ongoing code, it can start with an empty initial state and obtain any necessary state on demand and over time. On the server side, rendering is synchronous and we only get one shot to render our view. We need to be able to compile our initial state during the request, which will have to react to input and obtain external state (such as that from an API or database).
 
 ### <span id="processing-request-parameters" class="anchor enhancedAnchor_2LWZ">
+
 </span>Processing Request Parameters<a href="#processing-request-parameters" class="hash-link" title="Direct link to heading">#</a>
 
 The only input for server side code is the request made when loading up a page in your app in your browser. You may choose to configure the server during its boot (such as when you are running in a development vs. production environment), but that configuration is static.
@@ -846,6 +857,7 @@ The only input for server side code is the request made when loading up a page i
 The request contains information about the URL requested, including any query parameters, which will be useful when using something like [React Router](../../github.com/ReactTraining/react-router.html). It can also contain headers with inputs like cookies or authorization, or POST body data. Let's see how we can set the initial counter state based on a query parameter.
 
 #### <span id="serverjs-1" class="anchor enhancedAnchor_2LWZ">
+
 </span>`server.js`<a href="#serverjs-1" class="hash-link" title="Direct link to heading">#</a>
 
 <span class="token keyword module" style="color: #f92672">import</span>
@@ -1120,5 +1132,3 @@ Writing Tests »
 - [![Deploys by Netlify](../../www.netlify.com/img/global/badges/netlify-color-accent.svg)](../../www.netlify.com/index.html)
 
 <a href="../index.html" class="footerLogoLink_MyFc"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" /><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
-
-

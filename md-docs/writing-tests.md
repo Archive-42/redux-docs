@@ -31,10 +31,12 @@
   - <a href="../introduction/ecosystem.html" class="menu__link">Ecosystem</a>
   - <a href="../introduction/examples.html" class="menu__link">Examples</a>
 - <a href="#!" class="menu__link menu__link--sublist">Tutorials</a>
+
   - <a href="../tutorials/index.html" class="menu__link">Tutorials Index</a>
   - <a href="../tutorials/quick-start.html" class="menu__link">Quick Start</a>
   - <a href="../tutorials/typescript-quick-start.html" class="menu__link">TypeScript Quick Start</a>
   - <a href="#!" class="menu__link menu__link--sublist">Redux Essentials</a>
+
     - <a href="../tutorials/essentials/part-1-overview-concepts.html" class="menu__link">Redux Overview and Concepts</a>
     - <a href="../tutorials/essentials/part-2-app-structure.html" class="menu__link">Redux App Structure</a>
     - <a href="../tutorials/essentials/part-3-data-flow.html" class="menu__link">Basic Redux Data Flow</a>
@@ -50,6 +52,7 @@
     - <a href="../tutorials/fundamentals/part-6-async-logic.html" class="menu__link">Async Logic and Data Fetching</a>
     - <a href="../tutorials/fundamentals/part-7-standard-patterns.html" class="menu__link">Standard Redux Patterns</a>
     - <a href="../tutorials/fundamentals/part-8-modern-redux.html" class="menu__link">Modern Redux with Redux Toolkit</a>
+
 - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Recipes</a>
   - <a href="recipe-index.html" class="menu__link">Recipes: Index</a>
   - <a href="configuring-your-store.html" class="menu__link">Configuring Your Store</a>
@@ -112,11 +115,13 @@
   - <a href="../redux-toolkit/overview.html" class="menu__link">Redux Toolkit: Overview</a>
 
 # <span id="writing-tests" class="anchor enhancedAnchor_2LWZ">
+
 </span>Writing Tests<a href="#writing-tests" class="hash-link" title="Direct link to heading">#</a>
 
 Because most of the Redux code you write are functions, and many of them are pure, they are easy to test without mocking.
 
 ### <span id="setting-up" class="anchor enhancedAnchor_2LWZ">
+
 </span>Setting Up<a href="#setting-up" class="hash-link" title="Direct link to heading">#</a>
 
 We recommend [Jest](../../facebook.github.io/jest/index.html) as the testing engine. Note that it runs in a Node environment, so you won't have access to the DOM.
@@ -198,11 +203,13 @@ We recommend [Jest](../../facebook.github.io/jest/index.html) as the testing eng
 <span class="token punctuation" style="color: #f8f8f2">}</span>and run `npm test` to run it once, or `npm run test:watch` to test on every file change.
 
 ### <span id="action-creators" class="anchor enhancedAnchor_2LWZ">
+
 </span>Action Creators<a href="#action-creators" class="hash-link" title="Direct link to heading">#</a>
 
 In Redux, action creators are functions which return plain objects. When testing action creators, we want to test whether the correct action creator was called and also whether the right action was returned.
 
 #### <span id="example" class="anchor enhancedAnchor_2LWZ">
+
 </span>Example<a href="#example" class="hash-link" title="Direct link to heading">#</a>
 
 <span class="token keyword module" style="color: #f92672">export</span>
@@ -372,6 +379,7 @@ In Redux, action creators are functions which return plain objects. When testing
 For async action creators using [Redux Thunk](../../github.com/reduxjs/redux-thunk.html) or other middleware, it's best to completely mock the Redux store for tests. You can apply the middleware to a mock store using [redux-mock-store](../../github.com/reduxjs/redux-mock-store.html). You can also use [fetch-mock](../../www.wheresrhys.co.uk/fetch-mock/index.html) to mock the HTTP requests.
 
 #### <span id="example-1" class="anchor enhancedAnchor_2LWZ">
+
 </span>Example<a href="#example-1" class="hash-link" title="Direct link to heading">#</a>
 
 <span class="token keyword module" style="color: #f92672">import</span>
@@ -970,6 +978,7 @@ For async action creators using [Redux Thunk](../../github.com/reduxjs/redux-thu
 A reducer should return the new state after applying the action to the previous state, and that's the behavior tested below.
 
 #### <span id="example-2" class="anchor enhancedAnchor_2LWZ">
+
 </span>Example<a href="#example-2" class="hash-link" title="Direct link to heading">#</a>
 
 <span class="token keyword module" style="color: #f92672">import</span>
@@ -2044,6 +2053,7 @@ Our `render` function can look like this:
 Middleware functions wrap behavior of `dispatch` calls in Redux, so to test this modified behavior we need to mock the behavior of the `dispatch` call.
 
 #### <span id="example-3" class="anchor enhancedAnchor_2LWZ">
+
 </span>Example<a href="#example-3" class="hash-link" title="Direct link to heading">#</a>
 
 First, we'll need a middleware function. This is similar to the real [redux-thunk](../../github.com/reduxjs/redux-thunk/blob/master/src/index.html).
@@ -2502,6 +2512,7 @@ The invoke function runs our middleware in the same way Redux does.
 <span class="token punctuation" style="color: #f8f8f2">)</span>In some cases, you will need to modify the `create` function to use different mock implementations of `getState` and `next`.
 
 ### <span id="glossary" class="anchor enhancedAnchor_2LWZ">
+
 </span>Glossary<a href="#glossary" class="hash-link" title="Direct link to heading">#</a>
 
 - [React Testing Library](../../testing-library.com/docs/react-testing-library/intro/index.html): React Testing Library is a very light-weight solution for testing React components. It provides light utility functions on top of react-dom and react-dom/test-utils, in a way that encourages better testing practices. Its primary guiding principle is: "The more your tests resemble the way your software is used, the more confidence they can give you."
@@ -2550,5 +2561,3 @@ Computing Derived Data »
 <img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
 <img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" />
 </a>
-
-

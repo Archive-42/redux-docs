@@ -29,10 +29,12 @@
   - <a href="../official/introduction/ecosystem.html" class="menu__link">Ecosystem</a>
   - <a href="../official/introduction/examples.html" class="menu__link">Examples</a>
 - <a href="#!" class="menu__link menu__link--sublist">Tutorials</a>
+
   - <a href="../official/tutorials/index.html" class="menu__link">Tutorials Index</a>
   - <a href="../official/tutorials/quick-start.html" class="menu__link">Quick Start</a>
   - <a href="../official/tutorials/typescript-quick-start.html" class="menu__link">TypeScript Quick Start</a>
   - <a href="#!" class="menu__link menu__link--sublist">Redux Essentials</a>
+
     - <a href="../official/tutorials/essentials/part-1-overview-concepts.html" class="menu__link">Redux Overview and Concepts</a>
     - <a href="../official/tutorials/essentials/part-2-app-structure.html" class="menu__link">Redux App Structure</a>
     - <a href="../official/tutorials/essentials/part-3-data-flow.html" class="menu__link">Basic Redux Data Flow</a>
@@ -48,6 +50,7 @@
     - <a href="../official/tutorials/fundamentals/part-6-async-logic.html" class="menu__link">Async Logic and Data Fetching</a>
     - <a href="../official/tutorials/fundamentals/part-7-standard-patterns.html" class="menu__link">Standard Redux Patterns</a>
     - <a href="../official/tutorials/fundamentals/part-8-modern-redux.html" class="menu__link">Modern Redux with Redux Toolkit</a>
+
 - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Recipes</a>
   - <a href="basic-reducer-structure.html" class="menu__link">Basic Reducer Structure</a>
     - <a href="splitting-reducer-logic.html" class="menu__link">Splitting Reducer Logic</a>
@@ -94,9 +97,11 @@
   - <a href="../official/redux-toolkit/overview.html" class="menu__link">Redux Toolkit: Overview</a>
 
 # <span id="using-combinereducers" class="anchor enhancedAnchor_2LWZ">
+
 </span>Using `combineReducers`<a href="#using-combinereducers" class="hash-link" title="Direct link to heading">#</a>
 
 ## <span id="core-concepts" class="anchor enhancedAnchor_2LWZ">
+
 </span>Core Concepts<a href="#core-concepts" class="hash-link" title="Direct link to heading">#</a>
 
 The most common state shape for a Redux app is a plain Javascript object containing "slices" of domain-specific data at each top-level key. Similarly, the most common approach to writing reducer logic for that state shape is to have "slice reducer" functions, each with the same `(state, action)` signature, and each responsible for managing all updates to that specific slice of state. Multiple slice reducers can respond to the same action, independently update their own slice as needed, and the updated slices are combined into the new state object.
@@ -111,6 +116,7 @@ There are several important ideas to be aware of when using `combineReducers`:
 - You can use it at all levels of your reducer structure, not just to create the root reducer. It's very common to have multiple combined reducers in various places, which are composed together to create the root reducer.
 
 ## <span id="defining-state-shape" class="anchor enhancedAnchor_2LWZ">
+
 </span>Defining State Shape<a href="#defining-state-shape" class="hash-link" title="Direct link to heading">#</a>
 
 There are two ways to define the initial shape and contents of your store's state. First, the `createStore` function can take `preloadedState` as its second argument. This is primarily intended for initializing the store with state that was previously persisted elsewhere, such as the browser's localStorage. The other way is for the root reducer to return the initial state value when the state argument is `undefined`. These two approaches are described in more detail in [Initializing State](initializing-state.html), but there are some additional concerns to be aware of when using `combineReducers`.

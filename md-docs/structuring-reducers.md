@@ -29,10 +29,12 @@
   - <a href="../official/introduction/ecosystem.html" class="menu__link">Ecosystem</a>
   - <a href="../official/introduction/examples.html" class="menu__link">Examples</a>
 - <a href="#!" class="menu__link menu__link--sublist">Tutorials</a>
+
   - <a href="../official/tutorials/index.html" class="menu__link">Tutorials Index</a>
   - <a href="../official/tutorials/quick-start.html" class="menu__link">Quick Start</a>
   - <a href="../official/tutorials/typescript-quick-start.html" class="menu__link">TypeScript Quick Start</a>
   - <a href="#!" class="menu__link menu__link--sublist">Redux Essentials</a>
+
     - <a href="../official/tutorials/essentials/part-1-overview-concepts.html" class="menu__link">Redux Overview and Concepts</a>
     - <a href="../official/tutorials/essentials/part-2-app-structure.html" class="menu__link">Redux App Structure</a>
     - <a href="../official/tutorials/essentials/part-3-data-flow.html" class="menu__link">Basic Redux Data Flow</a>
@@ -48,6 +50,7 @@
     - <a href="../official/tutorials/fundamentals/part-6-async-logic.html" class="menu__link">Async Logic and Data Fetching</a>
     - <a href="../official/tutorials/fundamentals/part-7-standard-patterns.html" class="menu__link">Standard Redux Patterns</a>
     - <a href="../official/tutorials/fundamentals/part-8-modern-redux.html" class="menu__link">Modern Redux with Redux Toolkit</a>
+
 - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Recipes</a>
   - <a href="../using-object-spread-operator.html" class="menu__link">Using Object Spread Operator</a>
   - <a href="../reducing-boilerplate.html" class="menu__link">Reducing Boilerplate</a>
@@ -98,6 +101,7 @@
   - <a href="../official/redux-toolkit/overview.html" class="menu__link">Redux Toolkit: Overview</a>
 
 # <span id="structuring-reducers" class="anchor enhancedAnchor_2LWZ">
+
 </span>Structuring Reducers<a href="#structuring-reducers" class="hash-link" title="Direct link to heading">#</a>
 
 At its core, Redux is really a fairly simple design pattern: all your "write" logic goes into a single function, and the only way to run that logic is to give Redux a plain object that describes something that has happened. The Redux store calls that write logic function and passes in the current state tree and the descriptive object, the write logic function returns some new state tree, and the Redux store notifies any subscribers that the state tree has changed.
@@ -107,6 +111,7 @@ Redux puts some basic constraints on how that write logic function should work. 
 Beyond that, Redux does not really care how you actually structure your logic inside that reducer function, as long as it obeys those basic rules. This is both a source of freedom and a source of confusion. However, there are a number of common patterns that are widely used when writing reducers, as well as a number of related topics and concepts to be aware of. As an application grows, these patterns play a crucial role in managing reducer code complexity, handling real-world data, and optimizing UI performance.
 
 ### <span id="prerequisite-concepts-for-writing-reducers" class="anchor enhancedAnchor_2LWZ">
+
 </span>Prerequisite Concepts for Writing Reducers<a href="#prerequisite-concepts-for-writing-reducers" class="hash-link" title="Direct link to heading">#</a>
 
 Some of these concepts are already described elsewhere in the Redux documentation. Others are generic and applicable outside of Redux itself, and there are numerous existing articles that cover these concepts in detail. These concepts and techniques form the foundation of writing solid Redux reducer logic.
@@ -114,11 +119,13 @@ Some of these concepts are already described elsewhere in the Redux documentatio
 It is vital that these Prerequisite Concepts are **thoroughly understood** before moving on to more advanced and Redux-specific techniques. A recommended reading list is available at:
 
 #### <span id="prerequisite-concepts" class="anchor enhancedAnchor_2LWZ">
+
 </span>[Prerequisite Concepts](prerequisite-concepts.html)<a href="#prerequisite-concepts" class="hash-link" title="Direct link to heading">#</a>
 
 Standard Redux architecture relies on using plain JS objects and arrays for your state. If you're using an alternate approach for some reason, the details may differ based on your approach, but many of the principles will still apply.
 
 ### <span id="reducer-concepts-and-techniques" class="anchor enhancedAnchor_2LWZ">
+
 </span>Reducer Concepts and Techniques<a href="#reducer-concepts-and-techniques" class="hash-link" title="Direct link to heading">#</a>
 
 - [Basic Reducer Structure](basic-reducer-structure.html)
@@ -167,4 +174,3 @@ Prerequisite Concepts »
 
 <a href="../official/index.html" class="footerLogoLink_MyFc">
 <img src="../official/../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
-

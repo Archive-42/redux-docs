@@ -26,6 +26,7 @@ Menu
   - <a href="../../introduction/ecosystem.html" class="menu__link">Ecosystem</a>
   - <a href="../../introduction/examples.html" class="menu__link">Examples</a>
 - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Tutorials</a>
+
   - <a href="../index.html" class="menu__link">Tutorials Index</a>
   - <a href="../quick-start.html" class="menu__link">Quick Start</a>
   - <a href="../typescript-quick-start.html" class="menu__link">TypeScript Quick Start</a>
@@ -37,6 +38,7 @@ Menu
     - <a href="../essentials/part-5-async-logic.html" class="menu__link">Async Logic and Data Fetching</a>
     - <a href="../essentials/part-6-performance-normalization.html" class="menu__link">Performance and Normalizing Data</a>
   - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Redux Fundamentals</a>
+
     - <a href="part-1-overview.html" class="menu__link">Redux Overview</a>
     - <a href="part-2-concepts-data-flow.html" class="menu__link">Redux Concepts and Data Flow</a>
     - <a href="part-3-state-actions-reducers.html" class="menu__link">State, Actions, and Reducers</a>
@@ -45,7 +47,6 @@ Menu
     - <a href="part-6-async-logic.html" class="menu__link">Async Logic and Data Fetching</a>
     - <a href="part-7-standard-patterns.html" class="menu__link">Standard Redux Patterns</a>
     - <a href="part-8-modern-redux.html" class="menu__link menu__link--active active">Modern Redux with Redux Toolkit</a>
-
 
     - <a href="../../recipes/structuring-reducers/structuring-reducers.html" class="menu__link">Structuring Reducers</a>
     - <a href="../../recipes/structuring-reducers/prerequisite-concepts.html" class="menu__link">Prerequisite Concepts</a>
@@ -59,6 +60,7 @@ Menu
     - <a href="../../recipes/structuring-reducers/reusing-reducer-logic.html" class="menu__link">Reusing Reducer Logic</a>
     - <a href="../../recipes/structuring-reducers/immutable-update-patterns.html" class="menu__link">Immutable Update Patterns</a>
     - <a href="../../recipes/structuring-reducers/initializing-state.html" class="menu__link">Initializing State</a>
+
 - <a href="#!" class="menu__link menu__link--sublist">Understanding Redux</a>
   - <a href="#!" class="menu__link menu__link--sublist">Thinking in Redux</a>
     - <a href="../../understanding/thinking-in-redux/motivation.html" class="menu__link">Motivation</a>
@@ -68,6 +70,7 @@ Menu
     - <a href="../../understanding/history-and-design/prior-art.html" class="menu__link">Prior Art</a>
     - <a href="../../understanding/history-and-design/middleware.html" class="menu__link">Middleware</a>
 - <a href="#!" class="menu__link menu__link--sublist">FAQ</a>
+
   - <a href="../../faq.html" class="menu__link">FAQ Index</a>
   - <a href="../../faq/general.html" class="menu__link">General</a>
   - <a href="../../faq/reducers.html" class="menu__link">Reducers</a>
@@ -78,7 +81,7 @@ Menu
   - <a href="../../faq/code-structure.html" class="menu__link">Code Structure</a>
   - <a href="../../faq/performance.html" class="menu__link">Performance</a>
   - <a href="../../faq/design-decisions.html" class="menu__link">Design Decisions</a>
- 
+
 - <a href="#!" class="menu__link menu__link--sublist">Style Guide</a>
   - <a href="../../style-guide/style-guide.html" class="menu__link">Style Guide: Best Practices</a>
 - <a href="#!" class="menu__link menu__link--sublist">API Reference</a>
@@ -144,53 +147,53 @@ So, let's see how we can use Redux Toolkit to simplify the code we've already wr
 
 Before we continue, **add the Redux Toolkit package to your app**:
 
-<span class="token function" style="color: #e6d874">npm</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">install</span><span class="token plain"> @reduxjs/toolkit</span>## <span id="store-setup" class="anchor enhancedAnchor_2LWZ"></span>Store Setup<a href="#store-setup" class="hash-link" title="Direct link to heading">#</a>
+<span class="token function" style="color: #e6d874">npm</span><span > </span><span class="token function" style="color: #e6d874">install</span><span > @reduxjs/toolkit</span>## <span id="store-setup" class="anchor enhancedAnchor_2LWZ"></span>Store Setup<a href="#store-setup" class="hash-link" title="Direct link to heading">#</a>
 
 We've gone through a few iterations of setup logic for our Redux store. Currently, it looks like this:
 
 src/rootReducer.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #000000">{</span><span > combineReducers </span><span class="token imports punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span > </span><span class="token imports punctuation" style="color: #000000">{</span><span > combineReducers </span><span class="token imports punctuation" style="color: #000000">}</span><span > </span><span class="token keyword module" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'redux'</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >todosReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./features/todos/todosSlice'</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">import</span><span > </span><span >todosReducer</span><span > </span><span class="token keyword module" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'./features/todos/todosSlice'</span><span ></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >filtersReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./features/filters/filtersSlice'</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">import</span><span > </span><span >filtersReducer</span><span > </span><span class="token keyword module" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'./features/filters/filtersSlice'</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> rootReducer </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">combineReducers</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">const</span><span > rootReducer </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token function" style="color: #e6d874">combineReducers</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Define a top-level state field named \`todos\`, handled by \`todosReducer\`</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// Define a top-level state field named \`todos\`, handled by \`todosReducer\`</span><span ></span>
 
-<span class="token plain"> todos</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> todosReducer</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > todos</span><span class="token operator" style="color: #000000">:</span><span > todosReducer</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> filters</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> filtersReducer</span>
+<span > filters</span><span class="token operator" style="color: #000000">:</span><span > filtersReducer</span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> rootReducer</span>src/store.js
+<span ></span><span class="token keyword module" style="color: #f92672">export</span><span > </span><span class="token keyword module" style="color: #f92672">default</span><span > rootReducer</span>src/store.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #000000">{</span><span > createStore</span><span class="token imports punctuation" style="color: #000000">,</span><span > applyMiddleware </span><span class="token imports punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span > </span><span class="token imports punctuation" style="color: #000000">{</span><span > createStore</span><span class="token imports punctuation" style="color: #000000">,</span><span > applyMiddleware </span><span class="token imports punctuation" style="color: #000000">}</span><span > </span><span class="token keyword module" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'redux'</span><span ></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >thunkMiddleware</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux-thunk'</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">import</span><span > </span><span >thunkMiddleware</span><span > </span><span class="token keyword module" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'redux-thunk'</span><span ></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #000000">{</span><span > composeWithDevTools </span><span class="token imports punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux-devtools-extension'</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">import</span><span > </span><span class="token imports punctuation" style="color: #000000">{</span><span > composeWithDevTools </span><span class="token imports punctuation" style="color: #000000">}</span><span > </span><span class="token keyword module" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'redux-devtools-extension'</span><span ></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >rootReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./reducer'</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">import</span><span > </span><span >rootReducer</span><span > </span><span class="token keyword module" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'./reducer'</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> composedEnhancer </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">composeWithDevTools</span><span class="token punctuation" style="color: #000000">(</span><span class="token function" style="color: #e6d874">applyMiddleware</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">thunkMiddleware</span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">const</span><span > composedEnhancer </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token function" style="color: #e6d874">composeWithDevTools</span><span class="token punctuation" style="color: #000000">(</span><span class="token function" style="color: #e6d874">applyMiddleware</span><span class="token punctuation" style="color: #000000">(</span><span >thunkMiddleware</span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> store </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createStore</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">rootReducer</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> composedEnhancer</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">const</span><span > store </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token function" style="color: #e6d874">createStore</span><span class="token punctuation" style="color: #000000">(</span><span >rootReducer</span><span class="token punctuation" style="color: #000000">,</span><span > composedEnhancer</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> store</span>Notice that the setup process takes several steps. We have to:
+<span ></span><span class="token keyword module" style="color: #f92672">export</span><span > </span><span class="token keyword module" style="color: #f92672">default</span><span > store</span>Notice that the setup process takes several steps. We have to:
 
 - Combine the slice reducers together to form the root reducer
 - Import the root reducer into the store file
@@ -206,33 +209,33 @@ It would be nice if we could cut down the number of steps here.
 
 src/store.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #000000">{</span><span > configureStore </span><span class="token imports punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span > </span><span class="token imports punctuation" style="color: #000000">{</span><span > configureStore </span><span class="token imports punctuation" style="color: #000000">}</span><span > </span><span class="token keyword module" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >todosReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./features/todos/todosSlice'</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">import</span><span > </span><span >todosReducer</span><span > </span><span class="token keyword module" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'./features/todos/todosSlice'</span><span ></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >filtersReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./features/filters/filtersSlice'</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">import</span><span > </span><span >filtersReducer</span><span > </span><span class="token keyword module" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'./features/filters/filtersSlice'</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> store </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">configureStore</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">const</span><span > store </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token function" style="color: #e6d874">configureStore</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> reducer</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > reducer</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Define a top-level state field named \`todos\`, handled by \`todosReducer\`</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// Define a top-level state field named \`todos\`, handled by \`todosReducer\`</span><span ></span>
 
-<span class="token plain"> todos</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> todosReducer</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > todos</span><span class="token operator" style="color: #000000">:</span><span > todosReducer</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> filters</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> filtersReducer</span>
+<span > filters</span><span class="token operator" style="color: #000000">:</span><span > filtersReducer</span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> store</span>That one call to `configureStore` did all the work for us:
+<span ></span><span class="token keyword module" style="color: #f92672">export</span><span > </span><span class="token keyword module" style="color: #f92672">default</span><span > store</span>That one call to `configureStore` did all the work for us:
 
 - It combined `todosReducer` and `filtersReducer` into the root reducer function, which will handle a root state that looks like `{todos, filters}`
 - It created a Redux store using that root reducer
@@ -246,29 +249,29 @@ Let's see what happens now if we accidentally mutate some of the state. What if 
 
 src/features/todos/todosSlice
 
-<span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">todosReducer</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state </span><span class="token parameter operator" style="color: #000000">=</span><span class="token parameter"> initialState</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">export</span><span > </span><span class="token keyword module" style="color: #f92672">default</span><span > </span><span class="token keyword" style="color: #f92672">function</span><span > </span><span class="token function" style="color: #e6d874">todosReducer</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state </span><span class="token parameter operator" style="color: #000000">=</span><span class="token parameter"> initialState</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">switch</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">type</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token keyword control-flow" style="color: #f92672">switch</span><span > </span><span class="token punctuation" style="color: #000000">(</span><span >action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">type</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// omit other cases</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// omit other cases</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">case</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos/todosLoading'</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">case</span><span > </span><span class="token string" style="color: #a6e22e">'todos/todosLoading'</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// ❌ WARNING: example only - don't do this in a normal reducer!</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// ❌ WARNING: example only - don't do this in a normal reducer!</span><span ></span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">status</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'loading'</span><span class="token plain"></span>
+<span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">status</span><span > </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token string" style="color: #a6e22e">'loading'</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> state</span>
+<span > </span><span class="token keyword control-flow" style="color: #f92672">return</span><span > state</span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token operator" style="color: #000000">:</span><span class="token plain"></span>
+<span > </span><span class="token keyword module" style="color: #f92672">default</span><span class="token operator" style="color: #000000">:</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> state</span>
+<span > </span><span class="token keyword control-flow" style="color: #f92672">return</span><span > state</span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span>Uh-oh. Our whole app just crashed! What happened?
+<span ></span><span class="token punctuation" style="color: #000000">}</span>Uh-oh. Our whole app just crashed! What happened?
 
 ![Immutability check middleware error](../../../d33wubrfki0l68.cloudfront.net/195c3ba85fa715a896d6418da55f8ec369fc4770/4359b/assets/images/immutable-error-b3de8ff3ae0efb873ae791abe0d46769.23c)
 
@@ -280,7 +283,7 @@ Redux Toolkit already includes several of the packages we're using, like `redux`
 
 First, we can switch our `createSelector` import to be from `'@reduxjs/toolkit'` instead of `'reselect'`. Then, we can remove the separate packages we have listed in our `package.json`:
 
-<span class="token plain">npm uninstall redux redux</span><span class="token operator" style="color: #000000">-</span><span class="token plain">thunk reselect</span>To be clear, **we're still using these packages and need to have them installed**. However, because Redux Toolkit depends on them, they'll be installed automatically when we install `@reduxjs/toolkit`, so we don't need to have the other packages specifically listed in our `package.json` file.
+<span >npm uninstall redux redux</span><span class="token operator" style="color: #000000">-</span><span >thunk reselect</span>To be clear, **we're still using these packages and need to have them installed**. However, because Redux Toolkit depends on them, they'll be installed automatically when we install `@reduxjs/toolkit`, so we don't need to have the other packages specifically listed in our `package.json` file.
 
 ## <span id="writing-slices" class="anchor enhancedAnchor_2LWZ"></span>Writing Slices<a href="#writing-slices" class="hash-link" title="Direct link to heading">#</a>
 
@@ -304,61 +307,61 @@ Let's look at a small standalone example first.
 
 createSlice example
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #000000">{</span><span > createSlice </span><span class="token imports punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span > </span><span class="token imports punctuation" style="color: #000000">{</span><span > createSlice </span><span class="token imports punctuation" style="color: #000000">}</span><span > </span><span class="token keyword module" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> initialState </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">\[</span><span class="token punctuation" style="color: #000000">\]</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">const</span><span > initialState </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token punctuation" style="color: #000000">\[</span><span class="token punctuation" style="color: #000000">\]</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> todosSlice </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createSlice</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">const</span><span > todosSlice </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token function" style="color: #e6d874">createSlice</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> name</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos'</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > name</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token string" style="color: #a6e22e">'todos'</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> initialState</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > initialState</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> reducers</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > reducers</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">todoAdded</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token function" style="color: #e6d874">todoAdded</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// ✅ This "mutating" code is okay inside of createSlice!</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// ✅ This "mutating" code is okay inside of createSlice!</span><span ></span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">push</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > state</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">push</span><span class="token punctuation" style="color: #000000">(</span><span >action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">todoToggled</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token function" style="color: #e6d874">todoToggled</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> todo </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">find</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todo</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">id</span><span class="token plain"> </span><span class="token operator" style="color: #000000">===</span><span class="token plain"> action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > todo </span><span class="token operator" style="color: #000000">=</span><span > state</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">find</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todo</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">id</span><span > </span><span class="token operator" style="color: #000000">===</span><span > action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">completed</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token operator" style="color: #000000">!</span><span class="token plain">todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">completed</span><span class="token plain"></span>
+<span > todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">completed</span><span > </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token operator" style="color: #000000">!</span><span >todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">completed</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">todosLoading</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token function" style="color: #e6d874">todosLoading</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token keyword control-flow" style="color: #f92672">return</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token spread operator" style="color: #000000">...</span><span class="token plain">state</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token spread operator" style="color: #000000">...</span><span >state</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> status</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'loading'</span><span class="token plain"></span>
+<span > status</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token string" style="color: #a6e22e">'loading'</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> todoAdded</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> todoToggled</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> todosLoading </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> todosSlice</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">actions</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">export</span><span > </span><span class="token keyword" style="color: #f92672">const</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span > todoAdded</span><span class="token punctuation" style="color: #000000">,</span><span > todoToggled</span><span class="token punctuation" style="color: #000000">,</span><span > todosLoading </span><span class="token punctuation" style="color: #000000">}</span><span > </span><span class="token operator" style="color: #000000">=</span><span > todosSlice</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">actions</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> todosSlice</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">reducer</span>There's several things to see in this example:
+<span ></span><span class="token keyword module" style="color: #f92672">export</span><span > </span><span class="token keyword module" style="color: #f92672">default</span><span > todosSlice</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">reducer</span>There's several things to see in this example:
 
 - We write case reducer functions inside the `reducers` object, and give them readable names
 - **`createSlice` will automatically generate action creators** that correspond to each case reducer function we provide
@@ -370,9 +373,9 @@ The generated action creators will be available as `slice.actions.todoAdded`, an
 
 So what do these auto-generated action objects look like? Let's try calling one of them and logging the action to see:
 
-<span class="token console class-name">console</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #000000">(</span><span class="token function" style="color: #e6d874">todoToggled</span><span class="token punctuation" style="color: #000000">(</span><span class="token number" style="color: #ae81ff">42</span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span class="token console class-name">console</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #000000">(</span><span class="token function" style="color: #e6d874">todoToggled</span><span class="token punctuation" style="color: #000000">(</span><span class="token number" style="color: #ae81ff">42</span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// {type: 'todos/todoToggled', payload: 42}</span>`createSlice` generated the action type string for us, by combining the slice's `name` field with the `todoToggled` name of the reducer function we wrote. By default, the action creator accepts one argument, which it puts into the action object as `action.payload`.
+<span ></span><span class="token comment" style="color: #c6cad2">// {type: 'todos/todoToggled', payload: 42}</span>`createSlice` generated the action type string for us, by combining the slice's `name` field with the `todoToggled` name of the reducer function we wrote. By default, the action creator accepts one argument, which it puts into the action object as `action.payload`.
 
 Inside of the generated reducer function, `createSlice` will check to see if a dispatched action's `action.type` matches one of the names it generated. If so, it will run that case reducer function. This is exactly the same pattern that we wrote ourselves using a `switch/case` statement, but `createSlice` does it for us automatically.
 
@@ -386,23 +389,23 @@ Earlier, we talked about "mutation" (modifying existing object/array values) and
 
 In Redux, **our reducers are _never_ allowed to mutate the original / current state values!**
 
-<span class="token comment" style="color: #c6cad2">// ❌ Illegal - by default, this will mutate the state!</span><span class="token plain"></span>
+<span class="token comment" style="color: #c6cad2">// ❌ Illegal - by default, this will mutate the state!</span><span ></span>
 
-<span class="token plain">state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">value</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">123</span>So if we can't change the originals, how do we return an updated state?
+<span >state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">value</span><span > </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token number" style="color: #ae81ff">123</span>So if we can't change the originals, how do we return an updated state?
 
 ##### <span class="admonition-icon"> </span>tip
 
 **Reducers can only make _copies_ of the original values, and then they can mutate the copies.**
 
-<span class="token comment" style="color: #c6cad2">// This is safe, because we made a copy</span><span class="token plain"></span>
+<span class="token comment" style="color: #c6cad2">// This is safe, because we made a copy</span><span ></span>
 
-<span class="token plain"></span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span ></span><span class="token keyword control-flow" style="color: #f92672">return</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token spread operator" style="color: #000000">...</span><span class="token plain">state</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token spread operator" style="color: #000000">...</span><span >state</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> value</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">123</span><span class="token plain"></span>
+<span > value</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token number" style="color: #ae81ff">123</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span>As you've seen throughout this tutorial, we can write immutable updates by hand by using JavaScript's array / object spread operators and other functions that return copies of the original values. However, writing immutable update logic by hand _is_ hard, and accidentally mutating state in reducers is the single most common mistake Redux users make.
+<span ></span><span class="token punctuation" style="color: #000000">}</span>As you've seen throughout this tutorial, we can write immutable updates by hand by using JavaScript's array / object spread operators and other functions that return copies of the original values. However, writing immutable update logic by hand _is_ hard, and accidentally mutating state in reducers is the single most common mistake Redux users make.
 
 **That's why Redux Toolkit's `createSlice` function lets you write immutable updates an easier way!**
 
@@ -410,41 +413,41 @@ In Redux, **our reducers are _never_ allowed to mutate the original / current st
 
 So, instead of this:
 
-<span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">handwrittenReducer</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span class="token keyword" style="color: #f92672">function</span><span > </span><span class="token function" style="color: #e6d874">handwrittenReducer</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token keyword control-flow" style="color: #f92672">return</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token spread operator" style="color: #000000">...</span><span class="token plain">state</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token spread operator" style="color: #000000">...</span><span >state</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> first</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > first</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token spread operator" style="color: #000000">...</span><span class="token plain">state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">first</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token spread operator" style="color: #000000">...</span><span >state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">first</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> second</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > second</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token spread operator" style="color: #000000">...</span><span class="token plain">state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">first</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">second</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token spread operator" style="color: #000000">...</span><span >state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">first</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">second</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">\[</span><span class="token plain">action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">someId</span><span class="token punctuation" style="color: #000000">\]</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">\[</span><span >action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">someId</span><span class="token punctuation" style="color: #000000">\]</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token spread operator" style="color: #000000">...</span><span class="token plain">state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">first</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">second</span><span class="token punctuation" style="color: #000000">\[</span><span class="token plain">action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">someId</span><span class="token punctuation" style="color: #000000">\]</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token spread operator" style="color: #000000">...</span><span >state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">first</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">second</span><span class="token punctuation" style="color: #000000">\[</span><span >action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">someId</span><span class="token punctuation" style="color: #000000">\]</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> fourth</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">someValue</span><span class="token plain"></span>
+<span > fourth</span><span class="token operator" style="color: #000000">:</span><span > action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">someValue</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span>You can write code that looks like this:
+<span ></span><span class="token punctuation" style="color: #000000">}</span>You can write code that looks like this:
 
-<span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">reducerWithImmer</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span class="token keyword" style="color: #f92672">function</span><span > </span><span class="token function" style="color: #e6d874">reducerWithImmer</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">first</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">second</span><span class="token punctuation" style="color: #000000">\[</span><span class="token plain">action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">someId</span><span class="token punctuation" style="color: #000000">\]</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">fourth</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">someValue</span><span class="token plain"></span>
+<span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">first</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">second</span><span class="token punctuation" style="color: #000000">\[</span><span >action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">someId</span><span class="token punctuation" style="color: #000000">\]</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">fourth</span><span > </span><span class="token operator" style="color: #000000">=</span><span > action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">someValue</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span>That's a lot easier to read!
+<span ></span><span class="token punctuation" style="color: #000000">}</span>That's a lot easier to read!
 
 But, here's something _very_ important to remember:
 
@@ -454,137 +457,137 @@ But, here's something _very_ important to remember:
 
 Immer still lets us write immutable updates by hand and return the new value ourselves if we want to. You can even mix and match. For example, removing an item from an array is often easier to do with `array.filter()`, so you could call that and then assign the result to `state` to "mutate" it:
 
-<span class="token comment" style="color: #c6cad2">// can mix "mutating" and "immutable" code inside of Immer:</span><span class="token plain"></span>
+<span class="token comment" style="color: #c6cad2">// can mix "mutating" and "immutable" code inside of Immer:</span><span ></span>
 
-<span class="token plain">state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">todos</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">todos</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">filter</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todo</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">id</span><span class="token plain"> </span><span class="token operator" style="color: #000000">!==</span><span class="token plain"> action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #000000">)</span>### <span id="converting-the-todos-reducer" class="anchor enhancedAnchor_2LWZ"></span>Converting the Todos Reducer<a href="#converting-the-todos-reducer" class="hash-link" title="Direct link to heading">#</a>
+<span >state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">todos</span><span > </span><span class="token operator" style="color: #000000">=</span><span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">todos</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">filter</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todo</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">id</span><span > </span><span class="token operator" style="color: #000000">!==</span><span > action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #000000">)</span>### <span id="converting-the-todos-reducer" class="anchor enhancedAnchor_2LWZ"></span>Converting the Todos Reducer<a href="#converting-the-todos-reducer" class="hash-link" title="Direct link to heading">#</a>
 
 Let's start converting our todos slice file to use `createSlice` instead. We'll pick a couple specific cases from our switch statement first to show how the process works.
 
 src/features/todos/todosSlice.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #000000">{</span><span > createSlice </span><span class="token imports punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span > </span><span class="token imports punctuation" style="color: #000000">{</span><span > createSlice </span><span class="token imports punctuation" style="color: #000000">}</span><span > </span><span class="token keyword module" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> initialState </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">const</span><span > initialState </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> status</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'idle'</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > status</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token string" style="color: #a6e22e">'idle'</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> entities</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > entities</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span ></span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> todosSlice </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createSlice</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">const</span><span > todosSlice </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token function" style="color: #e6d874">createSlice</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> name</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos'</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > name</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token string" style="color: #a6e22e">'todos'</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> initialState</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > initialState</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> reducers</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > reducers</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">todoAdded</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token function" style="color: #e6d874">todoAdded</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> todo </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > todo </span><span class="token operator" style="color: #000000">=</span><span > action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span ></span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #000000">\[</span><span class="token plain">todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">id</span><span class="token punctuation" style="color: #000000">\]</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> todo</span>
+<span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #000000">\[</span><span >todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">id</span><span class="token punctuation" style="color: #000000">\]</span><span > </span><span class="token operator" style="color: #000000">=</span><span > todo</span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">todoToggled</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token function" style="color: #e6d874">todoToggled</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> todoId </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > todoId </span><span class="token operator" style="color: #000000">=</span><span > action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> todo </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #000000">\[</span><span class="token plain">todoId</span><span class="token punctuation" style="color: #000000">\]</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > todo </span><span class="token operator" style="color: #000000">=</span><span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #000000">\[</span><span >todoId</span><span class="token punctuation" style="color: #000000">\]</span><span ></span>
 
-<span class="token plain"> todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">completed</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token operator" style="color: #000000">!</span><span class="token plain">todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">completed</span><span class="token plain"></span>
+<span > todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">completed</span><span > </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token operator" style="color: #000000">!</span><span >todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">completed</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> todoAdded</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> todoToggled </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> todosSlice</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">actions</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">export</span><span > </span><span class="token keyword" style="color: #f92672">const</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span > todoAdded</span><span class="token punctuation" style="color: #000000">,</span><span > todoToggled </span><span class="token punctuation" style="color: #000000">}</span><span > </span><span class="token operator" style="color: #000000">=</span><span > todosSlice</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">actions</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> todosSlice</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">reducer</span>The todos reducer in our example app is still using normalized state that is nested in a parent object, so the code here is a bit different than the miniature `createSlice` example we just looked at. Remember how we had to [write a lot of nested spread operators to toggle that todo earlier](part-7-standard-patterns.html#normalized-state)? Now that same code is a _lot_ shorter and easier to read.
+<span ></span><span class="token keyword module" style="color: #f92672">export</span><span > </span><span class="token keyword module" style="color: #f92672">default</span><span > todosSlice</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">reducer</span>The todos reducer in our example app is still using normalized state that is nested in a parent object, so the code here is a bit different than the miniature `createSlice` example we just looked at. Remember how we had to [write a lot of nested spread operators to toggle that todo earlier](part-7-standard-patterns.html#normalized-state)? Now that same code is a _lot_ shorter and easier to read.
 
 Let's add a couple more cases to this reducer.
 
 src/features/todos/todosSlice.js
 
-<span class="token keyword" style="color: #f92672">const</span><span class="token plain"> todosSlice </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createSlice</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span class="token keyword" style="color: #f92672">const</span><span > todosSlice </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token function" style="color: #e6d874">createSlice</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> name</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos'</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > name</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token string" style="color: #a6e22e">'todos'</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> initialState</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > initialState</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> reducers</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > reducers</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">todoAdded</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token function" style="color: #e6d874">todoAdded</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> todo </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > todo </span><span class="token operator" style="color: #000000">=</span><span > action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span ></span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #000000">\[</span><span class="token plain">todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">id</span><span class="token punctuation" style="color: #000000">\]</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> todo</span>
+<span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #000000">\[</span><span >todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">id</span><span class="token punctuation" style="color: #000000">\]</span><span > </span><span class="token operator" style="color: #000000">=</span><span > todo</span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">todoToggled</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token function" style="color: #e6d874">todoToggled</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> todoId </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > todoId </span><span class="token operator" style="color: #000000">=</span><span > action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> todo </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #000000">\[</span><span class="token plain">todoId</span><span class="token punctuation" style="color: #000000">\]</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > todo </span><span class="token operator" style="color: #000000">=</span><span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #000000">\[</span><span >todoId</span><span class="token punctuation" style="color: #000000">\]</span><span ></span>
 
-<span class="token plain"> todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">completed</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token operator" style="color: #000000">!</span><span class="token plain">todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">completed</span><span class="token plain"></span>
+<span > todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">completed</span><span > </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token operator" style="color: #000000">!</span><span >todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">completed</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> todoColorSelected</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > todoColorSelected</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">reducer</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token function" style="color: #e6d874">reducer</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> color</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> todoId </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span > color</span><span class="token punctuation" style="color: #000000">,</span><span > todoId </span><span class="token punctuation" style="color: #000000">}</span><span > </span><span class="token operator" style="color: #000000">=</span><span > action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span ></span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #000000">\[</span><span class="token plain">todoId</span><span class="token punctuation" style="color: #000000">\]</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">color</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> color</span>
+<span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #000000">\[</span><span >todoId</span><span class="token punctuation" style="color: #000000">\]</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">color</span><span > </span><span class="token operator" style="color: #000000">=</span><span > color</span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">prepare</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todoId</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> color</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token function" style="color: #e6d874">prepare</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todoId</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> color</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token keyword control-flow" style="color: #f92672">return</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> payload</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> todoId</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> color </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > payload</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span > todoId</span><span class="token punctuation" style="color: #000000">,</span><span > color </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">todoDeleted</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token function" style="color: #e6d874">todoDeleted</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">delete</span><span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #000000">\[</span><span class="token plain">action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #000000">\]</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">delete</span><span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #000000">\[</span><span >action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #000000">\]</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> todoAdded</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> todoToggled</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> todoColorSelected</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> todoDeleted </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">export</span><span > </span><span class="token keyword" style="color: #f92672">const</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span > todoAdded</span><span class="token punctuation" style="color: #000000">,</span><span > todoToggled</span><span class="token punctuation" style="color: #000000">,</span><span > todoColorSelected</span><span class="token punctuation" style="color: #000000">,</span><span > todoDeleted </span><span class="token punctuation" style="color: #000000">}</span><span > </span><span class="token operator" style="color: #000000">=</span><span ></span>
 
-<span class="token plain"> todosSlice</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">actions</span><span class="token plain"></span>
+<span > todosSlice</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">actions</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> todosSlice</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">reducer</span>The action creators for `todoAdded` and `todoToggled` only need to take a single parameter, like an entire todo object or a todo ID. But, what if we need to pass in multiple parameters, or do some of that "preparation" logic we talked about like generating a unique ID?
+<span ></span><span class="token keyword module" style="color: #f92672">export</span><span > </span><span class="token keyword module" style="color: #f92672">default</span><span > todosSlice</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">reducer</span>The action creators for `todoAdded` and `todoToggled` only need to take a single parameter, like an entire todo object or a todo ID. But, what if we need to pass in multiple parameters, or do some of that "preparation" logic we talked about like generating a unique ID?
 
 `createSlice` lets us handle those situations by adding a "prepare callback" to the reducer. We can pass an object that has functions named `reducer` and `prepare`. When we call the generated action creator, the `prepare` function will be called with whatever parameters were passed in. It should then create and return an object that has a `payload` field (or, optionally, `meta` and `error` fields), matching the [Flux Standard Action convention](part-7-standard-patterns.html#flux-standard-actions).
 
@@ -613,69 +616,69 @@ Let's replace our `fetchTodos` thunk by generating a thunk with `createAsyncThun
 
 src/features/todos/todosSlice.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #000000">{</span><span > createSlice</span><span class="token imports punctuation" style="color: #000000">,</span><span > createAsyncThunk </span><span class="token imports punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span > </span><span class="token imports punctuation" style="color: #000000">{</span><span > createSlice</span><span class="token imports punctuation" style="color: #000000">,</span><span > createAsyncThunk </span><span class="token imports punctuation" style="color: #000000">}</span><span > </span><span class="token keyword module" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// omit imports and state</span><span class="token plain"></span>
+<span ></span><span class="token comment" style="color: #c6cad2">// omit imports and state</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> fetchTodos </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createAsyncThunk</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'todos/fetchTodos'</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">async</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">export</span><span > </span><span class="token keyword" style="color: #f92672">const</span><span > fetchTodos </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token function" style="color: #e6d874">createAsyncThunk</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'todos/fetchTodos'</span><span class="token punctuation" style="color: #000000">,</span><span > </span><span class="token keyword" style="color: #f92672">async</span><span > </span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> response </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">await</span><span class="token plain"> client</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">get</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'/fakeApi/todos'</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > response </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token keyword control-flow" style="color: #f92672">await</span><span > client</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">get</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'/fakeApi/todos'</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> response</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">todos</span><span class="token plain"></span>
+<span > </span><span class="token keyword control-flow" style="color: #f92672">return</span><span > response</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">todos</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> todosSlice </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createSlice</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">const</span><span > todosSlice </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token function" style="color: #e6d874">createSlice</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> name</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos'</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > name</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token string" style="color: #a6e22e">'todos'</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> initialState</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > initialState</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> reducers</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > reducers</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// omit reducer cases</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// omit reducer cases</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">extraReducers</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token parameter">builder</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token function-variable function" style="color: #e6d874">extraReducers</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token parameter">builder</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> builder</span>
+<span > builder</span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">addCase</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">fetchTodos</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">pending</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">addCase</span><span class="token punctuation" style="color: #000000">(</span><span >fetchTodos</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">pending</span><span class="token punctuation" style="color: #000000">,</span><span > </span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">status</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'loading'</span><span class="token plain"></span>
+<span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">status</span><span > </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token string" style="color: #a6e22e">'loading'</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">addCase</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">fetchTodos</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">fulfilled</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">addCase</span><span class="token punctuation" style="color: #000000">(</span><span >fetchTodos</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">fulfilled</span><span class="token punctuation" style="color: #000000">,</span><span > </span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> newEntities </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > newEntities </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"> action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">forEach</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todo</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">forEach</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todo</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> newEntities</span><span class="token punctuation" style="color: #000000">\[</span><span class="token plain">todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">id</span><span class="token punctuation" style="color: #000000">\]</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> todo</span>
+<span > newEntities</span><span class="token punctuation" style="color: #000000">\[</span><span >todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">id</span><span class="token punctuation" style="color: #000000">\]</span><span > </span><span class="token operator" style="color: #000000">=</span><span > todo</span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> newEntities</span>
+<span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span > </span><span class="token operator" style="color: #000000">=</span><span > newEntities</span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">status</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'idle'</span><span class="token plain"></span>
+<span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">status</span><span > </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token string" style="color: #a6e22e">'idle'</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// omit exports</span>We pass `'todos/fetchTodos'` as the string prefix, and a "payload creator" function that calls our API and returns a promise containing the fetched data. Inside, `createAsyncThunk` will generate three action creators and action types, plus a thunk function that automatically dispatches those actions when called. In this case, the action creators and their types are:
+<span ></span><span class="token comment" style="color: #c6cad2">// omit exports</span>We pass `'todos/fetchTodos'` as the string prefix, and a "payload creator" function that calls our API and returns a promise containing the fetched data. Inside, `createAsyncThunk` will generate three action creators and action types, plus a thunk function that automatically dispatches those actions when called. In this case, the action creators and their types are:
 
 - `fetchTodos.pending`: `todos/fetchTodos/pending`
 - `fetchTodos.fulfilled`: `todos/fetchTodos/fulfilled`
@@ -689,85 +692,85 @@ As one more example, let's convert `saveNewTodo`. This thunk takes the `text` of
 
 src/features/todos/todosSlice.js
 
-<span class="token comment" style="color: #c6cad2">// omit imports</span><span class="token plain"></span>
+<span class="token comment" style="color: #c6cad2">// omit imports</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> fetchTodos </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createAsyncThunk</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'todos/fetchTodos'</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">async</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">export</span><span > </span><span class="token keyword" style="color: #f92672">const</span><span > fetchTodos </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token function" style="color: #e6d874">createAsyncThunk</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'todos/fetchTodos'</span><span class="token punctuation" style="color: #000000">,</span><span > </span><span class="token keyword" style="color: #f92672">async</span><span > </span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> response </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">await</span><span class="token plain"> client</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">get</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'/fakeApi/todos'</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > response </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token keyword control-flow" style="color: #f92672">await</span><span > client</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">get</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'/fakeApi/todos'</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> response</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">todos</span><span class="token plain"></span>
+<span > </span><span class="token keyword control-flow" style="color: #f92672">return</span><span > response</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">todos</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> saveNewTodo </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createAsyncThunk</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'todos/saveNewTodo'</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">async</span><span class="token plain"> </span><span class="token parameter">text</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">export</span><span > </span><span class="token keyword" style="color: #f92672">const</span><span > saveNewTodo </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token function" style="color: #e6d874">createAsyncThunk</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'todos/saveNewTodo'</span><span class="token punctuation" style="color: #000000">,</span><span > </span><span class="token keyword" style="color: #f92672">async</span><span > </span><span class="token parameter">text</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> initialTodo </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> text </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > initialTodo </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span > text </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> response </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">await</span><span class="token plain"> client</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">post</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'/fakeApi/todos'</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> todo</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> initialTodo </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > response </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token keyword control-flow" style="color: #f92672">await</span><span > client</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">post</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'/fakeApi/todos'</span><span class="token punctuation" style="color: #000000">,</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span > todo</span><span class="token operator" style="color: #000000">:</span><span > initialTodo </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> response</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">todo</span><span class="token plain"></span>
+<span > </span><span class="token keyword control-flow" style="color: #f92672">return</span><span > response</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">todo</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> todosSlice </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createSlice</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">const</span><span > todosSlice </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token function" style="color: #e6d874">createSlice</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> name</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos'</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > name</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token string" style="color: #a6e22e">'todos'</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> initialState</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > initialState</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> reducers</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > reducers</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// omit case reducers</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// omit case reducers</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">extraReducers</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token parameter">builder</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token function-variable function" style="color: #e6d874">extraReducers</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token parameter">builder</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> builder</span>
+<span > builder</span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">addCase</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">fetchTodos</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">pending</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">addCase</span><span class="token punctuation" style="color: #000000">(</span><span >fetchTodos</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">pending</span><span class="token punctuation" style="color: #000000">,</span><span > </span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">status</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'loading'</span><span class="token plain"></span>
+<span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">status</span><span > </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token string" style="color: #a6e22e">'loading'</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">addCase</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">fetchTodos</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">fulfilled</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">addCase</span><span class="token punctuation" style="color: #000000">(</span><span >fetchTodos</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">fulfilled</span><span class="token punctuation" style="color: #000000">,</span><span > </span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> newEntities </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > newEntities </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"> action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">forEach</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todo</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">forEach</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todo</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> newEntities</span><span class="token punctuation" style="color: #000000">\[</span><span class="token plain">todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">id</span><span class="token punctuation" style="color: #000000">\]</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> todo</span>
+<span > newEntities</span><span class="token punctuation" style="color: #000000">\[</span><span >todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">id</span><span class="token punctuation" style="color: #000000">\]</span><span > </span><span class="token operator" style="color: #000000">=</span><span > todo</span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> newEntities</span>
+<span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span > </span><span class="token operator" style="color: #000000">=</span><span > newEntities</span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">status</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'idle'</span><span class="token plain"></span>
+<span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">status</span><span > </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token string" style="color: #a6e22e">'idle'</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">addCase</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">saveNewTodo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">fulfilled</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">addCase</span><span class="token punctuation" style="color: #000000">(</span><span >saveNewTodo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">fulfilled</span><span class="token punctuation" style="color: #000000">,</span><span > </span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> todo </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > todo </span><span class="token operator" style="color: #000000">=</span><span > action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span ></span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #000000">\[</span><span class="token plain">todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">id</span><span class="token punctuation" style="color: #000000">\]</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> todo</span>
+<span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #000000">\[</span><span >todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">id</span><span class="token punctuation" style="color: #000000">\]</span><span > </span><span class="token operator" style="color: #000000">=</span><span > todo</span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// omit exports and selectors</span>The process for `saveNewTodo` is the same as we saw for `fetchTodos`. We call `createAsyncThunk`, and pass in the action prefix and a payload creator. Inside the payload creator, we make an async API call, and return a result value.
+<span ></span><span class="token comment" style="color: #c6cad2">// omit exports and selectors</span>The process for `saveNewTodo` is the same as we saw for `fetchTodos`. We call `createAsyncThunk`, and pass in the action prefix and a payload creator. Inside the payload creator, we make an async API call, and return a result value.
 
 In this case, when we call `dispatch(saveNewTodo(text))`, the `text` value will be passed in to the payload creator as its first argument.
 
@@ -806,7 +809,7 @@ Let's see how we can use these in our todos slice:
 
 src/features/todos/todosSlice.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #000000">{</span><span ></span>
+<span class="token keyword module" style="color: #f92672">import</span><span > </span><span class="token imports punctuation" style="color: #000000">{</span><span ></span>
 
 <span > createSlice</span><span class="token imports punctuation" style="color: #000000">,</span><span ></span>
 
@@ -814,87 +817,87 @@ src/features/todos/todosSlice.js
 
 <span > createEntityAdapter</span>
 
-<span ></span><span class="token imports punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
+<span ></span><span class="token imports punctuation" style="color: #000000">}</span><span > </span><span class="token keyword module" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span ></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// omit some imports</span><span class="token plain"></span>
+<span ></span><span class="token comment" style="color: #c6cad2">// omit some imports</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> todosAdapter </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createEntityAdapter</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">const</span><span > todosAdapter </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token function" style="color: #e6d874">createEntityAdapter</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> initialState </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> todosAdapter</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">getInitialState</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">const</span><span > initialState </span><span class="token operator" style="color: #000000">=</span><span > todosAdapter</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">getInitialState</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> status</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'idle'</span><span class="token plain"></span>
+<span > status</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token string" style="color: #a6e22e">'idle'</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// omit thunks</span><span class="token plain"></span>
+<span ></span><span class="token comment" style="color: #c6cad2">// omit thunks</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> todosSlice </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createSlice</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">const</span><span > todosSlice </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token function" style="color: #e6d874">createSlice</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> name</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos'</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > name</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token string" style="color: #a6e22e">'todos'</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> initialState</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > initialState</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> reducers</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > reducers</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// omit some reducers</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// omit some reducers</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Use an adapter reducer function to remove a todo by ID</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// Use an adapter reducer function to remove a todo by ID</span><span ></span>
 
-<span class="token plain"> todoDeleted</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> todosAdapter</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">removeOne</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > todoDeleted</span><span class="token operator" style="color: #000000">:</span><span > todosAdapter</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">removeOne</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">completedTodosCleared</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token function" style="color: #e6d874">completedTodosCleared</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> completedIds </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token known-class-name class-name">Object</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">values</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > completedIds </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token known-class-name class-name">Object</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">values</span><span class="token punctuation" style="color: #000000">(</span><span >state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">filter</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todo</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">completed</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">filter</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todo</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">completed</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">map</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todo</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">id</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">map</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todo</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">id</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Use an adapter function as a "mutating" update helper</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// Use an adapter function as a "mutating" update helper</span><span ></span>
 
-<span class="token plain"> todosAdapter</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">removeMany</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">state</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> completedIds</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > todosAdapter</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">removeMany</span><span class="token punctuation" style="color: #000000">(</span><span >state</span><span class="token punctuation" style="color: #000000">,</span><span > completedIds</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">extraReducers</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token parameter">builder</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token function-variable function" style="color: #e6d874">extraReducers</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token parameter">builder</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> builder</span>
+<span > builder</span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">addCase</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">fetchTodos</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">pending</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">addCase</span><span class="token punctuation" style="color: #000000">(</span><span >fetchTodos</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">pending</span><span class="token punctuation" style="color: #000000">,</span><span > </span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">status</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'loading'</span><span class="token plain"></span>
+<span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">status</span><span > </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token string" style="color: #a6e22e">'loading'</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">addCase</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">fetchTodos</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">fulfilled</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">addCase</span><span class="token punctuation" style="color: #000000">(</span><span >fetchTodos</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">fulfilled</span><span class="token punctuation" style="color: #000000">,</span><span > </span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> todosAdapter</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">setAll</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">state</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > todosAdapter</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">setAll</span><span class="token punctuation" style="color: #000000">(</span><span >state</span><span class="token punctuation" style="color: #000000">,</span><span > action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">status</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'idle'</span><span class="token plain"></span>
+<span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">status</span><span > </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token string" style="color: #a6e22e">'idle'</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Use another adapter function as a reducer to add a todo</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// Use another adapter function as a reducer to add a todo</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">addCase</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">saveNewTodo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">fulfilled</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> todosAdapter</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">addOne</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">addCase</span><span class="token punctuation" style="color: #000000">(</span><span >saveNewTodo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">fulfilled</span><span class="token punctuation" style="color: #000000">,</span><span > todosAdapter</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">addOne</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// omit selectors</span>The different adapter reducer functions take different values depending on the function, all in `action.payload`. The "add" and "upsert" functions take a single item or an array of items, the "remove" functions take a single ID or array of IDs, and so on.
+<span ></span><span class="token comment" style="color: #c6cad2">// omit selectors</span>The different adapter reducer functions take different values depending on the function, all in `action.payload`. The "add" and "upsert" functions take a single item or an array of items, the "remove" functions take a single ID or array of IDs, and so on.
 
 `getInitialState` allows us to pass in additional state fields that will be included. In this case, we've passed in a `status` field, giving us a final todos slice state of `{ids, entities, status}`, much like we had before.
 
@@ -902,7 +905,7 @@ We can also replace some of our todos selector functions as well. The `getSelect
 
 src/features/todos/todosSlice.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #000000">{</span><span ></span>
+<span class="token keyword module" style="color: #f92672">import</span><span > </span><span class="token imports punctuation" style="color: #000000">{</span><span ></span>
 
 <span > createSlice</span><span class="token imports punctuation" style="color: #000000">,</span><span ></span>
 
@@ -912,245 +915,245 @@ src/features/todos/todosSlice.js
 
 <span > createEntityAdapter</span>
 
-<span ></span><span class="token imports punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
+<span ></span><span class="token imports punctuation" style="color: #000000">}</span><span > </span><span class="token keyword module" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span ></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #000000">{</span><span > client </span><span class="token imports punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../../api/client'</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">import</span><span > </span><span class="token imports punctuation" style="color: #000000">{</span><span > client </span><span class="token imports punctuation" style="color: #000000">}</span><span > </span><span class="token keyword module" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'../../api/client'</span><span ></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #000000">{</span><span > </span><span class="token imports maybe-class-name">StatusFilters</span><span > </span><span class="token imports punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../filters/filtersSlice'</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">import</span><span > </span><span class="token imports punctuation" style="color: #000000">{</span><span > </span><span class="token imports maybe-class-name">StatusFilters</span><span > </span><span class="token imports punctuation" style="color: #000000">}</span><span > </span><span class="token keyword module" style="color: #f92672">from</span><span > </span><span class="token string" style="color: #a6e22e">'../filters/filtersSlice'</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> todosAdapter </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createEntityAdapter</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">const</span><span > todosAdapter </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token function" style="color: #e6d874">createEntityAdapter</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> initialState </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> todosAdapter</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">getInitialState</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">const</span><span > initialState </span><span class="token operator" style="color: #000000">=</span><span > todosAdapter</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">getInitialState</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> status</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'idle'</span><span class="token plain"></span>
+<span > status</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token string" style="color: #a6e22e">'idle'</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Thunk functions</span><span class="token plain"></span>
+<span ></span><span class="token comment" style="color: #c6cad2">// Thunk functions</span><span ></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> fetchTodos </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createAsyncThunk</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'todos/fetchTodos'</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">async</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">export</span><span > </span><span class="token keyword" style="color: #f92672">const</span><span > fetchTodos </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token function" style="color: #e6d874">createAsyncThunk</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'todos/fetchTodos'</span><span class="token punctuation" style="color: #000000">,</span><span > </span><span class="token keyword" style="color: #f92672">async</span><span > </span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> response </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">await</span><span class="token plain"> client</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">get</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'/fakeApi/todos'</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > response </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token keyword control-flow" style="color: #f92672">await</span><span > client</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">get</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'/fakeApi/todos'</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> response</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">todos</span><span class="token plain"></span>
+<span > </span><span class="token keyword control-flow" style="color: #f92672">return</span><span > response</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">todos</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> saveNewTodo </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createAsyncThunk</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'todos/saveNewTodo'</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">async</span><span class="token plain"> </span><span class="token parameter">text</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">export</span><span > </span><span class="token keyword" style="color: #f92672">const</span><span > saveNewTodo </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token function" style="color: #e6d874">createAsyncThunk</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'todos/saveNewTodo'</span><span class="token punctuation" style="color: #000000">,</span><span > </span><span class="token keyword" style="color: #f92672">async</span><span > </span><span class="token parameter">text</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> initialTodo </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> text </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > initialTodo </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span > text </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> response </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">await</span><span class="token plain"> client</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">post</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'/fakeApi/todos'</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> todo</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> initialTodo </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > response </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token keyword control-flow" style="color: #f92672">await</span><span > client</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">post</span><span class="token punctuation" style="color: #000000">(</span><span class="token string" style="color: #a6e22e">'/fakeApi/todos'</span><span class="token punctuation" style="color: #000000">,</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span > todo</span><span class="token operator" style="color: #000000">:</span><span > initialTodo </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> response</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">todo</span><span class="token plain"></span>
+<span > </span><span class="token keyword control-flow" style="color: #f92672">return</span><span > response</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">todo</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> todosSlice </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createSlice</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span ></span><span class="token keyword" style="color: #f92672">const</span><span > todosSlice </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token function" style="color: #e6d874">createSlice</span><span class="token punctuation" style="color: #000000">(</span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> name</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos'</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > name</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token string" style="color: #a6e22e">'todos'</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> initialState</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > initialState</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> reducers</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > reducers</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">todoToggled</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token function" style="color: #e6d874">todoToggled</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> todoId </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > todoId </span><span class="token operator" style="color: #000000">=</span><span > action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> todo </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #000000">\[</span><span class="token plain">todoId</span><span class="token punctuation" style="color: #000000">\]</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > todo </span><span class="token operator" style="color: #000000">=</span><span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #000000">\[</span><span >todoId</span><span class="token punctuation" style="color: #000000">\]</span><span ></span>
 
-<span class="token plain"> todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">completed</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token operator" style="color: #000000">!</span><span class="token plain">todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">completed</span><span class="token plain"></span>
+<span > todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">completed</span><span > </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token operator" style="color: #000000">!</span><span >todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">completed</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> todoColorSelected</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > todoColorSelected</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">reducer</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token function" style="color: #e6d874">reducer</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> color</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> todoId </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span > color</span><span class="token punctuation" style="color: #000000">,</span><span > todoId </span><span class="token punctuation" style="color: #000000">}</span><span > </span><span class="token operator" style="color: #000000">=</span><span > action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span ></span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #000000">\[</span><span class="token plain">todoId</span><span class="token punctuation" style="color: #000000">\]</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">color</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> color</span>
+<span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #000000">\[</span><span >todoId</span><span class="token punctuation" style="color: #000000">\]</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">color</span><span > </span><span class="token operator" style="color: #000000">=</span><span > color</span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">prepare</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todoId</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> color</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token function" style="color: #e6d874">prepare</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todoId</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> color</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token keyword control-flow" style="color: #f92672">return</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> payload</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> todoId</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> color </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > payload</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span > todoId</span><span class="token punctuation" style="color: #000000">,</span><span > color </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> todoDeleted</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> todosAdapter</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">removeOne</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > todoDeleted</span><span class="token operator" style="color: #000000">:</span><span > todosAdapter</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">removeOne</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">allTodosCompleted</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token function" style="color: #e6d874">allTodosCompleted</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token known-class-name class-name">Object</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">values</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">forEach</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todo</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token known-class-name class-name">Object</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">values</span><span class="token punctuation" style="color: #000000">(</span><span >state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #000000">)</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">forEach</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todo</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">completed</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token boolean" style="color: #ae81ff">true</span><span class="token plain"></span>
+<span > todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">completed</span><span > </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token boolean" style="color: #ae81ff">true</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">completedTodosCleared</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token function" style="color: #e6d874">completedTodosCleared</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> completedIds </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token known-class-name class-name">Object</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">values</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > completedIds </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token known-class-name class-name">Object</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">values</span><span class="token punctuation" style="color: #000000">(</span><span >state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">filter</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todo</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">completed</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">filter</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todo</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">completed</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">map</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todo</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">id</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">map</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todo</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">id</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> todosAdapter</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">removeMany</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">state</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> completedIds</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > todosAdapter</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">removeMany</span><span class="token punctuation" style="color: #000000">(</span><span >state</span><span class="token punctuation" style="color: #000000">,</span><span > completedIds</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">extraReducers</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> </span><span class="token parameter">builder</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token function-variable function" style="color: #e6d874">extraReducers</span><span class="token operator" style="color: #000000">:</span><span > </span><span class="token parameter">builder</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> builder</span>
+<span > builder</span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">addCase</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">fetchTodos</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">pending</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">addCase</span><span class="token punctuation" style="color: #000000">(</span><span >fetchTodos</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">pending</span><span class="token punctuation" style="color: #000000">,</span><span > </span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">status</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'loading'</span><span class="token plain"></span>
+<span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">status</span><span > </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token string" style="color: #a6e22e">'loading'</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">addCase</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">fetchTodos</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">fulfilled</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">addCase</span><span class="token punctuation" style="color: #000000">(</span><span >fetchTodos</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">fulfilled</span><span class="token punctuation" style="color: #000000">,</span><span > </span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> todosAdapter</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">setAll</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">state</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > todosAdapter</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">setAll</span><span class="token punctuation" style="color: #000000">(</span><span >state</span><span class="token punctuation" style="color: #000000">,</span><span > action</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">status</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'idle'</span><span class="token plain"></span>
+<span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">status</span><span > </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token string" style="color: #a6e22e">'idle'</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">addCase</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">saveNewTodo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">fulfilled</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> todosAdapter</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">addOne</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">addCase</span><span class="token punctuation" style="color: #000000">(</span><span >saveNewTodo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">fulfilled</span><span class="token punctuation" style="color: #000000">,</span><span > todosAdapter</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">addOne</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">export</span><span > </span><span class="token keyword" style="color: #f92672">const</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> allTodosCompleted</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > allTodosCompleted</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> completedTodosCleared</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > completedTodosCleared</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> todoAdded</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > todoAdded</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> todoColorSelected</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > todoColorSelected</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> todoDeleted</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > todoDeleted</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> todoToggled</span>
+<span > todoToggled</span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> todosSlice</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">actions</span><span class="token plain"></span>
+<span ></span><span class="token punctuation" style="color: #000000">}</span><span > </span><span class="token operator" style="color: #000000">=</span><span > todosSlice</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">actions</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> todosSlice</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">reducer</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">export</span><span > </span><span class="token keyword module" style="color: #f92672">default</span><span > todosSlice</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">reducer</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> selectAll</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> selectTodos</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> selectById</span><span class="token operator" style="color: #000000">:</span><span class="token plain"> selectTodoById </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">export</span><span > </span><span class="token keyword" style="color: #f92672">const</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span > selectAll</span><span class="token operator" style="color: #000000">:</span><span > selectTodos</span><span class="token punctuation" style="color: #000000">,</span><span > selectById</span><span class="token operator" style="color: #000000">:</span><span > selectTodoById </span><span class="token punctuation" style="color: #000000">}</span><span > </span><span class="token operator" style="color: #000000">=</span><span ></span>
 
-<span class="token plain"> todosAdapter</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">getSelectors</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">todos</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > todosAdapter</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">getSelectors</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">state</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">todos</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> selectTodoIds </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createSelector</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">export</span><span > </span><span class="token keyword" style="color: #f92672">const</span><span > selectTodoIds </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token function" style="color: #e6d874">createSelector</span><span class="token punctuation" style="color: #000000">(</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// First, pass one or more "input selector" functions:</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// First, pass one or more "input selector" functions:</span><span ></span>
 
-<span class="token plain"> selectTodos</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > selectTodos</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Then, an "output selector" that receives all the input results as arguments</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// Then, an "output selector" that receives all the input results as arguments</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// and returns a final result value</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// and returns a final result value</span><span ></span>
 
-<span class="token plain"> </span><span class="token parameter">todos</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> todos</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">map</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todo</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">id</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token parameter">todos</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > todos</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">map</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todo</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">id</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> selectFilteredTodos </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createSelector</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">export</span><span > </span><span class="token keyword" style="color: #f92672">const</span><span > selectFilteredTodos </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token function" style="color: #e6d874">createSelector</span><span class="token punctuation" style="color: #000000">(</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// First input selector: all todos</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// First input selector: all todos</span><span ></span>
 
-<span class="token plain"> selectTodos</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > selectTodos</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Second input selector: all filter values</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// Second input selector: all filter values</span><span ></span>
 
-<span class="token plain"> </span><span class="token parameter">state</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">filters</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > </span><span class="token parameter">state</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > state</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">filters</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Output selector: receives both values</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// Output selector: receives both values</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todos</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> filters</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todos</span><span class="token parameter punctuation" style="color: #000000">,</span><span class="token parameter"> filters</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"> status</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"> colors </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"> </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> filters</span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span > status</span><span class="token punctuation" style="color: #000000">,</span><span > colors </span><span class="token punctuation" style="color: #000000">}</span><span > </span><span class="token operator" style="color: #000000">=</span><span > filters</span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> showAllCompletions </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> status </span><span class="token operator" style="color: #000000">===</span><span class="token plain"> </span><span class="token maybe-class-name">StatusFilters</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access maybe-class-name">All</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > showAllCompletions </span><span class="token operator" style="color: #000000">=</span><span > status </span><span class="token operator" style="color: #000000">===</span><span > </span><span class="token maybe-class-name">StatusFilters</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access maybe-class-name">All</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">if</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">showAllCompletions </span><span class="token operator" style="color: #000000">&&</span><span class="token plain"> colors</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">length</span><span class="token plain"> </span><span class="token operator" style="color: #000000">===</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">0</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token keyword control-flow" style="color: #f92672">if</span><span > </span><span class="token punctuation" style="color: #000000">(</span><span >showAllCompletions </span><span class="token operator" style="color: #000000">&&</span><span > colors</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">length</span><span > </span><span class="token operator" style="color: #000000">===</span><span > </span><span class="token number" style="color: #ae81ff">0</span><span class="token punctuation" style="color: #000000">)</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> todos</span>
+<span > </span><span class="token keyword control-flow" style="color: #f92672">return</span><span > todos</span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> completedStatus </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> status </span><span class="token operator" style="color: #000000">===</span><span class="token plain"> </span><span class="token maybe-class-name">StatusFilters</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access maybe-class-name">Completed</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > completedStatus </span><span class="token operator" style="color: #000000">=</span><span > status </span><span class="token operator" style="color: #000000">===</span><span > </span><span class="token maybe-class-name">StatusFilters</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access maybe-class-name">Completed</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Return either active or completed todos based on filter</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// Return either active or completed todos based on filter</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> todos</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">filter</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todo</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #000000">{</span><span class="token plain"></span>
+<span > </span><span class="token keyword control-flow" style="color: #f92672">return</span><span > todos</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">filter</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todo</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > </span><span class="token punctuation" style="color: #000000">{</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> statusMatches </span><span class="token operator" style="color: #000000">=</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > statusMatches </span><span class="token operator" style="color: #000000">=</span><span ></span>
 
-<span class="token plain"> showAllCompletions </span><span class="token operator" style="color: #000000">||</span><span class="token plain"> todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">completed</span><span class="token plain"> </span><span class="token operator" style="color: #000000">===</span><span class="token plain"> completedStatus</span>
+<span > showAllCompletions </span><span class="token operator" style="color: #000000">||</span><span > todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">completed</span><span > </span><span class="token operator" style="color: #000000">===</span><span > completedStatus</span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> colorMatches </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> colors</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">length</span><span class="token plain"> </span><span class="token operator" style="color: #000000">===</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">0</span><span class="token plain"> </span><span class="token operator" style="color: #000000">||</span><span class="token plain"> colors</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">includes</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain">todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">color</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token keyword" style="color: #f92672">const</span><span > colorMatches </span><span class="token operator" style="color: #000000">=</span><span > colors</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">length</span><span > </span><span class="token operator" style="color: #000000">===</span><span > </span><span class="token number" style="color: #ae81ff">0</span><span > </span><span class="token operator" style="color: #000000">||</span><span > colors</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">includes</span><span class="token punctuation" style="color: #000000">(</span><span >todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">color</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> statusMatches </span><span class="token operator" style="color: #000000">&&</span><span class="token plain"> colorMatches</span>
+<span > </span><span class="token keyword control-flow" style="color: #f92672">return</span><span > statusMatches </span><span class="token operator" style="color: #000000">&&</span><span > colorMatches</span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #000000">}</span><span class="token plain"></span>
+<span > </span><span class="token punctuation" style="color: #000000">}</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span ></span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain" style="display: inline-block"> </span>
+<span  style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> selectFilteredTodoIds </span><span class="token operator" style="color: #000000">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createSelector</span><span class="token punctuation" style="color: #000000">(</span><span class="token plain"></span>
+<span ></span><span class="token keyword module" style="color: #f92672">export</span><span > </span><span class="token keyword" style="color: #f92672">const</span><span > selectFilteredTodoIds </span><span class="token operator" style="color: #000000">=</span><span > </span><span class="token function" style="color: #e6d874">createSelector</span><span class="token punctuation" style="color: #000000">(</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Pass our other memoized selector as an input</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// Pass our other memoized selector as an input</span><span ></span>
 
-<span class="token plain"> selectFilteredTodos</span><span class="token punctuation" style="color: #000000">,</span><span class="token plain"></span>
+<span > selectFilteredTodos</span><span class="token punctuation" style="color: #000000">,</span><span ></span>
 
-<span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// And derive data in the output selector</span><span class="token plain"></span>
+<span > </span><span class="token comment" style="color: #c6cad2">// And derive data in the output selector</span><span ></span>
 
-<span class="token plain"> </span><span class="token parameter">filteredTodos</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> filteredTodos</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">map</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todo</span><span class="token plain"> </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span class="token plain"> todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">id</span><span class="token punctuation" style="color: #000000">)</span><span class="token plain"></span>
+<span > </span><span class="token parameter">filteredTodos</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > filteredTodos</span><span class="token punctuation" style="color: #000000">.</span><span  style="color: #e6d874">map</span><span class="token punctuation" style="color: #000000">(</span><span class="token parameter">todo</span><span > </span><span class="token arrow operator" style="color: #000000">=&gt;</span><span > todo</span><span class="token punctuation" style="color: #000000">.</span><span class="token property-access">id</span><span class="token punctuation" style="color: #000000">)</span><span ></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #000000">)</span>We call `todosAdapter.getSelectors`, and pass in a `state => state.todos` selector that returns this slice of state. From there, the adapter generates a `selectAll` selector that takes the _entire_ Redux state tree, as usual, and loops over `state.todos.entities` and `state.todos.ids` to give us the complete array of todo objects. Since `selectAll` doesn't tell us _what_ we're selecting, we can use ES6 destructuring syntax to rename the function to `selectTodos`. Similarly, we can rename `selectById` to `selectTodoById`.
+<span ></span><span class="token punctuation" style="color: #000000">)</span>We call `todosAdapter.getSelectors`, and pass in a `state => state.todos` selector that returns this slice of state. From there, the adapter generates a `selectAll` selector that takes the _entire_ Redux state tree, as usual, and loops over `state.todos.entities` and `state.todos.ids` to give us the complete array of todo objects. Since `selectAll` doesn't tell us _what_ we're selecting, we can use ES6 destructuring syntax to rename the function to `selectTodos`. Similarly, we can rename `selectById` to `selectTodoById`.
 
 Notice that our other selectors still use `selectTodos` as an input. That's because it's still returning an array of todo objects this whole time, no matter whether we were keeping the array as the entire `state.todos`, keeping it as a nested array, or storing it as a normalized object and converting to an array. Even as we've made all these changes to how we stored our data, the use of selectors allowed us to keep the rest of our code the same, and the use of memoized selectors has helped the UI perform better by avoiding unnecessary rerenders.
 
@@ -1249,9 +1252,4 @@ Recipes: Index »
 
 #### Community
 
-
-
-
 <img src="../../../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
-
-

@@ -31,10 +31,12 @@
   - <a href="https://redux.js.org/introduction/ecosystem" class="menu__link">Ecosystem</a>
   - <a href="https://redux.js.org/introduction/examples" class="menu__link">Examples</a>
 - <a href="#!" class="menu__link menu__link--sublist">Tutorials</a>
+
   - <a href="https://redux.js.org/tutorials/index" class="menu__link">Tutorials Index</a>
   - <a href="https://redux.js.org/tutorials/quick-start" class="menu__link">Quick Start</a>
   - <a href="https://redux.js.org/tutorials/typescript-quick-start" class="menu__link">TypeScript Quick Start</a>
   - <a href="#!" class="menu__link menu__link--sublist">Redux Essentials</a>
+
     - <a href="https://redux.js.org/tutorials/essentials/part-1-overview-concepts" class="menu__link">Redux Overview and Concepts</a>
     - <a href="https://redux.js.org/tutorials/essentials/part-2-app-structure" class="menu__link">Redux App Structure</a>
     - <a href="https://redux.js.org/tutorials/essentials/part-3-data-flow" class="menu__link">Basic Redux Data Flow</a>
@@ -77,6 +79,7 @@
     - <a href="https://redux.js.org/recipes/structuring-reducers/reusing-reducer-logic" class="menu__link">Reusing Reducer Logic</a>
     - <a href="https://redux.js.org/recipes/structuring-reducers/immutable-update-patterns" class="menu__link">Immutable Update Patterns</a>
     - <a href="https://redux.js.org/recipes/structuring-reducers/initializing-state" class="menu__link">Initializing State</a>
+
 - <a href="#!" class="menu__link menu__link--sublist">Understanding Redux</a>
   - <a href="#!" class="menu__link menu__link--sublist">Thinking in Redux</a>
     - <a href="https://redux.js.org/understanding/thinking-in-redux/motivation" class="menu__link">Motivation</a>
@@ -112,6 +115,7 @@
   - <a href="https://redux.js.org/redux-toolkit/overview" class="menu__link">Redux Toolkit: Overview</a>
 
 # <span id="store" class="anchor enhancedAnchor_2LWZ">
+
 </span>Store<a href="#store" class="hash-link" title="Direct link to heading">#</a>
 
 A store holds the whole [state tree](https://redux.js.org/understanding/thinking-in-redux/glossary#state) of your application. The only way to change the state inside it is to dispatch an [action](https://redux.js.org/understanding/thinking-in-redux/glossary#action) on it.
@@ -119,11 +123,13 @@ A store holds the whole [state tree](https://redux.js.org/understanding/thinking
 A store is not a class. It's just an object with a few methods on it. To create it, pass your root [reducing function](https://redux.js.org/understanding/thinking-in-redux/glossary#reducer) to [`createStore`](https://redux.js.org/api/createstore).
 
 > ##### <span id="a-note-for-flux-users" class="anchor enhancedAnchor_2LWZ">
-</span>A Note for Flux Users<a href="#a-note-for-flux-users" class="hash-link" title="Direct link to heading">#</a>
+>
+> </span>A Note for Flux Users<a href="#a-note-for-flux-users" class="hash-link" title="Direct link to heading">#</a>
 >
 > If you're coming from Flux, there is a single important difference you need to understand. Redux doesn't have a Dispatcher or support many stores. **Instead, there is just a single store with a single root [reducing function](https://redux.js.org/understanding/thinking-in-redux/glossary#reducer).** As your app grows, instead of adding stores, you split the root reducer into smaller reducers independently operating on the different parts of the state tree. You can use a helper like [`combineReducers`](https://redux.js.org/api/combinereducers) to combine them. This is similar to how there is just one root component in a React app, but it is composed out of many small components.
 
 ### <span id="store-methods" class="anchor enhancedAnchor_2LWZ">
+
 </span>Store Methods<a href="#store-methods" class="hash-link" title="Direct link to heading">#</a>
 
 - [`getState()`](#getstate)
@@ -132,14 +138,17 @@ A store is not a class. It's just an object with a few methods on it. To create 
 - [`replaceReducer(nextReducer)`](#replacereducernextreducer)
 
 ## <span id="store-methods-1" class="anchor enhancedAnchor_2LWZ">
+
 </span>Store Methods<a href="#store-methods-1" class="hash-link" title="Direct link to heading">#</a>
 
 ### <span id="getstate" class="anchor enhancedAnchor_2LWZ">
+
 </span>getState()<a href="#getstate" class="hash-link" title="Direct link to heading">#</a>
 
 Returns the current state tree of your application. It is equal to the last value returned by the store's reducer.
 
 #### <span id="returns" class="anchor enhancedAnchor_2LWZ">
+
 </span>Returns<a href="#returns" class="hash-link" title="Direct link to heading">#</a>
 
 _(any)_: The current state tree of your application.
@@ -147,6 +156,7 @@ _(any)_: The current state tree of your application.
 ---
 
 ### <span id="dispatchaction" class="anchor enhancedAnchor_2LWZ">
+
 </span>dispatch(action)<a href="#dispatchaction" class="hash-link" title="Direct link to heading">#</a>
 
 Dispatches an action. This is the only way to trigger a state change.
@@ -154,23 +164,27 @@ Dispatches an action. This is the only way to trigger a state change.
 The store's reducing function will be called with the current [`getState()`](#getState) result and the given `action` synchronously. Its return value will be considered the next state. It will be returned from [`getState()`](#getState) from now on, and the change listeners will immediately be notified.
 
 > ##### <span id="a-note-for-flux-users-1" class="anchor enhancedAnchor_2LWZ">
-</span>A Note for Flux Users<a href="#a-note-for-flux-users-1" class="hash-link" title="Direct link to heading">#</a>
+>
+> </span>A Note for Flux Users<a href="#a-note-for-flux-users-1" class="hash-link" title="Direct link to heading">#</a>
 >
 > If you attempt to call `dispatch` from inside the [reducer](https://redux.js.org/understanding/thinking-in-redux/glossary#reducer), it will throw with an error saying “Reducers may not dispatch actions.” This is similar to “Cannot dispatch in a middle of dispatch” error in Flux, but doesn't cause the problems associated with it. In Flux, a dispatch is forbidden while Stores are handling the action and emitting updates. This is unfortunate because it makes it impossible to dispatch actions from component lifecycle hooks or other benign places.
 >
 > In Redux, subscriptions are called after the root reducer has returned the new state, so you _may_ dispatch in the subscription listeners. You are only disallowed to dispatch inside the reducers because they must have no side effects. If you want to cause a side effect in response to an action, the right place to do this is in the potentially async [action creator](https://redux.js.org/understanding/thinking-in-redux/glossary#action-creator).
 
 #### <span id="arguments" class="anchor enhancedAnchor_2LWZ">
+
 </span>Arguments<a href="#arguments" class="hash-link" title="Direct link to heading">#</a>
 
 1.  `action` (_Object_<sup>†</sup>): A plain object describing the change that makes sense for your application. Actions are the only way to get data into the store, so any data, whether from the UI events, network callbacks, or other sources such as WebSockets needs to eventually be dispatched as actions. Actions must have a `type` field that indicates the type of action being performed. Types can be defined as constants and imported from another module. It's better to use strings for `type` than [Symbols](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Symbol) because strings are serializable. Other than `type`, the structure of an action object is really up to you. If you're interested, check out [Flux Standard Action](https://github.com/acdlite/flux-standard-action) for recommendations on how actions could be constructed.
 
 #### <span id="returns-1" class="anchor enhancedAnchor_2LWZ">
+
 </span>Returns<a href="#returns-1" class="hash-link" title="Direct link to heading">#</a>
 
 (Object<sup>†</sup>): The dispatched action (see notes).
 
 #### <span id="notes" class="anchor enhancedAnchor_2LWZ">
+
 </span>Notes<a href="#notes" class="hash-link" title="Direct link to heading">#</a>
 
 <sup>†</sup> The “vanilla” store implementation you get by calling \[\`createStore\`\](/api/createstore) only supports plain object actions and hands them immediately to the reducer.
@@ -182,6 +196,7 @@ Middleware is created by the community and does not ship with Redux by default. 
 To learn how to describe asynchronous API calls, read the current state inside action creators, perform side effects, or chain them to execute in a sequence, see the examples for [`applyMiddleware`](https://redux.js.org/api/applymiddleware).
 
 #### <span id="example" class="anchor enhancedAnchor_2LWZ">
+
 </span>Example<a href="#example" class="hash-link" title="Direct link to heading">#</a>
 
 <span class="token keyword module" style="color: #f92672">import</span>
@@ -282,6 +297,7 @@ To learn how to describe asynchronous API calls, read the current state inside a
 <span class="token punctuation" style="color: #f8f8f2">)</span>---
 
 ### <span id="subscribelistener" class="anchor enhancedAnchor_2LWZ">
+
 </span>subscribe(listener)<a href="#subscribelistener" class="hash-link" title="Direct link to heading">#</a>
 
 Adds a change listener. It will be called any time an action is dispatched, and some part of the state tree may potentially have changed. You may then call [`getState()`](#getState) to read the current state tree inside the callback.
@@ -299,16 +315,19 @@ It is a low-level API. Most likely, instead of using it directly, you'll use Rea
 To unsubscribe the change listener, invoke the function returned by `subscribe`.
 
 #### <span id="arguments-1" class="anchor enhancedAnchor_2LWZ">
+
 </span>Arguments<a href="#arguments-1" class="hash-link" title="Direct link to heading">#</a>
 
 1.  `listener` (_Function_): The callback to be invoked any time an action has been dispatched, and the state tree might have changed. You may call [`getState()`](#getState) inside this callback to read the current state tree. It is reasonable to expect that the store's reducer is a pure function, so you may compare references to some deep path in the state tree to learn whether its value has changed.
 
 ##### <span id="returns-2" class="anchor enhancedAnchor_2LWZ">
+
 </span>Returns<a href="#returns-2" class="hash-link" title="Direct link to heading">#</a>
 
 (_Function_): A function that unsubscribes the change listener.
 
 ##### <span id="example-1" class="anchor enhancedAnchor_2LWZ">
+
 </span>Example<a href="#example-1" class="hash-link" title="Direct link to heading">#</a>
 
 <span class="token keyword" style="color: #f92672">function</span>
@@ -460,6 +479,7 @@ To unsubscribe the change listener, invoke the function returned by `subscribe`.
 <span class="token punctuation" style="color: #f8f8f2">)</span>---
 
 ### <span id="replacereducernextreducer" class="anchor enhancedAnchor_2LWZ">
+
 </span>replaceReducer(nextReducer)<a href="#replacereducernextreducer" class="hash-link" title="Direct link to heading">#</a>
 
 Replaces the reducer currently used by the store to calculate the state.
@@ -467,6 +487,7 @@ Replaces the reducer currently used by the store to calculate the state.
 It is an advanced API. You might need this if your app implements code splitting, and you want to load some of the reducers dynamically. You might also need this if you implement a hot reloading mechanism for Redux.
 
 #### <span id="arguments-2" class="anchor enhancedAnchor_2LWZ">
+
 </span>Arguments<a href="#arguments-2" class="hash-link" title="Direct link to heading">#</a>
 
 1.  `nextReducer` (_Function_) The next reducer for the store to use.
@@ -512,5 +533,3 @@ combineReducers »
 <img src="https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
 <img src="https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" />
 </a>
-
-

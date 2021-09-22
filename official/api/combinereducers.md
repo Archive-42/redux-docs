@@ -25,10 +25,12 @@ Menu
   - <a href="https://redux.js.org/introduction/ecosystem" class="menu__link">Ecosystem</a>
   - <a href="https://redux.js.org/introduction/examples" class="menu__link">Examples</a>
 - <a href="#!" class="menu__link menu__link--sublist">Tutorials</a>
+
   - <a href="https://redux.js.org/tutorials/index" class="menu__link">Tutorials Index</a>
   - <a href="https://redux.js.org/tutorials/quick-start" class="menu__link">Quick Start</a>
   - <a href="https://redux.js.org/tutorials/typescript-quick-start" class="menu__link">TypeScript Quick Start</a>
   - <a href="#!" class="menu__link menu__link--sublist">Redux Essentials</a>
+
     - <a href="https://redux.js.org/tutorials/essentials/part-1-overview-concepts" class="menu__link">Redux Overview and Concepts</a>
     - <a href="https://redux.js.org/tutorials/essentials/part-2-app-structure" class="menu__link">Redux App Structure</a>
     - <a href="https://redux.js.org/tutorials/essentials/part-3-data-flow" class="menu__link">Basic Redux Data Flow</a>
@@ -71,6 +73,7 @@ Menu
     - <a href="https://redux.js.org/recipes/structuring-reducers/reusing-reducer-logic" class="menu__link">Reusing Reducer Logic</a>
     - <a href="https://redux.js.org/recipes/structuring-reducers/immutable-update-patterns" class="menu__link">Immutable Update Patterns</a>
     - <a href="https://redux.js.org/recipes/structuring-reducers/initializing-state" class="menu__link">Initializing State</a>
+
 - <a href="#!" class="menu__link menu__link--sublist">Understanding Redux</a>
   - <a href="#!" class="menu__link menu__link--sublist">Thinking in Redux</a>
     - <a href="https://redux.js.org/understanding/thinking-in-redux/motivation" class="menu__link">Motivation</a>
