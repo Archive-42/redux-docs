@@ -1260,7 +1260,7 @@
                                 href="../../github.com/leoasis/redux-immutable-state-invariant.html"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                ><code class="language-js >redux-immutable-state-invariant</code></a
+                                ><code class="language-js" >redux-immutable-state-invariant</code></a
                               >
                               to catch mutations during development, and
                               <a
@@ -1300,15 +1300,15 @@
                             </h3>
                             <p>
                               Reducer functions should <em>only</em> depend on
-                              their <code class="language-js >state</code> and
-                              <code class="language-js >action</code> arguments, and should only
+                              their <code class="language-js" >state</code> and
+                              <code class="language-js" >action</code> arguments, and should only
                               calculate and return a new state value based on
                               those arguments.
                               <strong
                                 >They must not execute any kind of asynchronous
                                 logic (AJAX calls, timeouts, promises), generate
-                                random values (<code class="language-js >Date.now()</code>,
-                                <code class="language-js >Math.random()</code>), modify variables
+                                random values (<code class="language-js" >Date.now()</code>,
+                                <code class="language-js" >Math.random()</code>), modify variables
                                 outside the reducer, or run other code that
                                 affects things outside the scope of the reducer
                                 function</strong
@@ -1340,7 +1340,7 @@
                               <p>
                                 There are some gray areas to this rule. Strictly
                                 speaking, code such as
-                                <code class="language-js >console.log(state)</code> is a side
+                                <code class="language-js" >console.log(state)</code> is a side
                                 effect, but in practice has no effect on how the
                                 application behaves.
                               </p>
@@ -1378,8 +1378,8 @@
                                 <em>if</em> the action will be intercepted and
                                 stopped by a middleware before it reaches the
                                 reducers. Middleware such as
-                                <code class="language-js >redux-thunk</code> and
-                                <code class="language-js >redux-promise</code> are examples of this.
+                                <code class="language-js" >redux-thunk</code> and
+                                <code class="language-js" >redux-promise</code> are examples of this.
                               </p>
                             </blockquote>
                             <h3>
@@ -1402,12 +1402,12 @@
                                 single Redux store instance, which will be used
                                 by the whole application</strong
                               >. It should typically be defined in a separate
-                              file such as <code class="language-js >store.js</code>.
+                              file such as <code class="language-js" >store.js</code>.
                             </p>
                             <p>
                               Ideally, no app logic will import the store
                               directly. It should be passed to a React component
-                              tree via <code class="language-js >&lt;Provider&gt;</code>, or
+                              tree via <code class="language-js" >&lt;Provider&gt;</code>, or
                               referenced indirectly via middleware such as
                               thunks. In rare cases, you may need to import it
                               into other logic files, but this should be a last
@@ -1542,7 +1542,7 @@
                                 written as a single &quot;slice&quot;
                                 file</strong
                               >, preferably using the Redux Toolkit
-                              <code class="language-js >createSlice</code> API. (This is also known
+                              <code class="language-js" >createSlice</code> API. (This is also known
                               as the
                               <a
                                 href="../../github.com/erikras/ducks-modular-redux.html"
@@ -1566,47 +1566,47 @@
                               like:
                               <ul>
                                 <li>
-                                  <code class="language-js >/src</code>
+                                  <code class="language-js" >/src</code>
                                   <ul>
                                     <li>
-                                      <code class="language-js >index.tsx</code>: Entry point file
+                                      <code class="language-js" >index.tsx</code>: Entry point file
                                       that renders the React component tree
                                     </li>
                                     <li>
-                                      <code class="language-js >/app</code>
+                                      <code class="language-js" >/app</code>
                                       <ul>
                                         <li>
-                                          <code class="language-js >store.ts</code>: store setup
+                                          <code class="language-js" >store.ts</code>: store setup
                                         </li>
                                         <li>
-                                          <code class="language-js >rootReducer.ts</code>: root
+                                          <code class="language-js" >rootReducer.ts</code>: root
                                           reducer (optional)
                                         </li>
                                         <li>
-                                          <code class="language-js >App.tsx</code>: root React
+                                          <code class="language-js" >App.tsx</code>: root React
                                           component
                                         </li>
                                       </ul>
                                     </li>
                                     <li>
-                                      <code class="language-js >/common</code>: hooks, generic
+                                      <code class="language-js" >/common</code>: hooks, generic
                                       components, utils, etc
                                     </li>
                                     <li>
-                                      <code class="language-js >/features</code>: contains all
+                                      <code class="language-js" >/features</code>: contains all
                                       &quot;feature folders&quot;
                                       <ul>
                                         <li>
-                                          <code class="language-js >/todos</code>: a single feature
+                                          <code class="language-js" >/todos</code>: a single feature
                                           folder
                                           <ul>
                                             <li>
-                                              <code class="language-js >todosSlice.ts</code>: Redux
+                                              <code class="language-js" >todosSlice.ts</code>: Redux
                                               reducer logic and associated
                                               actions
                                             </li>
                                             <li>
-                                              <code class="language-js >Todos.tsx</code>: a React
+                                              <code class="language-js" >Todos.tsx</code>: a React
                                               component
                                             </li>
                                           </ul>
@@ -1617,20 +1617,20 @@
                                 </li>
                               </ul>
                               <p>
-                                <code class="language-js >/app</code> contains app-wide setup and
+                                <code class="language-js" >/app</code> contains app-wide setup and
                                 layout that depends on all the other folders.
                               </p>
                               <p>
-                                <code class="language-js >/common</code> contains truly generic and
+                                <code class="language-js" >/common</code> contains truly generic and
                                 reusable utilities and components.
                               </p>
                               <p>
-                                <code class="language-js >/features</code> has folders that contain
+                                <code class="language-js" >/features</code> has folders that contain
                                 all functionality related to a specific feature.
-                                In this example, <code class="language-js >todosSlice.ts</code> is a
+                                In this example, <code class="language-js" >todosSlice.ts</code> is a
                                 &quot;duck&quot;-style file that contains a call
                                 to RTK&#x27;s
-                                <code class="language-js >createSlice()</code> function, and exports
+                                <code class="language-js" >createSlice()</code> function, and exports
                                 the slice reducer and action creators.
                               </p>
                             </details>
@@ -2549,8 +2549,8 @@
                                 >Minimize the use of &quot;blind
                                 spreads/returns&quot;</strong
                               >
-                              like <code class="language-js >return action.payload</code> or
-                              <code class="language-js >return {...state, ...action.payload}</code>,
+                              like <code class="language-js" >return action.payload</code> or
+                              <code class="language-js" >return {...state, ...action.payload}</code>,
                               because those rely on the code that dispatched the
                               action to correctly format the contents, and the
                               reducer effectively gives up its ownership of what
@@ -2894,7 +2894,7 @@
                               </div>
                               <p>
                                 In this example, the reducer completely assumes
-                                that <code class="language-js >action.payload</code> is going to be
+                                that <code class="language-js" >action.payload</code> is going to be
                                 a correctly formatted object.
                               </p>
                               <p>
@@ -3055,7 +3055,7 @@
                               <p>
                                 This could be at least partly fixed if the
                                 reducer has some validation checks to ensure
-                                that <code class="language-js >action.payload</code> actually has
+                                that <code class="language-js" >action.payload</code> actually has
                                 the right fields, or tries to read the right
                                 fields out by name. That does add more code,
                                 though, so it&#x27;s a question of trading off
@@ -3064,10 +3064,10 @@
                               <p>
                                 Use of static typing does make this kind of code
                                 safer and somewhat more acceptable. If the
-                                reducer knows that <code class="language-js >action</code> is a
-                                <code class="language-js >PayloadAction&lt;User&gt;</code>, then it
+                                reducer knows that <code class="language-js" >action</code> is a
+                                <code class="language-js" >PayloadAction&lt;User&gt;</code>, then it
                                 <em>should</em> be safe to do
-                                <code class="language-js >return action.payload</code>.
+                                <code class="language-js" >return action.payload</code>.
                               </p>
                             </details>
                             <h3>
@@ -3090,20 +3090,20 @@
                                 >Reducers Should Own the State Shape </a
                               >, the standard approach for splitting reducer
                               logic is based on &quot;slices&quot; of state.
-                              Correspondingly, <code class="language-js >combineReducers</code> is
+                              Correspondingly, <code class="language-js" >combineReducers</code> is
                               the standard function for joining those slice
                               reducers into a larger reducer function.
                             </p>
                             <p>
                               The key names in the object passed to
-                              <code class="language-js >combineReducers</code> will define the names
+                              <code class="language-js" >combineReducers</code> will define the names
                               of the keys in the resulting state object. Be sure
                               to name these keys after the data that is kept
                               inside, and avoid use of the word
                               &quot;reducer&quot; in the key names. Your object
                               should look like
-                              <code class="language-js >{users: {}, posts: {}}</code>, rather than
-                              <code class="language-js >{usersReducer: {}, postsReducer: {}}</code>.
+                              <code class="language-js" >{users: {}, posts: {}}</code>, rather than
+                              <code class="language-js" >{usersReducer: {}, postsReducer: {}}</code>.
                             </p>
                             <details class="detailed-explanation">
                               <summary><h4>Detailed Explanation</h4></summary>
@@ -3197,7 +3197,7 @@
                                 </div>
                               </div>
                               <p>
-                                <code class="language-js >combineReducers</code> accepts an object
+                                <code class="language-js" >combineReducers</code> accepts an object
                                 full of reducer functions, and uses that to
                                 generate state objects that have the same key
                                 names. This means that the key names in the
@@ -3208,7 +3208,7 @@
                                 This results in a common mistake, where a
                                 reducer is imported using &quot;reducer&quot; in
                                 the variable name, and then passed to
-                                <code class="language-js >combineReducers</code> using the object
+                                <code class="language-js" >combineReducers</code> using the object
                                 literal shorthand:
                               </p>
                               <div class="codeBlockContainer_K1bP">
@@ -3329,14 +3329,14 @@
                               <p>
                                 In this case, use of the object literal
                                 shorthand created an object like
-                                <code class="language-js >{usersReducer: usersReducer}</code>. So,
+                                <code class="language-js" >{usersReducer: usersReducer}</code>. So,
                                 &quot;reducer&quot; is now in the state key
                                 name. This is redundant and useless.
                               </p>
                               <p>
                                 Instead, define key names that only relate to
                                 the data inside. We suggest using explicit
-                                <code class="language-js >key: value</code> syntax for clarity:
+                                <code class="language-js" >key: value</code> syntax for clarity:
                               </p>
                               <div class="codeBlockContainer_K1bP">
                                 <div class="codeBlockContent_hGly js">
@@ -3538,9 +3538,9 @@
                               who is logged in, information on authors and
                               posts, and perhaps some info on what screen is
                               active. A good state structure might look like
-                              <code class="language-js >{auth, posts, users, ui}</code>. A bad
+                              <code class="language-js" >{auth, posts, users, ui}</code>. A bad
                               structure would be something like
-                              <code class="language-js >{loginScreen, usersList, postsList}</code>.
+                              <code class="language-js" >{loginScreen, usersList, postsList}</code>.
                             </p>
                             <h3>
                               <a
@@ -3596,24 +3596,24 @@
                                 should only be in one of a finite number of
                                 &quot;finite states&quot; at any time. For
                                 example, if you have a
-                                <code class="language-js >fetchUserReducer</code>, the finite states
+                                <code class="language-js" >fetchUserReducer</code>, the finite states
                                 can be:
                               </p>
                               <ul>
                                 <li>
-                                  <code class="language-js >&quot;idle&quot;</code> (fetching not
+                                  <code class="language-js" >&quot;idle&quot;</code> (fetching not
                                   started yet)
                                 </li>
                                 <li>
-                                  <code class="language-js >&quot;loading&quot;</code> (currently
+                                  <code class="language-js" >&quot;loading&quot;</code> (currently
                                   fetching the user)
                                 </li>
                                 <li>
-                                  <code class="language-js >&quot;success&quot;</code> (user fetched
+                                  <code class="language-js" >&quot;success&quot;</code> (user fetched
                                   successfully)
                                 </li>
                                 <li>
-                                  <code class="language-js >&quot;failure&quot;</code> (user failed
+                                  <code class="language-js" >&quot;failure&quot;</code> (user failed
                                   to fetch)
                                 </li>
                               </ul>
@@ -3758,10 +3758,10 @@
                                   >discriminated unions</a
                                 >
                                 to represent each finite state. For instance, if
-                                <code class="language-js >state.status === &#x27;success&#x27;</code
+                                <code class="language-js" >state.status === &#x27;success&#x27;</code
                                 >, then you would expect
-                                <code class="language-js >state.user</code> to be defined and
-                                wouldn&#x27;t expect <code class="language-js >state.error</code> to
+                                <code class="language-js" >state.user</code> to be defined and
+                                wouldn&#x27;t expect <code class="language-js" >state.error</code> to
                                 be truthy. You can enforce this with types.
                               </p>
                               <p>
@@ -4639,9 +4639,9 @@
                                 Now, since you&#x27;re defining behavior per
                                 state instead of per action, you also prevent
                                 impossible transitions. For instance, a
-                                <code class="language-js >FETCH_USER</code> action should have no
+                                <code class="language-js" >FETCH_USER</code> action should have no
                                 effect when
-                                <code class="language-js >status === LOADING_STATUS</code>, and you
+                                <code class="language-js" >status === LOADING_STATUS</code>, and you
                                 can enforce that, instead of accidentally
                                 introducing edge-cases.
                               </p>
@@ -4696,15 +4696,15 @@
                             </h3>
                             <p>
                               Redux does not care what the contents of the
-                              <code class="language-js >action.type</code> field are - it just has
+                              <code class="language-js" >action.type</code> field are - it just has
                               to be defined. It is legal to write action types
                               in present tense
-                              (<code class="language-js >&quot;users/update&quot;</code>), past
-                              tense (<code class="language-js >&quot;users/updated&quot;</code>),
+                              (<code class="language-js" >&quot;users/update&quot;</code>), past
+                              tense (<code class="language-js" >&quot;users/updated&quot;</code>),
                               described as an event
-                              (<code class="language-js >&quot;upload/progress&quot;</code>), or
+                              (<code class="language-js" >&quot;upload/progress&quot;</code>), or
                               treated as a &quot;setter&quot;
-                              (<code class="language-js >&quot;users/setUserName&quot;</code>). It
+                              (<code class="language-js" >&quot;users/setUserName&quot;</code>). It
                               is up to you to determine what a given action
                               means in your application, and how you model those
                               actions.
@@ -5146,7 +5146,7 @@
                               >
                             </h3>
                             <p>
-                              The <code class="language-js >action.type</code> field serves two main
+                              The <code class="language-js" >action.type</code> field serves two main
                               purposes:
                             </p>
                             <ul>
@@ -5165,8 +5165,8 @@
                               <a href="#model-actions-as-events-not-setters"
                                 >Model Actions as &quot;Events&quot;</a
                               >, the actual contents of the
-                              <code class="language-js >type</code> field do not matter to Redux
-                              itself. However, the <code class="language-js >type</code> value
+                              <code class="language-js" >type</code> field do not matter to Redux
+                              itself. However, the <code class="language-js" >type</code> value
                               <em>does</em> matter to you, the developer.
                               <strong
                                 >Actions should be written with meaningful,
@@ -5176,8 +5176,8 @@
                               understanding of what happened in the application
                               without even looking at the contents of each
                               action. Avoid using very generic action names like
-                              <code class="language-js >&quot;SET_DATA&quot;</code> or
-                              <code class="language-js >&quot;UPDATE_STORE&quot;</code>, as they
+                              <code class="language-js" >&quot;SET_DATA&quot;</code> or
+                              <code class="language-js" >&quot;UPDATE_STORE&quot;</code>, as they
                               don&#x27;t provide meaningful information on what
                               happened.
                             </p>
@@ -5264,7 +5264,7 @@
                                 React render pass, updates queued
                                 <em>outside</em> of those event handlers are
                                 not. This includes dispatches from most
-                                <code class="language-js >async</code> functions, timeout callbacks,
+                                <code class="language-js" >async</code> functions, timeout callbacks,
                                 and non-React code. In those situations, each
                                 dispatch will result in a complete synchronous
                                 React render pass before the dispatch is done,
@@ -5276,12 +5276,12 @@
                                 &quot;transaction&quot;-style update sequence
                                 will result in intermediate states that might
                                 not be considered valid. For example, if actions
-                                <code class="language-js >&quot;UPDATE_A&quot;</code>,
-                                <code class="language-js >&quot;UPDATE_B&quot;</code>, and
-                                <code class="language-js >&quot;UPDATE_C&quot;</code> are dispatched
+                                <code class="language-js" >&quot;UPDATE_A&quot;</code>,
+                                <code class="language-js" >&quot;UPDATE_B&quot;</code>, and
+                                <code class="language-js" >&quot;UPDATE_C&quot;</code> are dispatched
                                 in a row, and some code is expecting all three
-                                of <code class="language-js >a</code>, <code class="language-js >b</code>, and
-                                <code class="language-js >c</code> to be updated together, the state
+                                of <code class="language-js" >a</code>, <code class="language-js" >b</code>, and
+                                <code class="language-js" >c</code> to be updated together, the state
                                 after the first two dispatches will effectively
                                 be incomplete because only one or two of them
                                 has been updated.
@@ -5296,7 +5296,7 @@
                                   href="../../react-redux.js.org/api/batch.html"
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  ><code class="language-js >batch()</code> from React-Redux</a
+                                  ><code class="language-js" >batch()</code> from React-Redux</a
                                 >), debouncing the store notification callbacks,
                                 or grouping many actions into a larger single
                                 dispatch that only results in one subscriber
@@ -5382,21 +5382,21 @@
                                   >the React-Redux hooks API (<code class="language-js 
                                     >useSelector</code
                                   >
-                                  and <code class="language-js >useDispatch</code>)</a
+                                  and <code class="language-js" >useDispatch</code>)</a
                                 >
                                 as the default way to interact with a Redux
                                 store from your React components</strong
-                              >. While the classic <code class="language-js >connect</code> API
+                              >. While the classic <code class="language-js" >connect</code> API
                               still works fine and will continue to be
                               supported, the hooks API is generally easier to
                               use in several ways. The hooks have less
                               indirection, less code to write, and are simpler
                               to use with TypeScript than
-                              <code class="language-js >connect</code> is.
+                              <code class="language-js" >connect</code> is.
                             </p>
                             <p>
                               The hooks API does introduce some different
-                              tradeoffs than <code class="language-js >connect</code> does in terms
+                              tradeoffs than <code class="language-js" >connect</code> does in terms
                               of performance and data flow, but we now recommend
                               them as the default.
                             </p>
@@ -5408,7 +5408,7 @@
                                   href="../../react-redux.js.org/api/connect.html"
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  >classic <code class="language-js >connect</code> API</a
+                                  >classic <code class="language-js" >connect</code> API</a
                                 >
                                 is a
                                 <a
@@ -5440,26 +5440,26 @@
                                 and logic.
                               </p>
                               <p>
-                                The indirection of <code class="language-js >connect</code> has
+                                The indirection of <code class="language-js" >connect</code> has
                                 always made it a bit difficult for some users to
                                 follow the data flow. In addition,
-                                <code class="language-js >connect</code>&#x27;s complexity has made
+                                <code class="language-js" >connect</code>&#x27;s complexity has made
                                 it very difficult to type correctly with
                                 TypeScript, due to the multiple overloads,
                                 optional parameters, merging of props from
-                                <code class="language-js >mapState</code> /
-                                <code class="language-js >mapDispatch</code> / parent component, and
+                                <code class="language-js" >mapState</code> /
+                                <code class="language-js" >mapDispatch</code> / parent component, and
                                 binding of action creators and thunks.
                               </p>
                               <p>
-                                <code class="language-js >useSelector</code> and
-                                <code class="language-js >useDispatch</code> eliminate the
+                                <code class="language-js" >useSelector</code> and
+                                <code class="language-js" >useDispatch</code> eliminate the
                                 indirection, so it&#x27;s much more clear how
                                 your own component is interacting with Redux.
-                                Since <code class="language-js >useSelector</code> just accepts a
+                                Since <code class="language-js" >useSelector</code> just accepts a
                                 single selector, it&#x27;s much easier to define
                                 with TypeScript, and the same goes for
-                                <code class="language-js >useDispatch</code>.
+                                <code class="language-js" >useDispatch</code>.
                               </p>
                               <p>
                                 For more details, see Redux maintainer Mark
@@ -5522,19 +5522,19 @@
                             </p>
                             <p>
                               For example, rather than just connecting a
-                              <code class="language-js >&lt;UserList&gt;</code> component and
+                              <code class="language-js" >&lt;UserList&gt;</code> component and
                               reading the entire array of users, have
-                              <code class="language-js >&lt;UserList&gt;</code> retrieve a list of
+                              <code class="language-js" >&lt;UserList&gt;</code> retrieve a list of
                               all user IDs, render list items as
-                              <code class="language-js >&lt;UserListItem userId={userId}&gt;</code>,
-                              and have <code class="language-js >&lt;UserListItem&gt;</code> be
+                              <code class="language-js" >&lt;UserListItem userId={userId}&gt;</code>,
+                              and have <code class="language-js" >&lt;UserListItem&gt;</code> be
                               connected and extract its own user entry from the
                               store.
                             </p>
                             <p>
                               This applies for both the React-Redux
-                              <code class="language-js >connect()</code> API and the
-                              <code class="language-js >useSelector()</code> hook.
+                              <code class="language-js" >connect()</code> API and the
+                              <code class="language-js" >useSelector()</code> hook.
                             </p>
                             <h3>
                               <a
@@ -5544,7 +5544,7 @@
                                 id="use-the-object-shorthand-form-of-mapdispatch-with-connect"
                               ></a
                               >Use the Object Shorthand Form of
-                              <code class="language-js >mapDispatch</code> with <code class="language-js >connect</code
+                              <code class="language-js" >mapDispatch</code> with <code class="language-js" >connect</code
                               ><a
                                 class="hash-link"
                                 href="#use-the-object-shorthand-form-of-mapdispatch-with-connect"
@@ -5553,9 +5553,9 @@
                               >
                             </h3>
                             <p>
-                              The <code class="language-js >mapDispatch</code> argument to
-                              <code class="language-js >connect</code> can be defined as either a
-                              function that receives <code class="language-js >dispatch</code> as an
+                              The <code class="language-js" >mapDispatch</code> argument to
+                              <code class="language-js" >connect</code> can be defined as either a
+                              function that receives <code class="language-js" >dispatch</code> as an
                               argument, or an object containing action creators.
                               <strong
                                 >We recommend always using
@@ -5564,11 +5564,11 @@
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   >the &quot;object shorthand&quot; form of
-                                  <code class="language-js >mapDispatch</code></a
+                                  <code class="language-js" >mapDispatch</code></a
                                 ></strong
                               >, as it simplifies the code considerably. There
                               is almost never a real need to write
-                              <code class="language-js >mapDispatch</code> as a function.
+                              <code class="language-js" >mapDispatch</code> as a function.
                             </p>
                             <h3>
                               <a
@@ -5577,7 +5577,7 @@
                                 class="anchor enhancedAnchor_2LWZ"
                                 id="call-useselector-multiple-times-in-function-components"
                               ></a
-                              >Call <code class="language-js >useSelector</code> Multiple Times in
+                              >Call <code class="language-js" >useSelector</code> Multiple Times in
                               Function Components<a
                                 class="hash-link"
                                 href="#call-useselector-multiple-times-in-function-components"
@@ -5588,14 +5588,14 @@
                             <p>
                               <strong
                                 >When retrieving data using the
-                                <code class="language-js >useSelector</code> hook, prefer calling
-                                <code class="language-js >useSelector</code> many times and
+                                <code class="language-js" >useSelector</code> hook, prefer calling
+                                <code class="language-js" >useSelector</code> many times and
                                 retrieving smaller amounts of data, instead of
                                 having a single larger
-                                <code class="language-js >useSelector</code> call that returns
+                                <code class="language-js" >useSelector</code> call that returns
                                 multiple results in an object</strong
-                              >. Unlike <code class="language-js >mapState</code>,
-                              <code class="language-js >useSelector</code> is not required to return
+                              >. Unlike <code class="language-js" >mapState</code>,
+                              <code class="language-js" >useSelector</code> is not required to return
                               an object, and having selectors read smaller
                               values means it is less likely that a given state
                               change will cause this component to render.
@@ -5604,7 +5604,7 @@
                               However, try to find an appropriate balance of
                               granularity. If a single component does need all
                               fields in a slice of the state , just write one
-                              <code class="language-js >useSelector</code> that returns that whole
+                              <code class="language-js" >useSelector</code> that returns that whole
                               slice instead of separate selectors for each
                               individual field.
                             </p>
@@ -5741,7 +5741,7 @@
                                 <li>Prevention of accidental mutations</li>
                                 <li>
                                   Easier nested updates via APIs like
-                                  <code class="language-js >setIn()</code>
+                                  <code class="language-js" >setIn()</code>
                                 </li>
                               </ul>
                               <p>
@@ -5761,12 +5761,12 @@
                                   eliminates accident-prone manual copying
                                   logic, and deep-freezes state in development
                                   by default) or
-                                  <code class="language-js >redux-immutable-state-invariant</code>
+                                  <code class="language-js" >redux-immutable-state-invariant</code>
                                   (which checks state for mutations)
                                 </li>
                                 <li>
                                   Immer allows simpler update logic overall,
-                                  eliminating the need for <code class="language-js >setIn()</code>
+                                  eliminating the need for <code class="language-js" >setIn()</code>
                                 </li>
                                 <li>
                                   Immutable.js has a very large bundle size
@@ -5824,7 +5824,7 @@
                                 id="write-action-types-as-domaineventname"
                               ></a
                               >Write Action Types as
-                              <code class="language-js >domain/eventName</code
+                              <code class="language-js" >domain/eventName</code
                               ><a
                                 class="hash-link"
                                 href="#write-action-types-as-domaineventname"
@@ -5836,8 +5836,8 @@
                               The original Redux docs and examples generally
                               used a &quot;SCREAMING_SNAKE_CASE&quot; convention
                               for defining action types, such as
-                              <code class="language-js >&quot;ADD_TODO&quot;</code> and
-                              <code class="language-js >&quot;INCREMENT&quot;</code>. This matches
+                              <code class="language-js" >&quot;ADD_TODO&quot;</code> and
+                              <code class="language-js" >&quot;INCREMENT&quot;</code>. This matches
                               typical conventions in most programming languages
                               for declaring constant values. The downside is
                               that the uppercase strings can be hard to read.
@@ -5849,23 +5849,23 @@
                               action is related to, and the specific action
                               type. The NgRx community typically uses a pattern
                               like
-                              <code class="language-js >&quot;[Domain] Action Type&quot;</code>,
+                              <code class="language-js" >&quot;[Domain] Action Type&quot;</code>,
                               such as
-                              <code class="language-js >&quot;[Login Page] Login&quot;</code>. Other
+                              <code class="language-js" >&quot;[Login Page] Login&quot;</code>. Other
                               patterns like
-                              <code class="language-js >&quot;domain:action&quot;</code> have been
+                              <code class="language-js" >&quot;domain:action&quot;</code> have been
                               used as well.
                             </p>
                             <p>
                               Redux Toolkit&#x27;s
-                              <code class="language-js >createSlice</code> function currently
+                              <code class="language-js" >createSlice</code> function currently
                               generates action types that look like
-                              <code class="language-js >&quot;domain/action&quot;</code>, such as
-                              <code class="language-js >&quot;todos/addTodo&quot;</code>. Going
+                              <code class="language-js" >&quot;domain/action&quot;</code>, such as
+                              <code class="language-js" >&quot;todos/addTodo&quot;</code>. Going
                               forward,
                               <strong
                                 >we suggest using the
-                                <code class="language-js >&quot;domain/action&quot;</code>
+                                <code class="language-js" >&quot;domain/action&quot;</code>
                                 convention for readability</strong
                               >.
                             </p>
@@ -5887,7 +5887,7 @@
                             <p>
                               The original &quot;Flux Architecture&quot;
                               documentation only specified that action objects
-                              should have a <code class="language-js >type</code> field, and did not
+                              should have a <code class="language-js" >type</code> field, and did not
                               give any further guidance on what kinds of fields
                               or naming conventions should be used for fields in
                               actions. To provide consistency, Andrew Clark
@@ -5904,14 +5904,14 @@
                             <ul>
                               <li>
                                 Should always put their data into a
-                                <code class="language-js >payload</code> field
+                                <code class="language-js" >payload</code> field
                               </li>
                               <li>
-                                May have a <code class="language-js >meta</code> field for
+                                May have a <code class="language-js" >meta</code> field for
                                 additional info
                               </li>
                               <li>
-                                May have an <code class="language-js >error</code> field to indicate
+                                May have an <code class="language-js" >error</code> field to indicate
                                 the action represents a failure of some kind
                               </li>
                             </ul>
@@ -5930,7 +5930,7 @@
                               <p>
                                 <strong>Note</strong>: The FSA spec says that
                                 &quot;error&quot; actions should set
-                                <code class="language-js >error: true</code>, and use the same
+                                <code class="language-js" >error: true</code>, and use the same
                                 action type as the &quot;valid&quot; form of the
                                 action. In practice, most developers write
                                 separate action types for the
@@ -5978,7 +5978,7 @@
                               hand,
                               <strong
                                 >we recommend using the
-                                <code class="language-js >createSlice</code> function from Redux
+                                <code class="language-js" >createSlice</code> function from Redux
                                 Toolkit, which will generate action creators and
                                 action types automatically</strong
                               >.
@@ -6023,7 +6023,7 @@
                                 ></strong
                               >, as it is sufficient for most typical use cases
                               (such as basic AJAX data fetching). In addition,
-                              use of the <code class="language-js >async/await</code> syntax in
+                              use of the <code class="language-js" >async/await</code> syntax in
                               thunks makes them easier to read.
                             </p>
                             <p>
@@ -6124,7 +6124,7 @@
                                 id="name-selector-functions-as-selectthing"
                               ></a
                               >Name Selector Functions as
-                              <code class="language-js >selectThing</code
+                              <code class="language-js" >selectThing</code
                               ><a
                                 class="hash-link"
                                 href="#name-selector-functions-as-selectthing"
@@ -6135,12 +6135,12 @@
                             <p>
                               <strong
                                 >We recommend prefixing selector function names
-                                with the word <code class="language-js >select</code></strong
+                                with the word <code class="language-js" >select</code></strong
                               >, combined with a description of the value being
                               selected. Examples of this would be
-                              <code class="language-js >selectTodos</code>,
-                              <code class="language-js >selectVisibleTodos</code>, and
-                              <code class="language-js >selectTodoById</code>.
+                              <code class="language-js" >selectTodos</code>,
+                              <code class="language-js" >selectVisibleTodos</code>, and
+                              <code class="language-js" >selectTodoById</code>.
                             </p>
                             <h3>
                               <a
@@ -6168,8 +6168,8 @@
                               which causes performance overhead and provides no
                               real benefit. (You probably don&#x27;t need to
                               time-travel backwards one character from
-                              <code class="language-js >name: &quot;Mark&quot;</code> to
-                              <code class="language-js >name: &quot;Mar&quot;</code>.)
+                              <code class="language-js" >name: &quot;Mark&quot;</code> to
+                              <code class="language-js" >name: &quot;Mar&quot;</code>.)
                             </p>
                             <p>
                               Even if the data ultimately ends up in Redux,
@@ -6429,15 +6429,15 @@
                               href="#use-the-object-shorthand-form-of-mapdispatch-with-connect"
                               class="table-of-contents__link"
                               >Use the Object Shorthand Form of
-                              <code class="language-js >mapDispatch</code> with
-                              <code class="language-js >connect</code></a
+                              <code class="language-js" >mapDispatch</code> with
+                              <code class="language-js" >connect</code></a
                             >
                           </li>
                           <li>
                             <a
                               href="#call-useselector-multiple-times-in-function-components"
                               class="table-of-contents__link"
-                              >Call <code class="language-js >useSelector</code> Multiple Times in
+                              >Call <code class="language-js" >useSelector</code> Multiple Times in
                               Function Components</a
                             >
                           </li>
@@ -6476,7 +6476,7 @@
                               href="#write-action-types-as-domaineventname"
                               class="table-of-contents__link"
                               >Write Action Types as
-                              <code class="language-js >domain/eventName</code></a
+                              <code class="language-js" >domain/eventName</code></a
                             >
                           </li>
                           <li>
@@ -6521,7 +6521,7 @@
                               href="#name-selector-functions-as-selectthing"
                               class="table-of-contents__link"
                               >Name Selector Functions as
-                              <code class="language-js >selectThing</code></a
+                              <code class="language-js" >selectThing</code></a
                             >
                           </li>
                           <li>

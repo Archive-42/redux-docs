@@ -1,13 +1,6 @@
 <a href="../index.html" class="navbar__brand"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
 
 <a href="../introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="../tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../faq.html" class="navbar__item navbar__link">FAQ</a><a href="../style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="../index.html" class="navbar__brand"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
 
 - <a href="../introduction/getting-started.html" class="menu__link">Getting Started</a>
@@ -133,11 +126,7 @@ In the following recipe, we are going to look at how to set up server-side rende
 
 For this example, we'll be using [Express](../../expressjs.com/index.html) as a simple web server. We also need to install the React bindings for Redux, since they are not included in Redux by default.
 
-<span class="token plain">npm install express react-redux</span>
-
-Copy
-
-## <span id="the-server-side" class="anchor enhancedAnchor_2LWZ"></span>The Server Side<a href="#the-server-side" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain">npm install express react-redux</span>## <span id="the-server-side" class="anchor enhancedAnchor_2LWZ"></span>The Server Side<a href="#the-server-side" class="hash-link" title="Direct link to heading">#</a>
 
 The following is the outline for what our server side is going to look like. We are going to set up an [Express middleware](../../expressjs.com/guide/using-middleware.html) using [app.use](../../expressjs.com/api.html#app.use) to handle all requests that come in to our server. If you're unfamiliar with Express or middleware, just know that our handleRender function will be called every time the server receives a request.
 
@@ -145,17 +134,17 @@ Additionally, as we are using ES6 and JSX syntax, we will need to compile with [
 
 ##### <span id="serverjs" class="anchor enhancedAnchor_2LWZ"></span>`server.js`<a href="#serverjs" class="hash-link" title="Direct link to heading">#</a>
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">path</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'path'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >path</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'path'</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">Express</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'express'</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">React</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> </span><span class="token imports maybe-class-name">Provider</span><span class="token imports"> </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-redux'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > </span><span class="token imports maybe-class-name">Provider</span><span > </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-redux'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">counterApp</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./reducers'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >counterApp</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./reducers'</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">App</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./containers/App'</span><span class="token plain"></span>
 
@@ -169,13 +158,13 @@ Additionally, as we are using ES6 and JSX syntax, we will need to compile with [
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">//Serve static files</span><span class="token plain"></span>
 
-<span class="token plain">app</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">use</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'/static'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token maybe-class-name">Express</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">static</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'static'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain">app</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">use</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'/static'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token maybe-class-name">Express</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">static</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'static'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// This is fired every time the server side receives a request</span><span class="token plain"></span>
 
-<span class="token plain">app</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">use</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">handleRender</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain">app</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">use</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">handleRender</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -195,11 +184,7 @@ Additionally, as we are using ES6 and JSX syntax, we will need to compile with [
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain">app</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">listen</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">port</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-### <span id="handling-the-request" class="anchor enhancedAnchor_2LWZ"></span>Handling the Request<a href="#handling-the-request" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain">app</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">listen</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">port</span><span class="token punctuation" style="color: #f8f8f2">)</span>### <span id="handling-the-request" class="anchor enhancedAnchor_2LWZ"></span>Handling the Request<a href="#handling-the-request" class="hash-link" title="Direct link to heading">#</a>
 
 The first thing that we need to do on every request is to create a new Redux store instance. The only purpose of this store instance is to provide the initial state of our application.
 
@@ -209,7 +194,7 @@ The key step in server side rendering is to render the initial HTML of our compo
 
 We then get the initial state from our Redux store using [`store.getState()`](../api/store.html#getState). We will see how this is passed along in our `renderFullPage` function.
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> renderToString </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-dom/server'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > renderToString </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-dom/server'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -237,19 +222,15 @@ We then get the initial state from our Redux store using [`store.getState()`](..
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Grab the initial state from our Redux store</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> preloadedState </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> preloadedState </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Send the rendered page back to the client</span><span class="token plain"></span>
 
-<span class="token plain"> res</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">send</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token function" style="color: #e6d874">renderFullPage</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">html</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> preloadedState</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> res</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">send</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token function" style="color: #e6d874">renderFullPage</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">html</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> preloadedState</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-### <span id="inject-initial-component-html-and-state" class="anchor enhancedAnchor_2LWZ"></span>Inject Initial Component HTML and State<a href="#inject-initial-component-html-and-state" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>### <span id="inject-initial-component-html-and-state" class="anchor enhancedAnchor_2LWZ"></span>Inject Initial Component HTML and State<a href="#inject-initial-component-html-and-state" class="hash-link" title="Direct link to heading">#</a>
 
 The final step on the server side is to inject our initial component HTML and initial state into a template to be rendered on the client side. To pass along the state, we add a `<script>` tag that will attach `preloadedState` to `window.__PRELOADED_STATE__`.
 
@@ -299,11 +280,7 @@ We also include our bundle file for the client-side application via a script tag
 
 <span class="token template-string string" style="color: #a6e22e"> </span><span class="token template-string template-punctuation string" style="color: #a6e22e">\`</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-## <span id="the-client-side" class="anchor enhancedAnchor_2LWZ"></span>The Client Side<a href="#the-client-side" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>## <span id="the-client-side" class="anchor enhancedAnchor_2LWZ"></span>The Client Side<a href="#the-client-side" class="hash-link" title="Direct link to heading">#</a>
 
 The client side is very straightforward. All we need to do is grab the initial state from `window.__PRELOADED_STATE__`, and pass it to our [`createStore()`](../api/createstore.html) function as the initial state.
 
@@ -313,15 +290,15 @@ Let's take a look at our new client file:
 
 <span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">React</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> hydrate </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-dom'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > hydrate </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-dom'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> </span><span class="token imports maybe-class-name">Provider</span><span class="token imports"> </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-redux'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > </span><span class="token imports maybe-class-name">Provider</span><span > </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-redux'</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">App</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./containers/App'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">counterApp</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./reducers'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >counterApp</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./reducers'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -351,13 +328,9 @@ Let's take a look at our new client file:
 
 <span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token operator" style="color: #f8f8f2">/</span><span class="token maybe-class-name">Provider</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token dom variable" style="color: #f8f8f2">document</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getElementById</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'root'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token dom variable" style="color: #f8f8f2">document</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getElementById</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'root'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-You can set up your build tool of choice (Webpack, Browserify, etc.) to compile a bundle file into `static/bundle.js`.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">)</span>You can set up your build tool of choice (Webpack, Browserify, etc.) to compile a bundle file into `static/bundle.js`.
 
 When the page loads, the bundle file will be started up and [`ReactDOM.hydrate()`](../../reactjs.org/docs/react-dom.html#hydrate) will reuse the server-rendered HTML. This will connect our newly-started React instance to the virtual DOM used on the server. Since we have the same initial state for our Redux store and used the same code for all our view components, the result will be the same real DOM.
 
@@ -377,9 +350,9 @@ The request contains information about the URL requested, including any query pa
 
 #### <span id="serverjs-1" class="anchor enhancedAnchor_2LWZ"></span>`server.js`<a href="#serverjs-1" class="hash-link" title="Direct link to heading">#</a>
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">qs</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'qs'</span><span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Add this at the top of the file</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >qs</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'qs'</span><span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Add this at the top of the file</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> renderToString </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-dom/server'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > renderToString </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-dom/server'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -387,7 +360,7 @@ The request contains information about the URL requested, including any query pa
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Read the counter from the request, if provided</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> params </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> qs</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">parse</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">req</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">query</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> params </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> qs</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">parse</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">req</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">query</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> counter </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">parseInt</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">params</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">counter</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">10</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">||</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">0</span><span class="token plain"></span>
 
@@ -421,19 +394,15 @@ The request contains information about the URL requested, including any query pa
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Grab the initial state from our Redux store</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> finalState </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> finalState </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Send the rendered page back to the client</span><span class="token plain"></span>
 
-<span class="token plain"> res</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">send</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token function" style="color: #e6d874">renderFullPage</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">html</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> finalState</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> res</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">send</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token function" style="color: #e6d874">renderFullPage</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">html</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> finalState</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-The code reads from the Express `Request` object passed into our server middleware. The parameter is parsed into a number and then set in the initial state. If you visit [http://localhost:3000/?counter=100](../../localhost_3000/indexc97d.html?counter=100) in your browser, you'll see the counter starts at 100. In the rendered HTML, you'll see the counter output as 100 and the `__PRELOADED_STATE__` variable has the counter set in it.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>The code reads from the Express `Request` object passed into our server middleware. The parameter is parsed into a number and then set in the initial state. If you visit [http://localhost:3000/?counter=100](../../localhost_3000/indexc97d.html?counter=100) in your browser, you'll see the counter starts at 100. In the rendered HTML, you'll see the counter output as 100 and the `__PRELOADED_STATE__` variable has the counter set in it.
 
 ### <span id="async-state-fetching" class="anchor enhancedAnchor_2LWZ"></span>Async State Fetching<a href="#async-state-fetching" class="hash-link" title="Direct link to heading">#</a>
 
@@ -447,7 +416,7 @@ For our example, we'll imagine there is an external datastore that contains the 
 
 <span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">getRandomInt</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">min</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> max</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token known-class-name class-name">Math</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">floor</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token known-class-name class-name">Math</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">random</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">\*</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">max </span><span class="token operator" style="color: #f8f8f2">-</span><span class="token plain"> min</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">+</span><span class="token plain"> min</span>
+<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token known-class-name class-name">Math</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">floor</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token known-class-name class-name">Math</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">random</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">\*</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">max </span><span class="token operator" style="color: #f8f8f2">-</span><span class="token plain"> min</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">+</span><span class="token plain"> min</span>
 
 <span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
@@ -461,11 +430,7 @@ For our example, we'll imagine there is an external datastore that contains the 
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">500</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Again, this is just a mock API, so we use `setTimeout` to simulate a network request that takes 500 milliseconds to respond (this should be much faster with a real world API). We pass in a callback that returns a random number asynchronously. If you're using a Promise-based API client, then you would issue this callback in your `then` handler.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Again, this is just a mock API, so we use `setTimeout` to simulate a network request that takes 500 milliseconds to respond (this should be much faster with a real world API). We pass in a callback that returns a random number asynchronously. If you're using a Promise-based API client, then you would issue this callback in your `then` handler.
 
 On the server side, we simply wrap our existing code in the `fetchCounter` and receive the result in the callback:
 
@@ -473,9 +438,9 @@ On the server side, we simply wrap our existing code in the `fetchCounter` and r
 
 <span class="token comment" style="color: #c6cad2">// Add this to our imports</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> fetchCounter </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./api/counter'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > fetchCounter </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./api/counter'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> renderToString </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-dom/server'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > renderToString </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-dom/server'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -487,7 +452,7 @@ On the server side, we simply wrap our existing code in the `fetchCounter` and r
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Read the counter from the request, if provided</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> params </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> qs</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">parse</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">req</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">query</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> params </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> qs</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">parse</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">req</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">query</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> counter </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">parseInt</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">params</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">counter</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">10</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">||</span><span class="token plain"> apiResult </span><span class="token operator" style="color: #f8f8f2">||</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">0</span><span class="token plain"></span>
 
@@ -521,21 +486,17 @@ On the server side, we simply wrap our existing code in the `fetchCounter` and r
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Grab the initial state from our Redux store</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> finalState </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> finalState </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Send the rendered page back to the client</span><span class="token plain"></span>
 
-<span class="token plain"> res</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">send</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token function" style="color: #e6d874">renderFullPage</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">html</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> finalState</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> res</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">send</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token function" style="color: #e6d874">renderFullPage</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">html</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> finalState</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Because we call `res.send()` inside of the callback, the server will hold open the connection and won't send any data until that callback executes. You'll notice a 500ms delay is now added to each server request as a result of our new API call. A more advanced usage would handle errors in the API gracefully, such as a bad response or timeout.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Because we call `res.send()` inside of the callback, the server will hold open the connection and won't send any data until that callback executes. You'll notice a 500ms delay is now added to each server request as a result of our new API call. A more advanced usage would handle errors in the API gracefully, such as a bad response or timeout.
 
 ### <span id="security-considerations" class="anchor enhancedAnchor_2LWZ"></span>Security Considerations<a href="#security-considerations" class="hash-link" title="Direct link to heading">#</a>
 
@@ -554,8 +515,6 @@ You may want to read [Redux Fundamentals Part 6: Async Logic and Data Fetching](
 If you use something like [React Router](../../github.com/ReactTraining/react-router.html), you might also want to express your data fetching dependencies as static `fetchData()` methods on your route handler components. They may return [thunks](../tutorials/fundamentals/part-6-async-logic.html), so that your `handleRender` function can match the route to the route handler component classes, dispatch `fetchData()` result for each of them, and render only after the Promises have resolved. This way the specific API calls required for different routes are colocated with the route handler component definitions. You can also use the same technique on the client side to prevent the router from switching the page until its data has been loaded.
 
 <a href="reducing-boilerplate.html" class="pagination-nav__link"></a>
-
-Previous
 
 « Reducing Boilerplate
 
@@ -598,4 +557,4 @@ Writing Tests »
 
 <a href="../index.html" class="footerLogoLink_MyFc"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" /><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
 
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

@@ -1,13 +1,6 @@
 <a href="../index.html" class="navbar__brand"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
 
 <a href="../introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="../tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../faq.html" class="navbar__item navbar__link navbar__link--active">FAQ</a><a href="../style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="../index.html" class="navbar__brand"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
 
 - <a href="#!" class="menu__link menu__link--sublist">Introduction</a>
@@ -187,11 +180,7 @@ The [suggested structure](reducers.html#reducers-share-state) for a Redux store 
 
 So, for example, if your state shape is `{ todos, counter }`, the call to `combineReducers` would be:
 
-<span class="token function" style="color: #e6d874">combineReducers</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> todos</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> myTodosReducer</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> counter</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> myCounterReducer </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-where:
+<span class="token function" style="color: #e6d874">combineReducers</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> todos</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> myTodosReducer</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> counter</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> myCounterReducer </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>where:
 
 - the keys `todos` and `counter` each refer to a separate state slice;
 - the values `myTodosReducer` and `myCounterReducer` are reducer functions, with each acting on the state slice identified by the respective key.
@@ -264,11 +253,7 @@ It does so because the props object is actually a hash of prop names and their v
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">connect</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">mapStateToProps</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token maybe-class-name">TodoApp</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-As such, a shallow equality check of the props object returned from repeated calls to `mapStateToProps` would always fail, as a new object would be returned each time.
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">connect</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">mapStateToProps</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token maybe-class-name">TodoApp</span><span class="token punctuation" style="color: #f8f8f2">)</span>As such, a shallow equality check of the props object returned from repeated calls to `mapStateToProps` would always fail, as a new object would be returned each time.
 
 React-Redux therefore maintains separate references to each _value_ in the returned props object.
 
@@ -302,11 +287,7 @@ In the example below, if `state.todos` and the value returned from `getVisibleTo
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">connect</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">mapStateToProps</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token maybe-class-name">TodoApp</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-Conversely, in this next example (below), the component will _always_ re-render, as the value of `todos` is always a new object, regardless of whether or not its values change:
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">connect</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">mapStateToProps</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token maybe-class-name">TodoApp</span><span class="token punctuation" style="color: #f8f8f2">)</span>Conversely, in this next example (below), the component will _always_ re-render, as the value of `todos` is always a new object, regardless of whether or not its values change:
 
 <span class="token comment" style="color: #c6cad2">// AVOID - will always cause a re-render</span><span class="token plain"></span>
 
@@ -330,11 +311,7 @@ Conversely, in this next example (below), the component will _always_ re-render,
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">connect</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">mapStateToProps</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token maybe-class-name">TodoApp</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-If the shallow equality check fails between the new values returned from `mapStateToProps` and the previous values that React-Redux kept a reference to, then a re-rendering of the component will be triggered.
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">connect</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">mapStateToProps</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token maybe-class-name">TodoApp</span><span class="token punctuation" style="color: #f8f8f2">)</span>If the shallow equality check fails between the new values returned from `mapStateToProps` and the previous values that React-Redux kept a reference to, then a re-rendering of the component will be triggered.
 
 #### <span id="further-information-7" class="anchor enhancedAnchor_2LWZ"></span>Further Information<a href="#further-information-7" class="hash-link" title="Direct link to heading">#</a>
 
@@ -373,11 +350,7 @@ This is because two variables that reference the same object will _always_ be eq
 
 <span class="token plain">param </span><span class="token operator" style="color: #f8f8f2">===</span><span class="token plain"> returnVal</span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">//&gt; true</span>
-
-Copy
-
-The shallow check of `param` and `returnValue` simply checks whether both variables reference the same object, which they do.`mutateObj()` may return a mutated version of `obj`, but it's still the same object as that passed in. The fact that its values have been changed within `mutateObj` matters not at all to a shallow check.
+<span class="token plain"></span><span class="token comment" style="color: #c6cad2">//&gt; true</span>The shallow check of `param` and `returnValue` simply checks whether both variables reference the same object, which they do.`mutateObj()` may return a mutated version of `obj`, but it's still the same object as that passed in. The fact that its values have been changed within `mutateObj` matters not at all to a shallow check.
 
 #### <span id="further-information-8" class="anchor enhancedAnchor_2LWZ"></span>Further Information<a href="#further-information-8" class="hash-link" title="Direct link to heading">#</a>
 
@@ -478,11 +451,7 @@ For example, the following `mapStateToProps` function will never trigger a re-re
 
 <span class="token plain">a</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">userRecord</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">===</span><span class="token plain"> b</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">userRecord</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">//&gt; true</span>
-
-Copy
-
-Note that, conversely, if an _immutable_ object is used, the [component may re-render when it should not](#immutability-issues-with-react-redux).
+<span class="token plain"></span><span class="token comment" style="color: #c6cad2">//&gt; true</span>Note that, conversely, if an _immutable_ object is used, the [component may re-render when it should not](#immutability-issues-with-react-redux).
 
 #### <span id="further-information-11" class="anchor enhancedAnchor_2LWZ"></span>Further Information<a href="#further-information-11" class="hash-link" title="Direct link to heading">#</a>
 
@@ -537,7 +506,7 @@ For example, the following will always trigger a re-render:
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// and returns a filtered copy of the array.</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">getVisibleTodos</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token parameter">todos</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> todos</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">filter</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">t</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">!</span><span class="token plain">t</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">completed</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">getVisibleTodos</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token parameter">todos</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> todos</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">filter</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">t</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">!</span><span class="token plain">t</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">completed</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -605,11 +574,7 @@ For example, the following will always trigger a re-render:
 
 <span class="token plain">a</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">visibleToDos</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">===</span><span class="token plain"> b</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">visibleToDos</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">//&gt; false</span>
-
-Copy
-
-Note that, conversely, if the values in your props object refer to mutable objects, [your component may not render when it should](#shallow-checking-stops-component-re-rendering).
+<span class="token plain"></span><span class="token comment" style="color: #c6cad2">//&gt; false</span>Note that, conversely, if the values in your props object refer to mutable objects, [your component may not render when it should](#shallow-checking-stops-component-re-rendering).
 
 #### <span id="further-information-14" class="anchor enhancedAnchor_2LWZ"></span>Further Information<a href="#further-information-14" class="hash-link" title="Direct link to heading">#</a>
 
@@ -669,8 +634,6 @@ In contrast, immutable libraries such as Immer can employ structural sharing, wh
 
 <a href="actions.html" class="pagination-nav__link"></a>
 
-Previous
-
 « Actions
 
 <a href="code-structure.html" class="pagination-nav__link"></a>
@@ -721,4 +684,4 @@ Code Structure »
 
 <a href="../index.html" class="footerLogoLink_MyFc"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" /><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
 
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

@@ -1,13 +1,6 @@
 <a href="../index.html" class="navbar__brand"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
 
 <a href="../introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="../tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../faq.html" class="navbar__item navbar__link">FAQ</a><a href="../style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="../index.html" class="navbar__brand"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
 
 - <a href="../introduction/getting-started.html" class="menu__link">Getting Started</a>
@@ -128,17 +121,13 @@ The Redux store exposes a `replaceReducer` function, which replaces the current 
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">replaceReducer</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">newRootReducer</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-## <span id="reducer-injection-approaches" class="anchor enhancedAnchor_2LWZ"></span>Reducer Injection Approaches<a href="#reducer-injection-approaches" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">replaceReducer</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">newRootReducer</span><span class="token punctuation" style="color: #f8f8f2">)</span>## <span id="reducer-injection-approaches" class="anchor enhancedAnchor_2LWZ"></span>Reducer Injection Approaches<a href="#reducer-injection-approaches" class="hash-link" title="Direct link to heading">#</a>
 
 ### <span id="defining-an-injectreducer-function" class="anchor enhancedAnchor_2LWZ"></span>Defining an `injectReducer` function<a href="#defining-an-injectreducer-function" class="hash-link" title="Direct link to heading">#</a>
 
 We will likely want to call `store.replaceReducer()` from anywhere in the application. Because of that, it's helpful to define a reusable `injectReducer()` function that keeps references to all of the existing slice reducers, and attach that to the store instance.
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -176,7 +165,7 @@ We will likely want to call `store.replaceReducer()` from anywhere in the applic
 
 <span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">asyncReducers</span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token plain">key</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> asyncReducer</span>
 
-<span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">replaceReducer</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token function" style="color: #e6d874">createReducer</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">asyncReducers</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">replaceReducer</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token function" style="color: #e6d874">createReducer</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">asyncReducers</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
@@ -200,11 +189,7 @@ We will likely want to call `store.replaceReducer()` from anywhere in the applic
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Now, one just needs to call `store.injectReducer` to add a new reducer to the store.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Now, one just needs to call `store.injectReducer` to add a new reducer to the store.
 
 ### <span id="using-a-reducer-manager" class="anchor enhancedAnchor_2LWZ"></span>Using a 'Reducer Manager'<a href="#using-a-reducer-manager" class="hash-link" title="Direct link to heading">#</a>
 
@@ -314,7 +299,7 @@ Another approach is to create a 'Reducer Manager' object, which keeps track of a
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Add the key to the list of keys to clean up</span><span class="token plain"></span>
 
-<span class="token plain"> keysToRemove</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">push</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">key</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> keysToRemove</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">push</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">key</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -356,11 +341,7 @@ Another approach is to create a 'Reducer Manager' object, which keeps track of a
 
 <span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">reducerManager</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> reducerManager</span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-To add a new reducer, one can now call `store.reducerManager.add("asyncState", asyncReducer)`.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>To add a new reducer, one can now call `store.reducerManager.add("asyncState", asyncReducer)`.
 
 To remove a reducer, one can now call `store.reducerManager.remove("asyncState")`
 
@@ -372,8 +353,6 @@ There are a few good libraries out there that can help you add the above functio
 - [Redux Ecosystem Links: Reducers - Dynamic Reducer Injection](../../github.com/markerikson/redux-ecosystem-links/blob/master/reducers.html#dynamic-reducer-injection)
 
 <a href="isolating-redux-sub-apps.html" class="pagination-nav__link"></a>
-
-Previous
 
 « Isolating Redux Sub-Apps
 
@@ -409,4 +388,4 @@ Troubleshooting »
 
 <a href="../index.html" class="footerLogoLink_MyFc"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" /><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
 
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

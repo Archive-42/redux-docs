@@ -107,10 +107,17 @@
       as="script"
     />
     <link rel="preload" href="../../assets/js/main.8520a084.js" as="script" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css"
+    />
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
-    </head>
+    <script
+      async
+      defer
+      src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"
+    ></script>
+  </head>
   <body>
     <script>
       !(function () {
@@ -1713,9 +1720,10 @@
                             <p>
                               The rest of the description on this page focuses
                               solely on the Redux core library (the
-                              <code class="language-js >redux</code> package). We&#x27;ll talk about
-                              the other Redux-related packages as we go through
-                              the rest of the tutorial.
+                              <code class="language-js">redux</code> package).
+                              We&#x27;ll talk about the other Redux-related
+                              packages as we go through the rest of the
+                              tutorial.
                             </p>
                           </div>
                         </div>
@@ -1950,11 +1958,12 @@
                         <p>
                           Then, we define a <strong>reducer</strong> function.
                           The reducer receives two arguments, the current
-                          <code class="language-js >state</code> and an <code class="language-js >action</code> object
+                          <code class="language-js">state</code> and an
+                          <code class="language-js">action</code> object
                           describing what happened. When the Redux app starts
                           up, we don&#x27;t have any state yet, so we provide
-                          the <code class="language-js >initialState</code> as the default value for
-                          this reducer:
+                          the <code class="language-js">initialState</code> as
+                          the default value for this reducer:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -2275,9 +2284,11 @@
                           </div>
                         </div>
                         <p>
-                          Action objects always have a <code class="language-js >type</code> field,
-                          which is a string you provide that acts as a unique
-                          name for the action. The <code class="language-js >type</code> should be a
+                          Action objects always have a
+                          <code class="language-js">type</code> field, which is
+                          a string you provide that acts as a unique name for
+                          the action. The
+                          <code class="language-js">type</code> should be a
                           readable name so that anyone who looks at this code
                           understands what it means. In this case, we use the
                           word &#x27;counter&#x27; as the first half of our
@@ -2285,16 +2296,20 @@
                           &quot;what happened&quot;. In this case, our
                           &#x27;counter&#x27; was &#x27;incremented&#x27;, so we
                           write the action type as
-                          <code class="language-js >&#x27;counter/incremented&#x27;</code>.
+                          <code class="language-js"
+                            >&#x27;counter/incremented&#x27;</code
+                          >.
                         </p>
                         <p>
                           Based on the type of the action, we either need to
                           return a brand-new object to be the new
-                          <code class="language-js >state</code> result, or return the existing
-                          <code class="language-js >state</code> object if nothing should change.
-                          Note that we update the state <em>immutably</em> by
-                          copying the existing state and updating the copy,
-                          instead of modifying the original object directly.
+                          <code class="language-js">state</code> result, or
+                          return the existing
+                          <code class="language-js">state</code> object if
+                          nothing should change. Note that we update the state
+                          <em>immutably</em> by copying the existing state and
+                          updating the copy, instead of modifying the original
+                          object directly.
                         </p>
                         <h4>
                           <a
@@ -2313,7 +2328,8 @@
                         <p>
                           Now that we have a reducer function, we can create a
                           <strong>store</strong> instance by calling the Redux
-                          library <code class="language-js >createStore</code> API.
+                          library
+                          <code class="language-js">createStore</code> API.
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -2402,9 +2418,9 @@
                         </div>
                         <p>
                           We pass the reducer function to
-                          <code class="language-js >createStore</code>, which uses the reducer
-                          function to generate the initial state, and to
-                          calculate any future updates.
+                          <code class="language-js">createStore</code>, which
+                          uses the reducer function to generate the initial
+                          state, and to calculate any future updates.
                         </p>
                         <h4>
                           <a
@@ -2713,22 +2729,25 @@
                         <p>
                           In this small example, we&#x27;re only using some
                           basic HTML elements as our UI, with a single
-                          <code class="language-js >&lt;div&gt;</code> showing the current value.
+                          <code class="language-js">&lt;div&gt;</code> showing
+                          the current value.
                         </p>
                         <p>
                           So, we write a function that knows how to get the
                           latest state from the Redux store using the
-                          <code class="language-js >store.getState()</code> method, then takes that
-                          value and updates the UI to show it.
+                          <code class="language-js">store.getState()</code>
+                          method, then takes that value and updates the UI to
+                          show it.
                         </p>
                         <p>
                           The Redux store lets us call
-                          <code class="language-js >store.subscribe()</code> and pass a subscriber
-                          callback function that will be called every time the
-                          store is updated. So, we can pass our
-                          <code class="language-js >render</code> function as the subscriber, and
-                          know that each time the store updates, we can update
-                          the UI with the latest value.
+                          <code class="language-js">store.subscribe()</code> and
+                          pass a subscriber callback function that will be
+                          called every time the store is updated. So, we can
+                          pass our
+                          <code class="language-js">render</code> function as
+                          the subscriber, and know that each time the store
+                          updates, we can update the UI with the latest value.
                         </p>
                         <p>
                           Redux itself is a standalone library that can be used
@@ -2754,9 +2773,9 @@
                           <strong>action</strong> objects that describe what
                           happened, and <strong>dispatching</strong> them to the
                           store. When we call
-                          <code class="language-js >store.dispatch(action)</code>, the store runs
-                          the reducer, calculates the updated state, and runs
-                          the subscribers to update the UI.
+                          <code class="language-js">store.dispatch(action)</code
+                          >, the store runs the reducer, calculates the updated
+                          state, and runs the subscribers to update the UI.
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -3645,8 +3664,9 @@
                                 <ul>
                                   <li>
                                     <em>Actions</em> are plain objects with a
-                                    <code class="language-js >type</code> field, and describe
-                                    &quot;what happened&quot; in the app
+                                    <code class="language-js">type</code> field,
+                                    and describe &quot;what happened&quot; in
+                                    the app
                                   </li>
                                   <li>
                                     <em>Reducers</em> are functions that

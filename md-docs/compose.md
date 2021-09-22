@@ -1,13 +1,6 @@
 <a href="https://redux.js.org/" class="navbar__brand"><strong>Redux</strong></a>
 
 <a href="https://redux.js.org/introduction/getting-started" class="navbar__item navbar__link">Getting Started</a><a href="https://redux.js.org/tutorials/essentials/part-1-overview-concepts" class="navbar__item navbar__link">Tutorial</a><a href="https://redux.js.org/api/api-reference" class="navbar__item navbar__link">API</a><a href="https://redux.js.org/faq" class="navbar__item navbar__link">FAQ</a><a href="https://redux.js.org/style-guide/style-guide" class="navbar__item navbar__link">Best Practices</a><a href="https://www.github.com/reduxjs/redux" class="navbar__item navbar__link">GitHub</a><a href="https://redux.js.org/introduction/getting-started#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="https://redux.js.org/" class="navbar__brand"><strong>Redux</strong></a>
 
 - <a href="https://redux.js.org/introduction/getting-started" class="menu__link">Getting Started</a>
@@ -124,13 +117,13 @@ This is a functional programming utility, and is included in Redux as a convenie
 
 This example demonstrates how to use `compose` to enhance a [store](https://redux.js.org/api/store) with [`applyMiddleware`](https://redux.js.org/api/applymiddleware) and a few developer tools from the [redux-devtools](https://github.com/reduxjs/redux-devtools) package.
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createStore</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> applyMiddleware</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> compose </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > createStore</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > applyMiddleware</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > compose </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">thunk</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux-thunk'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >thunk</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux-thunk'</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">DevTools</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./containers/DevTools'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">reducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../reducers'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >reducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../reducers'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -138,19 +131,13 @@ This example demonstrates how to use `compose` to enhance a [store](https://redu
 
 <span class="token plain"> reducer</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">compose</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token function" style="color: #e6d874">applyMiddleware</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">thunk</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token maybe-class-name">DevTools</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">instrument</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token function" style="color: #e6d874">compose</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token function" style="color: #e6d874">applyMiddleware</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">thunk</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token maybe-class-name">DevTools</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">instrument</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-#### <span id="tips" class="anchor enhancedAnchor_2LWZ"></span>Tips<a href="#tips" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">)</span>#### <span id="tips" class="anchor enhancedAnchor_2LWZ"></span>Tips<a href="#tips" class="hash-link" title="Direct link to heading">#</a>
 
 - All `compose` does is let you write deeply nested function transformations without the rightward drift of the code. Don't give it too much credit!
 
 <a href="https://redux.js.org/api/bindactioncreators" class="pagination-nav__link"></a>
-
-Previous
 
 « bindActionCreators
 
@@ -180,4 +167,4 @@ Redux Toolkit: Overview »
 
 <a href="https://redux.js.org/" class="footerLogoLink_MyFc"><img src="https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" /><img src="https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
 
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

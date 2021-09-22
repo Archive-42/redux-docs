@@ -1,13 +1,6 @@
 <a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 <a href="../official/introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="../official/tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../official/api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../official/faq.html" class="navbar__item navbar__link">FAQ</a><a href="../official/style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/../github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../official/introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 - <a href="../official/introduction/getting-started.html" class="menu__link">Getting Started</a>
@@ -158,9 +151,9 @@ Does it make sense to use Redux together with RxJS? Sure! They work great togeth
 
 <span class="token plain"> </span><span class="token function" style="color: #e6d874">subscribe</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter punctuation" style="color: #f8f8f2">{</span><span class="token parameter"> next </span><span class="token parameter punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> unsubscribe </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">subscribe</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">next</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> unsubscribe </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">subscribe</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">next</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">next</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token function" style="color: #e6d874">next</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> unsubscribe </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
@@ -168,19 +161,13 @@ Does it make sense to use Redux together with RxJS? Sure! They work great togeth
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Similarly, you can compose different asynchronous streams to turn them into actions before feeding them to `store.dispatch()`.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Similarly, you can compose different asynchronous streams to turn them into actions before feeding them to `store.dispatch()`.
 
 The question is: do you really need Redux if you already use Rx? Maybe not. It's not hard to [re-implement Redux in Rx](../../../github.com/jas-chen/rx-redux.html). Some say it's a two-liner using Rx `.scan()` method. It may very well be!
 
 If you're in doubt, check out the Redux source code (there isn't much going on there), as well as its ecosystem (for example, [the developer tools](../../../github.com/reduxjs/redux-devtools.html)). If you don't care too much about it and want to go with the reactive data flow all the way, you might want to explore something like [Cycle](../../../cycle.js.org/index.html) instead, or even combine it with Redux. Let us know how it goes!
 
 <a href="../thinking-in-redux/glossary.html" class="pagination-nav__link"></a>
-
-Previous
 
 « Glossary
 
@@ -215,4 +202,4 @@ Middleware »
 - [![Deploys by Netlify](../../../www.netlify.com/img/global/badges/netlify-color-accent.svg)](../../../www.netlify.com/index.html)
 
 <a href="../official/index.html" class="footerLogoLink_MyFc"><img src="../official/../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

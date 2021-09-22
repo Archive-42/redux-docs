@@ -1,13 +1,6 @@
 <a href="https://redux.js.org/" class="navbar__brand"><img src="https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
 
 <a href="https://redux.js.org/introduction/getting-started" class="navbar__item navbar__link">Getting Started</a><a href="https://redux.js.org/tutorials/essentials/part-1-overview-concepts" class="navbar__item navbar__link">Tutorial</a><a href="https://redux.js.org/api/api-reference" class="navbar__item navbar__link">API</a><a href="https://redux.js.org/faq" class="navbar__item navbar__link">FAQ</a><a href="https://redux.js.org/style-guide/style-guide" class="navbar__item navbar__link">Best Practices</a><a href="https://www.github.com/reduxjs/redux" class="navbar__item navbar__link">GitHub</a><a href="https://redux.js.org/introduction/getting-started#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="https://redux.js.org/" class="navbar__brand"><img src="https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
 
 - <a href="https://redux.js.org/introduction/getting-started" class="menu__link">Getting Started</a>
@@ -134,11 +127,7 @@ Example:
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-You can control state key names by using different keys for the reducers in the passed object. For example, you may call `combineReducers({ todos: myTodosReducer, counter: myCounterReducer })` for the state shape to be `{ todos, counter }`.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>You can control state key names by using different keys for the reducers in the passed object. For example, you may call `combineReducers({ todos: myTodosReducer, counter: myCounterReducer })` for the state shape to be `{ todos, counter }`.
 
 A popular convention is to name reducers after the state slices they manage, so you can use ES6 property shorthand notation: `combineReducers({ counter, todos })`. This is equivalent to writing `combineReducers({ counter: counter, todos: todos })`.
 
@@ -180,7 +169,7 @@ While `combineReducers` attempts to check that your reducers conform to some of 
 
 <span class="token plain"> </span><span class="token keyword" style="color: #f92672">case</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'ADD_TODO'</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">concat</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">text</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">concat</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">text</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"></span>
 
@@ -188,11 +177,7 @@ While `combineReducers` attempts to check that your reducers conform to some of 
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-#### <span id="reducerscounterjs" class="anchor enhancedAnchor_2LWZ"></span>`reducers/counter.js`<a href="#reducerscounterjs" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>#### <span id="reducerscounterjs" class="anchor enhancedAnchor_2LWZ"></span>`reducers/counter.js`<a href="#reducerscounterjs" class="hash-link" title="Direct link to heading">#</a>
 
 <span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">counter</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state </span><span class="token parameter operator" style="color: #f8f8f2">=</span><span class="token parameter"> </span><span class="token parameter number" style="color: #ae81ff">0</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
@@ -212,17 +197,13 @@ Copy
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>#### <span id="reducersindexjs" class="anchor enhancedAnchor_2LWZ"></span>`reducers/index.js`<a href="#reducersindexjs" class="hash-link" title="Direct link to heading">#</a>
 
-Copy
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > combineReducers </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
 
-#### <span id="reducersindexjs" class="anchor enhancedAnchor_2LWZ"></span>`reducers/index.js`<a href="#reducersindexjs" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >todos</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./todos'</span><span class="token plain"></span>
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> combineReducers </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
-
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">todos</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./todos'</span><span class="token plain"></span>
-
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">counter</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./counter'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >counter</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./counter'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -232,21 +213,17 @@ Copy
 
 <span class="token plain"> counter</span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>#### <span id="appjs" class="anchor enhancedAnchor_2LWZ"></span>`App.js`<a href="#appjs" class="hash-link" title="Direct link to heading">#</a>
 
-Copy
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
 
-#### <span id="appjs" class="anchor enhancedAnchor_2LWZ"></span>`App.js`<a href="#appjs" class="hash-link" title="Direct link to heading">#</a>
-
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
-
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">reducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./reducers/index'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >reducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./reducers/index'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
 <span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> store </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createStore</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">reducer</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// {</span><span class="token plain"></span>
 
@@ -258,7 +235,7 @@ Copy
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
 <span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'ADD_TODO'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
 
@@ -266,7 +243,7 @@ Copy
 
 <span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// {</span><span class="token plain"></span>
 
@@ -274,19 +251,13 @@ Copy
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// todos: \[ 'Use Redux' \]</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// }</span>
-
-Copy
-
-#### <span id="tips" class="anchor enhancedAnchor_2LWZ"></span>Tips<a href="#tips" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// }</span>#### <span id="tips" class="anchor enhancedAnchor_2LWZ"></span>Tips<a href="#tips" class="hash-link" title="Direct link to heading">#</a>
 
 - This helper is just a convenience! You can write your own `combineReducers` that [works differently](https://github.com/acdlite/reduce-reducers), or even assemble the state object from the child reducers manually and write a root reducing function explicitly, like you would write any other function.
 
 - You may call `combineReducers` at any level of the reducer hierarchy. It doesn't have to happen at the top. In fact you may use it again to split the child reducers that get too complicated into independent grandchildren, and so on.
 
 <a href="https://redux.js.org/api/store" class="pagination-nav__link"></a>
-
-Previous
 
 « Store
 
@@ -316,4 +287,4 @@ applyMiddleware »
 
 <a href="https://redux.js.org/" class="footerLogoLink_MyFc"><img src="https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" /><img src="https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
 
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

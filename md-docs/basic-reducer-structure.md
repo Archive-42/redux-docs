@@ -1,13 +1,6 @@
 <a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 <a href="../official/introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="../official/tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../official/api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../official/faq.html" class="navbar__item navbar__link">FAQ</a><a href="../official/style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/../github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../official/introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 - <a href="../official/introduction/getting-started.html" class="menu__link">Getting Started</a>
@@ -46,23 +39,7 @@
     - <a href="../official/tutorials/fundamentals/part-7-standard-patterns.html" class="menu__link">Standard Redux Patterns</a>
     - <a href="../official/tutorials/fundamentals/part-8-modern-redux.html" class="menu__link">Modern Redux with Redux Toolkit</a>
 - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Recipes</a>
-  - <a href="../recipe-index.html" class="menu__link">Recipes: Index</a>
-  - <a href="../configuring-your-store.html" class="menu__link">Configuring Your Store</a>
-  - <a href="../usage-with-typescript.html" class="menu__link">Usage With TypeScript</a>
-  - <a href="../migrating-to-redux.html" class="menu__link">Migrating to Redux</a>
-  - <a href="../using-object-spread-operator.html" class="menu__link">Using Object Spread Operator</a>
-  - <a href="../reducing-boilerplate.html" class="menu__link">Reducing Boilerplate</a>
-  - <a href="../server-rendering.html" class="menu__link">Server Rendering</a>
-  - <a href="../writing-tests.html" class="menu__link">Writing Tests</a>
-  - <a href="../computing-derived-data.html" class="menu__link">Computing Derived Data</a>
-  - <a href="../implementing-undo-history.html" class="menu__link">Implementing Undo History</a>
-  - <a href="../isolating-redux-sub-apps.html" class="menu__link">Isolating Redux Sub-Apps</a>
-  - <a href="../code-splitting.html" class="menu__link">Code Splitting</a>
-  - <a href="../troubleshooting.html" class="menu__link">Troubleshooting</a>
-  - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Structuring Reducers</a>
-    - <a href="structuring-reducers.html" class="menu__link">Structuring Reducers</a>
-    - <a href="prerequisite-concepts.html" class="menu__link">Prerequisite Concepts</a>
-    - <a href="basic-reducer-structure.html" class="menu__link menu__link--active active">Basic Reducer Structure</a>
+  - <a href="basic-reducer-structure.html" class="menu__link menu__link--active active">Basic Reducer Structure</a>
     - <a href="splitting-reducer-logic.html" class="menu__link">Splitting Reducer Logic</a>
     - <a href="refactoring-reducer-example.html" class="menu__link">Refactoring Reducers Example</a>
     - <a href="using-combinereducers.html" class="menu__link">Using combineReducers</a>
@@ -143,11 +120,7 @@ The simplest possible approach to writing reducer logic is to put everything int
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Notice that this simple function fulfills all the basic requirements. It returns a default value if none exists, initializing the store; it determines what sort of update needs to be done based on the type of the action, and returns new values; and it returns the previous state if no work needs to be done.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Notice that this simple function fulfills all the basic requirements. It returns a default value if none exists, initializing the store; it determines what sort of update needs to be done based on the type of the action, and returns new values; and it returns the previous state if no work needs to be done.
 
 There are some simple tweaks that can be made to this reducer. First, repeated `if`/`else` statements quickly grow tiresome, so it's very common to use `switch` statements instead. Second, we can use ES6's default parameter values to handle the initial "no existing data" case. With those changes, the reducer would look like:
 
@@ -169,11 +142,7 @@ There are some simple tweaks that can be made to this reducer. First, repeated `
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-This is the basic structure that a typical Redux reducer function uses.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>This is the basic structure that a typical Redux reducer function uses.
 
 ## <span id="basic-state-shape" class="anchor enhancedAnchor_2LWZ"></span>Basic State Shape<a href="#basic-state-shape" class="hash-link" title="Direct link to heading">#</a>
 
@@ -205,11 +174,7 @@ A Redux state usually has a plain Javascript object as the top of the state tree
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-In this example, `todos` and `visibilityFilter` are both top-level keys in the state, and each represents a "slice" of data for some particular concept.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>In this example, `todos` and `visibilityFilter` are both top-level keys in the state, and each represents a "slice" of data for some particular concept.
 
 Most applications deal with multiple types of data, which can be broadly divided into three categories:
 
@@ -241,13 +206,7 @@ A typical app's state shape might look roughly like:
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-<a href="prerequisite-concepts.html" class="pagination-nav__link"></a>
-
-Previous
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><a href="prerequisite-concepts.html" class="pagination-nav__link"></a>
 
 « Prerequisite Concepts
 
@@ -279,4 +238,4 @@ Splitting Reducer Logic »
 - [![Deploys by Netlify](../../../www.netlify.com/img/global/badges/netlify-color-accent.svg)](../../../www.netlify.com/index.html)
 
 <a href="../official/index.html" class="footerLogoLink_MyFc"><img src="../official/../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

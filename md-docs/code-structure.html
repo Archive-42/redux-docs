@@ -37,36 +37,36 @@
 <li>“Feature folders” / “Domain”-style : separate folders per feature or domain, possibly with sub-folders per file type</li>
 <li>“Ducks/Slices”: similar to domain style, but explicitly tying together actions and reducers, often by defining them in the same file</li>
 </ul>
-<p>It’s generally suggested that selectors are defined alongside reducers and exported, and then reused elsewhere (such as in <code class="language-js >mapStateToProps</code> functions, in async action creators, or sagas) to colocate all the code that knows about the actual shape of the state tree in the reducer files.</p>
+<p>It’s generally suggested that selectors are defined alongside reducers and exported, and then reused elsewhere (such as in <code class="language-js" >mapStateToProps</code> functions, in async action creators, or sagas) to colocate all the code that knows about the actual shape of the state tree in the reducer files.</p>
 <h5 id="tip"><span class="admonition-icon"> </span>tip</h5>
 <p><strong>We specifically recommend organizing your logic into “feature folders”, with all the Redux logic for a given feature in a single “slice/ducks” file"</strong>.</p>
 <p>See this section for an example:</p>
 <h4 id="detailed-explanation-example-folder-structure">Detailed Explanation: Example Folder Structure</h4>
 <p>An example folder structure might look something like:</p>
 <ul>
-<li><code class="language-js >/src</code>
+<li><code class="language-js" >/src</code>
 <ul>
-<li><code class="language-js >index.tsx</code>: Entry point file that renders the React component tree</li>
-<li><code class="language-js >/app</code>
+<li><code class="language-js" >index.tsx</code>: Entry point file that renders the React component tree</li>
+<li><code class="language-js" >/app</code>
 <ul>
-<li><code class="language-js >store.ts</code>: store setup</li>
-<li><code class="language-js >rootReducer.ts</code>: root reducer (optional)</li>
-<li><code class="language-js >App.tsx</code>: root React component</li>
+<li><code class="language-js" >store.ts</code>: store setup</li>
+<li><code class="language-js" >rootReducer.ts</code>: root reducer (optional)</li>
+<li><code class="language-js" >App.tsx</code>: root React component</li>
 </ul></li>
-<li><code class="language-js >/common</code>: hooks, generic components, utils, etc</li>
-<li><code class="language-js >/features</code>: contains all “feature folders”
+<li><code class="language-js" >/common</code>: hooks, generic components, utils, etc</li>
+<li><code class="language-js" >/features</code>: contains all “feature folders”
 <ul>
-<li><code class="language-js >/todos</code>: a single feature folder
+<li><code class="language-js" >/todos</code>: a single feature folder
 <ul>
-<li><code class="language-js >todosSlice.ts</code>: Redux reducer logic and associated actions</li>
-<li><code class="language-js >Todos.tsx</code>: a React component</li>
+<li><code class="language-js" >todosSlice.ts</code>: Redux reducer logic and associated actions</li>
+<li><code class="language-js" >Todos.tsx</code>: a React component</li>
 </ul></li>
 </ul></li>
 </ul></li>
 </ul>
-<p><code class="language-js >/app</code> contains app-wide setup and layout that depends on all the other folders.</p>
-<p><code class="language-js >/common</code> contains truly generic and reusable utilities and components.</p>
-<p><code class="language-js >/features</code> has folders that contain all functionality related to a specific feature. In this example, <code class="language-js >todosSlice.ts</code> is a “duck”-style file that contains a call to RTK’s <code class="language-js >createSlice()</code> function, and exports the slice reducer and action creators.</p>
+<p><code class="language-js" >/app</code> contains app-wide setup and layout that depends on all the other folders.</p>
+<p><code class="language-js" >/common</code> contains truly generic and reusable utilities and components.</p>
+<p><code class="language-js" >/features</code> has folders that contain all functionality related to a specific feature. In this example, <code class="language-js" >todosSlice.ts</code> is a “duck”-style file that contains a call to RTK’s <code class="language-js" >createSlice()</code> function, and exports the slice reducer and action creators.</p>
 <p>While it ultimately doesn’t matter how you lay out your code on disk, it’s important to remember that actions and reducers should not be considered in isolation. It’s entirely possible (and encouraged) for a reducer defined in one folder to respond to an action defined in another folder.</p>
 <h4 id="further-information"><span id="further-information" class="anchor enhancedAnchor_2LWZ"></span>Further information<a href="#further-information" class="hash-link" title="Direct link to heading">#</a></h4>
 <p><strong>Documentation</strong></p>
@@ -98,8 +98,8 @@
 <li><a href="../../twitter.com/dan_abramov/status/783428282666614784.html">Twitter: There is no ultimate file structure for Redux</a></li>
 </ul>
 <h2 id="how-should-i-split-my-logic-between-reducers-and-action-creators-where-should-my-business-logic-go"><span id="how-should-i-split-my-logic-between-reducers-and-action-creators-where-should-my-business-logic-go" class="anchor enhancedAnchor_2LWZ"></span>How should I split my logic between reducers and action creators? Where should my “business logic” go?<a href="#how-should-i-split-my-logic-between-reducers-and-action-creators-where-should-my-business-logic-go" class="hash-link" title="Direct link to heading">#</a></h2>
-<p>There’s no single clear answer to exactly what pieces of logic should go in a reducer or an action creator. Some developers prefer to have “fat” action creators, with “thin” reducers that simply take the data in an action and blindly merge it into the corresponding state. Others try to emphasize keeping actions as small as possible, and minimize the usage of <code class="language-js >getState()</code> in an action creator. (For purposes of this question, other async approaches such as sagas and observables fall in the “action creator” category.)</p>
-<p>There are several potential benefits from putting more logic into your reducers. It’s likely that the action types would be more semantic and more meaningful (such as <code class="language-js >"USER_UPDATED"</code> instead of <code class="language-js >"SET_STATE"</code>). In addition, having more logic in reducers means that more functionality will be affected by time travel debugging.</p>
+<p>There’s no single clear answer to exactly what pieces of logic should go in a reducer or an action creator. Some developers prefer to have “fat” action creators, with “thin” reducers that simply take the data in an action and blindly merge it into the corresponding state. Others try to emphasize keeping actions as small as possible, and minimize the usage of <code class="language-js" >getState()</code> in an action creator. (For purposes of this question, other async approaches such as sagas and observables fall in the “action creator” category.)</p>
+<p>There are several potential benefits from putting more logic into your reducers. It’s likely that the action types would be more semantic and more meaningful (such as <code class="language-js" >"USER_UPDATED"</code> instead of <code class="language-js" >"SET_STATE"</code>). In addition, having more logic in reducers means that more functionality will be affected by time travel debugging.</p>
 <p>This comment sums up the dichotomy nicely:</p>
 <blockquote>
 <p>Now, the problem is what to put in the action creator and what in the reducer, the choice between fat and thin action objects. If you put all the logic in the action creator, you end up with fat action objects that basically declare the updates to the state. Reducers become pure, dumb, add-this, remove that, update these functions. They will be easy to compose. But not much of your business logic will be there. If you put more logic in the reducer, you end up with nice, thin action objects, most of your data logic in one place, but your reducers are harder to compose since you might need info from other branches. You end up with large reducers or reducers that take additional arguments from higher up in the state.</p>
@@ -129,7 +129,7 @@
 <li><a href="../../twitter.com/FwardPhoenix/status/952971237004926977.html">Twitter: Moving away from unclear terminology…</a></li>
 </ul>
 <h2 id="why-should-i-use-action-creators"><span id="why-should-i-use-action-creators" class="anchor enhancedAnchor_2LWZ"></span>Why should I use action creators?<a href="#why-should-i-use-action-creators" class="hash-link" title="Direct link to heading">#</a></h2>
-<p>Redux does not require action creators. You are free to create actions in any way that is best for you, including simply passing an object literal to <code class="language-js >dispatch</code>. Action creators emerged from the <a href="../../reactjs.org/blog/2014/07/30/flux-actions-and-the-dispatcher.html#actions-and-actioncreators">Flux architecture</a> and have been adopted by the Redux community because they offer several benefits.</p>
+<p>Redux does not require action creators. You are free to create actions in any way that is best for you, including simply passing an object literal to <code class="language-js" >dispatch</code>. Action creators emerged from the <a href="../../reactjs.org/blog/2014/07/30/flux-actions-and-the-dispatcher.html#actions-and-actioncreators">Flux architecture</a> and have been adopted by the Redux community because they offer several benefits.</p>
 <p>Action creators are more maintainable. Updates to an action can be made in one place and applied everywhere. All instances of an action are guaranteed to have the same shape and the same default values.</p>
 <p>Action creators are testable. The correctness of an inline action must be verified manually. Like any function, tests for an action creator can be written once and run automatically.</p>
 <p>Action creators are easier to document. The action creator’s parameters enumerate the action’s dependencies. And centralization of the action definition provides a convenient place for documentation comments. When actions are written inline, this information is harder to capture and communicate.</p>
@@ -158,18 +158,18 @@
 <li><a href="../../github.com/markerikson/redux-ecosystem-links/blob/master/middleware-sockets-adapters.html">Middleware: Socket and Adapters</a></li>
 </ul>
 <h2 id="how-can-i-use-the-redux-store-in-non-component-files"><span id="how-can-i-use-the-redux-store-in-non-component-files" class="anchor enhancedAnchor_2LWZ"></span>How can I use the Redux store in non-component files?<a href="#how-can-i-use-the-redux-store-in-non-component-files" class="hash-link" title="Direct link to heading">#</a></h2>
-<p>There should only be a single Redux store per application. This makes it effectively a singleton in terms of the app architecture. When used with React, the store is injected into the components at runtime by rendering a <code class="language-js >&lt;Provider store={store}&gt;</code> around the root <code class="language-js >&lt;App&gt;</code> component, so only the application setup logic needs to import the store directly.</p>
+<p>There should only be a single Redux store per application. This makes it effectively a singleton in terms of the app architecture. When used with React, the store is injected into the components at runtime by rendering a <code class="language-js" >&lt;Provider store={store}&gt;</code> around the root <code class="language-js" >&lt;App&gt;</code> component, so only the application setup logic needs to import the store directly.</p>
 <p>However, there may be times when other parts of the codebase need to interact with the store as well.</p>
 <p><strong>You should avoid importing the store directly into other codebase files</strong>. While it may work in some cases, that often ends up causing circular import dependency errors.</p>
 <p>Some possible solutions are:</p>
 <ul>
 <li>Write your store-dependent logic as a thunk, and then dispatch that thunk from a component</li>
-<li>Pass along references to <code class="language-js >dispatch</code> from components as arguments the relevant functions</li>
+<li>Pass along references to <code class="language-js" >dispatch</code> from components as arguments the relevant functions</li>
 <li>Write the logic as middleware and add them to the store at setup time</li>
 <li>Inject the store instance into the relevant files as the app is being created.</li>
 </ul>
-<p>One common use case is reading API authorization information such as a token from the Redux state, inside of an Axios interceptor. The interceptor file needs to reference <code class="language-js >store.getState()</code>, but also needs to be imported into API layer files, and this leads to circular imports.</p>
-<p>You can expose an <code class="language-js >injectStore</code> function from the interceptor file instead:</p>
+<p>One common use case is reading API authorization information such as a token from the Redux state, inside of an Axios interceptor. The interceptor file needs to reference <code class="language-js" >store.getState()</code>, but also needs to be imported into API layer files, and this leads to circular imports.</p>
+<p>You can expose an <code class="language-js" >injectStore</code> function from the interceptor file instead:</p>
 <p>common/api.js</p>
 <p><span class="token keyword" style="color: #f92672">let</span><span class="token plain"> store</span></p>
 <p><span class="token plain" style="display: inline-block"> </span></p>

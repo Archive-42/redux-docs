@@ -103,10 +103,17 @@
       as="script"
     />
     <link rel="preload" href="../../assets/js/main.8520a084.js" as="script" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css"
+    />
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
-    </head>
+    <script
+      async
+      defer
+      src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"
+    ></script>
+  </head>
   <body>
     <script>
       !(function () {
@@ -1128,13 +1135,13 @@
                           of events that can happen as a user interacts with our
                           app. We also wrote <strong>reducer</strong> functions
                           that can handle updating our
-                          <code class="language-js >state.todos</code> and
-                          <code class="language-js >state.filters</code> sections, and saw how we
-                          can use the Redux
-                          <code class="language-js >combineReducers</code> function to create a
-                          &quot;root reducer&quot; based on the different
-                          &quot;slice reducers&quot; for each feature in our
-                          app.
+                          <code class="language-js">state.todos</code> and
+                          <code class="language-js">state.filters</code>
+                          sections, and saw how we can use the Redux
+                          <code class="language-js">combineReducers</code>
+                          function to create a &quot;root reducer&quot; based on
+                          the different &quot;slice reducers&quot; for each
+                          feature in our app.
                         </p>
                         <p>
                           Now, it&#x27;s time to pull those pieces together,
@@ -1165,26 +1172,35 @@
                           <li>
                             Allows access to the current state via
                             <a href="../../api/store.html#getState"
-                              ><code class="language-js >store.getState()</code></a
+                              ><code class="language-js"
+                                >store.getState()</code
+                              ></a
                             >;
                           </li>
                           <li>
                             Allows state to be updated via
                             <a href="../../api/store.html#dispatch"
-                              ><code class="language-js >store.dispatch(action)</code></a
+                              ><code class="language-js"
+                                >store.dispatch(action)</code
+                              ></a
                             >;
                           </li>
                           <li>
                             Registers listener callbacks via
                             <a href="../../api/store.html#subscribe"
-                              ><code class="language-js >store.subscribe(listener)</code></a
+                              ><code class="language-js"
+                                >store.subscribe(listener)</code
+                              ></a
                             >;
                           </li>
                           <li>
                             Handles unregistering of listeners via the
-                            <code class="language-js >unsubscribe</code> function returned by
+                            <code class="language-js">unsubscribe</code>
+                            function returned by
                             <a href="../../api/store.html#subscribe"
-                              ><code class="language-js >store.subscribe(listener)</code></a
+                              ><code class="language-js"
+                                >store.subscribe(listener)</code
+                              ></a
                             >.
                           </li>
                         </ul>
@@ -1224,22 +1240,27 @@
                           <a
                             href="part-3-state-actions-reducers.html#combinereducers"
                             >created a root reducer function using
-                            <code class="language-js >combineReducers</code></a
+                            <code class="language-js">combineReducers</code></a
                           >. That root reducer is currently defined in
-                          <code class="language-js >src/reducer.js</code> in our example app.
-                          Let&#x27;s import that root reducer and create our
-                          first store.
+                          <code class="language-js">src/reducer.js</code> in our
+                          example app. Let&#x27;s import that root reducer and
+                          create our first store.
                         </p>
                         <p>
                           The Redux core library has
                           <a href="../../api/createstore.html"
-                            ><strong>a <code class="language-js >createStore</code> API</strong></a
+                            ><strong
+                              >a
+                              <code class="language-js">createStore</code>
+                              API</strong
+                            ></a
                           >
                           that will create the store. Add a new file called
-                          <code class="language-js >store.js</code>, and import
-                          <code class="language-js >createStore</code> and the root reducer. Then,
-                          call <code class="language-js >createStore</code> and pass in the root
-                          reducer:
+                          <code class="language-js">store.js</code>, and import
+                          <code class="language-js">createStore</code> and the
+                          root reducer. Then, call
+                          <code class="language-js">createStore</code> and pass
+                          in the root reducer:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -1400,13 +1421,15 @@
                           >
                         </h3>
                         <p>
-                          <code class="language-js >createStore</code> can also accept a
-                          <code class="language-js >preloadedState</code> value as its second
-                          argument. You could use this to add initial data when
-                          the store is created, such as values that were
-                          included in an HTML page sent from the server, or
-                          persisted in <code class="language-js >localStorage</code> and read back
-                          when the user visits the page again, like this:
+                          <code class="language-js">createStore</code> can also
+                          accept a
+                          <code class="language-js">preloadedState</code> value
+                          as its second argument. You could use this to add
+                          initial data when the store is created, such as values
+                          that were included in an HTML page sent from the
+                          server, or persisted in
+                          <code class="language-js">localStorage</code> and read
+                          back when the user visits the page again, like this:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -1790,11 +1813,13 @@
                           <div class="admonition-content">
                             <p>
                               Before you run this code, try going back to
-                              <code class="language-js >src/features/todos/todosSlice.js</code>, and
-                              remove all the example todo objects from the
-                              <code class="language-js >initialState</code> so that it&#x27;s an
-                              empty array. That will make the output from this
-                              example a bit easier to read.
+                              <code class="language-js"
+                                >src/features/todos/todosSlice.js</code
+                              >, and remove all the example todo objects from
+                              the
+                              <code class="language-js">initialState</code> so
+                              that it&#x27;s an empty array. That will make the
+                              output from this example a bit easier to read.
                             </p>
                           </div>
                         </div>
@@ -2736,17 +2761,22 @@
                         </div>
                         <p>
                           Remember, every time we call
-                          <code class="language-js >store.dispatch(action)</code>:
+                          <code class="language-js">store.dispatch(action)</code
+                          >:
                         </p>
                         <ul>
                           <li>
                             The store calls
-                            <code class="language-js >rootReducer(state, action)</code>
+                            <code class="language-js"
+                              >rootReducer(state, action)</code
+                            >
                             <ul>
                               <li>
                                 That root reducer may call other slice reducers
                                 inside of itself, like
-                                <code class="language-js >todosReducer(state.todos, action)</code>
+                                <code class="language-js"
+                                  >todosReducer(state.todos, action)</code
+                                >
                               </li>
                             </ul>
                           </li>
@@ -2758,8 +2788,10 @@
                             callbacks
                           </li>
                           <li>
-                            If a listener has access to the <code class="language-js >store</code>,
-                            it can now call <code class="language-js >store.getState()</code> to
+                            If a listener has access to the
+                            <code class="language-js">store</code>, it can now
+                            call
+                            <code class="language-js">store.getState()</code> to
                             read the latest state value
                           </li>
                         </ul>
@@ -2778,8 +2810,8 @@
                           Notice that our app did <em>not</em> log anything from
                           the last action. That&#x27;s because we removed the
                           listener callback when we called
-                          <code class="language-js >unsubscribe()</code>, so nothing else ran after
-                          the action was dispatched.
+                          <code class="language-js">unsubscribe()</code>, so
+                          nothing else ran after the action was dispatched.
                         </p>
                         <p>
                           We specified the behavior of our app before we even
@@ -2813,9 +2845,11 @@
                                 href="../../understanding/thinking-in-redux/three-principles.html#changes-are-made-with-pure-functions"
                                 >pure functions</a
                               >, it should be straightforward to test them. Call
-                              them with an example <code class="language-js >state</code> and
-                              <code class="language-js >action</code>, take the result, and check to
-                              see if it matches what you expect:
+                              them with an example
+                              <code class="language-js">state</code> and
+                              <code class="language-js">action</code>, take the
+                              result, and check to see if it matches what you
+                              expect:
                             </p>
                             <div class="codeBlockContainer_K1bP">
                               <div
@@ -3735,9 +3769,9 @@
                         <p>
                           This small version of a Redux store works well enough
                           that you could use it to replace the actual Redux
-                          <code class="language-js >createStore</code> function you&#x27;ve been
-                          using in your app so far. (Try it and see for
-                          yourself!)
+                          <code class="language-js">createStore</code> function
+                          you&#x27;ve been using in your app so far. (Try it and
+                          see for yourself!)
                           <a
                             href="../../../github.com/reduxjs/redux/blob/v4.0.5/src/createStore.html"
                             target="_blank"
@@ -3752,21 +3786,23 @@
                         </p>
                         <ul>
                           <li>
-                            The store has the current <code class="language-js >state</code> value
-                            and <code class="language-js >reducer</code> function inside of itself
+                            The store has the current
+                            <code class="language-js">state</code> value and
+                            <code class="language-js">reducer</code> function
+                            inside of itself
                           </li>
                           <li>
-                            <code class="language-js >getState</code> returns the current state
-                            value
+                            <code class="language-js">getState</code> returns
+                            the current state value
                           </li>
                           <li>
-                            <code class="language-js >subscribe</code> keeps an array of listener
-                            callbacks and returns a function to remove the new
-                            callback
+                            <code class="language-js">subscribe</code> keeps an
+                            array of listener callbacks and returns a function
+                            to remove the new callback
                           </li>
                           <li>
-                            <code class="language-js >dispatch</code> calls the reducer, saves the
-                            state, and runs the listeners
+                            <code class="language-js">dispatch</code> calls the
+                            reducer, saves the state, and runs the listeners
                           </li>
                           <li>
                             The store dispatches one action on startup to
@@ -3774,13 +3810,18 @@
                           </li>
                           <li>
                             The store API is an object with
-                            <code class="language-js >{dispatch, subscribe, getState}</code> inside
+                            <code class="language-js"
+                              >{dispatch, subscribe, getState}</code
+                            >
+                            inside
                           </li>
                         </ul>
                         <p>
                           To emphasize one of those in particular: notice that
-                          <code class="language-js >getState</code> just returns whatever the
-                          current <code class="language-js >state</code> value is. That means that
+                          <code class="language-js">getState</code> just returns
+                          whatever the current
+                          <code class="language-js">state</code> value is. That
+                          means that
                           <strong
                             >by default, nothing prevents you from accidentally
                             mutating the current state value!</strong
@@ -3890,10 +3931,11 @@
                         <ul>
                           <li>
                             The Redux store doesn&#x27;t make an extra copy of
-                            the <code class="language-js >state</code> value when you call
-                            <code class="language-js >getState()</code>. It&#x27;s exactly the same
-                            reference that was returned from the root reducer
-                            function
+                            the <code class="language-js">state</code> value
+                            when you call
+                            <code class="language-js">getState()</code>.
+                            It&#x27;s exactly the same reference that was
+                            returned from the root reducer function
                           </li>
                           <li>
                             The Redux store doesn&#x27;t do anything else to
@@ -3911,12 +3953,14 @@
                             target="_blank"
                             rel="noopener noreferrer"
                             ><strong
-                              >Calling <code class="language-js >array.sort()</code> actually
-                              mutates the existing array</strong
+                              >Calling
+                              <code class="language-js">array.sort()</code>
+                              actually mutates the existing array</strong
                             ></a
                           >. If we called
-                          <code class="language-js >const sortedTodos = state.todos.sort()</code>,
-                          we&#x27;d end up mutating the real store state
+                          <code class="language-js"
+                            >const sortedTodos = state.todos.sort()</code
+                          >, we&#x27;d end up mutating the real store state
                           unintentionally.
                         </p>
                         <div
@@ -3965,24 +4009,27 @@
                         </h2>
                         <p>
                           We&#x27;ve already seen that we can pass
-                          <code class="language-js >rootReducer</code> and
-                          <code class="language-js >preloadedState</code> arguments to
-                          <code class="language-js >createStore</code>. However,
-                          <code class="language-js >createStore</code> can also take one more
-                          argument, which is used to customize the store&#x27;s
-                          abilities and give it new powers.
+                          <code class="language-js">rootReducer</code> and
+                          <code class="language-js">preloadedState</code>
+                          arguments to
+                          <code class="language-js">createStore</code>. However,
+                          <code class="language-js">createStore</code> can also
+                          take one more argument, which is used to customize the
+                          store&#x27;s abilities and give it new powers.
                         </p>
                         <p>
                           Redux stores are customized using something called a
                           <strong>store enhancer</strong>. A store enhancer is
                           like a special version of
-                          <code class="language-js >createStore</code> that adds another layer
-                          wrapping around the original Redux store. An enhanced
-                          store can then change how the store behaves, by
-                          supplying its own versions of the store&#x27;s
-                          <code class="language-js >dispatch</code>, <code class="language-js >getState</code>, and
-                          <code class="language-js >subscribe</code> functions instead of the
-                          originals.
+                          <code class="language-js">createStore</code> that adds
+                          another layer wrapping around the original Redux
+                          store. An enhanced store can then change how the store
+                          behaves, by supplying its own versions of the
+                          store&#x27;s
+                          <code class="language-js">dispatch</code>,
+                          <code class="language-js">getState</code>, and
+                          <code class="language-js">subscribe</code> functions
+                          instead of the originals.
                         </p>
                         <p>
                           For this tutorial, we won&#x27;t go into details about
@@ -4006,25 +4053,31 @@
                         <p>
                           Our project has two small example store enhancers
                           available, in the
-                          <code class="language-js >src/exampleAddons/enhancers.js</code> file:
+                          <code class="language-js"
+                            >src/exampleAddons/enhancers.js</code
+                          >
+                          file:
                         </p>
                         <ul>
                           <li>
-                            <code class="language-js >sayHiOnDispatch</code>: an enhancer that
-                            always logs <code class="language-js >&#x27;Hi&#x27;!</code> to the
-                            console every time an action is dispatched
+                            <code class="language-js">sayHiOnDispatch</code>: an
+                            enhancer that always logs
+                            <code class="language-js">&#x27;Hi&#x27;!</code> to
+                            the console every time an action is dispatched
                           </li>
                           <li>
-                            <code class="language-js >includeMeaningOfLife</code>: an enhancer that
-                            always adds the field
-                            <code class="language-js >meaningOfLife: 42</code> to the value returned
-                            from <code class="language-js >getState()</code>
+                            <code class="language-js">includeMeaningOfLife</code
+                            >: an enhancer that always adds the field
+                            <code class="language-js">meaningOfLife: 42</code>
+                            to the value returned from
+                            <code class="language-js">getState()</code>
                           </li>
                         </ul>
                         <p>
                           Let&#x27;s start by using
-                          <code class="language-js >sayHiOnDispatch</code>. First, we&#x27;ll import
-                          it, and pass it to <code class="language-js >createStore</code>:
+                          <code class="language-js">sayHiOnDispatch</code>.
+                          First, we&#x27;ll import it, and pass it to
+                          <code class="language-js">createStore</code>:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -4209,8 +4262,10 @@
                           </div>
                         </div>
                         <p>
-                          We don&#x27;t have a <code class="language-js >preloadedState</code> value
-                          here, so we&#x27;ll pass <code class="language-js >undefined</code> as the
+                          We don&#x27;t have a
+                          <code class="language-js">preloadedState</code> value
+                          here, so we&#x27;ll pass
+                          <code class="language-js">undefined</code> as the
                           second argument instead.
                         </p>
                         <p>Next, let&#x27;s try dispatching an action:</p>
@@ -4416,8 +4471,8 @@
                         </div>
                         <p>
                           Now look at the console. You should see
-                          <code class="language-js >&#x27;Hi!&#x27;</code> logged there, in between
-                          the other two log statements:
+                          <code class="language-js">&#x27;Hi!&#x27;</code>
+                          logged there, in between the other two log statements:
                         </p>
                         <p>
                           <img
@@ -4426,37 +4481,47 @@
                           />
                         </p>
                         <p>
-                          The <code class="language-js >sayHiOnDispatch</code> enhancer wrapped the
-                          original <code class="language-js >store.dispatch</code> function with its
-                          own specialized version of <code class="language-js >dispatch</code>. When
-                          we called <code class="language-js >store.dispatch()</code>, we were
-                          actually calling the wrapper function from
-                          <code class="language-js >sayHiOnDispatch</code>, which called the
-                          original and then printed &#x27;Hi&#x27;.
+                          The
+                          <code class="language-js">sayHiOnDispatch</code>
+                          enhancer wrapped the original
+                          <code class="language-js">store.dispatch</code>
+                          function with its own specialized version of
+                          <code class="language-js">dispatch</code>. When we
+                          called
+                          <code class="language-js">store.dispatch()</code>, we
+                          were actually calling the wrapper function from
+                          <code class="language-js">sayHiOnDispatch</code>,
+                          which called the original and then printed
+                          &#x27;Hi&#x27;.
                         </p>
                         <p>
                           Now, let&#x27;s try adding a second enhancer. We can
-                          import <code class="language-js >includeMeaningOfLife</code> from that
-                          same file... but we have a problem.
+                          import
+                          <code class="language-js">includeMeaningOfLife</code>
+                          from that same file... but we have a problem.
                           <strong
-                            ><code class="language-js >createStore</code> only accepts one enhancer
-                            as its third argument!</strong
+                            ><code class="language-js">createStore</code> only
+                            accepts one enhancer as its third argument!</strong
                           >
                           How can we pass <em>two</em> enhancers at the same
                           time?
                         </p>
                         <p>
                           What we really need is some way to merge both the
-                          <code class="language-js >sayHiOnDispatch</code> enhancer and the
-                          <code class="language-js >includeMeaningOfLife</code> enhancer into a
-                          single combined enhancer, and then pass that instead.
+                          <code class="language-js">sayHiOnDispatch</code>
+                          enhancer and the
+                          <code class="language-js">includeMeaningOfLife</code>
+                          enhancer into a single combined enhancer, and then
+                          pass that instead.
                         </p>
                         <p>
                           Fortunately,
                           <strong
                             >the Redux core includes
                             <a href="../../api/compose.html"
-                              >a <code class="language-js >compose</code> function</a
+                              >a
+                              <code class="language-js">compose</code>
+                              function</a
                             >
                             that can be used to merge multiple enhancers
                             together</strong
@@ -4937,10 +5002,12 @@
                         <p>
                           So, we can see that both enhancers are modifying the
                           behavior of the store at the same time.
-                          <code class="language-js >sayHiOnDispatch</code> has changed how
-                          <code class="language-js >dispatch</code> works, and
-                          <code class="language-js >includeMeaningOfLife</code> has changed how
-                          <code class="language-js >getState</code> works.
+                          <code class="language-js">sayHiOnDispatch</code> has
+                          changed how
+                          <code class="language-js">dispatch</code> works, and
+                          <code class="language-js">includeMeaningOfLife</code>
+                          has changed how
+                          <code class="language-js">getState</code> works.
                         </p>
                         <p>
                           Store enhancers are a very powerful way to modify the
@@ -4969,9 +5036,10 @@
                           <div class="admonition-content">
                             <p>
                               If you don&#x27;t have any
-                              <code class="language-js >preloadedState</code> to pass in, you can
-                              pass the <code class="language-js >enhancer</code> as the second
-                              argument instead:
+                              <code class="language-js">preloadedState</code> to
+                              pass in, you can pass the
+                              <code class="language-js">enhancer</code> as the
+                              second argument instead:
                             </p>
                             <div class="codeBlockContainer_K1bP">
                               <div class="codeBlockContent_hGly js">
@@ -5057,19 +5125,21 @@
                         <p>
                           Enhancers are powerful because they can override or
                           replace any of the store&#x27;s methods:
-                          <code class="language-js >dispatch</code>, <code class="language-js >getState</code>, and
-                          <code class="language-js >subscribe</code>.
+                          <code class="language-js">dispatch</code>,
+                          <code class="language-js">getState</code>, and
+                          <code class="language-js">subscribe</code>.
                         </p>
                         <p>
                           But, much of the time, we only need to customize how
-                          <code class="language-js >dispatch</code> behaves. It would be nice if
-                          there was a way to add some customized behavior when
-                          <code class="language-js >dispatch</code> runs.
+                          <code class="language-js">dispatch</code> behaves. It
+                          would be nice if there was a way to add some
+                          customized behavior when
+                          <code class="language-js">dispatch</code> runs.
                         </p>
                         <p>
                           Redux uses a special kind of addon called
                           <strong>middleware</strong> to let us customize the
-                          <code class="language-js >dispatch</code> function.
+                          <code class="language-js">dispatch</code> function.
                         </p>
                         <p>
                           If you&#x27;ve ever used a library like Express or
@@ -5121,15 +5191,19 @@
                           using store enhancers. Redux middleware are actually
                           implemented on top of a very special store enhancer
                           that comes built in with Redux, called
-                          <strong><code class="language-js >applyMiddleware</code></strong
+                          <strong
+                            ><code class="language-js"
+                              >applyMiddleware</code
+                            ></strong
                           >.
                         </p>
                         <p>
                           Since we already know how to add enhancers to our
                           store, we should be able to do that now. We&#x27;ll
-                          start with <code class="language-js >applyMiddleware</code> by itself, and
-                          we&#x27;ll add three example middleware that have been
-                          included in this project.
+                          start with
+                          <code class="language-js">applyMiddleware</code> by
+                          itself, and we&#x27;ll add three example middleware
+                          that have been included in this project.
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -5533,9 +5607,11 @@
                         <p>
                           <strong
                             >Middleware form a pipeline around the store&#x27;s
-                            <code class="language-js >dispatch</code> method</strong
-                          >. When we call <code class="language-js >store.dispatch(action)</code>,
-                          we&#x27;re <em>actually</em> calling the first
+                            <code class="language-js">dispatch</code>
+                            method</strong
+                          >. When we call
+                          <code class="language-js">store.dispatch(action)</code
+                          >, we&#x27;re <em>actually</em> calling the first
                           middleware in the pipeline. That middleware can then
                           do anything it wants when it sees the action.
                           Typically, a middleware will check to see if the
@@ -5554,19 +5630,33 @@
                         <p>In this case, the action is passed through:</p>
                         <ol>
                           <li>
-                            The <code class="language-js >print1</code> middleware (which we see as
-                            <code class="language-js >store.dispatch</code>)
+                            The
+                            <code class="language-js">print1</code> middleware
+                            (which we see as
+                            <code class="language-js">store.dispatch</code>)
                           </li>
-                          <li>The <code class="language-js >print2</code> middleware</li>
-                          <li>The <code class="language-js >print3</code> middleware</li>
-                          <li>The original <code class="language-js >store.dispatch</code></li>
-                          <li>The root reducer inside <code class="language-js >store</code></li>
+                          <li>
+                            The
+                            <code class="language-js">print2</code> middleware
+                          </li>
+                          <li>
+                            The
+                            <code class="language-js">print3</code> middleware
+                          </li>
+                          <li>
+                            The original
+                            <code class="language-js">store.dispatch</code>
+                          </li>
+                          <li>
+                            The root reducer inside
+                            <code class="language-js">store</code>
+                          </li>
                         </ol>
                         <p>
                           And since these are all function calls, they all
                           <em>return</em> from that call stack. So, the
-                          <code class="language-js >print1</code> middleware is the first to run,
-                          and the last to finish.
+                          <code class="language-js">print1</code> middleware is
+                          the first to run, and the last to finish.
                         </p>
                         <h3>
                           <a
@@ -5594,8 +5684,9 @@
                             nested functions</strong
                           >. Let&#x27;s see what that pattern looks like.
                           We&#x27;ll start by trying to write this middleware
-                          using the <code class="language-js >function</code> keyword, so that
-                          it&#x27;s more clear what&#x27;s happening:
+                          using the
+                          <code class="language-js">function</code> keyword, so
+                          that it&#x27;s more clear what&#x27;s happening:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -5826,36 +5917,46 @@
                         </p>
                         <ul>
                           <li>
-                            <code class="language-js >exampleMiddleware</code>: The outer function
-                            is actually the &quot;middleware&quot; itself. It
-                            will be called by <code class="language-js >applyMiddleware</code>, and
-                            receives a <code class="language-js >storeAPI</code> object containing
-                            the store&#x27;s
-                            <code class="language-js >{dispatch, getState}</code> functions. These
-                            are the same <code class="language-js >dispatch</code> and
-                            <code class="language-js >getState</code> functions that are actually
-                            part of the store. If you call this
-                            <code class="language-js >dispatch</code> function, it will send the
-                            action to the <em>start</em> of the middleware
-                            pipeline. This is only called once.
+                            <code class="language-js">exampleMiddleware</code>:
+                            The outer function is actually the
+                            &quot;middleware&quot; itself. It will be called by
+                            <code class="language-js">applyMiddleware</code>,
+                            and receives a
+                            <code class="language-js">storeAPI</code> object
+                            containing the store&#x27;s
+                            <code class="language-js"
+                              >{dispatch, getState}</code
+                            >
+                            functions. These are the same
+                            <code class="language-js">dispatch</code> and
+                            <code class="language-js">getState</code> functions
+                            that are actually part of the store. If you call
+                            this
+                            <code class="language-js">dispatch</code> function,
+                            it will send the action to the <em>start</em> of the
+                            middleware pipeline. This is only called once.
                           </li>
                           <li>
-                            <code class="language-js >wrapDispatch</code>: The middle function
-                            receives a function called <code class="language-js >next</code> as its
+                            <code class="language-js">wrapDispatch</code>: The
+                            middle function receives a function called
+                            <code class="language-js">next</code> as its
                             argument. This function is actually the
                             <em>next middleware</em> in the pipeline. If this
                             middleware is the last one in the sequence, then
-                            <code class="language-js >next</code> is actually the original
-                            <code class="language-js >store.dispatch</code> function instead.
-                            Calling <code class="language-js >next(action)</code> passes the
-                            middleware to the <em>next</em> middleware in the
-                            pipeline. This is also only called once
+                            <code class="language-js">next</code> is actually
+                            the original
+                            <code class="language-js">store.dispatch</code>
+                            function instead. Calling
+                            <code class="language-js">next(action)</code> passes
+                            the middleware to the <em>next</em> middleware in
+                            the pipeline. This is also only called once
                           </li>
                           <li>
-                            <code class="language-js >handleAction</code>: Finally, the inner
-                            function receives the current <code class="language-js >action</code> as
-                            its argument, and will be called <em>every</em> time
-                            an action is dispatched.
+                            <code class="language-js">handleAction</code>:
+                            Finally, the inner function receives the current
+                            <code class="language-js">action</code> as its
+                            argument, and will be called <em>every</em> time an
+                            action is dispatched.
                           </li>
                         </ul>
                         <div
@@ -5885,11 +5986,20 @@
                             </p>
                             <ul>
                               <li>
-                                Outer: <code class="language-js >someCustomMiddleware</code> (or
-                                whatever your middleware is called)
+                                Outer:
+                                <code class="language-js"
+                                  >someCustomMiddleware</code
+                                >
+                                (or whatever your middleware is called)
                               </li>
-                              <li>Middle: <code class="language-js >wrapDispatch</code></li>
-                              <li>Inner: <code class="language-js >handleAction</code></li>
+                              <li>
+                                Middle:
+                                <code class="language-js">wrapDispatch</code>
+                              </li>
+                              <li>
+                                Inner:
+                                <code class="language-js">handleAction</code>
+                              </li>
                             </ul>
                           </div>
                         </div>
@@ -5897,9 +6007,11 @@
                           Because these are normal functions, we can also write
                           them using ES6 arrow functions. This lets us write
                           them shorter because arrow functions don&#x27;t have
-                          to have a <code class="language-js >return</code> statement, but it can
-                          also be a bit harder to read if you&#x27;re not yet
-                          familiar with arrow functions and implicit returns.
+                          to have a
+                          <code class="language-js">return</code> statement, but
+                          it can also be a bit harder to read if you&#x27;re not
+                          yet familiar with arrow functions and implicit
+                          returns.
                         </p>
                         <p>
                           Here&#x27;s the same example as above, using arrow
@@ -6293,33 +6405,42 @@
                         <ul>
                           <li>
                             The first part of the
-                            <code class="language-js >handleAction</code> function runs, and we
-                            print <code class="language-js >&#x27;dispatching&#x27;</code>
+                            <code class="language-js">handleAction</code>
+                            function runs, and we print
+                            <code class="language-js"
+                              >&#x27;dispatching&#x27;</code
+                            >
                           </li>
                           <li>
-                            We pass the action to the <code class="language-js >next</code> section,
-                            which may be another middleware or the real
-                            <code class="language-js >store.dispatch</code>
+                            We pass the action to the
+                            <code class="language-js">next</code> section, which
+                            may be another middleware or the real
+                            <code class="language-js">store.dispatch</code>
                           </li>
                           <li>
                             Eventually the reducers run and the state is
-                            updated, and the <code class="language-js >next</code> function returns
+                            updated, and the
+                            <code class="language-js">next</code> function
+                            returns
                           </li>
                           <li>
-                            We can now call <code class="language-js >storeAPI.getState()</code> and
-                            see what the new state is
+                            We can now call
+                            <code class="language-js">storeAPI.getState()</code>
+                            and see what the new state is
                           </li>
                           <li>
                             We finish by returning whatever
-                            <code class="language-js >result</code> value came from the
-                            <code class="language-js >next</code> middleware
+                            <code class="language-js">result</code> value came
+                            from the
+                            <code class="language-js">next</code> middleware
                           </li>
                         </ul>
                         <p>
                           Any middleware can return any value, and the return
                           value from the first middleware in the pipeline is
                           actually returned when you call
-                          <code class="language-js >store.dispatch()</code>. For example:
+                          <code class="language-js">store.dispatch()</code>. For
+                          example:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -6914,8 +7035,9 @@
                             with side effects</strong
                           >. In addition,
                           <strong
-                            >middleware can modify <code class="language-js >dispatch</code> to
-                            accept things that are <em>not</em> plain action
+                            >middleware can modify
+                            <code class="language-js">dispatch</code> to accept
+                            things that are <em>not</em> plain action
                             objects</strong
                           >. We&#x27;ll talk more about both of these
                           <a href="part-6-async-logic.html"
@@ -7007,11 +7129,14 @@
                           have some instructions on how to set up the store, but
                           the steps listed are a bit complicated. However,
                           there&#x27;s an NPM package called
-                          <code class="language-js >redux-devtools-extension</code> that takes care
-                          of the complicated part. That package exports a
-                          specialized <code class="language-js >composeWithDevTools</code> function
-                          that we can use instead of the original Redux
-                          <code class="language-js >compose</code> function.
+                          <code class="language-js"
+                            >redux-devtools-extension</code
+                          >
+                          that takes care of the complicated part. That package
+                          exports a specialized
+                          <code class="language-js">composeWithDevTools</code>
+                          function that we can use instead of the original Redux
+                          <code class="language-js">compose</code> function.
                         </p>
                         <p>Here&#x27;s how that looks:</p>
                         <div class="codeBlockContainer_K1bP">
@@ -7307,7 +7432,8 @@
                           </div>
                         </div>
                         <p>
-                          Make sure that <code class="language-js >index.js</code> is still
+                          Make sure that
+                          <code class="language-js">index.js</code> is still
                           dispatching an action after importing the store. Now,
                           open up the Redux DevTools tab in the browser&#x27;s
                           DevTools window. You should see something that looks
@@ -7336,7 +7462,8 @@
                           <li>
                             If enabled, the function stack trace leading back to
                             the line of code that called
-                            <code class="language-js >store.dispatch()</code> in the first place
+                            <code class="language-js">store.dispatch()</code> in
+                            the first place
                           </li>
                         </ul>
                         <p>
@@ -7421,7 +7548,8 @@
                                 <ul>
                                   <li>
                                     Stores are created with the Redux
-                                    <code class="language-js >createStore</code> API
+                                    <code class="language-js">createStore</code>
+                                    API
                                   </li>
                                   <li>
                                     Every store has a single root reducer
@@ -7433,17 +7561,18 @@
                                 <strong>Stores have three main methods</strong>
                                 <ul>
                                   <li>
-                                    <code class="language-js >getState</code> returns the current
+                                    <code class="language-js">getState</code>
+                                    returns the current state
+                                  </li>
+                                  <li>
+                                    <code class="language-js">dispatch</code>
+                                    sends an action to the reducer to update the
                                     state
                                   </li>
                                   <li>
-                                    <code class="language-js >dispatch</code> sends an action to the
-                                    reducer to update the state
-                                  </li>
-                                  <li>
-                                    <code class="language-js >subscribe</code> takes a listener
-                                    callback that runs each time an action is
-                                    dispatched
+                                    <code class="language-js">subscribe</code>
+                                    takes a listener callback that runs each
+                                    time an action is dispatched
                                   </li>
                                 </ul>
                               </li>
@@ -7458,12 +7587,13 @@
                                     its methods
                                   </li>
                                   <li>
-                                    <code class="language-js >createStore</code> accepts one
-                                    enhancer as an argument
+                                    <code class="language-js">createStore</code>
+                                    accepts one enhancer as an argument
                                   </li>
                                   <li>
                                     Multiple enhancers can be merged together
-                                    using the <code class="language-js >compose</code> API
+                                    using the
+                                    <code class="language-js">compose</code> API
                                   </li>
                                 </ul>
                               </li>
@@ -7475,7 +7605,10 @@
                                 <ul>
                                   <li>
                                     Middleware are added using the
-                                    <code class="language-js >applyMiddleware</code> enhancer
+                                    <code class="language-js"
+                                      >applyMiddleware</code
+                                    >
+                                    enhancer
                                   </li>
                                   <li>
                                     Middleware are written as three nested
@@ -7502,7 +7635,10 @@
                                   </li>
                                   <li>
                                     The store needs the DevTools enhancer added,
-                                    using <code class="language-js >composeWithDevTools</code>
+                                    using
+                                    <code class="language-js"
+                                      >composeWithDevTools</code
+                                    >
                                   </li>
                                   <li>
                                     The DevTools show dispatched actions and

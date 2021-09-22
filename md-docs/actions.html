@@ -67,13 +67,7 @@
 </ul></li>
 
 
-
-</ul></li>
-
-<ul>
-
-</ul></li>
-</ul></li>
+</li>
 <li><a href="#!" class="menu__link menu__link--sublist menu__link--active">FAQ</a>
 <ul>
 <li><a href="../faq.html" class="menu__link">FAQ Index</a></li>
@@ -95,12 +89,6 @@
 </ul></li>
 
 
-</ul></li>
-<li><a href="#!" class="menu__link menu__link--sublist">Redux Toolkit</a>
-<ul>
-
-</ul></li>
-</ul>
 <h1 id="redux-faq-actions"><span id="redux-faq-actions" class="anchor enhancedAnchor_2LWZ"></span>Redux FAQ: Actions<a href="#redux-faq-actions" class="hash-link" title="Direct link to heading">#</a></h1>
 <h2 id="table-of-contents"><span id="table-of-contents" class="anchor enhancedAnchor_2LWZ"></span>Table of Contents<a href="#table-of-contents" class="hash-link" title="Direct link to heading">#</a></h2>
 <ul>
@@ -109,7 +97,7 @@
 <li><a href="#table-of-contents">Table of Contents</a></li>
 <li><a href="#actions">Actions</a>
 <ul>
-<li><a href="#why-should-type-be-a-string-or-at-least-serializable-why-should-my-action-types-be-constants">Why should <code class="language-js >type</code> be a string, or at least serializable? Why should my action types be constants?</a>
+<li><a href="#why-should-type-be-a-string-or-at-least-serializable-why-should-my-action-types-be-constants">Why should <code class="language-js" >type</code> be a string, or at least serializable? Why should my action types be constants?</a>
 <ul>
 <li><a href="#further-information">Further information</a></li>
 </ul></li>
@@ -130,10 +118,10 @@
 </ul></li>
 </ul>
 <h2 id="actions"><span id="actions" class="anchor enhancedAnchor_2LWZ"></span>Actions<a href="#actions" class="hash-link" title="Direct link to heading">#</a></h2>
-<h3 id="why-should-type-be-a-string-or-at-least-serializable-why-should-my-action-types-be-constants"><span id="why-should-type-be-a-string-or-at-least-serializable-why-should-my-action-types-be-constants" class="anchor enhancedAnchor_2LWZ"></span>Why should <code class="language-js >type</code> be a string, or at least serializable? Why should my action types be constants?<a href="#why-should-type-be-a-string-or-at-least-serializable-why-should-my-action-types-be-constants" class="hash-link" title="Direct link to heading">#</a></h3>
-<p>As with state, serializable actions enable several of Redux’s defining features, such as time travel debugging, and recording and replaying actions. Using something like a <code class="language-js >Symbol</code> for the <code class="language-js >type</code> value or using <code class="language-js >instanceof</code> checks for actions themselves would break that. Strings are serializable and easily self-descriptive, and so are a better choice. Note that it <em>is</em> okay to use Symbols, Promises, or other non-serializable values in an action if the action is intended for use by middleware. Actions only need to be serializable by the time they actually reach the store and are passed to the reducers.</p>
-<p>We can’t reliably enforce serializable actions for performance reasons, so Redux only checks that every action is a plain object, and that the <code class="language-js >type</code> is defined. The rest is up to you, but you might find that keeping everything serializable helps debug and reproduce issues.</p>
-<p>Encapsulating and centralizing commonly used pieces of code is a key concept in programming. While it is certainly possible to manually create action objects everywhere, and write each <code class="language-js >type</code> value by hand, defining reusable constants makes maintaining code easier. If you put constants in a separate file, you can <a href="../../www.npmjs.com/package/eslint-plugin-import.html">check your <code class="language-js >import</code> statements against typos</a> so you can’t accidentally use the wrong string.</p>
+<h3 id="why-should-type-be-a-string-or-at-least-serializable-why-should-my-action-types-be-constants"><span id="why-should-type-be-a-string-or-at-least-serializable-why-should-my-action-types-be-constants" class="anchor enhancedAnchor_2LWZ"></span>Why should <code class="language-js" >type</code> be a string, or at least serializable? Why should my action types be constants?<a href="#why-should-type-be-a-string-or-at-least-serializable-why-should-my-action-types-be-constants" class="hash-link" title="Direct link to heading">#</a></h3>
+<p>As with state, serializable actions enable several of Redux’s defining features, such as time travel debugging, and recording and replaying actions. Using something like a <code class="language-js" >Symbol</code> for the <code class="language-js" >type</code> value or using <code class="language-js" >instanceof</code> checks for actions themselves would break that. Strings are serializable and easily self-descriptive, and so are a better choice. Note that it <em>is</em> okay to use Symbols, Promises, or other non-serializable values in an action if the action is intended for use by middleware. Actions only need to be serializable by the time they actually reach the store and are passed to the reducers.</p>
+<p>We can’t reliably enforce serializable actions for performance reasons, so Redux only checks that every action is a plain object, and that the <code class="language-js" >type</code> is defined. The rest is up to you, but you might find that keeping everything serializable helps debug and reproduce issues.</p>
+<p>Encapsulating and centralizing commonly used pieces of code is a key concept in programming. While it is certainly possible to manually create action objects everywhere, and write each <code class="language-js" >type</code> value by hand, defining reusable constants makes maintaining code easier. If you put constants in a separate file, you can <a href="../../www.npmjs.com/package/eslint-plugin-import.html">check your <code class="language-js" >import</code> statements against typos</a> so you can’t accidentally use the wrong string.</p>
 <h4 id="further-information"><span id="further-information" class="anchor enhancedAnchor_2LWZ"></span>Further information<a href="#further-information" class="hash-link" title="Direct link to heading">#</a></h4>
 <p><strong>Documentation</strong></p>
 <ul>
@@ -166,7 +154,7 @@
 <h3 id="how-can-i-represent-side-effects-such-as-ajax-calls-why-do-we-need-things-like-action-creators-thunks-and-middleware-to-do-async-behavior"><span id="how-can-i-represent-side-effects-such-as-ajax-calls-why-do-we-need-things-like-action-creators-thunks-and-middleware-to-do-async-behavior" class="anchor enhancedAnchor_2LWZ"></span>How can I represent “side effects” such as AJAX calls? Why do we need things like “action creators”, “thunks”, and “middleware” to do async behavior?<a href="#how-can-i-represent-side-effects-such-as-ajax-calls-why-do-we-need-things-like-action-creators-thunks-and-middleware-to-do-async-behavior" class="hash-link" title="Direct link to heading">#</a></h3>
 <p>This is a long and complex topic, with a wide variety of opinions on how code should be organized and what approaches should be used.</p>
 <p>Any meaningful web app needs to execute complex logic, usually including asynchronous work such as making AJAX requests. That code is no longer purely a function of its inputs, and the interactions with the outside world are known as <a href="../../en.wikipedia.org/wiki/Side_effect_(computer_science).html">“side effects”</a></p>
-<p>Redux is inspired by functional programming, and out of the box, has no place for side effects to be executed. In particular, reducer functions <em>must</em> always be pure functions of <code class="language-js >(state, action) =&gt; newState</code>. However, Redux’s middleware makes it possible to intercept dispatched actions and add additional complex behavior around them, including side effects.</p>
+<p>Redux is inspired by functional programming, and out of the box, has no place for side effects to be executed. In particular, reducer functions <em>must</em> always be pure functions of <code class="language-js" >(state, action) =&gt; newState</code>. However, Redux’s middleware makes it possible to intercept dispatched actions and add additional complex behavior around them, including side effects.</p>
 <p>In general, Redux suggests that code with side effects should be part of the action creation process. While that logic <em>can</em> be performed inside of a UI component, it generally makes sense to extract that logic into a reusable function so that the same logic can be called from multiple places—in other words, an action creator function.</p>
 <p>The simplest and most common way to do this is to add the <a href="../../github.com/reduxjs/redux-thunk.html">Redux Thunk</a> middleware that lets you write action creators with more complex and asynchronous logic. Another widely-used method is <a href="../../github.com/redux-saga/redux-saga.html">Redux Saga</a> which lets you write more synchronous-looking code using generators, and can act like “background threads” or “daemons” in a Redux app. Yet another approach is <a href="../../github.com/redux-loop/redux-loop.html">Redux Loop</a>, which inverts the process by allowing your reducers to declare side effects in response to state changes and have them executed separately. Beyond that, there are <em>many</em> other community-developed libraries and ideas, each with their own take on how side effects should be managed.</p>
 <h4 id="further-information-2"><span id="further-information-2" class="anchor enhancedAnchor_2LWZ"></span>Further information<a href="#further-information-2" class="hash-link" title="Direct link to heading">#</a></h4>
@@ -200,11 +188,11 @@
 <li><a href="../../twitter.com/dan_abramov/status/689639582120415232.html">Twitter: possible comparison between sagas, loops, and other approaches</a></li>
 </ul>
 <h3 id="what-async-middleware-should-i-use-how-do-you-decide-between-thunks-sagas-observables-or-something-else"><span id="what-async-middleware-should-i-use-how-do-you-decide-between-thunks-sagas-observables-or-something-else" class="anchor enhancedAnchor_2LWZ"></span>What async middleware should I use? How do you decide between thunks, sagas, observables, or something else?<a href="#what-async-middleware-should-i-use-how-do-you-decide-between-thunks-sagas-observables-or-something-else" class="hash-link" title="Direct link to heading">#</a></h3>
-<p>There are <a href="../../github.com/markerikson/redux-ecosystem-links/blob/master/side-effects.html">many async/side effect middlewares available</a>, but the most commonly used ones are <a href="../../github.com/reduxjs/redux-thunk.html"><code class="language-js >redux-thunk</code></a>, <a href="../../github.com/redux-saga/redux-saga.html"><code class="language-js >redux-saga</code></a>, and <a href="../../github.com/redux-observable/redux-observable.html"><code class="language-js >redux-observable</code></a>. These are different tools, with different strengths, weaknesses, and use cases.</p>
+<p>There are <a href="../../github.com/markerikson/redux-ecosystem-links/blob/master/side-effects.html">many async/side effect middlewares available</a>, but the most commonly used ones are <a href="../../github.com/reduxjs/redux-thunk.html"><code class="language-js" >redux-thunk</code></a>, <a href="../../github.com/redux-saga/redux-saga.html"><code class="language-js" >redux-saga</code></a>, and <a href="../../github.com/redux-observable/redux-observable.html"><code class="language-js" >redux-observable</code></a>. These are different tools, with different strengths, weaknesses, and use cases.</p>
 <p>As a general rule of thumb:</p>
 <ul>
-<li>Thunks are best for complex synchronous logic (especially code that needs access to the entire Redux store state), and simple async logic (like basic AJAX calls). With the use of <code class="language-js >async/await</code>, it can be reasonable to use thunks for some more complex promise-based logic as well.</li>
-<li>Sagas are best for complex async logic and decoupled “background thread”-type behavior, especially if you need to listen to dispatched actions (which is something that can’t be done with thunks). They require familiarity with ES6 generator functions and <code class="language-js >redux-saga</code>’s “effects” operators.</li>
+<li>Thunks are best for complex synchronous logic (especially code that needs access to the entire Redux store state), and simple async logic (like basic AJAX calls). With the use of <code class="language-js" >async/await</code>, it can be reasonable to use thunks for some more complex promise-based logic as well.</li>
+<li>Sagas are best for complex async logic and decoupled “background thread”-type behavior, especially if you need to listen to dispatched actions (which is something that can’t be done with thunks). They require familiarity with ES6 generator functions and <code class="language-js" >redux-saga</code>’s “effects” operators.</li>
 <li>Observables solve the same problems as sagas, but rely on RxJS to implement async behavior. They require familiarity with the RxJS API.</li>
 </ul>
 <p>We recommend that most Redux users should start with thunks, and then add an additional side effect library like sagas or observables later if their app really requires handling for more complex async logic.</p>
@@ -254,7 +242,7 @@
 <li><a href="#table-of-contents" class="table-of-contents__link">Table of Contents</a></li>
 <li><a href="#actions" class="table-of-contents__link">Actions</a>
 <ul>
-<li><a href="#why-should-type-be-a-string-or-at-least-serializable-why-should-my-action-types-be-constants" class="table-of-contents__link">Why should <code class="language-js >type</code> be a string, or at least serializable? Why should my action types be constants?</a></li>
+<li><a href="#why-should-type-be-a-string-or-at-least-serializable-why-should-my-action-types-be-constants" class="table-of-contents__link">Why should <code class="language-js" >type</code> be a string, or at least serializable? Why should my action types be constants?</a></li>
 <li><a href="#is-there-always-a-one-to-one-mapping-between-reducers-and-actions" class="table-of-contents__link">Is there always a one-to-one mapping between reducers and actions?</a></li>
 <li><a href="#how-can-i-represent-side-effects-such-as-ajax-calls-why-do-we-need-things-like-action-creators-thunks-and-middleware-to-do-async-behavior" class="table-of-contents__link">How can I represent “side effects” such as AJAX calls? Why do we need things like “action creators”, “thunks”, and “middleware” to do async behavior?</a></li>
 <li><a href="#what-async-middleware-should-i-use-how-do-you-decide-between-thunks-sagas-observables-or-something-else" class="table-of-contents__link">What async middleware should I use? How do you decide between thunks, sagas, observables, or something else?</a></li>

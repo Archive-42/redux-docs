@@ -1,13 +1,6 @@
 <a href="../index.html" class="navbar__brand"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
 
 <a href="getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="../tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../faq.html" class="navbar__item navbar__link">FAQ</a><a href="../style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="../index.html" class="navbar__brand"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
 
 - <a href="getting-started.html" class="menu__link">Getting Started</a>
@@ -190,22 +183,14 @@ A `combineReducers` variation that allows defining cross-slice dependencies for 
 
 <span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> auth</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">\[</span><span class="token string" style="color:#a6e22e">'users'</span><span class="token punctuation" style="color:#F8F8F2">\]</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> todos</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">\[</span><span class="token string" style="color:#a6e22e">'auth'</span><span class="token punctuation" style="color:#F8F8F2">\]</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">)</span>
-
-Copy
-
-#### <span id="reducer-composition" class="anchor enhancedAnchor_2LWZ"></span>Reducer Composition<a href="#reducer-composition" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">)</span>#### <span id="reducer-composition" class="anchor enhancedAnchor_2LWZ"></span>Reducer Composition<a href="#reducer-composition" class="hash-link" title="Direct link to heading">#</a>
 
 **[acdlite/reduce-reducers](../../github.com/redux-utilities/reduce-reducers.html)**  
 Provides sequential composition of reducers at the same level
 
 <span class="token keyword" style="color:#F92672">const</span><span class="token plain"> combinedReducer </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">combineReducers</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> users</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> posts</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> comments </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword" style="color:#F92672">const</span><span class="token plain"> rootReducer </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">reduceReducers</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">combinedReducer</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> otherTopLevelFeatureReducer</span><span class="token punctuation" style="color:#F8F8F2">)</span>
-
-Copy
-
-**[mhelmer/redux-xforms](../../github.com/mhelmer/redux-xforms.html)**  
+<span class="token plain"></span><span class="token keyword" style="color:#F92672">const</span><span class="token plain"> rootReducer </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">reduceReducers</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">combinedReducer</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> otherTopLevelFeatureReducer</span><span class="token punctuation" style="color:#F8F8F2">)</span>**[mhelmer/redux-xforms](../../github.com/mhelmer/redux-xforms.html)**  
 A collection of composable reducer transformers
 
 <span class="token keyword" style="color:#F92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color:#E6D874">createByFilter</span><span class="token plain"> </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token parameter">predicate</span><span class="token parameter punctuation" style="color:#F8F8F2">,</span><span class="token parameter"> mapActionToKey</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:#F8F8F2">=&gt;</span><span class="token plain"></span>
@@ -220,11 +205,7 @@ A collection of composable reducer transformers
 
 <span class="token plain"> </span><span class="token function" style="color:#E6D874">isolateSlice</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">mapActionToKey</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"> </span><span class="token comment" style="color:#c6cad2">// run the reducer on a single state slice</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">)</span>
-
-Copy
-
-**[adrienjt/redux-data-structures](../../github.com/adrienjt/redux-data-structures.html)**  
+<span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">)</span>**[adrienjt/redux-data-structures](../../github.com/adrienjt/redux-data-structures.html)**  
 Reducer factory functions for common data structures: counters, maps, lists (queues, stacks), sets
 
 <span class="token keyword" style="color:#F92672">const</span><span class="token plain"> myCounter </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">counter</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"></span>
@@ -233,11 +214,7 @@ Reducer factory functions for common data structures: counters, maps, lists (que
 
 <span class="token plain"> decrementActionTypes</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">\[</span><span class="token string" style="color:#a6e22e">'DECREMENT'</span><span class="token punctuation" style="color:#F8F8F2">\]</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span>
-
-Copy
-
-#### <span id="higher-order-reducers" class="anchor enhancedAnchor_2LWZ"></span>Higher-Order Reducers<a href="#higher-order-reducers" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span>#### <span id="higher-order-reducers" class="anchor enhancedAnchor_2LWZ"></span>Higher-Order Reducers<a href="#higher-order-reducers" class="hash-link" title="Direct link to heading">#</a>
 
 **[omnidan/redux-undo](../../github.com/omnidan/redux-undo.html)**  
 Effortless undo/redo and action history for your reducers
@@ -262,11 +239,7 @@ Flux Standard Action utilities for Redux
 
 <span class="token plain"></span><span class="token keyword" style="color:#F92672">const</span><span class="token plain"> store </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">createStore</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">reducer</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain">store</span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">dispatch</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token function" style="color:#E6D874">increment</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">)</span>
-
-Copy
-
-**[BerkeleyTrue/redux-create-types](../../github.com/BerkeleyTrue/redux-create-types.html)**  
+<span class="token plain">store</span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">dispatch</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token function" style="color:#E6D874">increment</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">)</span>**[BerkeleyTrue/redux-create-types](../../github.com/BerkeleyTrue/redux-create-types.html)**  
 Creates standard and async action types based on namespaces
 
 <span class="token keyword module" style="color:#F92672">export</span><span class="token plain"> </span><span class="token keyword" style="color:#F92672">const</span><span class="token plain"> types </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">createTypes</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain"></span>
@@ -277,11 +250,7 @@ Creates standard and async action types based on namespaces
 
 <span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token comment" style="color:#c6cad2">// { openModal : "app.openModal", fetch : { start : "app.fetch.start", complete: 'app.fetch.complete' } }</span>
-
-Copy
-
-**[maxhallinan/kreighter](../../github.com/maxhallinan/kreighter.html)**  
+<span class="token plain"></span><span class="token comment" style="color:#c6cad2">// { openModal : "app.openModal", fetch : { start : "app.fetch.start", complete: 'app.fetch.complete' } }</span>**[maxhallinan/kreighter](../../github.com/maxhallinan/kreighter.html)**  
 Generates action creators based on types and expected fields
 
 <span class="token keyword" style="color:#F92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color:#E6D874">formatTitle</span><span class="token plain"> </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token parameter">id</span><span class="token parameter punctuation" style="color:#F8F8F2">,</span><span class="token parameter"> title</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:#F8F8F2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"></span>
@@ -296,11 +265,7 @@ Generates action creators based on types and expected fields
 
 <span class="token plain"></span><span class="token function" style="color:#E6D874">updateBazTitle</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token number" style="color:#AE81FF">1</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'foo bar baz'</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token comment" style="color:#c6cad2">// -&gt; { type: 'UPDATE_BAZ_TITLE', id: 1, title: 'Foo Bar Baz', }</span>
-
-Copy
-
-## <span id="utilities" class="anchor enhancedAnchor_2LWZ"></span>Utilities<a href="#utilities" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token comment" style="color:#c6cad2">// -&gt; { type: 'UPDATE_BAZ_TITLE', id: 1, title: 'Foo Bar Baz', }</span>## <span id="utilities" class="anchor enhancedAnchor_2LWZ"></span>Utilities<a href="#utilities" class="hash-link" title="Direct link to heading">#</a>
 
 **[reduxjs/reselect](../../github.com/reduxjs/reselect.html)**  
 Creates composable memoized selector functions for efficiently deriving data from the store state
@@ -311,11 +276,7 @@ Creates composable memoized selector functions for efficiently deriving data fro
 
 <span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token parameter">subtotal</span><span class="token parameter punctuation" style="color:#F8F8F2">,</span><span class="token parameter"> taxPercent</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:#F8F8F2">=&gt;</span><span class="token plain"> subtotal </span><span class="token operator" style="color:#F8F8F2">\*</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">taxPercent </span><span class="token operator" style="color:#F8F8F2">/</span><span class="token plain"> </span><span class="token number" style="color:#AE81FF">100</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">)</span>
-
-Copy
-
-**[paularmstrong/normalizr](../../github.com/paularmstrong/normalizr.html)**  
+<span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">)</span>**[paularmstrong/normalizr](../../github.com/paularmstrong/normalizr.html)**  
 Normalizes nested JSON according to a schema
 
 <span class="token keyword" style="color:#F92672">const</span><span class="token plain"> user </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token keyword" style="color:#F92672">new</span><span class="token plain"> </span><span class="token class-name">schema</span><span class="token class-name punctuation" style="color:#F8F8F2">.</span><span class="token class-name">Entity</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token string" style="color:#a6e22e">'users'</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
@@ -330,11 +291,7 @@ Normalizes nested JSON according to a schema
 
 <span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword" style="color:#F92672">const</span><span class="token plain"> normalizedData </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">normalize</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">originalData</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> article</span><span class="token punctuation" style="color:#F8F8F2">)</span>
-
-Copy
-
-**[planttheidea/selectorator](../../github.com/planttheidea/selectorator.html)**  
+<span class="token plain"></span><span class="token keyword" style="color:#F92672">const</span><span class="token plain"> normalizedData </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">normalize</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">originalData</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> article</span><span class="token punctuation" style="color:#F8F8F2">)</span>**[planttheidea/selectorator](../../github.com/planttheidea/selectorator.html)**  
 Abstractions over Reselect for common selector use cases
 
 <span class="token keyword" style="color:#F92672">const</span><span class="token plain"> getBarBaz </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">createSelector</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain"></span>
@@ -345,44 +302,32 @@ Abstractions over Reselect for common selector use cases
 
 <span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token function" style="color:#E6D874">getBarBaz</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> foo</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> bar</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'a'</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> baz</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'b'</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"> </span><span class="token comment" style="color:#c6cad2">// "a b"</span>
-
-Copy
-
-## <span id="store" class="anchor enhancedAnchor_2LWZ"></span>Store<a href="#store" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token function" style="color:#E6D874">getBarBaz</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> foo</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> bar</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'a'</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> baz</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'b'</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"> </span><span class="token comment" style="color:#c6cad2">// "a b"</span>## <span id="store" class="anchor enhancedAnchor_2LWZ"></span>Store<a href="#store" class="hash-link" title="Direct link to heading">#</a>
 
 #### <span id="change-subscriptions" class="anchor enhancedAnchor_2LWZ"></span>Change Subscriptions<a href="#change-subscriptions" class="hash-link" title="Direct link to heading">#</a>
 
 **[jprichardson/redux-watch](../../github.com/ExodusMovement/redux-watch.html)**  
 Watch for state changes based on key paths or selectors
 
-<span class="token keyword" style="color:#F92672">let</span><span class="token plain"> w </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">watch</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:#F8F8F2">=&gt;</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">mySelector</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">store</span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">getState</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
+<span class="token keyword" style="color:#F92672">let</span><span class="token plain"> w </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">watch</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:#F8F8F2">=&gt;</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">mySelector</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">store</span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">getState</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain">store</span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">subscribe</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain"></span>
+<span class="token plain">store</span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">subscribe</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token function" style="color:#E6D874">w</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token parameter">newVal</span><span class="token parameter punctuation" style="color:#F8F8F2">,</span><span class="token parameter"> oldVal</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:#F8F8F2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token console class-name">console</span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">log</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">newval</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> oldVal</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token console class-name">console</span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">log</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">newval</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> oldVal</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">)</span>
-
-Copy
-
-**[ashaffer/redux-subscribe](../../github.com/ashaffer/redux-subscribe.html)**  
+<span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">)</span>**[ashaffer/redux-subscribe](../../github.com/ashaffer/redux-subscribe.html)**  
 Centralized subscriptions to state changes based on paths
 
-<span class="token plain">store</span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">dispatch</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">subscribe</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token string" style="color:#a6e22e">"users.byId.abcd"</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">"subscription1"</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:#F8F8F2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">;</span>
-
-Copy
-
-#### <span id="batching" class="anchor enhancedAnchor_2LWZ"></span>Batching<a href="#batching" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain">store</span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">dispatch</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">subscribe</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token string" style="color:#a6e22e">"users.byId.abcd"</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">"subscription1"</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:#F8F8F2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">;</span>#### <span id="batching" class="anchor enhancedAnchor_2LWZ"></span>Batching<a href="#batching" class="hash-link" title="Direct link to heading">#</a>
 
 **[tappleby/redux-batched-subscribe](../../github.com/tappleby/redux-batched-subscribe.html)**  
 Store enhancer that can debounce subscription notifications
 
-<span class="token keyword" style="color:#F92672">const</span><span class="token plain"> debounceNotify </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> \_</span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">debounce</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token parameter">notify</span><span class="token plain"> </span><span class="token arrow operator" style="color:#F8F8F2">=&gt;</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">notify</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
+<span class="token keyword" style="color:#F92672">const</span><span class="token plain"> debounceNotify </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> \_</span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">debounce</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token parameter">notify</span><span class="token plain"> </span><span class="token arrow operator" style="color:#F8F8F2">=&gt;</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">notify</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token keyword" style="color:#F92672">const</span><span class="token plain"> store </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">createStore</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain"></span>
 
@@ -392,92 +337,60 @@ Store enhancer that can debounce subscription notifications
 
 <span class="token plain"> </span><span class="token function" style="color:#E6D874">batchedSubscribe</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">debounceNotify</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">)</span>
-
-Copy
-
-**[manaflair/redux-batch](../../github.com/manaflair/redux-batch.html)**  
+<span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">)</span>**[manaflair/redux-batch](../../github.com/manaflair/redux-batch.html)**  
 Store enhancer that allows dispatching arrays of actions
 
 <span class="token keyword" style="color:#F92672">const</span><span class="token plain"> store </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">createStore</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">reducer</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> reduxBatch</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain">store</span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">dispatch</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">\[</span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> type</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'INCREMENT'</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> type</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'INCREMENT'</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">\]</span><span class="token punctuation" style="color:#F8F8F2">)</span>
-
-Copy
-
-**[laysent/redux-batch-actions-enhancer](../../github.com/laysent/redux-batch-actions-enhancer.html)**  
+<span class="token plain">store</span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">dispatch</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">\[</span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> type</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'INCREMENT'</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> type</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'INCREMENT'</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">\]</span><span class="token punctuation" style="color:#F8F8F2">)</span>**[laysent/redux-batch-actions-enhancer](../../github.com/laysent/redux-batch-actions-enhancer.html)**  
 Store enhancer that accepts batched actions
 
 <span class="token keyword" style="color:#F92672">const</span><span class="token plain"> store </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">createStore</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">reducer</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> initialState</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">batch</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token property-access">enhancer</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain">store</span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">dispatch</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token function" style="color:#E6D874">createAction</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> type</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'INCREMENT'</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> type</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'INCREMENT'</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">)</span>
-
-Copy
-
-**[tshelburne/redux-batched-actions](../../github.com/tshelburne/redux-batched-actions.html)**  
+<span class="token plain">store</span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">dispatch</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token function" style="color:#E6D874">createAction</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> type</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'INCREMENT'</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> type</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'INCREMENT'</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">)</span>**[tshelburne/redux-batched-actions](../../github.com/tshelburne/redux-batched-actions.html)**  
 Higher-order reducer that handles batched actions
 
 <span class="token keyword" style="color:#F92672">const</span><span class="token plain"> store </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">createStore</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token function" style="color:#E6D874">enableBatching</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">reducer</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> initialState</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain">store</span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">dispatch</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token function" style="color:#E6D874">batchActions</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">\[</span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> type</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'INCREMENT'</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> type</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'INCREMENT'</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">\]</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">)</span>
-
-Copy
-
-#### <span id="persistence" class="anchor enhancedAnchor_2LWZ"></span>Persistence<a href="#persistence" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain">store</span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">dispatch</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token function" style="color:#E6D874">batchActions</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">\[</span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> type</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'INCREMENT'</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> type</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'INCREMENT'</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">\]</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">)</span>#### <span id="persistence" class="anchor enhancedAnchor_2LWZ"></span>Persistence<a href="#persistence" class="hash-link" title="Direct link to heading">#</a>
 
 **[rt2zz/redux-persist](../../github.com/rt2zz/redux-persist.html)**  
 Persist and rehydrate a Redux store, with many extensible options
 
 <span class="token keyword" style="color:#F92672">const</span><span class="token plain"> store </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">createStore</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">reducer</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">autoRehydrate</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token function" style="color:#E6D874">persistStore</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">store</span><span class="token punctuation" style="color:#F8F8F2">)</span>
-
-Copy
-
-**[react-stack/redux-storage](../../github.com/react-stack/redux-storage.html)**  
+<span class="token plain"></span><span class="token function" style="color:#E6D874">persistStore</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">store</span><span class="token punctuation" style="color:#F8F8F2">)</span>**[react-stack/redux-storage](../../github.com/react-stack/redux-storage.html)**  
 Persistence layer for Redux with flexible backends
 
-<span class="token keyword" style="color:#F92672">const</span><span class="token plain"> reducer </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> storage</span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">reducer</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token function" style="color:#E6D874">combineReducers</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">reducers</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
+<span class="token keyword" style="color:#F92672">const</span><span class="token plain"> reducer </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> storage</span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">reducer</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token function" style="color:#E6D874">combineReducers</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">reducers</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token keyword" style="color:#F92672">const</span><span class="token plain"> engine </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">createEngineLocalStorage</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token string" style="color:#a6e22e">'my-save-key'</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword" style="color:#F92672">const</span><span class="token plain"> storageMiddleware </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> storage</span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">createMiddleware</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">engine</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword" style="color:#F92672">const</span><span class="token plain"> storageMiddleware </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> storage</span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">createMiddleware</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">engine</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword" style="color:#F92672">const</span><span class="token plain"> store </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">createStore</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">reducer</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">applyMiddleware</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">storageMiddleware</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">)</span>
-
-Copy
-
-**[redux-offline/redux-offline](../../github.com/redux-offline/redux-offline.html)**  
+<span class="token plain"></span><span class="token keyword" style="color:#F92672">const</span><span class="token plain"> store </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">createStore</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">reducer</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">applyMiddleware</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">storageMiddleware</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">)</span>**[redux-offline/redux-offline](../../github.com/redux-offline/redux-offline.html)**  
 Persistent store for Offline-First apps, with support for optimistic UIs
 
 <span class="token keyword" style="color:#F92672">const</span><span class="token plain"> store </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">createStore</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">reducer</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">offline</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">offlineConfig</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain">store</span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">dispatch</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"></span>
+<span class="token plain">store</span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">dispatch</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"></span>
 
 <span class="token plain"> type</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'FOLLOW_USER_REQUEST'</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"></span>
 
 <span class="token plain"> meta</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> offline</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> effect</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> commit</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> rollback</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span>
-
-Copy
-
-## <span id="immutable-data" class="anchor enhancedAnchor_2LWZ"></span>Immutable Data<a href="#immutable-data" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span>## <span id="immutable-data" class="anchor enhancedAnchor_2LWZ"></span>Immutable Data<a href="#immutable-data" class="hash-link" title="Direct link to heading">#</a>
 
 **[ImmerJS/immer](../../github.com/immerjs/immer.html)**  
 Immutable updates with normal mutative code, using Proxies
 
 <span class="token keyword" style="color:#F92672">const</span><span class="token plain"> nextState </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">produce</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">baseState</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> </span><span class="token parameter">draftState</span><span class="token plain"> </span><span class="token arrow operator" style="color:#F8F8F2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"></span>
 
-<span class="token plain"> draftState</span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">push</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> todo</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'Tweet about it'</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
+<span class="token plain"> draftState</span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">push</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> todo</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'Tweet about it'</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
 <span class="token plain"> draftState</span><span class="token punctuation" style="color:#F8F8F2">\[</span><span class="token number" style="color:#AE81FF">1</span><span class="token punctuation" style="color:#F8F8F2">\]</span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token property-access">done</span><span class="token plain"> </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token boolean" style="color:#AE81FF">true</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span>
-
-Copy
-
-## <span id="side-effects" class="anchor enhancedAnchor_2LWZ"></span>Side Effects<a href="#side-effects" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span>## <span id="side-effects" class="anchor enhancedAnchor_2LWZ"></span>Side Effects<a href="#side-effects" class="hash-link" title="Direct link to heading">#</a>
 
 #### <span id="widely-used" class="anchor enhancedAnchor_2LWZ"></span>Widely Used<a href="#widely-used" class="hash-link" title="Direct link to heading">#</a>
 
@@ -494,9 +407,9 @@ Dispatch functions, which are called and given `dispatch` and `getState` as para
 
 <span class="token plain" style="display:inline-block"> </span>
 
-<span class="token plain"> myAjaxLib</span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">post</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token string" style="color:#a6e22e">"/someEndpoint"</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain">data </span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> someValue</span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
+<span class="token plain"> myAjaxLib</span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">post</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token string" style="color:#a6e22e">"/someEndpoint"</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain">data </span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> someValue</span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">then</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token parameter">response</span><span class="token plain"> </span><span class="token arrow operator" style="color:#F8F8F2">=&gt;</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">dispatch</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain">type </span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">"REQUEST_SUCCEEDED"</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> payload </span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> response</span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">then</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token parameter">response</span><span class="token plain"> </span><span class="token arrow operator" style="color:#F8F8F2">=&gt;</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">dispatch</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain">type </span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">"REQUEST_SUCCEEDED"</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> payload </span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> response</span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token keyword control-flow" style="color:#F92672">catch</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token parameter">error</span><span class="token plain"> </span><span class="token arrow operator" style="color:#F8F8F2">=&gt;</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">dispatch</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain">type </span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">"REQUEST_FAILED"</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> error </span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> error</span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">;</span><span class="token plain"></span>
 
@@ -522,11 +435,7 @@ Dispatch functions, which are called and given `dispatch` and `getState` as para
 
 <span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">}</span>
-
-Copy
-
-**[redux-saga/redux-saga](../../github.com/redux-saga/redux-saga.html)**  
+<span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">}</span>**[redux-saga/redux-saga](../../github.com/redux-saga/redux-saga.html)**  
 Handle async logic using synchronous-looking generator functions. Sagas return descriptions of effects, which are executed by the saga middleware, and act like "background threads" for JS applications.
 
 **Best for**: complex async logic, decoupled workflows
@@ -569,11 +478,7 @@ Handle async logic using synchronous-looking generator functions. Sagas return d
 
 <span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">}</span>
-
-Copy
-
-**[redux-observable/redux-observable](../../github.com/redux-observable/redux-observable.html)**
+<span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">}</span>**[redux-observable/redux-observable](../../github.com/redux-observable/redux-observable.html)**
 
 Handle async logic using RxJS observable chains called "epics". Compose and cancel async actions to create side effects and more.
 
@@ -583,13 +488,13 @@ Handle async logic using RxJS observable chains called "epics". Compose and canc
 
 <span class="token plain"> action$</span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">ofType</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token constant" style="color:#F92672">LOGIN_REQUEST</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">ofType</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token constant" style="color:#F92672">LOGIN_REQUEST</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">mergeMap</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token parameter punctuation" style="color:#F8F8F2">{</span><span class="token parameter"> payload</span><span class="token parameter operator" style="color:#F8F8F2">:</span><span class="token parameter"> </span><span class="token parameter punctuation" style="color:#F8F8F2">{</span><span class="token parameter"> username</span><span class="token parameter punctuation" style="color:#F8F8F2">,</span><span class="token parameter"> password </span><span class="token parameter punctuation" style="color:#F8F8F2">}</span><span class="token parameter"> </span><span class="token parameter punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:#F8F8F2">=&gt;</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">mergeMap</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token parameter punctuation" style="color:#F8F8F2">{</span><span class="token parameter"> payload</span><span class="token parameter operator" style="color:#F8F8F2">:</span><span class="token parameter"> </span><span class="token parameter punctuation" style="color:#F8F8F2">{</span><span class="token parameter"> username</span><span class="token parameter punctuation" style="color:#F8F8F2">,</span><span class="token parameter"> password </span><span class="token parameter punctuation" style="color:#F8F8F2">}</span><span class="token parameter"> </span><span class="token parameter punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:#F8F8F2">=&gt;</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token maybe-class-name">Observable</span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token keyword module" style="color:#F92672">from</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token function" style="color:#E6D874">postLogin</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">username</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> password</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">map</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">loginSuccess</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">map</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">loginSuccess</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token keyword control-flow" style="color:#F92672">catch</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">loginFailure</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
@@ -601,19 +506,15 @@ Handle async logic using RxJS observable chains called "epics". Compose and canc
 
 <span class="token plain"> action$</span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">ofType</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token constant" style="color:#F92672">LOGIN_SUCCESS</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">ofType</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token constant" style="color:#F92672">LOGIN_SUCCESS</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">delay</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token number" style="color:#AE81FF">2000</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">delay</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token number" style="color:#AE81FF">2000</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">mergeMap</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token parameter punctuation" style="color:#F8F8F2">{</span><span class="token parameter"> payload</span><span class="token parameter operator" style="color:#F8F8F2">:</span><span class="token parameter"> </span><span class="token parameter punctuation" style="color:#F8F8F2">{</span><span class="token parameter"> msg </span><span class="token parameter punctuation" style="color:#F8F8F2">}</span><span class="token parameter"> </span><span class="token parameter punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:#F8F8F2">=&gt;</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">showMessage</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">msg</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">mergeMap</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token parameter punctuation" style="color:#F8F8F2">{</span><span class="token parameter"> payload</span><span class="token parameter operator" style="color:#F8F8F2">:</span><span class="token parameter"> </span><span class="token parameter punctuation" style="color:#F8F8F2">{</span><span class="token parameter"> msg </span><span class="token parameter punctuation" style="color:#F8F8F2">}</span><span class="token parameter"> </span><span class="token parameter punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:#F8F8F2">=&gt;</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">showMessage</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">msg</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display:inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color:#F92672">const</span><span class="token plain"> rootEpic </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">combineEpics</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">loginRequestEpic</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> loginSuccessfulEpic</span><span class="token punctuation" style="color:#F8F8F2">)</span>
-
-Copy
-
-**[redux-loop/redux-loop](../../github.com/redux-loop/redux-loop.html)**
+<span class="token plain"></span><span class="token keyword" style="color:#F92672">const</span><span class="token plain"> rootEpic </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">combineEpics</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">loginRequestEpic</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> loginSuccessfulEpic</span><span class="token punctuation" style="color:#F8F8F2">)</span>**[redux-loop/redux-loop](../../github.com/redux-loop/redux-loop.html)**
 
 A port of the Elm Architecture to Redux that allows you to sequence your effects naturally and purely by returning them from your reducers. Reducers now return both a state value and a side effect description.
 
@@ -631,7 +532,7 @@ A port of the Elm Architecture to Redux that allows you to sequence your effects
 
 <span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> pending</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token boolean" style="color:#AE81FF">true</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token maybe-class-name">Effect</span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">promise</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">loginPromise</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> username</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> password</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token maybe-class-name">Effect</span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">promise</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">loginPromise</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> username</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> password</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
@@ -643,7 +544,7 @@ A port of the Elm Architecture to Redux that allows you to sequence your effects
 
 <span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> pending</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token boolean" style="color:#AE81FF">false</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> user </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token maybe-class-name">Effect</span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">promise</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">delayMessagePromise</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> msg</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> </span><span class="token number" style="color:#AE81FF">2000</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token maybe-class-name">Effect</span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">promise</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">delayMessagePromise</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> msg</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> </span><span class="token number" style="color:#AE81FF">2000</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
@@ -657,11 +558,7 @@ A port of the Elm Architecture to Redux that allows you to sequence your effects
 
 <span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">}</span>
-
-Copy
-
-**[jeffbski/redux-logic](../../github.com/jeffbski/redux-logic.html)**
+<span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">}</span>**[jeffbski/redux-logic](../../github.com/jeffbski/redux-logic.html)**
 
 Side effects lib built with observables, but allows use of callbacks, promises, async/await, or observables. Provides declarative processing of actions.
 
@@ -681,7 +578,7 @@ Side effects lib built with observables, but allows use of callbacks, promises, 
 
 <span class="token plain"> </span><span class="token function" style="color:#E6D874">postLogin</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">username</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> password</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">then</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">then</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token parameter punctuation" style="color:#F8F8F2">{</span><span class="token parameter"> user</span><span class="token parameter punctuation" style="color:#F8F8F2">,</span><span class="token parameter"> msg </span><span class="token parameter punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:#F8F8F2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"></span>
 
@@ -697,31 +594,23 @@ Side effects lib built with observables, but allows use of callbacks, promises, 
 
 <span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">then</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">done</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">then</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">done</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span>
-
-Copy
-
-#### <span id="promises" class="anchor enhancedAnchor_2LWZ"></span>Promises<a href="#promises" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span>#### <span id="promises" class="anchor enhancedAnchor_2LWZ"></span>Promises<a href="#promises" class="hash-link" title="Direct link to heading">#</a>
 
 **[acdlite/redux-promise](../../github.com/redux-utilities/redux-promise.html)**  
 Dispatch promises as action payloads, and have FSA-compliant actions dispatched as the promise resolves or rejects.
 
-<span class="token function" style="color:#E6D874">dispatch</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> type</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'FETCH_DATA'</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> payload</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> myAjaxLib</span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">get</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token string" style="color:#a6e22e">'/data'</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
+<span class="token function" style="color:#E6D874">dispatch</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> type</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'FETCH_DATA'</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> payload</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> myAjaxLib</span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">get</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token string" style="color:#a6e22e">'/data'</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token comment" style="color:#c6cad2">// will dispatch either {type : "FETCH_DATA", payload : response} if resolved,</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token comment" style="color:#c6cad2">// or dispatch {type : "FETCH_DATA", payload : error, error : true} if rejected</span>
-
-Copy
-
-**[lelandrichardson/redux-pack](../../github.com/lelandrichardson/redux-pack.html)**  
+<span class="token plain"></span><span class="token comment" style="color:#c6cad2">// or dispatch {type : "FETCH_DATA", payload : error, error : true} if rejected</span>**[lelandrichardson/redux-pack](../../github.com/lelandrichardson/redux-pack.html)**  
 Sensible, declarative, convention-based promise handling that guides users in a good direction without exposing the full power of dispatch.
 
-<span class="token function" style="color:#E6D874">dispatch</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain">type </span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">"FETCH_DATA"</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> payload </span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> myAjaxLib</span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">get</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token string" style="color:#a6e22e">"/data"</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">;</span><span class="token plain"></span>
+<span class="token function" style="color:#E6D874">dispatch</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain">type </span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">"FETCH_DATA"</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> payload </span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> myAjaxLib</span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">get</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token string" style="color:#a6e22e">"/data"</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">;</span><span class="token plain"></span>
 
 <span class="token plain" style="display:inline-block"> </span>
 
@@ -747,22 +636,14 @@ Sensible, declarative, convention-based promise handling that guides users in a 
 
 <span class="token plain"> </span><span class="token function-variable function" style="color:#E6D874">success</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token parameter">prevState</span><span class="token plain"> </span><span class="token arrow operator" style="color:#F8F8F2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> </span><span class="token spread operator" style="color:#F8F8F2">...</span><span class="token plain">prevState</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> foo</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> payload </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">;</span>
-
-Copy
-
-## <span id="middleware" class="anchor enhancedAnchor_2LWZ"></span>Middleware<a href="#middleware" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">;</span>## <span id="middleware" class="anchor enhancedAnchor_2LWZ"></span>Middleware<a href="#middleware" class="hash-link" title="Direct link to heading">#</a>
 
 #### <span id="networks-and-sockets" class="anchor enhancedAnchor_2LWZ"></span>Networks and Sockets<a href="#networks-and-sockets" class="hash-link" title="Direct link to heading">#</a>
 
 **[svrcekmichal/redux-axios-middleware](../../github.com/svrcekmichal/redux-axios-middleware.html)**  
 Fetches data with Axios and dispatches start/success/fail actions
 
-<span class="token keyword module" style="color:#F92672">export</span><span class="token plain"> </span><span class="token keyword" style="color:#F92672">const</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">loadCategories</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:#F8F8F2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> type</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'LOAD'</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> payload</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> request </span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> url</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'/categories'</span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">;</span>
-
-Copy
-
-**[agraboso/redux-api-middleware](../../github.com/agraboso/redux-api-middleware.html)**  
+<span class="token keyword module" style="color:#F92672">export</span><span class="token plain"> </span><span class="token keyword" style="color:#F92672">const</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">loadCategories</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:#F8F8F2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> type</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'LOAD'</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> payload</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> request </span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> url</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'/categories'</span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">;</span>**[agraboso/redux-api-middleware](../../github.com/agraboso/redux-api-middleware.html)**  
 Reads API call actions, fetches, and dispatches FSAs
 
 <span class="token keyword" style="color:#F92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color:#E6D874">fetchUsers</span><span class="token plain"> </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:#F8F8F2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"></span>
@@ -777,20 +658,12 @@ Reads API call actions, fetches, and dispatches FSAs
 
 <span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span>
-
-Copy
-
-**[itaylor/redux-socket.io](../../github.com/itaylor/redux-socket.html)**  
+<span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span>**[itaylor/redux-socket.io](../../github.com/itaylor/redux-socket.html)**  
 An opinionated connector between socket.io and redux.
 
 <span class="token keyword" style="color:#F92672">const</span><span class="token plain"> store </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">createStore</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">reducer</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">applyMiddleware</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">socketIoMiddleware</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain">store</span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">dispatch</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> type</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'server/hello'</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> data</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'Hello!'</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span>
-
-Copy
-
-**[tiberiuc/redux-react-firebase](../../github.com/tiberiuc/redux-react-firebase.html)**  
+<span class="token plain">store</span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">dispatch</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> type</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'server/hello'</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> data</span><span class="token operator" style="color:#F8F8F2">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">'Hello!'</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span>**[tiberiuc/redux-react-firebase](../../github.com/tiberiuc/redux-react-firebase.html)**  
 Integration between Firebase, React, and Redux
 
 #### <span id="async-behavior" class="anchor enhancedAnchor_2LWZ"></span>Async Behavior<a href="#async-behavior" class="hash-link" title="Direct link to heading">#</a>
@@ -849,11 +722,7 @@ Local component state in Redux, with handling for component actions
 
 <span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword" style="color:#F92672">class</span><span class="token plain"> </span><span class="token class-name">Counter</span><span class="token plain"> </span><span class="token keyword" style="color:#F92672">extends</span><span class="token plain"> </span><span class="token class-name">React</span><span class="token class-name punctuation" style="color:#F8F8F2">.</span><span class="token class-name">Component</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span>
-
-Copy
-
-**[epeli/lean-redux](../../github.com/esamattis/lean-redux.html)**  
+<span class="token plain"></span><span class="token keyword" style="color:#F92672">class</span><span class="token plain"> </span><span class="token class-name">Counter</span><span class="token plain"> </span><span class="token keyword" style="color:#F92672">extends</span><span class="token plain"> </span><span class="token class-name">React</span><span class="token class-name punctuation" style="color:#F8F8F2">.</span><span class="token class-name">Component</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span>**[epeli/lean-redux](../../github.com/esamattis/lean-redux.html)**  
 Makes component state in Redux as easy as setState
 
 <span class="token keyword" style="color:#F92672">const</span><span class="token plain"> </span><span class="token maybe-class-name">DynamicCounters</span><span class="token plain"> </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">connectLean</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain"></span>
@@ -864,18 +733,14 @@ Makes component state in Redux as easy as setState
 
 <span class="token plain"> addCounter</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> removeCounter</span>
 
-<span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token maybe-class-name">CounterList</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">;</span>
-
-Copy
-
-**[DataDog/redux-doghouse](../../github.com/DataDog/redux-doghouse.html)**  
+<span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token maybe-class-name">CounterList</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token punctuation" style="color:#F8F8F2">;</span>**[DataDog/redux-doghouse](../../github.com/DataDog/redux-doghouse.html)**  
 Aims to make reusable components easier to build with Redux by scoping actions and reducers to a particular instance of a component.
 
 <span class="token keyword" style="color:#F92672">const</span><span class="token plain"> scopeableActions </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token keyword" style="color:#F92672">new</span><span class="token plain"> </span><span class="token class-name">ScopedActionFactory</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">actionCreators</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword" style="color:#F92672">const</span><span class="token plain"> actionCreatorsScopedToA </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> scopeableActions</span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">scope</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token string" style="color:#a6e22e">'a'</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword" style="color:#F92672">const</span><span class="token plain"> actionCreatorsScopedToA </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> scopeableActions</span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">scope</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token string" style="color:#a6e22e">'a'</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain">actionCreatorsScopedToA</span><span class="token punctuation" style="color:#F8F8F2">.</span><span class="token method function property-access" style="color:#E6D874">foo</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token string" style="color:#a6e22e">'bar'</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"> </span><span class="token comment" style="color:#c6cad2">//{ type: SET_FOO, value: 'bar', scopeID: 'a' }</span><span class="token plain"></span>
+<span class="token plain">actionCreatorsScopedToA</span><span class="token punctuation" style="color:#F8F8F2">.</span><span  style="color:#E6D874">foo</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token string" style="color:#a6e22e">'bar'</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"> </span><span class="token comment" style="color:#c6cad2">//{ type: SET_FOO, value: 'bar', scopeID: 'a' }</span><span class="token plain"></span>
 
 <span class="token plain" style="display:inline-block"> </span>
 
@@ -887,11 +752,7 @@ Aims to make reusable components easier to build with Redux by scoping actions a
 
 <span class="token plain"></span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword" style="color:#F92672">const</span><span class="token plain"> scopedReducers </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">scopeReducers</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">reducers</span><span class="token punctuation" style="color:#F8F8F2">)</span>
-
-Copy
-
-## <span id="dev-tools" class="anchor enhancedAnchor_2LWZ"></span>Dev Tools<a href="#dev-tools" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token keyword" style="color:#F92672">const</span><span class="token plain"> scopedReducers </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">scopeReducers</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain">reducers</span><span class="token punctuation" style="color:#F8F8F2">)</span>## <span id="dev-tools" class="anchor enhancedAnchor_2LWZ"></span>Dev Tools<a href="#dev-tools" class="hash-link" title="Direct link to heading">#</a>
 
 #### <span id="debuggers-and-viewers" class="anchor enhancedAnchor_2LWZ"></span>Debuggers and Viewers<a href="#debuggers-and-viewers" class="hash-link" title="Direct link to heading">#</a>
 
@@ -1008,8 +869,6 @@ A proposal for bundling reducers, action types and actions
 
 <a href="learning-resources.html" class="pagination-nav__link"></a>
 
-Previous
-
 « Learning Resources
 
 <a href="examples.html" class="pagination-nav__link"></a>
@@ -1056,4 +915,4 @@ Examples »
 
 <a href="../index.html" class="footerLogoLink_MyFc"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" /><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
 
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

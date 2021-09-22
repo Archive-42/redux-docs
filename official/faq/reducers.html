@@ -95,10 +95,17 @@
       as="script"
     />
     <link rel="preload" href="../assets/js/main.8520a084.js" as="script" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css"
+    />
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
-    </head>
+    <script
+      async
+      defer
+      src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"
+    ></script>
+  </head>
   <body>
     <script>
       !(function () {
@@ -1089,7 +1096,9 @@
                                       href="#how-do-i-share-state-between-two-reducers-do-i-have-to-use-combinereducers"
                                       >How do I share state between two
                                       reducers? Do I have to use
-                                      <code class="language-js >combineReducers</code>?</a
+                                      <code class="language-js"
+                                        >combineReducers</code
+                                      >?</a
                                     >
                                     <ul>
                                       <li>
@@ -1103,8 +1112,8 @@
                                     <a
                                       href="#do-i-have-to-use-the-switch-statement-to-handle-actions"
                                       >Do I have to use the
-                                      <code class="language-js >switch</code> statement to handle
-                                      actions?</a
+                                      <code class="language-js">switch</code>
+                                      statement to handle actions?</a
                                     >
                                     <ul>
                                       <li>
@@ -1141,7 +1150,8 @@
                             id="how-do-i-share-state-between-two-reducers-do-i-have-to-use-combinereducers"
                           ></a
                           >How do I share state between two reducers? Do I have
-                          to use <code class="language-js >combineReducers</code>?<a
+                          to use
+                          <code class="language-js">combineReducers</code>?<a
                             class="hash-link"
                             href="#how-do-i-share-state-between-two-reducers-do-i-have-to-use-combinereducers"
                             title="Direct link to heading"
@@ -1156,11 +1166,11 @@
                           how the standard Flux pattern has multiple independent
                           stores, and Redux provides the
                           <a href="../api/combinereducers.html"
-                            ><code class="language-js >combineReducers</code></a
+                            ><code class="language-js">combineReducers</code></a
                           >
                           utility function to make this pattern easier. However,
                           it&#x27;s important to note that
-                          <code class="language-js >combineReducers</code> is
+                          <code class="language-js">combineReducers</code> is
                           <em>not</em> required—it is simply a utility function
                           for the common use case of having a single reducer
                           function per state slice, with plain JavaScript
@@ -1169,8 +1179,9 @@
                         <p>
                           Many users later want to try to share data between two
                           reducers, but find that
-                          <code class="language-js >combineReducers</code> does not allow them to do
-                          so. There are several approaches that can be used:
+                          <code class="language-js">combineReducers</code> does
+                          not allow them to do so. There are several approaches
+                          that can be used:
                         </p>
                         <ul>
                           <li>
@@ -1182,18 +1193,21 @@
                           <li>
                             You may need to write some custom functions for
                             handling some of these actions. This may require
-                            replacing <code class="language-js >combineReducers</code> with your own
-                            top-level reducer function. You can also use a
-                            utility such as
+                            replacing
+                            <code class="language-js">combineReducers</code>
+                            with your own top-level reducer function. You can
+                            also use a utility such as
                             <a
                               href="../../github.com/redux-utilities/reduce-reducers.html"
                               target="_blank"
                               rel="noopener noreferrer"
                               >reduce-reducers</a
                             >
-                            to run <code class="language-js >combineReducers</code> to handle most
-                            actions, but also run a more specialized reducer for
-                            specific actions that cross state slices.
+                            to run
+                            <code class="language-js">combineReducers</code> to
+                            handle most actions, but also run a more specialized
+                            reducer for specific actions that cross state
+                            slices.
                           </li>
                           <li>
                             <a
@@ -1208,10 +1222,11 @@
                               >redux-thunk</a
                             >
                             have access to the entire state through
-                            <code class="language-js >getState()</code>. An action creator can
-                            retrieve additional data from the state and put it
-                            in an action, so that each reducer has enough
-                            information to update its own state slice.
+                            <code class="language-js">getState()</code>. An
+                            action creator can retrieve additional data from the
+                            state and put it in an action, so that each reducer
+                            has enough information to update its own state
+                            slice.
                           </li>
                         </ul>
                         <p>
@@ -1224,8 +1239,9 @@
                           reducer needs additional data to calculate its next
                           state. You just need to make sure that together they
                           follow the basic rules of reducers:
-                          <code class="language-js >(state, action) =&gt; newState</code>, and
-                          update state immutably rather than mutating it
+                          <code class="language-js"
+                            >(state, action) =&gt; newState</code
+                          >, and update state immutably rather than mutating it
                           directly.
                         </p>
                         <h4>
@@ -1310,7 +1326,8 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="do-i-have-to-use-the-switch-statement-to-handle-actions"
                           ></a
-                          >Do I have to use the <code class="language-js >switch</code> statement to
+                          >Do I have to use the
+                          <code class="language-js">switch</code> statement to
                           handle actions?<a
                             class="hash-link"
                             href="#do-i-have-to-use-the-switch-statement-to-handle-actions"
@@ -1321,16 +1338,17 @@
                         <p>
                           No. You are welcome to use any approach you&#x27;d
                           like to respond to an action in a reducer. The
-                          <code class="language-js >switch</code> statement is the most common
-                          approach, but it&#x27;s fine to use
-                          <code class="language-js >if</code> statements, a lookup table of
-                          functions, or to create a function that abstracts this
-                          away. In fact, while Redux does require that action
-                          objects contain a <code class="language-js >type</code> field, your
+                          <code class="language-js">switch</code> statement is
+                          the most common approach, but it&#x27;s fine to use
+                          <code class="language-js">if</code> statements, a
+                          lookup table of functions, or to create a function
+                          that abstracts this away. In fact, while Redux does
+                          require that action objects contain a
+                          <code class="language-js">type</code> field, your
                           reducer logic doesn&#x27;t even have to rely on that
                           to handle the action. That said, the standard approach
                           is definitely using a switch statement or a lookup
-                          table based on <code class="language-js >type</code>.
+                          table based on <code class="language-js">type</code>.
                         </p>
                         <h4>
                           <a
@@ -1437,7 +1455,9 @@
                               href="#how-do-i-share-state-between-two-reducers-do-i-have-to-use-combinereducers"
                               class="table-of-contents__link"
                               >How do I share state between two reducers? Do I
-                              have to use <code class="language-js >combineReducers</code>?</a
+                              have to use
+                              <code class="language-js">combineReducers</code
+                              >?</a
                             >
                           </li>
                           <li>
@@ -1445,8 +1465,8 @@
                               href="#do-i-have-to-use-the-switch-statement-to-handle-actions"
                               class="table-of-contents__link"
                               >Do I have to use the
-                              <code class="language-js >switch</code> statement to handle
-                              actions?</a
+                              <code class="language-js">switch</code> statement
+                              to handle actions?</a
                             >
                           </li>
                         </ul>

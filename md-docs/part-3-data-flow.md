@@ -1,13 +1,6 @@
 <a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 <a href="../official/introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../official/api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../official/faq.html" class="navbar__item navbar__link">FAQ</a><a href="../official/style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/../github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../official/introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 - <a href="../official/introduction/getting-started.html" class="menu__link">Getting Started</a>
@@ -165,11 +158,7 @@ The Redux template for CRA comes with Redux Toolkit and React-Redux already conf
 
 <span class="token plain"> document</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token function" style="color: #e6d874">getElementById</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'root'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-#### <span id="exploring-the-initial-project" class="anchor enhancedAnchor_2LWZ"></span>Exploring the Initial Project<a href="#exploring-the-initial-project" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">)</span>#### <span id="exploring-the-initial-project" class="anchor enhancedAnchor_2LWZ"></span>Exploring the Initial Project<a href="#exploring-the-initial-project" class="hash-link" title="Direct link to heading">#</a>
 
 Let's take a quick look at what the initial project contains:
 
@@ -206,7 +195,7 @@ We'll import `createSlice`, define our initial posts array, pass that to `create
 
 features/posts/postsSlice.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createSlice </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > createSlice </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -232,19 +221,15 @@ features/posts/postsSlice.js
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> postsSlice</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">reducer</span>
-
-Copy
-
-Every time we create a new slice, we need to add its reducer function to our Redux store. We already have a Redux store being created, but right now it doesn't have any data inside. Open up `app/store.js`, import the `postsReducer` function, and update the call to `configureStore` so that the `postsReducer` is being passed as a reducer field named `posts`:
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> postsSlice</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">reducer</span>Every time we create a new slice, we need to add its reducer function to our Redux store. We already have a Redux store being created, but right now it doesn't have any data inside. Open up `app/store.js`, import the `postsReducer` function, and update the call to `configureStore` so that the `postsReducer` is being passed as a reducer field named `posts`:
 
 app/store.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> configureStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > configureStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">postsReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../features/posts/postsSlice'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >postsReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../features/posts/postsSlice'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -256,11 +241,7 @@ app/store.js
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-This tells Redux that we want our top-level state object to have a field named `posts` inside, and all the data for `state.posts` will be updated by the `postsReducer` function when actions are dispatched.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>This tells Redux that we want our top-level state object to have a field named `posts` inside, and all the data for `state.posts` will be updated by the `postsReducer` function when actions are dispatched.
 
 We can confirm that this works by opening the Redux DevTools Extension and looking at the current state contents:
 
@@ -314,11 +295,7 @@ features/posts/PostsList.js
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-We then need to update the routing in `App.js` so that we show the `PostsList` component instead of the "welcome" message. Import the `PostsList` component into `App.js`, and replace the welcome text with `<PostsList />`. We'll also wrap it in a React Fragment, because we're going to add something else to the main page soon:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>We then need to update the routing in `App.js` so that we show the `PostsList` component instead of the "welcome" message. Import the `PostsList` component into `App.js`, and replace the welcome text with `<PostsList />`. We'll also wrap it in a React Fragment, because we're going to add something else to the main page soon:
 
 App.js
 
@@ -390,11 +367,7 @@ App.js
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">default</span><span class="token plain"> App</span>
-
-Copy
-
-Once that's added, the main page of our app should now look like this:
+<span class="token plain"></span><span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">default</span><span class="token plain"> App</span>Once that's added, the main page of our app should now look like this:
 
 ![Initial posts list](../../../d33wubrfki0l68.cloudfront.net/615e610f2b8f47efc4c4386315b30bb2d9efa759/6be14/assets/images/working_post_list-f2f507f15b46413695ee314d2e32f7ff.20)
 
@@ -476,11 +449,7 @@ features/posts/AddPostForm.js
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Import that component into `App.js`, and add it right above the `<PostsList />` component:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Import that component into `App.js`, and add it right above the `<PostsList />` component:
 
 App.js
 
@@ -502,11 +471,7 @@ App.js
 
 <span class="token tag script language-javascript" style="color: #f92672"> </span><span class="token tag script language-javascript punctuation" style="color: #f8f8f2">)</span><span class="token tag script language-javascript punctuation" style="color: #f8f8f2">}</span><span class="token tag" style="color: #f92672"></span>
 
-<span class="token tag" style="color: #f92672"></span><span class="token tag punctuation" style="color: #f8f8f2">/&gt;</span>
-
-Copy
-
-You should see the form show up in the page right below the header.
+<span class="token tag" style="color: #f92672"></span><span class="token tag punctuation" style="color: #f8f8f2">/&gt;</span>You should see the form show up in the page right below the header.
 
 #### <span id="saving-post-entries" class="anchor enhancedAnchor_2LWZ"></span>Saving Post Entries<a href="#saving-post-entries" class="hash-link" title="Direct link to heading">#</a>
 
@@ -532,7 +497,7 @@ features/posts/postsSlice.js
 
 <span class="token plain"> </span><span class="token function" style="color: #e6d874">postAdded</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">push</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">push</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
@@ -546,11 +511,7 @@ features/posts/postsSlice.js
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> postsSlice</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">reducer</span>
-
-Copy
-
-##### <span class="admonition-icon"> </span>warning
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> postsSlice</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">reducer</span>##### <span class="admonition-icon"> </span>warning
 
 Remember: **reducer functions must _always_ create new state values immutably, by making copies!** It's safe to call mutating functions like `Array.push()` or modify object fields like `state.someField = someValue` inside of `createSlice()`, because it converts those mutations into safe immutable updates internally using the Immer library, but **don't try to mutate any data outside of `createSlice`!**
 
@@ -652,11 +613,7 @@ features/posts/AddPostForm
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Now, try typing in a title and some text, and click "Save Post". You should see a new item for that post show up in the posts list.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Now, try typing in a title and some text, and click "Save Post". You should see a new item for that post show up in the posts list.
 
 **Congratulations! You've just built your first working React + Redux app!**
 
@@ -705,8 +662,6 @@ Now that you know the basic Redux data flow, move on to [Part 4: Using Redux Dat
 
 <a href="part-2-app-structure.html" class="pagination-nav__link"></a>
 
-Previous
-
 « Redux Essentials, Part 2: Redux App Structure
 
 <a href="part-4-using-data.html" class="pagination-nav__link"></a>
@@ -743,4 +698,4 @@ Redux Essentials, Part 4: Using Redux Data »
 - [![Deploys by Netlify](../../../www.netlify.com/img/global/badges/netlify-color-accent.svg)](../../../www.netlify.com/index.html)
 
 <a href="../official/index.html" class="footerLogoLink_MyFc"><img src="../official/../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

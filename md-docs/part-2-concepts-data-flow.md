@@ -1,13 +1,6 @@
 <a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 <a href="../official/introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="../essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../official/api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../official/faq.html" class="navbar__item navbar__link">FAQ</a><a href="../official/style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/../github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../official/introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 - <a href="../official/introduction/getting-started.html" class="menu__link">Getting Started</a>
@@ -157,11 +150,7 @@ Let's start by looking at a small React counter component. It tracks a number in
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-It is a self-contained app with the following parts:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>It is a self-contained app with the following parts:
 
 - The **state**, the source of truth that drives our app;
 - The **view**, a declarative description of the UI based on the current state
@@ -202,13 +191,9 @@ JavaScript objects and arrays are all mutable by default. If I create an object,
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// In the same way, we can change the contents of this array</span><span class="token plain"></span>
 
-<span class="token plain">arr</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">push</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'c'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain">arr</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">push</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'c'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain">arr</span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'d'</span>
-
-Copy
-
-This is called _mutating_ the object or array. It's the same object or array reference in memory, but now the contents inside the object have changed.
+<span class="token plain">arr</span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'d'</span>This is called _mutating_ the object or array. It's the same object or array reference in memory, but now the contents inside the object have changed.
 
 **In order to update values immutably, your code must make _copies_ of existing objects/arrays, and then modify the copies**.
 
@@ -258,21 +243,17 @@ We can do this by hand using JavaScript's array / object spread operators, as we
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Create a new copy of arr, with "c" appended to the end</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> arr2 </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> arr</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">concat</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'c'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> arr2 </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> arr</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">concat</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'c'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// or, we can make a copy of the original array:</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> arr3 </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> arr</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">slice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> arr3 </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> arr</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">slice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// and mutate the copy:</span><span class="token plain"></span>
 
-<span class="token plain">arr3</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">push</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'c'</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-**Redux expects that all state updates are done immutably**. We'll look at where and how this is important a bit later, as well as some easier ways to write immutable update logic.
+<span class="token plain">arr3</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">push</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'c'</span><span class="token punctuation" style="color: #f8f8f2">)</span>**Redux expects that all state updates are done immutably**. We'll look at where and how this is important a bit later, as well as some easier ways to write immutable update logic.
 
 ##### <span class="admonition-icon"> </span>Want to Know More?
 
@@ -301,11 +282,7 @@ A typical action object might look like this:
 
 <span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'Buy milk'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-### <span id="reducers" class="anchor enhancedAnchor_2LWZ"></span>Reducers<a href="#reducers" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>### <span id="reducers" class="anchor enhancedAnchor_2LWZ"></span>Reducers<a href="#reducers" class="hash-link" title="Direct link to heading">#</a>
 
 A **reducer** is a function that receives the current `state` and an `action` object, decides how to update the state if necessary, and returns the new state: `(state, action) => newState`. **You can think of a reducer as an event listener which handles events based on the received action (event) type.**
 
@@ -357,11 +334,7 @@ Here's a small example of a reducer, showing the steps that each reducer should 
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> state</span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Reducers can use any kind of logic inside to decide what the new state should be: `if/else`, `switch`, loops, and so on.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Reducers can use any kind of logic inside to decide what the new state should be: `if/else`, `switch`, loops, and so on.
 
 #### Detailed Explanation: Why Are They Called 'Reducers?'
 
@@ -382,7 +355,7 @@ If we wanted to add together an array of numbers to find out what the total is, 
 
 <span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">addNumbers</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">previousResult</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> currentItem</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> previousResult</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> currentItem </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> previousResult</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> currentItem </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> previousResult </span><span class="token operator" style="color: #f8f8f2">+</span><span class="token plain"> currentItem</span>
 
@@ -394,7 +367,7 @@ If we wanted to add together an array of numbers to find out what the total is, 
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> total </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> numbers</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">reduce</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">addNumbers</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> initialValue</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> total </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> numbers</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">reduce</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">addNumbers</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> initialValue</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// {previousResult: 0, currentItem: 2}</span><span class="token plain"></span>
 
@@ -404,13 +377,9 @@ If we wanted to add together an array of numbers to find out what the total is, 
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">total</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">total</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// 15</span>
-
-Copy
-
-Notice that this `addNumbers` "reduce callback" function doesn't need to keep track of anything itself. It takes the `previousResult` and `currentItem` arguments, does something with them, and returns a new result value.
+<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// 15</span>Notice that this `addNumbers` "reduce callback" function doesn't need to keep track of anything itself. It takes the `previousResult` and `currentItem` arguments, does something with them, and returns a new result value.
 
 **A Redux reducer function is exactly the same idea as this "reduce callback" function!** It takes a "previous result" (the `state`), and the "current item" (the `action` object), decides a new state value based on those arguments, and returns that new state.
 
@@ -432,15 +401,11 @@ If we were to create an array of Redux actions, call `reduce()`, and pass in a r
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> finalResult </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> actions</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">reduce</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">counterReducer</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> initialState</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> finalResult </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> actions</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">reduce</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">counterReducer</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> initialState</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">finalResult</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">finalResult</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// {value: 3}</span>
-
-Copy
-
-We can say that **Redux reducers reduce a set of actions (over time) into a single state**. The difference is that with `Array.reduce()` it happens all at once, and with Redux, it happens over the lifetime of your running app.
+<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// {value: 3}</span>We can say that **Redux reducers reduce a set of actions (over time) into a single state**. The difference is that with `Array.reduce()` it happens all at once, and with Redux, it happens over the lifetime of your running app.
 
 ### <span id="store" class="anchor enhancedAnchor_2LWZ"></span>Store<a href="#store" class="hash-link" title="Direct link to heading">#</a>
 
@@ -448,7 +413,7 @@ The current Redux application state lives in an object called the **store** .
 
 The store is created by passing in a reducer, and has a method called `getState` that returns the current state value:
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> configureStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > configureStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -456,27 +421,19 @@ The store is created by passing in a reducer, and has a method called `getState`
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// {value: 0}</span>
-
-Copy
-
-### <span id="dispatch" class="anchor enhancedAnchor_2LWZ"></span>Dispatch<a href="#dispatch" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// {value: 0}</span>### <span id="dispatch" class="anchor enhancedAnchor_2LWZ"></span>Dispatch<a href="#dispatch" class="hash-link" title="Direct link to heading">#</a>
 
 The Redux store has a method called `dispatch`. **The only way to update the state is to call `store.dispatch()` and pass in an action object**. The store will run its reducer function and save the new state value inside, and we can call `getState()` to retrieve the updated value:
 
-<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'counter/incremented'</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'counter/incremented'</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// {value: 1}</span>
-
-Copy
-
-**You can think of dispatching actions as "triggering an event"** in the application. Something happened, and we want the store to know about it. Reducers act like event listeners, and when they hear an action they are interested in, they update the state in response.
+<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// {value: 1}</span>**You can think of dispatching actions as "triggering an event"** in the application. Something happened, and we want the store to know about it. Reducers act like event listeners, and when they hear an action they are interested in, they update the state in response.
 
 ### <span id="selectors" class="anchor enhancedAnchor_2LWZ"></span>Selectors<a href="#selectors" class="hash-link" title="Direct link to heading">#</a>
 
@@ -486,15 +443,11 @@ Copy
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> currentValue </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">selectCounterValue</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> currentValue </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">selectCounterValue</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">currentValue</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">currentValue</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// 2</span>
-
-Copy
-
-## <span id="core-concepts-and-principles" class="anchor enhancedAnchor_2LWZ"></span>Core Concepts and Principles<a href="#core-concepts-and-principles" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// 2</span>## <span id="core-concepts-and-principles" class="anchor enhancedAnchor_2LWZ"></span>Core Concepts and Principles<a href="#core-concepts-and-principles" class="hash-link" title="Direct link to heading">#</a>
 
 Overall, we can summarize the intent behind Redux's design in three core concepts:
 
@@ -569,8 +522,6 @@ Now, let's see how those pieces work together as we start building a new Redux a
 
 <a href="part-1-overview.html" class="pagination-nav__link"></a>
 
-Previous
-
 « Redux Fundamentals, Part 1: Redux Overview
 
 <a href="part-3-state-actions-reducers.html" class="pagination-nav__link"></a>
@@ -616,4 +567,4 @@ Redux Fundamentals, Part 3: State, Actions, and Reducers »
 - [![Deploys by Netlify](../../../www.netlify.com/img/global/badges/netlify-color-accent.svg)](../../../www.netlify.com/index.html)
 
 <a href="../official/index.html" class="footerLogoLink_MyFc"><img src="../official/../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

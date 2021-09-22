@@ -1274,7 +1274,7 @@
                             href="../../www.npmjs.com/package/%40types/react-redux.html"
                             target="_blank"
                             rel="noopener noreferrer"
-                            ><code class="language-js >@types/react-redux</code> typedefs package</a
+                            ><code class="language-js" >@types/react-redux</code> typedefs package</a
                           >
                           on NPM. In addition to typing the library functions,
                           the types also export some helpers to make it easier
@@ -1283,12 +1283,12 @@
                         </p>
                         <p>
                           As of React Redux v7.2.3, the
-                          <code class="language-js >react-redux</code> package has a dependency on
-                          <code class="language-js >@types/react-redux</code>, so the type
+                          <code class="language-js" >react-redux</code> package has a dependency on
+                          <code class="language-js" >@types/react-redux</code>, so the type
                           definitions will be automatically installed with the
                           library. Otherwise, you&#x27;ll need to manually
                           install them yourself (typically
-                          <code class="language-js >npm install @types/react-redux</code> ).
+                          <code class="language-js" >npm install @types/react-redux</code> ).
                         </p>
                         <p>
                           The
@@ -1325,8 +1325,8 @@
                           >
                           should not need any additional typings. You will,
                           however, want to extract the
-                          <code class="language-js >RootState</code> type and the
-                          <code class="language-js >Dispatch</code> type so that they can be
+                          <code class="language-js" >RootState</code> type and the
+                          <code class="language-js" >Dispatch</code> type so that they can be
                           referenced as needed. Inferring these types from the
                           store itself means that they correctly update as you
                           add more state slices or modify middleware settings.
@@ -1334,7 +1334,7 @@
                         <p>
                           Since those are types, it&#x27;s safe to export them
                           directly from your store setup file such as
-                          <code class="language-js >app/store.ts</code> and import them directly
+                          <code class="language-js" >app/store.ts</code> and import them directly
                           into other files.
                         </p>
                         <div class="codeBlockContainer_K1bP">
@@ -1656,38 +1656,38 @@
                         </h3>
                         <p>
                           While it&#x27;s possible to import the
-                          <code class="language-js >RootState</code> and
-                          <code class="language-js >AppDispatch</code> types into each component,
+                          <code class="language-js" >RootState</code> and
+                          <code class="language-js" >AppDispatch</code> types into each component,
                           it&#x27;s better to
                           <strong
                             >create pre-typed versions of the
-                            <code class="language-js >useDispatch</code> and
-                            <code class="language-js >useSelector</code> hooks for usage in your
+                            <code class="language-js" >useDispatch</code> and
+                            <code class="language-js" >useSelector</code> hooks for usage in your
                             application</strong
                           >. This is important for a couple reasons:
                         </p>
                         <ul>
                           <li>
-                            For <code class="language-js >useSelector</code>, it saves you the need
-                            to type <code class="language-js >(state: RootState)</code> every time
+                            For <code class="language-js" >useSelector</code>, it saves you the need
+                            to type <code class="language-js" >(state: RootState)</code> every time
                           </li>
                           <li>
-                            For <code class="language-js >useDispatch</code>, the default
-                            <code class="language-js >Dispatch</code> type does not know about
+                            For <code class="language-js" >useDispatch</code>, the default
+                            <code class="language-js" >Dispatch</code> type does not know about
                             thunks or other middleware. In order to correctly
                             dispatch thunks, you need to use the specific
-                            customized <code class="language-js >AppDispatch</code> type from the
+                            customized <code class="language-js" >AppDispatch</code> type from the
                             store that includes the thunk middleware types, and
-                            use that with <code class="language-js >useDispatch</code>. Adding a
-                            pre-typed <code class="language-js >useDispatch</code> hook keeps you
+                            use that with <code class="language-js" >useDispatch</code>. Adding a
+                            pre-typed <code class="language-js" >useDispatch</code> hook keeps you
                             from forgetting to import
-                            <code class="language-js >AppDispatch</code> where it&#x27;s needed.
+                            <code class="language-js" >AppDispatch</code> where it&#x27;s needed.
                           </li>
                         </ul>
                         <p>
                           Since these are actual variables, not types, it&#x27;s
                           important to define them in a separate file such as
-                          <code class="language-js >app/hooks.ts</code>, not the store setup file.
+                          <code class="language-js" >app/hooks.ts</code>, not the store setup file.
                           This allows you to import them into any component file
                           that needs to use the hooks, and avoids potential
                           circular import dependency issues.
@@ -1989,19 +1989,19 @@
                         </h3>
                         <p>
                           Each slice file should define a type for its initial
-                          state value, so that <code class="language-js >createSlice</code> can
-                          correctly infer the type of <code class="language-js >state</code> in each
+                          state value, so that <code class="language-js" >createSlice</code> can
+                          correctly infer the type of <code class="language-js" >state</code> in each
                           case reducer.
                         </p>
                         <p>
                           All generated actions should be defined using the
-                          <code class="language-js >PayloadAction&lt;T&gt;</code> type from Redux
+                          <code class="language-js" >PayloadAction&lt;T&gt;</code> type from Redux
                           Toolkit, which takes the type of the
-                          <code class="language-js >action.payload</code> field as its generic
+                          <code class="language-js" >action.payload</code> field as its generic
                           argument.
                         </p>
                         <p>
-                          You can safely import the <code class="language-js >RootState</code> type
+                          You can safely import the <code class="language-js" >RootState</code> type
                           from the store file here. It&#x27;s a circular import,
                           but the TypeScript compiler can correctly handle that
                           for types. This may be needed for use cases like
@@ -2762,11 +2762,11 @@
                         </div>
                         <p>
                           The generated action creators will be correctly typed
-                          to accept a <code class="language-js >payload</code> argument based on the
-                          <code class="language-js >PayloadAction&lt;T&gt;</code> type you provided
+                          to accept a <code class="language-js" >payload</code> argument based on the
+                          <code class="language-js" >PayloadAction&lt;T&gt;</code> type you provided
                           for the reducer. For example,
-                          <code class="language-js >incrementByAmount</code> requires a
-                          <code class="language-js >number</code> as its argument.
+                          <code class="language-js" >incrementByAmount</code> requires a
+                          <code class="language-js" >number</code> as its argument.
                         </p>
                         <p>
                           In some cases,
@@ -2777,7 +2777,7 @@
                             >TypeScript may unnecessarily tighten the type of
                             the initial state</a
                           >. If that happens, you can work around it by casting
-                          the initial state using <code class="language-js >as</code>, instead of
+                          the initial state using <code class="language-js" >as</code>, instead of
                           declaring the type of the variable:
                         </p>
                         <div class="codeBlockContainer_K1bP">
@@ -3232,17 +3232,17 @@
                             >Reducers</a
                           >
                           are pure functions that receive the current
-                          <code class="language-js >state</code> and incoming <code class="language-js >action</code> as
+                          <code class="language-js" >state</code> and incoming <code class="language-js" >action</code> as
                           arguments, and return a new state.
                         </p>
                         <p>
                           If you are using Redux Toolkit&#x27;s
-                          <code class="language-js >createSlice</code>, you should rarely need to
+                          <code class="language-js" >createSlice</code>, you should rarely need to
                           specifically type a reducer separately. If you do
                           actually write a standalone reducer, it&#x27;s
                           typically sufficient to declare the type of the
-                          <code class="language-js >initialState</code> value, and type the
-                          <code class="language-js >action</code> as <code class="language-js >AnyAction</code>:
+                          <code class="language-js" >initialState</code> value, and type the
+                          <code class="language-js" >action</code> as <code class="language-js" >AnyAction</code>:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly ts">
@@ -3491,7 +3491,7 @@
                         </div>
                         <p>
                           However, the Redux core does export a
-                          <code class="language-js >Reducer&lt;State, Action&gt;</code> type you can
+                          <code class="language-js" >Reducer&lt;State, Action&gt;</code> type you can
                           use as well.
                         </p>
                         <h3>
@@ -3515,12 +3515,12 @@
                           >
                           are an extension mechanism for the Redux store.
                           Middleware are composed into a pipeline that wrap the
-                          store&#x27;s <code class="language-js >dispatch</code> method, and have
-                          access to the store&#x27;s <code class="language-js >dispatch</code> and
-                          <code class="language-js >getState</code> methods.
+                          store&#x27;s <code class="language-js" >dispatch</code> method, and have
+                          access to the store&#x27;s <code class="language-js" >dispatch</code> and
+                          <code class="language-js" >getState</code> methods.
                         </p>
                         <p>
-                          The Redux core exports a <code class="language-js >Middleware</code> type
+                          The Redux core exports a <code class="language-js" >Middleware</code> type
                           that can be used to correctly type a middleware
                           function:
                         </p>
@@ -3672,9 +3672,9 @@
                         </div>
                         <p>
                           A custom middleware should use the
-                          <code class="language-js >Middleware</code> type, and pass the generic
-                          args for <code class="language-js >S</code> (state) and
-                          <code class="language-js >D</code> (dispatch) if needed:
+                          <code class="language-js" >Middleware</code> type, and pass the generic
+                          args for <code class="language-js" >S</code> (state) and
+                          <code class="language-js" >D</code> (dispatch) if needed:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly ts">
@@ -3943,9 +3943,9 @@
                           >
                           is the standard middleware for writing sync and async
                           logic that interacts with the Redux store. A thunk
-                          function receives <code class="language-js >dispatch</code> and
-                          <code class="language-js >getState</code> as its parameters. Redux Thunk
-                          has a built in <code class="language-js >ThunkAction</code> type which we
+                          function receives <code class="language-js" >dispatch</code> and
+                          <code class="language-js" >getState</code> as its parameters. Redux Thunk
+                          has a built in <code class="language-js" >ThunkAction</code> type which we
                           can use to define types for those arguments:
                         </p>
                         <div class="codeBlockContainer_K1bP">
@@ -4191,13 +4191,13 @@
                         </div>
                         <p>
                           You will typically want to provide the
-                          <code class="language-js >R</code> (return type) and
-                          <code class="language-js >S</code> (state) generic arguments.
+                          <code class="language-js" >R</code> (return type) and
+                          <code class="language-js" >S</code> (state) generic arguments.
                           Unfortunately, TS does not allow only providing
                           <em>some</em> generic arguments, so the usual values
-                          for the other arguments are <code class="language-js >unknown</code> for
-                          <code class="language-js >E</code> and <code class="language-js >AnyAction</code> for
-                          <code class="language-js >A</code>:
+                          for the other arguments are <code class="language-js" >unknown</code> for
+                          <code class="language-js" >E</code> and <code class="language-js" >AnyAction</code> for
+                          <code class="language-js" >A</code>:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly ts">
@@ -4701,7 +4701,7 @@
                         </div>
                         <p>
                           To reduce repetition, you might want to define a
-                          reusable <code class="language-js >AppThunk</code> type once, in your
+                          reusable <code class="language-js" >AppThunk</code> type once, in your
                           store file, and then use that type whenever you write
                           a thunk:
                         </p>
@@ -4868,12 +4868,12 @@
                             <p>
                               Don&#x27;t forget that
                               <strong
-                                >the default <code class="language-js >useDispatch</code> hook does
+                                >the default <code class="language-js" >useDispatch</code> hook does
                                 not know about thunks</strong
                               >, and so dispatching a thunk will cause a type
                               error. Be sure to
                               <a href="#define-root-state-and-dispatch-types"
-                                >use an updated form of <code class="language-js >Dispatch</code> in
+                                >use an updated form of <code class="language-js" >Dispatch</code> in
                                 your components that recognizes thunks as an
                                 acceptable type to dispatch</a
                               >.
@@ -4926,7 +4926,7 @@
                             href="../../www.npmjs.com/package/%40types/react-redux.html"
                             target="_blank"
                             rel="noopener noreferrer"
-                            ><code class="language-js >@types/react-redux</code> type definitions</a
+                            ><code class="language-js" >@types/react-redux</code> type definitions</a
                           >
                           from npm.
                         </p>
@@ -4937,7 +4937,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="typing-the-useselector-hook"
                           ></a
-                          >Typing the <code class="language-js >useSelector</code> hook<a
+                          >Typing the <code class="language-js" >useSelector</code> hook<a
                             class="hash-link"
                             href="#typing-the-useselector-hook"
                             title="Direct link to heading"
@@ -4945,9 +4945,9 @@
                           >
                         </h3>
                         <p>
-                          Declare the type of the <code class="language-js >state</code> parameter
+                          Declare the type of the <code class="language-js" >state</code> parameter
                           in the selector function, and the return type of
-                          <code class="language-js >useSelector</code> will be inferred to match the
+                          <code class="language-js" >useSelector</code> will be inferred to match the
                           return type of the selector:
                         </p>
                         <div class="codeBlockContainer_K1bP">
@@ -5206,8 +5206,8 @@
                         </div>
                         <p>
                           However, prefer creating a pre-typed
-                          <code class="language-js >useSelector</code> hook with the correct type of
-                          <code class="language-js >state</code> built-in instead.
+                          <code class="language-js" >useSelector</code> hook with the correct type of
+                          <code class="language-js" >state</code> built-in instead.
                         </p>
                         <h3>
                           <a
@@ -5216,7 +5216,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="typing-the-usedispatch-hook"
                           ></a
-                          >Typing the <code class="language-js >useDispatch</code> hook<a
+                          >Typing the <code class="language-js" >useDispatch</code> hook<a
                             class="hash-link"
                             href="#typing-the-usedispatch-hook"
                             title="Direct link to heading"
@@ -5225,8 +5225,8 @@
                         </h3>
                         <p>
                           By default, the return value of
-                          <code class="language-js >useDispatch</code> is the standard
-                          <code class="language-js >Dispatch</code> type defined by the Redux core
+                          <code class="language-js" >useDispatch</code> is the standard
+                          <code class="language-js" >Dispatch</code> type defined by the Redux core
                           types, so no declarations are needed:
                         </p>
                         <div class="codeBlockContainer_K1bP">
@@ -5285,8 +5285,8 @@
                         </div>
                         <p>
                           However, prefer creating a pre-typed
-                          <code class="language-js >useAppDispatch</code> hook with the correct type
-                          of <code class="language-js >Dispatch</code> built-in instead.
+                          <code class="language-js" >useAppDispatch</code> hook with the correct type
+                          of <code class="language-js" >Dispatch</code> built-in instead.
                         </p>
                         <h3>
                           <a
@@ -5295,7 +5295,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="typing-the-connect-higher-order-component"
                           ></a
-                          >Typing the <code class="language-js >connect</code> higher order
+                          >Typing the <code class="language-js" >connect</code> higher order
                           component<a
                             class="hash-link"
                             href="#typing-the-connect-higher-order-component"
@@ -5304,12 +5304,12 @@
                           >
                         </h3>
                         <p>
-                          If you are still using <code class="language-js >connect</code>, you
+                          If you are still using <code class="language-js" >connect</code>, you
                           should use the
-                          <code class="language-js >ConnectedProps&lt;T&gt;</code> type exported by
-                          <code class="language-js >@types/react-redux^7.1.2</code> to infer the
+                          <code class="language-js" >ConnectedProps&lt;T&gt;</code> type exported by
+                          <code class="language-js" >@types/react-redux^7.1.2</code> to infer the
                           types of the props from
-                          <code class="language-js >connect</code> automatically. This requires
+                          <code class="language-js" >connect</code> automatically. This requires
                           splitting the
                           <code class="language-js 
                             >connect(mapState, mapDispatch)(MyComponent)</code
@@ -6131,8 +6131,8 @@
                             TypeScript</a
                           >
                           section already covered the normal usage patterns for
-                          <code class="language-js >configureStore</code> and
-                          <code class="language-js >createSlice</code>, and the
+                          <code class="language-js" >configureStore</code> and
+                          <code class="language-js" >createSlice</code>, and the
                           <a
                             href="../../redux-toolkit.js.org/usage/usage-with-typescript.html"
                             target="_blank"
@@ -6153,7 +6153,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="typing-configurestore"
                           ></a
-                          >Typing <code class="language-js >configureStore</code
+                          >Typing <code class="language-js" >configureStore</code
                           ><a
                             class="hash-link"
                             href="#typing-configurestore"
@@ -6162,16 +6162,16 @@
                           >
                         </h3>
                         <p>
-                          <code class="language-js >configureStore</code> infers the type of the
+                          <code class="language-js" >configureStore</code> infers the type of the
                           state value from the provided root reducer function,
                           so no specific type declarations should be needed.
                         </p>
                         <p>
                           If you want to add additional middleware to the store,
                           be sure to use the specialized
-                          <code class="language-js >.concat()</code> and
-                          <code class="language-js >.prepend()</code> methods included in the array
-                          returned by <code class="language-js >getDefaultMiddleware()</code>, as
+                          <code class="language-js" >.concat()</code> and
+                          <code class="language-js" >.prepend()</code> methods included in the array
+                          returned by <code class="language-js" >getDefaultMiddleware()</code>, as
                           those will correctly preserve the types of the
                           middleware you&#x27;re adding. (Using plain JS array
                           spreads often loses those types.)
@@ -6472,17 +6472,17 @@
                         </h3>
                         <p>
                           RTK-generated action creators have a
-                          <code class="language-js >match</code> method that acts as a
+                          <code class="language-js" >match</code> method that acts as a
                           <a
                             href="../../www.typescriptlang.org/docs/handbook/2/narrowing.html#using-type-predicates"
                             target="_blank"
                             rel="noopener noreferrer"
                             >type predicate</a
                           >. Calling
-                          <code class="language-js >someActionCreator.match(action)</code> will do a
+                          <code class="language-js" >someActionCreator.match(action)</code> will do a
                           string comparison against the
-                          <code class="language-js >action.type</code> string, and if used as a
-                          condition, narrow the type of <code class="language-js >action</code> down
+                          <code class="language-js" >action.type</code> string, and if used as a
+                          condition, narrow the type of <code class="language-js" >action</code> down
                           to be the correct TS type:
                         </p>
                         <div class="codeBlockContainer_K1bP">
@@ -6707,8 +6707,8 @@
                         <p>
                           This is particularly useful when checking for action
                           types in Redux middleware, such as custom middleware,
-                          <code class="language-js >redux-observable</code>, and RxJS&#x27;s
-                          <code class="language-js >filter</code> method.
+                          <code class="language-js" >redux-observable</code>, and RxJS&#x27;s
+                          <code class="language-js" >filter</code> method.
                         </p>
                         <h3>
                           <a
@@ -6717,7 +6717,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="typing-createslice"
                           ></a
-                          >Typing <code class="language-js >createSlice</code
+                          >Typing <code class="language-js" >createSlice</code
                           ><a
                             class="hash-link"
                             href="#typing-createslice"
@@ -6743,8 +6743,8 @@
                           If you have too many case reducers and defining them
                           inline would be messy, or you want to reuse case
                           reducers across slices, you can also define them
-                          outside the <code class="language-js >createSlice</code> call and type
-                          them as <code class="language-js >CaseReducer</code>:
+                          outside the <code class="language-js" >createSlice</code> call and type
+                          them as <code class="language-js" >CaseReducer</code>:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly ts">
@@ -6977,7 +6977,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="typing-extrareducers"
                           ></a
-                          >Typing <code class="language-js >extraReducers</code
+                          >Typing <code class="language-js" >extraReducers</code
                           ><a
                             class="hash-link"
                             href="#typing-extrareducers"
@@ -6986,13 +6986,13 @@
                           >
                         </h4>
                         <p>
-                          If you are adding an <code class="language-js >extraReducers</code> field
-                          in <code class="language-js >createSlice</code>, be sure to use the
+                          If you are adding an <code class="language-js" >extraReducers</code> field
+                          in <code class="language-js" >createSlice</code>, be sure to use the
                           &quot;builder callback&quot; form, as the &quot;plain
                           object&quot; form cannot infer action types correctly.
                           Passing an RTK-generated action creator to
-                          <code class="language-js >builder.addCase()</code> will correctly infer
-                          the type of the <code class="language-js >action</code>:
+                          <code class="language-js" >builder.addCase()</code> will correctly infer
+                          the type of the <code class="language-js" >action</code>:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly ts">
@@ -7278,7 +7278,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="typing-prepare-callbacks"
                           ></a
-                          >Typing <code class="language-js >prepare</code> Callbacks<a
+                          >Typing <code class="language-js" >prepare</code> Callbacks<a
                             class="hash-link"
                             href="#typing-prepare-callbacks"
                             title="Direct link to heading"
@@ -7286,10 +7286,10 @@
                           >
                         </h4>
                         <p>
-                          If you want to add a <code class="language-js >meta</code> or
-                          <code class="language-js >error</code> property to your action, or
-                          customize the <code class="language-js >payload</code> of your action, you
-                          have to use the <code class="language-js >prepare</code> notation for
+                          If you want to add a <code class="language-js" >meta</code> or
+                          <code class="language-js" >error</code> property to your action, or
+                          customize the <code class="language-js" >payload</code> of your action, you
+                          have to use the <code class="language-js" >prepare</code> notation for
                           defining the case reducer. Using this notation with
                           TypeScript looks like:
                         </p>
@@ -7838,7 +7838,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="typing-createasyncthunk"
                           ></a
-                          >Typing <code class="language-js >createAsyncThunk</code
+                          >Typing <code class="language-js" >createAsyncThunk</code
                           ><a
                             class="hash-link"
                             href="#typing-createasyncthunk"
@@ -7848,7 +7848,7 @@
                         </h3>
                         <p>
                           For basic usage, the only type you need to provide for
-                          <code class="language-js >createAsyncThunk</code> is the type of the
+                          <code class="language-js" >createAsyncThunk</code> is the type of the
                           single argument for your payload creation callback.
                           You should also ensure that the return value of the
                           callback is typed correctly:
@@ -8217,9 +8217,9 @@
                         </div>
                         <p>
                           If you need to modify the types of the
-                          <code class="language-js >thunkApi</code> parameter, such as supplying the
-                          type of the <code class="language-js >state</code> returned by
-                          <code class="language-js >getState()</code>, you must supply the first two
+                          <code class="language-js" >thunkApi</code> parameter, such as supplying the
+                          type of the <code class="language-js" >state</code> returned by
+                          <code class="language-js" >getState()</code>, you must supply the first two
                           generic arguments for return type and payload
                           argument, plus whicher &quot;thunkApi argument
                           fields&quot; are relevant in an object:
@@ -9072,7 +9072,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="typing-createentityadapter"
                           ></a
-                          >Typing <code class="language-js >createEntityAdapter</code
+                          >Typing <code class="language-js" >createEntityAdapter</code
                           ><a
                             class="hash-link"
                             href="#typing-createentityadapter"
@@ -9081,7 +9081,7 @@
                           >
                         </h3>
                         <p>
-                          Typing <code class="language-js >createEntityAdapter</code> only requires
+                          Typing <code class="language-js" >createEntityAdapter</code> only requires
                           you to specify the entity type as the single generic
                           argument. This typically looks like:
                         </p>
@@ -9653,13 +9653,13 @@
                             >We recommend using the React Redux hooks API as the
                             default approach</strong
                           >. The hooks API is much simpler to use with
-                          TypeScript, as <code class="language-js >useSelector</code> is a simple
+                          TypeScript, as <code class="language-js" >useSelector</code> is a simple
                           hook that takes a selector function, and the return
                           type is easily inferred from the type of the
-                          <code class="language-js >state</code> argument.
+                          <code class="language-js" >state</code> argument.
                         </p>
                         <p>
-                          While <code class="language-js >connect</code> still works fine, and
+                          While <code class="language-js" >connect</code> still works fine, and
                           <em>can</em> be typed, it&#x27;s much more difficult
                           to type correctly.
                         </p>
@@ -9695,7 +9695,7 @@
                         </p>
                         <p>
                           In addition, if you&#x27;re using
-                          <code class="language-js >createSlice</code>, you already know that all
+                          <code class="language-js" >createSlice</code>, you already know that all
                           actions defined by that slice are being handled
                           correctly.
                         </p>
@@ -9935,21 +9935,21 @@
                             <a
                               href="#typing-the-useselector-hook"
                               class="table-of-contents__link"
-                              >Typing the <code class="language-js >useSelector</code> hook</a
+                              >Typing the <code class="language-js" >useSelector</code> hook</a
                             >
                           </li>
                           <li>
                             <a
                               href="#typing-the-usedispatch-hook"
                               class="table-of-contents__link"
-                              >Typing the <code class="language-js >useDispatch</code> hook</a
+                              >Typing the <code class="language-js" >useDispatch</code> hook</a
                             >
                           </li>
                           <li>
                             <a
                               href="#typing-the-connect-higher-order-component"
                               class="table-of-contents__link"
-                              >Typing the <code class="language-js >connect</code> higher order
+                              >Typing the <code class="language-js" >connect</code> higher order
                               component</a
                             >
                           </li>
@@ -9966,7 +9966,7 @@
                             <a
                               href="#typing-configurestore"
                               class="table-of-contents__link"
-                              >Typing <code class="language-js >configureStore</code></a
+                              >Typing <code class="language-js" >configureStore</code></a
                             >
                           </li>
                           <li>
@@ -9980,21 +9980,21 @@
                             <a
                               href="#typing-createslice"
                               class="table-of-contents__link"
-                              >Typing <code class="language-js >createSlice</code></a
+                              >Typing <code class="language-js" >createSlice</code></a
                             >
                           </li>
                           <li>
                             <a
                               href="#typing-createasyncthunk"
                               class="table-of-contents__link"
-                              >Typing <code class="language-js >createAsyncThunk</code></a
+                              >Typing <code class="language-js" >createAsyncThunk</code></a
                             >
                           </li>
                           <li>
                             <a
                               href="#typing-createentityadapter"
                               class="table-of-contents__link"
-                              >Typing <code class="language-js >createEntityAdapter</code></a
+                              >Typing <code class="language-js" >createEntityAdapter</code></a
                             >
                           </li>
                         </ul>

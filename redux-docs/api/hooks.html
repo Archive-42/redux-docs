@@ -229,7 +229,7 @@
         >
       </p>
       <p>
-        The existing <code class="language-js >connect</code> API still works and will continue to
+        The existing <code class="language-js" >connect</code> API still works and will continue to
         be supported, but the hooks API is simpler and works better with
         TypeScript.
       </p>
@@ -239,11 +239,11 @@
       Using Hooks in a React Redux App
     </h2>
     <p>
-      As with <code class="language-js >connect()</code>, you should start by wrapping your entire
-      application in a <code class="language-js >&lt;Provider&gt;</code> component to make the store
+      As with <code class="language-js" >connect()</code>, you should start by wrapping your entire
+      application in a <code class="language-js" >&lt;Provider&gt;</code> component to make the store
       available throughout the component tree:
     </p>
-    <pre class="language-js  class="jsx"><code class="language-js >const store = createStore(rootReducer)
+    <pre class="language-js  class="jsx"><code class="language-js" >const store = createStore(rootReducer)
 
 ReactDOM.render(
   &lt;Provider store={store}&gt;
@@ -255,7 +255,7 @@ ReactDOM.render(
       From there, you may import any of the listed React Redux hooks APIs and
       use them within your function components.
     </p>
-    <h2 id="useselector"><code class="language-js >useSelector()</code></h2>
+    <h2 id="useselector"><code class="language-js" >useSelector()</code></h2>
     <div class="sourceCode" id="cb2">
       <pre class="language-js 
         class="sourceCode js"
@@ -275,28 +275,28 @@ ReactDOM.render(
     <p>
       The selector is approximately equivalent to the
       <a href="../using-react-redux/connect-mapstate"
-        ><code class="language-js >mapStateToProps</code> argument to <code class="language-js >connect</code></a
+        ><code class="language-js" >mapStateToProps</code> argument to <code class="language-js" >connect</code></a
       >
       conceptually. The selector will be called with the entire Redux store
       state as its only argument. The selector will be run whenever the function
       component renders (unless its reference hasn’t changed since a previous
       render of the component so that a cached result can be returned by the
-      hook without re-running the selector). <code class="language-js >useSelector()</code> will
+      hook without re-running the selector). <code class="language-js" >useSelector()</code> will
       also subscribe to the Redux store, and run your selector whenever an
       action is dispatched.
     </p>
     <p>
       However, there are some differences between the selectors passed to
-      <code class="language-js >useSelector()</code> and a <code class="language-js >mapState</code> function:
+      <code class="language-js" >useSelector()</code> and a <code class="language-js" >mapState</code> function:
     </p>
     <ul>
       <li>
         The selector may return any value as a result, not just an object. The
         return value of the selector will be used as the return value of the
-        <code class="language-js >useSelector()</code> hook.
+        <code class="language-js" >useSelector()</code> hook.
       </li>
       <li>
-        When an action is dispatched, <code class="language-js >useSelector()</code> will do a
+        When an action is dispatched, <code class="language-js" >useSelector()</code> will do a
         reference comparison of the previous selector result value and the
         current result value. If they are different, the component will be
         forced to re-render. If they are the same, the component will not
@@ -304,7 +304,7 @@ ReactDOM.render(
       </li>
       <li>
         The selector function does <em>not</em> receive an
-        <code class="language-js >ownProps</code> argument. However, props can be used through
+        <code class="language-js" >ownProps</code> argument. However, props can be used through
         closure (see the examples below) or by using a curried selector.
       </li>
       <li>
@@ -312,7 +312,7 @@ ReactDOM.render(
         below for more details).
       </li>
       <li>
-        <code class="language-js >useSelector()</code> uses strict <code class="language-js >===</code> reference
+        <code class="language-js" >useSelector()</code> uses strict <code class="language-js" >===</code> reference
         equality checks by default, not shallow equality (see the following
         section for more details).
       </li>
@@ -326,11 +326,11 @@ ReactDOM.render(
       </p>
     </div>
     <p>
-      You may call <code class="language-js >useSelector()</code> multiple times within a single
-      function component. Each call to <code class="language-js >useSelector()</code> creates an
+      You may call <code class="language-js" >useSelector()</code> multiple times within a single
+      function component. Each call to <code class="language-js" >useSelector()</code> creates an
       individual subscription to the Redux store. Because of the React update
       batching behavior used in React Redux v7, a dispatched action that causes
-      multiple <code class="language-js >useSelector()</code>s in the same component to return new
+      multiple <code class="language-js" >useSelector()</code>s in the same component to return new
       values <em>should</em> only result in a single re-render.
     </p>
     <h3 id="equality-comparisons-and-updates">
@@ -339,31 +339,31 @@ ReactDOM.render(
     <p>
       When the function component renders, the provided selector function will
       be called and its result will be returned from the
-      <code class="language-js >useSelector()</code> hook. (A cached result may be returned by the
+      <code class="language-js" >useSelector()</code> hook. (A cached result may be returned by the
       hook without re-running the selector if it’s the same function reference
       as on a previous render of the component.)
     </p>
     <p>
       However, when an action is dispatched to the Redux store,
-      <code class="language-js >useSelector()</code> only forces a re-render if the selector result
+      <code class="language-js" >useSelector()</code> only forces a re-render if the selector result
       appears to be different than the last result. As of v7.1.0-alpha.5, the
-      default comparison is a strict <code class="language-js >===</code> reference comparison. This
-      is different than <code class="language-js >connect()</code>, which uses shallow equality
-      checks on the results of <code class="language-js >mapState</code> calls to determine if
+      default comparison is a strict <code class="language-js" >===</code> reference comparison. This
+      is different than <code class="language-js" >connect()</code>, which uses shallow equality
+      checks on the results of <code class="language-js" >mapState</code> calls to determine if
       re-rendering is needed. This has several implications on how you should
-      use <code class="language-js >useSelector()</code>.
+      use <code class="language-js" >useSelector()</code>.
     </p>
     <p>
-      With <code class="language-js >mapState</code>, all individual fields were returned in a
+      With <code class="language-js" >mapState</code>, all individual fields were returned in a
       combined object. It didn’t matter if the return object was a new reference
-      or not - <code class="language-js >connect()</code> just compared the individual fields. With
-      <code class="language-js >useSelector()</code>, returning a new object every time will
+      or not - <code class="language-js" >connect()</code> just compared the individual fields. With
+      <code class="language-js" >useSelector()</code>, returning a new object every time will
       <em>always</em> force a re-render by default. If you want to retrieve
       multiple values from the store, you can:
     </p>
     <ul>
       <li>
-        Call <code class="language-js >useSelector()</code> multiple times, with each call returning
+        Call <code class="language-js" >useSelector()</code> multiple times, with each call returning
         a single field value
       </li>
       <li>
@@ -372,8 +372,8 @@ ReactDOM.render(
         when one of the values has changed.
       </li>
       <li>
-        Use the <code class="language-js >shallowEqual</code> function from React-Redux as the
-        <code class="language-js >equalityFn</code> argument to <code class="language-js >useSelector()</code>, like:
+        Use the <code class="language-js" >shallowEqual</code> function from React-Redux as the
+        <code class="language-js" >equalityFn</code> argument to <code class="language-js" >useSelector()</code>, like:
       </li>
     </ul>
     <div class="sourceCode" id="cb3">
@@ -386,12 +386,12 @@ ReactDOM.render(
     </div>
     <p>
       The optional comparison function also enables using something like
-      Lodash’s <code class="language-js >_.isEqual()</code> or Immutable.js’s comparison
+      Lodash’s <code class="language-js" >_.isEqual()</code> or Immutable.js’s comparison
       capabilities.
     </p>
-    <h3 id="useselector-examples"><code class="language-js >useSelector</code> Examples</h3>
+    <h3 id="useselector-examples"><code class="language-js" >useSelector</code> Examples</h3>
     <p>Basic usage:</p>
-    <pre class="language-js  class="jsx"><code class="language-js >import React from &#39;react&#39;
+    <pre class="language-js  class="jsx"><code class="language-js" >import React from &#39;react&#39;
 import { useSelector } from &#39;react-redux&#39;
 
 export const CounterComponent = () =&gt; {
@@ -399,7 +399,7 @@ export const CounterComponent = () =&gt; {
   return &lt;div&gt;{counter}&lt;/div&gt;
 }</code></pre>
     <p>Using props via closure to determine what to extract:</p>
-    <pre class="language-js  class="jsx"><code class="language-js >import React from &#39;react&#39;
+    <pre class="language-js  class="jsx"><code class="language-js" >import React from &#39;react&#39;
 import { useSelector } from &#39;react-redux&#39;
 
 export const TodoListItem = (props) =&gt; {
@@ -408,11 +408,11 @@ export const TodoListItem = (props) =&gt; {
 }</code></pre>
     <h4 id="using-memoizing-selectors">Using memoizing selectors</h4>
     <p>
-      When using <code class="language-js >useSelector</code> with an inline selector as shown
+      When using <code class="language-js" >useSelector</code> with an inline selector as shown
       above, a new instance of the selector is created whenever the component is
       rendered. This works as long as the selector does not maintain any state.
       However, memoizing selectors (e.g. created via
-      <code class="language-js >createSelector</code> from <code class="language-js >reselect</code>) do have internal
+      <code class="language-js" >createSelector</code> from <code class="language-js" >reselect</code>) do have internal
       state, and therefore care must be taken when using them. Below you can
       find typical usage scenarios for memoizing selectors.
     </p>
@@ -421,7 +421,7 @@ export const TodoListItem = (props) =&gt; {
       declared outside of the component so that the same selector instance is
       used for each render:
     </p>
-    <pre class="language-js  class="jsx"><code class="language-js >import React from &#39;react&#39;
+    <pre class="language-js  class="jsx"><code class="language-js" >import React from &#39;react&#39;
 import { useSelector } from &#39;react-redux&#39;
 import { createSelector } from &#39;reselect&#39;
 
@@ -447,7 +447,7 @@ export const App = () =&gt; {
       The same is true if the selector depends on the component’s props, but
       will only ever be used in a single instance of a single component:
     </p>
-    <pre class="language-js  class="jsx"><code class="language-js >import React from &#39;react&#39;
+    <pre class="language-js  class="jsx"><code class="language-js" >import React from &#39;react&#39;
 import { useSelector } from &#39;react-redux&#39;
 import { createSelector } from &#39;reselect&#39;
 
@@ -484,7 +484,7 @@ export const App = () =&gt; {
       >
       for a more thorough explanation of why this is necessary):
     </p>
-    <pre class="language-js  class="jsx"><code class="language-js >import React, { useMemo } from &#39;react&#39;
+    <pre class="language-js  class="jsx"><code class="language-js" >import React, { useMemo } from &#39;react&#39;
 import { useSelector } from &#39;react-redux&#39;
 import { createSelector } from &#39;reselect&#39;
 
@@ -516,18 +516,18 @@ export const App = () =&gt; {
     &lt;/&gt;
   )
 }</code></pre>
-    <h2 id="usedispatch"><code class="language-js >useDispatch()</code></h2>
+    <h2 id="usedispatch"><code class="language-js" >useDispatch()</code></h2>
     <div class="sourceCode" id="cb9">
       <pre class="language-js 
         class="sourceCode js"
       ><code class="language-js  class="sourceCode javascript"><a class="sourceLine" id="cb9-1" title="1"><span class="kw">const</span> dispatch <span class="op">=</span> <span class="at">useDispatch</span>()</a></code></pre>
     </div>
     <p>
-      This hook returns a reference to the <code class="language-js >dispatch</code> function from
+      This hook returns a reference to the <code class="language-js" >dispatch</code> function from
       the Redux store. You may use it to dispatch actions as needed.
     </p>
     <h4 id="examples">Examples</h4>
-    <pre class="language-js  class="jsx"><code class="language-js >import React from &#39;react&#39;
+    <pre class="language-js  class="jsx"><code class="language-js" >import React from &#39;react&#39;
 import { useDispatch } from &#39;react-redux&#39;
 
 export const CounterComponent = ({ value }) =&gt; {
@@ -543,15 +543,15 @@ export const CounterComponent = ({ value }) =&gt; {
   )
 }</code></pre>
     <p>
-      When passing a callback using <code class="language-js >dispatch</code> to a child component,
+      When passing a callback using <code class="language-js" >dispatch</code> to a child component,
       you may sometimes want to memoize it with
       <a href="https://reactjs.org/docs/hooks-reference.html#usecallback"
-        ><code class="language-js >useCallback</code></a
+        ><code class="language-js" >useCallback</code></a
       >. <em>If</em> the child component is trying to optimize render behavior
-      using <code class="language-js >React.memo()</code> or similar, this avoids unnecessary
+      using <code class="language-js" >React.memo()</code> or similar, this avoids unnecessary
       rendering of child components due to the changed callback reference.
     </p>
-    <pre class="language-js  class="jsx"><code class="language-js >import React, { useCallback } from &#39;react&#39;
+    <pre class="language-js  class="jsx"><code class="language-js" >import React, { useCallback } from &#39;react&#39;
 import { useDispatch } from &#39;react-redux&#39;
 
 export const CounterComponent = ({ value }) =&gt; {
@@ -574,15 +574,15 @@ export const MyIncrementButton = React.memo(({ onIncrement }) =&gt; (
 ))</code></pre>
     <p>:::info</p>
     <p>
-      The <code class="language-js >dispatch</code> function reference will be stable as long as the
-      same store instance is being passed to the <code class="language-js >&lt;Provider&gt;</code>.
+      The <code class="language-js" >dispatch</code> function reference will be stable as long as the
+      same store instance is being passed to the <code class="language-js" >&lt;Provider&gt;</code>.
       Normally, that store instance never changes in an application.
     </p>
     <p>
       However, the React hooks lint rules do not know that
-      <code class="language-js >dispatch</code> should be stable, and will warn that the
-      <code class="language-js >dispatch</code> variable should be added to dependency arrays for
-      <code class="language-js >useEffect</code> and <code class="language-js >useCallback</code>. The simplest solution
+      <code class="language-js" >dispatch</code> should be stable, and will warn that the
+      <code class="language-js" >dispatch</code> variable should be added to dependency arrays for
+      <code class="language-js" >useEffect</code> and <code class="language-js" >useCallback</code>. The simplest solution
       is to do just that:
     </p>
     <div class="sourceCode" id="cb12">

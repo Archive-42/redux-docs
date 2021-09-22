@@ -1,11 +1,4 @@
 <a href="../introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="../tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../faq.html" class="navbar__item navbar__link navbar__link--active">FAQ</a><a href="../style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="../index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 # <span id="redux-faq-code-structure" class="anchor enhancedAnchor_2LWZ"></span>Redux FAQ: Code Structure<a href="#redux-faq-code-structure" class="hash-link" title="Direct link to heading">#</a>
@@ -197,37 +190,27 @@ common/api.js
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain">axiosInstance</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">interceptors</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">request</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">use</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain"></span>
+<span class="token plain">axiosInstance</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">interceptors</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">request</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">use</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token parameter">config</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> config</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">headers</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">authorization</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">auth</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">token</span><span class="token plain"></span>
+<span class="token plain"> config</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">headers</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">authorization</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">auth</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">token</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> config</span><span class="token punctuation" style="color: #f8f8f2">;</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-Then, in your entry point file, inject the store into the API setup file:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">)</span>Then, in your entry point file, inject the store into the API setup file:
 
 index.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">store</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">"./app/store"</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >store</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">"./app/store"</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports">injectStore</span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">"./common/api"</span><span class="token punctuation" style="color: #f8f8f2">;</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span >injectStore</span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">"./common/api"</span><span class="token punctuation" style="color: #f8f8f2">;</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token function" style="color: #e6d874">injectStore</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">;</span>
-
-Copy
-
-This way, the application setup is the only code that has to import the store, and the file dependency graph avoids circular dependencies.
+<span class="token plain"></span><span class="token function" style="color: #e6d874">injectStore</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">;</span>This way, the application setup is the only code that has to import the store, and the file dependency graph avoids circular dependencies.
 
 <a href="immutable-data.html" class="pagination-nav__link"></a>
-
-Previous
 
 « Immutable Data
 
@@ -264,4 +247,4 @@ Performance »
 
 <a href="../index.html" class="footerLogoLink_MyFc"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" /><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
 
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

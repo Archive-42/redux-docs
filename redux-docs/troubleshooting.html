@@ -243,13 +243,13 @@
       </li>
       <li>
         Make sure you are actually <em>dispatching</em> actions. For example, if
-        you have an action creator like <code class="language-js >addTodo</code>, just calling the
-        imported <code class="language-js >addTodo()</code> function by itself won’t do anything
+        you have an action creator like <code class="language-js" >addTodo</code>, just calling the
+        imported <code class="language-js" >addTodo()</code> function by itself won’t do anything
         because it just <em>returns</em> an action, but does not
         <em>dispatch</em> it. You either need to call
-        <code class="language-js >dispatch(addTodo())</code> (if using the hooks API) or
-        <code class="language-js >props.addTodo()</code> (if using <code class="language-js >connect</code> +
-        <code class="language-js >mapDispatch</code>).
+        <code class="language-js" >dispatch(addTodo())</code> (if using the hooks API) or
+        <code class="language-js" >props.addTodo()</code> (if using <code class="language-js" >connect</code> +
+        <code class="language-js" >mapDispatch</code>).
       </li>
     </ul>
     <h3 id="could-not-find-store-in-either-the-context-or-props">
@@ -266,7 +266,7 @@
       </li>
       <li>
         Make sure you didn’t forget to wrap your root or some other ancestor
-        component in <a href="#provider-store"><code class="language-js >&lt;Provider&gt;</code></a
+        component in <a href="#provider-store"><code class="language-js" >&lt;Provider&gt;</code></a
         >.
       </li>
       <li>
@@ -291,7 +291,7 @@
       I’m getting a warning about useLayoutEffect in my unit tests
     </h3>
     <p>
-      ReactDOM emits this warning if <code class="language-js >useLayoutEffect</code> is used “on
+      ReactDOM emits this warning if <code class="language-js" >useLayoutEffect</code> is used “on
       the server”. React Redux tries to get around the issue by detecting
       whether it is running within a browser context. Jest, by default, defines
       enough of the browser environment that React Redux thinks it’s running in
@@ -299,9 +299,9 @@
     </p>
     <p>
       You can prevent the warning by setting the
-      <code class="language-js >@jest-environment</code> for a single test file:
+      <code class="language-js" >@jest-environment</code> for a single test file:
     </p>
-    <pre class="language-js  class="jsx"><code class="language-js >// my.test.jsx
+    <pre class="language-js  class="jsx"><code class="language-js" >// my.test.jsx
 /**
  * @jest-environment node
  */</code></pre>

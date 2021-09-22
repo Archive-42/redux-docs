@@ -1,13 +1,6 @@
 <a href="../index.html" class="navbar__brand"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
 
 <a href="../introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="../tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../faq.html" class="navbar__item navbar__link">FAQ</a><a href="../style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="../index.html" class="navbar__brand"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
 
 - <a href="../introduction/getting-started.html" class="menu__link">Getting Started</a>
@@ -114,27 +107,15 @@ Because most of the Redux code you write are functions, and many of them are pur
 
 We recommend [Jest](../../facebook.github.io/jest/index.html) as the testing engine. Note that it runs in a Node environment, so you won't have access to the DOM.
 
-<span class="token plain">npm install --save-dev jest</span>
+<span class="token plain">npm install --save-dev jest</span>To use it together with [Babel](../../babeljs.io/index.html), you will need to install `babel-jest`:
 
-Copy
-
-To use it together with [Babel](../../babeljs.io/index.html), you will need to install `babel-jest`:
-
-<span class="token plain">npm install --save-dev babel-jest</span>
-
-Copy
-
-and configure it to use [babel-preset-env](../../github.com/babel/babel/tree/master/packages/babel-preset-env.html) features in `.babelrc`:
+<span class="token plain">npm install --save-dev babel-jest</span>and configure it to use [babel-preset-env](../../github.com/babel/babel/tree/master/packages/babel-preset-env.html) features in `.babelrc`:
 
 <span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token string" style="color: #a6e22e">"presets"</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token string" style="color: #a6e22e">"@babel/preset-env"</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Then, add this to `scripts` in your `package.json`:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Then, add this to `scripts` in your `package.json`:
 
 <span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
@@ -152,11 +133,7 @@ Then, add this to `scripts` in your `package.json`:
 
 <span class="token plain"> </span><span class="token spread operator" style="color: #f8f8f2">...</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-and run `npm test` to run it once, or `npm run test:watch` to test on every file change.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>and run `npm test` to run it once, or `npm run test:watch` to test on every file change.
 
 ### <span id="action-creators" class="anchor enhancedAnchor_2LWZ"></span>Action Creators<a href="#action-creators" class="hash-link" title="Direct link to heading">#</a>
 
@@ -174,15 +151,11 @@ In Redux, action creators are functions which return plain objects. When testing
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>can be tested like:
 
-Copy
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports operator" style="color: #f8f8f2">\*</span><span > </span><span class="token imports keyword module" style="color: #f92672">as</span><span > actions</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../../actions/TodoActions'</span><span class="token plain"></span>
 
-can be tested like:
-
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports operator" style="color: #f8f8f2">\*</span><span class="token imports"> </span><span class="token imports keyword module" style="color: #f92672">as</span><span class="token imports"> actions</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../../actions/TodoActions'</span><span class="token plain"></span>
-
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports operator" style="color: #f8f8f2">\*</span><span class="token imports"> </span><span class="token imports keyword module" style="color: #f92672">as</span><span class="token imports"> types</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../../constants/ActionTypes'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports operator" style="color: #f8f8f2">\*</span><span > </span><span class="token imports keyword module" style="color: #f92672">as</span><span > types</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../../constants/ActionTypes'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -200,15 +173,11 @@ can be tested like:
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">expect</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">actions</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">addTodo</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">text</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">toEqual</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">expectedAction</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token function" style="color: #e6d874">expect</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">actions</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">addTodo</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">text</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">toEqual</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">expectedAction</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-### <span id="async-action-creators" class="anchor enhancedAnchor_2LWZ"></span>Async Action Creators<a href="#async-action-creators" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>### <span id="async-action-creators" class="anchor enhancedAnchor_2LWZ"></span>Async Action Creators<a href="#async-action-creators" class="hash-link" title="Direct link to heading">#</a>
 
 For async action creators using [Redux Thunk](../../github.com/reduxjs/redux-thunk.html) or other middleware, it's best to completely mock the Redux store for tests. You can apply the middleware to a mock store using [redux-mock-store](../../github.com/reduxjs/redux-mock-store.html). You can also use [fetch-mock](../../www.wheresrhys.co.uk/fetch-mock/index.html) to mock the HTTP requests.
 
@@ -266,31 +235,27 @@ For async action creators using [Redux Thunk](../../github.com/reduxjs/redux-thu
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">fetch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'http://example.com/todos'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">then</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">res</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> res</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">json</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">then</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">res</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> res</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">json</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">then</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">body</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token function" style="color: #e6d874">fetchTodosSuccess</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">body</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">then</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">body</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token function" style="color: #e6d874">fetchTodosSuccess</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">body</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token keyword control-flow" style="color: #f92672">catch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">ex</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token function" style="color: #e6d874">fetchTodosFailure</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">ex</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>can be tested like:
 
-Copy
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >configureMockStore</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux-mock-store'</span><span class="token plain"></span>
 
-can be tested like:
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >thunk</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux-thunk'</span><span class="token plain"></span>
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">configureMockStore</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux-mock-store'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports operator" style="color: #f8f8f2">\*</span><span > </span><span class="token imports keyword module" style="color: #f92672">as</span><span > actions</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../../actions/TodoActions'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">thunk</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux-thunk'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports operator" style="color: #f8f8f2">\*</span><span > </span><span class="token imports keyword module" style="color: #f92672">as</span><span > types</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../../constants/ActionTypes'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports operator" style="color: #f8f8f2">\*</span><span class="token imports"> </span><span class="token imports keyword module" style="color: #f92672">as</span><span class="token imports"> actions</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../../actions/TodoActions'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >fetchMock</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'fetch-mock'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports operator" style="color: #f8f8f2">\*</span><span class="token imports"> </span><span class="token imports keyword module" style="color: #f92672">as</span><span class="token imports"> types</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../../constants/ActionTypes'</span><span class="token plain"></span>
-
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">fetchMock</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'fetch-mock'</span><span class="token plain"></span>
-
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">expect</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'expect'</span><span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// You can use any testing library</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >expect</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'expect'</span><span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// You can use any testing library</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -304,7 +269,7 @@ can be tested like:
 
 <span class="token plain"> </span><span class="token function" style="color: #e6d874">afterEach</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> fetchMock</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">restore</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> fetchMock</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">restore</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
@@ -312,7 +277,7 @@ can be tested like:
 
 <span class="token plain"> </span><span class="token function" style="color: #e6d874">it</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'creates FETCH_TODOS_SUCCESS when fetching todos has been done'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> fetchMock</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getOnce</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'/todos'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain"> fetchMock</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getOnce</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'/todos'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
 <span class="token plain"> body</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> todos</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token string" style="color: #a6e22e">'do something'</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
 
@@ -334,21 +299,17 @@ can be tested like:
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">actions</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">fetchTodos</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">then</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">actions</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">fetchTodos</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">then</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// return of async actions</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">expect</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getActions</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">toEqual</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">expectedActions</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token function" style="color: #e6d874">expect</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getActions</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">toEqual</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">expectedActions</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-### <span id="reducers" class="anchor enhancedAnchor_2LWZ"></span>Reducers<a href="#reducers" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>### <span id="reducers" class="anchor enhancedAnchor_2LWZ"></span>Reducers<a href="#reducers" class="hash-link" title="Direct link to heading">#</a>
 
 A reducer should return the new state after applying the action to the previous state, and that's the behavior tested below.
 
@@ -384,7 +345,7 @@ A reducer should return the new state after applying the action to the previous 
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> id</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">reduce</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">maxId</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> todo</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token known-class-name class-name">Math</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">max</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">todo</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">id</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> maxId</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">-</span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">+</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
+<span class="token plain"> id</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">reduce</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">maxId</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> todo</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token known-class-name class-name">Math</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">max</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">todo</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">id</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> maxId</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">-</span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">+</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
 
 <span class="token plain"> completed</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token boolean" style="color: #ae81ff">false</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
 
@@ -404,15 +365,11 @@ A reducer should return the new state after applying the action to the previous 
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>can be tested like:
 
-Copy
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >reducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../../structuring-reducers/todos'</span><span class="token plain"></span>
 
-can be tested like:
-
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">reducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../../structuring-reducers/todos'</span><span class="token plain"></span>
-
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports operator" style="color: #f8f8f2">\*</span><span class="token imports"> </span><span class="token imports keyword module" style="color: #f92672">as</span><span class="token imports"> types</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../../constants/ActionTypes'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports operator" style="color: #f8f8f2">\*</span><span > </span><span class="token imports keyword module" style="color: #f92672">as</span><span > types</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../../constants/ActionTypes'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -420,7 +377,7 @@ can be tested like:
 
 <span class="token plain"> </span><span class="token function" style="color: #e6d874">it</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'should return the initial state'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">expect</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token function" style="color: #e6d874">reducer</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token keyword nil" style="color: #f92672">undefined</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">toEqual</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token function" style="color: #e6d874">expect</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token function" style="color: #e6d874">reducer</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token keyword nil" style="color: #f92672">undefined</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">toEqual</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
@@ -450,7 +407,7 @@ can be tested like:
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">toEqual</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">toEqual</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
@@ -494,7 +451,7 @@ can be tested like:
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">toEqual</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">toEqual</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
@@ -520,27 +477,15 @@ can be tested like:
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-### <span id="components" class="anchor enhancedAnchor_2LWZ"></span>Components<a href="#components" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>### <span id="components" class="anchor enhancedAnchor_2LWZ"></span>Components<a href="#components" class="hash-link" title="Direct link to heading">#</a>
 
 First, we will install [React Testing Library](../../testing-library.com/docs/react-testing-library/intro/index.html). React Testing Library is a simple and complete React DOM testing utility that encourage good testing practices. It uses react-dom's `render` function and `act` from react-dom/tests-utils.
 
-<span class="token plain">npm install --save-dev @testing-library/react</span>
+<span class="token plain">npm install --save-dev @testing-library/react</span>If you are using jest as recommended above, we also recommend installing [jest-dom](../../github.com/testing-library/jest-dom.html) as it provides a set of custom jest matchers that you can use to extend jest. These will make your tests more declarative, clear to read and to maintain. jest-dom is being used in the examples below.
 
-Copy
+<span class="token plain">npm install --save-dev @testing-library/jest-dom</span>Consider the following `App` component:
 
-If you are using jest as recommended above, we also recommend installing [jest-dom](../../github.com/testing-library/jest-dom.html) as it provides a set of custom jest matchers that you can use to extend jest. These will make your tests more declarative, clear to read and to maintain. jest-dom is being used in the examples below.
-
-<span class="token plain">npm install --save-dev @testing-library/jest-dom</span>
-
-Copy
-
-Consider the following `App` component:
-
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> useSelector </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-redux'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > useSelector </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-redux'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -550,11 +495,7 @@ Consider the following `App` component:
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token plain">div</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain">user</span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token operator" style="color: #f8f8f2">/</span><span class="token plain">div</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-To test the component, we `render` it into the DOM and pass stubbed callbacks as props, then we assert whether the callbacks were called when expected. We can use the `wrapper` option in the `render` function and export our own `render` function as explained in React Testing Library's [setup docs](../../testing-library.com/docs/react-testing-library/setup/index.html).
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>To test the component, we `render` it into the DOM and pass stubbed callbacks as props, then we assert whether the callbacks were called when expected. We can use the `wrapper` option in the `render` function and export our own `render` function as explained in React Testing Library's [setup docs](../../testing-library.com/docs/react-testing-library/setup/index.html).
 
 Our `render` function can look like this:
 
@@ -562,15 +503,15 @@ Our `render` function can look like this:
 
 <span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">React</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> render </span><span class="token imports keyword module" style="color: #f92672">as</span><span class="token imports"> rtlRender </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@testing-library/react'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > render </span><span class="token imports keyword module" style="color: #f92672">as</span><span > rtlRender </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@testing-library/react'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> </span><span class="token imports maybe-class-name">Provider</span><span class="token imports"> </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-redux'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > </span><span class="token imports maybe-class-name">Provider</span><span > </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-redux'</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Import your own reducer</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">reducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../reducer'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >reducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../reducer'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -608,11 +549,7 @@ Our `render` function can look like this:
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// override render method</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token exports punctuation" style="color: #f8f8f2">{</span><span class="token exports"> render </span><span class="token exports punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-And our test can use our exported `render` function:
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token exports punctuation" style="color: #f8f8f2">{</span><span class="token exports"> render </span><span class="token exports punctuation" style="color: #f8f8f2">}</span>And our test can use our exported `render` function:
 
 <span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">React</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react'</span><span class="token plain"></span>
 
@@ -622,7 +559,7 @@ And our test can use our exported `render` function:
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// so we can import fireEvent and screen here as well</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> render</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> fireEvent</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> screen </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../../test-utils'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > render</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > fireEvent</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > screen </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../../test-utils'</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">App</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../../containers/App'</span><span class="token plain"></span>
 
@@ -634,13 +571,9 @@ And our test can use our exported `render` function:
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">expect</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">screen</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getByText</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token regex regex-delimiter" style="color: #fd971f">/</span><span class="token regex regex-source language-regex" style="color: #fd971f">redux user</span><span class="token regex regex-delimiter" style="color: #fd971f">/</span><span class="token regex regex-flags" style="color: #fd971f">i</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">toBeInTheDocument</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token function" style="color: #e6d874">expect</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">screen</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getByText</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token regex regex-delimiter" style="color: #fd971f">/</span><span class="token regex regex-source language-regex" style="color: #fd971f">redux user</span><span class="token regex regex-delimiter" style="color: #fd971f">/</span><span class="token regex regex-flags" style="color: #fd971f">i</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">toBeInTheDocument</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-### <span id="middleware" class="anchor enhancedAnchor_2LWZ"></span>Middleware<a href="#middleware" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>### <span id="middleware" class="anchor enhancedAnchor_2LWZ"></span>Middleware<a href="#middleware" class="hash-link" title="Direct link to heading">#</a>
 
 Middleware functions wrap behavior of `dispatch` calls in Redux, so to test this modified behavior we need to mock the behavior of the `dispatch` call.
 
@@ -666,11 +599,7 @@ First, we'll need a middleware function. This is similar to the real [redux-thun
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">next</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-We need to create a fake `getState`, `dispatch`, and `next` functions. We use `jest.fn()` to create stubs, but with other test frameworks you would likely use [Sinon](../../sinonjs.org/index.html).
+<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span>We need to create a fake `getState`, `dispatch`, and `next` functions. We use `jest.fn()` to create stubs, but with other test frameworks you would likely use [Sinon](../../sinonjs.org/index.html).
 
 The invoke function runs our middleware in the same way Redux does.
 
@@ -678,13 +607,13 @@ The invoke function runs our middleware in the same way Redux does.
 
 <span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> store </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> getState</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> jest</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">fn</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
+<span class="token plain"> getState</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> jest</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">fn</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
 
-<span class="token plain"> dispatch</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> jest</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">fn</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> dispatch</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> jest</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">fn</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> next </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> jest</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">fn</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> next </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> jest</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">fn</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -694,11 +623,7 @@ The invoke function runs our middleware in the same way Redux does.
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> next</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> invoke </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-We test that our middleware is calling the `getState`, `dispatch`, and `next` functions at the right time.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>We test that our middleware is calling the `getState`, `dispatch`, and `next` functions at the right time.
 
 <span class="token function" style="color: #e6d874">it</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'passes through non-function action'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
@@ -708,7 +633,7 @@ We test that our middleware is calling the `getState`, `dispatch`, and `next` fu
 
 <span class="token plain"> </span><span class="token function" style="color: #e6d874">invoke</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">expect</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">next</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">toHaveBeenCalledWith</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token function" style="color: #e6d874">expect</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">next</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">toHaveBeenCalledWith</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
@@ -718,11 +643,11 @@ We test that our middleware is calling the `getState`, `dispatch`, and `next` fu
 
 <span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> invoke </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">create</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> fn </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> jest</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">fn</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> fn </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> jest</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">fn</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token function" style="color: #e6d874">invoke</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">fn</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">expect</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">fn</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">toHaveBeenCalled</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token function" style="color: #e6d874">expect</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">fn</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">toHaveBeenCalled</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
@@ -740,15 +665,11 @@ We test that our middleware is calling the `getState`, `dispatch`, and `next` fu
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">expect</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">dispatch</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">toHaveBeenCalledWith</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'TEST DISPATCH'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token function" style="color: #e6d874">expect</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">dispatch</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">toHaveBeenCalledWith</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'TEST DISPATCH'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">expect</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">getState</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">toHaveBeenCalled</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token function" style="color: #e6d874">expect</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">getState</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">toHaveBeenCalled</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-In some cases, you will need to modify the `create` function to use different mock implementations of `getState` and `next`.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>In some cases, you will need to modify the `create` function to use different mock implementations of `getState` and `next`.
 
 ### <span id="glossary" class="anchor enhancedAnchor_2LWZ"></span>Glossary<a href="#glossary" class="hash-link" title="Direct link to heading">#</a>
 
@@ -757,8 +678,6 @@ In some cases, you will need to modify the `create` function to use different mo
 - [React Test Utils](../../reactjs.org/docs/test-utils.html): ReactTestUtils makes it easy to test React components in the testing framework of your choice. React Testing Library uses the `act` function exported by React Test Utils.
 
 <a href="server-rendering.html" class="pagination-nav__link"></a>
-
-Previous
 
 « Server Rendering
 
@@ -796,4 +715,4 @@ Computing Derived Data »
 
 <a href="../index.html" class="footerLogoLink_MyFc"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" /><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
 
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

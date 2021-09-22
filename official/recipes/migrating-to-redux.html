@@ -99,10 +99,17 @@
       as="script"
     />
     <link rel="preload" href="../assets/js/main.8520a084.js" as="script" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css"
+    />
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
-    </head>
+    <script
+      async
+      defer
+      src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"
+    ></script>
+  </head>
   <body>
     <script>
       !(function () {
@@ -1114,12 +1121,14 @@
                           <li>
                             <p>
                               Create a function called
-                              <code class="language-js >createFluxStore(reducer)</code> that creates
-                              a Flux store compatible with your existing app
-                              from a reducer function. Internally it might look
-                              similar to
+                              <code class="language-js"
+                                >createFluxStore(reducer)</code
+                              >
+                              that creates a Flux store compatible with your
+                              existing app from a reducer function. Internally
+                              it might look similar to
                               <a href="../api/createstore.html"
-                                ><code class="language-js >createStore</code></a
+                                ><code class="language-js">createStore</code></a
                               >
                               (<a
                                 href="../../github.com/reduxjs/redux/blob/v4.0.5/src/createStore.html"
@@ -1127,7 +1136,8 @@
                                 rel="noopener noreferrer"
                                 >source</a
                               >) implementation from Redux. Its dispatch handler
-                              should just call the <code class="language-js >reducer</code> for any
+                              should just call the
+                              <code class="language-js">reducer</code> for any
                               action, store the next state, and emit change.
                             </p>
                           </li>
@@ -1135,9 +1145,11 @@
                             <p>
                               This allows you to gradually rewrite every Flux
                               Store in your app as a reducer, but still export
-                              <code class="language-js >createFluxStore(reducer)</code> so the rest
-                              of your app is not aware that this is happening
-                              and sees the Flux stores.
+                              <code class="language-js"
+                                >createFluxStore(reducer)</code
+                              >
+                              so the rest of your app is not aware that this is
+                              happening and sees the Flux stores.
                             </p>
                           </li>
                           <li>
@@ -1158,7 +1170,9 @@
                               combine those reducers you already have into one
                               using
                               <a href="../api/combinereducers.html"
-                                ><code class="language-js >combineReducers(reducers)</code></a
+                                ><code class="language-js"
+                                  >combineReducers(reducers)</code
+                                ></a
                               >.
                             </p>
                           </li>

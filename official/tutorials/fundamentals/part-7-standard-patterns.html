@@ -107,10 +107,17 @@
       as="script"
     />
     <link rel="preload" href="../../assets/js/main.8520a084.js" as="script" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css"
+    />
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
-    </head>
+    <script
+      async
+      defer
+      src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"
+    ></script>
+  </head>
   <body>
     <script>
       !(function () {
@@ -1413,7 +1420,7 @@
                           <strong>calling the action creator</strong>, and then
                           <strong
                             >passing the resulting action object directly to
-                            <code class="language-js >dispatch</code></strong
+                            <code class="language-js">dispatch</code></strong
                           >:
                         </p>
                         <div class="codeBlockContainer_K1bP">
@@ -1622,8 +1629,9 @@
                           server.
                         </p>
                         <p>
-                          Right now, <code class="language-js >todosSlice.js</code> is dispatching
-                          an action object directly, like this:
+                          Right now,
+                          <code class="language-js">todosSlice.js</code> is
+                          dispatching an action object directly, like this:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -1708,9 +1716,10 @@
                           We&#x27;ll create a function that creates and returns
                           that same kind of action object, but accepts the array
                           of todos as its argument and puts it into the action
-                          as <code class="language-js >action.payload</code>. Then, we can dispatch
-                          the action using that new action creator inside of our
-                          <code class="language-js >fetchTodos</code> thunk:
+                          as <code class="language-js">action.payload</code>.
+                          Then, we can dispatch the action using that new action
+                          creator inside of our
+                          <code class="language-js">fetchTodos</code> thunk:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -2597,9 +2606,10 @@
                         </div>
                         <p>
                           And since this action was being dispatched from the
-                          <code class="language-js >&lt;Footer&gt;</code> component, we&#x27;ll need
-                          to import the <code class="language-js >colorFilterChanged</code> action
-                          creator over there and use it:
+                          <code class="language-js">&lt;Footer&gt;</code>
+                          component, we&#x27;ll need to import the
+                          <code class="language-js">colorFilterChanged</code>
+                          action creator over there and use it:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -3408,10 +3418,12 @@
                           </div>
                         </div>
                         <p>
-                          Notice that the <code class="language-js >colorFilterChanged</code> action
-                          creator actually accepts two different arguments, and
-                          then combines them together to form the right
-                          <code class="language-js >action.payload</code> field.
+                          Notice that the
+                          <code class="language-js">colorFilterChanged</code>
+                          action creator actually accepts two different
+                          arguments, and then combines them together to form the
+                          right
+                          <code class="language-js">action.payload</code> field.
                         </p>
                         <p>
                           This doesn&#x27;t change anything about how the
@@ -3429,12 +3441,14 @@
                             >we wrapped a thunk in an action creator in the
                             previous section</a
                           >
-                          . We specifically wrapped <code class="language-js >saveNewTodo</code> in
-                          a &quot;thunk action creator&quot; function so that we
-                          could pass in a <code class="language-js >text</code> parameter. While
-                          <code class="language-js >fetchTodos</code> doesn&#x27;t take any
-                          parameters, we could still wrap it in an action
-                          creator as well:
+                          . We specifically wrapped
+                          <code class="language-js">saveNewTodo</code> in a
+                          &quot;thunk action creator&quot; function so that we
+                          could pass in a
+                          <code class="language-js">text</code> parameter. While
+                          <code class="language-js">fetchTodos</code>
+                          doesn&#x27;t take any parameters, we could still wrap
+                          it in an action creator as well:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -3647,9 +3661,11 @@
                         </div>
                         <p>
                           And that means we have to change the place it&#x27;s
-                          dispatched in <code class="language-js >index.js</code> to call the outer
-                          thunk action creator function, and pass the returned
-                          inner thunk function to <code class="language-js >dispatch</code>:
+                          dispatched in
+                          <code class="language-js">index.js</code> to call the
+                          outer thunk action creator function, and pass the
+                          returned inner thunk function to
+                          <code class="language-js">dispatch</code>:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -3787,12 +3803,12 @@
                         </div>
                         <p>
                           We&#x27;ve written thunks using the
-                          <code class="language-js >function</code> keyword so far to make it clear
-                          what they&#x27;re doing. However, we can also write
-                          them using arrow function syntax instead. Using
-                          implicit returns can shorten the code, although it may
-                          make it a bit harder to read as well if you&#x27;re
-                          not familiar with arrow functions:
+                          <code class="language-js">function</code> keyword so
+                          far to make it clear what they&#x27;re doing. However,
+                          we can also write them using arrow function syntax
+                          instead. Using implicit returns can shorten the code,
+                          although it may make it a bit harder to read as well
+                          if you&#x27;re not familiar with arrow functions:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -4153,8 +4169,8 @@
                         <p>
                           We&#x27;ve already seen that we can write
                           &quot;selector&quot; functions, which accept the Redux
-                          <code class="language-js >state</code> object as an argument, and return a
-                          value:
+                          <code class="language-js">state</code> object as an
+                          argument, and return a value:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -4315,29 +4331,36 @@
                           </div>
                         </div>
                         <p>
-                          However, <code class="language-js >array.map()</code> always returns a new
-                          array reference. We know that the React-Redux
-                          <code class="language-js >useSelector</code> hook will re-run its selector
-                          function after <em>every</em> dispatched action, and
-                          if the selector result changes, it will force the
-                          component to re-render.
+                          However,
+                          <code class="language-js">array.map()</code> always
+                          returns a new array reference. We know that the
+                          React-Redux
+                          <code class="language-js">useSelector</code> hook will
+                          re-run its selector function after
+                          <em>every</em> dispatched action, and if the selector
+                          result changes, it will force the component to
+                          re-render.
                         </p>
                         <p>
                           In this example,
                           <strong
                             >calling
-                            <code class="language-js >useSelector(selectTodoIds)</code> will
-                            <em>always</em> cause the component to re-render
-                            after <em>every</em> action, because it&#x27;s
-                            returning a new array reference!</strong
+                            <code class="language-js"
+                              >useSelector(selectTodoIds)</code
+                            >
+                            will <em>always</em> cause the component to
+                            re-render after <em>every</em> action, because
+                            it&#x27;s returning a new array reference!</strong
                           >
                         </p>
                         <p>
                           In Part 5, we saw that
                           <a
                             href="part-5-ui-react.html#selecting-data-in-list-items-by-id"
-                            >we can pass <code class="language-js >shallowEqual</code> as an
-                            argument to <code class="language-js >useSelector</code></a
+                            >we can pass
+                            <code class="language-js">shallowEqual</code> as an
+                            argument to
+                            <code class="language-js">useSelector</code></a
                           >. There&#x27;s another option here, though: we could
                           use &quot;memoized&quot; selectors.
                         </p>
@@ -4363,7 +4386,8 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="memoizing-selectors-with-createselector"
                           ></a
-                          >Memoizing Selectors with <code class="language-js >createSelector</code
+                          >Memoizing Selectors with
+                          <code class="language-js">createSelector</code
                           ><a
                             class="hash-link"
                             href="#memoizing-selectors-with-createselector"
@@ -4380,13 +4404,16 @@
                               rel="noopener noreferrer"
                               >Reselect library</a
                             >
-                            provides a <code class="language-js >createSelector</code> API that will
-                            generate memoized selector functions</strong
-                          >. <code class="language-js >createSelector</code> accepts one or more
-                          &quot;input selector&quot; functions as arguments,
-                          plus an &quot;output selector&quot;, and returns the
-                          new selector function. Every time you call the
-                          selector:
+                            provides a
+                            <code class="language-js">createSelector</code> API
+                            that will generate memoized selector
+                            functions</strong
+                          >.
+                          <code class="language-js">createSelector</code>
+                          accepts one or more &quot;input selector&quot;
+                          functions as arguments, plus an &quot;output
+                          selector&quot;, and returns the new selector function.
+                          Every time you call the selector:
                         </p>
                         <ul>
                           <li>
@@ -4408,8 +4435,9 @@
                         </ul>
                         <p>
                           Let&#x27;s create a memoized version of
-                          <code class="language-js >selectTodoIds</code> and use that with our
-                          <code class="language-js >&lt;TodoList&gt;</code>.
+                          <code class="language-js">selectTodoIds</code> and use
+                          that with our
+                          <code class="language-js">&lt;TodoList&gt;</code>.
                         </p>
                         <p>First, we need to install Reselect:</p>
                         <div class="codeBlockContainer_K1bP">
@@ -4455,12 +4483,14 @@
                         </div>
                         <p>
                           Then, we can import and call
-                          <code class="language-js >createSelector</code>. Our original
-                          <code class="language-js >selectTodoIds</code> function was defined over
-                          in <code class="language-js >TodoList.js</code>, but it&#x27;s more common
-                          for selector functions to be written in the relevant
-                          slice file. So, let&#x27;s add this to the todos
-                          slice:
+                          <code class="language-js">createSelector</code>. Our
+                          original
+                          <code class="language-js">selectTodoIds</code>
+                          function was defined over in
+                          <code class="language-js">TodoList.js</code>, but
+                          it&#x27;s more common for selector functions to be
+                          written in the relevant slice file. So, let&#x27;s add
+                          this to the todos slice:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -4741,7 +4771,7 @@
                         </div>
                         <p>
                           Then, let&#x27;s use it in
-                          <code class="language-js >&lt;TodoList&gt;</code>:
+                          <code class="language-js">&lt;TodoList&gt;</code>:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -5158,13 +5188,15 @@
                         </div>
                         <p>
                           This actually behaves a bit differently than the
-                          <code class="language-js >shallowEqual</code> comparison function does.
-                          Any time the <code class="language-js >state.todos</code> array changes,
-                          we&#x27;re going to create a new todo IDs array as a
-                          result. That includes any immutable updates to todo
-                          items like toggling their
-                          <code class="language-js >completed</code> field, since we have to create
-                          a new array for the immutable update.
+                          <code class="language-js">shallowEqual</code>
+                          comparison function does. Any time the
+                          <code class="language-js">state.todos</code> array
+                          changes, we&#x27;re going to create a new todo IDs
+                          array as a result. That includes any immutable updates
+                          to todo items like toggling their
+                          <code class="language-js">completed</code> field,
+                          since we have to create a new array for the immutable
+                          update.
                         </p>
                         <div
                           class="admonition admonition-tip alert alert--success"
@@ -5216,12 +5248,13 @@
                           filtered list of todos.
                         </p>
                         <p>
-                          We know we need the entire <code class="language-js >todos</code> array as
-                          one argument to our output selector. We also need to
-                          pass in the current completion status filter value as
-                          well. We&#x27;ll add a separate &quot;input
-                          selector&quot; to extract each value, and pass the
-                          results to the &quot;output selector&quot;.
+                          We know we need the entire
+                          <code class="language-js">todos</code> array as one
+                          argument to our output selector. We also need to pass
+                          in the current completion status filter value as well.
+                          We&#x27;ll add a separate &quot;input selector&quot;
+                          to extract each value, and pass the results to the
+                          &quot;output selector&quot;.
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -5764,9 +5797,10 @@
                             <p>
                               Note that we&#x27;ve now added an import
                               dependency between two slices - the
-                              <code class="language-js >todosSlice</code> is importing a value from
-                              the <code class="language-js >filtersSlice</code>. This is legal, but
-                              be careful.
+                              <code class="language-js">todosSlice</code> is
+                              importing a value from the
+                              <code class="language-js">filtersSlice</code>.
+                              This is legal, but be careful.
                               <strong
                                 >If two slices <em>both</em> try to import
                                 something from each other, you can end up with a
@@ -5927,9 +5961,12 @@
                           </div>
                         </div>
                         <p>
-                          If we switch <code class="language-js >&lt;TodoList&gt;</code> to use
-                          <code class="language-js >selectFilteredTodoIds</code>, we should then be
-                          able to mark a couple todo items as completed:
+                          If we switch
+                          <code class="language-js">&lt;TodoList&gt;</code> to
+                          use
+                          <code class="language-js">selectFilteredTodoIds</code
+                          >, we should then be able to mark a couple todo items
+                          as completed:
                         </p>
                         <p>
                           <img
@@ -5949,8 +5986,9 @@
                         </p>
                         <p>
                           We can then expand our
-                          <code class="language-js >selectFilteredTodos</code> to also include color
-                          filtering in the selection as well:
+                          <code class="language-js">selectFilteredTodos</code>
+                          to also include color filtering in the selection as
+                          well:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -6520,14 +6558,15 @@
                         </p>
                         <p>
                           Finally, we&#x27;ve got several places where our code
-                          is looking up <code class="language-js >state.todos</code>. We&#x27;re
-                          going to be making some changes to how that state is
-                          designed as we go through the rest of this section, so
-                          we&#x27;ll extract a single
-                          <code class="language-js >selectTodos</code> selector and use that
-                          everywhere. We can also move
-                          <code class="language-js >selectTodoById</code> over into the
-                          <code class="language-js >todosSlice</code>:
+                          is looking up
+                          <code class="language-js">state.todos</code>.
+                          We&#x27;re going to be making some changes to how that
+                          state is designed as we go through the rest of this
+                          section, so we&#x27;ll extract a single
+                          <code class="language-js">selectTodos</code> selector
+                          and use that everywhere. We can also move
+                          <code class="language-js">selectTodoById</code> over
+                          into the <code class="language-js">todosSlice</code>:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -6818,17 +6857,21 @@
                         <p>
                           We&#x27;re going to update our todos slice to track a
                           loading state value, and dispatch an additional
-                          <code class="language-js >&#x27;todos/todosLoading&#x27;</code> action as
-                          part of the <code class="language-js >fetchTodos</code> thunk.
+                          <code class="language-js"
+                            >&#x27;todos/todosLoading&#x27;</code
+                          >
+                          action as part of the
+                          <code class="language-js">fetchTodos</code> thunk.
                         </p>
                         <p>
-                          Right now, the <code class="language-js >state</code> of our todos reducer
-                          is only the array of todos itself. If we want to track
-                          the loading state inside the todos slice, we&#x27;ll
-                          need to reorganize the todos state to be an object
-                          that has the todos array <em>and</em> the loading
-                          state value. That also means rewriting the reducer
-                          logic to handle the additional nesting:
+                          Right now, the
+                          <code class="language-js">state</code> of our todos
+                          reducer is only the array of todos itself. If we want
+                          to track the loading state inside the todos slice,
+                          we&#x27;ll need to reorganize the todos state to be an
+                          object that has the todos array <em>and</em> the
+                          loading state value. That also means rewriting the
+                          reducer logic to handle the additional nesting:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -7594,23 +7637,27 @@
                         <ul>
                           <li>
                             The todos array is now nested as
-                            <code class="language-js >state.entities</code> in the
-                            <code class="language-js >todosReducer</code> state object. The word
-                            &quot;entities&quot; is a term that means
-                            &quot;unique items with an ID&quot;, which does
-                            describe our todo objects.
+                            <code class="language-js">state.entities</code> in
+                            the
+                            <code class="language-js">todosReducer</code> state
+                            object. The word &quot;entities&quot; is a term that
+                            means &quot;unique items with an ID&quot;, which
+                            does describe our todo objects.
                           </li>
                           <li>
                             That also means the array is nested in the
                             <em>entire</em> Redux state object as
-                            <code class="language-js >state.todos.entities</code>
+                            <code class="language-js"
+                              >state.todos.entities</code
+                            >
                           </li>
                           <li>
                             We now have to do extra steps in the reducer to copy
                             the additional level of nesting for correct
-                            immutable updates, such as <code class="language-js >state</code> object
-                            -&gt; <code class="language-js >entities</code> array -&gt;
-                            <code class="language-js >todo</code> object
+                            immutable updates, such as
+                            <code class="language-js">state</code> object -&gt;
+                            <code class="language-js">entities</code> array
+                            -&gt; <code class="language-js">todo</code> object
                           </li>
                           <li>
                             Because the rest of our code is
@@ -7618,7 +7665,8 @@
                             selectors,
                             <strong
                               >we only need to update the
-                              <code class="language-js >selectTodos</code> selector</strong
+                              <code class="language-js">selectTodos</code>
+                              selector</strong
                             >
                             - the rest of the UI will continue to work as
                             expected even though we reshaped our state
@@ -7707,7 +7755,10 @@
                             </button>
                           </div>
                         </div>
-                        <p>instead of an <code class="language-js >isLoading</code> boolean.</p>
+                        <p>
+                          instead of an
+                          <code class="language-js">isLoading</code> boolean.
+                        </p>
                         <p>
                           A boolean limits us to two possibilities:
                           &quot;loading&quot; or &quot;not loading&quot;. In
@@ -7778,9 +7829,10 @@
                         <p>
                           Based on that, we&#x27;ll add a new
                           &quot;loading&quot; action that will set our status to
-                          <code class="language-js >&#x27;loading&#x27;</code>, and update the
-                          &quot;loaded&quot; action to reset the state flag to
-                          <code class="language-js >&#x27;idle&#x27;</code>:
+                          <code class="language-js">&#x27;loading&#x27;</code>,
+                          and update the &quot;loaded&quot; action to reset the
+                          state flag to
+                          <code class="language-js">&#x27;idle&#x27;</code>:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -8430,8 +8482,8 @@
                           However, before we try to show this in the UI, we need
                           to modify the fake server API to add an artificial
                           delay to our API calls. Open up
-                          <code class="language-js >src/api/server.js</code>, and look for this
-                          commented-out line around line 63:
+                          <code class="language-js">src/api/server.js</code>,
+                          and look for this commented-out line around line 63:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -8588,8 +8640,9 @@
                         </p>
                         <p>
                           Now, we can read the loading state value in our
-                          <code class="language-js >&lt;TodoList&gt;</code> component, and show a
-                          loading spinner instead based on that value.
+                          <code class="language-js">&lt;TodoList&gt;</code>
+                          component, and show a loading spinner instead based on
+                          that value.
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -9154,13 +9207,17 @@
                         <p>
                           The Redux store itself does not actually care what
                           fields you put into your action object. It only cares
-                          that <code class="language-js >action.type</code> exists and has a value,
-                          and normal Redux actions always use a string for
-                          <code class="language-js >action.type</code>. That means that you
-                          <em>could</em> put any other fields into the action
-                          that you want. Maybe we could have
-                          <code class="language-js >action.todo</code> for a &quot;todo added&quot;
-                          action, or <code class="language-js >action.color</code>, and so on.
+                          that
+                          <code class="language-js">action.type</code> exists
+                          and has a value, and normal Redux actions always use a
+                          string for
+                          <code class="language-js">action.type</code>. That
+                          means that you <em>could</em> put any other fields
+                          into the action that you want. Maybe we could have
+                          <code class="language-js">action.todo</code> for a
+                          &quot;todo added&quot; action, or
+                          <code class="language-js">action.color</code>, and so
+                          on.
                         </p>
                         <p>
                           However, if every action uses different field names
@@ -9186,32 +9243,42 @@
                           <li>
                             If your action object has any actual data, that
                             &quot;data&quot; value of your action should always
-                            go in <code class="language-js >action.payload</code>
+                            go in
+                            <code class="language-js">action.payload</code>
                           </li>
                           <li>
                             An action may also have an
-                            <code class="language-js >action.meta</code> field with extra
-                            descriptive data
+                            <code class="language-js">action.meta</code> field
+                            with extra descriptive data
                           </li>
                           <li>
                             An action may have an
-                            <code class="language-js >action.error</code> field with error
-                            information
+                            <code class="language-js">action.error</code> field
+                            with error information
                           </li>
                         </ul>
                         <p>So, <em>all</em> Redux actions MUST:</p>
                         <ul>
                           <li>be a plain JavaScript object</li>
-                          <li>have a <code class="language-js >type</code> field</li>
+                          <li>
+                            have a <code class="language-js">type</code> field
+                          </li>
                         </ul>
                         <p>
                           And if you write your actions using the FSA pattern,
                           an action MAY
                         </p>
                         <ul>
-                          <li>have a <code class="language-js >payload</code> field</li>
-                          <li>have an <code class="language-js >error</code> field</li>
-                          <li>have a <code class="language-js >meta</code> field</li>
+                          <li>
+                            have a
+                            <code class="language-js">payload</code> field
+                          </li>
+                          <li>
+                            have an <code class="language-js">error</code> field
+                          </li>
+                          <li>
+                            have a <code class="language-js">meta</code> field
+                          </li>
                         </ul>
                         <details class="detailed-explanation">
                           <summary>
@@ -9220,15 +9287,22 @@
                           <p>The FSA specification says that:</p>
                           <blockquote>
                             <p>
-                              The optional <code class="language-js >error</code> property MAY be
-                              set to <code class="language-js >true</code> if the action represents
-                              an error. An action whose <code class="language-js >error</code> is
-                              true is analogous to a rejected Promise. By
-                              convention, the <code class="language-js >payload</code> SHOULD be an
-                              error object. If <code class="language-js >error</code> has any other
-                              value besides <code class="language-js >true</code>, including
-                              <code class="language-js >undefined</code> and <code class="language-js >null</code>, the
-                              action MUST NOT be interpreted as an error.
+                              The optional
+                              <code class="language-js">error</code> property
+                              MAY be set to
+                              <code class="language-js">true</code> if the
+                              action represents an error. An action whose
+                              <code class="language-js">error</code> is true is
+                              analogous to a rejected Promise. By convention,
+                              the
+                              <code class="language-js">payload</code> SHOULD be
+                              an error object. If
+                              <code class="language-js">error</code> has any
+                              other value besides
+                              <code class="language-js">true</code>, including
+                              <code class="language-js">undefined</code> and
+                              <code class="language-js">null</code>, the action
+                              MUST NOT be interpreted as an error.
                             </p>
                           </blockquote>
                           <p>
@@ -9239,15 +9313,22 @@
                           <p>
                             However, in practice, the Redux community has
                             ignored the idea of using
-                            <code class="language-js >action.error</code> as a boolean flag, and
-                            instead settled on separate action types, like
-                            <code class="language-js >&#x27;todos/todosLoadingSucceeded&#x27;</code>
+                            <code class="language-js">action.error</code> as a
+                            boolean flag, and instead settled on separate action
+                            types, like
+                            <code class="language-js"
+                              >&#x27;todos/todosLoadingSucceeded&#x27;</code
+                            >
                             and
-                            <code class="language-js >&#x27;todos/todosLoadingFailed&#x27;</code>.
-                            This is because it&#x27;s much easier to check for
-                            those action types than it is to first handle
-                            <code class="language-js >&#x27;todos/todosLoaded&#x27;</code> and
-                            <em>then</em> check <code class="language-js >if (action.error)</code>.
+                            <code class="language-js"
+                              >&#x27;todos/todosLoadingFailed&#x27;</code
+                            >. This is because it&#x27;s much easier to check
+                            for those action types than it is to first handle
+                            <code class="language-js"
+                              >&#x27;todos/todosLoaded&#x27;</code
+                            >
+                            and <em>then</em> check
+                            <code class="language-js">if (action.error)</code>.
                           </p>
                           <p>
                             You can do whichever approach works better for you,
@@ -9296,16 +9377,22 @@
                         </ul>
                         <p>
                           For example, in a blogging application, you might have
-                          <code class="language-js >Post</code> objects that point to
-                          <code class="language-js >User</code> and <code class="language-js >Comment</code> objects.
+                          <code class="language-js">Post</code> objects that
+                          point to <code class="language-js">User</code> and
+                          <code class="language-js">Comment</code> objects.
                           There might be many posts by the same person, so if
-                          every <code class="language-js >Post</code> object includes an entire
-                          <code class="language-js >User</code>, we would have many copies of the
-                          same <code class="language-js >User</code> object. Instead, a
-                          <code class="language-js >Post</code> object would have a user ID value as
-                          <code class="language-js >post.user</code>, and then we could look up
-                          <code class="language-js >User</code> objects by ID as
-                          <code class="language-js >state.users[post.user]</code>.
+                          every <code class="language-js">Post</code> object
+                          includes an entire
+                          <code class="language-js">User</code>, we would have
+                          many copies of the same
+                          <code class="language-js">User</code> object. Instead,
+                          a <code class="language-js">Post</code> object would
+                          have a user ID value as
+                          <code class="language-js">post.user</code>, and then
+                          we could look up
+                          <code class="language-js">User</code> objects by ID as
+                          <code class="language-js">state.users[post.user]</code
+                          >.
                         </p>
                         <p>
                           This means we typically organize our data as objects
@@ -11938,14 +12025,18 @@
                           </div>
                         </div>
                         <p>
-                          Because our <code class="language-js >state.entities</code> field is now
-                          an object instead of an array, we have to use nested
-                          object spread operators to update the data instead of
-                          array operations. Also, we can&#x27;t loop over
-                          objects the way we loop over arrays, so there&#x27;s
-                          several places where we have to use
-                          <code class="language-js >Object.values(entities)</code> to get an array
-                          of the todo items so that we can loop over them.
+                          Because our
+                          <code class="language-js">state.entities</code> field
+                          is now an object instead of an array, we have to use
+                          nested object spread operators to update the data
+                          instead of array operations. Also, we can&#x27;t loop
+                          over objects the way we loop over arrays, so
+                          there&#x27;s several places where we have to use
+                          <code class="language-js"
+                            >Object.values(entities)</code
+                          >
+                          to get an array of the todo items so that we can loop
+                          over them.
                         </p>
                         <p>
                           The good news is that because we&#x27;re using
@@ -12040,17 +12131,19 @@
                           components?
                         </p>
                         <p>
-                          Whenever you call <code class="language-js >store.dispatch(action)</code>,
-                          <code class="language-js >dispatch</code> will actually return the
-                          <code class="language-js >action</code> as its result. Middleware can then
-                          modify that behavior and return some other value
-                          instead.
+                          Whenever you call
+                          <code class="language-js">store.dispatch(action)</code
+                          >, <code class="language-js">dispatch</code> will
+                          actually return the
+                          <code class="language-js">action</code> as its result.
+                          Middleware can then modify that behavior and return
+                          some other value instead.
                         </p>
                         <p>
                           We&#x27;ve already seen that the Redux Thunk
                           middleware lets us pass a function to
-                          <code class="language-js >dispatch</code>, calls the function, and then
-                          returns the result:
+                          <code class="language-js">dispatch</code>, calls the
+                          function, and then returns the result:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -12296,12 +12389,14 @@
                         </p>
                         <p>
                           We already have our
-                          <code class="language-js >&lt;Header&gt;</code> component dispatching a
-                          thunk to save new todo entries to the server.
-                          Let&#x27;s add some loading state inside the
-                          <code class="language-js >&lt;Header&gt;</code> component, then disable
-                          the text input and show another loading spinner while
-                          we&#x27;re waiting for the server:
+                          <code class="language-js">&lt;Header&gt;</code>
+                          component dispatching a thunk to save new todo entries
+                          to the server. Let&#x27;s add some loading state
+                          inside the
+                          <code class="language-js">&lt;Header&gt;</code>
+                          component, then disable the text input and show
+                          another loading spinner while we&#x27;re waiting for
+                          the server:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -13433,8 +13528,10 @@
                                 <ul>
                                   <li>
                                     Reselect has a
-                                    <code class="language-js >createSelector</code> API that
-                                    generates memoized selectors
+                                    <code class="language-js"
+                                      >createSelector</code
+                                    >
+                                    API that generates memoized selectors
                                   </li>
                                   <li>
                                     Memoized selectors return the same result
@@ -13450,9 +13547,14 @@
                                 <ul>
                                   <li>
                                     Using enums like
-                                    <code class="language-js >&#x27;idle&#x27;</code> and
-                                    <code class="language-js >&#x27;loading&#x27;</code> helps track
-                                    status consistently
+                                    <code class="language-js"
+                                      >&#x27;idle&#x27;</code
+                                    >
+                                    and
+                                    <code class="language-js"
+                                      >&#x27;loading&#x27;</code
+                                    >
+                                    helps track status consistently
                                   </li>
                                 </ul>
                               </li>
@@ -13464,9 +13566,13 @@
                                 >
                                 <ul>
                                   <li>
-                                    Actions use <code class="language-js >payload</code> for data,
-                                    <code class="language-js >meta</code> for extra descriptions,
-                                    and <code class="language-js >error</code> for errors
+                                    Actions use
+                                    <code class="language-js">payload</code> for
+                                    data,
+                                    <code class="language-js">meta</code> for
+                                    extra descriptions, and
+                                    <code class="language-js">error</code> for
+                                    errors
                                   </li>
                                 </ul>
                               </li>
@@ -13485,7 +13591,9 @@
                               <li>
                                 <strong
                                   >Thunks can return promises from
-                                  <code class="language-js >dispatch</code></strong
+                                  <code class="language-js"
+                                    >dispatch</code
+                                  ></strong
                                 >
                                 <ul>
                                   <li>
@@ -13614,7 +13722,7 @@
                               href="#memoizing-selectors-with-createselector"
                               class="table-of-contents__link"
                               >Memoizing Selectors with
-                              <code class="language-js >createSelector</code></a
+                              <code class="language-js">createSelector</code></a
                             >
                           </li>
                           <li>

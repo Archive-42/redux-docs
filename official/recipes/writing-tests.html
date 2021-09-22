@@ -97,10 +97,17 @@
       as="script"
     />
     <link rel="preload" href="../assets/js/main.8520a084.js" as="script" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css"
+    />
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
-    </head>
+    <script
+      async
+      defer
+      src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"
+    ></script>
+  </head>
   <body>
     <script>
       !(function () {
@@ -1124,7 +1131,8 @@
                             target="_blank"
                             rel="noopener noreferrer"
                             >Babel</a
-                          >, you will need to install <code class="language-js >babel-jest</code>:
+                          >, you will need to install
+                          <code class="language-js">babel-jest</code>:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly sh">
@@ -1168,7 +1176,7 @@
                             rel="noopener noreferrer"
                             >babel-preset-env</a
                           >
-                          features in <code class="language-js >.babelrc</code>:
+                          features in <code class="language-js">.babelrc</code>:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -1240,8 +1248,9 @@
                           </div>
                         </div>
                         <p>
-                          Then, add this to <code class="language-js >scripts</code> in your
-                          <code class="language-js >package.json</code>:
+                          Then, add this to
+                          <code class="language-js">scripts</code> in your
+                          <code class="language-js">package.json</code>:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -1379,9 +1388,10 @@
                           </div>
                         </div>
                         <p>
-                          and run <code class="language-js >npm test</code> to run it once, or
-                          <code class="language-js >npm run test:watch</code> to test on every file
-                          change.
+                          and run <code class="language-js">npm test</code> to
+                          run it once, or
+                          <code class="language-js">npm run test:watch</code> to
+                          test on every file change.
                         </p>
                         <h3>
                           <a
@@ -4836,7 +4846,8 @@
                           >. React Testing Library is a simple and complete
                           React DOM testing utility that encourage good testing
                           practices. It uses react-dom&#x27;s
-                          <code class="language-js >render</code> function and <code class="language-js >act</code> from
+                          <code class="language-js">render</code> function and
+                          <code class="language-js">act</code> from
                           react-dom/tests-utils.
                         </p>
                         <div class="codeBlockContainer_K1bP">
@@ -4924,7 +4935,8 @@
                           </div>
                         </div>
                         <p>
-                          Consider the following <code class="language-js >App</code> component:
+                          Consider the following
+                          <code class="language-js">App</code> component:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -5114,13 +5126,16 @@
                           </div>
                         </div>
                         <p>
-                          To test the component, we <code class="language-js >render</code> it into
-                          the DOM and pass stubbed callbacks as props, then we
+                          To test the component, we
+                          <code class="language-js">render</code> it into the
+                          DOM and pass stubbed callbacks as props, then we
                           assert whether the callbacks were called when
-                          expected. We can use the <code class="language-js >wrapper</code> option
-                          in the <code class="language-js >render</code> function and export our own
-                          <code class="language-js >render</code> function as explained in React
-                          Testing Library&#x27;s
+                          expected. We can use the
+                          <code class="language-js">wrapper</code> option in the
+                          <code class="language-js">render</code> function and
+                          export our own
+                          <code class="language-js">render</code> function as
+                          explained in React Testing Library&#x27;s
                           <a
                             href="../../testing-library.com/docs/react-testing-library/setup/index.html"
                             target="_blank"
@@ -5129,7 +5144,8 @@
                           >.
                         </p>
                         <p>
-                          Our <code class="language-js >render</code> function can look like this:
+                          Our <code class="language-js">render</code> function
+                          can look like this:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -5664,7 +5680,7 @@
                         </div>
                         <p>
                           And our test can use our exported
-                          <code class="language-js >render</code> function:
+                          <code class="language-js">render</code> function:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -6032,9 +6048,10 @@
                         </h3>
                         <p>
                           Middleware functions wrap behavior of
-                          <code class="language-js >dispatch</code> calls in Redux, so to test this
-                          modified behavior we need to mock the behavior of the
-                          <code class="language-js >dispatch</code> call.
+                          <code class="language-js">dispatch</code> calls in
+                          Redux, so to test this modified behavior we need to
+                          mock the behavior of the
+                          <code class="language-js">dispatch</code> call.
                         </p>
                         <h4>
                           <a
@@ -6272,11 +6289,13 @@
                           </div>
                         </div>
                         <p>
-                          We need to create a fake <code class="language-js >getState</code>,
-                          <code class="language-js >dispatch</code>, and
-                          <code class="language-js >next</code> functions. We use
-                          <code class="language-js >jest.fn()</code> to create stubs, but with other
-                          test frameworks you would likely use
+                          We need to create a fake
+                          <code class="language-js">getState</code>,
+                          <code class="language-js">dispatch</code>, and
+                          <code class="language-js">next</code> functions. We
+                          use <code class="language-js">jest.fn()</code> to
+                          create stubs, but with other test frameworks you would
+                          likely use
                           <a
                             href="../../sinonjs.org/index.html"
                             target="_blank"
@@ -6617,8 +6636,10 @@
                         </div>
                         <p>
                           We test that our middleware is calling the
-                          <code class="language-js >getState</code>, <code class="language-js >dispatch</code>, and
-                          <code class="language-js >next</code> functions at the right time.
+                          <code class="language-js">getState</code>,
+                          <code class="language-js">dispatch</code>, and
+                          <code class="language-js">next</code> functions at the
+                          right time.
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -7292,9 +7313,10 @@
                         </div>
                         <p>
                           In some cases, you will need to modify the
-                          <code class="language-js >create</code> function to use different mock
-                          implementations of <code class="language-js >getState</code> and
-                          <code class="language-js >next</code>.
+                          <code class="language-js">create</code> function to
+                          use different mock implementations of
+                          <code class="language-js">getState</code> and
+                          <code class="language-js">next</code>.
                         </p>
                         <h3>
                           <a
@@ -7338,8 +7360,8 @@
                               >: ReactTestUtils makes it easy to test React
                               components in the testing framework of your
                               choice. React Testing Library uses the
-                              <code class="language-js >act</code> function exported by React Test
-                              Utils.
+                              <code class="language-js">act</code> function
+                              exported by React Test Utils.
                             </p>
                           </li>
                         </ul>

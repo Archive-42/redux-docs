@@ -1,13 +1,6 @@
 <a href="index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 <a href="introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="api/api-reference.html" class="navbar__item navbar__link">API</a><a href="faq.html" class="navbar__item navbar__link navbar__link--active">FAQ</a><a href="style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 - <a href="introduction/getting-started.html" class="menu__link">Getting Started</a>
@@ -171,8 +164,6 @@
 
 <a href="understanding/history-and-design/middleware.html" class="pagination-nav__link"></a>
 
-Previous
-
 « Middleware
 
 <a href="faq/general.html" class="pagination-nav__link"></a>
@@ -203,4 +194,4 @@ General »
 
 <a href="index.html" class="footerLogoLink_MyFc"><img src="../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" /><img src="../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
 
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

@@ -2830,7 +2830,7 @@
                         </h4>
                         <p>
                           An <strong>action</strong> is a plain JavaScript
-                          object that has a <code class="language-js >type</code> field.
+                          object that has a <code class="language-js" >type</code> field.
                           <strong
                             >You can think of an action as an event that
                             describes something that happened in the
@@ -2838,11 +2838,11 @@
                           >.
                         </p>
                         <p>
-                          The <code class="language-js >type</code> field should be a string that
+                          The <code class="language-js" >type</code> field should be a string that
                           gives this action a descriptive name, like
-                          <code class="language-js >&quot;todos/todoAdded&quot;</code>. We usually
+                          <code class="language-js" >&quot;todos/todoAdded&quot;</code>. We usually
                           write that type string like
-                          <code class="language-js >&quot;domain/eventName&quot;</code>, where the
+                          <code class="language-js" >&quot;domain/eventName&quot;</code>, where the
                           first part is the feature or category that this action
                           belongs to, and the second part is the specific thing
                           that happened.
@@ -2851,7 +2851,7 @@
                           An action object can have other fields with additional
                           information about what happened. By convention, we put
                           that information in a field called
-                          <code class="language-js >payload</code>.
+                          <code class="language-js" >payload</code>.
                         </p>
                         <p>A typical action object might look like this:</p>
                         <div class="codeBlockContainer_K1bP">
@@ -3087,10 +3087,10 @@
                         </h4>
                         <p>
                           A <strong>reducer</strong> is a function that receives
-                          the current <code class="language-js >state</code> and an
-                          <code class="language-js >action</code> object, decides how to update the
+                          the current <code class="language-js" >state</code> and an
+                          <code class="language-js" >action</code> object, decides how to update the
                           state if necessary, and returns the new state:
-                          <code class="language-js >(state, action) =&gt; newState</code>.
+                          <code class="language-js" >(state, action) =&gt; newState</code>.
                           <strong
                             >You can think of a reducer as an event listener
                             which handles events based on the received action
@@ -3125,7 +3125,7 @@
                                 href="../../../developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce.html"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                ><code class="language-js >Array.reduce()</code></a
+                                ><code class="language-js" >Array.reduce()</code></a
                               >
                               method.
                             </p>
@@ -3138,14 +3138,14 @@
                         <ul>
                           <li>
                             They should only calculate the new state value based
-                            on the <code class="language-js >state</code> and
-                            <code class="language-js >action</code> arguments
+                            on the <code class="language-js" >state</code> and
+                            <code class="language-js" >action</code> arguments
                           </li>
                           <li>
                             They are not allowed to modify the existing
-                            <code class="language-js >state</code>. Instead, they must make
+                            <code class="language-js" >state</code>. Instead, they must make
                             <em>immutable updates</em>, by copying the existing
-                            <code class="language-js >state</code> and making changes to the copied
+                            <code class="language-js" >state</code> and making changes to the copied
                             values.
                           </li>
                           <li>
@@ -3447,8 +3447,8 @@
                         </div>
                         <p>
                           Reducers can use any kind of logic inside to decide
-                          what the new state should be: <code class="language-js >if/else</code>,
-                          <code class="language-js >switch</code>, loops, and so on.
+                          what the new state should be: <code class="language-js" >if/else</code>,
+                          <code class="language-js" >switch</code>, loops, and so on.
                         </p>
                         <details class="detailed-explanation">
                           <summary>
@@ -3463,7 +3463,7 @@
                               href="../../../developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce.html"
                               target="_blank"
                               rel="noopener noreferrer"
-                              ><code class="language-js >Array.reduce()</code></a
+                              ><code class="language-js" >Array.reduce()</code></a
                             >
                             method lets you take an array of values, process
                             each item in the array one at a time, and return a
@@ -3471,27 +3471,27 @@
                             &quot;reducing the array down to one value&quot;.
                           </p>
                           <p>
-                            <code class="language-js >Array.reduce()</code> takes a callback
+                            <code class="language-js" >Array.reduce()</code> takes a callback
                             function as an argument, which will be called one
                             time for each item in the array. It takes two
                             arguments:
                           </p>
                           <ul>
                             <li>
-                              <code class="language-js >previousResult</code>, the value that your
+                              <code class="language-js" >previousResult</code>, the value that your
                               callback returned last time
                             </li>
                             <li>
-                              <code class="language-js >currentItem</code>, the current item in the
+                              <code class="language-js" >currentItem</code>, the current item in the
                               array
                             </li>
                           </ul>
                           <p>
                             The first time that the callback runs, there
-                            isn&#x27;t a <code class="language-js >previousResult</code> available,
+                            isn&#x27;t a <code class="language-js" >previousResult</code> available,
                             so we need to also pass in an initial value that
                             will be used as the first
-                            <code class="language-js >previousResult</code>.
+                            <code class="language-js" >previousResult</code>.
                           </p>
                           <p>
                             If we wanted to add together an array of numbers to
@@ -3884,10 +3884,10 @@
                           </div>
                           <p>
                             Notice that this
-                            <code class="language-js >addNumbers</code> &quot;reduce callback&quot;
+                            <code class="language-js" >addNumbers</code> &quot;reduce callback&quot;
                             function doesn&#x27;t need to keep track of anything
-                            itself. It takes the <code class="language-js >previousResult</code> and
-                            <code class="language-js >currentItem</code> arguments, does something
+                            itself. It takes the <code class="language-js" >previousResult</code> and
+                            <code class="language-js" >currentItem</code> arguments, does something
                             with them, and returns a new result value.
                           </p>
                           <p>
@@ -3897,14 +3897,14 @@
                               function!</strong
                             >
                             It takes a &quot;previous result&quot; (the
-                            <code class="language-js >state</code>), and the &quot;current
-                            item&quot; (the <code class="language-js >action</code> object), decides
+                            <code class="language-js" >state</code>), and the &quot;current
+                            item&quot; (the <code class="language-js" >action</code> object), decides
                             a new state value based on those arguments, and
                             returns that new state.
                           </p>
                           <p>
                             If we were to create an array of Redux actions, call
-                            <code class="language-js >reduce()</code>, and pass in a reducer
+                            <code class="language-js" >reduce()</code>, and pass in a reducer
                             function, we&#x27;d get a final result the same way:
                           </p>
                           <div class="codeBlockContainer_K1bP">
@@ -4205,7 +4205,7 @@
                               >Redux reducers reduce a set of actions (over
                               time) into a single state</strong
                             >. The difference is that with
-                            <code class="language-js >Array.reduce()</code> it happens all at once,
+                            <code class="language-js" >Array.reduce()</code> it happens all at once,
                             and with Redux, it happens over the lifetime of your
                             running app.
                           </p>
@@ -4230,7 +4230,7 @@
                         </p>
                         <p>
                           The store is created by passing in a reducer, and has
-                          a method called <code class="language-js >getState</code> that returns the
+                          a method called <code class="language-js" >getState</code> that returns the
                           current state value:
                         </p>
                         <div class="codeBlockContainer_K1bP">
@@ -4418,14 +4418,14 @@
                         </h4>
                         <p>
                           The Redux store has a method called
-                          <code class="language-js >dispatch</code>.
+                          <code class="language-js" >dispatch</code>.
                           <strong
                             >The only way to update the state is to call
-                            <code class="language-js >store.dispatch()</code> and pass in an action
+                            <code class="language-js" >store.dispatch()</code> and pass in an action
                             object</strong
                           >. The store will run its reducer function and save
                           the new state value inside, and we can call
-                          <code class="language-js >getState()</code> to retrieve the updated value:
+                          <code class="language-js" >getState()</code> to retrieve the updated value:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -5012,7 +5012,7 @@
                               <li>
                                 The store calls the root reducer once, and saves
                                 the return value as its initial
-                                <code class="language-js >state</code>
+                                <code class="language-js" >state</code>
                               </li>
                               <li>
                                 When the UI is first rendered, UI components
@@ -5040,9 +5040,9 @@
                               </li>
                               <li>
                                 The store runs the reducer function again with
-                                the previous <code class="language-js >state</code> and the current
-                                <code class="language-js >action</code>, and saves the return value
-                                as the new <code class="language-js >state</code>
+                                the previous <code class="language-js" >state</code> and the current
+                                <code class="language-js" >action</code>, and saves the return value
+                                as the new <code class="language-js" >state</code>
                               </li>
                               <li>
                                 The store notifies all parts of the UI that are
@@ -5164,7 +5164,7 @@
                                 <ul>
                                   <li>
                                     <em>Actions</em> are plain objects with a
-                                    <code class="language-js >type</code> field, and describe
+                                    <code class="language-js" >type</code> field, and describe
                                     &quot;what happened&quot; in the app
                                   </li>
                                   <li>

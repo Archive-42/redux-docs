@@ -208,13 +208,13 @@
     </header>
     <p> </p>
     <h1 id="tutorial-using-the-connect-api">
-      Tutorial: Using the <code class="language-js >connect</code> API
+      Tutorial: Using the <code class="language-js" >connect</code> API
     </h1>
     <div class="tip">
       <p>
         We now recommend using
         <a href="../api/hooks.md">the React-Redux hooks API as the default</a>.
-        However, the <code class="language-js >connect</code> API still works fine.
+        However, the <code class="language-js" >connect</code> API still works fine.
       </p>
       <p>
         This tutorial also shows some older practices we no longer recommend,
@@ -259,17 +259,17 @@
     <p>We have implemented our React UI components as follows:</p>
     <ul>
       <li>
-        <code class="language-js >TodoApp</code> is the entry component for our app. It renders the
-        header, the <code class="language-js >AddTodo</code>, <code class="language-js >TodoList</code>, and
-        <code class="language-js >VisibilityFilters</code> components.
+        <code class="language-js" >TodoApp</code> is the entry component for our app. It renders the
+        header, the <code class="language-js" >AddTodo</code>, <code class="language-js" >TodoList</code>, and
+        <code class="language-js" >VisibilityFilters</code> components.
       </li>
       <li>
-        <code class="language-js >AddTodo</code> is the component that allows a user to input a todo
+        <code class="language-js" >AddTodo</code> is the component that allows a user to input a todo
         item and add to the list upon clicking its “Add Todo” button:
         <ul>
           <li>
             It uses a controlled input that sets state upon
-            <code class="language-js >onChange</code>.
+            <code class="language-js" >onChange</code>.
           </li>
           <li>
             When the user clicks on the “Add Todo” button, it dispatches the
@@ -279,16 +279,16 @@
         </ul>
       </li>
       <li>
-        <code class="language-js >TodoList</code> is the component that renders the list of todos:
+        <code class="language-js" >TodoList</code> is the component that renders the list of todos:
         <ul>
           <li>
             It renders the filtered list of todos when one of the
-            <code class="language-js >VisibilityFilters</code> is selected.
+            <code class="language-js" >VisibilityFilters</code> is selected.
           </li>
         </ul>
       </li>
       <li>
-        <code class="language-js >Todo</code> is the component that renders a single todo item:
+        <code class="language-js" >Todo</code> is the component that renders a single todo item:
         <ul>
           <li>
             It renders the todo content, and shows that a todo is completed by
@@ -296,28 +296,28 @@
           </li>
           <li>
             It dispatches the action to toggle the todo’s complete status upon
-            <code class="language-js >onClick</code>.
+            <code class="language-js" >onClick</code>.
           </li>
         </ul>
       </li>
       <li>
-        <code class="language-js >VisibilityFilters</code> renders a simple set of filters:
+        <code class="language-js" >VisibilityFilters</code> renders a simple set of filters:
         <em>all</em>, <em>completed</em>, and <em>incomplete.</em> Clicking on
         each one of them filters the todos:
         <ul>
           <li>
-            It accepts an <code class="language-js >activeFilter</code> prop from the parent that
+            It accepts an <code class="language-js" >activeFilter</code> prop from the parent that
             indicates which filter is currently selected by the user. An active
             filter is rendered with an underscore.
           </li>
           <li>
-            It dispatches the <code class="language-js >setFilter</code> action to update the
+            It dispatches the <code class="language-js" >setFilter</code> action to update the
             selected filter.
           </li>
         </ul>
       </li>
-      <li><code class="language-js >constants</code> holds the constants data for our app.</li>
-      <li>And finally <code class="language-js >index</code> renders our app to the DOM.</li>
+      <li><code class="language-js" >constants</code> holds the constants data for our app.</li>
+      <li>And finally <code class="language-js" >index</code> renders our app to the DOM.</li>
     </ul>
     <p><br /></p>
     <p><strong>The Redux Store</strong></p>
@@ -330,13 +330,13 @@
         Store
         <ul>
           <li>
-            <code class="language-js >todos</code>: A normalized reducer of todos. It contains a
-            <code class="language-js >byIds</code> map of all todos and a <code class="language-js >allIds</code> that
+            <code class="language-js" >todos</code>: A normalized reducer of todos. It contains a
+            <code class="language-js" >byIds</code> map of all todos and a <code class="language-js" >allIds</code> that
             contains the list of all ids.
           </li>
           <li>
-            <code class="language-js >visibilityFilters</code>: A simple string <code class="language-js >all</code>,
-            <code class="language-js >completed</code>, or <code class="language-js >incomplete</code>.
+            <code class="language-js" >visibilityFilters</code>: A simple string <code class="language-js" >all</code>,
+            <code class="language-js" >completed</code>, or <code class="language-js" >incomplete</code>.
           </li>
         </ul>
       </li>
@@ -344,22 +344,22 @@
         Action Creators
         <ul>
           <li>
-            <code class="language-js >addTodo</code> creates the action to add todos. It takes a
-            single string variable <code class="language-js >content</code> and returns an
-            <code class="language-js >ADD_TODO</code> action with <code class="language-js >payload</code> containing a
-            self-incremented <code class="language-js >id</code> and <code class="language-js >content</code>
+            <code class="language-js" >addTodo</code> creates the action to add todos. It takes a
+            single string variable <code class="language-js" >content</code> and returns an
+            <code class="language-js" >ADD_TODO</code> action with <code class="language-js" >payload</code> containing a
+            self-incremented <code class="language-js" >id</code> and <code class="language-js" >content</code>
           </li>
           <li>
-            <code class="language-js >toggleTodo</code> creates the action to toggle todos. It takes
-            a single number variable <code class="language-js >id</code> and returns a
-            <code class="language-js >TOGGLE_TODO</code> action with <code class="language-js >payload</code> containing
-            <code class="language-js >id</code> only
+            <code class="language-js" >toggleTodo</code> creates the action to toggle todos. It takes
+            a single number variable <code class="language-js" >id</code> and returns a
+            <code class="language-js" >TOGGLE_TODO</code> action with <code class="language-js" >payload</code> containing
+            <code class="language-js" >id</code> only
           </li>
           <li>
-            <code class="language-js >setFilter</code> creates the action to set the app’s active
-            filter. It takes a single string variable <code class="language-js >filter</code> and
-            returns a <code class="language-js >SET_FILTER</code> action with
-            <code class="language-js >payload</code> containing the <code class="language-js >filter</code> itself
+            <code class="language-js" >setFilter</code> creates the action to set the app’s active
+            filter. It takes a single string variable <code class="language-js" >filter</code> and
+            returns a <code class="language-js" >SET_FILTER</code> action with
+            <code class="language-js" >payload</code> containing the <code class="language-js" >filter</code> itself
           </li>
         </ul>
       </li>
@@ -367,23 +367,23 @@
         Reducers
         <ul>
           <li>
-            The <code class="language-js >todos</code> reducer
+            The <code class="language-js" >todos</code> reducer
             <ul>
               <li>
-                Appends the <code class="language-js >id</code> to its <code class="language-js >allIds</code> field and
-                sets the todo within its <code class="language-js >byIds</code> field upon receiving
-                the <code class="language-js >ADD_TODO</code> action
+                Appends the <code class="language-js" >id</code> to its <code class="language-js" >allIds</code> field and
+                sets the todo within its <code class="language-js" >byIds</code> field upon receiving
+                the <code class="language-js" >ADD_TODO</code> action
               </li>
               <li>
-                Toggles the <code class="language-js >completed</code> field for the todo upon
-                receiving the <code class="language-js >TOGGLE_TODO</code> action
+                Toggles the <code class="language-js" >completed</code> field for the todo upon
+                receiving the <code class="language-js" >TOGGLE_TODO</code> action
               </li>
             </ul>
           </li>
           <li>
-            The <code class="language-js >visibilityFilters</code> reducer sets its slice of store
+            The <code class="language-js" >visibilityFilters</code> reducer sets its slice of store
             to the new filter it receives from the
-            <code class="language-js >SET_FILTER</code> action payload
+            <code class="language-js" >SET_FILTER</code> action payload
           </li>
         </ul>
       </li>
@@ -391,7 +391,7 @@
         Action Types
         <ul>
           <li>
-            We use a file <code class="language-js >actionTypes.js</code> to hold the constants of
+            We use a file <code class="language-js" >actionTypes.js</code> to hold the constants of
             action types to be reused
           </li>
         </ul>
@@ -400,20 +400,20 @@
         Selectors
         <ul>
           <li>
-            <code class="language-js >getTodoList</code> returns the <code class="language-js >allIds</code> list from
-            the <code class="language-js >todos</code> store
+            <code class="language-js" >getTodoList</code> returns the <code class="language-js" >allIds</code> list from
+            the <code class="language-js" >todos</code> store
           </li>
           <li>
-            <code class="language-js >getTodoById</code> finds the todo in the store given by
-            <code class="language-js >id</code>
+            <code class="language-js" >getTodoById</code> finds the todo in the store given by
+            <code class="language-js" >id</code>
           </li>
           <li>
-            <code class="language-js >getTodos</code> is slightly more complex. It takes all the
-            <code class="language-js >id</code>s from <code class="language-js >allIds</code>, finds each todo in
-            <code class="language-js >byIds</code>, and returns the final array of todos
+            <code class="language-js" >getTodos</code> is slightly more complex. It takes all the
+            <code class="language-js" >id</code>s from <code class="language-js" >allIds</code>, finds each todo in
+            <code class="language-js" >byIds</code>, and returns the final array of todos
           </li>
           <li>
-            <code class="language-js >getTodosByVisibilityFilter</code> filters the todos according
+            <code class="language-js" >getTodosByVisibilityFilter</code> filters the todos according
             to the visibility filter
           </li>
         </ul>
@@ -431,11 +431,11 @@
     </p>
     <h3 id="providing-the-store">Providing the Store</h3>
     <p>
-      First we need to make the <code class="language-js >store</code> available to our app. To do
-      this, we wrap our app with the <code class="language-js >&lt;Provider /&gt;</code> API
+      First we need to make the <code class="language-js" >store</code> available to our app. To do
+      this, we wrap our app with the <code class="language-js" >&lt;Provider /&gt;</code> API
       provided by React Redux.
     </p>
-    <pre class="language-js  class="jsx"><code class="language-js >// index.js
+    <pre class="language-js  class="jsx"><code class="language-js" >// index.js
 import React from &#39;react&#39;
 import ReactDOM from &#39;react-dom&#39;
 import TodoApp from &#39;./TodoApp&#39;
@@ -451,34 +451,34 @@ ReactDOM.render(
   rootElement
 )</code></pre>
     <p>
-      Notice how our <code class="language-js >&lt;TodoApp /&gt;</code> is now wrapped with the
-      <code class="language-js >&lt;Provider /&gt;</code> with <code class="language-js >store</code> passed in as a
+      Notice how our <code class="language-js" >&lt;TodoApp /&gt;</code> is now wrapped with the
+      <code class="language-js" >&lt;Provider /&gt;</code> with <code class="language-js" >store</code> passed in as a
       prop.
     </p>
     <p><img src="https://i.imgur.com/LV0XvwA.png" /></p>
     <h3 id="connecting-the-components">Connecting the Components</h3>
     <p>
-      React Redux provides a <code class="language-js >connect</code> function for you to read
+      React Redux provides a <code class="language-js" >connect</code> function for you to read
       values from the Redux store (and re-read the values when the store
       updates).
     </p>
-    <p>The <code class="language-js >connect</code> function takes two arguments, both optional:</p>
+    <p>The <code class="language-js" >connect</code> function takes two arguments, both optional:</p>
     <ul>
       <li>
         <p>
-          <code class="language-js >mapStateToProps</code>: called every time the store state
+          <code class="language-js" >mapStateToProps</code>: called every time the store state
           changes. It receives the entire store state, and should return an
           object of data this component needs.
         </p>
       </li>
       <li>
-        <code class="language-js >mapDispatchToProps</code>: this parameter can either be a
+        <code class="language-js" >mapDispatchToProps</code>: this parameter can either be a
         function, or an object.
         <ul>
           <li>
             If it’s a function, it will be called once on component creation. It
-            will receive <code class="language-js >dispatch</code> as an argument, and should return
-            an object full of functions that use <code class="language-js >dispatch</code> to
+            will receive <code class="language-js" >dispatch</code> as an argument, and should return
+            an object full of functions that use <code class="language-js" >dispatch</code> to
             dispatch actions.
           </li>
           <li>
@@ -490,7 +490,7 @@ ReactDOM.render(
         </ul>
       </li>
     </ul>
-    <p>Normally, you’ll call <code class="language-js >connect</code> in this way:</p>
+    <p>Normally, you’ll call <code class="language-js" >connect</code> in this way:</p>
     <div class="sourceCode" id="cb2">
       <pre class="language-js 
         class="sourceCode js"
@@ -511,12 +511,12 @@ ReactDOM.render(
 <a class="sourceLine" id="cb2-15" title="15"><span class="at">connect</span>(mapStateToProps<span class="op">,</span> mapDispatchToProps)(Component)</a></code></pre>
     </div>
     <p>
-      Let’s work on <code class="language-js >&lt;AddTodo /&gt;</code> first. It needs to trigger
-      changes to the <code class="language-js >store</code> to add new todos. Therefore, it needs to
-      be able to <code class="language-js >dispatch</code> actions to the store. Here’s how we do
+      Let’s work on <code class="language-js" >&lt;AddTodo /&gt;</code> first. It needs to trigger
+      changes to the <code class="language-js" >store</code> to add new todos. Therefore, it needs to
+      be able to <code class="language-js" >dispatch</code> actions to the store. Here’s how we do
       it.
     </p>
-    <p>Our <code class="language-js >addTodo</code> action creator looks like this:</p>
+    <p>Our <code class="language-js" >addTodo</code> action creator looks like this:</p>
     <div class="sourceCode" id="cb3">
       <pre class="language-js 
         class="sourceCode js"
@@ -535,7 +535,7 @@ ReactDOM.render(
 <a class="sourceLine" id="cb3-13" title="13"><span class="co">// ... other actions</span></a></code></pre>
     </div>
     <p>
-      By passing it to <code class="language-js >connect</code>, our component receives it as a
+      By passing it to <code class="language-js" >connect</code>, our component receives it as a
       prop, and it will automatically dispatch the action when it’s called.
     </p>
     <div class="sourceCode" id="cb4">
@@ -554,17 +554,17 @@ ReactDOM.render(
 <a class="sourceLine" id="cb4-11" title="11"><span class="im">export</span> <span class="im">default</span> <span class="at">connect</span>(<span class="kw">null</span><span class="op">,</span> <span class="op">{</span> addTodo <span class="op">}</span>)(AddTodo)</a></code></pre>
     </div>
     <p>
-      Notice now that <code class="language-js >&lt;AddTodo /&gt;</code> is wrapped with a parent
-      component called <code class="language-js >&lt;Connect(AddTodo) /&gt;</code>. Meanwhile,
-      <code class="language-js >&lt;AddTodo /&gt;</code> now gains one prop: the
-      <code class="language-js >addTodo</code> action.
+      Notice now that <code class="language-js" >&lt;AddTodo /&gt;</code> is wrapped with a parent
+      component called <code class="language-js" >&lt;Connect(AddTodo) /&gt;</code>. Meanwhile,
+      <code class="language-js" >&lt;AddTodo /&gt;</code> now gains one prop: the
+      <code class="language-js" >addTodo</code> action.
     </p>
     <p><img src="https://i.imgur.com/u6aXbwl.png" /></p>
     <p>
-      We also need to implement the <code class="language-js >handleAddTodo</code> function to let
-      it dispatch the <code class="language-js >addTodo</code> action and reset the input
+      We also need to implement the <code class="language-js" >handleAddTodo</code> function to let
+      it dispatch the <code class="language-js" >addTodo</code> action and reset the input
     </p>
-    <pre class="language-js  class="jsx"><code class="language-js >// components/AddTodo.js
+    <pre class="language-js  class="jsx"><code class="language-js" >// components/AddTodo.js
 
 import React from &#39;react&#39;
 import { connect } from &#39;react-redux&#39;
@@ -598,7 +598,7 @@ class AddTodo extends React.Component {
 
 export default connect(null, { addTodo })(AddTodo)</code></pre>
     <p>
-      Now our <code class="language-js >&lt;AddTodo /&gt;</code> is connected to the store. When we
+      Now our <code class="language-js" >&lt;AddTodo /&gt;</code> is connected to the store. When we
       add a todo it would dispatch an action to change the store. We are not
       seeing it in the app because the other components are not connected yet.
       If you have the Redux DevTools Extension hooked up, you should see the
@@ -608,18 +608,18 @@ export default connect(null, { addTodo })(AddTodo)</code></pre>
     <p>You should also see that the store has changed accordingly:</p>
     <p><img src="https://i.imgur.com/yx27RVC.png" /></p>
     <p>
-      The <code class="language-js >&lt;TodoList /&gt;</code> component is responsible for rendering
+      The <code class="language-js" >&lt;TodoList /&gt;</code> component is responsible for rendering
       the list of todos. Therefore, it needs to read data from the store. We
-      enable it by calling <code class="language-js >connect</code> with the
-      <code class="language-js >mapStateToProps</code> parameter, a function describing which part
+      enable it by calling <code class="language-js" >connect</code> with the
+      <code class="language-js" >mapStateToProps</code> parameter, a function describing which part
       of the data we need from the store.
     </p>
     <p>
-      Our <code class="language-js >&lt;Todo /&gt;</code> component takes the todo item as props. We
-      have this information from the <code class="language-js >byIds</code> field of the
-      <code class="language-js >todos</code>. However, we also need the information from the
-      <code class="language-js >allIds</code> field of the store indicating which todos and in what
-      order they should be rendered. Our <code class="language-js >mapStateToProps</code> function
+      Our <code class="language-js" >&lt;Todo /&gt;</code> component takes the todo item as props. We
+      have this information from the <code class="language-js" >byIds</code> field of the
+      <code class="language-js" >todos</code>. However, we also need the information from the
+      <code class="language-js" >allIds</code> field of the store indicating which todos and in what
+      order they should be rendered. Our <code class="language-js" >mapStateToProps</code> function
       may look like this:
     </p>
     <div class="sourceCode" id="cb6">
@@ -694,23 +694,23 @@ export default connect(null, { addTodo })(AddTodo)</code></pre>
       for more information on why and how to use selector functions.)
     </p>
     <p>
-      Now that our <code class="language-js >&lt;TodoList /&gt;</code> is connected to the store. It
+      Now that our <code class="language-js" >&lt;TodoList /&gt;</code> is connected to the store. It
       should receive the list of todos, map over them, and pass each todo to the
-      <code class="language-js >&lt;Todo /&gt;</code> component. <code class="language-js >&lt;Todo /&gt;</code> will in
+      <code class="language-js" >&lt;Todo /&gt;</code> component. <code class="language-js" >&lt;Todo /&gt;</code> will in
       turn render them to the screen. Now try adding a todo. It should come up
       on our todo list!
     </p>
     <p><img src="https://i.imgur.com/N68xvrG.png" /></p>
     <p>
       We will connect more components. Before we do this, let’s pause and learn
-      a bit more about <code class="language-js >connect</code> first.
+      a bit more about <code class="language-js" >connect</code> first.
     </p>
     <h3 id="common-ways-of-calling-connect">
-      Common ways of calling <code class="language-js >connect</code>
+      Common ways of calling <code class="language-js" >connect</code>
     </h3>
     <p>
       Depending on what kind of components you are working with, there are
-      different ways of calling <code class="language-js >connect</code> , with the most common ones
+      different ways of calling <code class="language-js" >connect</code> , with the most common ones
       summarized as below:
     </p>
     <table>
@@ -729,14 +729,14 @@ export default connect(null, { addTodo })(AddTodo)</code></pre>
       <tbody>
         <tr class="odd">
           <td>Do Not Inject Action Creators</td>
-          <td><code class="language-js >connect()(Component)</code></td>
-          <td><code class="language-js >connect(mapStateToProps)(Component)</code></td>
+          <td><code class="language-js" >connect()(Component)</code></td>
+          <td><code class="language-js" >connect(mapStateToProps)(Component)</code></td>
         </tr>
         <tr class="even">
           <td>Inject Action Creators</td>
-          <td><code class="language-js >connect(null, mapDispatchToProps)(Component)</code></td>
+          <td><code class="language-js" >connect(null, mapDispatchToProps)(Component)</code></td>
           <td>
-            <code class="language-js >connect(mapStateToProps, mapDispatchToProps)(Component)</code>
+            <code class="language-js" >connect(mapStateToProps, mapDispatchToProps)(Component)</code>
           </td>
         </tr>
       </tbody>
@@ -745,13 +745,13 @@ export default connect(null, { addTodo })(AddTodo)</code></pre>
       Do not subscribe to the store and do not inject action creators
     </h4>
     <p>
-      If you call <code class="language-js >connect</code> without providing any arguments, your
+      If you call <code class="language-js" >connect</code> without providing any arguments, your
       component will:
     </p>
     <ul>
       <li><em>not</em> re-render when the store changes</li>
       <li>
-        receive <code class="language-js >props.dispatch</code> that you may use to manually
+        receive <code class="language-js" >props.dispatch</code> that you may use to manually
         dispatch action
       </li>
     </ul>
@@ -765,16 +765,16 @@ export default connect(null, { addTodo })(AddTodo)</code></pre>
       Subscribe to the store and do not inject action creators
     </h4>
     <p>
-      If you call <code class="language-js >connect</code> with only <code class="language-js >mapStateToProps</code>,
+      If you call <code class="language-js" >connect</code> with only <code class="language-js" >mapStateToProps</code>,
       your component will:
     </p>
     <ul>
       <li>
-        subscribe to the values that <code class="language-js >mapStateToProps</code> extracts from
+        subscribe to the values that <code class="language-js" >mapStateToProps</code> extracts from
         the store, and re-render only when those values have changed
       </li>
       <li>
-        receive <code class="language-js >props.dispatch</code> that you may use to manually
+        receive <code class="language-js" >props.dispatch</code> that you may use to manually
         dispatch action
       </li>
     </ul>
@@ -789,14 +789,14 @@ export default connect(null, { addTodo })(AddTodo)</code></pre>
       Do not subscribe to the store and inject action creators
     </h4>
     <p>
-      If you call <code class="language-js >connect</code> with only
-      <code class="language-js >mapDispatchToProps</code>, your component will:
+      If you call <code class="language-js" >connect</code> with only
+      <code class="language-js" >mapDispatchToProps</code>, your component will:
     </p>
     <ul>
       <li><em>not</em> re-render when the store changes</li>
       <li>
         receive each of the action creators you inject with
-        <code class="language-js >mapDispatchToProps</code> as props and automatically dispatch the
+        <code class="language-js" >mapDispatchToProps</code> as props and automatically dispatch the
         actions upon being called
       </li>
     </ul>
@@ -811,18 +811,18 @@ export default connect(null, { addTodo })(AddTodo)</code></pre>
       Subscribe to the store and inject action creators
     </h4>
     <p>
-      If you call <code class="language-js >connect</code> with both
-      <code class="language-js >mapStateToProps</code> and <code class="language-js >mapDispatchToProps</code>, your
+      If you call <code class="language-js" >connect</code> with both
+      <code class="language-js" >mapStateToProps</code> and <code class="language-js" >mapDispatchToProps</code>, your
       component will:
     </p>
     <ul>
       <li>
-        subscribe to the values that <code class="language-js >mapStateToProps</code> extracts from
+        subscribe to the values that <code class="language-js" >mapStateToProps</code> extracts from
         the store, and re-render only when those values have changed
       </li>
       <li>
         receive all of the action creators you inject with
-        <code class="language-js >mapDispatchToProps</code> as props and automatically dispatch the
+        <code class="language-js" >mapDispatchToProps</code> as props and automatically dispatch the
         actions upon being called.
       </li>
     </ul>
@@ -835,21 +835,21 @@ export default connect(null, { addTodo })(AddTodo)</code></pre>
 <a class="sourceLine" id="cb12-4" title="4"><span class="im">export</span> <span class="im">default</span> <span class="at">connect</span>(mapStateToProps<span class="op">,</span> actionCreators)(Component)</a></code></pre>
     </div>
     <p>
-      These four cases cover the most basic usages of <code class="language-js >connect</code>. To
-      read more about <code class="language-js >connect</code>, continue reading our
+      These four cases cover the most basic usages of <code class="language-js" >connect</code>. To
+      read more about <code class="language-js" >connect</code>, continue reading our
       <a href="../api/connect.md">API section</a> that explains it in more
       detail.
     </p>
     <!-- TODO: Put up link to the page that further explains connect -->
     <hr />
-    <p>Now let’s connect the rest of our <code class="language-js >&lt;TodoApp /&gt;</code>.</p>
+    <p>Now let’s connect the rest of our <code class="language-js" >&lt;TodoApp /&gt;</code>.</p>
     <p>
       How should we implement the interaction of toggling todos? A keen reader
       might already have an answer. If you have your environment set up and have
       followed through up until this point, now is a good time to leave it aside
       and implement the feature by yourself. There would be no surprise that we
-      connect our <code class="language-js >&lt;Todo /&gt;</code> to dispatch
-      <code class="language-js >toggleTodo</code> in a similar way:
+      connect our <code class="language-js" >&lt;Todo /&gt;</code> to dispatch
+      <code class="language-js" >toggleTodo</code> in a similar way:
     </p>
     <div class="sourceCode" id="cb13">
       <pre class="language-js 
@@ -869,16 +869,16 @@ export default connect(null, { addTodo })(AddTodo)</code></pre>
     </div>
     <p>Now our todo’s can be toggled complete. We’re almost there!</p>
     <p><img src="https://i.imgur.com/4UBXYtj.png" /></p>
-    <p>Finally, let’s implement our <code class="language-js >VisibilityFilters</code> feature.</p>
+    <p>Finally, let’s implement our <code class="language-js" >VisibilityFilters</code> feature.</p>
     <p>
-      The <code class="language-js >&lt;VisibilityFilters /&gt;</code> component needs to be able to
+      The <code class="language-js" >&lt;VisibilityFilters /&gt;</code> component needs to be able to
       read from the store which filter is currently active, and dispatch actions
       to the store. Therefore, we need to pass both a
-      <code class="language-js >mapStateToProps</code> and <code class="language-js >mapDispatchToProps</code>. The
-      <code class="language-js >mapStateToProps</code> here can be a simple accessor of the
-      <code class="language-js >visibilityFilter</code> state. And the
-      <code class="language-js >mapDispatchToProps</code> will contain the
-      <code class="language-js >setFilter</code> action creator.
+      <code class="language-js" >mapStateToProps</code> and <code class="language-js" >mapDispatchToProps</code>. The
+      <code class="language-js" >mapStateToProps</code> here can be a simple accessor of the
+      <code class="language-js" >visibilityFilter</code> state. And the
+      <code class="language-js" >mapDispatchToProps</code> will contain the
+      <code class="language-js" >setFilter</code> action creator.
     </p>
     <div class="sourceCode" id="cb14">
       <pre class="language-js 
@@ -901,9 +901,9 @@ export default connect(null, { addTodo })(AddTodo)</code></pre>
     </div>
     <p>
       Meanwhile, we also need to update our
-      <code class="language-js >&lt;TodoList /&gt;</code> component to filter todos according to the
-      active filter. Previously the <code class="language-js >mapStateToProps</code> we passed to
-      the <code class="language-js >&lt;TodoList /&gt;</code> <code class="language-js >connect</code> function call was
+      <code class="language-js" >&lt;TodoList /&gt;</code> component to filter todos according to the
+      active filter. Previously the <code class="language-js" >mapStateToProps</code> we passed to
+      the <code class="language-js" >&lt;TodoList /&gt;</code> <code class="language-js" >connect</code> function call was
       simply the selector that selects the whole list of todos. Let’s write
       another selector to help filtering todos by their status.
     </p>

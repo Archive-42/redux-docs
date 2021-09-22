@@ -97,10 +97,17 @@
       as="script"
     />
     <link rel="preload" href="../assets/js/main.8520a084.js" as="script" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css"
+    />
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
-    </head>
+    <script
+      async
+      defer
+      src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"
+    ></script>
+  </head>
   <body>
     <script>
       !(function () {
@@ -1205,8 +1212,9 @@
                             >a typical Create-React-App folder structure</a
                           >
                           where all the application code is in a
-                          <code class="language-js >src</code>, but the patterns can be adapted to
-                          whatever project or folder setup you&#x27;re using.
+                          <code class="language-js">src</code>, but the patterns
+                          can be adapted to whatever project or folder setup
+                          you&#x27;re using.
                         </p>
                         <p>
                           The
@@ -1300,10 +1308,12 @@
                           >
                         </h3>
                         <p>
-                          Create a file named <code class="language-js >src/app/store.js</code>.
-                          Import the <code class="language-js >configureStore</code> API from Redux
-                          Toolkit. We&#x27;ll start by creating an empty Redux
-                          store, and exporting it:
+                          Create a file named
+                          <code class="language-js">src/app/store.js</code>.
+                          Import the
+                          <code class="language-js">configureStore</code> API
+                          from Redux Toolkit. We&#x27;ll start by creating an
+                          empty Redux store, and exporting it:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -1453,12 +1463,14 @@
                         <p>
                           Once the store is created, we can make it available to
                           our React components by putting a React-Redux
-                          <code class="language-js >&lt;Provider&gt;</code> around our application
-                          in <code class="language-js >src/index.js</code>. Import the Redux store
-                          we just created, put a
-                          <code class="language-js >&lt;Provider&gt;</code> around your
-                          <code class="language-js >&lt;App&gt;</code>, and pass the store as a
-                          prop:
+                          <code class="language-js">&lt;Provider&gt;</code>
+                          around our application in
+                          <code class="language-js">src/index.js</code>. Import
+                          the Redux store we just created, put a
+                          <code class="language-js">&lt;Provider&gt;</code>
+                          around your
+                          <code class="language-js">&lt;App&gt;</code>, and pass
+                          the store as a prop:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -1796,9 +1808,11 @@
                         </h3>
                         <p>
                           Add a new file named
-                          <code class="language-js >src/features/counter/counterSlice.js</code>. In
-                          that file, import the <code class="language-js >createSlice</code> API
-                          from Redux Toolkit.
+                          <code class="language-js"
+                            >src/features/counter/counterSlice.js</code
+                          >. In that file, import the
+                          <code class="language-js">createSlice</code> API from
+                          Redux Toolkit.
                         </p>
                         <p>
                           Creating a slice requires a string name to identify
@@ -1817,8 +1831,9 @@
                             >we write all state updates immutably, by making
                             copies of data and updating the copies</a
                           >. However, Redux Toolkit&#x27;s
-                          <code class="language-js >createSlice</code> and
-                          <code class="language-js >createReducer</code> APIs use
+                          <code class="language-js">createSlice</code> and
+                          <code class="language-js">createReducer</code> APIs
+                          use
                           <a
                             href="../../immerjs.github.io/immer/index.html"
                             target="_blank"
@@ -2347,9 +2362,10 @@
                         <p>
                           Next, we need to import the reducer function from the
                           counter slice and add it to our store. By defining a
-                          field inside the <code class="language-js >reducers</code> parameter, we
-                          tell the store to use this slice reducer function to
-                          handle all updates to that state.
+                          field inside the
+                          <code class="language-js">reducers</code> parameter,
+                          we tell the store to use this slice reducer function
+                          to handle all updates to that state.
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -2541,13 +2557,19 @@
                         <p>
                           Now we can use the React-Redux hooks to let React
                           components interact with the Redux store. We can read
-                          data from the store with <code class="language-js >useSelector</code>, and
-                          dispatch actions using <code class="language-js >useDispatch</code>.
-                          Create a
-                          <code class="language-js >src/features/counter/Counter.js</code> file with
-                          a <code class="language-js >&lt;Counter&gt;</code> component inside, then
-                          import that component into <code class="language-js >App.js</code> and
-                          render it inside of <code class="language-js >&lt;App&gt;</code>.
+                          data from the store with
+                          <code class="language-js">useSelector</code>, and
+                          dispatch actions using
+                          <code class="language-js">useDispatch</code>. Create a
+                          <code class="language-js"
+                            >src/features/counter/Counter.js</code
+                          >
+                          file with a
+                          <code class="language-js">&lt;Counter&gt;</code>
+                          component inside, then import that component into
+                          <code class="language-js">App.js</code> and render it
+                          inside of
+                          <code class="language-js">&lt;App&gt;</code>.
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -3417,9 +3439,10 @@
                             update its state
                           </li>
                           <li>
-                            The <code class="language-js >&lt;Counter&gt;</code> component will see
-                            the new state value from the store and re-render
-                            itself with the new data
+                            The
+                            <code class="language-js">&lt;Counter&gt;</code>
+                            component will see the new state value from the
+                            store and re-render itself with the new data
                           </li>
                         </ul>
                         <h2>
@@ -3464,17 +3487,25 @@
                               <li>
                                 <strong
                                   >Create a Redux store with
-                                  <code class="language-js >configureStore</code></strong
+                                  <code class="language-js"
+                                    >configureStore</code
+                                  ></strong
                                 >
                                 <ul>
                                   <li>
-                                    <code class="language-js >configureStore</code> accepts a
-                                    <code class="language-js >reducer</code> function as a named
-                                    argument
+                                    <code class="language-js"
+                                      >configureStore</code
+                                    >
+                                    accepts a
+                                    <code class="language-js">reducer</code>
+                                    function as a named argument
                                   </li>
                                   <li>
-                                    <code class="language-js >configureStore</code> automatically
-                                    sets up the store with good default settings
+                                    <code class="language-js"
+                                      >configureStore</code
+                                    >
+                                    automatically sets up the store with good
+                                    default settings
                                   </li>
                                 </ul>
                               </li>
@@ -3486,25 +3517,35 @@
                                 <ul>
                                   <li>
                                     Put a React-Redux
-                                    <code class="language-js >&lt;Provider&gt;</code> component
-                                    around your <code class="language-js >&lt;App /&gt;</code>
+                                    <code class="language-js"
+                                      >&lt;Provider&gt;</code
+                                    >
+                                    component around your
+                                    <code class="language-js"
+                                      >&lt;App /&gt;</code
+                                    >
                                   </li>
                                   <li>
                                     Pass the Redux store as
-                                    <code class="language-js >&lt;Provider store={store}&gt;</code>
+                                    <code class="language-js"
+                                      >&lt;Provider store={store}&gt;</code
+                                    >
                                   </li>
                                 </ul>
                               </li>
                               <li>
                                 <strong
                                   >Create a Redux &quot;slice&quot; reducer with
-                                  <code class="language-js >createSlice</code></strong
+                                  <code class="language-js"
+                                    >createSlice</code
+                                  ></strong
                                 >
                                 <ul>
                                   <li>
-                                    Call <code class="language-js >createSlice</code> with a string
-                                    name, an initial state, and named reducer
-                                    functions
+                                    Call
+                                    <code class="language-js">createSlice</code>
+                                    with a string name, an initial state, and
+                                    named reducer functions
                                   </li>
                                   <li>
                                     Reducer functions may &quot;mutate&quot; the
@@ -3519,18 +3560,23 @@
                               <li>
                                 <strong
                                   >Use the React-Redux
-                                  <code class="language-js >useSelector/useDispatch</code> hooks in
-                                  React components</strong
+                                  <code class="language-js"
+                                    >useSelector/useDispatch</code
+                                  >
+                                  hooks in React components</strong
                                 >
                                 <ul>
                                   <li>
                                     Read data from the store with the
-                                    <code class="language-js >useSelector</code> hook
+                                    <code class="language-js">useSelector</code>
+                                    hook
                                   </li>
                                   <li>
-                                    Get the <code class="language-js >dispatch</code> function with
-                                    the <code class="language-js >useDispatch</code> hook, and
-                                    dispatch actions as needed
+                                    Get the
+                                    <code class="language-js">dispatch</code>
+                                    function with the
+                                    <code class="language-js">useDispatch</code>
+                                    hook, and dispatch actions as needed
                                   </li>
                                 </ul>
                               </li>

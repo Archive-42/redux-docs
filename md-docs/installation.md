@@ -1,13 +1,6 @@
 <a href="../index.html" class="navbar__brand"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
 
 <a href="getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="../tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../faq.html" class="navbar__item navbar__link">FAQ</a><a href="../style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="../index.html" class="navbar__brand"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
 
 - <a href="getting-started.html" class="menu__link">Getting Started</a>
@@ -122,11 +115,7 @@ It's available as a package on NPM for use with a module bundler or in a Node ap
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">\# Yarn</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token function" style="color: #e6d874">yarn</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">add</span><span class="token plain"> @reduxjs/toolkit</span>
-
-Copy
-
-It's also available as a UMD build, which can be loaded from [the `dist` folder on unpkg](../../unpkg.com/%40reduxjs/toolkit/dist/index.html). The UMD builds make Redux Toolkit available as a `window.RTK` global variable.
+<span class="token plain"></span><span class="token function" style="color: #e6d874">yarn</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">add</span><span class="token plain"> @reduxjs/toolkit</span>It's also available as a UMD build, which can be loaded from [the `dist` folder on unpkg](../../unpkg.com/%40reduxjs/toolkit/dist/index.html). The UMD builds make Redux Toolkit available as a `window.RTK` global variable.
 
 ## <span id="redux-core" class="anchor enhancedAnchor_2LWZ"></span>Redux Core<a href="#redux-core" class="hash-link" title="Direct link to heading">#</a>
 
@@ -140,11 +129,7 @@ To install the stable version:
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">\# Yarn</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token function" style="color: #e6d874">yarn</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">add</span><span class="token plain"> redux</span>
-
-Copy
-
-If you're not, you can [access these files on unpkg](../../unpkg.com/redux/index.html), download them, or point your package manager to them.
+<span class="token plain"></span><span class="token function" style="color: #e6d874">yarn</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">add</span><span class="token plain"> redux</span>If you're not, you can [access these files on unpkg](../../unpkg.com/redux/index.html), download them, or point your package manager to them.
 
 Most commonly, people consume Redux as a collection of [CommonJS](../../www.commonjs.org/index.html) modules. These modules are what you get when you import `redux` in a [Webpack](../../webpack.js.org/index.html), [Browserify](../../browserify.org/index.html), or a Node environment. If you like to live on the edge and use [Rollup](../../rollupjs.org/index.html), we support that as well.
 
@@ -158,11 +143,7 @@ Most likely, you'll also need [the React bindings](../../github.com/reduxjs/reac
 
 <span class="token function" style="color: #e6d874">npm</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">install</span><span class="token plain"> react-redux</span>
 
-<span class="token plain"></span><span class="token function" style="color: #e6d874">npm</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">install</span><span class="token plain"> --save-dev redux-devtools</span>
-
-Copy
-
-Note that unlike Redux itself, many packages in the Redux ecosystem don't provide UMD builds, so we recommend using CommonJS module bundlers like [Webpack](../../webpack.js.org/index.html) and [Browserify](../../browserify.org/index.html) for the most comfortable development experience.
+<span class="token plain"></span><span class="token function" style="color: #e6d874">npm</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">install</span><span class="token plain"> --save-dev redux-devtools</span>Note that unlike Redux itself, many packages in the Redux ecosystem don't provide UMD builds, so we recommend using CommonJS module bundlers like [Webpack](../../webpack.js.org/index.html) and [Browserify](../../browserify.org/index.html) for the most comfortable development experience.
 
 ## <span id="create-a-react-redux-app" class="anchor enhancedAnchor_2LWZ"></span>Create a React Redux App<a href="#create-a-react-redux-app" class="hash-link" title="Direct link to heading">#</a>
 
@@ -176,13 +157,7 @@ The recommended way to start new apps with React and Redux is by using the [offi
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">\# Redux + TypeScript template</span><span class="token plain"></span>
 
-<span class="token plain">npx create-react-app my-app --template redux-typescript</span>
-
-Copy
-
-<a href="getting-started.html" class="pagination-nav__link"></a>
-
-Previous
+<span class="token plain">npx create-react-app my-app --template redux-typescript</span><a href="getting-started.html" class="pagination-nav__link"></a>
 
 « Getting Started with Redux
 
@@ -217,4 +192,4 @@ Core Concepts »
 
 <a href="../index.html" class="footerLogoLink_MyFc"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" /><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
 
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

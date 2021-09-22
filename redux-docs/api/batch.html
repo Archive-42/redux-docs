@@ -207,7 +207,7 @@
       <h1 class="title">batch</h1>
     </header>
     <p> </p>
-    <h1 id="batch"><code class="language-js >batch()</code></h1>
+    <h1 id="batch"><code class="language-js" >batch()</code></h1>
     <div class="sourceCode" id="cb1">
       <pre class="language-js 
         class="sourceCode js"
@@ -215,7 +215,7 @@
     </div>
     <p><em>added in v7.0.0</em></p>
     <p>
-      React’s <code class="language-js >unstable_batchedUpdates()</code> API allows any React
+      React’s <code class="language-js" >unstable_batchedUpdates()</code> API allows any React
       updates in an event loop tick to be batched together into a single render
       pass. React already uses this internally for its own event handler
       callbacks. This API is actually part of the renderer packages like
@@ -225,7 +225,7 @@
       Since React-Redux needs to work in both ReactDOM and React Native
       environments, we’ve taken care of importing this API from the correct
       renderer at build time for our own use. We also now re-export this
-      function publicly ourselves, renamed to <code class="language-js >batch()</code>. You can use
+      function publicly ourselves, renamed to <code class="language-js" >batch()</code>. You can use
       it to ensure that multiple actions dispatched outside of React only result
       in a single render update, like this:
     </p>
@@ -249,7 +249,7 @@
       <li>
         <a
           href="https://github.com/facebook/react/commit/b41883fc708cd24d77dcaa767cde814b50b457fe"
-          ><code class="language-js >unstable_batchedUpdates()</code> API from React</a
+          ><code class="language-js" >unstable_batchedUpdates()</code> API from React</a
         >
       </li>
     </ul>

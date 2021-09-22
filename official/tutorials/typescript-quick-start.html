@@ -101,10 +101,17 @@
       as="script"
     />
     <link rel="preload" href="../assets/js/main.8520a084.js" as="script" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css"
+    />
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
-    </head>
+    <script
+      async
+      defer
+      src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"
+    ></script>
+  </head>
   <body>
     <script>
       !(function () {
@@ -1174,7 +1181,8 @@
                             href="../../www.npmjs.com/package/%40types/react-redux.html"
                             target="_blank"
                             rel="noopener noreferrer"
-                            ><code class="language-js >@types/react-redux</code> typedefs package</a
+                            ><code class="language-js">@types/react-redux</code>
+                            typedefs package</a
                           >
                           on NPM. In addition to typing the library functions,
                           the types also export some helpers to make it easier
@@ -1183,12 +1191,16 @@
                         </p>
                         <p>
                           As of React Redux v7.2.3, the
-                          <code class="language-js >react-redux</code> package has a dependency on
-                          <code class="language-js >@types/react-redux</code>, so the type
-                          definitions will be automatically installed with the
-                          library. Otherwise, you&#x27;ll need to manually
-                          install them yourself (typically
-                          <code class="language-js >npm install @types/react-redux</code> ).
+                          <code class="language-js">react-redux</code> package
+                          has a dependency on
+                          <code class="language-js">@types/react-redux</code>,
+                          so the type definitions will be automatically
+                          installed with the library. Otherwise, you&#x27;ll
+                          need to manually install them yourself (typically
+                          <code class="language-js"
+                            >npm install @types/react-redux</code
+                          >
+                          ).
                         </p>
                         <p>
                           The
@@ -1235,21 +1247,23 @@
                             target="_blank"
                             rel="noopener noreferrer"
                             >Redux Toolkit&#x27;s
-                            <code class="language-js >configureStore</code> API</a
+                            <code class="language-js">configureStore</code>
+                            API</a
                           >
                           should not need any additional typings. You will,
                           however, want to extract the
-                          <code class="language-js >RootState</code> type and the
-                          <code class="language-js >Dispatch</code> type so that they can be
-                          referenced as needed. Inferring these types from the
-                          store itself means that they correctly update as you
-                          add more state slices or modify middleware settings.
+                          <code class="language-js">RootState</code> type and
+                          the <code class="language-js">Dispatch</code> type so
+                          that they can be referenced as needed. Inferring these
+                          types from the store itself means that they correctly
+                          update as you add more state slices or modify
+                          middleware settings.
                         </p>
                         <p>
                           Since those are types, it&#x27;s safe to export them
                           directly from your store setup file such as
-                          <code class="language-js >app/store.ts</code> and import them directly
-                          into other files.
+                          <code class="language-js">app/store.ts</code> and
+                          import them directly into other files.
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -1570,41 +1584,48 @@
                         </h3>
                         <p>
                           While it&#x27;s possible to import the
-                          <code class="language-js >RootState</code> and
-                          <code class="language-js >AppDispatch</code> types into each component,
-                          it&#x27;s
+                          <code class="language-js">RootState</code> and
+                          <code class="language-js">AppDispatch</code> types
+                          into each component, it&#x27;s
                           <strong
                             >better to create typed versions of the
-                            <code class="language-js >useDispatch</code> and
-                            <code class="language-js >useSelector</code> hooks for usage in your
-                            application</strong
+                            <code class="language-js">useDispatch</code> and
+                            <code class="language-js">useSelector</code> hooks
+                            for usage in your application</strong
                           >. . This is important for a couple reasons:
                         </p>
                         <ul>
                           <li>
-                            For <code class="language-js >useSelector</code>, it saves you the need
-                            to type <code class="language-js >(state: RootState)</code> every time
+                            For <code class="language-js">useSelector</code>, it
+                            saves you the need to type
+                            <code class="language-js">(state: RootState)</code>
+                            every time
                           </li>
                           <li>
-                            For <code class="language-js >useDispatch</code>, the default
-                            <code class="language-js >Dispatch</code> type does not know about
-                            thunks. In order to correctly dispatch thunks, you
-                            need to use the specific customized
-                            <code class="language-js >AppDispatch</code> type from the store that
-                            includes the thunk middleware types, and use that
-                            with <code class="language-js >useDispatch</code>. Adding a pre-typed
-                            <code class="language-js >useDispatch</code> hook keeps you from
-                            forgetting to import <code class="language-js >AppDispatch</code> where
+                            For <code class="language-js">useDispatch</code>,
+                            the default
+                            <code class="language-js">Dispatch</code> type does
+                            not know about thunks. In order to correctly
+                            dispatch thunks, you need to use the specific
+                            customized
+                            <code class="language-js">AppDispatch</code> type
+                            from the store that includes the thunk middleware
+                            types, and use that with
+                            <code class="language-js">useDispatch</code>. Adding
+                            a pre-typed
+                            <code class="language-js">useDispatch</code> hook
+                            keeps you from forgetting to import
+                            <code class="language-js">AppDispatch</code> where
                             it&#x27;s needed.
                           </li>
                         </ul>
                         <p>
                           Since these are actual variables, not types, it&#x27;s
                           important to define them in a separate file such as
-                          <code class="language-js >app/hooks.ts</code>, not the store setup file.
-                          This allows you to import them into any component file
-                          that needs to use the hooks, and avoids potential
-                          circular import dependency issues.
+                          <code class="language-js">app/hooks.ts</code>, not the
+                          store setup file. This allows you to import them into
+                          any component file that needs to use the hooks, and
+                          avoids potential circular import dependency issues.
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -1903,23 +1924,28 @@
                         </h3>
                         <p>
                           Each slice file should define a type for its initial
-                          state value, so that <code class="language-js >createSlice</code> can
-                          correctly infer the type of <code class="language-js >state</code> in each
-                          case reducer.
+                          state value, so that
+                          <code class="language-js">createSlice</code> can
+                          correctly infer the type of
+                          <code class="language-js">state</code> in each case
+                          reducer.
                         </p>
                         <p>
                           All generated actions should be defined using the
-                          <code class="language-js >PayloadAction&lt;T&gt;</code> type from Redux
-                          Toolkit, which takes the type of the
-                          <code class="language-js >action.payload</code> field as its generic
-                          argument.
+                          <code class="language-js"
+                            >PayloadAction&lt;T&gt;</code
+                          >
+                          type from Redux Toolkit, which takes the type of the
+                          <code class="language-js">action.payload</code> field
+                          as its generic argument.
                         </p>
                         <p>
-                          You can safely import the <code class="language-js >RootState</code> type
-                          from the store file here. It&#x27;s a circular import,
-                          but the TypeScript compiler can correctly handle that
-                          for types. This may be needed for use cases like
-                          writing selector functions.
+                          You can safely import the
+                          <code class="language-js">RootState</code> type from
+                          the store file here. It&#x27;s a circular import, but
+                          the TypeScript compiler can correctly handle that for
+                          types. This may be needed for use cases like writing
+                          selector functions.
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -2676,11 +2702,16 @@
                         </div>
                         <p>
                           The generated action creators will be correctly typed
-                          to accept a <code class="language-js >payload</code> argument based on the
-                          <code class="language-js >PayloadAction&lt;T&gt;</code> type you provided
-                          for the reducer. For example,
-                          <code class="language-js >incrementByAmount</code> requires a
-                          <code class="language-js >number</code> as its argument.
+                          to accept a
+                          <code class="language-js">payload</code> argument
+                          based on the
+                          <code class="language-js"
+                            >PayloadAction&lt;T&gt;</code
+                          >
+                          type you provided for the reducer. For example,
+                          <code class="language-js">incrementByAmount</code>
+                          requires a <code class="language-js">number</code> as
+                          its argument.
                         </p>
                         <p>
                           In some cases,
@@ -2691,7 +2722,8 @@
                             >TypeScript may unnecessarily tighten the type of
                             the initial state</a
                           >. If that happens, you can work around it by casting
-                          the initial state using <code class="language-js >as</code>, instead of
+                          the initial state using
+                          <code class="language-js">as</code>, instead of
                           declaring the type of the variable:
                         </p>
                         <div class="codeBlockContainer_K1bP">

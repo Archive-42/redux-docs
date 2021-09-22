@@ -1,13 +1,6 @@
 <a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 <a href="../official/introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="../essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../official/api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../official/faq.html" class="navbar__item navbar__link">FAQ</a><a href="../official/style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/../github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../official/introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 - <a href="../official/introduction/getting-started.html" class="menu__link">Getting Started</a>
@@ -141,9 +134,9 @@ The Redux core library has [**a `createStore` API**](../../api/createstore.html)
 
 src/store.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">rootReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./reducer'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >rootReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./reducer'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -151,25 +144,21 @@ src/store.js
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> store</span>
-
-Copy
-
-### <span id="loading-initial-state" class="anchor enhancedAnchor_2LWZ"></span>Loading Initial State<a href="#loading-initial-state" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> store</span>### <span id="loading-initial-state" class="anchor enhancedAnchor_2LWZ"></span>Loading Initial State<a href="#loading-initial-state" class="hash-link" title="Direct link to heading">#</a>
 
 `createStore` can also accept a `preloadedState` value as its second argument. You could use this to add initial data when the store is created, such as values that were included in an HTML page sent from the server, or persisted in `localStorage` and read back when the user visits the page again, like this:
 
 storeStatePersistenceExample.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">rootReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./reducer'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >rootReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./reducer'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
 <span class="token plain"></span><span class="token keyword" style="color: #f92672">let</span><span class="token plain"> preloadedState</span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> persistedTodosString </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token dom variable" style="color: #f8f8f2">localStorage</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getItem</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'todos'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> persistedTodosString </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token dom variable" style="color: #f8f8f2">localStorage</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getItem</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'todos'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -177,7 +166,7 @@ storeStatePersistenceExample.js
 
 <span class="token plain"> preloadedState </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> todos</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token known-class-name class-name">JSON</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">parse</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">persistedTodosString</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> todos</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token known-class-name class-name">JSON</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">parse</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">persistedTodosString</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
@@ -185,11 +174,7 @@ storeStatePersistenceExample.js
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> store </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createStore</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">rootReducer</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> preloadedState</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-## <span id="dispatching-actions" class="anchor enhancedAnchor_2LWZ"></span>Dispatching Actions<a href="#dispatching-actions" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> store </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createStore</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">rootReducer</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> preloadedState</span><span class="token punctuation" style="color: #f8f8f2">)</span>## <span id="dispatching-actions" class="anchor enhancedAnchor_2LWZ"></span>Dispatching Actions<a href="#dispatching-actions" class="hash-link" title="Direct link to heading">#</a>
 
 Now that we have created a store, let's verify our program works! Even without any UI, we can already test the update logic.
 
@@ -203,13 +188,13 @@ src/index.js
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">store</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./store'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >store</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./store'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Log the initial state</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'Initial state: '</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'Initial state: '</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// {todos: \[....\], filters: {status, colors}}</span><span class="token plain"></span>
 
@@ -219,9 +204,9 @@ src/index.js
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Note that subscribe() returns a function for unregistering the listener</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> unsubscribe </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">subscribe</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> unsubscribe </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">subscribe</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'State after dispatch: '</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'State after dispatch: '</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
@@ -231,25 +216,25 @@ src/index.js
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos/todoAdded'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'Learn about actions'</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos/todoAdded'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'Learn about actions'</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos/todoAdded'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'Learn about reducers'</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos/todoAdded'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'Learn about reducers'</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos/todoAdded'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'Learn about stores'</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
-
-<span class="token plain" style="display: inline-block"> </span>
-
-<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos/todoToggled'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">0</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
-
-<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos/todoToggled'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos/todoAdded'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'Learn about stores'</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'filters/statusFilterChanged'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'Active'</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos/todoToggled'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">0</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+
+<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos/todoToggled'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'filters/statusFilterChanged'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'Active'</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+
+<span class="token plain" style="display: inline-block"> </span>
+
+<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
 <span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'filters/colorFilterChanged'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
 
@@ -269,15 +254,11 @@ src/index.js
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos/todoAdded'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'Try creating a store'</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos/todoAdded'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'Try creating a store'</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Omit existing React rendering logic</span>
-
-Copy
-
-Remember, every time we call `store.dispatch(action)`:
+<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Omit existing React rendering logic</span>Remember, every time we call `store.dispatch(action)`:
 
 - The store calls `rootReducer(state, action)`
   - That root reducer may call other slice reducers inside of itself, like `todosReducer(state.todos, action)`
@@ -299,7 +280,7 @@ If you want, you can now try writing tests for your reducers. Because they're [p
 
 todosSlice.spec.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">todosReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./todosSlice'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >todosReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./todosSlice'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -313,13 +294,9 @@ todosSlice.spec.js
 
 <span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> result </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">todosReducer</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">initialState</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token function" style="color: #e6d874">expect</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">result</span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token number" style="color: #ae81ff">0</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">completed</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">toBe</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token boolean" style="color: #ae81ff">true</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token function" style="color: #e6d874">expect</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">result</span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token number" style="color: #ae81ff">0</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">completed</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">toBe</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token boolean" style="color: #ae81ff">true</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-## <span id="inside-a-redux-store" class="anchor enhancedAnchor_2LWZ"></span>Inside a Redux Store<a href="#inside-a-redux-store" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>## <span id="inside-a-redux-store" class="anchor enhancedAnchor_2LWZ"></span>Inside a Redux Store<a href="#inside-a-redux-store" class="hash-link" title="Direct link to heading">#</a>
 
 It might be helpful to take a peek inside a Redux store to see how it works. Here's a miniature example of a working Redux store, in about 25 lines of code:
 
@@ -343,13 +320,13 @@ miniReduxStoreExample.js
 
 <span class="token plain"> </span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">subscribe</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">listener</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> listeners</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">push</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">listener</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> listeners</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">push</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">listener</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">unsubscribe</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> index </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> listeners</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">indexOf</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">listener</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> index </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> listeners</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">indexOf</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">listener</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"> listeners</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">splice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">index</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> listeners</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">splice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">index</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
@@ -361,7 +338,7 @@ miniReduxStoreExample.js
 
 <span class="token plain"> state </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">reducer</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">state</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"> listeners</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">forEach</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">listener</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">listener</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> listeners</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">forEach</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">listener</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">listener</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
@@ -373,11 +350,7 @@ miniReduxStoreExample.js
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> dispatch</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> subscribe</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> getState </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-This small version of a Redux store works well enough that you could use it to replace the actual Redux `createStore` function you've been using in your app so far. (Try it and see for yourself!) [The actual Redux store implementation is longer and a bit more complicated](../../../github.com/reduxjs/redux/blob/v4.0.5/src/createStore.html), but most of that is comments, warning messages, and handling some edge cases.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>This small version of a Redux store works well enough that you could use it to replace the actual Redux `createStore` function you've been using in your app so far. (Try it and see for yourself!) [The actual Redux store implementation is longer and a bit more complicated](../../../github.com/reduxjs/redux/blob/v4.0.5/src/createStore.html), but most of that is comments, warning messages, and handling some edge cases.
 
 As you can see, the actual logic here is fairly short:
 
@@ -390,15 +363,11 @@ As you can see, the actual logic here is fairly short:
 
 To emphasize one of those in particular: notice that `getState` just returns whatever the current `state` value is. That means that **by default, nothing prevents you from accidentally mutating the current state value!** This code will run without any errors, but it's incorrect:
 
-<span class="token keyword" style="color: #f92672">const</span><span class="token plain"> state </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token keyword" style="color: #f92672">const</span><span class="token plain"> state </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// ❌ Don't do this - it mutates the current state!</span><span class="token plain"></span>
 
-<span class="token plain">state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">filters</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">status</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'Active'</span>
-
-Copy
-
-In other words:
+<span class="token plain">state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">filters</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">status</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'Active'</span>In other words:
 
 - The Redux store doesn't make an extra copy of the `state` value when you call `getState()`. It's exactly the same reference that was returned from the root reducer function
 - The Redux store doesn't do anything else to prevent accidental mutations. It _is_ possible to mutate the state, either inside a reducer or outside the store, and you must always be careful to avoid mutations.
@@ -428,11 +397,11 @@ Let's start by using `sayHiOnDispatch`. First, we'll import it, and pass it to `
 
 src/store.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">rootReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./reducer'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >rootReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./reducer'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> sayHiOnDispatch </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./exampleAddons/enhancers'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > sayHiOnDispatch </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./exampleAddons/enhancers'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -440,29 +409,21 @@ src/store.js
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> store</span>
-
-Copy
-
-We don't have a `preloadedState` value here, so we'll pass `undefined` as the second argument instead.
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> store</span>We don't have a `preloadedState` value here, so we'll pass `undefined` as the second argument instead.
 
 Next, let's try dispatching an action:
 
 src/index.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">store</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./store'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >store</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./store'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'Dispatching action'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'Dispatching action'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos/todoAdded'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'Learn about actions'</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos/todoAdded'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'Learn about actions'</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'Dispatch complete'</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-Now look at the console. You should see `'Hi!'` logged there, in between the other two log statements:
+<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'Dispatch complete'</span><span class="token punctuation" style="color: #f8f8f2">)</span>Now look at the console. You should see `'Hi!'` logged there, in between the other two log statements:
 
 ![sayHi store enhancer logging](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMUAAABZCAMAAAC5QhD6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMAUExURSIiIj09PVFRUVJSUmBgYGJiYnBwcImJiZWVlaGhoaqqqrW1tcjIyNLS0tvb29zc3OXl5e7u7vDw8Pb29v///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHo5L7IAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTnU1rJkAAAEZUlEQVR4Xu2abYObIBCEk6bV1lpba/7/b+3O7LLgS4zxvDuSMh/uOIFZHli1Uk7XV1ChyEcLFEN1aq34mPpLYyVRfUr+2Kv2VA1WXNV+iu48bXUQRWL8IEV9Ep07/WOb7lDs19z4rgIFmJuHpi9XimstqyH5FBalv1ixqf5IkUNsZc0uvS2eiAEbKUitUEgJtaxmVfelkzLd4awNo7qzR4NzPTK2KxAioNhf2hAi1YiiO+tI1be/SL++5iKJaQvj7jtGQxefsqFC+58dqKthqDSwVcswG3UaKonRKFsQ3TF3GD3GjdpkLcyMEfuL9JcQtTqNNKFgJ6OIbowdhoc5GgWz5sCGS6Mz5RToBXteIM9EnLtk6EnRYmoEhB2FiBpRWAxfizBx2kvbiDSMB/Prel9MKfALTci+dOvwWjKwOUXNSrQbhYhaWQvxCPdFpNC0RZgQLK7ROoVmVFg3E/Kdt4pPxSIFKzHHWyg0VWKKwBHlSMEc1jAezAewToFnxfRhzlRlt2Rgtyk2rYXdtimFWrKXmsBVw6ihyOd3FGJGMQuNgAjLbjaBkBs7hd0X8nMUIiqh8He2UbTsgDJ7ITnJKQ9AtAvM4owCn1FrFOncBGFp+RQTN1TzGeXGTkFazuAdCqQne+AJLsIkIWnZntmLK+IihV86QKaIhpWCuMcQrGLnSGG3FIMEoeflt849qrUyGNurQ0ohQhJiJKNY16zXHulroeVgjtaHUdiryl6sB+uD10LT/3B9HIWmORfkcG2iyF6FIh8Vinx0+vsKKhmVjwpFPioU+ahQ5KMFCv/+lu/D9/mH9OG6QzH6Ss5XRsHP+3Q7hXoNirjtl7lmFNg0Cd/Gz0uBX4XiUxQosD8hes21eI8tsHfQf0DxNFql6M68nL9mFMnO/9NRPLkKRT4qFPmoUOSjQpGPys5/PioU+ahQ5KNCkY9eliLumT8oPUi2T/hQ3v95vJ/CDgYmeguFSL/9U81D3JBRcG/wsQ2cHCng8Mln/g+i4KG4ZOcfZylZfPzMfyK46DX0kWZD1dSnpoV1YhwpQoc0RHL8f0kjiiPP/Ae1iN7/gJ3EwBnwofraNF++4QBqNBYZBQehJ8s9BE71rv3H1oSCDY0irueeM/+m2Euvy3gwC+KIUY2MjYK/NDlDCP1rZeN1RGG4vhY2STYAixLMncKva7Axhbfyk6gtRi0wpEiNwxhgomShsw7IreZaWQuxCvdFDKbJmlLE2V6i8Am0ZpIv6xS2w8q7IITg2WrRNorpbjN8UI7Btp/5N3krp9i0FqrQORnQslKKcEw97UQjBoO9ppyaezjcetQShSWpSK/LzylFMFIKo6VCjU/FLSUU/s42ired+Q/iS0ifUTI8PICmFPo8ChRir0MXeQg9o35bgQJpZ0vOFIQj0pE2zEvGwLN8w5n/VOEN4+1TCrmixpb6MOAIdNgeIjZclFGsazqww3SUcaF4uwpFqk0U2atQ5KMXobBd5+dWyahcdL3+A8LO/XkH5SkqAAAAAElFTkSuQmCC)
 
@@ -476,17 +437,17 @@ Fortunately, **the Redux core includes [a `compose` function](../../api/compose.
 
 src/store.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createStore</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> compose </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > createStore</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > compose </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">rootReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./reducer'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >rootReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./reducer'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span ></span>
 
-<span class="token imports"> sayHiOnDispatch</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"></span>
+<span > sayHiOnDispatch</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span ></span>
 
-<span class="token imports"> includeMeaningOfLife</span>
+<span > includeMeaningOfLife</span>
 
-<span class="token imports"></span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./exampleAddons/enhancers'</span><span class="token plain"></span>
+<span ></span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./exampleAddons/enhancers'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -498,31 +459,23 @@ src/store.js
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> store</span>
-
-Copy
-
-Now we can see what happens if we use the store:
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> store</span>Now we can see what happens if we use the store:
 
 src/index.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">store</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./store'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >store</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./store'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos/todoAdded'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'Learn about actions'</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos/todoAdded'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'Learn about actions'</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// log: 'Hi!'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'State after dispatch: '</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'State after dispatch: '</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// log: {todos: \[...\], filters: {status, colors}, meaningOfLife: 42}</span>
-
-Copy
-
-And the logged output looks like this:
+<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// log: {todos: \[...\], filters: {status, colors}, meaningOfLife: 42}</span>And the logged output looks like this:
 
 ![meaningOfLife store enhancer logging](../../../d33wubrfki0l68.cloudfront.net/3ad0cba4033646d27f22f76eb8c38e27faedae3d/bcbac/assets/images/meaningoflife-enhancer-logging-46b98c1363a85b3657bd6e)
 
@@ -534,11 +487,7 @@ Store enhancers are a very powerful way to modify the store, and almost all Redu
 
 If you don't have any `preloadedState` to pass in, you can pass the `enhancer` as the second argument instead:
 
-<span class="token keyword" style="color: #f92672">const</span><span class="token plain"> store </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createStore</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">rootReducer</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> storeEnhancer</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-## <span id="middleware" class="anchor enhancedAnchor_2LWZ"></span>Middleware<a href="#middleware" class="hash-link" title="Direct link to heading">#</a>
+<span class="token keyword" style="color: #f92672">const</span><span class="token plain"> store </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createStore</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">rootReducer</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> storeEnhancer</span><span class="token punctuation" style="color: #f8f8f2">)</span>## <span id="middleware" class="anchor enhancedAnchor_2LWZ"></span>Middleware<a href="#middleware" class="hash-link" title="Direct link to heading">#</a>
 
 Enhancers are powerful because they can override or replace any of the store's methods: `dispatch`, `getState`, and `subscribe`.
 
@@ -560,11 +509,11 @@ Since we already know how to add enhancers to our store, we should be able to do
 
 src/store.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createStore</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> applyMiddleware </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > createStore</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > applyMiddleware </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">rootReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./reducer'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >rootReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./reducer'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> print1</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> print2</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> print3 </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./exampleAddons/middleware'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > print1</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > print2</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > print3 </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./exampleAddons/middleware'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -578,31 +527,23 @@ src/store.js
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> store</span>
-
-Copy
-
-As their names say, each of these middleware will print a number when an action is dispatched.
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> store</span>As their names say, each of these middleware will print a number when an action is dispatched.
 
 What happens if we dispatch now?
 
 src/index.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">store</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./store'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >store</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./store'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos/todoAdded'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'Learn about actions'</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos/todoAdded'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'Learn about actions'</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// log: '1'</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// log: '2'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// log: '3'</span>
-
-Copy
-
-And we can see the output in the console:
+<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// log: '3'</span>And we can see the output in the console:
 
 ![print middleware logging](data:image/png;base64,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)
 
@@ -654,11 +595,7 @@ We can also write our own middleware. You might not need to do this all the time
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Let's break down what these three functions do and what their arguments are.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Let's break down what these three functions do and what their arguments are.
 
 - `exampleMiddleware`: The outer function is actually the "middleware" itself. It will be called by `applyMiddleware`, and receives a `storeAPI` object containing the store's `{dispatch, getState}` functions. These are the same `dispatch` and `getState` functions that are actually part of the store. If you call this `dispatch` function, it will send the action to the _start_ of the middleware pipeline. This is only called once.
 - `wrapDispatch`: The middle function receives a function called `next` as its argument. This function is actually the _next middleware_ in the pipeline. If this middleware is the last one in the sequence, then `next` is actually the original `store.dispatch` function instead. Calling `next(action)` passes the middleware to the _next_ middleware in the pipeline. This is also only called once
@@ -684,11 +621,7 @@ Here's the same example as above, using arrow functions:
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">next</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-We're still nesting those three functions together, and returning each function, but the implicit returns make this shorter.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>We're still nesting those three functions together, and returning each function, but the implicit returns make this shorter.
 
 ### <span id="your-first-custom-middleware" class="anchor enhancedAnchor_2LWZ"></span>Your First Custom Middleware<a href="#your-first-custom-middleware" class="hash-link" title="Direct link to heading">#</a>
 
@@ -702,19 +635,15 @@ We can write a small middleware that will log that information to the console fo
 
 <span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">loggerMiddleware</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token parameter">storeAPI</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token parameter">next</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token parameter">action</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'dispatching'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'dispatching'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword" style="color: #f92672">let</span><span class="token plain"> result </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">next</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'next state'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> storeAPI</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'next state'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> storeAPI</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> result</span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Whenever an action is dispatched:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Whenever an action is dispatched:
 
 - The first part of the `handleAction` function runs, and we print `'dispatching'`
 - We pass the action to the `next` section, which may be another middleware or the real `store.dispatch`
@@ -742,15 +671,11 @@ Any middleware can return any value, and the return value from the first middlew
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> dispatchResult </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain">type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'some/action'</span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> dispatchResult </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain">type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'some/action'</span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">dispatchResult</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">dispatchResult</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// log: 'Hello!'</span>
-
-Copy
-
-Let's try one more example. Middleware often look for a specific action, and then do something when that action is dispatched. Middleware also have the ability to run async logic inside. We can write a middleware that prints something on a delay when it sees a certain action:
+<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// log: 'Hello!'</span>Let's try one more example. Middleware often look for a specific action, and then do something when that action is dispatched. Middleware also have the ability to run async logic inside. We can write a middleware that prints something on a delay when it sees a certain action:
 
 <span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">delayedMessageMiddleware</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token parameter">storeAPI</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token parameter">next</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token parameter">action</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
@@ -758,7 +683,7 @@ Let's try one more example. Middleware often look for a specific action, and the
 
 <span class="token plain"> </span><span class="token function" style="color: #e6d874">setTimeout</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'Added a new todo: '</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'Added a new todo: '</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1000</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
@@ -768,11 +693,7 @@ Let's try one more example. Middleware often look for a specific action, and the
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">next</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-This middleware will look for "todo added" actions. Every time it sees one, it sets a 1-second timer, and then prints the action's payload to the console.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>This middleware will look for "todo added" actions. Every time it sees one, it sets a 1-second timer, and then prints the action's payload to the console.
 
 ### <span id="middleware-use-cases" class="anchor enhancedAnchor_2LWZ"></span>Middleware Use Cases<a href="#middleware-use-cases" class="hash-link" title="Direct link to heading">#</a>
 
@@ -810,13 +731,13 @@ Here's how that looks:
 
 src/store.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createStore</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> applyMiddleware </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > createStore</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > applyMiddleware </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> composeWithDevTools </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux-devtools-extension'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > composeWithDevTools </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux-devtools-extension'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">rootReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./reducer'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >rootReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./reducer'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> print1</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> print2</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> print3 </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./exampleAddons/middleware'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > print1</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > print2</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > print3 </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./exampleAddons/middleware'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -834,11 +755,7 @@ src/store.js
 
 <span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> store </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createStore</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">rootReducer</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> composedEnhancer</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> store</span>
-
-Copy
-
-Make sure that `index.js` is still dispatching an action after importing the store. Now, open up the Redux DevTools tab in the browser's DevTools window. You should see something that looks like this:
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> store</span>Make sure that `index.js` is still dispatching an action after importing the store. Now, open up the Redux DevTools tab in the browser's DevTools window. You should see something that looks like this:
 
 ![Redux DevTools Extension: action tab](../../../d33wubrfki0l68.cloudfront.net/2cbd2d01597bd210d8ef106cf1a751607856f699/9e971/assets/images/devtools-action-tab-d48da9ccb10f938ecc9d520555dbfe62)
 
@@ -896,8 +813,6 @@ However, every app needs a user interface to display the data and let the user d
 
 <a href="part-3-state-actions-reducers.html" class="pagination-nav__link"></a>
 
-Previous
-
 « Redux Fundamentals, Part 3: State, Actions, and Reducers
 
 <a href="part-5-ui-react.html" class="pagination-nav__link"></a>
@@ -943,4 +858,4 @@ Redux Fundamentals, Part 5: UI and React »
 - [![Deploys by Netlify](../../../www.netlify.com/img/global/badges/netlify-color-accent.svg)](../../../www.netlify.com/index.html)
 
 <a href="../official/index.html" class="footerLogoLink_MyFc"><img src="../official/../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

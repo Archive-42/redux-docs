@@ -77,13 +77,7 @@
 </ul></li>
 
 
-
-</ul></li>
-
-<ul>
-
-</ul></li>
-</ul></li>
+</li>
 <li><a href="#!" class="menu__link menu__link--sublist">FAQ</a>
 <ul>
 
@@ -94,12 +88,6 @@
 </ul></li>
 
 
-</ul></li>
-<li><a href="#!" class="menu__link menu__link--sublist">Redux Toolkit</a>
-<ul>
-
-</ul></li>
-</ul>
 <h1 id="redux-toolkit-typescript-quick-start"><span id="redux-toolkit-typescript-quick-start" class="anchor enhancedAnchor_2LWZ"></span>Redux Toolkit TypeScript Quick Start<a href="#redux-toolkit-typescript-quick-start" class="hash-link" title="Direct link to heading">#</a></h1>
 <h5 id="what-youll-learn"><span class="admonition-icon"> </span>What You’ll Learn</h5>
 <ul>
@@ -115,13 +103,13 @@
 <p>Welcome to the Redux Toolkit TypeScript Quick Start tutorial! <strong>This tutorial will briefly show how to use TypeScript with Redux Toolkit</strong>.</p>
 <p>This page focuses on just how to set up the TypeScript aspects . For explanations of what Redux is, how it works, and full examples of how to use Redux Toolkit, <a href="index.html">see the tutorials linked in the “Tutorials Index” page</a>.</p>
 <p>Redux Toolkit is already written in TypeScript, so its TS type definitions are built in.</p>
-<p><a href="../../react-redux.js.org/index.html">React Redux</a> has its type definitions in a separate <a href="../../www.npmjs.com/package/%40types/react-redux.html"><code class="language-js >@types/react-redux</code> typedefs package</a> on NPM. In addition to typing the library functions, the types also export some helpers to make it easier to write typesafe interfaces between your Redux store and your React components.</p>
-<p>As of React Redux v7.2.3, the <code class="language-js >react-redux</code> package has a dependency on <code class="language-js >@types/react-redux</code>, so the type definitions will be automatically installed with the library. Otherwise, you’ll need to manually install them yourself (typically <code class="language-js >npm install @types/react-redux</code> ).</p>
+<p><a href="../../react-redux.js.org/index.html">React Redux</a> has its type definitions in a separate <a href="../../www.npmjs.com/package/%40types/react-redux.html"><code class="language-js" >@types/react-redux</code> typedefs package</a> on NPM. In addition to typing the library functions, the types also export some helpers to make it easier to write typesafe interfaces between your Redux store and your React components.</p>
+<p>As of React Redux v7.2.3, the <code class="language-js" >react-redux</code> package has a dependency on <code class="language-js" >@types/react-redux</code>, so the type definitions will be automatically installed with the library. Otherwise, you’ll need to manually install them yourself (typically <code class="language-js" >npm install @types/react-redux</code> ).</p>
 <p>The <a href="../../github.com/reduxjs/cra-template-redux-typescript.html">Redux+TS template for Create-React-App</a> comes with a working example of these patterns already configured.</p>
 <h2 id="project-setup"><span id="project-setup" class="anchor enhancedAnchor_2LWZ"></span>Project Setup<a href="#project-setup" class="hash-link" title="Direct link to heading">#</a></h2>
 <h3 id="define-root-state-and-dispatch-types"><span id="define-root-state-and-dispatch-types" class="anchor enhancedAnchor_2LWZ"></span>Define Root State and Dispatch Types<a href="#define-root-state-and-dispatch-types" class="hash-link" title="Direct link to heading">#</a></h3>
-<p><a href="../../redux-toolkit.js.org/api/configureStore.html">Redux Toolkit’s <code class="language-js >configureStore</code> API</a> should not need any additional typings. You will, however, want to extract the <code class="language-js >RootState</code> type and the <code class="language-js >Dispatch</code> type so that they can be referenced as needed. Inferring these types from the store itself means that they correctly update as you add more state slices or modify middleware settings.</p>
-<p>Since those are types, it’s safe to export them directly from your store setup file such as <code class="language-js >app/store.ts</code> and import them directly into other files.</p>
+<p><a href="../../redux-toolkit.js.org/api/configureStore.html">Redux Toolkit’s <code class="language-js" >configureStore</code> API</a> should not need any additional typings. You will, however, want to extract the <code class="language-js" >RootState</code> type and the <code class="language-js" >Dispatch</code> type so that they can be referenced as needed. Inferring these types from the store itself means that they correctly update as you add more state slices or modify middleware settings.</p>
+<p>Since those are types, it’s safe to export them directly from your store setup file such as <code class="language-js" >app/store.ts</code> and import them directly into other files.</p>
 <p>app/store.ts</p>
 <p><span class="token keyword" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> configureStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘<span class="citation" data-cites="reduxjs/toolkit">@reduxjs/toolkit</span>’</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token comment" style="color: #c6cad2">// …</span><span class="token plain"></span></p>
@@ -140,12 +128,12 @@
 <p><span class="token plain"></span><span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">type</span><span class="token plain"> </span><span class="token class-name maybe-class-name">AppDispatch</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">typeof</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">dispatch</span></p>
 <p>Copy</p>
 <h3 id="define-typed-hooks"><span id="define-typed-hooks" class="anchor enhancedAnchor_2LWZ"></span>Define Typed Hooks<a href="#define-typed-hooks" class="hash-link" title="Direct link to heading">#</a></h3>
-<p>While it’s possible to import the <code class="language-js >RootState</code> and <code class="language-js >AppDispatch</code> types into each component, it’s <strong>better to create typed versions of the <code class="language-js >useDispatch</code> and <code class="language-js >useSelector</code> hooks for usage in your application</strong>. . This is important for a couple reasons:</p>
+<p>While it’s possible to import the <code class="language-js" >RootState</code> and <code class="language-js" >AppDispatch</code> types into each component, it’s <strong>better to create typed versions of the <code class="language-js" >useDispatch</code> and <code class="language-js" >useSelector</code> hooks for usage in your application</strong>. . This is important for a couple reasons:</p>
 <ul>
-<li>For <code class="language-js >useSelector</code>, it saves you the need to type <code class="language-js >(state: RootState)</code> every time</li>
-<li>For <code class="language-js >useDispatch</code>, the default <code class="language-js >Dispatch</code> type does not know about thunks. In order to correctly dispatch thunks, you need to use the specific customized <code class="language-js >AppDispatch</code> type from the store that includes the thunk middleware types, and use that with <code class="language-js >useDispatch</code>. Adding a pre-typed <code class="language-js >useDispatch</code> hook keeps you from forgetting to import <code class="language-js >AppDispatch</code> where it’s needed.</li>
+<li>For <code class="language-js" >useSelector</code>, it saves you the need to type <code class="language-js" >(state: RootState)</code> every time</li>
+<li>For <code class="language-js" >useDispatch</code>, the default <code class="language-js" >Dispatch</code> type does not know about thunks. In order to correctly dispatch thunks, you need to use the specific customized <code class="language-js" >AppDispatch</code> type from the store that includes the thunk middleware types, and use that with <code class="language-js" >useDispatch</code>. Adding a pre-typed <code class="language-js" >useDispatch</code> hook keeps you from forgetting to import <code class="language-js" >AppDispatch</code> where it’s needed.</li>
 </ul>
-<p>Since these are actual variables, not types, it’s important to define them in a separate file such as <code class="language-js >app/hooks.ts</code>, not the store setup file. This allows you to import them into any component file that needs to use the hooks, and avoids potential circular import dependency issues.</p>
+<p>Since these are actual variables, not types, it’s important to define them in a separate file such as <code class="language-js" >app/hooks.ts</code>, not the store setup file. This allows you to import them into any component file that needs to use the hooks, and avoids potential circular import dependency issues.</p>
 <p>app/hooks.ts</p>
 <p><span class="token keyword" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> </span><span class="token imports maybe-class-name">TypedUseSelectorHook</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> useDispatch</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> useSelector </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘react-redux’</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token keyword" style="color: #f92672">import</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">type</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> </span><span class="token maybe-class-name">RootState</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token maybe-class-name">AppDispatch</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘./store’</span><span class="token plain"></span></p>
@@ -156,9 +144,9 @@
 <p>Copy</p>
 <h2 id="application-usage"><span id="application-usage" class="anchor enhancedAnchor_2LWZ"></span>Application Usage<a href="#application-usage" class="hash-link" title="Direct link to heading">#</a></h2>
 <h3 id="define-slice-state-and-action-types"><span id="define-slice-state-and-action-types" class="anchor enhancedAnchor_2LWZ"></span>Define Slice State and Action Types<a href="#define-slice-state-and-action-types" class="hash-link" title="Direct link to heading">#</a></h3>
-<p>Each slice file should define a type for its initial state value, so that <code class="language-js >createSlice</code> can correctly infer the type of <code class="language-js >state</code> in each case reducer.</p>
-<p>All generated actions should be defined using the <code class="language-js >PayloadAction&lt;T&gt;</code> type from Redux Toolkit, which takes the type of the <code class="language-js >action.payload</code> field as its generic argument.</p>
-<p>You can safely import the <code class="language-js >RootState</code> type from the store file here. It’s a circular import, but the TypeScript compiler can correctly handle that for types. This may be needed for use cases like writing selector functions.</p>
+<p>Each slice file should define a type for its initial state value, so that <code class="language-js" >createSlice</code> can correctly infer the type of <code class="language-js" >state</code> in each case reducer.</p>
+<p>All generated actions should be defined using the <code class="language-js" >PayloadAction&lt;T&gt;</code> type from Redux Toolkit, which takes the type of the <code class="language-js" >action.payload</code> field as its generic argument.</p>
+<p>You can safely import the <code class="language-js" >RootState</code> type from the store file here. It’s a circular import, but the TypeScript compiler can correctly handle that for types. This may be needed for use cases like writing selector functions.</p>
 <p>features/counter/counterSlice.ts</p>
 <p><span class="token keyword" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createSlice</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> </span><span class="token imports maybe-class-name">PayloadAction</span><span class="token imports"> </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘<span class="citation" data-cites="reduxjs/toolkit">@reduxjs/toolkit</span>’</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token keyword" style="color: #f92672">import</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">type</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> </span><span class="token maybe-class-name">RootState</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘../../app/store’</span><span class="token plain"></span></p>
@@ -198,8 +186,8 @@
 <p><span class="token plain" style="display: inline-block"> </span></p>
 <p><span class="token plain"></span><span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">default</span><span class="token plain"> counterSlice</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">reducer</span></p>
 <p>Copy</p>
-<p>The generated action creators will be correctly typed to accept a <code class="language-js >payload</code> argument based on the <code class="language-js >PayloadAction&lt;T&gt;</code> type you provided for the reducer. For example, <code class="language-js >incrementByAmount</code> requires a <code class="language-js >number</code> as its argument.</p>
-<p>In some cases, <a href="../../github.com/reduxjs/redux-toolkit/pull/827.html">TypeScript may unnecessarily tighten the type of the initial state</a>. If that happens, you can work around it by casting the initial state using <code class="language-js >as</code>, instead of declaring the type of the variable:</p>
+<p>The generated action creators will be correctly typed to accept a <code class="language-js" >payload</code> argument based on the <code class="language-js" >PayloadAction&lt;T&gt;</code> type you provided for the reducer. For example, <code class="language-js" >incrementByAmount</code> requires a <code class="language-js" >number</code> as its argument.</p>
+<p>In some cases, <a href="../../github.com/reduxjs/redux-toolkit/pull/827.html">TypeScript may unnecessarily tighten the type of the initial state</a>. If that happens, you can work around it by casting the initial state using <code class="language-js" >as</code>, instead of declaring the type of the variable:</p>
 <p><span class="token comment" style="color: #c6cad2">// Workaround: cast state instead of declaring variable type</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> initialState </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
 <p><span class="token plain"> value</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">0</span><span class="token plain"></span></p>

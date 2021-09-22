@@ -1,13 +1,6 @@
 <a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 <a href="../official/introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="../essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../official/api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../official/faq.html" class="navbar__item navbar__link">FAQ</a><a href="../official/style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/../github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../official/introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 - <a href="../official/introduction/getting-started.html" class="menu__link">Getting Started</a>
@@ -162,7 +155,7 @@ Let's look at a couple examples of how middleware can enable us to write some ki
 
 One possibility is writing a middleware that looks for specific action types, and runs async logic when it sees those actions, like these examples:
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> client </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../api/client'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > client </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../api/client'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -196,11 +189,11 @@ One possibility is writing a middleware that looks for specific action types, an
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Make an API call to fetch todos from the server</span><span class="token plain"></span>
 
-<span class="token plain"> client</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">get</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'todos'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">then</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">todos</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain"> client</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">get</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'todos'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">then</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">todos</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Dispatch an action with the todos we received</span><span class="token plain"></span>
 
-<span class="token plain"> storeAPI</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos/todosLoaded'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> todos </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> storeAPI</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos/todosLoaded'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> todos </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
@@ -210,11 +203,7 @@ One possibility is writing a middleware that looks for specific action types, an
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">next</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-##### <span class="admonition-icon"> </span>info
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>##### <span class="admonition-icon"> </span>info
 
 For more details on why and how Redux uses middleware for async logic, see these StackOverflow answers by Redux creator Dan Abramov:
 
@@ -249,11 +238,7 @@ Example async function middleware
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">next</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-And then we could use that middleware like this:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>And then we could use that middleware like this:
 
 <span class="token keyword" style="color: #f92672">const</span><span class="token plain"> middlewareEnhancer </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">applyMiddleware</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">asyncFunctionMiddleware</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
@@ -267,7 +252,7 @@ And then we could use that middleware like this:
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Make an async HTTP request</span><span class="token plain"></span>
 
-<span class="token plain"> client</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">get</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'todos'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">then</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">todos</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain"> client</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">get</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'todos'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">then</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">todos</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Dispatch an action with the todos we received</span><span class="token plain"></span>
 
@@ -277,7 +262,7 @@ And then we could use that middleware like this:
 
 <span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> allTodos </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">todos</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'Number of todos after loading: '</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> allTodos</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">length</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'Number of todos after loading: '</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> allTodos</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">length</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
@@ -287,13 +272,9 @@ And then we could use that middleware like this:
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Pass the \_function\_ we wrote to \`dispatch\`</span><span class="token plain"></span>
 
-<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">fetchSomeData</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">fetchSomeData</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// logs: 'Number of todos after loading: \#\#\#'</span>
-
-Copy
-
-Again, notice that **this "async function middleware" let us pass a _function_ to `dispatch`!** Inside that function, we were able to write some async logic (an HTTP request), then dispatch a normal action object when the request completed.
+<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// logs: 'Number of todos after loading: \#\#\#'</span>Again, notice that **this "async function middleware" let us pass a _function_ to `dispatch`!** Inside that function, we were able to write some async logic (an HTTP request), then dispatch a normal action object when the request completed.
 
 ## <span id="redux-async-data-flow" class="anchor enhancedAnchor_2LWZ"></span>Redux Async Data Flow<a href="#redux-async-data-flow" class="hash-link" title="Direct link to heading">#</a>
 
@@ -324,21 +305,17 @@ The word "thunk" is a programming term that means ["a piece of code that does so
 
 The Redux thunk middleware is available on NPM as a package called `redux-thunk`. We need to install that package to use it in our app:
 
-<span class="token function" style="color: #e6d874">npm</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">install</span><span class="token plain"> redux-thunk</span>
-
-Copy
-
-Once it's installed, we can update the Redux store in our todo app to use that middleware:
+<span class="token function" style="color: #e6d874">npm</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">install</span><span class="token plain"> redux-thunk</span>Once it's installed, we can update the Redux store in our todo app to use that middleware:
 
 src/store.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createStore</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> applyMiddleware </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > createStore</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > applyMiddleware </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">thunkMiddleware</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux-thunk'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >thunkMiddleware</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux-thunk'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> composeWithDevTools </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux-devtools-extension'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > composeWithDevTools </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux-devtools-extension'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">rootReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./reducer'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >rootReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./reducer'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -350,11 +327,7 @@ src/store.js
 
 <span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> store </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createStore</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">rootReducer</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> composedEnhancer</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> store</span>
-
-Copy
-
-### <span id="fetching-todos-from-a-server" class="anchor enhancedAnchor_2LWZ"></span>Fetching Todos from a Server<a href="#fetching-todos-from-a-server" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> store</span>### <span id="fetching-todos-from-a-server" class="anchor enhancedAnchor_2LWZ"></span>Fetching Todos from a Server<a href="#fetching-todos-from-a-server" class="hash-link" title="Direct link to heading">#</a>
 
 Right now our todo entries can only exist in the client's browser. We need a way to load a list of todos from the server when the app starts up.
 
@@ -362,7 +335,7 @@ We'll start by writing a thunk function that makes an AJAX call to our `/fakeApi
 
 src/features/todos/todosSlice.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> client </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../../api/client'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > client </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../../api/client'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -382,15 +355,11 @@ src/features/todos/todosSlice.js
 
 <span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">async</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">fetchTodos</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">dispatch</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> getState</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> response </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">await</span><span class="token plain"> client</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">get</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'/fakeApi/todos'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> response </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">await</span><span class="token plain"> client</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">get</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'/fakeApi/todos'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token function" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos/todosLoaded'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> response</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">todos</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-We only want to make this API call once, when the application loads for the first time. There's a few places we _could_ put this:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>We only want to make this API call once, when the application loads for the first time. There's a few places we _could_ put this:
 
 - In the `<App>` component, in a `useEffect` hook
 - In the `<TodoList>` component, in a `useEffect` hook
@@ -404,7 +373,7 @@ src/index.js
 
 <span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">ReactDOM</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-dom'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> </span><span class="token imports maybe-class-name">Provider</span><span class="token imports"> </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-redux'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > </span><span class="token imports maybe-class-name">Provider</span><span > </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-redux'</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./index.css'</span><span class="token plain"></span>
 
@@ -416,17 +385,17 @@ src/index.js
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">store</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./store'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >store</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./store'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> fetchTodos </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./features/todos/todosSlice'</span><span class="token plain"></span>
-
-<span class="token plain" style="display: inline-block"> </span>
-
-<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">fetchTodos</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > fetchTodos </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./features/todos/todosSlice'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token maybe-class-name">ReactDOM</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">render</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain"></span>
+<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">fetchTodos</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+
+<span class="token plain" style="display: inline-block"> </span>
+
+<span class="token plain"></span><span class="token maybe-class-name">ReactDOM</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">render</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token maybe-class-name">React</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access maybe-class-name">StrictMode</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token plain"></span>
 
@@ -438,13 +407,9 @@ src/index.js
 
 <span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token operator" style="color: #f8f8f2">/</span><span class="token maybe-class-name">React</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access maybe-class-name">StrictMode</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token dom variable" style="color: #f8f8f2">document</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getElementById</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'root'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token dom variable" style="color: #f8f8f2">document</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getElementById</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'root'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-If we reload the page, there's no visible change in the UI. However, if we open up the Redux DevTools extension, we should now see that a `'todos/todosLoaded'` action was dispatched, and it should contain some todo objects that were generated by our fake server API:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">)</span>If we reload the page, there's no visible change in the UI. However, if we open up the Redux DevTools extension, we should now see that a `'todos/todosLoaded'` action was dispatched, and it should contain some todo objects that were generated by our fake server API:
 
 ![Devtools - todosLoaded action contents](../../../d33wubrfki0l68.cloudfront.net/c96c315f5e60b87fa093e49d8d30a5a1fb66c580/9fd52/assets/images/devtools-todosloaded-action-0f8f36d9f37404a85e5cbc20b)
 
@@ -454,7 +419,7 @@ Let's add a case to the reducer to load this data into the store. Since we're fe
 
 src/features/todos/todosSlice.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> client </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../../api/client'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > client </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../../api/client'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -488,25 +453,21 @@ src/features/todos/todosSlice.js
 
 <span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">async</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">fetchTodos</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">dispatch</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> getState</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> response </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">await</span><span class="token plain"> client</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">get</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'/fakeApi/todos'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> response </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">await</span><span class="token plain"> client</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">get</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'/fakeApi/todos'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token function" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos/todosLoaded'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> response</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">todos</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Since dispatching an action immediately updates the store, we can also call `getState` in the thunk to read the updated state value after we dispatch. For example, we could log the number of total todos to the console before and after dispatching the `'todos/todosLoaded'` action:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Since dispatching an action immediately updates the store, we can also call `getState` in the thunk to read the updated state value after we dispatch. For example, we could log the number of total todos to the console before and after dispatching the `'todos/todosLoaded'` action:
 
 <span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">async</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">fetchTodos</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">dispatch</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> getState</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> response </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">await</span><span class="token plain"> client</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">get</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'/fakeApi/todos'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> response </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">await</span><span class="token plain"> client</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">get</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'/fakeApi/todos'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
 <span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> stateBefore </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'Todos before dispatch: '</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> stateBefore</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">todos</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">length</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'Todos before dispatch: '</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> stateBefore</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">todos</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">length</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -516,13 +477,9 @@ Since dispatching an action immediately updates the store, we can also call `get
 
 <span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> stateAfter </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'Todos after dispatch: '</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> stateAfter</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">todos</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">length</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'Todos after dispatch: '</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> stateAfter</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">todos</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">length</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-### <span id="saving-todo-items" class="anchor enhancedAnchor_2LWZ"></span>Saving Todo Items<a href="#saving-todo-items" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>### <span id="saving-todo-items" class="anchor enhancedAnchor_2LWZ"></span>Saving Todo Items<a href="#saving-todo-items" class="hash-link" title="Direct link to heading">#</a>
 
 We also need to update the server whenever we try to create a new todo item. Instead of dispatching the `'todos/todoAdded'` action right away, we should make an API call to the server with the initial data, wait for the server to send back a copy of the newly saved todo item, and _then_ dispatch an action with that todo item.
 
@@ -536,15 +493,11 @@ src/features/todos/todosSlice.js
 
 <span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> initialTodo </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> text </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> response </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">await</span><span class="token plain"> client</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">post</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'/fakeApi/todos'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> todo</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> initialTodo </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> response </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">await</span><span class="token plain"> client</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">post</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'/fakeApi/todos'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> todo</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> initialTodo </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token function" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos/todoAdded'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> response</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">todo</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-We need a way to write one function that accepts `text` as its parameter, but then creates the actual thunk function so that it can use the `text` value to make the API call. Our outer function should then return the thunk function so that we can pass to `dispatch` in our component.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>We need a way to write one function that accepts `text` as its parameter, but then creates the actual thunk function so that it can use the `text` value to make the API call. Our outer function should then return the thunk function so that we can pass to `dispatch` in our component.
 
 src/features/todos/todosSlice.js
 
@@ -560,27 +513,23 @@ src/features/todos/todosSlice.js
 
 <span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> initialTodo </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> text </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> response </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">await</span><span class="token plain"> client</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">post</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'/fakeApi/todos'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> todo</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> initialTodo </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> response </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">await</span><span class="token plain"> client</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">post</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'/fakeApi/todos'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> todo</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> initialTodo </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token function" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'todos/todoAdded'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> response</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">todo</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Now we can use this in our `<Header>` component:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Now we can use this in our `<Header>` component:
 
 src/features/header/Header.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">React</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> useState </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">React</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > useState </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> useDispatch </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-redux'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > useDispatch </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-redux'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> saveNewTodo </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../todos/todosSlice'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > saveNewTodo </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../todos/todosSlice'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -600,7 +549,7 @@ src/features/header/Header.js
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// If the user pressed the Enter key:</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> trimmedText </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> text</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">trim</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> trimmedText </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> text</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">trim</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">if</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">e</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">which</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">===</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">13</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">&&</span><span class="token plain"> trimmedText</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
@@ -622,11 +571,7 @@ src/features/header/Header.js
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// omit rendering output</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Since we know we're going to immediately pass the thunk function to `dispatch` in the component, we can skip creating the temporary variable. Instead, we can call `saveNewTodo(text)`, and pass the resulting thunk function straight to `dispatch`:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Since we know we're going to immediately pass the thunk function to `dispatch` in the component, we can skip creating the temporary variable. Instead, we can call `saveNewTodo(text)`, and pass the resulting thunk function straight to `dispatch`:
 
 src/features/header/Header.js
 
@@ -634,7 +579,7 @@ src/features/header/Header.js
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// If the user pressed the Enter key:</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> trimmedText </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> text</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">trim</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> trimmedText </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> text</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">trim</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">if</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">e</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">which</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">===</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">13</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">&&</span><span class="token plain"> trimmedText</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
@@ -646,11 +591,7 @@ src/features/header/Header.js
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Now the component doesn't actually know that it's even dispatching a thunk function - the `saveNewTodo` function is encapsulating what's actually happening. The `<Header>` component only knows that it needs to dispatch _some value_ when the user presses enter.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Now the component doesn't actually know that it's even dispatching a thunk function - the `saveNewTodo` function is encapsulating what's actually happening. The `<Header>` component only knows that it needs to dispatch _some value_ when the user presses enter.
 
 This pattern of writing a function to prepare something that will get passed to `dispatch` is called **the "action creator" pattern**, and we'll talk about that more in [the next section](part-7-standard-patterns.html).
 
@@ -686,11 +627,7 @@ src/features/todos/todosSlice.js
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-And now adding a new todo will work correctly:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>And now adding a new todo will work correctly:
 
 ![Devtools - async todoAdded state diff](../../../d33wubrfki0l68.cloudfront.net/7b06b4966e3cfc821fed6c95c21ba0d4c4013b0b/e9fb9/assets/images/devtools-async-todoadded-diff-5f18f236969280dec2dad1a)
 
@@ -728,8 +665,6 @@ We've now covered all the core pieces of how to use Redux! You've seen how to:
 In [Part 7: Standard Redux Patterns](part-7-standard-patterns.html), we'll look at several code patterns that are typically used by real-world Redux apps to make our code more consistent and scale better as the application grows.
 
 <a href="part-5-ui-react.html" class="pagination-nav__link"></a>
-
-Previous
 
 « Redux Fundamentals, Part 5: UI and React
 
@@ -771,4 +706,4 @@ Redux Fundamentals, Part 7: Standard Redux Patterns »
 - [![Deploys by Netlify](../../../www.netlify.com/img/global/badges/netlify-color-accent.svg)](../../../www.netlify.com/index.html)
 
 <a href="../official/index.html" class="footerLogoLink_MyFc"><img src="../official/../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

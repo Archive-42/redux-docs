@@ -1,13 +1,6 @@
 <a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 <a href="../official/introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="../official/tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../official/api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../official/faq.html" class="navbar__item navbar__link">FAQ</a><a href="../official/style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/../github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../official/introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 - <a href="../official/introduction/getting-started.html" class="menu__link">Getting Started</a>
@@ -46,23 +39,7 @@
     - <a href="../official/tutorials/fundamentals/part-7-standard-patterns.html" class="menu__link">Standard Redux Patterns</a>
     - <a href="../official/tutorials/fundamentals/part-8-modern-redux.html" class="menu__link">Modern Redux with Redux Toolkit</a>
 - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Recipes</a>
-  - <a href="../recipe-index.html" class="menu__link">Recipes: Index</a>
-  - <a href="../configuring-your-store.html" class="menu__link">Configuring Your Store</a>
-  - <a href="../usage-with-typescript.html" class="menu__link">Usage With TypeScript</a>
-  - <a href="../migrating-to-redux.html" class="menu__link">Migrating to Redux</a>
-  - <a href="../using-object-spread-operator.html" class="menu__link">Using Object Spread Operator</a>
-  - <a href="../reducing-boilerplate.html" class="menu__link">Reducing Boilerplate</a>
-  - <a href="../server-rendering.html" class="menu__link">Server Rendering</a>
-  - <a href="../writing-tests.html" class="menu__link">Writing Tests</a>
-  - <a href="../computing-derived-data.html" class="menu__link">Computing Derived Data</a>
-  - <a href="../implementing-undo-history.html" class="menu__link">Implementing Undo History</a>
-  - <a href="../isolating-redux-sub-apps.html" class="menu__link">Isolating Redux Sub-Apps</a>
-  - <a href="../code-splitting.html" class="menu__link">Code Splitting</a>
-  - <a href="../troubleshooting.html" class="menu__link">Troubleshooting</a>
-  - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Structuring Reducers</a>
-    - <a href="structuring-reducers.html" class="menu__link">Structuring Reducers</a>
-    - <a href="prerequisite-concepts.html" class="menu__link">Prerequisite Concepts</a>
-    - <a href="basic-reducer-structure.html" class="menu__link">Basic Reducer Structure</a>
+  - <a href="basic-reducer-structure.html" class="menu__link">Basic Reducer Structure</a>
     - <a href="splitting-reducer-logic.html" class="menu__link">Splitting Reducer Logic</a>
     - <a href="refactoring-reducer-example.html" class="menu__link">Refactoring Reducers Example</a>
     - <a href="using-combinereducers.html" class="menu__link menu__link--active active">Using combineReducers</a>
@@ -145,17 +122,17 @@ Here's an example of how use of ES6 object literal shorthand with `combineReduce
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// rootReducer.js</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> combineReducers</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > combineReducers</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">theDefaultReducer</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >theDefaultReducer</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span ></span>
 
-<span class="token imports"> firstNamedReducer</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"></span>
+<span > firstNamedReducer</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span ></span>
 
-<span class="token imports"> secondNamedReducer</span>
+<span > secondNamedReducer</span>
 
-<span class="token imports"></span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./reducers'</span><span class="token plain"></span>
+<span ></span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./reducers'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -175,31 +152,27 @@ Here's an example of how use of ES6 object literal shorthand with `combineReduce
 
 <span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> store </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createStore</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">rootReducer</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// {theDefaultReducer : 0, firstNamedReducer : 1, secondNamedReducer : 2}</span>
-
-Copy
-
-Notice that because we used the ES6 shorthand for defining an object literal, the key names in the resulting state are the same as the variable names from the imports. This may not always be the desired behavior, and is often a cause of confusion for those who aren't as familiar with ES6 syntax.
+<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// {theDefaultReducer : 0, firstNamedReducer : 1, secondNamedReducer : 2}</span>Notice that because we used the ES6 shorthand for defining an object literal, the key names in the resulting state are the same as the variable names from the imports. This may not always be the desired behavior, and is often a cause of confusion for those who aren't as familiar with ES6 syntax.
 
 Also, the resulting names are a bit odd. It's generally not a good practice to actually include words like "reducer" in your state key names - the keys should simply reflect the domain or type of data they hold. This means we should either explicitly specify the names of the keys in the slice reducer object to define the keys in the output state object, or carefully rename the variables for the imported slice reducers to set up the keys when using the shorthand object literal syntax.
 
 A better usage might look like:
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> combineReducers</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > combineReducers</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Rename the default import to whatever name we want. We can also rename a named import.</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">defaultState</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >defaultState</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span ></span>
 
-<span class="token imports"> firstNamedReducer</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"></span>
+<span > firstNamedReducer</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span ></span>
 
-<span class="token imports"> secondNamedReducer </span><span class="token imports keyword module" style="color: #f92672">as</span><span class="token imports"> secondState</span>
+<span > secondNamedReducer </span><span class="token imports keyword module" style="color: #f92672">as</span><span > secondState</span>
 
-<span class="token imports"></span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./reducers'</span><span class="token plain"></span>
+<span ></span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./reducers'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -217,17 +190,11 @@ A better usage might look like:
 
 <span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> reducerInitializedStore </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createStore</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">rootReducer</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">reducerInitializedStore</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">reducerInitializedStore</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// {defaultState : 0, firstState : 1, secondState : 2}</span>
-
-Copy
-
-This state shape better reflects the data involved, because we took care to set up the keys we passed to `combineReducers`.
+<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// {defaultState : 0, firstState : 1, secondState : 2}</span>This state shape better reflects the data involved, because we took care to set up the keys we passed to `combineReducers`.
 
 <a href="refactoring-reducer-example.html" class="pagination-nav__link"></a>
-
-Previous
 
 « Refactoring Reducers Example
 

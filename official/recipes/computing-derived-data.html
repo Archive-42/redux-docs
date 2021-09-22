@@ -101,10 +101,17 @@
       as="script"
     />
     <link rel="preload" href="../assets/js/main.8520a084.js" as="script" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css"
+    />
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
-    </head>
+    <script
+      async
+      defer
+      src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"
+    ></script>
+  </head>
   <body>
     <script>
       !(function () {
@@ -1097,7 +1104,8 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="containersvisibletodolistjs"
                           ></a
-                          ><code class="language-js >containers/VisibleTodoList.js</code
+                          ><code class="language-js"
+                            >containers/VisibleTodoList.js</code
                           ><a
                             class="hash-link"
                             href="#containersvisibletodolistjs"
@@ -1761,12 +1769,13 @@
                         </div>
                         <p>
                           In the above example,
-                          <code class="language-js >mapStateToProps</code> calls
-                          <code class="language-js >getVisibleTodos</code> to calculate
-                          <code class="language-js >todos</code>. This works great, but there is a
-                          drawback: <code class="language-js >todos</code> is calculated every time
-                          the component is updated. If the state tree is large,
-                          or the calculation expensive, repeating the
+                          <code class="language-js">mapStateToProps</code> calls
+                          <code class="language-js">getVisibleTodos</code> to
+                          calculate <code class="language-js">todos</code>. This
+                          works great, but there is a drawback:
+                          <code class="language-js">todos</code> is calculated
+                          every time the component is updated. If the state tree
+                          is large, or the calculation expensive, repeating the
                           calculation on every update may cause performance
                           problems. Reselect can help to avoid these unnecessary
                           recalculations.
@@ -1787,31 +1796,35 @@
                         </h3>
                         <p>
                           We would like to replace
-                          <code class="language-js >getVisibleTodos</code> with a memoized selector
-                          that recalculates <code class="language-js >todos</code> when the value of
-                          <code class="language-js >state.todos</code> or
-                          <code class="language-js >state.visibilityFilter</code> changes, but not
-                          when changes occur in other (unrelated) parts of the
-                          state tree.
+                          <code class="language-js">getVisibleTodos</code> with
+                          a memoized selector that recalculates
+                          <code class="language-js">todos</code> when the value
+                          of <code class="language-js">state.todos</code> or
+                          <code class="language-js"
+                            >state.visibilityFilter</code
+                          >
+                          changes, but not when changes occur in other
+                          (unrelated) parts of the state tree.
                         </p>
                         <p>
                           Reselect provides a function
-                          <code class="language-js >createSelector</code> for creating memoized
-                          selectors. <code class="language-js >createSelector</code> takes an array
-                          of input-selectors and a transform function as its
-                          arguments. If the Redux state tree is changed in a way
-                          that causes the value of an input-selector to change,
-                          the selector will call its transform function with the
-                          values of the input-selectors as arguments and return
-                          the result. If the values of the input-selectors are
-                          the same as the previous call to the selector, it will
-                          return the previously computed value instead of
-                          calling the transform function.
+                          <code class="language-js">createSelector</code> for
+                          creating memoized selectors.
+                          <code class="language-js">createSelector</code> takes
+                          an array of input-selectors and a transform function
+                          as its arguments. If the Redux state tree is changed
+                          in a way that causes the value of an input-selector to
+                          change, the selector will call its transform function
+                          with the values of the input-selectors as arguments
+                          and return the result. If the values of the
+                          input-selectors are the same as the previous call to
+                          the selector, it will return the previously computed
+                          value instead of calling the transform function.
                         </p>
                         <p>
                           Let&#x27;s define a memoized selector named
-                          <code class="language-js >getVisibleTodos</code> to replace the
-                          non-memoized version above:
+                          <code class="language-js">getVisibleTodos</code> to
+                          replace the non-memoized version above:
                         </p>
                         <h4>
                           <a
@@ -1820,7 +1833,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="selectorsindexjs"
                           ></a
-                          ><code class="language-js >selectors/index.js</code
+                          ><code class="language-js">selectors/index.js</code
                           ><a
                             class="hash-link"
                             href="#selectorsindexjs"
@@ -2243,16 +2256,17 @@
                         </div>
                         <p>
                           In the example above,
-                          <code class="language-js >getVisibilityFilter</code> and
-                          <code class="language-js >getTodos</code> are input-selectors. They are
-                          created as ordinary non-memoized selector functions
-                          because they do not transform the data they select.
-                          <code class="language-js >getVisibleTodos</code> on the other hand is a
-                          memoized selector. It takes
-                          <code class="language-js >getVisibilityFilter</code> and
-                          <code class="language-js >getTodos</code> as input-selectors, and a
-                          transform function that calculates the filtered todos
-                          list.
+                          <code class="language-js">getVisibilityFilter</code>
+                          and <code class="language-js">getTodos</code> are
+                          input-selectors. They are created as ordinary
+                          non-memoized selector functions because they do not
+                          transform the data they select.
+                          <code class="language-js">getVisibleTodos</code> on
+                          the other hand is a memoized selector. It takes
+                          <code class="language-js">getVisibilityFilter</code>
+                          and <code class="language-js">getTodos</code> as
+                          input-selectors, and a transform function that
+                          calculates the filtered todos list.
                         </p>
                         <h3>
                           <a
@@ -2271,9 +2285,9 @@
                         <p>
                           A memoized selector can itself be an input-selector to
                           another memoized selector. Here is
-                          <code class="language-js >getVisibleTodos</code> being used as an
-                          input-selector to a selector that further filters the
-                          todos by keyword:
+                          <code class="language-js">getVisibleTodos</code> being
+                          used as an input-selector to a selector that further
+                          filters the todos by keyword:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -2516,7 +2530,7 @@
                             rel="noopener noreferrer"
                             >React Redux</a
                           >, you can call selectors as regular functions inside
-                          <code class="language-js >mapStateToProps()</code>:
+                          <code class="language-js">mapStateToProps()</code>:
                         </p>
                         <h4>
                           <a
@@ -2525,7 +2539,8 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="containersvisibletodolistjs-1"
                           ></a
-                          ><code class="language-js >containers/VisibleTodoList.js</code
+                          ><code class="language-js"
+                            >containers/VisibleTodoList.js</code
                           ><a
                             class="hash-link"
                             href="#containersvisibletodolistjs-1"
@@ -2983,15 +2998,18 @@
                           For this example, we&#x27;re going to extend our app
                           to handle multiple Todo lists. Our state needs to be
                           refactored so that it holds multiple todo lists, which
-                          each have their own <code class="language-js >todos</code> and
-                          <code class="language-js >visibilityFilter</code> state.
+                          each have their own
+                          <code class="language-js">todos</code> and
+                          <code class="language-js">visibilityFilter</code>
+                          state.
                         </p>
                         <p>
                           We also need to refactor our reducers. Now that
-                          <code class="language-js >todos</code> and
-                          <code class="language-js >visibilityFilter</code> live within every
-                          list&#x27;s state, we only need one
-                          <code class="language-js >todoLists</code> reducer to manage our state.
+                          <code class="language-js">todos</code> and
+                          <code class="language-js">visibilityFilter</code> live
+                          within every list&#x27;s state, we only need one
+                          <code class="language-js">todoLists</code> reducer to
+                          manage our state.
                         </p>
                         <h4>
                           <a
@@ -3000,7 +3018,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="reducersindexjs"
                           ></a
-                          ><code class="language-js >reducers/index.js</code
+                          ><code class="language-js">reducers/index.js</code
                           ><a
                             class="hash-link"
                             href="#reducersindexjs"
@@ -3140,7 +3158,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="reducerstodolistsjs"
                           ></a
-                          ><code class="language-js >reducers/todoLists.js</code
+                          ><code class="language-js">reducers/todoLists.js</code
                           ><a
                             class="hash-link"
                             href="#reducerstodolistsjs"
@@ -4587,9 +4605,10 @@
                           </div>
                         </div>
                         <p>
-                          The <code class="language-js >todoLists</code> reducer now handles all
-                          three actions. The action creators will now need to be
-                          passed a <code class="language-js >listId</code>:
+                          The <code class="language-js">todoLists</code> reducer
+                          now handles all three actions. The action creators
+                          will now need to be passed a
+                          <code class="language-js">listId</code>:
                         </p>
                         <h4>
                           <a
@@ -4598,7 +4617,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="actionsindexjs"
                           ></a
-                          ><code class="language-js >actions/index.js</code
+                          ><code class="language-js">actions/index.js</code
                           ><a
                             class="hash-link"
                             href="#actionsindexjs"
@@ -5045,7 +5064,8 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="componentstodolistjs"
                           ></a
-                          ><code class="language-js >components/TodoList.js</code
+                          ><code class="language-js"
+                            >components/TodoList.js</code
                           ><a
                             class="hash-link"
                             href="#componentstodolistjs"
@@ -5434,9 +5454,12 @@
                           </div>
                         </div>
                         <p>
-                          Here is an <code class="language-js >App</code> component that renders
-                          three <code class="language-js >VisibleTodoList</code> components, each of
-                          which has a <code class="language-js >listId</code> prop:
+                          Here is an
+                          <code class="language-js">App</code> component that
+                          renders three
+                          <code class="language-js">VisibleTodoList</code>
+                          components, each of which has a
+                          <code class="language-js">listId</code> prop:
                         </p>
                         <h4>
                           <a
@@ -5445,7 +5468,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="componentsappjs"
                           ></a
-                          ><code class="language-js >components/App.js</code
+                          ><code class="language-js">components/App.js</code
                           ><a
                             class="hash-link"
                             href="#componentsappjs"
@@ -5694,11 +5717,15 @@
                           </div>
                         </div>
                         <p>
-                          Each <code class="language-js >VisibleTodoList</code> container should
-                          select a different slice of the state depending on the
-                          value of the <code class="language-js >listId</code> prop, so we&#x27;ll
-                          modify <code class="language-js >getVisibilityFilter</code> and
-                          <code class="language-js >getTodos</code> to accept a props argument.
+                          Each
+                          <code class="language-js">VisibleTodoList</code>
+                          container should select a different slice of the state
+                          depending on the value of the
+                          <code class="language-js">listId</code> prop, so
+                          we&#x27;ll modify
+                          <code class="language-js">getVisibilityFilter</code>
+                          and <code class="language-js">getTodos</code> to
+                          accept a props argument.
                         </p>
                         <h4>
                           <a
@@ -5707,7 +5734,8 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="selectorstodoselectorsjs"
                           ></a
-                          ><code class="language-js >selectors/todoSelectors.js</code
+                          ><code class="language-js"
+                            >selectors/todoSelectors.js</code
                           ><a
                             class="hash-link"
                             href="#selectorstodoselectorsjs"
@@ -6219,9 +6247,10 @@
                           </div>
                         </div>
                         <p>
-                          <code class="language-js >props</code> can be passed to
-                          <code class="language-js >getVisibleTodos</code> from
-                          <code class="language-js >mapStateToProps</code>:
+                          <code class="language-js">props</code> can be passed
+                          to
+                          <code class="language-js">getVisibleTodos</code> from
+                          <code class="language-js">mapStateToProps</code>:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -6351,16 +6380,18 @@
                           </div>
                         </div>
                         <p>
-                          So now <code class="language-js >getVisibleTodos</code> has access to
-                          <code class="language-js >props</code>, and everything seems to be working
-                          fine.
+                          So now
+                          <code class="language-js">getVisibleTodos</code> has
+                          access to <code class="language-js">props</code>, and
+                          everything seems to be working fine.
                         </p>
                         <p><strong>But there is a problem!</strong></p>
                         <p>
-                          Using the <code class="language-js >getVisibleTodos</code> selector with
-                          multiple instances of the
-                          <code class="language-js >visibleTodoList</code> container will not
-                          correctly memoize:
+                          Using the
+                          <code class="language-js">getVisibleTodos</code>
+                          selector with multiple instances of the
+                          <code class="language-js">visibleTodoList</code>
+                          container will not correctly memoize:
                         </p>
                         <h4>
                           <a
@@ -6369,7 +6400,8 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="containersvisibletodolistjs-2"
                           ></a
-                          ><code class="language-js >containers/VisibleTodoList.js</code
+                          ><code class="language-js"
+                            >containers/VisibleTodoList.js</code
                           ><a
                             class="hash-link"
                             href="#containersvisibletodolistjs-2"
@@ -6833,26 +6865,33 @@
                         </div>
                         <p>
                           A selector created with
-                          <code class="language-js >createSelector</code> only returns the cached
-                          value when its set of arguments is the same as its
-                          previous set of arguments. If we alternate between
-                          rendering
-                          <code class="language-js 
-                            >&lt;VisibleTodoList listId=&quot;1&quot;
-                            /&gt;</code
-                          >
-                          and
-                          <code class="language-js 
+                          <code class="language-js">createSelector</code> only
+                          returns the cached value when its set of arguments is
+                          the same as its previous set of arguments. If we
+                          alternate between rendering
+                          <code
+                            class="
+                              language-js
+                              >&lt;VisibleTodoList
+                              listId=&quot;1&quot;
+                              /&gt;</code
+                              >
+                              and
+                              <code
+                              class=
+                            "
+                            language-js
                             >&lt;VisibleTodoList listId=&quot;2&quot;
                             /&gt;</code
                           >, the shared selector will alternate between
-                          receiving <code class="language-js >{listId: 1}</code> and
-                          <code class="language-js >{listId: 2}</code> as its
-                          <code class="language-js >props</code> argument. This will cause the
-                          arguments to be different on each call, so the
-                          selector will always recompute instead of returning
-                          the cached value. We&#x27;ll see how to overcome this
-                          limitation in the next section.
+                          receiving
+                          <code class="language-js">{listId: 1}</code> and
+                          <code class="language-js">{listId: 2}</code> as its
+                          <code class="language-js">props</code> argument. This
+                          will cause the arguments to be different on each call,
+                          so the selector will always recompute instead of
+                          returning the cached value. We&#x27;ll see how to
+                          overcome this limitation in the next section.
                         </p>
                         <h3>
                           <a
@@ -6876,16 +6915,17 @@
                         </blockquote>
                         <p>
                           In order to share a selector across multiple
-                          <code class="language-js >VisibleTodoList</code> components
-                          <strong>and</strong> retain memoization, each instance
-                          of the component needs its own private copy of the
-                          selector.
+                          <code class="language-js">VisibleTodoList</code>
+                          components <strong>and</strong> retain memoization,
+                          each instance of the component needs its own private
+                          copy of the selector.
                         </p>
                         <p>
                           Let&#x27;s create a function named
-                          <code class="language-js >makeGetVisibleTodos</code> that returns a new
-                          copy of the <code class="language-js >getVisibleTodos</code> selector each
-                          time it is called:
+                          <code class="language-js">makeGetVisibleTodos</code>
+                          that returns a new copy of the
+                          <code class="language-js">getVisibleTodos</code>
+                          selector each time it is called:
                         </p>
                         <h4>
                           <a
@@ -6894,7 +6934,8 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="selectorstodoselectorsjs-1"
                           ></a
-                          ><code class="language-js >selectors/todoSelectors.js</code
+                          ><code class="language-js"
+                            >selectors/todoSelectors.js</code
                           ><a
                             class="hash-link"
                             href="#selectorstodoselectorsjs-1"
@@ -7447,24 +7488,32 @@
                         <p>
                           We also need a way to give each instance of a
                           container access to its own private selector. The
-                          <code class="language-js >mapStateToProps</code> argument of
-                          <code class="language-js >connect</code> can help with this.
+                          <code class="language-js">mapStateToProps</code>
+                          argument of
+                          <code class="language-js">connect</code> can help with
+                          this.
                         </p>
                         <p>
                           <strong
-                            >If the <code class="language-js >mapStateToProps</code> argument
-                            supplied to <code class="language-js >connect</code> returns a function
-                            instead of an object, it will be used to create an
-                            individual <code class="language-js >mapStateToProps</code> function for
-                            each instance of the container.</strong
+                            >If the
+                            <code class="language-js">mapStateToProps</code>
+                            argument supplied to
+                            <code class="language-js">connect</code> returns a
+                            function instead of an object, it will be used to
+                            create an individual
+                            <code class="language-js">mapStateToProps</code>
+                            function for each instance of the container.</strong
                           >
                         </p>
                         <p>
                           In the example below
-                          <code class="language-js >makeMapStateToProps</code> creates a new
-                          <code class="language-js >getVisibleTodos</code> selector, and returns a
-                          <code class="language-js >mapStateToProps</code> function that has
-                          exclusive access to the new selector:
+                          <code class="language-js">makeMapStateToProps</code>
+                          creates a new
+                          <code class="language-js">getVisibleTodos</code>
+                          selector, and returns a
+                          <code class="language-js">mapStateToProps</code>
+                          function that has exclusive access to the new
+                          selector:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -7676,14 +7725,19 @@
                           </div>
                         </div>
                         <p>
-                          If we pass <code class="language-js >makeMapStateToProps</code> to
-                          <code class="language-js >connect</code>, each instance of the
-                          <code class="language-js >VisibleTodosList</code> container will get its
-                          own <code class="language-js >mapStateToProps</code> function with a
-                          private <code class="language-js >getVisibleTodos</code> selector.
-                          Memoization will now work correctly regardless of the
-                          render order of the
-                          <code class="language-js >VisibleTodoList</code> containers.
+                          If we pass
+                          <code class="language-js">makeMapStateToProps</code>
+                          to <code class="language-js">connect</code>, each
+                          instance of the
+                          <code class="language-js">VisibleTodosList</code>
+                          container will get its own
+                          <code class="language-js">mapStateToProps</code>
+                          function with a private
+                          <code class="language-js">getVisibleTodos</code>
+                          selector. Memoization will now work correctly
+                          regardless of the render order of the
+                          <code class="language-js">VisibleTodoList</code>
+                          containers.
                         </p>
                         <h4>
                           <a
@@ -7692,7 +7746,8 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="containersvisibletodolistjs-3"
                           ></a
-                          ><code class="language-js >containers/VisibleTodoList.js</code
+                          ><code class="language-js"
+                            >containers/VisibleTodoList.js</code
                           ><a
                             class="hash-link"
                             href="#containersvisibletodolistjs-3"

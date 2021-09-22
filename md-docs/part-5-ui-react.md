@@ -1,13 +1,6 @@
 <a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 <a href="../official/introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="../essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../official/api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../official/faq.html" class="navbar__item navbar__link">FAQ</a><a href="../official/style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/../github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../official/introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 - <a href="../official/introduction/getting-started.html" class="menu__link">Getting Started</a>
@@ -146,19 +139,19 @@ Let's go back to the [the counter app example we saw in Part 1](part-1-overview.
 
 <span class="token comment" style="color: #c6cad2">// 1) Create a new Redux store with the \`createStore\` function</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> store </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token maybe-class-name">Redux</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">createStore</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">counterReducer</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> store </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token maybe-class-name">Redux</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">createStore</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">counterReducer</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// 2) Subscribe to redraw whenever the data changes in the future</span><span class="token plain"></span>
 
-<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">subscribe</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">render</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">subscribe</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">render</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Our "user interface" is some text in a single HTML element</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> valueEl </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token dom variable" style="color: #f8f8f2">document</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getElementById</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'value'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> valueEl </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token dom variable" style="color: #f8f8f2">document</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getElementById</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'value'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -168,11 +161,11 @@ Let's go back to the [the counter app example we saw in Part 1](part-1-overview.
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// 3.1) Get the current store state</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> state </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> state </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// 3.2) Extract the data you want</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> newValue </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">value</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">toString</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> newValue </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">value</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">toString</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -192,15 +185,11 @@ Let's go back to the [the counter app example we saw in Part 1](part-1-overview.
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// 5) Dispatch actions based on UI inputs</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token dom variable" style="color: #f8f8f2">document</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getElementById</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'increment'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">addEventListener</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'click'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token dom variable" style="color: #f8f8f2">document</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getElementById</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'increment'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">addEventListener</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'click'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'counter/incremented'</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'counter/incremented'</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-No matter what UI layer you're using, **Redux works this same way with every UI**. The actual implementations are typically a bit more complicated to help optimize performance, but it's the same steps each time.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>No matter what UI layer you're using, **Redux works this same way with every UI**. The actual implementations are typically a bit more complicated to help optimize performance, but it's the same steps each time.
 
 Since Redux is a separate library, there are different "binding" libraries to help you use Redux with a given UI framework. Those UI binding libraries handle the details of subscribing to the store and efficiently updating the UI as state changes, so that you don't have to write that code yourself.
 
@@ -208,11 +197,7 @@ Since Redux is a separate library, there are different "binding" libraries to he
 
 The official [**React-Redux UI bindings library**](../../../react-redux.js.org/index.html) is a separate package from the Redux core. You'll need to install that in addition as well:
 
-<span class="token plain">npm install react-redux</span>
-
-Copy
-
-(If you don't use npm, you may grab the latest UMD build from unpkg (either a [development](../../../unpkg.com/react-redux%407.2.4/dist/react-redux.js) or a [production](../../../unpkg.com/react-redux%407.2.4/dist/react-redux.min.js) build). The UMD build exports a global called `window.ReactRedux` if you add it to your page via a `<script>` tag.)
+<span class="token plain">npm install react-redux</span>(If you don't use npm, you may grab the latest UMD build from unpkg (either a [development](../../../unpkg.com/react-redux%407.2.4/dist/react-redux.js) or a [production](../../../unpkg.com/react-redux%407.2.4/dist/react-redux.min.js) build). The UMD build exports a global called `window.ReactRedux` if you add it to your page via a `<script>` tag.)
 
 For this tutorial, we'll cover the most important patterns and examples you need to use React and Redux together, and see how they work in practice as part of our todo app.
 
@@ -252,23 +237,15 @@ The first React-Redux hook that we'll look at is the [**`useSelector` hook**](..
 
 For example, we know that our todo app's Redux state keeps the array of todo items as `state.todos`. We can write a small selector function that returns that todos array:
 
-<span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">selectTodos</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token parameter">state</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">todos</span>
-
-Copy
-
-Or, maybe we want to find out how many todos are currently marked as "completed":
+<span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">selectTodos</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token parameter">state</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">todos</span>Or, maybe we want to find out how many todos are currently marked as "completed":
 
 <span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">selectTotalCompletedTodos</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token parameter">state</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> completedTodos </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">todos</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">filter</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">todo</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> todo</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">completed</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> completedTodos </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">todos</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">filter</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">todo</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> todo</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">completed</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> completedTodos</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">length</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-So, **selectors can return values from the Redux store state, and also return _derived_ values based on that state as well**.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>So, **selectors can return values from the Redux store state, and also return _derived_ values based on that state as well**.
 
 Let's read the array of todos into our `<TodoList>` component. First, we'll import the `useSelector` hook from the `react-redux` library, then call it with a selector function as its argument:
 
@@ -308,11 +285,7 @@ src/features/todos/TodoList.js
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">default</span><span class="token plain"> TodoList</span>
-
-Copy
-
-The first time the `<TodoList>` component renders, the `useSelector` hook will call `selectTodos` and pass in the _entire_ Redux state object. Whatever the selector returns will be returned by the hook to your component. So, the `const todos` in our component will end up holding the same `state.todos` array inside our Redux store state.
+<span class="token plain"></span><span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">default</span><span class="token plain"> TodoList</span>The first time the `<TodoList>` component renders, the `useSelector` hook will call `selectTodos` and pass in the _entire_ Redux state object. Whatever the selector returns will be returned by the hook to your component. So, the `const todos` in our component will end up holding the same `state.todos` array inside our Redux store state.
 
 But, what happens if we dispatch an action like `{type: 'todos/todoAdded'}`? The Redux state will be updated by the reducer, but our component needs to know that something has changed so that it can re-render with the new list of todos.
 
@@ -334,23 +307,15 @@ For example, passing this selector to `useSelector` will cause the component to 
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// This creates a new array reference!</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">todos</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">map</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">todo</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> todo</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">text</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">todos</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">map</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">todo</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> todo</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">text</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-##### <span class="admonition-icon"> </span>tip
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>##### <span class="admonition-icon"> </span>tip
 
 We'll talk about one way to fix this issue later in this section. We'll also talk about how you can improve performance and avoid unnecessary re-renders using "memoized" selector function in [Part 7: Standard Redux Patterns](part-7-standard-patterns.html).
 
 It's also worth noting that we don't have to write a selector function as a separate variable. You can write a selector function directly inside the call to `useSelector`, like this:
 
-<span class="token keyword" style="color: #f92672">const</span><span class="token plain"> todos </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">useSelector</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">todos</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-### <span id="dispatching-actions-with-usedispatch" class="anchor enhancedAnchor_2LWZ"></span>Dispatching Actions with `useDispatch`<a href="#dispatching-actions-with-usedispatch" class="hash-link" title="Direct link to heading">#</a>
+<span class="token keyword" style="color: #f92672">const</span><span class="token plain"> todos </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">useSelector</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">todos</span><span class="token punctuation" style="color: #f8f8f2">)</span>### <span id="dispatching-actions-with-usedispatch" class="anchor enhancedAnchor_2LWZ"></span>Dispatching Actions with `useDispatch`<a href="#dispatching-actions-with-usedispatch" class="hash-link" title="Direct link to heading">#</a>
 
 We now know how to read data from the Redux store into our components. But, how can we dispatch actions to the store from a component? We know that outside of React, we can call `store.dispatch(action)`. Since we don't have access to the store in a component file, we need some way to get access to the `dispatch` function by itself inside our components.
 
@@ -428,11 +393,7 @@ src/features/header/Header.js
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">default</span><span class="token plain"> Header</span>
-
-Copy
-
-### <span id="passing-the-store-with-provider" class="anchor enhancedAnchor_2LWZ"></span>Passing the Store with `Provider`<a href="#passing-the-store-with-provider" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">default</span><span class="token plain"> Header</span>### <span id="passing-the-store-with-provider" class="anchor enhancedAnchor_2LWZ"></span>Passing the Store with `Provider`<a href="#passing-the-store-with-provider" class="hash-link" title="Direct link to heading">#</a>
 
 Our components can now read state from the store, and dispatch actions to the store. However, we're still missing something. Where and how are the React-Redux hooks finding the right Redux store? A hook is a JS function, so it can't automatically import a store from `store.js` by itself.
 
@@ -474,11 +435,7 @@ src/index.js
 
 <span class="token plain"> document</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token function" style="color: #e6d874">getElementById</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'root'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-That covers the key parts of using React-Redux with React:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">)</span>That covers the key parts of using React-Redux with React:
 
 - Call the `useSelector` hook to read data in React components
 - Call the `useDispatch` hook to dispatch actions in React components
@@ -605,11 +562,7 @@ src/features/footer/Footer.js
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">default</span><span class="token plain"> Footer</span>
-
-Copy
-
-### <span id="selecting-data-in-list-items-by-id" class="anchor enhancedAnchor_2LWZ"></span>Selecting Data in List Items by ID<a href="#selecting-data-in-list-items-by-id" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">default</span><span class="token plain"> Footer</span>### <span id="selecting-data-in-list-items-by-id" class="anchor enhancedAnchor_2LWZ"></span>Selecting Data in List Items by ID<a href="#selecting-data-in-list-items-by-id" class="hash-link" title="Direct link to heading">#</a>
 
 Currently, our `<TodoList>` is reading the entire `state.todos` array and passing the actual todo objects as a prop to each `<TodoListItem>` component.
 
@@ -658,11 +611,7 @@ src/features/todos/TodoList.js
 
 <span class="token plain"> </span><span class="token keyword" style="color: #f92672">return</span><span class="token plain"> </span><span class="token tag punctuation" style="color: #f8f8f2">&lt;</span><span class="token tag" style="color: #f92672">ul</span><span class="token tag" style="color: #f92672"> </span><span class="token tag attr-name" style="color: #a6e22e">className</span><span class="token tag attr-value punctuation attr-equals" style="color: #f8f8f2">=</span><span class="token tag attr-value punctuation" style="color: #f8f8f2">"</span><span class="token tag attr-value" style="color: #e6d874">todo-list</span><span class="token tag attr-value punctuation" style="color: #f8f8f2">"</span><span class="token tag punctuation" style="color: #f8f8f2">&gt;</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain">renderedListItems</span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token tag punctuation" style="color: #f8f8f2">&lt;/</span><span class="token tag" style="color: #f92672">ul</span><span class="token tag punctuation" style="color: #f8f8f2">&gt;</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-This time, we only select an array of todo IDs from the store in `<TodoList>`, and we pass each `todoId` as an `id` prop to the child `<TodoListItem>`s.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>This time, we only select an array of todo IDs from the store in `<TodoList>`, and we pass each `todoId` as an `id` prop to the child `<TodoListItem>`s.
 
 Then, in `<TodoListItem>`, we can use that ID value to read our todo item. We can also update `<TodoListItem>` to dispatch the "toggled" action based on the todo's ID.
 
@@ -730,11 +679,7 @@ src/features/todos/TodoListItem.js
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">default</span><span class="token plain"> TodoListItem</span>
-
-Copy
-
-There's a problem with this, though. We said earlier that **returning new array references in selectors causes components to re-render every time**, and right now we're returning a new IDs array in `<TodoList>`. In this case, the _contents_ of the IDs array should be the same if we're toggling a todo, because we're still showing the same todo items - we haven't added or deleted any. But, the array _containing_ those IDs is a new reference, so `<TodoList>` will re-render when it really doesn't need to.
+<span class="token plain"></span><span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">default</span><span class="token plain"> TodoListItem</span>There's a problem with this, though. We said earlier that **returning new array references in selectors causes components to re-render every time**, and right now we're returning a new IDs array in `<TodoList>`. In this case, the _contents_ of the IDs array should be the same if we're toggling a todo, because we're still showing the same todo items - we haven't added or deleted any. But, the array _containing_ those IDs is a new reference, so `<TodoList>` will re-render when it really doesn't need to.
 
 One possible solution to this is to change how `useSelector` compares its values to see if they've changed. `useSelector` can take a comparison function as its second argument. A comparison function is called with the old and new values, and returns `true` if they're considered the same. If they're the same, `useSelector` won't make the component re-render.
 
@@ -770,11 +715,7 @@ src/features/todos/TodoList.js
 
 <span class="token plain"> </span><span class="token keyword" style="color: #f92672">return</span><span class="token plain"> </span><span class="token tag punctuation" style="color: #f8f8f2">&lt;</span><span class="token tag" style="color: #f92672">ul</span><span class="token tag" style="color: #f92672"> </span><span class="token tag attr-name" style="color: #a6e22e">className</span><span class="token tag attr-value punctuation attr-equals" style="color: #f8f8f2">=</span><span class="token tag attr-value punctuation" style="color: #f8f8f2">"</span><span class="token tag attr-value" style="color: #e6d874">todo-list</span><span class="token tag attr-value punctuation" style="color: #f8f8f2">"</span><span class="token tag punctuation" style="color: #f8f8f2">&gt;</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain">renderedListItems</span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token tag punctuation" style="color: #f8f8f2">&lt;/</span><span class="token tag" style="color: #f92672">ul</span><span class="token tag punctuation" style="color: #f8f8f2">&gt;</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Now, if we toggle a todo item, the list of IDs will be considered the same, and `<TodoList>` won't have to re-render. The one `<TodoListItem>` will get an updated todo object and re-render, but all the rest of them will still have the existing todo object and not have to re-render at all.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Now, if we toggle a todo item, the list of IDs will be considered the same, and `<TodoList>` won't have to re-render. The one `<TodoListItem>` will get an updated todo object and re-render, but all the rest of them will still have the existing todo object and not have to re-render at all.
 
 As mentioned earlier, you can also use a specialized kind of selector function called [a "memoized selector"](part-7-standard-patterns.html) to help improve component rendering, and we'll look at how to use those in another section.
 
@@ -815,8 +756,6 @@ Let's see how the app looks now, including the components and sections we skippe
 Now that our UI is working, it's time to see how to make our Redux app talk to a server. In [Part 6: Async Logic](part-6-async-logic.html), we'll talk about how asynchronous logic like timeouts and AJAX calls fit into the Redux data flow.
 
 <a href="part-4-store.html" class="pagination-nav__link"></a>
-
-Previous
 
 « Redux Fundamentals, Part 4: Store
 
@@ -860,4 +799,4 @@ Redux Fundamentals, Part 6: Async Logic and Data Fetching »
 - [![Deploys by Netlify](../../../www.netlify.com/img/global/badges/netlify-color-accent.svg)](../../../www.netlify.com/index.html)
 
 <a href="../official/index.html" class="footerLogoLink_MyFc"><img src="../official/../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

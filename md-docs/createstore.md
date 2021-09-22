@@ -1,13 +1,6 @@
 <a href="https://redux.js.org/" class="navbar__brand"><img src="https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
 
 <a href="https://redux.js.org/introduction/getting-started" class="navbar__item navbar__link">Getting Started</a><a href="https://redux.js.org/tutorials/essentials/part-1-overview-concepts" class="navbar__item navbar__link">Tutorial</a><a href="https://redux.js.org/api/api-reference" class="navbar__item navbar__link">API</a><a href="https://redux.js.org/faq" class="navbar__item navbar__link">FAQ</a><a href="https://redux.js.org/style-guide/style-guide" class="navbar__item navbar__link">Best Practices</a><a href="https://www.github.com/reduxjs/redux" class="navbar__item navbar__link">GitHub</a><a href="https://redux.js.org/introduction/getting-started#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="https://redux.js.org/" class="navbar__brand"><img src="https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
 
 - <a href="https://redux.js.org/introduction/getting-started" class="menu__link">Getting Started</a>
@@ -124,7 +117,7 @@ Creates a Redux [store](https://redux.js.org/api/store) that holds the complete 
 
 #### <span id="example" class="anchor enhancedAnchor_2LWZ"></span>Example<a href="#example" class="hash-link" title="Direct link to heading">#</a>
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -134,7 +127,7 @@ Creates a Redux [store](https://redux.js.org/api/store) that holds the complete 
 
 <span class="token plain"> </span><span class="token keyword" style="color: #f92672">case</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'ADD_TODO'</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">concat</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">text</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">concat</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">text</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"></span>
 
@@ -150,7 +143,7 @@ Creates a Redux [store](https://redux.js.org/api/store) that holds the complete 
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
 <span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'ADD_TODO'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
 
@@ -160,13 +153,9 @@ Creates a Redux [store](https://redux.js.org/api/store) that holds the complete 
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// \[ 'Use Redux', 'Read the docs' \]</span>
-
-Copy
-
-#### <span id="tips" class="anchor enhancedAnchor_2LWZ"></span>Tips<a href="#tips" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// \[ 'Use Redux', 'Read the docs' \]</span>#### <span id="tips" class="anchor enhancedAnchor_2LWZ"></span>Tips<a href="#tips" class="hash-link" title="Direct link to heading">#</a>
 
 - Don't create more than one store in an application! Instead, use [`combineReducers`](https://redux.js.org/api/combinereducers) to create a single root reducer out of many.
 
@@ -181,8 +170,6 @@ Copy
 - To apply multiple store enhancers, you may use [`compose()`](https://redux.js.org/api/compose).
 
 <a href="https://redux.js.org/api/api-reference" class="pagination-nav__link"></a>
-
-Previous
 
 « API Reference
 
@@ -212,4 +199,4 @@ Store »
 
 <a href="https://redux.js.org/" class="footerLogoLink_MyFc"><img src="https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" /><img src="https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
 
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

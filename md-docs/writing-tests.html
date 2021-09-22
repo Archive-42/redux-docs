@@ -19,12 +19,6 @@
 
 <ul>
 
-<ul>
-
-
-
-<ul>
-
 
 
 
@@ -39,13 +33,7 @@
 </ul></li>
 
 
-
-</ul></li>
-
-<ul>
-
-</ul></li>
-</ul></li>
+</li>
 <li><a href="#!" class="menu__link menu__link--sublist">FAQ</a>
 <ul>
 
@@ -56,27 +44,21 @@
 </ul></li>
 
 
-</ul></li>
-<li><a href="#!" class="menu__link menu__link--sublist">Redux Toolkit</a>
-<ul>
-
-</ul></li>
-</ul>
 <h1 id="writing-tests"><span id="writing-tests" class="anchor enhancedAnchor_2LWZ"></span>Writing Tests<a href="#writing-tests" class="hash-link" title="Direct link to heading">#</a></h1>
 <p>Because most of the Redux code you write are functions, and many of them are pure, they are easy to test without mocking.</p>
 <h3 id="setting-up"><span id="setting-up" class="anchor enhancedAnchor_2LWZ"></span>Setting Up<a href="#setting-up" class="hash-link" title="Direct link to heading">#</a></h3>
 <p>We recommend <a href="../../facebook.github.io/jest/index.html">Jest</a> as the testing engine. Note that it runs in a Node environment, so you won’t have access to the DOM.</p>
 <p><span class="token plain">npm install –save-dev jest</span></p>
 <p>Copy</p>
-<p>To use it together with <a href="../../babeljs.io/index.html">Babel</a>, you will need to install <code class="language-js >babel-jest</code>:</p>
+<p>To use it together with <a href="../../babeljs.io/index.html">Babel</a>, you will need to install <code class="language-js" >babel-jest</code>:</p>
 <p><span class="token plain">npm install –save-dev babel-jest</span></p>
 <p>Copy</p>
-<p>and configure it to use <a href="../../github.com/babel/babel/tree/master/packages/babel-preset-env.html">babel-preset-env</a> features in <code class="language-js >.babelrc</code>:</p>
+<p>and configure it to use <a href="../../github.com/babel/babel/tree/master/packages/babel-preset-env.html">babel-preset-env</a> features in <code class="language-js" >.babelrc</code>:</p>
 <p><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token string" style="color: #a6e22e">“presets”</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">[</span><span class="token string" style="color: #a6e22e">“<span class="citation" data-cites="babel/preset-env">@babel/preset-env</span>”</span><span class="token punctuation" style="color: #f8f8f2">]</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
 <p>Copy</p>
-<p>Then, add this to <code class="language-js >scripts</code> in your <code class="language-js >package.json</code>:</p>
+<p>Then, add this to <code class="language-js" >scripts</code> in your <code class="language-js" >package.json</code>:</p>
 <p><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token spread operator" style="color: #f8f8f2">…</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token string" style="color: #a6e22e">“scripts”</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
@@ -87,7 +69,7 @@
 <p><span class="token plain"> </span><span class="token spread operator" style="color: #f8f8f2">…</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
 <p>Copy</p>
-<p>and run <code class="language-js >npm test</code> to run it once, or <code class="language-js >npm run test:watch</code> to test on every file change.</p>
+<p>and run <code class="language-js" >npm test</code> to run it once, or <code class="language-js" >npm run test:watch</code> to test on every file change.</p>
 <h3 id="action-creators"><span id="action-creators" class="anchor enhancedAnchor_2LWZ"></span>Action Creators<a href="#action-creators" class="hash-link" title="Direct link to heading">#</a></h3>
 <p>In Redux, action creators are functions which return plain objects. When testing action creators, we want to test whether the correct action creator was called and also whether the right action was returned.</p>
 <h4 id="example"><span id="example" class="anchor enhancedAnchor_2LWZ"></span>Example<a href="#example" class="hash-link" title="Direct link to heading">#</a></h4>
@@ -272,13 +254,13 @@
 <p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span></p>
 <p>Copy</p>
 <h3 id="components"><span id="components" class="anchor enhancedAnchor_2LWZ"></span>Components<a href="#components" class="hash-link" title="Direct link to heading">#</a></h3>
-<p>First, we will install <a href="../../testing-library.com/docs/react-testing-library/intro/index.html">React Testing Library</a>. React Testing Library is a simple and complete React DOM testing utility that encourage good testing practices. It uses react-dom’s <code class="language-js >render</code> function and <code class="language-js >act</code> from react-dom/tests-utils.</p>
+<p>First, we will install <a href="../../testing-library.com/docs/react-testing-library/intro/index.html">React Testing Library</a>. React Testing Library is a simple and complete React DOM testing utility that encourage good testing practices. It uses react-dom’s <code class="language-js" >render</code> function and <code class="language-js" >act</code> from react-dom/tests-utils.</p>
 <p><span class="token plain">npm install –save-dev <span class="citation" data-cites="testing-library/react">@testing-library/react</span></span></p>
 <p>Copy</p>
 <p>If you are using jest as recommended above, we also recommend installing <a href="../../github.com/testing-library/jest-dom.html">jest-dom</a> as it provides a set of custom jest matchers that you can use to extend jest. These will make your tests more declarative, clear to read and to maintain. jest-dom is being used in the examples below.</p>
 <p><span class="token plain">npm install –save-dev <span class="citation" data-cites="testing-library/jest-dom">@testing-library/jest-dom</span></span></p>
 <p>Copy</p>
-<p>Consider the following <code class="language-js >App</code> component:</p>
+<p>Consider the following <code class="language-js" >App</code> component:</p>
 <p><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> useSelector </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘react-redux’</span><span class="token plain"></span></p>
 <p><span class="token plain" style="display: inline-block"> </span></p>
 <p><span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function maybe-class-name" style="color: #e6d874">App</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
@@ -286,8 +268,8 @@
 <p><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token plain">div</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain">user</span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token operator" style="color: #f8f8f2">/</span><span class="token plain">div</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
 <p>Copy</p>
-<p>To test the component, we <code class="language-js >render</code> it into the DOM and pass stubbed callbacks as props, then we assert whether the callbacks were called when expected. We can use the <code class="language-js >wrapper</code> option in the <code class="language-js >render</code> function and export our own <code class="language-js >render</code> function as explained in React Testing Library’s <a href="../../testing-library.com/docs/react-testing-library/setup/index.html">setup docs</a>.</p>
-<p>Our <code class="language-js >render</code> function can look like this:</p>
+<p>To test the component, we <code class="language-js" >render</code> it into the DOM and pass stubbed callbacks as props, then we assert whether the callbacks were called when expected. We can use the <code class="language-js" >wrapper</code> option in the <code class="language-js" >render</code> function and export our own <code class="language-js" >render</code> function as explained in React Testing Library’s <a href="../../testing-library.com/docs/react-testing-library/setup/index.html">setup docs</a>.</p>
+<p>Our <code class="language-js" >render</code> function can look like this:</p>
 <p><span class="token comment" style="color: #c6cad2">// test-utils.js</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">React</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘react’</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> render </span><span class="token imports keyword module" style="color: #f92672">as</span><span class="token imports"> rtlRender </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘<span class="citation" data-cites="testing-library/react">@testing-library/react</span>’</span><span class="token plain"></span></p>
@@ -315,7 +297,7 @@
 <p><span class="token plain"></span><span class="token comment" style="color: #c6cad2">// override render method</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token exports punctuation" style="color: #f8f8f2">{</span><span class="token exports"> render </span><span class="token exports punctuation" style="color: #f8f8f2">}</span></p>
 <p>Copy</p>
-<p>And our test can use our exported <code class="language-js >render</code> function:</p>
+<p>And our test can use our exported <code class="language-js" >render</code> function:</p>
 <p><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">React</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘react’</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token comment" style="color: #c6cad2">// We’re using our own custom render function and not RTL’s render</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token comment" style="color: #c6cad2">// our custom utils also re-export everything from RTL</span><span class="token plain"></span></p>
@@ -330,7 +312,7 @@
 <p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span></p>
 <p>Copy</p>
 <h3 id="middleware"><span id="middleware" class="anchor enhancedAnchor_2LWZ"></span>Middleware<a href="#middleware" class="hash-link" title="Direct link to heading">#</a></h3>
-<p>Middleware functions wrap behavior of <code class="language-js >dispatch</code> calls in Redux, so to test this modified behavior we need to mock the behavior of the <code class="language-js >dispatch</code> call.</p>
+<p>Middleware functions wrap behavior of <code class="language-js" >dispatch</code> calls in Redux, so to test this modified behavior we need to mock the behavior of the <code class="language-js" >dispatch</code> call.</p>
 <h4 id="example-3"><span id="example-3" class="anchor enhancedAnchor_2LWZ"></span>Example<a href="#example-3" class="hash-link" title="Direct link to heading">#</a></h4>
 <p>First, we’ll need a middleware function. This is similar to the real <a href="../../github.com/reduxjs/redux-thunk/blob/master/src/index.html">redux-thunk</a>.</p>
 <p><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">thunk</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"></span></p>
@@ -344,7 +326,7 @@
 <p><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">next</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
 <p>Copy</p>
-<p>We need to create a fake <code class="language-js >getState</code>, <code class="language-js >dispatch</code>, and <code class="language-js >next</code> functions. We use <code class="language-js >jest.fn()</code> to create stubs, but with other test frameworks you would likely use <a href="../../sinonjs.org/index.html">Sinon</a>.</p>
+<p>We need to create a fake <code class="language-js" >getState</code>, <code class="language-js" >dispatch</code>, and <code class="language-js" >next</code> functions. We use <code class="language-js" >jest.fn()</code> to create stubs, but with other test frameworks you would likely use <a href="../../sinonjs.org/index.html">Sinon</a>.</p>
 <p>The invoke function runs our middleware in the same way Redux does.</p>
 <p><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">create</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> store </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
@@ -358,7 +340,7 @@
 <p><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> next</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> invoke </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
 <p>Copy</p>
-<p>We test that our middleware is calling the <code class="language-js >getState</code>, <code class="language-js >dispatch</code>, and <code class="language-js >next</code> functions at the right time.</p>
+<p>We test that our middleware is calling the <code class="language-js" >getState</code>, <code class="language-js" >dispatch</code>, and <code class="language-js" >next</code> functions at the right time.</p>
 <p><span class="token function" style="color: #e6d874">it</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">‘passes through non-function action’</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> next</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> invoke </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">create</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> action </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘TEST’</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span></p>
@@ -383,11 +365,11 @@
 <p><span class="token plain"> </span><span class="token function" style="color: #e6d874">expect</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">getState</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">toHaveBeenCalled</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span></p>
 <p>Copy</p>
-<p>In some cases, you will need to modify the <code class="language-js >create</code> function to use different mock implementations of <code class="language-js >getState</code> and <code class="language-js >next</code>.</p>
+<p>In some cases, you will need to modify the <code class="language-js" >create</code> function to use different mock implementations of <code class="language-js" >getState</code> and <code class="language-js" >next</code>.</p>
 <h3 id="glossary"><span id="glossary" class="anchor enhancedAnchor_2LWZ"></span>Glossary<a href="#glossary" class="hash-link" title="Direct link to heading">#</a></h3>
 <ul>
 <li><p><a href="../../testing-library.com/docs/react-testing-library/intro/index.html">React Testing Library</a>: React Testing Library is a very light-weight solution for testing React components. It provides light utility functions on top of react-dom and react-dom/test-utils, in a way that encourages better testing practices. Its primary guiding principle is: “The more your tests resemble the way your software is used, the more confidence they can give you.”</p></li>
-<li><p><a href="../../reactjs.org/docs/test-utils.html">React Test Utils</a>: ReactTestUtils makes it easy to test React components in the testing framework of your choice. React Testing Library uses the <code class="language-js >act</code> function exported by React Test Utils.</p></li>
+<li><p><a href="../../reactjs.org/docs/test-utils.html">React Test Utils</a>: ReactTestUtils makes it easy to test React components in the testing framework of your choice. React Testing Library uses the <code class="language-js" >act</code> function exported by React Test Utils.</p></li>
 </ul>
 <p><a href="server-rendering.html" class="pagination-nav__link"></a></p>
 

@@ -1,13 +1,6 @@
 <a href="../index.html" class="navbar__brand"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
 
 <a href="getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="../tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../faq.html" class="navbar__item navbar__link">FAQ</a><a href="../style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="../index.html" class="navbar__brand"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
 
 - <a href="getting-started.html" class="menu__link">Getting Started</a>
@@ -120,11 +113,7 @@ Run the [Counter Vanilla](../../github.com/reduxjs/redux/tree/master/examples/co
 
 <span class="token plain">cd redux/examples/counter-vanilla</span>
 
-<span class="token plain">open index.html</span>
-
-Copy
-
-Or check out the [sandbox](../../codesandbox.io/s/github/reduxjs/redux/tree/master/examples/counter-vanilla.html):
+<span class="token plain">open index.html</span>Or check out the [sandbox](../../codesandbox.io/s/github/reduxjs/redux/tree/master/examples/counter-vanilla.html):
 
 It does not require a build system or a view framework and exists to show the raw Redux API used with ES5.
 
@@ -140,11 +129,7 @@ Run the [Counter](../../github.com/reduxjs/redux/tree/master/examples/counter.ht
 
 <span class="token plain">npm install</span>
 
-<span class="token plain">npm start</span>
-
-Copy
-
-Or check out the [sandbox](../../codesandbox.io/s/github/reduxjs/redux/tree/master/examples/counter.html):
+<span class="token plain">npm start</span>Or check out the [sandbox](../../codesandbox.io/s/github/reduxjs/redux/tree/master/examples/counter.html):
 
 This is the most basic example of using Redux together with React. For simplicity, it re-renders the React component manually when the store changes. In real projects, you will likely want to use the highly performant [React Redux](../../github.com/reduxjs/react-redux.html) bindings instead.
 
@@ -162,11 +147,7 @@ Run the [Todos](../../github.com/reduxjs/redux/tree/master/examples/todos.html) 
 
 <span class="token plain">npm install</span>
 
-<span class="token plain">npm start</span>
-
-Copy
-
-Or check out the [sandbox](../../codesandbox.io/s/github/reduxjs/redux/tree/master/examples/todos.html):
+<span class="token plain">npm start</span>Or check out the [sandbox](../../codesandbox.io/s/github/reduxjs/redux/tree/master/examples/todos.html):
 
 This is the best example to get a deeper understanding of how the state updates work together with components in Redux. It shows how reducers can delegate handling actions to other reducers, and how you can use [React Redux](../../github.com/reduxjs/react-redux.html) to generate container components from your presentational components.
 
@@ -184,11 +165,7 @@ Run the [Todos with Undo](../../github.com/reduxjs/redux/tree/master/examples/to
 
 <span class="token plain">npm install</span>
 
-<span class="token plain">npm start</span>
-
-Copy
-
-Or check out the [sandbox](../../codesandbox.io/s/github/reduxjs/redux/tree/master/examples/todos-with-undo.html):
+<span class="token plain">npm start</span>Or check out the [sandbox](../../codesandbox.io/s/github/reduxjs/redux/tree/master/examples/todos-with-undo.html):
 
 This is a variation on the previous example. It is almost identical, but additionally shows how wrapping your reducer with [Redux Undo](../../github.com/omnidan/redux-undo.html) lets you add a Undo/Redo functionality to your app with a few lines of code.
 
@@ -204,11 +181,7 @@ Run the [Todos w/ Flow](../../github.com/reduxjs/redux/tree/master/examples/todo
 
 <span class="token plain">npm install</span>
 
-<span class="token plain">npm start</span>
-
-Copy
-
-Or check out the [sandbox](../../codesandbox.io/s/github/reduxjs/redux/tree/master/examples/todos-flow.html):
+<span class="token plain">npm start</span>Or check out the [sandbox](../../codesandbox.io/s/github/reduxjs/redux/tree/master/examples/todos-flow.html):
 
 This is like the previous Todos examples, but shows how to use Redux in conjunction with [Flow](../../flow.org/index.html).
 
@@ -224,11 +197,7 @@ Run the [TodoMVC](../../github.com/reduxjs/redux/tree/master/examples/todomvc.ht
 
 <span class="token plain">npm install</span>
 
-<span class="token plain">npm start</span>
-
-Copy
-
-Or check out the [sandbox](../../codesandbox.io/s/github/reduxjs/redux/tree/master/examples/todomvc.html):
+<span class="token plain">npm start</span>Or check out the [sandbox](../../codesandbox.io/s/github/reduxjs/redux/tree/master/examples/todomvc.html):
 
 This is the classical [TodoMVC](../../todomvc.com/index.html) example. It's here for the sake of comparison, but it covers the same points as the Todos example.
 
@@ -246,11 +215,7 @@ Run the [Shopping Cart](../../github.com/reduxjs/redux/tree/master/examples/shop
 
 <span class="token plain">npm install</span>
 
-<span class="token plain">npm start</span>
-
-Copy
-
-Or check out the [sandbox](../../codesandbox.io/s/github/reduxjs/redux/tree/master/examples/shopping-cart.html):
+<span class="token plain">npm start</span>Or check out the [sandbox](../../codesandbox.io/s/github/reduxjs/redux/tree/master/examples/shopping-cart.html):
 
 This example shows important idiomatic Redux patterns that become important as your app grows. In particular, it shows how to store entities in a normalized way by their IDs, how to compose reducers on several levels, and how to define selectors alongside the reducers so the knowledge about the state shape is encapsulated. It also demonstrates logging with [Redux Logger](../../github.com/LogRocket/redux-logger.html) and conditional dispatching of actions with [Redux Thunk](../../github.com/reduxjs/redux-thunk.html) middleware.
 
@@ -266,11 +231,7 @@ Run the [Tree View](../../github.com/reduxjs/redux/tree/master/examples/tree-vie
 
 <span class="token plain">npm install</span>
 
-<span class="token plain">npm start</span>
-
-Copy
-
-Or check out the [sandbox](../../codesandbox.io/s/github/reduxjs/redux/tree/master/examples/tree-view.html):
+<span class="token plain">npm start</span>Or check out the [sandbox](../../codesandbox.io/s/github/reduxjs/redux/tree/master/examples/tree-view.html):
 
 This example demonstrates rendering a deeply nested tree view and representing its state in a normalized form so it is easy to update from reducers. Good rendering performance is achieved by the container components granularly subscribing only to the tree nodes that they render.
 
@@ -288,11 +249,7 @@ Run the [Async](../../github.com/reduxjs/redux/tree/master/examples/async.html) 
 
 <span class="token plain">npm install</span>
 
-<span class="token plain">npm start</span>
-
-Copy
-
-Or check out the [sandbox](../../codesandbox.io/s/github/reduxjs/redux/tree/master/examples/async.html):
+<span class="token plain">npm start</span>Or check out the [sandbox](../../codesandbox.io/s/github/reduxjs/redux/tree/master/examples/async.html):
 
 This example includes reading from an asynchronous API, fetching data in response to user input, showing loading indicators, caching the response, and invalidating the cache. It uses [Redux Thunk](../../github.com/reduxjs/redux-thunk.html) middleware to encapsulate asynchronous side effects.
 
@@ -308,11 +265,7 @@ Run the [Universal](../../github.com/reduxjs/redux/tree/master/examples/universa
 
 <span class="token plain">npm install</span>
 
-<span class="token plain">npm start</span>
-
-Copy
-
-This is a basic demonstration of [server rendering](../recipes/server-rendering.html) with Redux and React. It shows how to prepare the initial store state on the server, and pass it down to the client so the client store can boot up from an existing state.
+<span class="token plain">npm start</span>This is a basic demonstration of [server rendering](../recipes/server-rendering.html) with Redux and React. It shows how to prepare the initial store state on the server, and pass it down to the client so the client store can boot up from an existing state.
 
 ## <span id="real-world" class="anchor enhancedAnchor_2LWZ"></span>Real World<a href="#real-world" class="hash-link" title="Direct link to heading">#</a>
 
@@ -326,11 +279,7 @@ Run the [Real World](../../github.com/reduxjs/redux/tree/master/examples/real-wo
 
 <span class="token plain">npm install</span>
 
-<span class="token plain">npm start</span>
-
-Copy
-
-Or check out the [sandbox](../../codesandbox.io/s/github/reduxjs/redux/tree/master/examples/real-world.html):
+<span class="token plain">npm start</span>Or check out the [sandbox](../../codesandbox.io/s/github/reduxjs/redux/tree/master/examples/real-world.html):
 
 This is the most advanced example. It is dense by design. It covers keeping fetched entities in a normalized cache, implementing a custom middleware for API calls, rendering partially loaded data, pagination, caching responses, displaying error messages, and routing. Additionally, it includes Redux DevTools.
 
@@ -339,8 +288,6 @@ This is the most advanced example. It is dense by design. It covers keeping fetc
 You can find more examples in the [Redux Apps and Examples](../../github.com/markerikson/redux-ecosystem-links/blob/master/apps-and-examples.html) page of the [Redux Addons Catalog](../../github.com/markerikson/redux-ecosystem-links.html).
 
 <a href="ecosystem.html" class="pagination-nav__link"></a>
-
-Previous
 
 « Ecosystem
 
@@ -383,4 +330,4 @@ Redux Tutorials Index »
 
 <a href="../index.html" class="footerLogoLink_MyFc"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" /><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
 
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

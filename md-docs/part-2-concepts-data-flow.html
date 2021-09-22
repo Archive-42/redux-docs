@@ -137,7 +137,7 @@
 <li><a href="../official/api/bindactioncreators.html" class="menu__link">bindActionCreators</a></li>
 <li><a href="../official/api/compose.html" class="menu__link">compose</a></li>
 </ul></li>
-<li><a href="#!" class="menu__link menu__link--sublist">Redux Toolkit</a>
+
 <ul>
 <li><a href="../official/redux-toolkit/overview.html" class="menu__link">Redux Toolkit: Overview</a></li>
 </ul></li>
@@ -246,9 +246,9 @@
 <h2 id="redux-terminology"><span id="redux-terminology" class="anchor enhancedAnchor_2LWZ"></span>Redux Terminology<a href="#redux-terminology" class="hash-link" title="Direct link to heading">#</a></h2>
 <p>There’s some important Redux terms that you’ll need to be familiar with before we continue:</p>
 <h3 id="actions"><span id="actions" class="anchor enhancedAnchor_2LWZ"></span>Actions<a href="#actions" class="hash-link" title="Direct link to heading">#</a></h3>
-<p>An <strong>action</strong> is a plain JavaScript object that has a <code class="language-js >type</code> field. <strong>You can think of an action as an event that describes something that happened in the application</strong>.</p>
-<p>The <code class="language-js >type</code> field should be a string that gives this action a descriptive name, like <code class="language-js >"todos/todoAdded"</code>. We usually write that type string like <code class="language-js >"domain/eventName"</code>, where the first part is the feature or category that this action belongs to, and the second part is the specific thing that happened.</p>
-<p>An action object can have other fields with additional information about what happened. By convention, we put that information in a field called <code class="language-js >payload</code>.</p>
+<p>An <strong>action</strong> is a plain JavaScript object that has a <code class="language-js" >type</code> field. <strong>You can think of an action as an event that describes something that happened in the application</strong>.</p>
+<p>The <code class="language-js" >type</code> field should be a string that gives this action a descriptive name, like <code class="language-js" >"todos/todoAdded"</code>. We usually write that type string like <code class="language-js" >"domain/eventName"</code>, where the first part is the feature or category that this action belongs to, and the second part is the specific thing that happened.</p>
+<p>An action object can have other fields with additional information about what happened. By convention, we put that information in a field called <code class="language-js" >payload</code>.</p>
 <p>A typical action object might look like this:</p>
 <p><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> addTodoAction </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
 <p><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘todos/todoAdded’</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span></p>
@@ -256,13 +256,13 @@
 <p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
 <p>Copy</p>
 <h3 id="reducers"><span id="reducers" class="anchor enhancedAnchor_2LWZ"></span>Reducers<a href="#reducers" class="hash-link" title="Direct link to heading">#</a></h3>
-<p>A <strong>reducer</strong> is a function that receives the current <code class="language-js >state</code> and an <code class="language-js >action</code> object, decides how to update the state if necessary, and returns the new state: <code class="language-js >(state, action) =&gt; newState</code>. <strong>You can think of a reducer as an event listener which handles events based on the received action (event) type.</strong></p>
+<p>A <strong>reducer</strong> is a function that receives the current <code class="language-js" >state</code> and an <code class="language-js" >action</code> object, decides how to update the state if necessary, and returns the new state: <code class="language-js" >(state, action) =&gt; newState</code>. <strong>You can think of a reducer as an event listener which handles events based on the received action (event) type.</strong></p>
 <h5 id="info"><span class="admonition-icon"> </span>info</h5>
-<p>“Reducer” functions get their name because they’re similar to the kind of callback function you pass to the <a href="../../../developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce.html"><code class="language-js >Array.reduce()</code></a> method.</p>
+<p>“Reducer” functions get their name because they’re similar to the kind of callback function you pass to the <a href="../../../developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce.html"><code class="language-js" >Array.reduce()</code></a> method.</p>
 <p>Reducers must <em>always</em> follow some specific rules:</p>
 <ul>
-<li>They should only calculate the new state value based on the <code class="language-js >state</code> and <code class="language-js >action</code> arguments</li>
-<li>They are not allowed to modify the existing <code class="language-js >state</code>. Instead, they must make <em>immutable updates</em>, by copying the existing <code class="language-js >state</code> and making changes to the copied values.</li>
+<li>They should only calculate the new state value based on the <code class="language-js" >state</code> and <code class="language-js" >action</code> arguments</li>
+<li>They are not allowed to modify the existing <code class="language-js" >state</code>. Instead, they must make <em>immutable updates</em>, by copying the existing <code class="language-js" >state</code> and making changes to the copied values.</li>
 <li>They must not do any asynchronous logic, calculate random values, or cause other “side effects”</li>
 </ul>
 <p>We’ll talk more about the rules of reducers later, including why they’re important and how to follow them correctly.</p>
@@ -291,15 +291,15 @@
 <p><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> state</span></p>
 <p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
 <p>Copy</p>
-<p>Reducers can use any kind of logic inside to decide what the new state should be: <code class="language-js >if/else</code>, <code class="language-js >switch</code>, loops, and so on.</p>
+<p>Reducers can use any kind of logic inside to decide what the new state should be: <code class="language-js" >if/else</code>, <code class="language-js" >switch</code>, loops, and so on.</p>
 <h4 id="detailed-explanation-why-are-they-called-reducers">Detailed Explanation: Why Are They Called ‘Reducers?’</h4>
-<p>The <a href="../../../developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce.html"><code class="language-js >Array.reduce()</code></a> method lets you take an array of values, process each item in the array one at a time, and return a single final result. You can think of it as “reducing the array down to one value”.</p>
-<p><code class="language-js >Array.reduce()</code> takes a callback function as an argument, which will be called one time for each item in the array. It takes two arguments:</p>
+<p>The <a href="../../../developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce.html"><code class="language-js" >Array.reduce()</code></a> method lets you take an array of values, process each item in the array one at a time, and return a single final result. You can think of it as “reducing the array down to one value”.</p>
+<p><code class="language-js" >Array.reduce()</code> takes a callback function as an argument, which will be called one time for each item in the array. It takes two arguments:</p>
 <ul>
-<li><code class="language-js >previousResult</code>, the value that your callback returned last time</li>
-<li><code class="language-js >currentItem</code>, the current item in the array</li>
+<li><code class="language-js" >previousResult</code>, the value that your callback returned last time</li>
+<li><code class="language-js" >currentItem</code>, the current item in the array</li>
 </ul>
-<p>The first time that the callback runs, there isn’t a <code class="language-js >previousResult</code> available, so we need to also pass in an initial value that will be used as the first <code class="language-js >previousResult</code>.</p>
+<p>The first time that the callback runs, there isn’t a <code class="language-js" >previousResult</code> available, so we need to also pass in an initial value that will be used as the first <code class="language-js" >previousResult</code>.</p>
 <p>If we wanted to add together an array of numbers to find out what the total is, we could write a reduce callback that looks like this:</p>
 <p><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> numbers </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">[</span><span class="token number" style="color: #ae81ff">2</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">5</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">8</span><span class="token punctuation" style="color: #f8f8f2">]</span><span class="token plain"></span></p>
 <p><span class="token plain" style="display: inline-block"> </span></p>
@@ -318,9 +318,9 @@
 <p><span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">total</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token comment" style="color: #c6cad2">// 15</span></p>
 <p>Copy</p>
-<p>Notice that this <code class="language-js >addNumbers</code> “reduce callback” function doesn’t need to keep track of anything itself. It takes the <code class="language-js >previousResult</code> and <code class="language-js >currentItem</code> arguments, does something with them, and returns a new result value.</p>
-<p><strong>A Redux reducer function is exactly the same idea as this “reduce callback” function!</strong> It takes a “previous result” (the <code class="language-js >state</code>), and the “current item” (the <code class="language-js >action</code> object), decides a new state value based on those arguments, and returns that new state.</p>
-<p>If we were to create an array of Redux actions, call <code class="language-js >reduce()</code>, and pass in a reducer function, we’d get a final result the same way:</p>
+<p>Notice that this <code class="language-js" >addNumbers</code> “reduce callback” function doesn’t need to keep track of anything itself. It takes the <code class="language-js" >previousResult</code> and <code class="language-js" >currentItem</code> arguments, does something with them, and returns a new result value.</p>
+<p><strong>A Redux reducer function is exactly the same idea as this “reduce callback” function!</strong> It takes a “previous result” (the <code class="language-js" >state</code>), and the “current item” (the <code class="language-js" >action</code> object), decides a new state value based on those arguments, and returns that new state.</p>
+<p>If we were to create an array of Redux actions, call <code class="language-js" >reduce()</code>, and pass in a reducer function, we’d get a final result the same way:</p>
 <p><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> actions </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">[</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘counter/incremented’</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘counter/incremented’</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span></p>
@@ -333,10 +333,10 @@
 <p><span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">finalResult</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token comment" style="color: #c6cad2">// {value: 3}</span></p>
 <p>Copy</p>
-<p>We can say that <strong>Redux reducers reduce a set of actions (over time) into a single state</strong>. The difference is that with <code class="language-js >Array.reduce()</code> it happens all at once, and with Redux, it happens over the lifetime of your running app.</p>
+<p>We can say that <strong>Redux reducers reduce a set of actions (over time) into a single state</strong>. The difference is that with <code class="language-js" >Array.reduce()</code> it happens all at once, and with Redux, it happens over the lifetime of your running app.</p>
 <h3 id="store"><span id="store" class="anchor enhancedAnchor_2LWZ"></span>Store<a href="#store" class="hash-link" title="Direct link to heading">#</a></h3>
 <p>The current Redux application state lives in an object called the <strong>store</strong> .</p>
-<p>The store is created by passing in a reducer, and has a method called <code class="language-js >getState</code> that returns the current state value:</p>
+<p>The store is created by passing in a reducer, and has a method called <code class="language-js" >getState</code> that returns the current state value:</p>
 <p><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> configureStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘<span class="citation" data-cites="reduxjs/toolkit">@reduxjs/toolkit</span>’</span><span class="token plain"></span></p>
 <p><span class="token plain" style="display: inline-block"> </span></p>
 <p><span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> store </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">configureStore</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> reducer</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> counterReducer </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span></p>
@@ -345,7 +345,7 @@
 <p><span class="token plain"></span><span class="token comment" style="color: #c6cad2">// {value: 0}</span></p>
 <p>Copy</p>
 <h3 id="dispatch"><span id="dispatch" class="anchor enhancedAnchor_2LWZ"></span>Dispatch<a href="#dispatch" class="hash-link" title="Direct link to heading">#</a></h3>
-<p>The Redux store has a method called <code class="language-js >dispatch</code>. <strong>The only way to update the state is to call <code class="language-js >store.dispatch()</code> and pass in an action object</strong>. The store will run its reducer function and save the new state value inside, and we can call <code class="language-js >getState()</code> to retrieve the updated value:</p>
+<p>The Redux store has a method called <code class="language-js" >dispatch</code>. <strong>The only way to update the state is to call <code class="language-js" >store.dispatch()</code> and pass in an action object</strong>. The store will run its reducer function and save the new state value inside, and we can call <code class="language-js" >getState()</code> to retrieve the updated value:</p>
 <p><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘counter/incremented’</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span></p>
 <p><span class="token plain" style="display: inline-block"> </span></p>
 <p><span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span></p>
@@ -385,14 +385,14 @@
 <li>Initial setup:
 <ul>
 <li>A Redux store is created using a root reducer function</li>
-<li>The store calls the root reducer once, and saves the return value as its initial <code class="language-js >state</code></li>
+<li>The store calls the root reducer once, and saves the return value as its initial <code class="language-js" >state</code></li>
 <li>When the UI is first rendered, UI components access the current state of the Redux store, and use that data to decide what to render. They also subscribe to any future store updates so they can know if the state has changed.</li>
 </ul></li>
 <li>Updates:
 <ul>
 <li>Something happens in the app, such as a user clicking a button</li>
-<li>The app code dispatches an action to the Redux store, like <code class="language-js >dispatch({type: 'counter/incremented'})</code></li>
-<li>The store runs the reducer function again with the previous <code class="language-js >state</code> and the current <code class="language-js >action</code>, and saves the return value as the new <code class="language-js >state</code></li>
+<li>The app code dispatches an action to the Redux store, like <code class="language-js" >dispatch({type: 'counter/incremented'})</code></li>
+<li>The store runs the reducer function again with the previous <code class="language-js" >state</code> and the current <code class="language-js" >action</code>, and saves the return value as the new <code class="language-js" >state</code></li>
 <li>The store notifies all parts of the UI that are subscribed that the store has been updated</li>
 <li>Each UI component that needs data from the store checks to see if the parts of the state they need have changed.</li>
 <li>Each component that sees its data has changed forces a re-render with the new data, so it can update what’s shown on the screen</li>

@@ -101,10 +101,17 @@
       as="script"
     />
     <link rel="preload" href="../assets/js/main.8520a084.js" as="script" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css"
+    />
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
-    </head>
+    <script
+      async
+      defer
+      src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"
+    ></script>
+  </head>
   <body>
     <script>
       !(function () {
@@ -1096,9 +1103,10 @@
                           >
                         </h4>
                         <p>
-                          It is tempting to modify the <code class="language-js >state</code> or
-                          <code class="language-js >action</code> passed to you by Redux. Don&#x27;t
-                          do this!
+                          It is tempting to modify the
+                          <code class="language-js">state</code> or
+                          <code class="language-js">action</code> passed to you
+                          by Redux. Don&#x27;t do this!
                         </p>
                         <p>
                           Redux assumes that you never mutate the objects it
@@ -1921,7 +1929,9 @@
                             href="../../reactjs.org/docs/update.html"
                             target="_blank"
                             rel="noopener noreferrer"
-                            ><code class="language-js >React.addons.update</code></a
+                            ><code class="language-js"
+                              >React.addons.update</code
+                            ></a
                           >
                           to write immutable transformations with a terse
                           syntax:
@@ -2276,25 +2286,29 @@
                         </div>
                         <p>
                           Finally, to update objects, you&#x27;ll need something
-                          like <code class="language-js >_.extend</code> from Underscore, or better,
-                          an
+                          like <code class="language-js">_.extend</code> from
+                          Underscore, or better, an
                           <a
                             href="../../developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign.html"
                             target="_blank"
                             rel="noopener noreferrer"
-                            ><code class="language-js >Object.assign</code></a
+                            ><code class="language-js">Object.assign</code></a
                           >
                           polyfill.
                         </p>
                         <p>
                           Make sure that you use
-                          <code class="language-js >Object.assign</code> correctly. For example,
-                          instead of returning something like
-                          <code class="language-js >Object.assign(state, newData)</code> from your
-                          reducers, return
-                          <code class="language-js >Object.assign({}, state, newData)</code>. This
-                          way you don&#x27;t override the previous
-                          <code class="language-js >state</code>.
+                          <code class="language-js">Object.assign</code>
+                          correctly. For example, instead of returning something
+                          like
+                          <code class="language-js"
+                            >Object.assign(state, newData)</code
+                          >
+                          from your reducers, return
+                          <code class="language-js"
+                            >Object.assign({}, state, newData)</code
+                          >. This way you don&#x27;t override the previous
+                          <code class="language-js">state</code>.
                         </p>
                         <p>
                           You can also enable the
@@ -2699,9 +2713,9 @@
                         <p>
                           Also keep an eye out for nested state objects that
                           need to be deeply copied. Both
-                          <code class="language-js >_.extend</code> and
-                          <code class="language-js >Object.assign</code> make a shallow copy of the
-                          state. See
+                          <code class="language-js">_.extend</code> and
+                          <code class="language-js">Object.assign</code> make a
+                          shallow copy of the state. See
                           <a
                             href="structuring-reducers/immutable-update-patterns.html#updating-nested-objects"
                             >Updating Nested Objects</a
@@ -2718,7 +2732,9 @@
                           ></a
                           >Don&#x27;t forget to call
                           <a href="../api/store.html#dispatchaction"
-                            ><code class="language-js >dispatch(action)</code></a
+                            ><code class="language-js"
+                              >dispatch(action)</code
+                            ></a
                           ><a
                             class="hash-link"
                             href="#dont-forget-to-call-dispatchaction"
@@ -2738,7 +2754,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="todoactionsjs"
                           ></a
-                          ><code class="language-js >TodoActions.js</code
+                          ><code class="language-js">TodoActions.js</code
                           ><a
                             class="hash-link"
                             href="#todoactionsjs"
@@ -2853,7 +2869,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="addtodojs"
                           ></a
-                          ><code class="language-js >AddTodo.js</code
+                          ><code class="language-js">AddTodo.js</code
                           ><a
                             class="hash-link"
                             href="#addtodojs"
@@ -3182,7 +3198,7 @@
                         <p>
                           The fix is to call
                           <a href="../api/store.html#dispatchaction"
-                            ><code class="language-js >dispatch()</code></a
+                            ><code class="language-js">dispatch()</code></a
                           >
                           method on the
                           <a href="../api/store.html">store</a> instance:
@@ -3304,7 +3320,8 @@
                             rel="noopener noreferrer"
                             >react-redux</a
                           >
-                          lets you use a <code class="language-js >connect</code>
+                          lets you use a
+                          <code class="language-js">connect</code>
                           <a
                             href="../../medium.com/%40dan_abramov/mixins-are-dead-long-live-higher-order-components-94a0d2f9e750.html"
                             target="_blank"
@@ -3312,7 +3329,8 @@
                             >higher-order component</a
                           >
                           that will, apart from subscribing you to a Redux
-                          store, inject <code class="language-js >dispatch</code> into your
+                          store, inject
+                          <code class="language-js">dispatch</code> into your
                           component&#x27;s props.
                         </p>
                         <p>The fixed code looks like this:</p>
@@ -3323,7 +3341,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="addtodojs-1"
                           ></a
-                          ><code class="language-js >AddTodo.js</code
+                          ><code class="language-js">AddTodo.js</code
                           ><a
                             class="hash-link"
                             href="#addtodojs-1"
@@ -3753,8 +3771,9 @@
                           </div>
                         </div>
                         <p>
-                          You can then pass <code class="language-js >dispatch</code> down to other
-                          components manually, if you want to.
+                          You can then pass
+                          <code class="language-js">dispatch</code> down to
+                          other components manually, if you want to.
                         </p>
                         <h4>
                           <a

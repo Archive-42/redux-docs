@@ -1,13 +1,6 @@
 <a href="../index.html" class="navbar__brand"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
 
 <a href="../introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="../tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="api-reference.html" class="navbar__item navbar__link navbar__link--active">API</a><a href="../faq.html" class="navbar__item navbar__link">FAQ</a><a href="../style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="../index.html" class="navbar__brand"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
 
 - <a href="../introduction/getting-started.html" class="menu__link">Getting Started</a>
@@ -134,25 +127,11 @@ Every function described above is a top-level export. You can import any of them
 
 #### <span id="es6" class="anchor enhancedAnchor_2LWZ"></span>ES6<a href="#es6" class="hash-link" title="Direct link to heading">#</a>
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span>#### <span id="es5-commonjs" class="anchor enhancedAnchor_2LWZ"></span>ES5 (CommonJS)<a href="#es5-commonjs" class="hash-link" title="Direct link to heading">#</a>
 
-Copy
+<span class="token keyword" style="color: #f92672">var</span><span class="token plain"> createStore </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">require</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">createStore</span>#### <span id="es5-umd-build" class="anchor enhancedAnchor_2LWZ"></span>ES5 (UMD build)<a href="#es5-umd-build" class="hash-link" title="Direct link to heading">#</a>
 
-#### <span id="es5-commonjs" class="anchor enhancedAnchor_2LWZ"></span>ES5 (CommonJS)<a href="#es5-commonjs" class="hash-link" title="Direct link to heading">#</a>
-
-<span class="token keyword" style="color: #f92672">var</span><span class="token plain"> createStore </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">require</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">createStore</span>
-
-Copy
-
-#### <span id="es5-umd-build" class="anchor enhancedAnchor_2LWZ"></span>ES5 (UMD build)<a href="#es5-umd-build" class="hash-link" title="Direct link to heading">#</a>
-
-<span class="token keyword" style="color: #f92672">var</span><span class="token plain"> createStore </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token maybe-class-name">Redux</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">createStore</span>
-
-Copy
-
-<a href="../style-guide/style-guide.html" class="pagination-nav__link"></a>
-
-Previous
+<span class="token keyword" style="color: #f92672">var</span><span class="token plain"> createStore </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token maybe-class-name">Redux</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">createStore</span><a href="../style-guide/style-guide.html" class="pagination-nav__link"></a>
 
 « Style Guide
 
@@ -186,4 +165,4 @@ createStore »
 
 <a href="../index.html" class="footerLogoLink_MyFc"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" /><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
 
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

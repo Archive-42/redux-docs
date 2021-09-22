@@ -1094,7 +1094,7 @@
                               <li>Patterns for handling async request state</li>
                               <li>
                                 How to use the Redux Toolkit
-                                <code class="language-js >createAsyncThunk</code> API to simplify
+                                <code class="language-js" >createAsyncThunk</code> API to simplify
                                 async calls
                               </li>
                             </ul>
@@ -1187,23 +1187,23 @@
                             target="_blank"
                             rel="noopener noreferrer"
                             >the Mirage.js mock API tool</a
-                          >). The API uses <code class="language-js >/fakeApi</code> as the base URL
+                          >). The API uses <code class="language-js" >/fakeApi</code> as the base URL
                           for the endpoints, and supports the typical
-                          <code class="language-js >GET/POST/PUT/DELETE</code> HTTP methods for
-                          <code class="language-js >/fakeApi/posts</code>,
-                          <code class="language-js >/fakeApi/users</code>, and
-                          <code class="language-js >fakeApi/notifications</code>. It&#x27;s defined
-                          in <code class="language-js >src/api/server.js</code>.
+                          <code class="language-js" >GET/POST/PUT/DELETE</code> HTTP methods for
+                          <code class="language-js" >/fakeApi/posts</code>,
+                          <code class="language-js" >/fakeApi/users</code>, and
+                          <code class="language-js" >fakeApi/notifications</code>. It&#x27;s defined
+                          in <code class="language-js" >src/api/server.js</code>.
                         </p>
                         <p>
                           The project also includes a small HTTP API client
-                          object that exposes <code class="language-js >client.get()</code> and
-                          <code class="language-js >client.post()</code> methods, similar to popular
-                          HTTP libraries like <code class="language-js >axios</code>. It&#x27;s
-                          defined in <code class="language-js >src/api/client.js</code>.
+                          object that exposes <code class="language-js" >client.get()</code> and
+                          <code class="language-js" >client.post()</code> methods, similar to popular
+                          HTTP libraries like <code class="language-js" >axios</code>. It&#x27;s
+                          defined in <code class="language-js" >src/api/client.js</code>.
                         </p>
                         <p>
-                          We&#x27;ll use the <code class="language-js >client</code> object to make
+                          We&#x27;ll use the <code class="language-js" >client</code> object to make
                           HTTP calls to our in-memory fake REST API for this
                           section.
                         </p>
@@ -1212,11 +1212,11 @@
                           same random seed each time the page is loaded, so that
                           it will generate the same list of fake users and fake
                           posts. If you want to reset that, delete the
-                          <code class="language-js >&#x27;randomTimestampSeed&#x27;</code> value in
+                          <code class="language-js" >&#x27;randomTimestampSeed&#x27;</code> value in
                           your browser&#x27;s Local Storage and reload the page,
                           or you can turn that off by editing
-                          <code class="language-js >src/api/server.js</code> and setting
-                          <code class="language-js >useSeededRNG</code> to <code class="language-js >false</code>.
+                          <code class="language-js" >src/api/server.js</code> and setting
+                          <code class="language-js" >useSeededRNG</code> to <code class="language-js" >false</code>.
                         </p>
                         <div
                           class="admonition admonition-info alert alert--info"
@@ -1246,7 +1246,7 @@
                                 href="../../../github.com/reduxjs/redux-essentials-example-app/tree/tutorial-steps.html"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                ><code class="language-js >tutorial-steps</code> branch in the
+                                ><code class="language-js" >tutorial-steps</code> branch in the
                                 project repo</a
                               >
                               for the complete changes in the application.
@@ -1309,10 +1309,10 @@
                           </li>
                           <li>
                             Write extra code that has access to
-                            <code class="language-js >dispatch</code> and <code class="language-js >getState</code>
+                            <code class="language-js" >dispatch</code> and <code class="language-js" >getState</code>
                           </li>
                           <li>
-                            Teach <code class="language-js >dispatch</code> how to accept other
+                            Teach <code class="language-js" >dispatch</code> how to accept other
                             values besides plain action objects, such as
                             functions and promises, by intercepting them and
                             dispatching real action objects instead
@@ -1336,10 +1336,10 @@
                             href="../../../github.com/reduxjs/redux-thunk.html"
                             target="_blank"
                             rel="noopener noreferrer"
-                            ><code class="language-js >redux-thunk</code></a
+                            ><code class="language-js" >redux-thunk</code></a
                           >, which lets you write plain functions that may
                           contain async logic directly. Redux Toolkit&#x27;s
-                          <code class="language-js >configureStore</code> function
+                          <code class="language-js" >configureStore</code> function
                           <a
                             href="../../../redux-toolkit.js.org/api/getDefaultMiddleware.html#included-default-middleware"
                             target="_blank"
@@ -1388,14 +1388,14 @@
                           Once the thunk middleware has been added to the Redux
                           store, it allows you to pass
                           <em>thunk functions</em> directly to
-                          <code class="language-js >store.dispatch</code>. A thunk function will
+                          <code class="language-js" >store.dispatch</code>. A thunk function will
                           always be called with
-                          <code class="language-js >(dispatch, getState)</code> as its arguments,
+                          <code class="language-js" >(dispatch, getState)</code> as its arguments,
                           and you can use them inside the thunk as needed.
                         </p>
                         <p>
                           Thunks typically dispatch plain actions using action
-                          creators, like <code class="language-js >dispatch(increment())</code>:
+                          creators, like <code class="language-js" >dispatch(increment())</code>:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -2203,7 +2203,7 @@
                         </div>
                         <p>
                           Thunks are typically written in &quot;slice&quot;
-                          files. <code class="language-js >createSlice</code> itself does not have
+                          files. <code class="language-js" >createSlice</code> itself does not have
                           any special support for defining thunks, so you should
                           write them as separate functions in the same slice
                           file. That way, they have access to the plain action
@@ -2226,8 +2226,8 @@
                         </h3>
                         <p>
                           Thunks may have async logic inside of them, such as
-                          <code class="language-js >setTimeout</code>, <code class="language-js >Promise</code>s, and
-                          <code class="language-js >async/await</code>. This makes them a good place
+                          <code class="language-js" >setTimeout</code>, <code class="language-js" >Promise</code>s, and
+                          <code class="language-js" >async/await</code>. This makes them a good place
                           to put AJAX calls to a server API.
                         </p>
                         <p>
@@ -2263,7 +2263,7 @@
                         </p>
                         <p>
                           Redux Toolkit provides a
-                          <code class="language-js >createAsyncThunk</code> API to implement the
+                          <code class="language-js" >createAsyncThunk</code> API to implement the
                           creation and dispatching of these actions, and
                           we&#x27;ll look at how to use it shortly.
                         </p>
@@ -2850,7 +2850,7 @@
                             </li>
                           </ul>
                           <p>
-                            <code class="language-js >createAsyncThunk</code> abstracts this pattern
+                            <code class="language-js" >createAsyncThunk</code> abstracts this pattern
                             by generating the action types and action creators,
                             and generating a thunk that dispatches those actions
                             automatically. You provide a callback function that
@@ -2873,7 +2873,7 @@
                           >
                         </h2>
                         <p>
-                          So far, our <code class="language-js >postsSlice</code> has used some
+                          So far, our <code class="language-js" >postsSlice</code> has used some
                           hardcoded sample data as its initial state. We&#x27;re
                           going to switch that to start with an empty array of
                           posts instead, and then fetch a list of posts from the
@@ -2882,7 +2882,7 @@
                         <p>
                           In order to do that, we&#x27;re going to have to
                           change the structure of the state in our
-                          <code class="language-js >postsSlice</code>, so that we can keep track of
+                          <code class="language-js" >postsSlice</code>, so that we can keep track of
                           the current state of the API request.
                         </p>
                         <h3>
@@ -2900,17 +2900,17 @@
                           >
                         </h3>
                         <p>
-                          Right now, the <code class="language-js >postsSlice</code> state is a
-                          single array of <code class="language-js >posts</code>. We need to change
+                          Right now, the <code class="language-js" >postsSlice</code> state is a
+                          single array of <code class="language-js" >posts</code>. We need to change
                           that to be an object that has the
-                          <code class="language-js >posts</code> array, plus the loading state
+                          <code class="language-js" >posts</code> array, plus the loading state
                           fields.
                         </p>
                         <p>
                           Meanwhile, the UI components like
-                          <code class="language-js >&lt;PostsList&gt;</code> are trying to read
-                          posts from <code class="language-js >state.posts</code> in their
-                          <code class="language-js >useSelector</code> hooks, assuming that that
+                          <code class="language-js" >&lt;PostsList&gt;</code> are trying to read
+                          posts from <code class="language-js" >state.posts</code> in their
+                          <code class="language-js" >useSelector</code> hooks, assuming that that
                           field is an array. We need to change those locations
                           also to match the new data.
                         </p>
@@ -2926,13 +2926,13 @@
                           only need to update the code in the slice file.
                         </p>
                         <p>
-                          The <code class="language-js >&lt;PostsList&gt;</code> component needs to
+                          The <code class="language-js" >&lt;PostsList&gt;</code> component needs to
                           read a list of all the posts, and the
-                          <code class="language-js >&lt;SinglePostPage&gt;</code> and
-                          <code class="language-js >&lt;EditPostForm&gt;</code> components need to
+                          <code class="language-js" >&lt;SinglePostPage&gt;</code> and
+                          <code class="language-js" >&lt;EditPostForm&gt;</code> components need to
                           look up a single post by its ID. Let&#x27;s export two
                           small selector functions from
-                          <code class="language-js >postsSlice.js</code> to cover those cases:
+                          <code class="language-js" >postsSlice.js</code> to cover those cases:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -3247,10 +3247,10 @@
                           </div>
                         </div>
                         <p>
-                          Note that the <code class="language-js >state</code> parameter for these
+                          Note that the <code class="language-js" >state</code> parameter for these
                           selector functions is the root Redux state object, as
                           it was for the inlined anonymous selectors we wrote
-                          directly inside of <code class="language-js >useSelector</code>.
+                          directly inside of <code class="language-js" >useSelector</code>.
                         </p>
                         <p>We can then use them in the components:</p>
                         <div class="codeBlockContainer_K1bP">
@@ -3991,7 +3991,7 @@
                         </ul>
                         <p>
                           We <em>could</em> track that information using some
-                          booleans, like <code class="language-js >isLoading: true</code>, but
+                          booleans, like <code class="language-js" >isLoading: true</code>, but
                           it&#x27;s better to track these states as a single
                           enum value. A good pattern for this is to have a state
                           section that looks like:
@@ -4115,10 +4115,10 @@
                           data is being stored. These specific string state
                           names aren&#x27;t required - feel free to use other
                           names if you want, like
-                          <code class="language-js >&#x27;pending&#x27;</code> instead of
-                          <code class="language-js >&#x27;loading&#x27;</code>, or
-                          <code class="language-js >&#x27;complete&#x27;</code> instead of
-                          <code class="language-js >&#x27;succeeded&#x27;</code>.
+                          <code class="language-js" >&#x27;pending&#x27;</code> instead of
+                          <code class="language-js" >&#x27;loading&#x27;</code>, or
+                          <code class="language-js" >&#x27;complete&#x27;</code> instead of
+                          <code class="language-js" >&#x27;succeeded&#x27;</code>.
                         </p>
                         <p>
                           We can use this information to decide what to show in
@@ -4127,15 +4127,15 @@
                           twice.
                         </p>
                         <p>
-                          Let&#x27;s update our <code class="language-js >postsSlice</code> to use
+                          Let&#x27;s update our <code class="language-js" >postsSlice</code> to use
                           this pattern to track loading state for a &quot;fetch
                           posts&quot; request. We&#x27;ll switch our state from
                           being an array of posts by itself, to look like
-                          <code class="language-js >{posts, status, error}</code>. We&#x27;ll also
+                          <code class="language-js" >{posts, status, error}</code>. We&#x27;ll also
                           remove the old sample post entries from our initial
                           state. As part of this change, we also need to change
-                          any uses of <code class="language-js >state</code> as an array to be
-                          <code class="language-js >state.posts</code> instead, because the array is
+                          any uses of <code class="language-js" >state</code> as an array to be
+                          <code class="language-js" >state.posts</code> instead, because the array is
                           now one level deeper:
                         </p>
                         <div class="codeBlockContainer_K1bP">
@@ -5227,10 +5227,10 @@
                         <p>
                           Yes, this <em>does</em> mean that we now have a nested
                           object path that looks like
-                          <code class="language-js >state.posts.posts</code>, which is somewhat
+                          <code class="language-js" >state.posts.posts</code>, which is somewhat
                           repetitive and silly :) We <em>could</em> change the
-                          nested array name to be <code class="language-js >items</code> or
-                          <code class="language-js >data</code> or something if we wanted to avoid
+                          nested array name to be <code class="language-js" >items</code> or
+                          <code class="language-js" >data</code> or something if we wanted to avoid
                           that, but we&#x27;ll leave it as-is for now.
                         </p>
                         <h3>
@@ -5240,7 +5240,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="fetching-data-with-createasyncthunk"
                           ></a
-                          >Fetching Data with <code class="language-js >createAsyncThunk</code
+                          >Fetching Data with <code class="language-js" >createAsyncThunk</code
                           ><a
                             class="hash-link"
                             href="#fetching-data-with-createasyncthunk"
@@ -5249,16 +5249,16 @@
                           >
                         </h3>
                         <p>
-                          Redux Toolkit&#x27;s <code class="language-js >createAsyncThunk</code> API
+                          Redux Toolkit&#x27;s <code class="language-js" >createAsyncThunk</code> API
                           generates thunks that automatically dispatch those
                           &quot;start/success/failure&quot; actions for you.
                         </p>
                         <p>
                           Let&#x27;s start by adding a thunk that will make an
                           AJAX call to retrieve a list of posts. We&#x27;ll
-                          import the <code class="language-js >client</code> utility from the
-                          <code class="language-js >src/api</code> folder, and use that to make a
-                          request to <code class="language-js >&#x27;/fakeApi/posts&#x27;</code>.
+                          import the <code class="language-js" >client</code> utility from the
+                          <code class="language-js" >src/api</code> folder, and use that to make a
+                          request to <code class="language-js" >&#x27;/fakeApi/posts&#x27;</code>.
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -5622,7 +5622,7 @@
                           </div>
                         </div>
                         <p>
-                          <code class="language-js >createAsyncThunk</code> accepts two arguments:
+                          <code class="language-js" >createAsyncThunk</code> accepts two arguments:
                         </p>
                         <ul>
                           <li>
@@ -5631,38 +5631,38 @@
                           </li>
                           <li>
                             A &quot;payload creator&quot; callback function that
-                            should return a <code class="language-js >Promise</code> containing some
-                            data, or a rejected <code class="language-js >Promise</code> with an
+                            should return a <code class="language-js" >Promise</code> containing some
+                            data, or a rejected <code class="language-js" >Promise</code> with an
                             error
                           </li>
                         </ul>
                         <p>
                           The payload creator will usually make an AJAX call of
                           some kind, and can either return the
-                          <code class="language-js >Promise</code> from the AJAX call directly, or
+                          <code class="language-js" >Promise</code> from the AJAX call directly, or
                           extract some data from the API response and return
                           that. We typically write this using the JS
-                          <code class="language-js >async/await</code> syntax, which lets us write
-                          functions that use <code class="language-js >Promise</code>s while using
-                          standard <code class="language-js >try/catch</code> logic instead of
-                          <code class="language-js >somePromise.then()</code> chains.
+                          <code class="language-js" >async/await</code> syntax, which lets us write
+                          functions that use <code class="language-js" >Promise</code>s while using
+                          standard <code class="language-js" >try/catch</code> logic instead of
+                          <code class="language-js" >somePromise.then()</code> chains.
                         </p>
                         <p>
                           In this case, we pass in
-                          <code class="language-js >&#x27;posts/fetchPosts&#x27;</code> as the
+                          <code class="language-js" >&#x27;posts/fetchPosts&#x27;</code> as the
                           action type prefix. Our payload creation callback
                           waits for the API call to return a response. The
-                          response object looks like <code class="language-js >{posts: []}</code>,
+                          response object looks like <code class="language-js" >{posts: []}</code>,
                           and we want our dispatched Redux action to have a
                           payload that is <em>just</em> the array of posts. So,
-                          we extract <code class="language-js >response.posts</code>, and return
+                          we extract <code class="language-js" >response.posts</code>, and return
                           that from the callback.
                         </p>
                         <p>
-                          If we try calling <code class="language-js >dispatch(fetchPosts())</code>,
-                          the <code class="language-js >fetchPosts</code> thunk will first dispatch
+                          If we try calling <code class="language-js" >dispatch(fetchPosts())</code>,
+                          the <code class="language-js" >fetchPosts</code> thunk will first dispatch
                           an action type of
-                          <code class="language-js >&#x27;posts/fetchPosts/pending&#x27;</code>:
+                          <code class="language-js" >&#x27;posts/fetchPosts/pending&#x27;</code>:
                         </p>
                         <p>
                           <img
@@ -5673,16 +5673,16 @@
                         <p>
                           We can listen for this action in our reducer and mark
                           the request status as
-                          <code class="language-js >&#x27;loading&#x27;</code>.
+                          <code class="language-js" >&#x27;loading&#x27;</code>.
                         </p>
                         <p>
-                          Once the <code class="language-js >Promise</code> resolves, the
-                          <code class="language-js >fetchPosts</code> thunk takes the
-                          <code class="language-js >response.posts</code> array we returned from the
+                          Once the <code class="language-js" >Promise</code> resolves, the
+                          <code class="language-js" >fetchPosts</code> thunk takes the
+                          <code class="language-js" >response.posts</code> array we returned from the
                           callback, and dispatches a
-                          <code class="language-js >&#x27;posts/fetchPosts/fulfilled&#x27;</code>
+                          <code class="language-js" >&#x27;posts/fetchPosts/fulfilled&#x27;</code>
                           action containing the posts array as
-                          <code class="language-js >action.payload</code>:
+                          <code class="language-js" >action.payload</code>:
                         </p>
                         <p>
                           <img
@@ -5706,17 +5706,17 @@
                         </h4>
                         <p>
                           So, let&#x27;s update our
-                          <code class="language-js >&lt;PostsList&gt;</code> component to actually
+                          <code class="language-js" >&lt;PostsList&gt;</code> component to actually
                           fetch this data automatically for us.
                         </p>
                         <p>
-                          We&#x27;ll import the <code class="language-js >fetchPosts</code> thunk
+                          We&#x27;ll import the <code class="language-js" >fetchPosts</code> thunk
                           into the component. Like all of our other action
                           creators, we have to dispatch it, so we&#x27;ll also
-                          need to add the <code class="language-js >useDispatch</code> hook. Since
+                          need to add the <code class="language-js" >useDispatch</code> hook. Since
                           we want to fetch this data when
-                          <code class="language-js >&lt;PostsList&gt;</code> mounts, we need to
-                          import the React <code class="language-js >useEffect</code> hook:
+                          <code class="language-js" >&lt;PostsList&gt;</code> mounts, we need to
+                          import the React <code class="language-js" >useEffect</code> hook:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -6259,14 +6259,14 @@
                         <p>
                           It&#x27;s important that we only try to fetch the list
                           of posts once. If we do it every time the
-                          <code class="language-js >&lt;PostsList&gt;</code> component renders, or
+                          <code class="language-js" >&lt;PostsList&gt;</code> component renders, or
                           is re-created because we&#x27;ve switched between
                           views, we might end up fetching the posts several
-                          times. We can use the <code class="language-js >posts.status</code> enum
+                          times. We can use the <code class="language-js" >posts.status</code> enum
                           to help decide if we need to actually start fetching,
                           by selecting that into the component and only starting
                           the fetch if the status is
-                          <code class="language-js >&#x27;idle&#x27;</code>.
+                          <code class="language-js" >&#x27;idle&#x27;</code>.
                         </p>
                         <h3>
                           <a
@@ -6285,13 +6285,13 @@
                         <p>
                           Next up, we need to handle both these actions in our
                           reducers. This requires a bit deeper look at the
-                          <code class="language-js >createSlice</code> API we&#x27;ve been using.
+                          <code class="language-js" >createSlice</code> API we&#x27;ve been using.
                         </p>
                         <p>
                           We&#x27;ve already seen that
-                          <code class="language-js >createSlice</code> will generate an action
+                          <code class="language-js" >createSlice</code> will generate an action
                           creator for every reducer function we define in the
-                          <code class="language-js >reducers</code> field, and that the generated
+                          <code class="language-js" >reducers</code> field, and that the generated
                           action types include the name of the slice, like:
                         </p>
                         <div class="codeBlockContainer_K1bP">
@@ -6497,8 +6497,8 @@
                           However, there are times when a slice reducer needs to
                           respond to <em>other</em> actions that weren&#x27;t
                           defined as part of this slice&#x27;s
-                          <code class="language-js >reducers</code> field. We can do that using the
-                          slice <code class="language-js >extraReducers</code> field instead.
+                          <code class="language-js" >reducers</code> field. We can do that using the
+                          slice <code class="language-js" >extraReducers</code> field instead.
                         </p>
                         <details class="detailed-explanation">
                           <summary>
@@ -6508,9 +6508,9 @@
                             </h4>
                           </summary>
                           <p>
-                            The keys in the <code class="language-js >extraReducers</code> object
+                            The keys in the <code class="language-js" >extraReducers</code> object
                             should be Redux action type strings, like
-                            <code class="language-js >&#x27;counter/increment&#x27;</code>. We
+                            <code class="language-js" >&#x27;counter/increment&#x27;</code>. We
                             <em>could</em> write those by hand ourselves,
                             although we&#x27;d have to quote the keys if they
                             contain any characters like &#x27;/&#x27;:
@@ -6756,7 +6756,7 @@
                           <p>
                             However, action creators generated by Redux Toolkit
                             automatically return their action type string if you
-                            call <code class="language-js >actionCreator.toString()</code>. This
+                            call <code class="language-js" >actionCreator.toString()</code>. This
                             means we can pass them as ES6 object literal
                             computed properties, and the action types will
                             become the keys of the object:
@@ -6940,7 +6940,7 @@
                             </div>
                           </div>
                           <p>
-                            This works for the <code class="language-js >extraReducers</code> field:
+                            This works for the <code class="language-js" >extraReducers</code> field:
                           </p>
                           <div class="codeBlockContainer_K1bP">
                             <div class="codeBlockContent_hGly js">
@@ -7233,11 +7233,11 @@
                           <p>
                             We can also add extra reducers by using the
                             &quot;builder callback&quot; syntax for
-                            <code class="language-js >extraReducers</code>. If we pass a function
-                            for <code class="language-js >extraReducers</code> instead of an object,
-                            we can use the <code class="language-js >builder</code> parameter to add
+                            <code class="language-js" >extraReducers</code>. If we pass a function
+                            for <code class="language-js" >extraReducers</code> instead of an object,
+                            we can use the <code class="language-js" >builder</code> parameter to add
                             individual cases. The
-                            <code class="language-js >builder.addCase()</code> function takes either
+                            <code class="language-js" >builder.addCase()</code> function takes either
                             a plain string action type to listen for, or a Redux
                             Toolkit action creator:
                           </p>
@@ -7609,16 +7609,16 @@
                           </div>
                           <p>
                             If you&#x27;re using TypeScript, you should use the
-                            builder callback form of <code class="language-js >extraReducers</code>.
+                            builder callback form of <code class="language-js" >extraReducers</code>.
                           </p>
                         </details>
                         <p>
                           In this case, we need to listen for the
                           &quot;pending&quot; and &quot;fulfilled&quot; action
-                          types dispatched by our <code class="language-js >fetchPosts</code> thunk.
+                          types dispatched by our <code class="language-js" >fetchPosts</code> thunk.
                           Those action creators are attached to our actual
-                          <code class="language-js >fetchPost</code> function, and we can pass those
-                          to <code class="language-js >extraReducers</code> to listen for those
+                          <code class="language-js" >fetchPost</code> function, and we can pass those
+                          to <code class="language-js" >extraReducers</code> to listen for those
                           actions:
                         </p>
                         <div class="codeBlockContainer_K1bP">
@@ -8312,24 +8312,24 @@
                         <p>
                           We&#x27;ll handle all three action types that could be
                           dispatched by the thunk, based on the
-                          <code class="language-js >Promise</code> we returned:
+                          <code class="language-js" >Promise</code> we returned:
                         </p>
                         <ul>
                           <li>
                             When the request starts, we&#x27;ll set the
-                            <code class="language-js >status</code> enum to
-                            <code class="language-js >&#x27;loading&#x27;</code>
+                            <code class="language-js" >status</code> enum to
+                            <code class="language-js" >&#x27;loading&#x27;</code>
                           </li>
                           <li>
                             If the request succeeds, we mark the
-                            <code class="language-js >status</code> as
-                            <code class="language-js >&#x27;succeeded&#x27;</code>, and add the
-                            fetched posts to <code class="language-js >state.posts</code>
+                            <code class="language-js" >status</code> as
+                            <code class="language-js" >&#x27;succeeded&#x27;</code>, and add the
+                            fetched posts to <code class="language-js" >state.posts</code>
                           </li>
                           <li>
                             If the request fails, we&#x27;ll mark the
-                            <code class="language-js >status</code> as
-                            <code class="language-js >&#x27;failed&#x27;</code>, and save any error
+                            <code class="language-js" >status</code> as
+                            <code class="language-js" >&#x27;failed&#x27;</code>, and save any error
                             message into the state so we can display it
                           </li>
                         </ul>
@@ -8348,7 +8348,7 @@
                           >
                         </h3>
                         <p>
-                          Our <code class="language-js >&lt;PostsList&gt;</code> component is
+                          Our <code class="language-js" >&lt;PostsList&gt;</code> component is
                           already checking for any updates to the posts that are
                           stored in Redux, and rerendering itself any time that
                           list changes. So, if we refresh the page, we should
@@ -8364,9 +8364,9 @@
                           knows we&#x27;re waiting for data.
                         </p>
                         <p>
-                          We can update our <code class="language-js >&lt;PostsList&gt;</code> to
+                          We can update our <code class="language-js" >&lt;PostsList&gt;</code> to
                           show a different bit of UI based on the
-                          <code class="language-js >state.posts.status</code> enum: a spinner if
+                          <code class="language-js" >state.posts.status</code> enum: a spinner if
                           we&#x27;re loading, an error message if it failed, or
                           the actual posts list if we have the data. The result
                           might look like this:
@@ -9428,7 +9428,7 @@
                           immediately, so we can barely see the loading spinner
                           right now. If you want to force the fake API call to
                           take longer, you can open up
-                          <code class="language-js >api/server.js</code>, and uncomment this line:
+                          <code class="language-js" >api/server.js</code>, and uncomment this line:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -9515,8 +9515,8 @@
                         <p>
                           Like last time, we&#x27;ll create another async thunk
                           to get the users from the API and return them, then
-                          handle the <code class="language-js >fulfilled</code> action in the
-                          <code class="language-js >extraReducers</code> slice field. We&#x27;ll
+                          handle the <code class="language-js" >fulfilled</code> action in the
+                          <code class="language-js" >extraReducers</code> slice field. We&#x27;ll
                           skip worrying about loading state for now:
                         </p>
                         <div class="codeBlockContainer_K1bP">
@@ -10063,9 +10063,9 @@
                         <p>
                           We only need to fetch the list of users once, and we
                           want to do it right when the application starts. We
-                          can do that in our <code class="language-js >index.js</code> file, and
-                          directly dispatch the <code class="language-js >fetchUsers</code> thunk
-                          because we have the <code class="language-js >store</code> right there:
+                          can do that in our <code class="language-js" >index.js</code> file, and
+                          directly dispatch the <code class="language-js" >fetchUsers</code> thunk
+                          because we have the <code class="language-js" >store</code> right there:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -10420,7 +10420,7 @@
                           Now, each of the posts should be showing a username
                           again, and we should also have that same list of users
                           shown in the &quot;Author&quot; dropdown in our
-                          <code class="language-js >&lt;AddPostForm&gt;</code>.
+                          <code class="language-js" >&lt;AddPostForm&gt;</code>.
                         </p>
                         <h2>
                           <a
@@ -10438,7 +10438,7 @@
                         </h2>
                         <p>
                           We have one more step for this section. When we add a
-                          new post from the <code class="language-js >&lt;AddPostForm&gt;</code>,
+                          new post from the <code class="language-js" >&lt;AddPostForm&gt;</code>,
                           that post is only getting added to the Redux store
                           inside our app. We need to actually make an API call
                           that will create the new post entry in our fake API
@@ -10463,28 +10463,28 @@
                           >
                         </h3>
                         <p>
-                          We can use <code class="language-js >createAsyncThunk</code> to help with
+                          We can use <code class="language-js" >createAsyncThunk</code> to help with
                           sending data, not just fetching it. We&#x27;ll create
                           a thunk that accepts the values from our
-                          <code class="language-js >&lt;AddPostForm&gt;</code> as an argument, and
+                          <code class="language-js" >&lt;AddPostForm&gt;</code> as an argument, and
                           makes an HTTP POST call to the fake API to save the
                           data.
                         </p>
                         <p>
                           In the process, we&#x27;re going to change how we work
                           with the new post object in our reducers. Currently,
-                          our <code class="language-js >postsSlice</code> is creating a new post
-                          object in the <code class="language-js >prepare</code> callback for
-                          <code class="language-js >postAdded</code>, and generating a new unique ID
+                          our <code class="language-js" >postsSlice</code> is creating a new post
+                          object in the <code class="language-js" >prepare</code> callback for
+                          <code class="language-js" >postAdded</code>, and generating a new unique ID
                           for that post. In most apps that save data to a
                           server, the server will take care of generating unique
                           IDs and filling out any extra fields, and will usually
                           return the completed data in its response. So, we can
                           send a request body like
-                          <code class="language-js >{ title, content, user: userId }</code> to the
+                          <code class="language-js" >{ title, content, user: userId }</code> to the
                           server, and then take the complete post object it
                           sends back and add it to our
-                          <code class="language-js >postsSlice</code> state.
+                          <code class="language-js" >postsSlice</code> state.
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -11114,17 +11114,17 @@
                         </h3>
                         <p>
                           Finally, we&#x27;ll update
-                          <code class="language-js >&lt;AddPostForm&gt;</code> to dispatch the
-                          <code class="language-js >addNewPost</code> thunk instead of the old
-                          <code class="language-js >postAdded</code> action. Since this is another
+                          <code class="language-js" >&lt;AddPostForm&gt;</code> to dispatch the
+                          <code class="language-js" >addNewPost</code> thunk instead of the old
+                          <code class="language-js" >postAdded</code> action. Since this is another
                           API call to the server, it will take some time and
                           <em>could</em> fail. The
-                          <code class="language-js >addNewPost()</code> thunk will automatically
+                          <code class="language-js" >addNewPost()</code> thunk will automatically
                           dispatch its
-                          <code class="language-js >pending/fulfilled/rejected</code> actions to the
+                          <code class="language-js" >pending/fulfilled/rejected</code> actions to the
                           Redux store, which we&#x27;re already handling. We
                           <em>could</em> track the request status in
-                          <code class="language-js >postsSlice</code> using a second loading enum if
+                          <code class="language-js" >postsSlice</code> using a second loading enum if
                           we wanted to, but for this example let&#x27;s keep the
                           loading state tracking limited to the component.
                         </p>
@@ -12198,40 +12198,40 @@
                         </div>
                         <p>
                           We can add a loading status enum field as a React
-                          <code class="language-js >useState</code> hook, similar to how we&#x27;re
-                          tracking loading state in <code class="language-js >postsSlice</code> for
+                          <code class="language-js" >useState</code> hook, similar to how we&#x27;re
+                          tracking loading state in <code class="language-js" >postsSlice</code> for
                           fetching posts. In this case, we just want to know if
                           the request is in progress or not.
                         </p>
                         <p>
-                          When we call <code class="language-js >dispatch(addNewPost())</code>, the
-                          async thunk returns a <code class="language-js >Promise</code> from
-                          <code class="language-js >dispatch</code>. We can <code class="language-js >await</code> that
+                          When we call <code class="language-js" >dispatch(addNewPost())</code>, the
+                          async thunk returns a <code class="language-js" >Promise</code> from
+                          <code class="language-js" >dispatch</code>. We can <code class="language-js" >await</code> that
                           promise here to know when the thunk has finished its
                           request. But, we don&#x27;t yet know if that request
                           succeeded or failed.
                         </p>
                         <p>
-                          <code class="language-js >createAsyncThunk</code> handles any errors
+                          <code class="language-js" >createAsyncThunk</code> handles any errors
                           internally, so that we don&#x27;t see any messages
                           about &quot;rejected Promises&quot; in our logs. It
                           then returns the final action it dispatched: either
-                          the <code class="language-js >fulfilled</code> action if it succeeded, or
-                          the <code class="language-js >rejected</code> action if it failed. Redux
+                          the <code class="language-js" >fulfilled</code> action if it succeeded, or
+                          the <code class="language-js" >rejected</code> action if it failed. Redux
                           Toolkit has a utility function called
-                          <code class="language-js >unwrapResult</code> that will return either the
-                          actual <code class="language-js >action.payload</code> value from a
-                          <code class="language-js >fulfilled</code> action, or throw an error if
-                          it&#x27;s the <code class="language-js >rejected</code> action. This lets
+                          <code class="language-js" >unwrapResult</code> that will return either the
+                          actual <code class="language-js" >action.payload</code> value from a
+                          <code class="language-js" >fulfilled</code> action, or throw an error if
+                          it&#x27;s the <code class="language-js" >rejected</code> action. This lets
                           us handle success and failure in the component using
-                          normal <code class="language-js >try/catch</code> logic. So, we&#x27;ll
+                          normal <code class="language-js" >try/catch</code> logic. So, we&#x27;ll
                           clear out the input fields to reset the form if the
                           post was successfully created, and log the error to
                           the console if it failed.
                         </p>
                         <p>
                           If you want to see what happens when the
-                          <code class="language-js >addNewPost</code> API call fails, try creating a
+                          <code class="language-js" >addNewPost</code> API call fails, try creating a
                           new post where the &quot;Content&quot; field only has
                           the word &quot;error&quot; (without quotes). The
                           server will see that and send back a failed response,
@@ -12302,7 +12302,7 @@
                                 <ul>
                                   <li>
                                     Selectors are functions that get the Redux
-                                    <code class="language-js >state</code> as an argument, and
+                                    <code class="language-js" >state</code> as an argument, and
                                     return some data
                                   </li>
                                 </ul>
@@ -12316,13 +12316,13 @@
                                 <ul>
                                   <li>
                                     The standard async middleware is called
-                                    <code class="language-js >redux-thunk</code>, which is included
+                                    <code class="language-js" >redux-thunk</code>, which is included
                                     in Redux Toolkit
                                   </li>
                                   <li>
                                     Thunk functions receive
-                                    <code class="language-js >dispatch</code> and
-                                    <code class="language-js >getState</code> as arguments, and can
+                                    <code class="language-js" >dispatch</code> and
+                                    <code class="language-js" >getState</code> as arguments, and can
                                     use those as part of async logic
                                   </li>
                                 </ul>
@@ -12355,35 +12355,35 @@
                               <li>
                                 <strong
                                   >Redux Toolkit has a
-                                  <code class="language-js >createAsyncThunk</code> API that
+                                  <code class="language-js" >createAsyncThunk</code> API that
                                   dispatches these actions for you</strong
                                 >
                                 <ul>
                                   <li>
-                                    <code class="language-js >createAsyncThunk</code> accepts a
+                                    <code class="language-js" >createAsyncThunk</code> accepts a
                                     &quot;payload creator&quot; callback that
-                                    should return a <code class="language-js >Promise</code>, and
+                                    should return a <code class="language-js" >Promise</code>, and
                                     generates
-                                    <code class="language-js >pending/fulfilled/rejected</code>
+                                    <code class="language-js" >pending/fulfilled/rejected</code>
                                     action types automatically
                                   </li>
                                   <li>
                                     Generated action creators like
-                                    <code class="language-js >fetchPosts</code> dispatch those
+                                    <code class="language-js" >fetchPosts</code> dispatch those
                                     actions based on the
-                                    <code class="language-js >Promise</code> you return
+                                    <code class="language-js" >Promise</code> you return
                                   </li>
                                   <li>
                                     You can listen for these action types in
-                                    <code class="language-js >createSlice</code> using the
-                                    <code class="language-js >extraReducers</code> field, and update
+                                    <code class="language-js" >createSlice</code> using the
+                                    <code class="language-js" >extraReducers</code> field, and update
                                     the state in reducers based on those
                                     actions.
                                   </li>
                                   <li>
                                     Action creators can be used to automatically
                                     fill in the keys of the
-                                    <code class="language-js >extraReducers</code> object so the
+                                    <code class="language-js" >extraReducers</code> object so the
                                     slice knows what actions to listen for.
                                   </li>
                                 </ul>
@@ -12525,7 +12525,7 @@
                               href="#fetching-data-with-createasyncthunk"
                               class="table-of-contents__link"
                               >Fetching Data with
-                              <code class="language-js >createAsyncThunk</code></a
+                              <code class="language-js" >createAsyncThunk</code></a
                             >
                           </li>
                           <li>

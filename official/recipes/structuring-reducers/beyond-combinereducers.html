@@ -102,10 +102,17 @@
       as="script"
     />
     <link rel="preload" href="../../assets/js/main.8520a084.js" as="script" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css"
+    />
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
-    </head>
+    <script
+      async
+      defer
+      src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"
+    ></script>
+  </head>
   <body>
     <script>
       !(function () {
@@ -1060,7 +1067,8 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="beyond-combinereducers"
                           ></a
-                          >Beyond <code class="language-js >combineReducers</code
+                          >Beyond
+                          <code class="language-js">combineReducers</code
                           ><a
                             class="hash-link"
                             href="#beyond-combinereducers"
@@ -1069,29 +1077,31 @@
                           >
                         </h1>
                         <p>
-                          The <code class="language-js >combineReducers</code> utility included with
-                          Redux is very useful, but is deliberately limited to
-                          handle a single common use case: updating a state tree
-                          that is a plain Javascript object, by delegating the
-                          work of updating each slice of state to a specific
-                          slice reducer. It does <em>not</em> handle other use
-                          cases, such as a state tree made up of Immutable.js
-                          Maps, trying to pass other portions of the state tree
-                          as an additional argument to a slice reducer, or
-                          performing &quot;ordering&quot; of slice reducer
-                          calls. It also does not care how a given slice reducer
-                          does its work.
+                          The
+                          <code class="language-js">combineReducers</code>
+                          utility included with Redux is very useful, but is
+                          deliberately limited to handle a single common use
+                          case: updating a state tree that is a plain Javascript
+                          object, by delegating the work of updating each slice
+                          of state to a specific slice reducer. It does
+                          <em>not</em> handle other use cases, such as a state
+                          tree made up of Immutable.js Maps, trying to pass
+                          other portions of the state tree as an additional
+                          argument to a slice reducer, or performing
+                          &quot;ordering&quot; of slice reducer calls. It also
+                          does not care how a given slice reducer does its work.
                         </p>
                         <p>
                           The common question, then, is &quot;How can I use
-                          <code class="language-js >combineReducers</code> to handle these other use
-                          cases?&quot;. The answer to that is simply: &quot;you
-                          don&#x27;t - you probably need to use something
-                          else&quot;.
+                          <code class="language-js">combineReducers</code> to
+                          handle these other use cases?&quot;. The answer to
+                          that is simply: &quot;you don&#x27;t - you probably
+                          need to use something else&quot;.
                           <strong
                             >Once you go past the core use case for
-                            <code class="language-js >combineReducers</code>, it&#x27;s time to use
-                            more &quot;custom&quot; reducer logic</strong
+                            <code class="language-js">combineReducers</code>,
+                            it&#x27;s time to use more &quot;custom&quot;
+                            reducer logic</strong
                           >, whether it be specific logic for a one-off use
                           case, or a reusable function that could be widely
                           shared. Here&#x27;s some suggestions for dealing with
@@ -1113,15 +1123,19 @@
                           >
                         </h2>
                         <p>
-                          Similarly, if <code class="language-js >sliceReducerA</code> happens to
-                          need some data from <code class="language-js >sliceReducerB</code>&#x27;s
+                          Similarly, if
+                          <code class="language-js">sliceReducerA</code> happens
+                          to need some data from
+                          <code class="language-js">sliceReducerB</code>&#x27;s
                           slice of state in order to handle a particular action,
-                          or <code class="language-js >sliceReducerB</code> happens to need the
-                          entire state as an argument,
-                          <code class="language-js >combineReducers</code> does not handle that
-                          itself. This could be resolved by writing a custom
-                          function that knows to pass the needed data as an
-                          additional argument in those specific cases, such as:
+                          or
+                          <code class="language-js">sliceReducerB</code> happens
+                          to need the entire state as an argument,
+                          <code class="language-js">combineReducers</code> does
+                          not handle that itself. This could be resolved by
+                          writing a custom function that knows to pass the
+                          needed data as an additional argument in those
+                          specific cases, such as:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -1881,17 +1895,17 @@
                           Because the data from B&#x27;s slice is already in the
                           action, the parent reducer doesn&#x27;t have to do
                           anything special to make that data available to
-                          <code class="language-js >sliceReducerA</code>.
+                          <code class="language-js">sliceReducerA</code>.
                         </p>
                         <p>
                           A third approach would be to use the reducer generated
-                          by <code class="language-js >combineReducers</code> to handle the
-                          &quot;simple&quot; cases where each slice reducer can
-                          update itself independently, but also use another
-                          reducer to handle the &quot;special&quot; cases where
-                          data needs to be shared across slices. Then, a
-                          wrapping function could call both of those reducers in
-                          turn to generate the final result:
+                          by <code class="language-js">combineReducers</code> to
+                          handle the &quot;simple&quot; cases where each slice
+                          reducer can update itself independently, but also use
+                          another reducer to handle the &quot;special&quot;
+                          cases where data needs to be shared across slices.
+                          Then, a wrapping function could call both of those
+                          reducers in turn to generate the final result:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -2356,9 +2370,10 @@
                             >reduce-reducers</a
                           >
                           that can make that process easier. It simply takes
-                          multiple reducers and runs <code class="language-js >reduce()</code> on
-                          them, passing the intermediate state values to the
-                          next reducer in line:
+                          multiple reducers and runs
+                          <code class="language-js">reduce()</code> on them,
+                          passing the intermediate state values to the next
+                          reducer in line:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -2432,7 +2447,8 @@
                           </div>
                         </div>
                         <p>
-                          Note that if you use <code class="language-js >reduceReducers</code>, you
+                          Note that if you use
+                          <code class="language-js">reduceReducers</code>, you
                           should make sure that the first reducer in the list is
                           able to define the initial state, since the later
                           reducers will generally assume that the entire state
@@ -2455,14 +2471,14 @@
                         <p>
                           Again, it&#x27;s important to understand that Redux
                           reducers are <em>just</em> functions. While
-                          <code class="language-js >combineReducers</code> is useful, it&#x27;s just
-                          one tool in the toolbox. Functions can contain
-                          conditional logic other than switch statements,
-                          functions can be composed to wrap each other, and
-                          functions can call other functions. Maybe you need one
-                          of your slice reducers to be able to reset its state,
-                          and to only respond to specific actions overall. You
-                          could do:
+                          <code class="language-js">combineReducers</code> is
+                          useful, it&#x27;s just one tool in the toolbox.
+                          Functions can contain conditional logic other than
+                          switch statements, functions can be composed to wrap
+                          each other, and functions can call other functions.
+                          Maybe you need one of your slice reducers to be able
+                          to reset its state, and to only respond to specific
+                          actions overall. You could do:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -2632,19 +2648,23 @@
                           </div>
                         </div>
                         <p>
-                          Note that <code class="language-js >combineReducers</code> doesn&#x27;t
-                          know or care that there&#x27;s anything special about
-                          the reducer function that&#x27;s responsible for
-                          managing <code class="language-js >a</code>. We didn&#x27;t need to modify
-                          <code class="language-js >combineReducers</code> to specifically know how
-                          to undo things - we just built up the pieces we needed
-                          into a new composed function.
+                          Note that
+                          <code class="language-js">combineReducers</code>
+                          doesn&#x27;t know or care that there&#x27;s anything
+                          special about the reducer function that&#x27;s
+                          responsible for managing
+                          <code class="language-js">a</code>. We didn&#x27;t
+                          need to modify
+                          <code class="language-js">combineReducers</code> to
+                          specifically know how to undo things - we just built
+                          up the pieces we needed into a new composed function.
                         </p>
                         <p>
-                          Also, while <code class="language-js >combineReducers</code> is the one
-                          reducer utility function that&#x27;s built into Redux,
-                          there&#x27;s a wide variety of third-party reducer
-                          utilities that have published for reuse. The
+                          Also, while
+                          <code class="language-js">combineReducers</code> is
+                          the one reducer utility function that&#x27;s built
+                          into Redux, there&#x27;s a wide variety of third-party
+                          reducer utilities that have published for reuse. The
                           <a
                             href="../../../github.com/markerikson/redux-ecosystem-links.html"
                             target="_blank"

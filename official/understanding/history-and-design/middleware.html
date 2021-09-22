@@ -1187,7 +1187,7 @@
                           The most naïve solution is just to log the action and
                           the next state yourself every time you call
                           <a href="../../api/store.html#dispatchaction"
-                            ><code class="language-js >store.dispatch(action)</code></a
+                            ><code class="language-js" >store.dispatch(action)</code></a
                           >. It&#x27;s not really a solution, but just a first
                           step towards understanding the problem.
                         </p>
@@ -1687,7 +1687,7 @@
                         </div>
                         <p>
                           You can then use it everywhere instead of
-                          <code class="language-js >store.dispatch()</code>:
+                          <code class="language-js" >store.dispatch()</code>:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -1775,11 +1775,11 @@
                         </h3>
                         <p>
                           What if we just replace the
-                          <code class="language-js >dispatch</code> function on the store instance?
+                          <code class="language-js" >dispatch</code> function on the store instance?
                           The Redux store is a plain object with
                           <a href="../../api/store.html">a few methods</a>, and
                           we&#x27;re writing JavaScript, so we can just
-                          monkeypatch the <code class="language-js >dispatch</code> implementation:
+                          monkeypatch the <code class="language-js" >dispatch</code> implementation:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -2036,12 +2036,12 @@
                         <p>
                           What if we want to apply
                           <strong>more than one</strong> such transformation to
-                          <code class="language-js >dispatch</code>?
+                          <code class="language-js" >dispatch</code>?
                         </p>
                         <p>
                           A different useful transformation that comes to my
                           mind is reporting JavaScript errors in production. The
-                          global <code class="language-js >window.onerror</code> event is not
+                          global <code class="language-js" >window.onerror</code> event is not
                           reliable because it doesn&#x27;t provide stack
                           information in some older browsers, which is crucial
                           to understand why an error is happening.
@@ -2761,9 +2761,9 @@
                           Monkeypatching is a hack. “Replace any method you
                           like”, what kind of API is that? Let&#x27;s figure out
                           the essence of it instead. Previously, our functions
-                          replaced <code class="language-js >store.dispatch</code>. What if they
+                          replaced <code class="language-js" >store.dispatch</code>. What if they
                           <em>returned</em> the new
-                          <code class="language-js >dispatch</code> function instead?
+                          <code class="language-js" >dispatch</code> function instead?
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -3348,11 +3348,11 @@
                           >
                         </h3>
                         <p>
-                          Why do we even overwrite <code class="language-js >dispatch</code>? Of
+                          Why do we even overwrite <code class="language-js" >dispatch</code>? Of
                           course, to be able to call it later, but there&#x27;s
                           also another reason: so that every middleware can
                           access (and call) the previously wrapped
-                          <code class="language-js >store.dispatch</code>:
+                          <code class="language-js" >store.dispatch</code>:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -3624,21 +3624,21 @@
                         <p>It is essential to chaining middleware!</p>
                         <p>
                           If
-                          <code class="language-js >applyMiddlewareByMonkeypatching</code>
+                          <code class="language-js" >applyMiddlewareByMonkeypatching</code>
                           doesn&#x27;t assign
-                          <code class="language-js >store.dispatch</code> immediately after
+                          <code class="language-js" >store.dispatch</code> immediately after
                           processing the first middleware,
-                          <code class="language-js >store.dispatch</code> will keep pointing to the
-                          original <code class="language-js >dispatch</code> function. Then the
+                          <code class="language-js" >store.dispatch</code> will keep pointing to the
+                          original <code class="language-js" >dispatch</code> function. Then the
                           second middleware will also be bound to the original
-                          <code class="language-js >dispatch</code> function.
+                          <code class="language-js" >dispatch</code> function.
                         </p>
                         <p>
                           But there&#x27;s also a different way to enable
                           chaining. The middleware could accept the
-                          <code class="language-js >next()</code> dispatch function as a parameter
+                          <code class="language-js" >next()</code> dispatch function as a parameter
                           instead of reading it from the
-                          <code class="language-js >store</code> instance.
+                          <code class="language-js" >store</code> instance.
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -4423,12 +4423,12 @@
                           >
                         </p>
                         <p>
-                          Now middleware takes the <code class="language-js >next()</code> dispatch
+                          Now middleware takes the <code class="language-js" >next()</code> dispatch
                           function, and returns a dispatch function, which in
-                          turn serves as <code class="language-js >next()</code> to the middleware
+                          turn serves as <code class="language-js" >next()</code> to the middleware
                           to the left, and so on. It&#x27;s still useful to have
                           access to some store methods like
-                          <code class="language-js >getState()</code>, so <code class="language-js >store</code> stays
+                          <code class="language-js" >getState()</code>, so <code class="language-js" >store</code> stays
                           available as the top-level argument.
                         </p>
                         <h3>
@@ -4447,10 +4447,10 @@
                         </h3>
                         <p>
                           Instead of
-                          <code class="language-js >applyMiddlewareByMonkeypatching()</code>, we
-                          could write <code class="language-js >applyMiddleware()</code> that first
+                          <code class="language-js" >applyMiddlewareByMonkeypatching()</code>, we
+                          could write <code class="language-js" >applyMiddleware()</code> that first
                           obtains the final, fully wrapped
-                          <code class="language-js >dispatch()</code> function, and returns a copy
+                          <code class="language-js" >dispatch()</code> function, and returns a copy
                           of the store using it:
                         </p>
                         <div class="codeBlockContainer_K1bP">
@@ -4745,7 +4745,7 @@
                         <p>
                           The implementation of
                           <a href="../../api/applymiddleware.html"
-                            ><code class="language-js >applyMiddleware()</code></a
+                            ><code class="language-js" >applyMiddleware()</code></a
                           >
                           that ships with Redux is similar, but
                           <strong>different in three important aspects</strong>:
@@ -4757,19 +4757,19 @@
                               <a href="../../api/store.html">store API</a> to
                               the middleware:
                               <a href="../../api/store.html#dispatchaction"
-                                ><code class="language-js >dispatch(action)</code></a
+                                ><code class="language-js" >dispatch(action)</code></a
                               >
                               and
                               <a href="../../api/store.html#getState"
-                                ><code class="language-js >getState()</code></a
+                                ><code class="language-js" >getState()</code></a
                               >.
                             </p>
                           </li>
                           <li>
                             <p>
                               It does a bit of trickery to make sure that if you
-                              call <code class="language-js >store.dispatch(action)</code> from your
-                              middleware instead of <code class="language-js >next(action)</code>,
+                              call <code class="language-js" >store.dispatch(action)</code> from your
+                              middleware instead of <code class="language-js" >next(action)</code>,
                               the action will actually travel the whole
                               middleware chain again, including the current
                               middleware.
@@ -4777,16 +4777,16 @@
                                 href="../../tutorials/fundamentals/part-6-async-logic.html"
                                 >This is useful for asynchronous middleware</a
                               >. There is one caveat when calling
-                              <code class="language-js >dispatch</code> during setup, described
+                              <code class="language-js" >dispatch</code> during setup, described
                               below.
                             </p>
                           </li>
                           <li>
                             <p>
                               To ensure that you may only apply middleware once,
-                              it operates on <code class="language-js >createStore()</code> rather
-                              than on <code class="language-js >store</code> itself. Instead of
-                              <code class="language-js >(store, middlewares) =&gt; store</code>, its
+                              it operates on <code class="language-js" >createStore()</code> rather
+                              than on <code class="language-js" >store</code> itself. Instead of
+                              <code class="language-js" >(store, middlewares) =&gt; store</code>, its
                               signature is
                               <code class="language-js 
                                 >(...middlewares) =&gt; (createStore) =&gt;
@@ -4797,8 +4797,8 @@
                         </ul>
                         <p>
                           Because it is cumbersome to apply functions to
-                          <code class="language-js >createStore()</code> before using it,
-                          <code class="language-js >createStore()</code> accepts an optional last
+                          <code class="language-js" >createStore()</code> before using it,
+                          <code class="language-js" >createStore()</code> accepts an optional last
                           argument to specify such functions.
                         </p>
                         <h4>
@@ -4816,15 +4816,15 @@
                           >
                         </h4>
                         <p>
-                          While <code class="language-js >applyMiddleware</code> executes and sets
+                          While <code class="language-js" >applyMiddleware</code> executes and sets
                           up your middleware, the
-                          <code class="language-js >store.dispatch</code> function will point to the
-                          vanilla version provided by <code class="language-js >createStore</code>.
+                          <code class="language-js" >store.dispatch</code> function will point to the
+                          vanilla version provided by <code class="language-js" >createStore</code>.
                           Dispatching would result in no other middleware being
                           applied. If you are expecting an interaction with
                           another middleware during setup, you will probably be
                           disappointed. Because of this unexpected behavior,
-                          <code class="language-js >applyMiddleware</code> will throw an error if
+                          <code class="language-js" >applyMiddleware</code> will throw an error if
                           you try to dispatch an action before the set up
                           completes. Instead, you should either communicate
                           directly with that other middleware via a common
@@ -5510,7 +5510,7 @@
                         <p>
                           That&#x27;s it! Now any actions dispatched to the
                           store instance will flow through
-                          <code class="language-js >logger</code> and <code class="language-js >crashReporter</code>:
+                          <code class="language-js" >logger</code> and <code class="language-js" >crashReporter</code>:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">

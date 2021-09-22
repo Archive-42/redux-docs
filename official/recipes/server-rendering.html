@@ -1265,7 +1265,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="serverjs"
                           ></a
-                          ><code class="language-js >server.js</code
+                          ><code class="language-js" >server.js</code
                           ><a
                             class="hash-link"
                             href="#serverjs"
@@ -1801,8 +1801,8 @@
                         </p>
                         <p>
                           When rendering, we will wrap
-                          <code class="language-js >&lt;App /&gt;</code>, our root component, inside
-                          a <code class="language-js >&lt;Provider&gt;</code> to make the store
+                          <code class="language-js" >&lt;App /&gt;</code>, our root component, inside
+                          a <code class="language-js" >&lt;Provider&gt;</code> to make the store
                           available to all components in the component tree, as
                           we saw in
                           <a
@@ -1827,9 +1827,9 @@
                           We then get the initial state from our Redux store
                           using
                           <a href="../api/store.html#getState"
-                            ><code class="language-js >store.getState()</code></a
+                            ><code class="language-js" >store.getState()</code></a
                           >. We will see how this is passed along in our
-                          <code class="language-js >renderFullPage</code> function.
+                          <code class="language-js" >renderFullPage</code> function.
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -2211,14 +2211,14 @@
                           initial component HTML and initial state into a
                           template to be rendered on the client side. To pass
                           along the state, we add a
-                          <code class="language-js >&lt;script&gt;</code> tag that will attach
-                          <code class="language-js >preloadedState</code> to
-                          <code class="language-js >window.__PRELOADED_STATE__</code>.
+                          <code class="language-js" >&lt;script&gt;</code> tag that will attach
+                          <code class="language-js" >preloadedState</code> to
+                          <code class="language-js" >window.__PRELOADED_STATE__</code>.
                         </p>
                         <p>
-                          The <code class="language-js >preloadedState</code> will then be available
+                          The <code class="language-js" >preloadedState</code> will then be available
                           on the client side by accessing
-                          <code class="language-js >window.__PRELOADED_STATE__</code>.
+                          <code class="language-js" >window.__PRELOADED_STATE__</code>.
                         </p>
                         <p>
                           We also include our bundle file for the client-side
@@ -2685,10 +2685,10 @@
                         <p>
                           The client side is very straightforward. All we need
                           to do is grab the initial state from
-                          <code class="language-js >window.__PRELOADED_STATE__</code>, and pass it
+                          <code class="language-js" >window.__PRELOADED_STATE__</code>, and pass it
                           to our
                           <a href="../api/createstore.html"
-                            ><code class="language-js >createStore()</code></a
+                            ><code class="language-js" >createStore()</code></a
                           >
                           function as the initial state.
                         </p>
@@ -2700,7 +2700,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="clientjs"
                           ></a
-                          ><code class="language-js >client.js</code
+                          ><code class="language-js" >client.js</code
                           ><a
                             class="hash-link"
                             href="#clientjs"
@@ -3144,7 +3144,7 @@
                         <p>
                           You can set up your build tool of choice (Webpack,
                           Browserify, etc.) to compile a bundle file into
-                          <code class="language-js >static/bundle.js</code>.
+                          <code class="language-js" >static/bundle.js</code>.
                         </p>
                         <p>
                           When the page loads, the bundle file will be started
@@ -3153,7 +3153,7 @@
                             href="../../reactjs.org/docs/react-dom.html#hydrate"
                             target="_blank"
                             rel="noopener noreferrer"
-                            ><code class="language-js >ReactDOM.hydrate()</code></a
+                            ><code class="language-js" >ReactDOM.hydrate()</code></a
                           >
                           will reuse the server-rendered HTML. This will connect
                           our newly-started React instance to the virtual DOM
@@ -3239,7 +3239,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="serverjs-1"
                           ></a
-                          ><code class="language-js >server.js</code
+                          ><code class="language-js" >server.js</code
                           ><a
                             class="hash-link"
                             href="#serverjs-1"
@@ -3788,7 +3788,7 @@
                         </div>
                         <p>
                           The code reads from the Express
-                          <code class="language-js >Request</code> object passed into our server
+                          <code class="language-js" >Request</code> object passed into our server
                           middleware. The parameter is parsed into a number and
                           then set in the initial state. If you visit
                           <a
@@ -3800,7 +3800,7 @@
                           in your browser, you&#x27;ll see the counter starts at
                           100. In the rendered HTML, you&#x27;ll see the counter
                           output as 100 and the
-                          <code class="language-js >__PRELOADED_STATE__</code> variable has the
+                          <code class="language-js" >__PRELOADED_STATE__</code> variable has the
                           counter set in it.
                         </p>
                         <h3>
@@ -3847,7 +3847,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="apicounterjs"
                           ></a
-                          ><code class="language-js >api/counter.js</code
+                          ><code class="language-js" >api/counter.js</code
                           ><a
                             class="hash-link"
                             href="#apicounterjs"
@@ -4146,17 +4146,17 @@
                         </div>
                         <p>
                           Again, this is just a mock API, so we use
-                          <code class="language-js >setTimeout</code> to simulate a network request
+                          <code class="language-js" >setTimeout</code> to simulate a network request
                           that takes 500 milliseconds to respond (this should be
                           much faster with a real world API). We pass in a
                           callback that returns a random number asynchronously.
                           If you&#x27;re using a Promise-based API client, then
                           you would issue this callback in your
-                          <code class="language-js >then</code> handler.
+                          <code class="language-js" >then</code> handler.
                         </p>
                         <p>
                           On the server side, we simply wrap our existing code
-                          in the <code class="language-js >fetchCounter</code> and receive the
+                          in the <code class="language-js" >fetchCounter</code> and receive the
                           result in the callback:
                         </p>
                         <h4>
@@ -4166,7 +4166,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="serverjs-2"
                           ></a
-                          ><code class="language-js >server.js</code
+                          ><code class="language-js" >server.js</code
                           ><a
                             class="hash-link"
                             href="#serverjs-2"
@@ -4774,7 +4774,7 @@
                           </div>
                         </div>
                         <p>
-                          Because we call <code class="language-js >res.send()</code> inside of the
+                          Because we call <code class="language-js" >res.send()</code> inside of the
                           callback, the server will hold open the connection and
                           won&#x27;t send any data until that callback executes.
                           You&#x27;ll notice a 500ms delay is now added to each
@@ -4808,8 +4808,8 @@
                         <p>
                           In our example, we take a rudimentary approach to
                           security. When we obtain the parameters from the
-                          request, we use <code class="language-js >parseInt</code> on the
-                          <code class="language-js >counter</code> parameter to ensure this value is
+                          request, we use <code class="language-js" >parseInt</code> on the
+                          <code class="language-js" >counter</code> parameter to ensure this value is
                           a number. If we did not do this, you could easily get
                           dangerous data into the rendered HTML by providing a
                           script tag in the request. That might look like this:
@@ -4833,7 +4833,7 @@
                         <p>
                           Furthermore, you can add additional layers of security
                           by sanitizing your state output.
-                          <code class="language-js >JSON.stringify</code> can be subject to script
+                          <code class="language-js" >JSON.stringify</code> can be subject to script
                           injections. To counter this, you can scrub the JSON
                           string of HTML tags and other dangerous characters.
                           This can be done with either a simple text replacement
@@ -4884,14 +4884,14 @@
                             >React Router</a
                           >, you might also want to express your data fetching
                           dependencies as static
-                          <code class="language-js >fetchData()</code> methods on your route handler
+                          <code class="language-js" >fetchData()</code> methods on your route handler
                           components. They may return
                           <a
                             href="../tutorials/fundamentals/part-6-async-logic.html"
                             >thunks</a
-                          >, so that your <code class="language-js >handleRender</code> function can
+                          >, so that your <code class="language-js" >handleRender</code> function can
                           match the route to the route handler component
-                          classes, dispatch <code class="language-js >fetchData()</code> result for
+                          classes, dispatch <code class="language-js" >fetchData()</code> result for
                           each of them, and render only after the Promises have
                           resolved. This way the specific API calls required for
                           different routes are colocated with the route handler

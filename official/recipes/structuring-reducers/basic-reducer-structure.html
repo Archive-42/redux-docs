@@ -1086,15 +1086,15 @@
                           that your entire application really only has
                           <strong>one single reducer function</strong>: the
                           function that you&#x27;ve passed into
-                          <code class="language-js >createStore</code> as the first argument. That
+                          <code class="language-js" >createStore</code> as the first argument. That
                           one single reducer function ultimately needs to do
                           several things:
                         </p>
                         <ul>
                           <li>
                             The first time the reducer is called, the
-                            <code class="language-js >state</code> value will be
-                            <code class="language-js >undefined</code>. The reducer needs to handle
+                            <code class="language-js" >state</code> value will be
+                            <code class="language-js" >undefined</code>. The reducer needs to handle
                             this case by supplying a default state value before
                             handling the incoming action.
                           </li>
@@ -1430,11 +1430,11 @@
                         </p>
                         <p>
                           There are some simple tweaks that can be made to this
-                          reducer. First, repeated <code class="language-js >if</code>/<code class="language-js 
+                          reducer. First, repeated <code class="language-js" >if</code>/<code class="language-js 
                             >else</code
                           >
                           statements quickly grow tiresome, so it&#x27;s very
-                          common to use <code class="language-js >switch</code> statements instead.
+                          common to use <code class="language-js" >switch</code> statements instead.
                           Second, we can use ES6&#x27;s default parameter values
                           to handle the initial &quot;no existing data&quot;
                           case. With those changes, the reducer would look like:
@@ -1870,8 +1870,8 @@
                           </div>
                         </div>
                         <p>
-                          In this example, <code class="language-js >todos</code> and
-                          <code class="language-js >visibilityFilter</code> are both top-level keys
+                          In this example, <code class="language-js" >todos</code> and
+                          <code class="language-js" >visibilityFilter</code> are both top-level keys
                           in the state, and each represents a &quot;slice&quot;
                           of data for some particular concept.
                         </p>
@@ -1905,10 +1905,10 @@
                             data and app state, not your UI component
                             tree</strong
                           >. As an example, a shape of
-                          <code class="language-js >state.leftPane.todoList.todos</code> would be a
+                          <code class="language-js" >state.leftPane.todoList.todos</code> would be a
                           bad idea, because the idea of &quot;todos&quot; is
                           central to the whole application, not just a single
-                          part of the UI. The <code class="language-js >todos</code> slice should be
+                          part of the UI. The <code class="language-js" >todos</code> slice should be
                           at the top of the state tree instead.
                         </p>
                         <p>

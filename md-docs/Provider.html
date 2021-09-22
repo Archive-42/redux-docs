@@ -16,22 +16,22 @@
 <script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
     </head>
 <body>
-<h1 id="provider"><code class="language-js >Provider</code></h1>
+<h1 id="provider"><code class="language-js" >Provider</code></h1>
 <h2 id="overview">Overview</h2>
-<p>The <code class="language-js >&lt;Provider&gt;</code> component makes the Redux <code class="language-js >store</code> available to any nested components that need to access the Redux store.</p>
-<p>Since any React component in a React Redux app can be connected to the store, most applications will render a <code class="language-js >&lt;Provider&gt;</code> at the top level, with the entire app’s component tree inside of it.</p>
-<p>The <a href="./hooks.md">Hooks</a> and <a href="./connect.md"><code class="language-js >connect</code></a> APIs can then access the provided store instance via React’s Context mechanism.</p>
+<p>The <code class="language-js" >&lt;Provider&gt;</code> component makes the Redux <code class="language-js" >store</code> available to any nested components that need to access the Redux store.</p>
+<p>Since any React component in a React Redux app can be connected to the store, most applications will render a <code class="language-js" >&lt;Provider&gt;</code> at the top level, with the entire app’s component tree inside of it.</p>
+<p>The <a href="./hooks.md">Hooks</a> and <a href="./connect.md"><code class="language-js" >connect</code></a> APIs can then access the provided store instance via React’s Context mechanism.</p>
 <h3 id="props">Props</h3>
-<p><code class="language-js >store</code> (<a href="https://redux.js.org/api/store">Redux Store</a>) The single Redux <code class="language-js >store</code> in your application.</p>
-<p><code class="language-js >children</code> (ReactElement) The root of your component hierarchy.</p>
-<p><code class="language-js >context</code> You may provide a context instance. If you do so, you will need to provide the same context instance to all of your connected components as well. Failure to provide the correct context results in runtime error:</p>
+<p><code class="language-js" >store</code> (<a href="https://redux.js.org/api/store">Redux Store</a>) The single Redux <code class="language-js" >store</code> in your application.</p>
+<p><code class="language-js" >children</code> (ReactElement) The root of your component hierarchy.</p>
+<p><code class="language-js" >context</code> You may provide a context instance. If you do so, you will need to provide the same context instance to all of your connected components as well. Failure to provide the correct context results in runtime error:</p>
 <blockquote>
 <p>Invariant Violation</p>
-<p>Could not find “store” in the context of “Connect(MyComponent)”. Either wrap the root component in a <code class="language-js >&lt;Provider&gt;</code>, or pass a custom React context provider to <code class="language-js >&lt;Provider&gt;</code> and the corresponding React context consumer to Connect(Todo) in connect options.</p>
+<p>Could not find “store” in the context of “Connect(MyComponent)”. Either wrap the root component in a <code class="language-js" >&lt;Provider&gt;</code>, or pass a custom React context provider to <code class="language-js" >&lt;Provider&gt;</code> and the corresponding React context consumer to Connect(Todo) in connect options.</p>
 </blockquote>
 <h3 id="example-usage">Example Usage</h3>
-<p>In the example below, the <code class="language-js >&lt;App /&gt;</code> component is our root-level component. This means it’s at the very top of our component hierarchy.</p>
-<pre class="language-js ><code class="language-js >import React from &#39;react&#39;
+<p>In the example below, the <code class="language-js" >&lt;App /&gt;</code> component is our root-level component. This means it’s at the very top of our component hierarchy.</p>
+<pre class="language-js" ><code class="language-js" >import React from &#39;react&#39;
 import ReactDOM from &#39;react-dom&#39;
 import { Provider } from &#39;react-redux&#39;
 

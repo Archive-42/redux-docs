@@ -1,13 +1,6 @@
 <a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 <a href="../official/introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../official/api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../official/faq.html" class="navbar__item navbar__link">FAQ</a><a href="../official/style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/../github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../official/introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 - <a href="../official/introduction/getting-started.html" class="menu__link">Getting Started</a>
@@ -176,11 +169,7 @@ features/users/UsersList.js
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-We don't yet have a `selectAllUsers` selector, so we'll need to add that to `usersSlice.js` along with a `selectUserById` selector:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>We don't yet have a `selectAllUsers` selector, so we'll need to add that to `usersSlice.js` along with a `selectUserById` selector:
 
 features/users/usersSlice.js
 
@@ -194,11 +183,7 @@ features/users/usersSlice.js
 
 <span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">selectUserById</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> userId</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"></span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">users</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">find</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">user</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> user</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">id</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">===</span><span class="token plain"> userId</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-And we'll add a `<UserPage>`, which is similar to our `<SinglePostPage>` in taking a `userId` parameter from the router:
+<span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">users</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">find</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">user</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> user</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">id</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">===</span><span class="token plain"> userId</span><span class="token punctuation" style="color: #f8f8f2">)</span>And we'll add a `<UserPage>`, which is similar to our `<SinglePostPage>` in taking a `userId` parameter from the router:
 
 features/users/UserPage.js
 
@@ -262,11 +247,7 @@ features/users/UserPage.js
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-As we've seen before, we can take data from one `useSelector` call, or from props, and use that to help decide what to read from the store in another `useSelector` call.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>As we've seen before, we can take data from one `useSelector` call, or from props, and use that to help decide what to read from the store in another `useSelector` call.
 
 Add routes for these components in `<App>`:
 
@@ -280,11 +261,7 @@ App.js
 
 <span class="token plain"> </span><span class="token tag punctuation" style="color: #f8f8f2">&lt;</span><span class="token tag class-name" style="color: #f92672">Route</span><span class="token tag" style="color: #f92672"> </span><span class="token tag attr-name" style="color: #a6e22e">exact</span><span class="token tag" style="color: #f92672"> </span><span class="token tag attr-name" style="color: #a6e22e">path</span><span class="token tag attr-value punctuation attr-equals" style="color: #f8f8f2">=</span><span class="token tag attr-value punctuation" style="color: #f8f8f2">"</span><span class="token tag attr-value" style="color: #e6d874">/users/:userId</span><span class="token tag attr-value punctuation" style="color: #f8f8f2">"</span><span class="token tag" style="color: #f92672"> </span><span class="token tag attr-name" style="color: #a6e22e">component</span><span class="token tag script language-javascript script-punctuation punctuation" style="color: #f8f8f2">=</span><span class="token tag script language-javascript punctuation" style="color: #f8f8f2">{</span><span class="token tag script language-javascript" style="color: #f92672">UserPage</span><span class="token tag script language-javascript punctuation" style="color: #f8f8f2">}</span><span class="token tag" style="color: #f92672"> </span><span class="token tag punctuation" style="color: #f8f8f2">/&gt;</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token tag punctuation" style="color: #f8f8f2">&lt;</span><span class="token tag class-name" style="color: #f92672">Redirect</span><span class="token tag" style="color: #f92672"> </span><span class="token tag attr-name" style="color: #a6e22e">to</span><span class="token tag attr-value punctuation attr-equals" style="color: #f8f8f2">=</span><span class="token tag attr-value punctuation" style="color: #f8f8f2">"</span><span class="token tag attr-value" style="color: #e6d874">/</span><span class="token tag attr-value punctuation" style="color: #f8f8f2">"</span><span class="token tag" style="color: #f92672"> </span><span class="token tag punctuation" style="color: #f8f8f2">/&gt;</span>
-
-Copy
-
-And add another tab in `<Navbar>` that links to `/users` so that we can click and go to `<UsersList>`.
+<span class="token plain"> </span><span class="token tag punctuation" style="color: #f8f8f2">&lt;</span><span class="token tag class-name" style="color: #f92672">Redirect</span><span class="token tag" style="color: #f92672"> </span><span class="token tag attr-name" style="color: #a6e22e">to</span><span class="token tag attr-value punctuation attr-equals" style="color: #f8f8f2">=</span><span class="token tag attr-value punctuation" style="color: #f8f8f2">"</span><span class="token tag attr-value" style="color: #e6d874">/</span><span class="token tag attr-value punctuation" style="color: #f8f8f2">"</span><span class="token tag" style="color: #f92672"> </span><span class="token tag punctuation" style="color: #f8f8f2">/&gt;</span>And add another tab in `<Navbar>` that links to `/users` so that we can click and go to `<UsersList>`.
 
 ## <span id="adding-notifications" class="anchor enhancedAnchor_2LWZ"></span>Adding Notifications<a href="#adding-notifications" class="hash-link" title="Direct link to heading">#</a>
 
@@ -298,11 +275,11 @@ Since this is a new part of our app, the first step is to create a new slice for
 
 features/notifications/notificationsSlice.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createSlice</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> createAsyncThunk </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > createSlice</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > createAsyncThunk </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> client </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../../api/client'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > client </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../../api/client'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -318,7 +295,7 @@ features/notifications/notificationsSlice.js
 
 <span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> latestTimestamp </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> latestNotification </span><span class="token operator" style="color: #f8f8f2">?</span><span class="token plain"> latestNotification</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">date</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">''</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> response </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">await</span><span class="token plain"> client</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">get</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> response </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">await</span><span class="token plain"> client</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">get</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token template-string template-punctuation string" style="color: #a6e22e">\`</span><span class="token template-string string" style="color: #a6e22e">/fakeApi/notifications?since=</span><span class="token template-string interpolation interpolation-punctuation punctuation" style="color: #f8f8f2">${</span><span class="token template-string interpolation">latestTimestamp</span><span class="token template-string interpolation interpolation-punctuation punctuation" style="color: #f8f8f2">}</span><span class="token template-string template-punctuation string" style="color: #a6e22e">\`</span><span class="token plain"></span>
 
@@ -344,11 +321,11 @@ features/notifications/notificationsSlice.js
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token plain">fetchNotifications</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">fulfilled</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">push</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token spread operator" style="color: #f8f8f2">...</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">push</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token spread operator" style="color: #f8f8f2">...</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Sort with newest first</span><span class="token plain"></span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">sort</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">a</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> b</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> b</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">date</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">localeCompare</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">a</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">date</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">sort</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">a</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> b</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> b</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">date</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">localeCompare</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">a</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">date</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
@@ -362,11 +339,7 @@ features/notifications/notificationsSlice.js
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">selectAllNotifications</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token parameter">state</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">notifications</span>
-
-Copy
-
-As with the other slices, import `notificationsReducer` into `store.js` and add it to the `configureStore()` call.
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">selectAllNotifications</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token parameter">state</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">notifications</span>As with the other slices, import `notificationsReducer` into `store.js` and add it to the `configureStore()` call.
 
 We've written an async thunk called `fetchNotifications`, which will retrieve a list of new notifications from the server. As part of that, we want to use the creation timestamp of the most recent notification as part of our request, so that the server knows it should only send back notifications that are actually new.
 
@@ -474,11 +447,7 @@ features/notifications/NotificationsList.js
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Once again, we're reading a list of items from the Redux state, mapping over them, and rendering content for each item.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Once again, we're reading a list of items from the Redux state, mapping over them, and rendering content for each item.
 
 We also need to update the `<Navbar>` to add a "Notifications" tab, and a new button to fetch some notifications:
 
@@ -546,17 +515,13 @@ app/Navbar.js
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Lastly, we need to update `App.js` with the "Notifications" route so we can navigate to it:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Lastly, we need to update `App.js` with the "Notifications" route so we can navigate to it:
 
 App.js
 
 <span class="token comment" style="color: #c6cad2">// omit imports</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> </span><span class="token imports maybe-class-name">NotificationsList</span><span class="token imports"> </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./features/notifications/NotificationsList'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > </span><span class="token imports maybe-class-name">NotificationsList</span><span > </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./features/notifications/NotificationsList'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -586,11 +551,7 @@ App.js
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Here's what the "Notifications" tab looks like so far:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Here's what the "Notifications" tab looks like so far:
 
 ![Initial Notifications tab](../../../d33wubrfki0l68.cloudfront.net/120f6ecf58b4436202d6881188ee741ec7885fa7/dd938/assets/images/notifications-initial-78eeb6d749f8287ebebe6a8b4e28efa)
 
@@ -614,7 +575,7 @@ features/notifications/notificationsSlice.js
 
 <span class="token plain"> </span><span class="token function" style="color: #e6d874">allNotificationsRead</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">forEach</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">notification</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">forEach</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">notification</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
 <span class="token plain"> notification</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">read</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token boolean" style="color: #ae81ff">true</span><span class="token plain"></span>
 
@@ -628,7 +589,7 @@ features/notifications/notificationsSlice.js
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token plain">fetchNotifications</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">fulfilled</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">forEach</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">notification</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">forEach</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">notification</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Any notifications we've read are no longer new</span><span class="token plain"></span>
 
@@ -636,11 +597,11 @@ features/notifications/notificationsSlice.js
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">push</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token spread operator" style="color: #f8f8f2">...</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">push</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token spread operator" style="color: #f8f8f2">...</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Sort with newest first</span><span class="token plain"></span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">sort</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">a</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> b</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> b</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">date</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">localeCompare</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">a</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">date</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">sort</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">a</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> b</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> b</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">date</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">localeCompare</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">a</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">date</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
@@ -654,35 +615,31 @@ features/notifications/notificationsSlice.js
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> notificationsSlice</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">reducer</span>
-
-Copy
-
-We want to mark these notifications as read whenever our `<NotificationsList>` component renders, either because we clicked on the tab to view the notifications, or because we already have it open and we just received some additional notifications. We can do this by dispatching `allNotificationsRead` in a `useEffect` hook. We also want to add an additional classname to any notification list entries in the page, to highlight them:
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> notificationsSlice</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">reducer</span>We want to mark these notifications as read whenever our `<NotificationsList>` component renders, either because we clicked on the tab to view the notifications, or because we already have it open and we just received some additional notifications. We can do this by dispatching `allNotificationsRead` in a `useEffect` hook. We also want to add an additional classname to any notification list entries in the page, to highlight them:
 
 features/notifications/NotificationsList.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">React</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> useEffect </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">React</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > useEffect </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> useSelector</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> useDispatch </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-redux'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > useSelector</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > useDispatch </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-redux'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> formatDistanceToNow</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> parseISO </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'date-fns'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > formatDistanceToNow</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > parseISO </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'date-fns'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">classnames</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'classnames'</span><span class="token plain"></span>
-
-<span class="token plain" style="display: inline-block"> </span>
-
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> selectAllUsers </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../users/usersSlice'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >classnames</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'classnames'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > selectAllUsers </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../users/usersSlice'</span><span class="token plain"></span>
 
-<span class="token imports"> selectAllNotifications</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"></span>
+<span class="token plain" style="display: inline-block"> </span>
 
-<span class="token imports"> allNotificationsRead</span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span ></span>
 
-<span class="token imports"></span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./notificationsSlice'</span><span class="token plain"></span>
+<span > selectAllNotifications</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span ></span>
+
+<span > allNotificationsRead</span>
+
+<span ></span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./notificationsSlice'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -704,13 +661,13 @@ features/notifications/NotificationsList.js
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> renderedNotifications </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> notifications</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">map</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">notification</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> renderedNotifications </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> notifications</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">map</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">notification</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> date </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">parseISO</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">notification</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">date</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> timeAgo </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">formatDistanceToNow</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">date</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> user </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> users</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">find</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">user</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> user</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">id</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">===</span><span class="token plain"> notification</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">user</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">||</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> user </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> users</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">find</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">user</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> user</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">id</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">===</span><span class="token plain"> notification</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">user</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">||</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
 <span class="token plain"> name</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'Unknown User'</span><span class="token plain"></span>
 
@@ -762,11 +719,7 @@ features/notifications/NotificationsList.js
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-This works, but actually has a slightly surprising bit of behavior. Any time there are new notifications (either because we've just switched to this tab, or we've fetched some new notifications from the API), you'll actually see _two_ `"notifications/allNotificationsRead"` actions dispatched. Why is that?
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>This works, but actually has a slightly surprising bit of behavior. Any time there are new notifications (either because we've just switched to this tab, or we've fetched some new notifications from the API), you'll actually see _two_ `"notifications/allNotificationsRead"` actions dispatched. Why is that?
 
 Let's say we have fetched some notifications while looking at the `<PostsList>`, and then click the "Notifications" tab. The `<NotificationsList>` component will mount, and the `useEffect` callback will run after that first render and dispatch `allNotificationsRead`. Our `notificationsSlice` will handle that by updating the notification entries in the store. This creates a new `state.notifications` array containing the immutably-updated entries, which forces our component to render again because it sees a new array returned from the `useSelector`, and the `useEffect` hook runs again and dispatches `allNotificationsRead` a second time. The reducer runs again, but this time no data changes, so the component doesn't re-render.
 
@@ -784,17 +737,17 @@ app/Navbar.js
 
 <span class="token comment" style="color: #c6cad2">// omit imports</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> useDispatch</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> useSelector </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-redux'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > useDispatch</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > useSelector </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-redux'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span ></span>
 
-<span class="token imports"> fetchNotifications</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"></span>
+<span > fetchNotifications</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span ></span>
 
-<span class="token imports"> selectAllNotifications</span>
+<span > selectAllNotifications</span>
 
-<span class="token imports"></span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../features/notifications/notificationsSlice'</span><span class="token plain"></span>
+<span ></span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../features/notifications/notificationsSlice'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -804,7 +757,7 @@ app/Navbar.js
 
 <span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> notifications </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">useSelector</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">selectAllNotifications</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> numUnreadNotifications </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> notifications</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">filter</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">n</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">!</span><span class="token plain">n</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">read</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">length</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> numUnreadNotifications </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> notifications</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">filter</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">n</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">!</span><span class="token plain">n</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">read</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">length</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// omit component contents</span><span class="token plain"></span>
 
@@ -848,11 +801,7 @@ app/Navbar.js
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-## <span id="improving-render-performance" class="anchor enhancedAnchor_2LWZ"></span>Improving Render Performance<a href="#improving-render-performance" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>## <span id="improving-render-performance" class="anchor enhancedAnchor_2LWZ"></span>Improving Render Performance<a href="#improving-render-performance" class="hash-link" title="Direct link to heading">#</a>
 
 Our application is looking useful, but we've actually got a couple flaws in when and how our components re-render. Let's look at those problems, and talk about some ways to improve the performance.
 
@@ -892,11 +841,7 @@ If we look at `<UserPage>` carefully, there's a specific problem:
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// omit rendering logic</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-We know that `useSelector` will re-run every time an action is dispatched, and that it forces the component to re-render if we return a new reference value.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>We know that `useSelector` will re-run every time an action is dispatched, and that it forces the component to re-render if we return a new reference value.
 
 We're calling `filter()` inside of our `useSelector` hook, so that we only return the list of posts that belong to this user. Unfortunately, **this means that `useSelector` _always_ returns a new array reference, and so our component will re-render after _every_ action even if the posts data hasn't changed!**.
 
@@ -914,7 +859,7 @@ Let's make a new `selectPostsByUser` selector function, using Reselect, and use 
 
 features/posts/postsSlice.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createSlice</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> createAsyncThunk</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> createSelector </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > createSlice</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > createAsyncThunk</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > createSelector </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -928,7 +873,7 @@ features/posts/postsSlice.js
 
 <span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">selectPostById</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> postId</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"></span>
 
-<span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">posts</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">posts</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">find</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">post</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> post</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">id</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">===</span><span class="token plain"> postId</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">posts</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">posts</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">find</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">post</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> post</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">id</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">===</span><span class="token plain"> postId</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -936,13 +881,9 @@ features/posts/postsSlice.js
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token plain">selectAllPosts</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> userId</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> userId</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">posts</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> userId</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> posts</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">filter</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">post</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> post</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">user</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">===</span><span class="token plain"> userId</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">posts</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> userId</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> posts</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">filter</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">post</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> post</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">user</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">===</span><span class="token plain"> userId</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-`createSelector` takes one or more "input selector" functions as argument, plus an "output selector" function. When we call `selectPostsByUser(state, userId)`, `createSelector` will pass all of the arguments into each of our input selectors. Whatever those input selectors return becomes the arguments for the output selector.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">)</span>`createSelector` takes one or more "input selector" functions as argument, plus an "output selector" function. When we call `selectPostsByUser(state, userId)`, `createSelector` will pass all of the arguments into each of our input selectors. Whatever those input selectors return becomes the arguments for the output selector.
 
 In this case, we know that we need the array of all posts and the user ID as the two arguments for our output selector. We can reuse our existing `selectAllPosts` selector to extract the posts array. Since the user ID is the second argument we're passing into `selectPostsByUser`, we can write a small selector that just returns `userId`.
 
@@ -984,11 +925,7 @@ If we try calling `selectPostsByUser` multiple times, it will only re-run the ou
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Output selector runs, because \`posts\` has changed</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token function" style="color: #e6d874">selectPostsByUser</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">state3</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'user2'</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-If we call this selector in `<UserPage>` and re-run the React profiler while fetching notifications, we should see that `<UserPage>` doesn't re-render this time:
+<span class="token plain"></span><span class="token function" style="color: #e6d874">selectPostsByUser</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">state3</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'user2'</span><span class="token punctuation" style="color: #f8f8f2">)</span>If we call this selector in `<UserPage>` and re-run the React profiler while fetching notifications, we should see that `<UserPage>` doesn't re-render this time:
 
 <span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">UserPage</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter punctuation" style="color: #f8f8f2">{</span><span class="token parameter"> match </span><span class="token parameter punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
@@ -1006,11 +943,7 @@ If we call this selector in `<UserPage>` and re-run the React profiler while fet
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// omit rendering logic</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Memoized selectors are a valuable tool for improving performance in a React+Redux application, because they can help us avoid unnecessary re-renders, and also avoid doing potentially complex or expensive calculations if the input data hasn't changed.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Memoized selectors are a valuable tool for improving performance in a React+Redux application, because they can help us avoid unnecessary re-renders, and also avoid doing potentially complex or expensive calculations if the input data hasn't changed.
 
 ### <span id="investigating-the-posts-list" class="anchor enhancedAnchor_2LWZ"></span>Investigating the Posts List<a href="#investigating-the-posts-list" class="hash-link" title="Direct link to heading">#</a>
 
@@ -1038,11 +971,7 @@ First, we could wrap the `<PostExcerpt>` component in [`React.memo()`](../../../
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain">PostExcerpt </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> React</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token function" style="color: #e6d874">memo</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">PostExcerpt</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-Another option is to rewrite `<PostsList>` so that it only selects a list of post IDs from the store instead of the entire `posts` array, and rewrite `<PostExcerpt>` so that it receives a `postId` prop and calls `useSelector` to read the post object it needs. If `<PostsList>` gets the same list of IDs as before, it won't need to re-render, and so only our one changed `<PostExcerpt>` component should have to render.
+<span class="token plain">PostExcerpt </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> React</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token function" style="color: #e6d874">memo</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">PostExcerpt</span><span class="token punctuation" style="color: #f8f8f2">)</span>Another option is to rewrite `<PostsList>` so that it only selects a list of post IDs from the store instead of the entire `posts` array, and rewrite `<PostExcerpt>` so that it receives a `postId` prop and calls `useSelector` to read the post object it needs. If `<PostsList>` gets the same list of IDs as before, it won't need to re-render, and so only our one changed `<PostExcerpt>` component should have to render.
 
 Unfortunately, this gets tricky because we also need to have all our posts sorted by date and rendered in the right order. We could update our `postsSlice` to keep the array sorted at all times, so we don't have to sort it in the component, and use a memoized selector to extract just the list of post IDs. We could also [customize the comparison function that `useSelector` runs to check the results](../../../react-redux.js.org/api/hooks.html#equality-comparisons-and-updates), like `useSelector(selectPostIds, shallowEqual)`, so that will skip re-rendering if the _contents_ of the IDs array haven't changed.
 
@@ -1084,19 +1013,11 @@ JavaScript objects can be used as lookup tables, similar to "maps" or "dictionar
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-This makes it easy to find a particular `user` object by its ID, without having to loop through all the other user objects in an array:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>This makes it easy to find a particular `user` object by its ID, without having to loop through all the other user objects in an array:
 
 <span class="token keyword" style="color: #f92672">const</span><span class="token plain"> userId </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'user2'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> userObject </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">users</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token plain">userId</span><span class="token punctuation" style="color: #f8f8f2">\]</span>
-
-Copy
-
-##### <span class="admonition-icon"> </span>info
+<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> userObject </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">users</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token plain">userId</span><span class="token punctuation" style="color: #f8f8f2">\]</span>##### <span class="admonition-icon"> </span>info
 
 For more details on why normalizing state is useful, see [Normalizing State Shape](../../recipes/structuring-reducers/normalizing-state-shape.html) and the Redux Toolkit Usage Guide section on [Managing Normalized Data](../../../redux-toolkit.js.org/usage/usage-guide.html#managing-normalized-data).
 
@@ -1136,13 +1057,13 @@ features/posts/postsSlice.js
 
 <span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> postsAdapter </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createEntityAdapter</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">sortComparer</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">a</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> b</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> b</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">date</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">localeCompare</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">a</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">date</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">sortComparer</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">a</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> b</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> b</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">date</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">localeCompare</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">a</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">date</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> initialState </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> postsAdapter</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getInitialState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> initialState </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> postsAdapter</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getInitialState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
 <span class="token plain"> status</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'idle'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
 
@@ -1210,7 +1131,7 @@ features/posts/postsSlice.js
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Use the \`upsertMany\` reducer as a mutating update utility</span><span class="token plain"></span>
 
-<span class="token plain"> postsAdapter</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">upsertMany</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">state</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> postsAdapter</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">upsertMany</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">state</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
 
@@ -1244,7 +1165,7 @@ features/posts/postsSlice.js
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Pass in a selector that returns the posts slice of state</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> postsAdapter</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getSelectors</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">posts</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> postsAdapter</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getSelectors</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">posts</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -1252,13 +1173,9 @@ features/posts/postsSlice.js
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token plain">selectAllPosts</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> userId</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> userId</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">posts</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> userId</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> posts</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">filter</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">post</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> post</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">user</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">===</span><span class="token plain"> userId</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">posts</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> userId</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> posts</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">filter</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">post</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> post</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">user</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">===</span><span class="token plain"> userId</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-There's a lot going on there! Let's break it down.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">)</span>There's a lot going on there! Let's break it down.
 
 First, we import `createEntityAdapter`, and call it to create our `postsAdapter` object. We know that we want to keep an array of all post IDs sorted with the newest post first, so we pass in a `sortComparer` function that will sort newer items to the front based on the `post.date` field.
 
@@ -1342,11 +1259,7 @@ features/posts/PostsList.js
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// omit other rendering</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Now, if we try clicking a reaction button on one of the posts while capturing a React component performance profile, we should see that _only_ that one component re-rendered:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Now, if we try clicking a reaction button on one of the posts while capturing a React component performance profile, we should see that _only_ that one component re-rendered:
 
 ![React DevTools Profiler render capture - optimized <PostsList>](../../../d33wubrfki0l68.cloudfront.net/fb91b859b4afee5d008830dce454eda1dce33516/9fb6f/assets/images/postslist-optimized-dcf59b403248250ec88d365fe04221ad)
 
@@ -1360,17 +1273,17 @@ The `usersSlice` is fairly small, so we've only got a few things to change:
 
 features/users/usersSlice.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span ></span>
 
-<span class="token imports"> createSlice</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"></span>
+<span > createSlice</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span ></span>
 
-<span class="token imports"> createAsyncThunk</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"></span>
+<span > createAsyncThunk</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span ></span>
 
-<span class="token imports"> createEntityAdapter</span>
+<span > createEntityAdapter</span>
 
-<span class="token imports"></span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
+<span ></span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> client </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../../api/client'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > client </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../../api/client'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -1378,13 +1291,13 @@ features/users/usersSlice.js
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> initialState </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> usersAdapter</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getInitialState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> initialState </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> usersAdapter</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getInitialState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
 <span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> fetchUsers </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createAsyncThunk</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'users/fetchUsers'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">async</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> response </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">await</span><span class="token plain"> client</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">get</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'/fakeApi/users'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> response </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">await</span><span class="token plain"> client</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">get</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'/fakeApi/users'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> response</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">users</span><span class="token plain"></span>
 
@@ -1416,11 +1329,7 @@ features/users/usersSlice.js
 
 <span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> selectAll</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> selectAllUsers</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> selectById</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> selectUserById </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"></span>
 
-<span class="token plain"> usersAdapter</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getSelectors</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">users</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-The only action we're handling here always replaces the entire list of users with the array we fetched from the server. We can use `usersAdapter.setAll` to implement that instead.
+<span class="token plain"> usersAdapter</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getSelectors</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">users</span><span class="token punctuation" style="color: #f8f8f2">)</span>The only action we're handling here always replaces the entire list of users with the array we fetched from the server. We can use `usersAdapter.setAll` to implement that instead.
 
 Our `<AddPostForm>` is still trying to read `state.users` as an array, as is `<PostAuthor>`. Update them to use `selectAllUsers` and `selectUserById`, respectively.
 
@@ -1430,25 +1339,25 @@ Last but not least, we'll update `notificationsSlice` as well:
 
 features/notifications/notificationsSlice.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span ></span>
 
-<span class="token imports"> createSlice</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"></span>
+<span > createSlice</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span ></span>
 
-<span class="token imports"> createAsyncThunk</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"></span>
+<span > createAsyncThunk</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span ></span>
 
-<span class="token imports"> createEntityAdapter</span>
+<span > createEntityAdapter</span>
 
-<span class="token imports"></span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
+<span ></span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> client </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../../api/client'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > client </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../../api/client'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
 <span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> notificationsAdapter </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createEntityAdapter</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">sortComparer</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">a</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> b</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> b</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">date</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">localeCompare</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">a</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">date</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">sortComparer</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">a</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> b</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> b</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">date</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">localeCompare</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">a</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">date</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
@@ -1462,13 +1371,13 @@ features/notifications/notificationsSlice.js
 
 <span class="token plain"> name</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'notifications'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
 
-<span class="token plain"> initialState</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> notificationsAdapter</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getInitialState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
+<span class="token plain"> initialState</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> notificationsAdapter</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getInitialState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
 
 <span class="token plain"> reducers</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token function" style="color: #e6d874">allNotificationsRead</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token known-class-name class-name">Object</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">values</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">forEach</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">notification</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token known-class-name class-name">Object</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">values</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">forEach</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">notification</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
 <span class="token plain"> notification</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">read</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token boolean" style="color: #ae81ff">true</span><span class="token plain"></span>
 
@@ -1482,7 +1391,7 @@ features/notifications/notificationsSlice.js
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token plain">fetchNotifications</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">fulfilled</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token known-class-name class-name">Object</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">values</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">forEach</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">notification</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token known-class-name class-name">Object</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">values</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">entities</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">forEach</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">notification</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Any notifications we've read are no longer new</span><span class="token plain"></span>
 
@@ -1490,7 +1399,7 @@ features/notifications/notificationsSlice.js
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"> notificationsAdapter</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">upsertMany</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">state</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> notificationsAdapter</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">upsertMany</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">state</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
@@ -1510,11 +1419,7 @@ features/notifications/notificationsSlice.js
 
 <span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> selectAll</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> selectAllNotifications </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"></span>
 
-<span class="token plain"> notificationsAdapter</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getSelectors</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">notifications</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-We again import `createEntityAdapter`, call it, and call `notificationsAdapter.getInitialState()` to help set up the slice.
+<span class="token plain"> notificationsAdapter</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getSelectors</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">notifications</span><span class="token punctuation" style="color: #f8f8f2">)</span>We again import `createEntityAdapter`, call it, and call `notificationsAdapter.getInitialState()` to help set up the slice.
 
 Ironically, we do have a couple places in here where we need to loop over all notification objects and update them. Since those are no longer being kept in an array, we have to use `Object.values(state.entities)` to get an array of those notifications and loop over that. On the other hand, we can replace the previous fetch update logic with `notificationsAdapter.upsertMany`.
 
@@ -1563,8 +1468,6 @@ If you're looking for help with Redux questions, come join [the `#redux` channel
 **Thanks for reading through this tutorial, and we hope you enjoy building applications with Redux!**
 
 <a href="part-5-async-logic.html" class="pagination-nav__link"></a>
-
-Previous
 
 « Redux Essentials, Part 5: Async Logic and Data Fetching
 
@@ -1615,4 +1518,4 @@ Redux Fundamentals, Part 1: Redux Overview »
 - [![Deploys by Netlify](../../../www.netlify.com/img/global/badges/netlify-color-accent.svg)](../../../www.netlify.com/index.html)
 
 <a href="../official/index.html" class="footerLogoLink_MyFc"><img src="../official/../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

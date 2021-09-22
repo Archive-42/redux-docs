@@ -102,10 +102,17 @@
       as="script"
     />
     <link rel="preload" href="../../assets/js/main.8520a084.js" as="script" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css"
+    />
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
-    </head>
+    <script
+      async
+      defer
+      src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"
+    ></script>
+  </head>
   <body>
     <script>
       !(function () {
@@ -1125,8 +1132,10 @@
                           immutable updates to deeply nested state can easily
                           become verbose and hard to read. Here&#x27;s what an
                           example of updating
-                          <code class="language-js >state.first.second[someId].fourth</code> might
-                          look like:
+                          <code class="language-js"
+                            >state.first.second[someId].fourth</code
+                          >
+                          might look like:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -1601,9 +1610,9 @@
                         <p>
                           This function does correctly return a shallow copy of
                           the top-level state object, but because the
-                          <code class="language-js >nestedState</code> variable was still pointing
-                          at the existing object, the state was directly
-                          mutated.
+                          <code class="language-js">nestedState</code> variable
+                          was still pointing at the existing object, the state
+                          was directly mutated.
                         </p>
                         <h5>
                           <a
@@ -1790,8 +1799,8 @@
                         <p>
                           Doing a shallow copy of the top level is
                           <em>not</em> sufficient - the
-                          <code class="language-js >nestedState</code> object should be copied as
-                          well.
+                          <code class="language-js">nestedState</code> object
+                          should be copied as well.
                         </p>
                         <h2>
                           <a
@@ -1810,12 +1819,13 @@
                         <p>
                           Normally, a Javascript array&#x27;s contents are
                           modified using mutative functions like
-                          <code class="language-js >push</code>, <code class="language-js >unshift</code>, and
-                          <code class="language-js >splice</code>. Since we don&#x27;t want to
-                          mutate state directly in reducers, those should
-                          normally be avoided. Because of that, you might see
-                          &quot;insert&quot; or &quot;remove&quot; behavior
-                          written like this:
+                          <code class="language-js">push</code>,
+                          <code class="language-js">unshift</code>, and
+                          <code class="language-js">splice</code>. Since we
+                          don&#x27;t want to mutate state directly in reducers,
+                          those should normally be avoided. Because of that, you
+                          might see &quot;insert&quot; or &quot;remove&quot;
+                          behavior written like this:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -2613,9 +2623,9 @@
                         </h2>
                         <p>
                           Updating one item in an array can be accomplished by
-                          using <code class="language-js >Array.map</code>, returning a new value
-                          for the item we want to update, and returning the
-                          existing values for all other items:
+                          using <code class="language-js">Array.map</code>,
+                          returning a new value for the item we want to update,
+                          and returning the existing values for all other items:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -3577,7 +3587,8 @@
                             href="../../../redux-toolkit.js.org/api/createReducer-2.html"
                             target="_blank"
                             rel="noopener noreferrer"
-                            ><code class="language-js >createReducer</code> utility</a
+                            ><code class="language-js">createReducer</code>
+                            utility</a
                           >
                           that uses Immer internally. Because of this, you can
                           write reducers that appear to &quot;mutate&quot;
@@ -3590,7 +3601,8 @@
                             href="#correct-approach-copying-all-levels-of-nested-data"
                             >nested data example</a
                           >
-                          might look like using <code class="language-js >createReducer</code>:
+                          might look like using
+                          <code class="language-js">createReducer</code>:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -3940,15 +3952,16 @@
                           <strong
                             >this <em>only</em> works correctly if you are using
                             the &quot;magic&quot;
-                            <code class="language-js >createReducer</code> function from Redux
-                            Toolkit</strong
+                            <code class="language-js">createReducer</code>
+                            function from Redux Toolkit</strong
                           >
                           that wraps this reducer in Immer&#x27;s
                           <a
                             href="../../../immerjs.github.io/immer/produce/index.html"
                             target="_blank"
                             rel="noopener noreferrer"
-                            ><code class="language-js >produce</code> function</a
+                            ><code class="language-js">produce</code>
+                            function</a
                           >.
                           <strong
                             >If this reducer is used without Immer, it will
@@ -3967,7 +3980,8 @@
                             href="../../../redux-toolkit.js.org/api/createSlice-2.html"
                             target="_blank"
                             rel="noopener noreferrer"
-                            ><code class="language-js >createSlice</code> utility</a
+                            ><code class="language-js">createSlice</code>
+                            utility</a
                           >
                           will auto-generate action creators and action types
                           based on the reducer functions you provide, with the

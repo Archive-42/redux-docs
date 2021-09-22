@@ -103,10 +103,17 @@
       as="script"
     />
     <link rel="preload" href="../../assets/js/main.8520a084.js" as="script" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css"
+    />
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
-    </head>
+    <script
+      async
+      defer
+      src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"
+    ></script>
+  </head>
   <body>
     <script>
       !(function () {
@@ -1100,13 +1107,15 @@
                           <li>
                             Functions for handling a specific update case, which
                             often need parameters other than the typical
-                            <code class="language-js >(state, action)</code> pair
+                            <code class="language-js">(state, action)</code>
+                            pair
                           </li>
                           <li>
                             Functions which handle <em>all</em> updates for a
                             given slice of state. These functions do generally
                             have the typical
-                            <code class="language-js >(state, action)</code> parameter signature
+                            <code class="language-js">(state, action)</code>
+                            parameter signature
                           </li>
                         </ol>
                         <p>
@@ -1118,24 +1127,33 @@
                           <li>
                             <strong><em>reducer</em></strong
                             >: any function with the signature
-                            <code class="language-js >(state, action) -&gt; newState</code> (ie, any
-                            function that <em>could</em> be used as an argument
-                            to <code class="language-js >Array.prototype.reduce</code>)
+                            <code class="language-js"
+                              >(state, action) -&gt; newState</code
+                            >
+                            (ie, any function that <em>could</em> be used as an
+                            argument to
+                            <code class="language-js"
+                              >Array.prototype.reduce</code
+                            >)
                           </li>
                           <li>
                             <strong><em>root reducer</em></strong
                             >: the reducer function that is actually passed as
-                            the first argument to <code class="language-js >createStore</code>. This
+                            the first argument to
+                            <code class="language-js">createStore</code>. This
                             is the only part of the reducer logic that
                             <em>must</em> have the
-                            <code class="language-js >(state, action) -&gt; newState</code>
+                            <code class="language-js"
+                              >(state, action) -&gt; newState</code
+                            >
                             signature.
                           </li>
                           <li>
                             <strong><em>slice reducer</em></strong
                             >: a reducer that is being used to handle updates to
                             one specific slice of the state tree, usually done
-                            by passing it to <code class="language-js >combineReducers</code>
+                            by passing it to
+                            <code class="language-js">combineReducers</code>
                           </li>
                           <li>
                             <strong><em>case function</em></strong
@@ -1148,8 +1166,9 @@
                             <strong><em>higher-order reducer</em></strong
                             >: a function that takes a reducer function as an
                             argument, and/or returns a new reducer function as a
-                            result (such as <code class="language-js >combineReducers</code>, or
-                            <code class="language-js >redux-undo</code>)
+                            result (such as
+                            <code class="language-js">combineReducers</code>, or
+                            <code class="language-js">redux-undo</code>)
                           </li>
                         </ul>
                         <p>
@@ -1185,7 +1204,9 @@
                           structuring reducer logic. In fact, it&#x27;s so
                           common that Redux includes a utility function called
                           <a href="../../api/combinereducers.html"
-                            ><code class="language-js >combineReducers()</code></a
+                            ><code class="language-js"
+                              >combineReducers()</code
+                            ></a
                           >, which specifically abstracts the process of
                           delegating work to other reducer functions based on
                           slices of state. However, it&#x27;s important to note

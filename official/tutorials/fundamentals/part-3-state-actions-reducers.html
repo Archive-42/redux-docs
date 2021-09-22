@@ -1251,8 +1251,8 @@
                             rel="noopener noreferrer"
                             >clone the same project from this Github repo</a
                           >. After cloning the repo, you can install the tools
-                          for the project with <code class="language-js >npm install</code>, and
-                          start it with <code class="language-js >npm start</code>.
+                          for the project with <code class="language-js" >npm install</code>, and
+                          start it with <code class="language-js" >npm start</code>.
                         </p>
                         <p>
                           If you&#x27;d like to see the final version of what
@@ -1263,7 +1263,7 @@
                             rel="noopener noreferrer"
                             >the
                             <strong
-                              ><code class="language-js >tutorial-steps</code> branch</strong
+                              ><code class="language-js" >tutorial-steps</code> branch</strong
                             ></a
                           >, or
                           <a
@@ -1328,22 +1328,22 @@
                           </p>
                           <ul>
                             <li>
-                              Add the <code class="language-js >@reduxjs/toolkit</code> and
-                              <code class="language-js >react-redux</code> packages
+                              Add the <code class="language-js" >@reduxjs/toolkit</code> and
+                              <code class="language-js" >react-redux</code> packages
                             </li>
                             <li>
                               Create a Redux store using RTK&#x27;s
-                              <code class="language-js >configureStore</code> API, and pass in at
+                              <code class="language-js" >configureStore</code> API, and pass in at
                               least one reducer function
                             </li>
                             <li>
                               Import the Redux store into your
                               application&#x27;s entry point file (such as
-                              <code class="language-js >src/index.js</code>)
+                              <code class="language-js" >src/index.js</code>)
                             </li>
                             <li>
                               Wrap your root React component with the
-                              <code class="language-js >&lt;Provider&gt;</code> component from
+                              <code class="language-js" >&lt;Provider&gt;</code> component from
                               React-Redux, like:
                             </li>
                           </ul>
@@ -1579,38 +1579,38 @@
                         </p>
                         <ul>
                           <li>
-                            <code class="language-js >/src</code>
+                            <code class="language-js" >/src</code>
                             <ul>
                               <li>
-                                <code class="language-js >index.js</code>: the entry point file for
+                                <code class="language-js" >index.js</code>: the entry point file for
                                 the application. It renders the main
-                                <code class="language-js >&lt;App&gt;</code> component.
+                                <code class="language-js" >&lt;App&gt;</code> component.
                               </li>
                               <li>
-                                <code class="language-js >App.js</code>: the main application
+                                <code class="language-js" >App.js</code>: the main application
                                 component.
                               </li>
                               <li>
-                                <code class="language-js >index.css</code>: styles for the complete
+                                <code class="language-js" >index.css</code>: styles for the complete
                                 application
                               </li>
                               <li>
-                                <code class="language-js >/api</code>
+                                <code class="language-js" >/api</code>
                                 <ul>
                                   <li>
-                                    <code class="language-js >client.js</code>: a small AJAX request
+                                    <code class="language-js" >client.js</code>: a small AJAX request
                                     client that allows us to make GET and POST
                                     requests
                                   </li>
                                   <li>
-                                    <code class="language-js >server.js</code>: provides a fake REST
+                                    <code class="language-js" >server.js</code>: provides a fake REST
                                     API for our data. Our app will fetch data
                                     from these fake endpoints later.
                                   </li>
                                 </ul>
                               </li>
                               <li>
-                                <code class="language-js >/exampleAddons</code>: contains some
+                                <code class="language-js" >/exampleAddons</code>: contains some
                                 additional Redux addons that we&#x27;ll use
                                 later in the tutorial to show how things work
                               </li>
@@ -1821,8 +1821,8 @@
                             JavaScript objects and arrays</strong
                           >. That means you may not put other things into the
                           Redux state - no class instances, built-in JS types
-                          like <code class="language-js >Map</code> / <code class="language-js >Set</code>
-                          <code class="language-js >Promise</code> / <code class="language-js >Date</code>, functions,
+                          like <code class="language-js" >Map</code> / <code class="language-js" >Set</code>
+                          <code class="language-js" >Promise</code> / <code class="language-js" >Date</code>, functions,
                           or anything else that is not plain JS data.
                         </p>
                         <p>
@@ -1841,13 +1841,13 @@
                             First, we need an array of todo item objects. Each
                             item should have these fields:
                             <ul>
-                              <li><code class="language-js >id</code>: a unique number</li>
+                              <li><code class="language-js" >id</code>: a unique number</li>
                               <li>
-                                <code class="language-js >text</code>: the text the user typed in
+                                <code class="language-js" >text</code>: the text the user typed in
                               </li>
-                              <li><code class="language-js >completed</code>: a boolean flag</li>
+                              <li><code class="language-js" >completed</code>: a boolean flag</li>
                               <li>
-                                <code class="language-js >color</code>: An optional color category
+                                <code class="language-js" >color</code>: An optional color category
                               </li>
                             </ul>
                           </li>
@@ -2234,7 +2234,7 @@
                         </h3>
                         <p>
                           <strong>Actions</strong> are plain JavaScript objects
-                          that have a <code class="language-js >type</code> field. As mentioned
+                          that have a <code class="language-js" >type</code> field. As mentioned
                           earlier,
                           <strong
                             >you can think of an action as an event that
@@ -2268,14 +2268,14 @@
                         <p>
                           We normally put any extra data needed to describe
                           what&#x27;s happening into the
-                          <code class="language-js >action.payload</code> field. This could be a
+                          <code class="language-js" >action.payload</code> field. This could be a
                           number, a string, or an object with multiple fields
                           inside.
                         </p>
                         <p>
                           The Redux store doesn&#x27;t care what the actual text
-                          of the <code class="language-js >action.type</code> field is. However,
-                          your own code will look at <code class="language-js >action.type</code> to
+                          of the <code class="language-js" >action.type</code> field is. However,
+                          your own code will look at <code class="language-js" >action.type</code> to
                           see if an update is needed. Also, you will frequently
                           look at action type strings in the Redux DevTools
                           Extension while debugging to see what&#x27;s going on
@@ -2315,7 +2315,7 @@
                             >
                           </li>
                           <li>
-                            <code class="language-js >{type: &#x27;todos/allCompleted&#x27;}</code>
+                            <code class="language-js" >{type: &#x27;todos/allCompleted&#x27;}</code>
                           </li>
                           <li>
                             <code class="language-js 
@@ -2338,7 +2338,7 @@
                         <p>
                           In this case, the actions primarily have a single
                           extra piece of data apiece, so we can put that
-                          directly in the <code class="language-js >action.payload</code> field. We
+                          directly in the <code class="language-js" >action.payload</code> field. We
                           could have split the color filter behavior into two
                           actions, one for &quot;added&quot; and one for
                           &quot;removed&quot;, but in this case we&#x27;ll do it
@@ -2373,11 +2373,11 @@
                         </p>
                         <p>
                           <strong>Reducers</strong> are functions that take the
-                          current <code class="language-js >state</code> and an
-                          <code class="language-js >action</code> as arguments, and return a new
-                          <code class="language-js >state</code> result. In other words,
+                          current <code class="language-js" >state</code> and an
+                          <code class="language-js" >action</code> as arguments, and return a new
+                          <code class="language-js" >state</code> result. In other words,
                           <strong
-                            ><code class="language-js >(state, action) =&gt; newState</code></strong
+                            ><code class="language-js" >(state, action) =&gt; newState</code></strong
                           >.
                         </p>
                         <h3>
@@ -2399,7 +2399,7 @@
                             >A Redux app really only has one reducer function:
                             the &quot;root reducer&quot; function</strong
                           >
-                          that you will pass to <code class="language-js >createStore</code> later
+                          that you will pass to <code class="language-js" >createStore</code> later
                           on. That one root reducer function is responsible for
                           handling <em>all</em> of the actions that are
                           dispatched, and calculating what the
@@ -2407,9 +2407,9 @@
                         </p>
                         <p>
                           Let&#x27;s start by creating a
-                          <code class="language-js >reducer.js</code> file in the
-                          <code class="language-js >src</code> folder, alongside
-                          <code class="language-js >index.js</code> and <code class="language-js >App.js</code>.
+                          <code class="language-js" >reducer.js</code> file in the
+                          <code class="language-js" >src</code> folder, alongside
+                          <code class="language-js" >index.js</code> and <code class="language-js" >App.js</code>.
                         </p>
                         <p>
                           Every reducer needs some initial state, so we&#x27;ll
@@ -2914,7 +2914,7 @@
                           </div>
                         </div>
                         <p>
-                          A reducer may be called with <code class="language-js >undefined</code> as
+                          A reducer may be called with <code class="language-js" >undefined</code> as
                           the state value when the application is being
                           initialized. If that happens, we need to provide an
                           initial state value so the rest of the reducer code
@@ -2922,12 +2922,12 @@
                           <strong
                             >Reducers normally use ES6 default argument syntax
                             to provide initial state:
-                            <code class="language-js >(state = initialState, action)</code></strong
+                            <code class="language-js" >(state = initialState, action)</code></strong
                           >.
                         </p>
                         <p>
                           Next, let&#x27;s add the logic to handle the
-                          <code class="language-js >&#x27;todos/todoAdded&#x27;</code> action.
+                          <code class="language-js" >&#x27;todos/todoAdded&#x27;</code> action.
                         </p>
                         <p>
                           We know we need to check to see the current
@@ -3671,14 +3671,14 @@
                         <ul>
                           <li>
                             They should only calculate the new state value based
-                            on the <code class="language-js >state</code> and
-                            <code class="language-js >action</code> arguments
+                            on the <code class="language-js" >state</code> and
+                            <code class="language-js" >action</code> arguments
                           </li>
                           <li>
                             They are not allowed to modify the existing
-                            <code class="language-js >state</code>. Instead, they must make
+                            <code class="language-js" >state</code>. Instead, they must make
                             <em>immutable updates</em>, by copying the existing
-                            <code class="language-js >state</code> and making changes to the copied
+                            <code class="language-js" >state</code> and making changes to the copied
                             values.
                           </li>
                           <li>
@@ -3725,8 +3725,8 @@
                               </li>
                               <li>
                                 Generating random numbers or unique random IDs
-                                (such as <code class="language-js >Math.random()</code> or
-                                <code class="language-js >Date.now()</code>)
+                                (such as <code class="language-js" >Math.random()</code> or
+                                <code class="language-js" >Date.now()</code>)
                               </li>
                             </ul>
                           </div>
@@ -4123,7 +4123,7 @@
                         <p>
                           With that in mind, let&#x27;s add the reducer logic
                           for a couple more cases. First, toggling a todo&#x27;s
-                          <code class="language-js >completed</code> field based on its ID:
+                          <code class="language-js" >completed</code> field based on its ID:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -5695,11 +5695,11 @@
                             the section of the Redux state that they
                             update</strong
                           >. Our todo app state currently has two top-level
-                          sections: <code class="language-js >state.todos</code> and
-                          <code class="language-js >state.filters</code>. So, we can split the large
+                          sections: <code class="language-js" >state.todos</code> and
+                          <code class="language-js" >state.filters</code>. So, we can split the large
                           root reducer function into two smaller reducers - a
-                          <code class="language-js >todosReducer</code> and a
-                          <code class="language-js >filtersReducer</code>.
+                          <code class="language-js" >todosReducer</code> and a
+                          <code class="language-js" >filtersReducer</code>.
                         </p>
                         <p>
                           So, where should these split-up reducer functions
@@ -5727,17 +5727,17 @@
                           >. Typically, some of the action objects will be
                           closely related to a specific slice reducer, and so
                           the action type strings should start with the name of
-                          that feature (like <code class="language-js >&#x27;todos&#x27;</code>) and
+                          that feature (like <code class="language-js" >&#x27;todos&#x27;</code>) and
                           describe the event that happened (like
-                          <code class="language-js >&#x27;todoAdded&#x27;</code>), joined together
+                          <code class="language-js" >&#x27;todoAdded&#x27;</code>), joined together
                           into one string
-                          (<code class="language-js >&#x27;todos/todoAdded&#x27;</code>).
+                          (<code class="language-js" >&#x27;todos/todoAdded&#x27;</code>).
                         </p>
                         <p>
                           In our project, create a new
-                          <code class="language-js >features</code> folder, and then a
-                          <code class="language-js >todos</code> folder inside that. Create a new
-                          file named <code class="language-js >todosSlice.js</code>, and let&#x27;s
+                          <code class="language-js" >features</code> folder, and then a
+                          <code class="language-js" >todos</code> folder inside that. Create a new
+                          file named <code class="language-js" >todosSlice.js</code>, and let&#x27;s
                           cut and paste the todo-related initial state over into
                           this file:
                         </p>
@@ -6929,7 +6929,7 @@
                         <p>
                           Now we can do the same thing for the visibility logic.
                           Create
-                          <code class="language-js >src/features/filters/filtersSlice.js</code>, and
+                          <code class="language-js" >src/features/filters/filtersSlice.js</code>, and
                           let&#x27;s move all the filter-related code over
                           there:
                         </p>
@@ -7351,7 +7351,7 @@
                         </p>
                         <p>
                           Since reducers are normal JS functions, we can import
-                          the slice reducers back into <code class="language-js >reducer.js</code>,
+                          the slice reducers back into <code class="language-js" >reducer.js</code>,
                           and write a new root reducer whose only job is to call
                           the other two functions.
                         </p>
@@ -7639,7 +7639,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="combinereducers"
                           ></a
-                          ><code class="language-js >combineReducers</code
+                          ><code class="language-js" >combineReducers</code
                           ><a
                             class="hash-link"
                             href="#combinereducers"
@@ -7658,15 +7658,15 @@
                         <p>
                           The Redux core library includes a utility called
                           <a href="../../api/combinereducers.html"
-                            ><code class="language-js >combineReducers</code></a
+                            ><code class="language-js" >combineReducers</code></a
                           >, which does this same boilerplate step for us. We
                           can replace our hand-written
-                          <code class="language-js >rootReducer</code> with a shorter one generated
-                          by <code class="language-js >combineReducers</code>.
+                          <code class="language-js" >rootReducer</code> with a shorter one generated
+                          by <code class="language-js" >combineReducers</code>.
                         </p>
                         <p>
                           <strong
-                            >Now that we need <code class="language-js >combineReducers</code>,
+                            >Now that we need <code class="language-js" >combineReducers</code>,
                             it&#x27;s time to actually install the Redux core
                             library</strong
                           >:
@@ -7707,7 +7707,7 @@
                         </div>
                         <p>
                           Once that&#x27;s done, we can import
-                          <code class="language-js >combineReducers</code> and use it:
+                          <code class="language-js" >combineReducers</code> and use it:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -7926,7 +7926,7 @@
                           </div>
                         </div>
                         <p>
-                          <code class="language-js >combineReducers</code> accepts an object where
+                          <code class="language-js" >combineReducers</code> accepts an object where
                           the key names will become the keys in your root state
                           object, and the values are the slice reducer functions
                           that know how to update those slices of the Redux
@@ -7935,7 +7935,7 @@
                         <p>
                           <strong
                             >Remember, the key names you give to
-                            <code class="language-js >combineReducers</code> decides what the key
+                            <code class="language-js" >combineReducers</code> decides what the key
                             names of your state object will be!</strong
                           >
                         </p>
@@ -8012,8 +8012,8 @@
                                   </li>
                                   <li>
                                     Reducers must not create random values like
-                                    <code class="language-js >Math.random()</code> or
-                                    <code class="language-js >Date.now()</code>
+                                    <code class="language-js" >Math.random()</code> or
+                                    <code class="language-js" >Date.now()</code>
                                   </li>
                                   <li>
                                     It&#x27;s okay to have other state values
@@ -8025,19 +8025,19 @@
                               <li>
                                 <strong
                                   >Actions are plain objects with a
-                                  <code class="language-js >type</code> field that describe what
+                                  <code class="language-js" >type</code> field that describe what
                                   happened</strong
                                 >
                                 <ul>
                                   <li>
-                                    The <code class="language-js >type</code> field should be a
+                                    The <code class="language-js" >type</code> field should be a
                                     readable string, and is usually written as
-                                    <code class="language-js >&#x27;feature/eventName&#x27;</code>
+                                    <code class="language-js" >&#x27;feature/eventName&#x27;</code>
                                   </li>
                                   <li>
                                     Actions may contain other values, which are
                                     typically stored in the
-                                    <code class="language-js >action.payload</code> field
+                                    <code class="language-js" >action.payload</code> field
                                   </li>
                                   <li>
                                     Actions should have the smallest amount of
@@ -8058,12 +8058,12 @@
                                     <ul>
                                       <li>
                                         Only calculate the new state based on
-                                        the <code class="language-js >state</code> and
-                                        <code class="language-js >action</code> arguments
+                                        the <code class="language-js" >state</code> and
+                                        <code class="language-js" >action</code> arguments
                                       </li>
                                       <li>
                                         Never mutate the existing
-                                        <code class="language-js >state</code> - always return a
+                                        <code class="language-js" >state</code> - always return a
                                         copy
                                       </li>
                                       <li>
@@ -8092,11 +8092,11 @@
                                   </li>
                                   <li>
                                     Reducers can be combined together with the
-                                    Redux <code class="language-js >combineReducers</code> function
+                                    Redux <code class="language-js" >combineReducers</code> function
                                   </li>
                                   <li>
                                     The key names given to
-                                    <code class="language-js >combineReducers</code> define the
+                                    <code class="language-js" >combineReducers</code> define the
                                     top-level state object keys
                                   </li>
                                 </ul>
@@ -8279,7 +8279,7 @@
                             <a
                               href="#combinereducers"
                               class="table-of-contents__link"
-                              ><code class="language-js >combineReducers</code></a
+                              ><code class="language-js" >combineReducers</code></a
                             >
                           </li>
                         </ul>

@@ -67,13 +67,7 @@
 </ul></li>
 
 
-
-</ul></li>
-
-<ul>
-
-</ul></li>
-</ul></li>
+</li>
 <li><a href="#!" class="menu__link menu__link--sublist menu__link--active">FAQ</a>
 <ul>
 <li><a href="../faq.html" class="menu__link">FAQ Index</a></li>
@@ -95,12 +89,6 @@
 </ul></li>
 
 
-</ul></li>
-<li><a href="#!" class="menu__link menu__link--sublist">Redux Toolkit</a>
-<ul>
-
-</ul></li>
-</ul>
 <h1 id="redux-faq-performance"><span id="redux-faq-performance" class="anchor enhancedAnchor_2LWZ"></span>Redux FAQ: Performance<a href="#redux-faq-performance" class="hash-link" title="Direct link to heading">#</a></h1>
 <h2 id="table-of-contents"><span id="table-of-contents" class="anchor enhancedAnchor_2LWZ"></span>Table of Contents<a href="#table-of-contents" class="hash-link" title="Direct link to heading">#</a></h2>
 <ul>
@@ -178,8 +166,8 @@
 </ul>
 <h3 id="wont-calling-all-my-reducers-for-each-action-be-slow"><span id="wont-calling-all-my-reducers-for-each-action-be-slow" class="anchor enhancedAnchor_2LWZ"></span>Won’t calling “all my reducers” for each action be slow?<a href="#wont-calling-all-my-reducers-for-each-action-be-slow" class="hash-link" title="Direct link to heading">#</a></h3>
 <p>It’s important to note that a Redux store really only has a single reducer function. The store passes the current state and dispatched action to that one reducer function, and lets the reducer handle things appropriately.</p>
-<p>Obviously, trying to handle every possible action in a single function does not scale well, simply in terms of function size and readability, so it makes sense to split the actual work into separate functions that can be called by the top-level reducer. In particular, the common suggested pattern is to have a separate sub-reducer function that is responsible for managing updates to a particular slice of state at a specific key. The <code class="language-js >combineReducers()</code> that comes with Redux is one of the many possible ways to achieve this. It’s also highly suggested to keep your store state as flat and as normalized as possible. Ultimately, though, you are in charge of organizing your reducer logic any way you want.</p>
-<p>However, even if you happen to have many different reducer functions composed together, and even with deeply nested state, reducer speed is unlikely to be a problem. JavaScript engines are capable of running a very large number of function calls per second, and most of your reducers are probably just using a <code class="language-js >switch</code> statement and returning the existing state by default in response to most actions.</p>
+<p>Obviously, trying to handle every possible action in a single function does not scale well, simply in terms of function size and readability, so it makes sense to split the actual work into separate functions that can be called by the top-level reducer. In particular, the common suggested pattern is to have a separate sub-reducer function that is responsible for managing updates to a particular slice of state at a specific key. The <code class="language-js" >combineReducers()</code> that comes with Redux is one of the many possible ways to achieve this. It’s also highly suggested to keep your store state as flat and as normalized as possible. Ultimately, though, you are in charge of organizing your reducer logic any way you want.</p>
+<p>However, even if you happen to have many different reducer functions composed together, and even with deeply nested state, reducer speed is unlikely to be a problem. JavaScript engines are capable of running a very large number of function calls per second, and most of your reducers are probably just using a <code class="language-js" >switch</code> statement and returning the existing state by default in response to most actions.</p>
 <p>If you actually are concerned about reducer performance, you can use a utility such as <a href="https://github.com/omnidan/redux-ignore">redux-ignore</a> or <a href="https://github.com/chrisdavies/reduxr-scoped-reducer">reduxr-scoped-reducer</a> to ensure that only certain reducers listen to specific actions. You can also use <a href="https://github.com/michaelcontento/redux-log-slow-reducers">redux-log-slow-reducers</a> to do some performance benchmarking.</p>
 <h4 id="further-information-1"><span id="further-information-1" class="anchor enhancedAnchor_2LWZ"></span>Further information<a href="#further-information-1" class="hash-link" title="Direct link to heading">#</a></h4>
 <p><strong>Discussions</strong></p>
@@ -191,7 +179,7 @@
 </ul>
 <h3 id="do-i-have-to-deep-clone-my-state-in-a-reducer-isnt-copying-my-state-going-to-be-slow"><span id="do-i-have-to-deep-clone-my-state-in-a-reducer-isnt-copying-my-state-going-to-be-slow" class="anchor enhancedAnchor_2LWZ"></span>Do I have to deep-clone my state in a reducer? Isn’t copying my state going to be slow?<a href="#do-i-have-to-deep-clone-my-state-in-a-reducer-isnt-copying-my-state-going-to-be-slow" class="hash-link" title="Direct link to heading">#</a></h3>
 <p>Immutably updating state generally means making shallow copies, not deep copies. Shallow copies are much faster than deep copies, because fewer objects and fields have to be copied, and it effectively comes down to moving some pointers around.</p>
-<p>In addition, deep cloning state creates new references for every field. Since the React-Redux <code class="language-js >connect</code> function relies on reference comparisons to determine if data has changed, this means that UI components will be forced to re-render unnecessarily even though the other data hasn’t meaningfully changed.</p>
+<p>In addition, deep cloning state creates new references for every field. Since the React-Redux <code class="language-js" >connect</code> function relies on reference comparisons to determine if data has changed, this means that UI components will be forced to re-render unnecessarily even though the other data hasn’t meaningfully changed.</p>
 <p>However, you <em>do</em> need to create a copied and updated object for each level of nesting that is affected. Although that shouldn’t be particularly expensive, it’s another good reason why you should keep your state normalized and shallow if possible.</p>
 <blockquote>
 <p>Common Redux misconception: you need to deeply clone the state. Reality: if something inside doesn’t change, keep its reference the same!</p>
@@ -213,8 +201,8 @@
 <h3 id="how-can-i-reduce-the-number-of-store-update-events"><span id="how-can-i-reduce-the-number-of-store-update-events" class="anchor enhancedAnchor_2LWZ"></span>How can I reduce the number of store update events?<a href="#how-can-i-reduce-the-number-of-store-update-events" class="hash-link" title="Direct link to heading">#</a></h3>
 <p>Redux notifies subscribers after each successfully dispatched action (i.e. an action reached the store and was handled by reducers). In some cases, it may be useful to cut down on the number of times subscribers are called, particularly if an action creator dispatches multiple distinct actions in a row.</p>
 <p>There are several addons that add batching capabilities in various ways, like: <a href="https://github.com/tshelburne/redux-batched-actions">redux-batched-actions</a> (a higher-order reducer that lets you dispatch several actions as if it was one and “unpack” them in the reducer), <a href="https://github.com/tappleby/redux-batched-subscribe">redux-batched-subscribe</a> (a store enhancer that lets you debounce subscriber calls for multiple dispatches), or <a href="https://github.com/manaflair/redux-batch">redux-batch</a> (a store enhancer that handles dispatching an array of actions with a single subscriber notification).</p>
-<p>For React-Redux specifically, starting in <a href="https://github.com/reduxjs/react-redux/releases/tag/v7.0.1">React-Redux v7</a> a new <code class="language-js >batch</code> public API is available to help minimize the number of React re-renders when dispatching actions outside of React event handlers. It wraps React’s <code class="language-js >unstable_batchedUpdate()</code> API, allows any React updates in an event loop tick to be batched together into a single render pass. React already uses this internally for its own event handler callbacks. This API is actually part of the renderer packages like ReactDOM and React Native, not the React core itself.</p>
-<p>Since React-Redux needs to work in both ReactDOM and React Native environments, we’ve taken care of importing this API from the correct renderer at build time for our own use. We also now re-export this function publicly ourselves, renamed to <code class="language-js >batch()</code>. You can use it to ensure that multiple actions dispatched outside of React only result in a single render update, like this:</p>
+<p>For React-Redux specifically, starting in <a href="https://github.com/reduxjs/react-redux/releases/tag/v7.0.1">React-Redux v7</a> a new <code class="language-js" >batch</code> public API is available to help minimize the number of React re-renders when dispatching actions outside of React event handlers. It wraps React’s <code class="language-js" >unstable_batchedUpdate()</code> API, allows any React updates in an event loop tick to be batched together into a single render pass. React already uses this internally for its own event handler callbacks. This API is actually part of the renderer packages like ReactDOM and React Native, not the React core itself.</p>
+<p>Since React-Redux needs to work in both ReactDOM and React Native environments, we’ve taken care of importing this API from the correct renderer at build time for our own use. We also now re-export this function publicly ourselves, renamed to <code class="language-js" >batch()</code>. You can use it to ensure that multiple actions dispatched outside of React only result in a single render update, like this:</p>
 <p><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> batch </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘react-redux’</span><span class="token plain"></span></p>
 <p><span class="token plain" style="display: inline-block"> </span></p>
 <p><span class="token plain"></span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">myThunk</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
@@ -289,24 +277,6 @@
 </ul></li>
 </ul>
 
-<ul>
-<li><a href="https://redux.js.org/introduction/getting-started" class="footer__link-item">Getting Started</a></li>
-<li><a href="https://redux.js.org/tutorials/essentials/part-1-overview-concepts" class="footer__link-item">Tutorial</a></li>
-<li><a href="https://redux.js.org/faq" class="footer__link-item">FAQ</a></li>
-<li><a href="https://redux.js.org/api/api-reference" class="footer__link-item">API Reference</a></li>
-</ul>
 
-<ul>
-<li><a href="https://discord.gg/0ZcbPKXt5bZ6au5t" class="footer__link-item">Reactiflux Discord</a></li>
-<li><a href="http://stackoverflow.com/questions/tagged/redux" class="footer__link-item">Stack Overflow</a></li>
-<li><a href="https://redux.js.org/introduction/getting-started#help-and-discussion" class="footer__link-item">Feedback</a></li>
-</ul>
-
-<ul>
-<li><a href="https://github.com/reduxjs/redux" class="footer__link-item">GitHub</a></li>
-<li><a href="https://www.netlify.com/"><img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" /></a></li>
-</ul>
-<p><a href="https://redux.js.org/" class="footerLogoLink_MyFc"><img src="https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" /><img src="https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a></p>
-<p>Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.</p>
 </body>
 </html>

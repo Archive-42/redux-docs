@@ -67,13 +67,7 @@
 </ul></li>
 
 
-
-</ul></li>
-
-<ul>
-
-</ul></li>
-</ul></li>
+</li>
 <li><a href="#!" class="menu__link menu__link--sublist menu__link--active">FAQ</a>
 <ul>
 <li><a href="../faq.html" class="menu__link">FAQ Index</a></li>
@@ -95,12 +89,6 @@
 </ul></li>
 
 
-</ul></li>
-<li><a href="#!" class="menu__link menu__link--sublist">Redux Toolkit</a>
-<ul>
-
-</ul></li>
-</ul>
 <h1 id="redux-faq-reducers"><span id="redux-faq-reducers" class="anchor enhancedAnchor_2LWZ"></span>Redux FAQ: Reducers<a href="#redux-faq-reducers" class="hash-link" title="Direct link to heading">#</a></h1>
 <h2 id="table-of-contents"><span id="table-of-contents" class="anchor enhancedAnchor_2LWZ"></span>Table of Contents<a href="#table-of-contents" class="hash-link" title="Direct link to heading">#</a></h2>
 <ul>
@@ -109,11 +97,11 @@
 <li><a href="#table-of-contents">Table of Contents</a></li>
 <li><a href="#reducers">Reducers</a>
 <ul>
-<li><a href="#how-do-i-share-state-between-two-reducers-do-i-have-to-use-combinereducers">How do I share state between two reducers? Do I have to use <code class="language-js >combineReducers</code>?</a>
+<li><a href="#how-do-i-share-state-between-two-reducers-do-i-have-to-use-combinereducers">How do I share state between two reducers? Do I have to use <code class="language-js" >combineReducers</code>?</a>
 <ul>
 <li><a href="#further-information">Further information</a></li>
 </ul></li>
-<li><a href="#do-i-have-to-use-the-switch-statement-to-handle-actions">Do I have to use the <code class="language-js >switch</code> statement to handle actions?</a>
+<li><a href="#do-i-have-to-use-the-switch-statement-to-handle-actions">Do I have to use the <code class="language-js" >switch</code> statement to handle actions?</a>
 <ul>
 <li><a href="#further-information-1">Further information</a></li>
 </ul></li>
@@ -121,15 +109,15 @@
 </ul></li>
 </ul>
 <h2 id="reducers"><span id="reducers" class="anchor enhancedAnchor_2LWZ"></span>Reducers<a href="#reducers" class="hash-link" title="Direct link to heading">#</a></h2>
-<h3 id="how-do-i-share-state-between-two-reducers-do-i-have-to-use-combinereducers"><span id="how-do-i-share-state-between-two-reducers-do-i-have-to-use-combinereducers" class="anchor enhancedAnchor_2LWZ"></span>How do I share state between two reducers? Do I have to use <code class="language-js >combineReducers</code>?<a href="#how-do-i-share-state-between-two-reducers-do-i-have-to-use-combinereducers" class="hash-link" title="Direct link to heading">#</a></h3>
-<p>The suggested structure for a Redux store is to split the state object into multiple “slices” or “domains” by key, and provide a separate reducer function to manage each individual data slice. This is similar to how the standard Flux pattern has multiple independent stores, and Redux provides the <a href="../api/combinereducers.html"><code class="language-js >combineReducers</code></a> utility function to make this pattern easier. However, it’s important to note that <code class="language-js >combineReducers</code> is <em>not</em> required—it is simply a utility function for the common use case of having a single reducer function per state slice, with plain JavaScript objects for the data.</p>
-<p>Many users later want to try to share data between two reducers, but find that <code class="language-js >combineReducers</code> does not allow them to do so. There are several approaches that can be used:</p>
+<h3 id="how-do-i-share-state-between-two-reducers-do-i-have-to-use-combinereducers"><span id="how-do-i-share-state-between-two-reducers-do-i-have-to-use-combinereducers" class="anchor enhancedAnchor_2LWZ"></span>How do I share state between two reducers? Do I have to use <code class="language-js" >combineReducers</code>?<a href="#how-do-i-share-state-between-two-reducers-do-i-have-to-use-combinereducers" class="hash-link" title="Direct link to heading">#</a></h3>
+<p>The suggested structure for a Redux store is to split the state object into multiple “slices” or “domains” by key, and provide a separate reducer function to manage each individual data slice. This is similar to how the standard Flux pattern has multiple independent stores, and Redux provides the <a href="../api/combinereducers.html"><code class="language-js" >combineReducers</code></a> utility function to make this pattern easier. However, it’s important to note that <code class="language-js" >combineReducers</code> is <em>not</em> required—it is simply a utility function for the common use case of having a single reducer function per state slice, with plain JavaScript objects for the data.</p>
+<p>Many users later want to try to share data between two reducers, but find that <code class="language-js" >combineReducers</code> does not allow them to do so. There are several approaches that can be used:</p>
 <ul>
 <li>If a reducer needs to know data from another slice of state, the state tree shape may need to be reorganized so that a single reducer is handling more of the data.</li>
-<li>You may need to write some custom functions for handling some of these actions. This may require replacing <code class="language-js >combineReducers</code> with your own top-level reducer function. You can also use a utility such as <a href="../../github.com/redux-utilities/reduce-reducers.html">reduce-reducers</a> to run <code class="language-js >combineReducers</code> to handle most actions, but also run a more specialized reducer for specific actions that cross state slices.</li>
-<li><a href="../tutorials/fundamentals/part-4-store.html#middleware">Middleware with async logic</a> such as <a href="../../github.com/reduxjs/redux-thunk.html">redux-thunk</a> have access to the entire state through <code class="language-js >getState()</code>. An action creator can retrieve additional data from the state and put it in an action, so that each reducer has enough information to update its own state slice.</li>
+<li>You may need to write some custom functions for handling some of these actions. This may require replacing <code class="language-js" >combineReducers</code> with your own top-level reducer function. You can also use a utility such as <a href="../../github.com/redux-utilities/reduce-reducers.html">reduce-reducers</a> to run <code class="language-js" >combineReducers</code> to handle most actions, but also run a more specialized reducer for specific actions that cross state slices.</li>
+<li><a href="../tutorials/fundamentals/part-4-store.html#middleware">Middleware with async logic</a> such as <a href="../../github.com/reduxjs/redux-thunk.html">redux-thunk</a> have access to the entire state through <code class="language-js" >getState()</code>. An action creator can retrieve additional data from the state and put it in an action, so that each reducer has enough information to update its own state slice.</li>
 </ul>
-<p>In general, remember that reducers are just functions—you can organize them and subdivide them any way you want, and you are encouraged to break them down into smaller, reusable functions (“reducer composition”). While you do so, you may pass a custom third argument from a parent reducer if a child reducer needs additional data to calculate its next state. You just need to make sure that together they follow the basic rules of reducers: <code class="language-js >(state, action) =&gt; newState</code>, and update state immutably rather than mutating it directly.</p>
+<p>In general, remember that reducers are just functions—you can organize them and subdivide them any way you want, and you are encouraged to break them down into smaller, reusable functions (“reducer composition”). While you do so, you may pass a custom third argument from a parent reducer if a child reducer needs additional data to calculate its next state. You just need to make sure that together they follow the basic rules of reducers: <code class="language-js" >(state, action) =&gt; newState</code>, and update state immutably rather than mutating it directly.</p>
 <h4 id="further-information"><span id="further-information" class="anchor enhancedAnchor_2LWZ"></span>Further information<a href="#further-information" class="hash-link" title="Direct link to heading">#</a></h4>
 <p><strong>Documentation</strong></p>
 <ul>
@@ -144,8 +132,8 @@
 <li><a href="../../stackoverflow.com/questions/34427851/reducing-an-entire-subtree-with-redux-combinereducers.html">Stack Overflow: Reducing an entire subtree with redux combineReducers</a></li>
 <li><a href="../../invalidpatent.wordpress.com/2016/02/18/sharing-state-between-redux-reducers/index.html">Sharing State Between Redux Reducers</a></li>
 </ul>
-<h3 id="do-i-have-to-use-the-switch-statement-to-handle-actions"><span id="do-i-have-to-use-the-switch-statement-to-handle-actions" class="anchor enhancedAnchor_2LWZ"></span>Do I have to use the <code class="language-js >switch</code> statement to handle actions?<a href="#do-i-have-to-use-the-switch-statement-to-handle-actions" class="hash-link" title="Direct link to heading">#</a></h3>
-<p>No. You are welcome to use any approach you’d like to respond to an action in a reducer. The <code class="language-js >switch</code> statement is the most common approach, but it’s fine to use <code class="language-js >if</code> statements, a lookup table of functions, or to create a function that abstracts this away. In fact, while Redux does require that action objects contain a <code class="language-js >type</code> field, your reducer logic doesn’t even have to rely on that to handle the action. That said, the standard approach is definitely using a switch statement or a lookup table based on <code class="language-js >type</code>.</p>
+<h3 id="do-i-have-to-use-the-switch-statement-to-handle-actions"><span id="do-i-have-to-use-the-switch-statement-to-handle-actions" class="anchor enhancedAnchor_2LWZ"></span>Do I have to use the <code class="language-js" >switch</code> statement to handle actions?<a href="#do-i-have-to-use-the-switch-statement-to-handle-actions" class="hash-link" title="Direct link to heading">#</a></h3>
+<p>No. You are welcome to use any approach you’d like to respond to an action in a reducer. The <code class="language-js" >switch</code> statement is the most common approach, but it’s fine to use <code class="language-js" >if</code> statements, a lookup table of functions, or to create a function that abstracts this away. In fact, while Redux does require that action objects contain a <code class="language-js" >type</code> field, your reducer logic doesn’t even have to rely on that to handle the action. That said, the standard approach is definitely using a switch statement or a lookup table based on <code class="language-js" >type</code>.</p>
 <h4 id="further-information-1"><span id="further-information-1" class="anchor enhancedAnchor_2LWZ"></span>Further information<a href="#further-information-1" class="hash-link" title="Direct link to heading">#</a></h4>
 <p><strong>Documentation</strong></p>
 <ul>
@@ -167,8 +155,8 @@
 <li><a href="#table-of-contents" class="table-of-contents__link">Table of Contents</a></li>
 <li><a href="#reducers" class="table-of-contents__link">Reducers</a>
 <ul>
-<li><a href="#how-do-i-share-state-between-two-reducers-do-i-have-to-use-combinereducers" class="table-of-contents__link">How do I share state between two reducers? Do I have to use <code class="language-js >combineReducers</code>?</a></li>
-<li><a href="#do-i-have-to-use-the-switch-statement-to-handle-actions" class="table-of-contents__link">Do I have to use the <code class="language-js >switch</code> statement to handle actions?</a></li>
+<li><a href="#how-do-i-share-state-between-two-reducers-do-i-have-to-use-combinereducers" class="table-of-contents__link">How do I share state between two reducers? Do I have to use <code class="language-js" >combineReducers</code>?</a></li>
+<li><a href="#do-i-have-to-use-the-switch-statement-to-handle-actions" class="table-of-contents__link">Do I have to use the <code class="language-js" >switch</code> statement to handle actions?</a></li>
 </ul></li>
 </ul>
 

@@ -1,13 +1,6 @@
 <a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 <a href="../official/introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="../official/tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../official/api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../official/faq.html" class="navbar__item navbar__link">FAQ</a><a href="../official/style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/../github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../official/introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 - <a href="../official/introduction/getting-started.html" class="menu__link">Getting Started</a>
@@ -46,30 +39,6 @@
     - <a href="../official/tutorials/fundamentals/part-7-standard-patterns.html" class="menu__link">Standard Redux Patterns</a>
     - <a href="../official/tutorials/fundamentals/part-8-modern-redux.html" class="menu__link">Modern Redux with Redux Toolkit</a>
 - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Recipes</a>
-  - <a href="../recipe-index.html" class="menu__link">Recipes: Index</a>
-  - <a href="../configuring-your-store.html" class="menu__link">Configuring Your Store</a>
-  - <a href="../usage-with-typescript.html" class="menu__link">Usage With TypeScript</a>
-  - <a href="../migrating-to-redux.html" class="menu__link">Migrating to Redux</a>
-  - <a href="../using-object-spread-operator.html" class="menu__link">Using Object Spread Operator</a>
-  - <a href="../reducing-boilerplate.html" class="menu__link">Reducing Boilerplate</a>
-  - <a href="../server-rendering.html" class="menu__link">Server Rendering</a>
-  - <a href="../writing-tests.html" class="menu__link">Writing Tests</a>
-  - <a href="../computing-derived-data.html" class="menu__link">Computing Derived Data</a>
-  - <a href="../implementing-undo-history.html" class="menu__link">Implementing Undo History</a>
-  - <a href="../isolating-redux-sub-apps.html" class="menu__link">Isolating Redux Sub-Apps</a>
-  - <a href="../code-splitting.html" class="menu__link">Code Splitting</a>
-  - <a href="../troubleshooting.html" class="menu__link">Troubleshooting</a>
-  - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Structuring Reducers</a>
-    - <a href="structuring-reducers.html" class="menu__link">Structuring Reducers</a>
-    - <a href="prerequisite-concepts.html" class="menu__link">Prerequisite Concepts</a>
-    - <a href="basic-reducer-structure.html" class="menu__link">Basic Reducer Structure</a>
-    - <a href="splitting-reducer-logic.html" class="menu__link">Splitting Reducer Logic</a>
-    - <a href="refactoring-reducer-example.html" class="menu__link">Refactoring Reducers Example</a>
-    - <a href="using-combinereducers.html" class="menu__link">Using combineReducers</a>
-    - <a href="beyond-combinereducers.html" class="menu__link">Beyond combineReducers</a>
-    - <a href="normalizing-state-shape.html" class="menu__link">Normalizing State Shape</a>
-    - <a href="updating-normalized-data.html" class="menu__link">Updating Normalized Data</a>
-    - <a href="reusing-reducer-logic.html" class="menu__link">Reusing Reducer Logic</a>
     - <a href="immutable-update-patterns.html" class="menu__link menu__link--active active">Immutable Update Patterns</a>
     - <a href="initializing-state.html" class="menu__link">Initializing State</a>
 - <a href="#!" class="menu__link menu__link--sublist">Understanding Redux</a>
@@ -146,11 +115,7 @@ Unfortunately, the process of correctly applying immutable updates to deeply nes
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Obviously, each layer of nesting makes this harder to read, and gives more chances to make mistakes. This is one of several reasons why you are encouraged to keep your state flattened, and compose reducers as much as possible.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Obviously, each layer of nesting makes this harder to read, and gives more chances to make mistakes. This is one of several reasons why you are encouraged to keep your state flattened, and compose reducers as much as possible.
 
 ##### <span id="common-mistake-1-new-variables-that-point-to-the-same-objects" class="anchor enhancedAnchor_2LWZ"></span>Common Mistake \#1: New variables that point to the same objects<a href="#common-mistake-1-new-variables-that-point-to-the-same-objects" class="hash-link" title="Direct link to heading">#</a>
 
@@ -174,11 +139,7 @@ Defining a new variable does _not_ create a new actual object - it only creates 
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-This function does correctly return a shallow copy of the top-level state object, but because the `nestedState` variable was still pointing at the existing object, the state was directly mutated.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>This function does correctly return a shallow copy of the top-level state object, but because the `nestedState` variable was still pointing at the existing object, the state was directly mutated.
 
 ##### <span id="common-mistake-2-only-making-a-shallow-copy-of-one-level" class="anchor enhancedAnchor_2LWZ"></span>Common Mistake \#2: Only making a shallow copy of one level<a href="#common-mistake-2-only-making-a-shallow-copy-of-one-level" class="hash-link" title="Direct link to heading">#</a>
 
@@ -200,11 +161,7 @@ Another common version of this error looks like this:
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> newState</span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Doing a shallow copy of the top level is _not_ sufficient - the `nestedState` object should be copied as well.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Doing a shallow copy of the top level is _not_ sufficient - the `nestedState` object should be copied as well.
 
 ## <span id="inserting-and-removing-items-in-arrays" class="anchor enhancedAnchor_2LWZ"></span>Inserting and Removing Items in Arrays<a href="#inserting-and-removing-items-in-arrays" class="hash-link" title="Direct link to heading">#</a>
 
@@ -214,11 +171,11 @@ Normally, a Javascript array's contents are modified using mutative functions li
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token spread operator" style="color: #f8f8f2">...</span><span class="token plain">array</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">slice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token number" style="color: #ae81ff">0</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">index</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token spread operator" style="color: #f8f8f2">...</span><span class="token plain">array</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">slice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token number" style="color: #ae81ff">0</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">index</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
 
 <span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">item</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token spread operator" style="color: #f8f8f2">...</span><span class="token plain">array</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">slice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">index</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token spread operator" style="color: #f8f8f2">...</span><span class="token plain">array</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">slice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">index</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token plain"></span>
 
@@ -228,21 +185,17 @@ Normally, a Javascript array's contents are modified using mutative functions li
 
 <span class="token plain"></span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">removeItem</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">array</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token spread operator" style="color: #f8f8f2">...</span><span class="token plain">array</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">slice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token number" style="color: #ae81ff">0</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">index</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token spread operator" style="color: #f8f8f2">...</span><span class="token plain">array</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">slice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">index</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">+</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token spread operator" style="color: #f8f8f2">...</span><span class="token plain">array</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">slice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token number" style="color: #ae81ff">0</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">index</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token spread operator" style="color: #f8f8f2">...</span><span class="token plain">array</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">slice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">index</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">+</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-However, remember that the key is that the _original in-memory reference_ is not modified. **As long as we make a copy first, we can safely mutate the copy**. Note that this is true for both arrays and objects, but nested values still must be updated using the same rules.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>However, remember that the key is that the _original in-memory reference_ is not modified. **As long as we make a copy first, we can safely mutate the copy**. Note that this is true for both arrays and objects, but nested values still must be updated using the same rules.
 
 This means that we could also write the insert and remove functions like this:
 
 <span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">insertItem</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">array</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">let</span><span class="token plain"> newArray </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> array</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">slice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">let</span><span class="token plain"> newArray </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> array</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">slice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"> newArray</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">splice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">index</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">0</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">item</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> newArray</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">splice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">index</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">0</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">item</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> newArray</span>
 
@@ -252,33 +205,25 @@ This means that we could also write the insert and remove functions like this:
 
 <span class="token plain"></span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">removeItem</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">array</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">let</span><span class="token plain"> newArray </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> array</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">slice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">let</span><span class="token plain"> newArray </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> array</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">slice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"> newArray</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">splice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">index</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> newArray</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">splice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">index</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> newArray</span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-The remove function could also be implemented as:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>The remove function could also be implemented as:
 
 <span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">removeItem</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">array</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> array</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">filter</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">item</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> index</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> index </span><span class="token operator" style="color: #f8f8f2">!==</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">index</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> array</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">filter</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">item</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> index</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> index </span><span class="token operator" style="color: #f8f8f2">!==</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">index</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-## <span id="updating-an-item-in-an-array" class="anchor enhancedAnchor_2LWZ"></span>Updating an Item in an Array<a href="#updating-an-item-in-an-array" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>## <span id="updating-an-item-in-an-array" class="anchor enhancedAnchor_2LWZ"></span>Updating an Item in an Array<a href="#updating-an-item-in-an-array" class="hash-link" title="Direct link to heading">#</a>
 
 Updating one item in an array can be accomplished by using `Array.map`, returning a new value for the item we want to update, and returning the existing values for all other items:
 
 <span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">updateObjectInArray</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">array</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> array</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">map</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">item</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> index</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> array</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">map</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">item</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> index</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">if</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">index </span><span class="token operator" style="color: #f8f8f2">!==</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">index</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
@@ -302,17 +247,13 @@ Updating one item in an array can be accomplished by using `Array.map`, returnin
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-## <span id="immutable-update-utility-libraries" class="anchor enhancedAnchor_2LWZ"></span>Immutable Update Utility Libraries<a href="#immutable-update-utility-libraries" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>## <span id="immutable-update-utility-libraries" class="anchor enhancedAnchor_2LWZ"></span>Immutable Update Utility Libraries<a href="#immutable-update-utility-libraries" class="hash-link" title="Direct link to heading">#</a>
 
 Because writing immutable update code can become tedious, there are a number of utility libraries that try to abstract out the process. These libraries vary in APIs and usage, but all try to provide a shorter and more succinct way of writing these updates. For example, [Immer](../../../github.com/immerjs/immer.html) makes immutable updates a simple function and plain JavaScript objects:
 
 <span class="token keyword" style="color: #f92672">var</span><span class="token plain"> usersState </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> name</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'John Doe'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> address</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> city</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'London'</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">var</span><span class="token plain"> newState </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> immer</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">produce</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">usersState</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token parameter">draftState</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword" style="color: #f92672">var</span><span class="token plain"> newState </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> immer</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">produce</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">usersState</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token parameter">draftState</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
 <span class="token plain"> draftState</span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token number" style="color: #ae81ff">0</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">name</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'Jon Doe'</span><span class="token plain"></span>
 
@@ -320,17 +261,9 @@ Because writing immutable update code can become tedious, there are a number of 
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">//nested update similar to mutable way</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>Some, like [dot-prop-immutable](../../../github.com/debitoor/dot-prop-immutable.html), take string paths for commands:
 
-Copy
-
-Some, like [dot-prop-immutable](../../../github.com/debitoor/dot-prop-immutable.html), take string paths for commands:
-
-<span class="token plain">state </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> dotProp</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">set</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">state</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token template-string template-punctuation string" style="color: #a6e22e">\`</span><span class="token template-string string" style="color: #a6e22e">todos.</span><span class="token template-string interpolation interpolation-punctuation punctuation" style="color: #f8f8f2">${</span><span class="token template-string interpolation">index</span><span class="token template-string interpolation interpolation-punctuation punctuation" style="color: #f8f8f2">}</span><span class="token template-string string" style="color: #a6e22e">.complete</span><span class="token template-string template-punctuation string" style="color: #a6e22e">\`</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token boolean" style="color: #ae81ff">true</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-Others, like [immutability-helper](../../../github.com/kolodny/immutability-helper.html) (a fork of the now-deprecated React Immutability Helpers addon), use nested values and helper functions:
+<span class="token plain">state </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> dotProp</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">set</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">state</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token template-string template-punctuation string" style="color: #a6e22e">\`</span><span class="token template-string string" style="color: #a6e22e">todos.</span><span class="token template-string interpolation interpolation-punctuation punctuation" style="color: #f8f8f2">${</span><span class="token template-string interpolation">index</span><span class="token template-string interpolation interpolation-punctuation punctuation" style="color: #f8f8f2">}</span><span class="token template-string string" style="color: #a6e22e">.complete</span><span class="token template-string template-punctuation string" style="color: #a6e22e">\`</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token boolean" style="color: #ae81ff">true</span><span class="token punctuation" style="color: #f8f8f2">)</span>Others, like [immutability-helper](../../../github.com/kolodny/immutability-helper.html) (a fork of the now-deprecated React Immutability Helpers addon), use nested values and helper functions:
 
 <span class="token keyword" style="color: #f92672">var</span><span class="token plain"> collection </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">2</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> a</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token number" style="color: #ae81ff">12</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">17</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">15</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token plain"></span>
 
@@ -338,11 +271,7 @@ Others, like [immutability-helper](../../../github.com/kolodny/immutability-help
 
 <span class="token plain"> </span><span class="token number" style="color: #ae81ff">2</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> a</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> $splice</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">13</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">14</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-They can provide a useful alternative to writing manual immutable update logic.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>They can provide a useful alternative to writing manual immutable update logic.
 
 A list of many immutable update utilities can be found in the [Immutable Data\#Immutable Update Utilities](../../../github.com/markerikson/redux-ecosystem-links/blob/master/immutable-data.html#immutable-update-utilities) section of the [Redux Addons Catalog](../../../github.com/markerikson/redux-ecosystem-links.html).
 
@@ -352,7 +281,7 @@ Our **[Redux Toolkit](../../../redux-toolkit.js.org/index.html)** package includ
 
 This allows immutable update logic to be written in a much simpler way. Here's what the [nested data example](#correct-approach-copying-all-levels-of-nested-data) might look like using `createReducer`:
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createReducer </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > createReducer </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -382,17 +311,11 @@ This allows immutable update logic to be written in a much simpler way. Here's w
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-This is clearly _much_ shorter and easier to read. However, **this _only_ works correctly if you are using the "magic" `createReducer` function from Redux Toolkit** that wraps this reducer in Immer's [`produce` function](../../../immerjs.github.io/immer/produce/index.html). **If this reducer is used without Immer, it will actually mutate the state!**. It's also not obvious just by looking at the code that this function is actually safe and updates the state immutably. Please make sure you understand the concepts of immutable updates fully. If you do use this, it may help to add some comments to your code that explain your reducers are using Redux Toolkit and Immer.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>This is clearly _much_ shorter and easier to read. However, **this _only_ works correctly if you are using the "magic" `createReducer` function from Redux Toolkit** that wraps this reducer in Immer's [`produce` function](../../../immerjs.github.io/immer/produce/index.html). **If this reducer is used without Immer, it will actually mutate the state!**. It's also not obvious just by looking at the code that this function is actually safe and updates the state immutably. Please make sure you understand the concepts of immutable updates fully. If you do use this, it may help to add some comments to your code that explain your reducers are using Redux Toolkit and Immer.
 
 In addition, Redux Toolkit's [`createSlice` utility](../../../redux-toolkit.js.org/api/createSlice-2.html) will auto-generate action creators and action types based on the reducer functions you provide, with the same Immer-powered update capabilities inside.
 
 <a href="reusing-reducer-logic.html" class="pagination-nav__link"></a>
-
-Previous
 
 « Reusing Reducer Logic
 
@@ -427,4 +350,4 @@ Initializing State »
 - [![Deploys by Netlify](../../../www.netlify.com/img/global/badges/netlify-color-accent.svg)](../../../www.netlify.com/index.html)
 
 <a href="../official/index.html" class="footerLogoLink_MyFc"><img src="../official/../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

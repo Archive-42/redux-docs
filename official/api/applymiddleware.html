@@ -1071,7 +1071,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="applymiddlewaremiddleware"
                           ></a
-                          ><code class="language-js >applyMiddleware(...middleware)</code
+                          ><code class="language-js" >applyMiddleware(...middleware)</code
                           ><a
                             class="hash-link"
                             href="#applymiddlewaremiddleware"
@@ -1085,7 +1085,7 @@
                           store&#x27;s
                           <a
                             href="https://redux.js.org/api/store#dispatchaction"
-                            ><code class="language-js >dispatch</code></a
+                            ><code class="language-js" >dispatch</code></a
                           >
                           method for fun and profit. The key feature of
                           middleware is that it is composable. Multiple
@@ -1121,7 +1121,7 @@
                           functions. They would receive
                           <a
                             href="https://redux.js.org/api/store#dispatchaction"
-                            ><code class="language-js >dispatch</code></a
+                            ><code class="language-js" >dispatch</code></a
                           >
                           as an argument and may call it asynchronously. Such
                           functions are called <em>thunks</em>. Another example
@@ -1144,7 +1144,7 @@
                         <p>
                           Middleware is not baked into
                           <a href="https://redux.js.org/api/createstore"
-                            ><code class="language-js >createStore</code></a
+                            ><code class="language-js" >createStore</code></a
                           >
                           and is not a fundamental part of the Redux
                           architecture, but we consider it useful enough to be
@@ -1152,7 +1152,7 @@
                           single standard way to extend
                           <a
                             href="https://redux.js.org/api/store#dispatchaction"
-                            ><code class="language-js >dispatch</code></a
+                            ><code class="language-js" >dispatch</code></a
                           >
                           in the ecosystem, and different middleware may compete
                           in expressiveness and utility.
@@ -1173,34 +1173,34 @@
                         </h4>
                         <ul>
                           <li>
-                            <code class="language-js >...middleware</code> (<em>arguments</em>):
+                            <code class="language-js" >...middleware</code> (<em>arguments</em>):
                             Functions that conform to the Redux
                             <em>middleware API</em>. Each middleware receives
                             <a href="https://redux.js.org/api/store"
-                              ><code class="language-js >Store</code></a
+                              ><code class="language-js" >Store</code></a
                             >&#x27;s
                             <a
                               href="https://redux.js.org/api/store#dispatchaction"
-                              ><code class="language-js >dispatch</code></a
+                              ><code class="language-js" >dispatch</code></a
                             >
                             and
                             <a href="https://redux.js.org/api/store#getState"
-                              ><code class="language-js >getState</code></a
+                              ><code class="language-js" >getState</code></a
                             >
                             functions as named arguments, and returns a
                             function. That function will be given the
-                            <code class="language-js >next</code> middleware&#x27;s dispatch method,
+                            <code class="language-js" >next</code> middleware&#x27;s dispatch method,
                             and is expected to return a function of
-                            <code class="language-js >action</code> calling
-                            <code class="language-js >next(action)</code> with a potentially
+                            <code class="language-js" >action</code> calling
+                            <code class="language-js" >next(action)</code> with a potentially
                             different argument, or at a different time, or maybe
                             not calling it at all. The last middleware in the
                             chain will receive the real store&#x27;s
                             <a
                               href="https://redux.js.org/api/store#dispatchaction"
-                              ><code class="language-js >dispatch</code></a
+                              ><code class="language-js" >dispatch</code></a
                             >
-                            method as the <code class="language-js >next</code> parameter, thus
+                            method as the <code class="language-js" >next</code> parameter, thus
                             ending the chain. So, the middleware signature is
                             <code class="language-js 
                               >({ getState, dispatch }) =&gt; next =&gt;
@@ -1225,12 +1225,12 @@
                         <p>
                           (<em>Function</em>) A store enhancer that applies the
                           given middleware. The store enhancer signature is
-                          <code class="language-js >createStore =&gt; createStore</code> but the
+                          <code class="language-js" >createStore =&gt; createStore</code> but the
                           easiest way to apply it is to pass it to
                           <a href="https://redux.js.org/api/createstore"
-                            ><code class="language-js >createStore()</code></a
+                            ><code class="language-js" >createStore()</code></a
                           >
-                          as the last <code class="language-js >enhancer</code> argument.
+                          as the last <code class="language-js" >enhancer</code> argument.
                         </p>
                         <h4>
                           <a
@@ -4378,11 +4378,11 @@
                               Middleware only wraps the store&#x27;s
                               <a
                                 href="https://redux.js.org/api/store#dispatchaction"
-                                ><code class="language-js >dispatch</code></a
+                                ><code class="language-js" >dispatch</code></a
                               >
                               function. Technically, anything a middleware can
                               do, you can do manually by wrapping every
-                              <code class="language-js >dispatch</code> call, but it&#x27;s easier
+                              <code class="language-js" >dispatch</code> call, but it&#x27;s easier
                               to manage this in a single place and define action
                               transformations on the scale of the whole project.
                             </p>
@@ -4390,8 +4390,8 @@
                           <li>
                             <p>
                               If you use other store enhancers in addition to
-                              <code class="language-js >applyMiddleware</code>, make sure to put
-                              <code class="language-js >applyMiddleware</code> before them in the
+                              <code class="language-js" >applyMiddleware</code>, make sure to put
+                              <code class="language-js" >applyMiddleware</code> before them in the
                               composition chain because the middleware is
                               potentially asynchronous. For example, it should
                               go before
@@ -4738,10 +4738,10 @@
                           <li>
                             <p>
                               Ever wondered what
-                              <code class="language-js >applyMiddleware</code> itself is? It ought
+                              <code class="language-js" >applyMiddleware</code> itself is? It ought
                               to be an extension mechanism more powerful than
                               the middleware itself. Indeed,
-                              <code class="language-js >applyMiddleware</code> is an example of the
+                              <code class="language-js" >applyMiddleware</code> is an example of the
                               most powerful Redux extension mechanism called
                               <a
                                 href="https://redux.js.org/understanding/thinking-in-redux/glossary#store-enhancer"
@@ -4774,7 +4774,7 @@
                             <p>
                               To apply multiple store enhancers, you may use
                               <a href="https://redux.js.org/api/compose"
-                                ><code class="language-js >compose()</code></a
+                                ><code class="language-js" >compose()</code></a
                               >.
                             </p>
                           </li>

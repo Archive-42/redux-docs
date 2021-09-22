@@ -19,12 +19,6 @@
 
 <ul>
 
-<ul>
-
-
-
-<ul>
-
 
 
 
@@ -39,13 +33,7 @@
 </ul></li>
 
 
-
-</ul></li>
-
-<ul>
-
-</ul></li>
-</ul></li>
+</li>
 <li><a href="#!" class="menu__link menu__link--sublist">FAQ</a>
 <ul>
 
@@ -56,12 +44,6 @@
 </ul></li>
 
 
-</ul></li>
-<li><a href="#!" class="menu__link menu__link--sublist">Redux Toolkit</a>
-<ul>
-
-</ul></li>
-</ul>
 <h1 id="migrating-to-redux"><span id="migrating-to-redux" class="anchor enhancedAnchor_2LWZ"></span>Migrating to Redux<a href="#migrating-to-redux" class="hash-link" title="Direct link to heading">#</a></h1>
 <p>Redux is not a monolithic framework, but a set of contracts and a <a href="../api/api-reference.html">few functions that make them work together</a>. The majority of your “Redux code” will not even use Redux APIs, as most of the time you’ll be writing functions.</p>
 <p>This makes it easy to migrate both to and from Redux. We don’t want to lock you in!</p>
@@ -69,10 +51,10 @@
 <p><a href="../understanding/thinking-in-redux/glossary.html#reducer">Reducers</a> capture “the essence” of Flux Stores, so it’s possible to gradually migrate an existing Flux project towards Redux, whether you are using <a href="../../github.com/acdlite/flummox.html">Flummox</a>, <a href="../../github.com/goatslacker/alt.html">Alt</a>, <a href="../../github.com/facebook/flux.html">traditional Flux</a>, or any other Flux library.</p>
 <p>Your process will look like this:</p>
 <ul>
-<li><p>Create a function called <code class="language-js >createFluxStore(reducer)</code> that creates a Flux store compatible with your existing app from a reducer function. Internally it might look similar to <a href="../api/createstore.html"><code class="language-js >createStore</code></a> (<a href="../../github.com/reduxjs/redux/blob/v4.0.5/src/createStore.html">source</a>) implementation from Redux. Its dispatch handler should just call the <code class="language-js >reducer</code> for any action, store the next state, and emit change.</p></li>
-<li><p>This allows you to gradually rewrite every Flux Store in your app as a reducer, but still export <code class="language-js >createFluxStore(reducer)</code> so the rest of your app is not aware that this is happening and sees the Flux stores.</p></li>
+<li><p>Create a function called <code class="language-js" >createFluxStore(reducer)</code> that creates a Flux store compatible with your existing app from a reducer function. Internally it might look similar to <a href="../api/createstore.html"><code class="language-js" >createStore</code></a> (<a href="../../github.com/reduxjs/redux/blob/v4.0.5/src/createStore.html">source</a>) implementation from Redux. Its dispatch handler should just call the <code class="language-js" >reducer</code> for any action, store the next state, and emit change.</p></li>
+<li><p>This allows you to gradually rewrite every Flux Store in your app as a reducer, but still export <code class="language-js" >createFluxStore(reducer)</code> so the rest of your app is not aware that this is happening and sees the Flux stores.</p></li>
 <li><p>As you rewrite your Stores, you will find that you need to avoid certain Flux anti-patterns such as fetching API inside the Store, or triggering actions inside the Stores. Your Flux code will be easier to follow once you port it to be based on reducers!</p></li>
-<li><p>When you have ported all of your Flux Stores to be implemented on top of reducers, you can replace the Flux library with a single Redux store, and combine those reducers you already have into one using <a href="../api/combinereducers.html"><code class="language-js >combineReducers(reducers)</code></a>.</p></li>
+<li><p>When you have ported all of your Flux Stores to be implemented on top of reducers, you can replace the Flux library with a single Redux store, and combine those reducers you already have into one using <a href="../api/combinereducers.html"><code class="language-js" >combineReducers(reducers)</code></a>.</p></li>
 <li><p>Now all that’s left to do is to port the UI to <a href="../tutorials/fundamentals/part-5-ui-react.html">use React-Redux</a> or equivalent.</p></li>
 <li><p>Finally, you might want to begin using some Redux idioms like middleware to further simplify your asynchronous code.</p></li>
 </ul>

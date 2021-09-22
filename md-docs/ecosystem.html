@@ -79,13 +79,7 @@
 </ul></li>
 
 
-
-</ul></li>
-
-<ul>
-
-</ul></li>
-</ul></li>
+</li>
 <li><a href="#!" class="menu__link menu__link--sublist">FAQ</a>
 <ul>
 
@@ -96,12 +90,6 @@
 </ul></li>
 
 
-</ul></li>
-<li><a href="#!" class="menu__link menu__link--sublist">Redux Toolkit</a>
-<ul>
-
-</ul></li>
-</ul>
 <h1 id="ecosystem"><span id="ecosystem" class="anchor enhancedAnchor_2LWZ"></span>Ecosystem<a href="#ecosystem" class="hash-link" title="Direct link to heading">#</a></h1>
 <p>Redux is a tiny library, but its contracts and APIs are carefully chosen to spawn an ecosystem of tools and extensions, and the community has created a wide variety of helpful addons, libraries, and tools. You don’t need to use any of these addons to use Redux, but they can help make it easier to implement features and solve problems in your application.</p>
 <p>For an extensive catalog of libraries, addons, and tools related to Redux, check out the <a href="../../github.com/markerikson/redux-ecosystem-links.html">Redux Ecosystem Links</a> list. Also, the <a href="../../github.com/markerikson/react-redux-links.html">React/Redux Links</a> list contains tutorials and other useful resources for anyone learning React or Redux.</p>
@@ -174,9 +162,9 @@ Redux bindings for Polymer</p>
 <h2 id="reducers"><span id="reducers" class="anchor enhancedAnchor_2LWZ"></span>Reducers<a href="#reducers" class="hash-link" title="Direct link to heading">#</a></h2>
 <h4 id="reducer-combination"><span id="reducer-combination" class="anchor enhancedAnchor_2LWZ"></span>Reducer Combination<a href="#reducer-combination" class="hash-link" title="Direct link to heading">#</a></h4>
 <p><strong><a href="../../gitlab.com/ryo33/combine-section-reducers.html">ryo33/combineSectionReducers</a></strong><br />
-An expanded version of <code class="language-js >combineReducers</code>, which allows passing <code class="language-js >state</code> as a third argument to all slice reducers.</p>
+An expanded version of <code class="language-js" >combineReducers</code>, which allows passing <code class="language-js" >state</code> as a third argument to all slice reducers.</p>
 <p><strong><a href="../../github.com/KodersLab/topologically-combine-reducers.html">KodersLab/topologically-combine-reducers</a></strong><br />
-A <code class="language-js >combineReducers</code> variation that allows defining cross-slice dependencies for ordering and data passing</p>
+A <code class="language-js" >combineReducers</code> variation that allows defining cross-slice dependencies for ordering and data passing</p>
 <p><span class="token keyword" style="color:#F92672">var</span><span class="token plain"> masterReducer </span><span class="token operator" style="color:#F8F8F2">=</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">topologicallyCombineReducers</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"> auth</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> users</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"> todos </span><span class="token punctuation" style="color:#F8F8F2">}</span><span class="token punctuation" style="color:#F8F8F2">,</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token comment" style="color:#c6cad2">// define the dependency tree</span><span class="token plain"></span></p>
@@ -339,7 +327,7 @@ Immutable updates with normal mutative code, using Proxies</p>
 <h2 id="side-effects"><span id="side-effects" class="anchor enhancedAnchor_2LWZ"></span>Side Effects<a href="#side-effects" class="hash-link" title="Direct link to heading">#</a></h2>
 <h4 id="widely-used"><span id="widely-used" class="anchor enhancedAnchor_2LWZ"></span>Widely Used<a href="#widely-used" class="hash-link" title="Direct link to heading">#</a></h4>
 <p><strong><a href="../../github.com/reduxjs/redux-thunk.html">gaearon/redux-thunk</a></strong><br />
-Dispatch functions, which are called and given <code class="language-js >dispatch</code> and <code class="language-js >getState</code> as parameters. This acts as a loophole for AJAX calls and other async behavior.</p>
+Dispatch functions, which are called and given <code class="language-js" >dispatch</code> and <code class="language-js" >getState</code> as parameters. This acts as a loophole for AJAX calls and other async behavior.</p>
 <p><strong>Best for</strong>: getting started, simple async and complex synchronous logic.</p>
 <p><span class="token keyword" style="color:#F92672">function</span><span class="token plain"> </span><span class="token function" style="color:#E6D874">fetchData</span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token parameter">someValue</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token keyword control-flow" style="color:#F92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">(</span><span class="token parameter">dispatch</span><span class="token parameter punctuation" style="color:#F8F8F2">,</span><span class="token parameter"> getState</span><span class="token punctuation" style="color:#F8F8F2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:#F8F8F2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color:#F8F8F2">{</span><span class="token plain"></span></p>
@@ -591,7 +579,7 @@ Middleware that throws an error when you try to mutate your state either inside 
 <p><strong><a href="../../github.com/flexport/mutation-sentinel.html">flexport/mutation-sentinel</a></strong><br />
 Helps you deeply detect mutations at runtime and enforce immutability in your codebase.</p>
 <p><strong><a href="../../github.com/mmahalwy/redux-pure-connect.html">mmahalwy/redux-pure-connect</a></strong><br />
-Check and log whether react-redux’s connect method is passed <code class="language-js >mapState</code> functions that create impure props.</p>
+Check and log whether react-redux’s connect method is passed <code class="language-js" >mapState</code> functions that create impure props.</p>
 <h2 id="testing"><span id="testing" class="anchor enhancedAnchor_2LWZ"></span>Testing<a href="#testing" class="hash-link" title="Direct link to heading">#</a></h2>
 <p><strong><a href="../../github.com/reduxjs/redux-mock-store.html">arnaudbenard/redux-mock-store</a></strong><br />
 A mock store that saves dispatched actions in an array for assertions</p>

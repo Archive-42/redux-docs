@@ -1071,7 +1071,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="combinereducersreducers"
                           ></a
-                          ><code class="language-js >combineReducers(reducers)</code
+                          ><code class="language-js" >combineReducers(reducers)</code
                           ><a
                             class="hash-link"
                             href="#combinereducersreducers"
@@ -1094,12 +1094,12 @@
                           >.
                         </p>
                         <p>
-                          The <code class="language-js >combineReducers</code> helper function turns
+                          The <code class="language-js" >combineReducers</code> helper function turns
                           an object whose values are different reducing
                           functions into a single reducing function you can pass
                           to
                           <a href="https://redux.js.org/api/createstore"
-                            ><code class="language-js >createStore</code></a
+                            ><code class="language-js" >createStore</code></a
                           >.
                         </p>
                         <p>
@@ -1107,9 +1107,9 @@
                           gathers their results into a single state object.
                           <strong
                             >The state produced by
-                            <code class="language-js >combineReducers()</code> namespaces the states
+                            <code class="language-js" >combineReducers()</code> namespaces the states
                             of each reducer under their keys as passed to
-                            <code class="language-js >combineReducers()</code></strong
+                            <code class="language-js" >combineReducers()</code></strong
                           >
                         </p>
                         <p>Example:</p>
@@ -1288,13 +1288,13 @@
                             myCounterReducer })</code
                           >
                           for the state shape to be
-                          <code class="language-js >{ todos, counter }</code>.
+                          <code class="language-js" >{ todos, counter }</code>.
                         </p>
                         <p>
                           A popular convention is to name reducers after the
                           state slices they manage, so you can use ES6 property
                           shorthand notation:
-                          <code class="language-js >combineReducers({ counter, todos })</code>. This
+                          <code class="language-js" >combineReducers({ counter, todos })</code>. This
                           is equivalent to writing
                           <code class="language-js 
                             >combineReducers({ counter: counter, todos: todos
@@ -1321,7 +1321,7 @@
                             manage their own slices of state, similar to how you
                             would have different Flux Stores to manage different
                             state. With Redux, there is just one store, but
-                            <code class="language-js >combineReducers</code> helps you keep the same
+                            <code class="language-js" >combineReducers</code> helps you keep the same
                             logical division between reducers.
                           </p>
                         </blockquote>
@@ -1341,7 +1341,7 @@
                         </h4>
                         <ol>
                           <li>
-                            <code class="language-js >reducers</code> (<em>Object</em>): An object
+                            <code class="language-js" >reducers</code> (<em>Object</em>): An object
                             whose values correspond to different reducing
                             functions that need to be combined into one. See the
                             notes below for some rules every passed reducer must
@@ -1351,12 +1351,12 @@
                         <blockquote>
                           <p>
                             Earlier documentation suggested the use of the ES6
-                            <code class="language-js >import * as reducers</code> syntax to obtain
+                            <code class="language-js" >import * as reducers</code> syntax to obtain
                             the reducers object. This was the source of a lot of
                             confusion, which is why we now recommend exporting a
                             single reducer obtained using
-                            <code class="language-js >combineReducers()</code> from
-                            <code class="language-js >reducers/index.js</code> instead. An example
+                            <code class="language-js" >combineReducers()</code> from
+                            <code class="language-js" >reducers/index.js</code> instead. An example
                             is included below.
                           </p>
                         </blockquote>
@@ -1376,7 +1376,7 @@
                         </h4>
                         <p>
                           (<em>Function</em>): A reducer that invokes every
-                          reducer inside the <code class="language-js >reducers</code> object, and
+                          reducer inside the <code class="language-js" >reducers</code> object, and
                           constructs a state object with the same shape.
                         </p>
                         <h4>
@@ -1402,54 +1402,54 @@
                         </p>
                         <p>
                           Any reducer passed to
-                          <code class="language-js >combineReducers</code> must satisfy these rules:
+                          <code class="language-js" >combineReducers</code> must satisfy these rules:
                         </p>
                         <ul>
                           <li>
                             <p>
                               For any action that is not recognized, it must
-                              return the <code class="language-js >state</code> given to it as the
+                              return the <code class="language-js" >state</code> given to it as the
                               first argument.
                             </p>
                           </li>
                           <li>
                             <p>
-                              It must never return <code class="language-js >undefined</code>. It is
+                              It must never return <code class="language-js" >undefined</code>. It is
                               too easy to do this by mistake via an early
-                              <code class="language-js >return</code> statement, so
-                              <code class="language-js >combineReducers</code> throws if you do that
+                              <code class="language-js" >return</code> statement, so
+                              <code class="language-js" >combineReducers</code> throws if you do that
                               instead of letting the error manifest itself
                               somewhere else.
                             </p>
                           </li>
                           <li>
                             <p>
-                              If the <code class="language-js >state</code> given to it is
-                              <code class="language-js >undefined</code>, it must return the initial
+                              If the <code class="language-js" >state</code> given to it is
+                              <code class="language-js" >undefined</code>, it must return the initial
                               state for this specific reducer. According to the
                               previous rule, the initial state must not be
-                              <code class="language-js >undefined</code> either. It is handy to
+                              <code class="language-js" >undefined</code> either. It is handy to
                               specify it with ES6 optional arguments syntax, but
                               you can also explicitly check the first argument
-                              for being <code class="language-js >undefined</code>.
+                              for being <code class="language-js" >undefined</code>.
                             </p>
                           </li>
                         </ul>
                         <p>
-                          While <code class="language-js >combineReducers</code> attempts to check
+                          While <code class="language-js" >combineReducers</code> attempts to check
                           that your reducers conform to some of these rules, you
                           should remember them, and do your best to follow them.
-                          <code class="language-js >combineReducers</code> will check your reducers
-                          by passing <code class="language-js >undefined</code> to them; this is
+                          <code class="language-js" >combineReducers</code> will check your reducers
+                          by passing <code class="language-js" >undefined</code> to them; this is
                           done even if you specify initial state to
                           <code class="language-js 
                             >Redux.createStore(combineReducers(...),
                             initialState)</code
                           >. Therefore, you <strong>must</strong> ensure your
                           reducers work properly when receiving
-                          <code class="language-js >undefined</code> as state, even if you never
+                          <code class="language-js" >undefined</code> as state, even if you never
                           intend for them to actually receive
-                          <code class="language-js >undefined</code> in your own code.
+                          <code class="language-js" >undefined</code> in your own code.
                         </p>
                         <h4>
                           <a
@@ -1472,7 +1472,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="reducerstodosjs"
                           ></a
-                          ><code class="language-js >reducers/todos.js</code
+                          ><code class="language-js" >reducers/todos.js</code
                           ><a
                             class="hash-link"
                             href="#reducerstodosjs"
@@ -1697,7 +1697,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="reducerscounterjs"
                           ></a
-                          ><code class="language-js >reducers/counter.js</code
+                          ><code class="language-js" >reducers/counter.js</code
                           ><a
                             class="hash-link"
                             href="#reducerscounterjs"
@@ -1926,7 +1926,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="reducersindexjs"
                           ></a
-                          ><code class="language-js >reducers/index.js</code
+                          ><code class="language-js" >reducers/index.js</code
                           ><a
                             class="hash-link"
                             href="#reducersindexjs"
@@ -2094,7 +2094,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="appjs"
                           ></a
-                          ><code class="language-js >App.js</code
+                          ><code class="language-js" >App.js</code
                           ><a
                             class="hash-link"
                             href="#appjs"
@@ -2467,7 +2467,7 @@
                           <li>
                             <p>
                               This helper is just a convenience! You can write
-                              your own <code class="language-js >combineReducers</code> that
+                              your own <code class="language-js" >combineReducers</code> that
                               <a
                                 href="https://github.com/acdlite/reduce-reducers"
                                 target="_blank"
@@ -2481,7 +2481,7 @@
                           </li>
                           <li>
                             <p>
-                              You may call <code class="language-js >combineReducers</code> at any
+                              You may call <code class="language-js" >combineReducers</code> at any
                               level of the reducer hierarchy. It doesn&#x27;t
                               have to happen at the top. In fact you may use it
                               again to split the child reducers that get too

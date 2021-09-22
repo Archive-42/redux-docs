@@ -1,13 +1,6 @@
 <a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 <a href="../official/introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="../official/tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../official/api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../official/faq.html" class="navbar__item navbar__link">FAQ</a><a href="../official/style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/../github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../official/introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 - <a href="../official/introduction/getting-started.html" class="menu__link">Getting Started</a>
@@ -46,23 +39,7 @@
     - <a href="../official/tutorials/fundamentals/part-7-standard-patterns.html" class="menu__link">Standard Redux Patterns</a>
     - <a href="../official/tutorials/fundamentals/part-8-modern-redux.html" class="menu__link">Modern Redux with Redux Toolkit</a>
 - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Recipes</a>
-  - <a href="../recipe-index.html" class="menu__link">Recipes: Index</a>
-  - <a href="../configuring-your-store.html" class="menu__link">Configuring Your Store</a>
-  - <a href="../usage-with-typescript.html" class="menu__link">Usage With TypeScript</a>
-  - <a href="../migrating-to-redux.html" class="menu__link">Migrating to Redux</a>
-  - <a href="../using-object-spread-operator.html" class="menu__link">Using Object Spread Operator</a>
-  - <a href="../reducing-boilerplate.html" class="menu__link">Reducing Boilerplate</a>
-  - <a href="../server-rendering.html" class="menu__link">Server Rendering</a>
-  - <a href="../writing-tests.html" class="menu__link">Writing Tests</a>
-  - <a href="../computing-derived-data.html" class="menu__link">Computing Derived Data</a>
-  - <a href="../implementing-undo-history.html" class="menu__link">Implementing Undo History</a>
-  - <a href="../isolating-redux-sub-apps.html" class="menu__link">Isolating Redux Sub-Apps</a>
-  - <a href="../code-splitting.html" class="menu__link">Code Splitting</a>
-  - <a href="../troubleshooting.html" class="menu__link">Troubleshooting</a>
-  - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Structuring Reducers</a>
-    - <a href="structuring-reducers.html" class="menu__link">Structuring Reducers</a>
-    - <a href="prerequisite-concepts.html" class="menu__link">Prerequisite Concepts</a>
-    - <a href="basic-reducer-structure.html" class="menu__link">Basic Reducer Structure</a>
+  - <a href="basic-reducer-structure.html" class="menu__link">Basic Reducer Structure</a>
     - <a href="splitting-reducer-logic.html" class="menu__link">Splitting Reducer Logic</a>
     - <a href="refactoring-reducer-example.html" class="menu__link">Refactoring Reducers Example</a>
     - <a href="using-combinereducers.html" class="menu__link">Using combineReducers</a>
@@ -166,11 +143,7 @@ Similarly, if `sliceReducerA` happens to need some data from `sliceReducerB`'s s
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Another alternative to the "shared-slice updates" issue would be to simply put more data into the action. This is easily accomplished using thunk functions or a similar approach, per this example:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Another alternative to the "shared-slice updates" issue would be to simply put more data into the action. This is easily accomplished using thunk functions or a similar approach, per this example:
 
 <span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">someSpecialActionCreator</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
@@ -196,11 +169,7 @@ Another alternative to the "shared-slice updates" issue would be to simply put m
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Because the data from B's slice is already in the action, the parent reducer doesn't have to do anything special to make that data available to `sliceReducerA`.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Because the data from B's slice is already in the action, the parent reducer doesn't have to do anything special to make that data available to `sliceReducerA`.
 
 A third approach would be to use the reducer generated by `combineReducers` to handle the "simple" cases where each slice reducer can update itself independently, but also use another reducer to handle the "special" cases where data needs to be shared across slices. Then, a wrapping function could call both of those reducers in turn to generate the final result:
 
@@ -250,19 +219,11 @@ A third approach would be to use the reducer generated by `combineReducers` to h
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> finalState</span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-As it turns out, there's a useful utility called [reduce-reducers](../../../github.com/redux-utilities/reduce-reducers.html) that can make that process easier. It simply takes multiple reducers and runs `reduce()` on them, passing the intermediate state values to the next reducer in line:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>As it turns out, there's a useful utility called [reduce-reducers](../../../github.com/redux-utilities/reduce-reducers.html) that can make that process easier. It simply takes multiple reducers and runs `reduce()` on them, passing the intermediate state values to the next reducer in line:
 
 <span class="token comment" style="color: #c6cad2">// Same as the "manual" rootReducer above</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> rootReducer </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">reduceReducers</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">combinedReducers</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> crossSliceReducer</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-Note that if you use `reduceReducers`, you should make sure that the first reducer in the list is able to define the initial state, since the later reducers will generally assume that the entire state already exists and not try to provide defaults.
+<span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> rootReducer </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">reduceReducers</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">combinedReducers</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> crossSliceReducer</span><span class="token punctuation" style="color: #f8f8f2">)</span>Note that if you use `reduceReducers`, you should make sure that the first reducer in the list is able to define the initial state, since the later reducers will generally assume that the entire state already exists and not try to provide defaults.
 
 ## <span id="further-suggestions" class="anchor enhancedAnchor_2LWZ"></span>Further Suggestions<a href="#further-suggestions" class="hash-link" title="Direct link to heading">#</a>
 
@@ -284,17 +245,11 @@ Again, it's important to understand that Redux reducers are _just_ functions. Wh
 
 <span class="token plain"> b</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> normalSliceReducerB</span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-Note that `combineReducers` doesn't know or care that there's anything special about the reducer function that's responsible for managing `a`. We didn't need to modify `combineReducers` to specifically know how to undo things - we just built up the pieces we needed into a new composed function.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>Note that `combineReducers` doesn't know or care that there's anything special about the reducer function that's responsible for managing `a`. We didn't need to modify `combineReducers` to specifically know how to undo things - we just built up the pieces we needed into a new composed function.
 
 Also, while `combineReducers` is the one reducer utility function that's built into Redux, there's a wide variety of third-party reducer utilities that have published for reuse. The [Redux Addons Catalog](../../../github.com/markerikson/redux-ecosystem-links.html) lists many of the third-party utilities that are available. Or, if none of the published utilities solve your use case, you can always write a function yourself that does just exactly what you need.
 
 <a href="using-combinereducers.html" class="pagination-nav__link"></a>
-
-Previous
 
 « Using combineReducers
 
@@ -326,4 +281,4 @@ Normalizing State Shape »
 - [![Deploys by Netlify](../../../www.netlify.com/img/global/badges/netlify-color-accent.svg)](../../../www.netlify.com/index.html)
 
 <a href="../official/index.html" class="footerLogoLink_MyFc"><img src="../official/../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

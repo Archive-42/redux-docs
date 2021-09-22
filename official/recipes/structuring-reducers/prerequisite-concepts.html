@@ -1081,7 +1081,7 @@
                         <ul>
                           <li>
                             Should have a signature of
-                            <code class="language-js >(previousState, action) =&gt; newState</code>,
+                            <code class="language-js" >(previousState, action) =&gt; newState</code>,
                             similar to the type of function you would pass to
                             <a
                               href="../../../developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce-2.html"
@@ -1103,8 +1103,8 @@
                               </li>
                               <li>
                                 Does not <em>call non-pure functions</em> (like
-                                <code class="language-js >Date.now</code> or
-                                <code class="language-js >Math.random</code>).
+                                <code class="language-js" >Date.now</code> or
+                                <code class="language-js" >Math.random</code>).
                               </li>
                               <li>
                                 Does not <em>mutate</em> its arguments. If the
@@ -1138,7 +1138,7 @@
                           <p>
                             Mutation is discouraged because it generally breaks
                             time-travel debugging, and React Redux&#x27;s
-                            <code class="language-js >connect</code> function:
+                            <code class="language-js" >connect</code> function:
                           </p>
                           <ul>
                             <li>
@@ -1153,12 +1153,12 @@
                               >.
                             </li>
                             <li>
-                              For React Redux, <code class="language-js >connect</code> checks to
+                              For React Redux, <code class="language-js" >connect</code> checks to
                               see if the props returned from a
-                              <code class="language-js >mapStateToProps</code> function have changed
+                              <code class="language-js" >mapStateToProps</code> function have changed
                               in order to determine if a component needs to
                               update. To improve performance,
-                              <code class="language-js >connect</code> takes some shortcuts that
+                              <code class="language-js" >connect</code> takes some shortcuts that
                               rely on the state being immutable, and uses
                               shallow reference equality checks to detect
                               changes. This means that
@@ -1226,7 +1226,7 @@
                           </li>
                           <li>
                             <a href="../../api/combinereducers.html"
-                              >Redux Docs: <code class="language-js >combineReducers</code></a
+                              >Redux Docs: <code class="language-js" >combineReducers</code></a
                             >
                           </li>
                           <li>
@@ -1243,7 +1243,7 @@
                               target="_blank"
                               rel="noopener noreferrer"
                               >Stack Overflow: Store initial state and
-                              <code class="language-js >combineReducers</code></a
+                              <code class="language-js" >combineReducers</code></a
                             >
                           </li>
                           <li>
@@ -1252,7 +1252,7 @@
                               target="_blank"
                               rel="noopener noreferrer"
                               >Stack Overflow: State key names and
-                              <code class="language-js >combineReducers</code></a
+                              <code class="language-js" >combineReducers</code></a
                             >
                           </li>
                         </ul>

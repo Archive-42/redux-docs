@@ -67,13 +67,7 @@
 </ul></li>
 
 
-
-</ul></li>
-
-<ul>
-
-</ul></li>
-</ul></li>
+</li>
 <li><a href="#!" class="menu__link menu__link--sublist menu__link--active">FAQ</a>
 <ul>
 <li><a href="../faq.html" class="menu__link">FAQ Index</a></li>
@@ -95,12 +89,6 @@
 </ul></li>
 
 
-</ul></li>
-<li><a href="#!" class="menu__link menu__link--sublist">Redux Toolkit</a>
-<ul>
-
-</ul></li>
-</ul>
 <h1 id="redux-faq-organizing-state"><span id="redux-faq-organizing-state" class="anchor enhancedAnchor_2LWZ"></span>Redux FAQ: Organizing State<a href="#redux-faq-organizing-state" class="hash-link" title="Direct link to heading">#</a></h1>
 <h2 id="table-of-contents"><span id="table-of-contents" class="anchor enhancedAnchor_2LWZ"></span>Table of Contents<a href="#table-of-contents" class="hash-link" title="Direct link to heading">#</a></h2>
 <ul>
@@ -109,7 +97,7 @@
 <li><a href="#table-of-contents">Table of Contents</a></li>
 <li><a href="#organizing-state">Organizing State</a>
 <ul>
-<li><a href="#do-i-have-to-put-all-my-state-into-redux-should-i-ever-use-reacts-setstate">Do I have to put all my state into Redux? Should I ever use React’s <code class="language-js >setState()</code>?</a>
+<li><a href="#do-i-have-to-put-all-my-state-into-redux-should-i-ever-use-reacts-setstate">Do I have to put all my state into Redux? Should I ever use React’s <code class="language-js" >setState()</code>?</a>
 <ul>
 <li><a href="#further-information">Further information</a></li>
 </ul></li>
@@ -129,7 +117,7 @@
 </ul></li>
 </ul>
 <h2 id="organizing-state"><span id="organizing-state" class="anchor enhancedAnchor_2LWZ"></span>Organizing State<a href="#organizing-state" class="hash-link" title="Direct link to heading">#</a></h2>
-<h3 id="do-i-have-to-put-all-my-state-into-redux-should-i-ever-use-reacts-setstate"><span id="do-i-have-to-put-all-my-state-into-redux-should-i-ever-use-reacts-setstate" class="anchor enhancedAnchor_2LWZ"></span>Do I have to put all my state into Redux? Should I ever use React’s <code class="language-js >setState()</code>?<a href="#do-i-have-to-put-all-my-state-into-redux-should-i-ever-use-reacts-setstate" class="hash-link" title="Direct link to heading">#</a></h3>
+<h3 id="do-i-have-to-put-all-my-state-into-redux-should-i-ever-use-reacts-setstate"><span id="do-i-have-to-put-all-my-state-into-redux-should-i-ever-use-reacts-setstate" class="anchor enhancedAnchor_2LWZ"></span>Do I have to put all my state into Redux? Should I ever use React’s <code class="language-js" >setState()</code>?<a href="#do-i-have-to-put-all-my-state-into-redux-should-i-ever-use-reacts-setstate" class="hash-link" title="Direct link to heading">#</a></h3>
 <p>There is no “right” answer for this. Some users prefer to keep every single piece of data in Redux, to maintain a fully serializable and controlled version of their application at all times. Others prefer to keep non-critical or UI state, such as “is this dropdown currently open”, inside a component’s internal state.</p>
 <p><strong><em>Using local component state is fine</em></strong>. As a developer, it is <em>your</em> job to determine what kinds of state make up your application, and where each piece of state should live. Find a balance that works for you, and go with it.</p>
 <p>Some common rules of thumb for determining what kind of data should be put into Redux:</p>
@@ -141,13 +129,13 @@
 <li>Do you want to cache the data (ie, use what’s in state if it’s already there instead of re-requesting it)?</li>
 <li>Do you want to keep this data consistent while hot-reloading UI components (which may lose their internal state when swapped)?</li>
 </ul>
-<p>There are a number of community packages that implement various approaches for storing per-component state in a Redux store instead, such as <a href="../../github.com/tomchentw-deprecated/redux-component.html">redux-component</a>, <a href="../../github.com/threepointone/redux-react-local.html">redux-react-local</a>, and more. It’s also possible to apply Redux’s principles and concept of reducers to the task of updating local component state as well, along the lines of <code class="language-js >this.setState( (previousState) =&gt; reducer(previousState, someAction))</code>.</p>
+<p>There are a number of community packages that implement various approaches for storing per-component state in a Redux store instead, such as <a href="../../github.com/tomchentw-deprecated/redux-component.html">redux-component</a>, <a href="../../github.com/threepointone/redux-react-local.html">redux-react-local</a>, and more. It’s also possible to apply Redux’s principles and concept of reducers to the task of updating local component state as well, along the lines of <code class="language-js" >this.setState( (previousState) =&gt; reducer(previousState, someAction))</code>.</p>
 <h4 id="further-information"><span id="further-information" class="anchor enhancedAnchor_2LWZ"></span>Further information<a href="#further-information" class="hash-link" title="Direct link to heading">#</a></h4>
 <p><strong>Articles</strong></p>
 <ul>
 <li><a href="../../changelog.com/posts/when-and-when-not-to-reach-for-redux.html">When (and when not) to reach for Redux</a></li>
 <li><a href="../../medium.com/%40dan_abramov/you-might-not-need-redux-be46360cf367.html">You Might Not Need Redux</a></li>
-<li><a href="../../medium.com/%40adamrackis/finding-state-s-place-with-react-and-redux-e9a586630172.html">Finding <code class="language-js >state</code>’s place with React and Redux</a></li>
+<li><a href="../../medium.com/%40adamrackis/finding-state-s-place-with-react-and-redux-e9a586630172.html">Finding <code class="language-js" >state</code>’s place with React and Redux</a></li>
 <li><a href="../../medium.com/%40zackargyle/a-case-for-setstate-1f1c47cd3f73.html">A Case for setState</a></li>
 <li><a href="../../medium.com/react-ecosystem/how-to-handle-state-in-react-6f2d3cd73a0c.html">How to handle state in React: the missing FAQ</a></li>
 <li><a href="../../www.freecodecamp.org/news/where-do-i-belong-a-guide-to-saving-react-component-data-in-state-store-static-and-this-c49b335e2a00/index.html">Where to Hold React Component Data: state, store, static, and this</a></li>
@@ -223,7 +211,7 @@
 <li>If you are absolutely sure you <em>must</em> use a Redux-based form library because the other approaches aren’t sufficient, then you may finally want to look at <a href="../../github.com/redux-form/redux-form.html">Redux-Form</a> and <a href="../../github.com/davidkpiano/react-redux-form.html">React-Redux-Form</a>.</li>
 </ul>
 <p>If you are keeping form state in Redux, you should take some time to consider performance characteristics. Dispatching an action on every keystroke of a text input probably isn’t worthwhile, and you may want to look into <a href="../../blog.isquaredsoftware.com/2017/01/practical-redux-part-7-forms-editing-reducers/index.html">ways to buffer keystrokes to keep changes local before dispatching</a>. As always, take some time to analyze the overall performance needs of your own application.</p>
-<p>Other kinds of UI state follow these rules of thumb as well. The classic example is tracking an <code class="language-js >isDropdownOpen</code> flag. In most situations, the rest of the app doesn’t care about this, so in most cases it should stay in component state. However, depending on your application, it may make sense to use Redux to <a href="../../blog.isquaredsoftware.com/2017/07/practical-redux-part-10-managing-modals/index.html">manage dialogs and other popups</a>, tabs, expanding panels, and so on.</p>
+<p>Other kinds of UI state follow these rules of thumb as well. The classic example is tracking an <code class="language-js" >isDropdownOpen</code> flag. In most situations, the rest of the app doesn’t care about this, so in most cases it should stay in component state. However, depending on your application, it may make sense to use Redux to <a href="../../blog.isquaredsoftware.com/2017/07/practical-redux-part-10-managing-modals/index.html">manage dialogs and other popups</a>, tabs, expanding panels, and so on.</p>
 <h4 id="further-information-3"><span id="further-information-3" class="anchor enhancedAnchor_2LWZ"></span>Further Information<a href="#further-information-3" class="hash-link" title="Direct link to heading">#</a></h4>
 <p><strong>Articles</strong></p>
 <ul>
@@ -243,7 +231,7 @@
 <li><a href="#table-of-contents" class="table-of-contents__link">Table of Contents</a></li>
 <li><a href="#organizing-state" class="table-of-contents__link">Organizing State</a>
 <ul>
-<li><a href="#do-i-have-to-put-all-my-state-into-redux-should-i-ever-use-reacts-setstate" class="table-of-contents__link">Do I have to put all my state into Redux? Should I ever use React’s <code class="language-js >setState()</code>?</a></li>
+<li><a href="#do-i-have-to-put-all-my-state-into-redux-should-i-ever-use-reacts-setstate" class="table-of-contents__link">Do I have to put all my state into Redux? Should I ever use React’s <code class="language-js" >setState()</code>?</a></li>
 <li><a href="#can-i-put-functions-promises-or-other-non-serializable-items-in-my-store-state" class="table-of-contents__link">Can I put functions, promises, or other non-serializable items in my store state?</a></li>
 <li><a href="#how-do-i-organize-nested-or-duplicate-data-in-my-state" class="table-of-contents__link">How do I organize nested or duplicate data in my state?</a></li>
 <li><a href="#should-i-put-form-state-or-other-ui-state-in-my-store" class="table-of-contents__link">Should I put form state or other UI state in my store?</a></li>

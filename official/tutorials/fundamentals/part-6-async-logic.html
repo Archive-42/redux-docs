@@ -107,10 +107,17 @@
       as="script"
     />
     <link rel="preload" href="../../assets/js/main.8520a084.js" as="script" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css"
+    />
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
-    </head>
+    <script
+      async
+      defer
+      src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"
+    ></script>
+  </head>
   <body>
     <script>
       !(function () {
@@ -1152,12 +1159,15 @@
                           <a href="part-5-ui-react.html">Part 5: UI and React</a
                           >, we saw how to use the React-Redux library to let
                           our React components interact with a Redux store,
-                          including calling <code class="language-js >useSelector</code> to read
-                          Redux state, calling <code class="language-js >useDispatch</code> to give
-                          us access to the <code class="language-js >dispatch</code> function, and
-                          wrapping our app in a
-                          <code class="language-js >&lt;Provider&gt;</code> component to give those
-                          hooks access to the store.
+                          including calling
+                          <code class="language-js">useSelector</code> to read
+                          Redux state, calling
+                          <code class="language-js">useDispatch</code> to give
+                          us access to the
+                          <code class="language-js">dispatch</code> function,
+                          and wrapping our app in a
+                          <code class="language-js">&lt;Provider&gt;</code>
+                          component to give those hooks access to the store.
                         </p>
                         <p>
                           So far, all the data we&#x27;ve worked with has been
@@ -1194,21 +1204,28 @@
                             target="_blank"
                             rel="noopener noreferrer"
                             >the Mirage.js mock API tool</a
-                          >). The API uses <code class="language-js >/fakeApi</code> as the base URL
-                          for the endpoints, and supports the typical
-                          <code class="language-js >GET/POST/PUT/DELETE</code> HTTP methods for
-                          <code class="language-js >/fakeApi/todos</code>. It&#x27;s defined in
-                          <code class="language-js >src/api/server.js</code>.
+                          >). The API uses
+                          <code class="language-js">/fakeApi</code> as the base
+                          URL for the endpoints, and supports the typical
+                          <code class="language-js">GET/POST/PUT/DELETE</code>
+                          HTTP methods for
+                          <code class="language-js">/fakeApi/todos</code>.
+                          It&#x27;s defined in
+                          <code class="language-js">src/api/server.js</code>.
                         </p>
                         <p>
                           The project also includes a small HTTP API client
-                          object that exposes <code class="language-js >client.get()</code> and
-                          <code class="language-js >client.post()</code> methods, similar to popular
-                          HTTP libraries like <code class="language-js >axios</code>. It&#x27;s
-                          defined in <code class="language-js >src/api/client.js</code>.
+                          object that exposes
+                          <code class="language-js">client.get()</code> and
+                          <code class="language-js">client.post()</code>
+                          methods, similar to popular HTTP libraries like
+                          <code class="language-js">axios</code>. It&#x27;s
+                          defined in
+                          <code class="language-js">src/api/client.js</code>.
                         </p>
                         <p>
-                          We&#x27;ll use the <code class="language-js >client</code> object to make
+                          We&#x27;ll use the
+                          <code class="language-js">client</code> object to make
                           HTTP calls to our in-memory fake REST API for this
                           section.
                         </p>
@@ -1254,8 +1271,8 @@
                           </li>
                           <li>
                             Generating random numbers or unique random IDs (such
-                            as <code class="language-js >Math.random()</code> or
-                            <code class="language-js >Date.now()</code>)
+                            as <code class="language-js">Math.random()</code> or
+                            <code class="language-js">Date.now()</code>)
                           </li>
                         </ul>
                         <p>
@@ -1278,19 +1295,21 @@
                           sees a dispatched action: log something, modify the
                           action, delay the action, make an async call, and
                           more. Also, since middleware form a pipeline around
-                          the real <code class="language-js >store.dispatch</code> function, this
-                          also means that we could actually pass something that
-                          <em>isn&#x27;t</em> a plain action object to
-                          <code class="language-js >dispatch</code>, as long as a middleware
-                          intercepts that value and doesn&#x27;t let it reach
-                          the reducers.
+                          the real
+                          <code class="language-js">store.dispatch</code>
+                          function, this also means that we could actually pass
+                          something that <em>isn&#x27;t</em> a plain action
+                          object to <code class="language-js">dispatch</code>,
+                          as long as a middleware intercepts that value and
+                          doesn&#x27;t let it reach the reducers.
                         </p>
                         <p>
                           Middleware also have access to
-                          <code class="language-js >dispatch</code> and <code class="language-js >getState</code>. That
-                          means you could write some async logic in a
-                          middleware, and still have the ability to interact
-                          with the Redux store by dispatching actions.
+                          <code class="language-js">dispatch</code> and
+                          <code class="language-js">getState</code>. That means
+                          you could write some async logic in a middleware, and
+                          still have the ability to interact with the Redux
+                          store by dispatching actions.
                         </p>
                         <h3>
                           <a
@@ -1933,14 +1952,16 @@
                           specific and only do one thing. It would be nice if we
                           had a way to write <em>any</em> async logic ahead of
                           time, separate from the middleware itself, and still
-                          have access to <code class="language-js >dispatch</code> and
-                          <code class="language-js >getState</code> so that we can interact with the
-                          store.
+                          have access to
+                          <code class="language-js">dispatch</code> and
+                          <code class="language-js">getState</code> so that we
+                          can interact with the store.
                         </p>
                         <p>
                           <strong
                             >What if we wrote a middleware that let us pass a
-                            <em>function</em> to <code class="language-js >dispatch</code>, instead
+                            <em>function</em> to
+                            <code class="language-js">dispatch</code>, instead
                             of an action object</strong
                           >? We could have our middleware check to see if the
                           &quot;action&quot; is actually a function instead, and
@@ -2603,7 +2624,7 @@
                           <strong
                             >this &quot;async function middleware&quot; let us
                             pass a <em>function</em> to
-                            <code class="language-js >dispatch</code>!</strong
+                            <code class="language-js">dispatch</code>!</strong
                           >
                           Inside that function, we were able to write some async
                           logic (an HTTP request), then dispatch a normal action
@@ -2631,8 +2652,8 @@
                           Just like with a normal action, we first need to
                           handle a user event in the application, such as a
                           click on a button. Then, we call
-                          <code class="language-js >dispatch()</code>, and pass in
-                          <em>something</em>, whether it be a plain action
+                          <code class="language-js">dispatch()</code>, and pass
+                          in <em>something</em>, whether it be a plain action
                           object, a function, or some other value that a
                           middleware can look for.
                         </p>
@@ -2684,11 +2705,11 @@
                               >Redux &quot;Thunk&quot; middleware</strong
                             ></a
                           >. The thunk middleware allows us to write functions
-                          that get <code class="language-js >dispatch</code> and
-                          <code class="language-js >getState</code> as arguments. The thunk
-                          functions can have any async logic we want inside, and
-                          that logic can dispatch actions and read the store
-                          state as needed.
+                          that get <code class="language-js">dispatch</code> and
+                          <code class="language-js">getState</code> as
+                          arguments. The thunk functions can have any async
+                          logic we want inside, and that logic can dispatch
+                          actions and read the store state as needed.
                         </p>
                         <p>
                           <strong
@@ -2764,8 +2785,9 @@
                         </h3>
                         <p>
                           The Redux thunk middleware is available on NPM as a
-                          package called <code class="language-js >redux-thunk</code>. We need to
-                          install that package to use it in our app:
+                          package called
+                          <code class="language-js">redux-thunk</code>. We need
+                          to install that package to use it in our app:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly bash">
@@ -3096,12 +3118,12 @@
                         <p>
                           We&#x27;ll start by writing a thunk function that
                           makes an AJAX call to our
-                          <code class="language-js >/fakeApi/todos</code> endpoint to request an
-                          array of todo objects, and then dispatch an action
-                          containing that array as the payload. Since this is
-                          related to the todos feature in general, we&#x27;ll
-                          write the thunk function in the
-                          <code class="language-js >todosSlice.js</code> file:
+                          <code class="language-js">/fakeApi/todos</code>
+                          endpoint to request an array of todo objects, and then
+                          dispatch an action containing that array as the
+                          payload. Since this is related to the todos feature in
+                          general, we&#x27;ll write the thunk function in the
+                          <code class="language-js">todosSlice.js</code> file:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -3458,21 +3480,26 @@
                         </p>
                         <ul>
                           <li>
-                            In the <code class="language-js >&lt;App&gt;</code> component, in a
-                            <code class="language-js >useEffect</code> hook
+                            In the
+                            <code class="language-js">&lt;App&gt;</code>
+                            component, in a
+                            <code class="language-js">useEffect</code> hook
                           </li>
                           <li>
-                            In the <code class="language-js >&lt;TodoList&gt;</code> component, in a
-                            <code class="language-js >useEffect</code> hook
+                            In the
+                            <code class="language-js">&lt;TodoList&gt;</code>
+                            component, in a
+                            <code class="language-js">useEffect</code> hook
                           </li>
                           <li>
-                            In the <code class="language-js >index.js</code> file directly, right
-                            after we import the store
+                            In the
+                            <code class="language-js">index.js</code> file
+                            directly, right after we import the store
                           </li>
                         </ul>
                         <p>
                           For now, let&#x27;s try putting this directly in
-                          <code class="language-js >index.js</code>:
+                          <code class="language-js">index.js</code>:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -3947,9 +3974,11 @@
                           If we reload the page, there&#x27;s no visible change
                           in the UI. However, if we open up the Redux DevTools
                           extension, we should now see that a
-                          <code class="language-js >&#x27;todos/todosLoaded&#x27;</code> action was
-                          dispatched, and it should contain some todo objects
-                          that were generated by our fake server API:
+                          <code class="language-js"
+                            >&#x27;todos/todosLoaded&#x27;</code
+                          >
+                          action was dispatched, and it should contain some todo
+                          objects that were generated by our fake server API:
                         </p>
                         <p>
                           <img
@@ -3970,8 +3999,9 @@
                           into the store. Since we&#x27;re fetching the data
                           from the server, we want to completely replace any
                           existing todos, so we can return the
-                          <code class="language-js >action.payload</code> array to make it be the
-                          new todos <code class="language-js >state</code> value:
+                          <code class="language-js">action.payload</code> array
+                          to make it be the new todos
+                          <code class="language-js">state</code> value:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -4426,12 +4456,15 @@
                         </div>
                         <p>
                           Since dispatching an action immediately updates the
-                          store, we can also call <code class="language-js >getState</code> in the
-                          thunk to read the updated state value after we
-                          dispatch. For example, we could log the number of
-                          total todos to the console before and after
-                          dispatching the
-                          <code class="language-js >&#x27;todos/todosLoaded&#x27;</code> action:
+                          store, we can also call
+                          <code class="language-js">getState</code> in the thunk
+                          to read the updated state value after we dispatch. For
+                          example, we could log the number of total todos to the
+                          console before and after dispatching the
+                          <code class="language-js"
+                            >&#x27;todos/todosLoaded&#x27;</code
+                          >
+                          action:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -4804,10 +4837,12 @@
                         <p>
                           We also need to update the server whenever we try to
                           create a new todo item. Instead of dispatching the
-                          <code class="language-js >&#x27;todos/todoAdded&#x27;</code> action right
-                          away, we should make an API call to the server with
-                          the initial data, wait for the server to send back a
-                          copy of the newly saved todo item, and
+                          <code class="language-js"
+                            >&#x27;todos/todoAdded&#x27;</code
+                          >
+                          action right away, we should make an API call to the
+                          server with the initial data, wait for the server to
+                          send back a copy of the newly saved todo item, and
                           <em>then</em> dispatch an action with that todo item.
                         </p>
                         <p>
@@ -4815,9 +4850,9 @@
                           thunk function, we&#x27;re going to run into a
                           problem: since we&#x27;re writing the thunk as a
                           separate function in the
-                          <code class="language-js >todosSlice.js</code> file, the code that makes
-                          the API call doesn&#x27;t know what the new todo text
-                          is supposed to be:
+                          <code class="language-js">todosSlice.js</code> file,
+                          the code that makes the API call doesn&#x27;t know
+                          what the new todo text is supposed to be:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -5053,11 +5088,13 @@
                         </div>
                         <p>
                           We need a way to write one function that accepts
-                          <code class="language-js >text</code> as its parameter, but then creates
-                          the actual thunk function so that it can use the
-                          <code class="language-js >text</code> value to make the API call. Our
-                          outer function should then return the thunk function
-                          so that we can pass to <code class="language-js >dispatch</code> in our
+                          <code class="language-js">text</code> as its
+                          parameter, but then creates the actual thunk function
+                          so that it can use the
+                          <code class="language-js">text</code> value to make
+                          the API call. Our outer function should then return
+                          the thunk function so that we can pass to
+                          <code class="language-js">dispatch</code> in our
                           component.
                         </p>
                         <div class="codeBlockContainer_K1bP">
@@ -5351,7 +5388,8 @@
                         </div>
                         <p>
                           Now we can use this in our
-                          <code class="language-js >&lt;Header&gt;</code> component:
+                          <code class="language-js">&lt;Header&gt;</code>
+                          component:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -5945,11 +5983,13 @@
                         </div>
                         <p>
                           Since we know we&#x27;re going to immediately pass the
-                          thunk function to <code class="language-js >dispatch</code> in the
+                          thunk function to
+                          <code class="language-js">dispatch</code> in the
                           component, we can skip creating the temporary
                           variable. Instead, we can call
-                          <code class="language-js >saveNewTodo(text)</code>, and pass the resulting
-                          thunk function straight to <code class="language-js >dispatch</code>:
+                          <code class="language-js">saveNewTodo(text)</code>,
+                          and pass the resulting thunk function straight to
+                          <code class="language-js">dispatch</code>:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -6193,16 +6233,16 @@
                         <p>
                           Now the component doesn&#x27;t actually know that
                           it&#x27;s even dispatching a thunk function - the
-                          <code class="language-js >saveNewTodo</code> function is encapsulating
-                          what&#x27;s actually happening. The
-                          <code class="language-js >&lt;Header&gt;</code> component only knows that
-                          it needs to dispatch <em>some value</em> when the user
-                          presses enter.
+                          <code class="language-js">saveNewTodo</code> function
+                          is encapsulating what&#x27;s actually happening. The
+                          <code class="language-js">&lt;Header&gt;</code>
+                          component only knows that it needs to dispatch
+                          <em>some value</em> when the user presses enter.
                         </p>
                         <p>
                           This pattern of writing a function to prepare
                           something that will get passed to
-                          <code class="language-js >dispatch</code> is called
+                          <code class="language-js">dispatch</code> is called
                           <strong>the &quot;action creator&quot; pattern</strong
                           >, and we&#x27;ll talk about that more in
                           <a href="part-7-standard-patterns.html"
@@ -6211,8 +6251,10 @@
                         </p>
                         <p>
                           We can now see the updated
-                          <code class="language-js >&#x27;todos/todoAdded&#x27;</code> action being
-                          dispatched:
+                          <code class="language-js"
+                            >&#x27;todos/todoAdded&#x27;</code
+                          >
+                          action being dispatched:
                         </p>
                         <p>
                           <img
@@ -6223,12 +6265,13 @@
                         <p>
                           The last thing we need to change here is updating our
                           todos reducer. When we make a POST request to
-                          <code class="language-js >/fakeApi/todos</code>, the server will return a
-                          completely new todo object (including a new ID value).
-                          That means our reducer doesn&#x27;t have to calculate
-                          a new ID, or fill out the other fields - it only needs
-                          to create a new <code class="language-js >state</code> array that includes
-                          the new todo item:
+                          <code class="language-js">/fakeApi/todos</code>, the
+                          server will return a completely new todo object
+                          (including a new ID value). That means our reducer
+                          doesn&#x27;t have to calculate a new ID, or fill out
+                          the other fields - it only needs to create a new
+                          <code class="language-js">state</code> array that
+                          includes the new todo item:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -6543,8 +6586,8 @@
                               Thunk functions can be used for both asynchronous
                               <em>and</em> synchronous logic. Thunks provide a
                               way to write any reusable logic that needs access
-                              to <code class="language-js >dispatch</code> and
-                              <code class="language-js >getState</code>.
+                              to <code class="language-js">dispatch</code> and
+                              <code class="language-js">getState</code>.
                             </p>
                           </div>
                         </div>
@@ -6625,13 +6668,15 @@
                                 <ul>
                                   <li>
                                     Middleware can intercept other values passed
-                                    to <code class="language-js >dispatch</code>
+                                    to <code class="language-js">dispatch</code>
                                   </li>
                                   <li>
                                     Middleware have access to
-                                    <code class="language-js >dispatch</code> and
-                                    <code class="language-js >getState</code>, so they can dispatch
-                                    more actions as part of async logic
+                                    <code class="language-js">dispatch</code>
+                                    and
+                                    <code class="language-js">getState</code>,
+                                    so they can dispatch more actions as part of
+                                    async logic
                                   </li>
                                 </ul>
                               </li>
@@ -6639,7 +6684,9 @@
                                 <strong
                                   >The Redux &quot;Thunk&quot; middleware lets
                                   us pass functions to
-                                  <code class="language-js >dispatch</code></strong
+                                  <code class="language-js"
+                                    >dispatch</code
+                                  ></strong
                                 >
                                 <ul>
                                   <li>
@@ -6649,10 +6696,12 @@
                                   </li>
                                   <li>
                                     A Redux thunk function receives
-                                    <code class="language-js >dispatch</code> and
-                                    <code class="language-js >getState</code> as arguments, and can
-                                    dispatch actions like &quot;this data was
-                                    received from an API response&quot;
+                                    <code class="language-js">dispatch</code>
+                                    and
+                                    <code class="language-js">getState</code> as
+                                    arguments, and can dispatch actions like
+                                    &quot;this data was received from an API
+                                    response&quot;
                                   </li>
                                 </ul>
                               </li>

@@ -1,13 +1,6 @@
 <a href="../index.html" class="navbar__brand"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
 
 <a href="../introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="../tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../faq.html" class="navbar__item navbar__link">FAQ</a><a href="style-guide.html" class="navbar__item navbar__link navbar__link--active">Best Practices</a><a href="../official/github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="../index.html" class="navbar__brand"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
 
 - <a href="../introduction/getting-started.html" class="menu__link">Getting Started</a>
@@ -236,7 +229,7 @@ The Redux core does not actually care whether a new state value is calculated in
 
 <span class="token plain"></span><span class="token keyword" style="color: #f92672">case</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">"todos/toggleTodo"</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">map</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">todo</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">map</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">todo</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">if</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">todo</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">id</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">!==</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">id</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> todo</span><span class="token punctuation" style="color: #f8f8f2">;</span><span class="token plain"></span>
 
@@ -246,17 +239,13 @@ The Redux core does not actually care whether a new state value is calculated in
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-And also to calculate the new array first and put the entire new array in the action:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>And also to calculate the new array first and put the entire new array in the action:
 
 <span class="token comment" style="color: #c6cad2">// Click handler:</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">onTodoClicked</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token parameter">id</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> newTodos </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> todos</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">map</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">todo</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> newTodos </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> todos</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">map</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">todo</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">if</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">todo</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">id</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">!==</span><span class="token plain"> id</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> todo</span>
 
@@ -278,11 +267,7 @@ And also to calculate the new array first and put the entire new array in the ac
 
 <span class="token plain"></span><span class="token keyword" style="color: #f92672">case</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">"todos/toggleTodo"</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">todos</span><span class="token punctuation" style="color: #f8f8f2">;</span>
-
-Copy
-
-However, doing the logic in the reducer is preferable for several reasons:
+<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">payload</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">todos</span><span class="token punctuation" style="color: #f8f8f2">;</span>However, doing the logic in the reducer is preferable for several reasons:
 
 - Reducers are always easy to test, because they are pure functions - you just call `const result = reducer(testState, action)`, and assert that the result is what you expected. So, the more logic you can put in a reducer, the more logic you have that is easily testable.
 - Redux state updates must always follow [the rules of immutable updates](../recipes/structuring-reducers/immutable-update-patterns.html). Most Redux users realize they have to follow the rules inside a reducer, but it's not obvious that you _also_ have to do this if the new state is calculated _outside_ the reducer. This can easily lead to mistakes like accidental mutations, or even reading a value from the Redux store and passing it right back inside an action. Doing all of the state calculations in a reducer avoids those mistakes.
@@ -328,11 +313,7 @@ Picture a "current user" reducer that looks like:
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-In this example, the reducer completely assumes that `action.payload` is going to be a correctly formatted object.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>In this example, the reducer completely assumes that `action.payload` is going to be a correctly formatted object.
 
 However, imagine if some part of the code were to dispatch a "todo" object inside the action, instead of a "user" object:
 
@@ -348,11 +329,7 @@ However, imagine if some part of the code were to dispatch a "todo" object insid
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-The reducer would blindly return the todo, and now the rest of the app would likely break when it tries to read the user from the store.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>The reducer would blindly return the todo, and now the rest of the app would likely break when it tries to read the user from the store.
 
 This could be at least partly fixed if the reducer has some validation checks to ensure that `action.payload` actually has the right fields, or tries to read the right fields out by name. That does add more code, though, so it's a question of trading off more code for safety.
 
@@ -372,15 +349,11 @@ ES6 object literal shorthand makes it easy to define a key name and a value in a
 
 <span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> obj </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> data </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// same as: {data: data}</span>
-
-Copy
-
-`combineReducers` accepts an object full of reducer functions, and uses that to generate state objects that have the same key names. This means that the key names in the functions object define the key names in the state object.
+<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// same as: {data: data}</span>`combineReducers` accepts an object full of reducer functions, and uses that to generate state objects that have the same key names. This means that the key names in the functions object define the key names in the state object.
 
 This results in a common mistake, where a reducer is imported using "reducer" in the variable name, and then passed to `combineReducers` using the object literal shorthand:
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">usersReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'features/users/usersSlice'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >usersReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'features/users/usersSlice'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -388,17 +361,13 @@ This results in a common mistake, where a reducer is imported using "reducer" in
 
 <span class="token plain"> usersReducer</span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-In this case, use of the object literal shorthand created an object like `{usersReducer: usersReducer}`. So, "reducer" is now in the state key name. This is redundant and useless.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>In this case, use of the object literal shorthand created an object like `{usersReducer: usersReducer}`. So, "reducer" is now in the state key name. This is redundant and useless.
 
 Instead, define key names that only relate to the data inside. We suggest using explicit `key: value` syntax for clarity:
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">usersReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'features/users/usersSlice'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >usersReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'features/users/usersSlice'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">postsReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'features/posts/postsSlice'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >postsReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'features/posts/postsSlice'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -408,11 +377,7 @@ Instead, define key names that only relate to the data inside. We suggest using 
 
 <span class="token plain"> posts</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> postsReducer</span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-It's a bit more typing, but it results in the most understandable code and state definition.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>It's a bit more typing, but it results in the most understandable code and state definition.
 
 ### <span id="organize-state-structure-based-on-data-types-not-components" class="anchor enhancedAnchor_2LWZ"></span>Organize State Structure Based on Data Types, Not Components<a href="#organize-state-structure-based-on-data-types-not-components" class="hash-link" title="Direct link to heading">#</a>
 
@@ -445,11 +410,7 @@ To make these finite states clear and [make impossible states impossible](../../
 
 <span class="token plain"> error</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token keyword null nil" style="color: #f92672">null</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-With TypeScript, this also makes it easy to use [discriminated unions](../../basarat.gitbook.io/typescript/type-system/discriminated-unions.html) to represent each finite state. For instance, if `state.status === 'success'`, then you would expect `state.user` to be defined and wouldn't expect `state.error` to be truthy. You can enforce this with types.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>With TypeScript, this also makes it easy to use [discriminated unions](../../basarat.gitbook.io/typescript/type-system/discriminated-unions.html) to represent each finite state. For instance, if `state.status === 'success'`, then you would expect `state.user` to be defined and wouldn't expect `state.error` to be truthy. You can enforce this with types.
 
 Typically, reducer logic is written by taking the action into account first. When modeling logic with state machines, it's important to take the state into account first. Creating "finite state reducers" for each state helps encapsulate behavior per state:
 
@@ -533,11 +494,7 @@ Typically, reducer logic is written by taking the action into account first. Whe
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Now, since you're defining behavior per state instead of per action, you also prevent impossible transitions. For instance, a `FETCH_USER` action should have no effect when `status === LOADING_STATUS`, and you can enforce that, instead of accidentally introducing edge-cases.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Now, since you're defining behavior per state instead of per action, you also prevent impossible transitions. For instance, a `FETCH_USER` action should have no effect when `status === LOADING_STATUS`, and you can enforce that, instead of accidentally introducing edge-cases.
 
 ### <span id="normalize-complex-nestedrelational-state" class="anchor enhancedAnchor_2LWZ"></span>Normalize Complex Nested/Relational State<a href="#normalize-complex-nestedrelational-state" class="hash-link" title="Direct link to heading">#</a>
 
@@ -555,11 +512,7 @@ However, **we recommend trying to treat actions more as "describing events that 
 
 Imagine you've got a restaurant app, and someone orders a pizza and a bottle of Coke. You could dispatch an action like:
 
-<span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">"food/orderAdded"</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain">pizza</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> coke</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Or you could dispatch:
+<span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">"food/orderAdded"</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain">pizza</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> coke</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span>Or you could dispatch:
 
 <span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
@@ -585,11 +538,7 @@ Or you could dispatch:
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-The first example would be an "event". "Hey, someone ordered a pizza and a pop, deal with it somehow".
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>The first example would be an "event". "Hey, someone ordered a pizza and a pop, deal with it somehow".
 
 The second example is a "setter". "I _know_ there are fields for 'pizzas ordered' and 'pops ordered', and I am commanding you to set their current values to these numbers".
 
@@ -795,8 +744,6 @@ There are use cases when keeping form state in Redux does actually make sense, s
 
 <a href="../faq/miscellaneous.html" class="pagination-nav__link"></a>
 
-Previous
-
 « Miscellaneous
 
 <a href="../api/api-reference.html" class="pagination-nav__link"></a>
@@ -867,4 +814,4 @@ API Reference »
 
 <a href="../index.html" class="footerLogoLink_MyFc"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" /><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
 
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

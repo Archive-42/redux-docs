@@ -23,25 +23,25 @@
 <p>React Redux 7.1+ requires <strong>React 16.8.3 or later</strong>, in order to make use of React Hooks.</p>
 <h3 id="using-create-react-app">Using Create React App</h3>
 <p>The recommended way to start new apps with React and Redux is by using the <a href="https://github.com/reduxjs/cra-template-redux">official Redux+JS template</a> or <a href="https://github.com/reduxjs/cra-template-redux-typescript">Redux+TS template</a> for <a href="https://github.com/facebook/create-react-app">Create React App</a>, which takes advantage of <strong><a href="https://redux-toolkit.js.org/">Redux Toolkit</a></strong> and React Redux’s integration with React components.</p>
-<pre class="language-js ><code class="language-js ># Redux + Plain JS template
+<pre class="language-js" ><code class="language-js" ># Redux + Plain JS template
 npx create-react-app my-app --template redux
 
 # Redux + TypeScript template
 npx create-react-app my-app --template redux-typescript</code></pre>
 <h3 id="an-existing-react-app">An Existing React App</h3>
 <p>To use React Redux with your React app, install it as a dependency:</p>
-<pre class="language-js ><code class="language-js ># If you use npm:
+<pre class="language-js" ><code class="language-js" ># If you use npm:
 npm install react-redux
 
 # Or if you use Yarn:
 yarn add react-redux</code></pre>
 <p>You’ll also need to <a href="https://redux.js.org/introduction/installation">install Redux</a> and <a href="https://redux.js.org/recipes/configuring-your-store/">set up a Redux store</a> in your app.</p>
-<p>If you are using TypeScript, the React Redux types are maintained separately in DefinitelyTyped, but included as a dependency of the <code class="language-js >react-redux</code> package, so they should be installed automatically. If you still need to install them manually, run:</p>
-<pre class="language-js ><code class="language-js >npm install @types/react-redux</code></pre>
+<p>If you are using TypeScript, the React Redux types are maintained separately in DefinitelyTyped, but included as a dependency of the <code class="language-js" >react-redux</code> package, so they should be installed automatically. If you still need to install them manually, run:</p>
+<pre class="language-js" ><code class="language-js" >npm install @types/react-redux</code></pre>
 <h2 id="api-overview">API Overview</h2>
-<h3 id="provider"><code class="language-js >Provider</code></h3>
-<p>React Redux includes a <code class="language-js >&lt;Provider /&gt;</code> component, which makes the Redux store available to the rest of your app:</p>
-<pre class="language-js ><code class="language-js >import React from &#39;react&#39;
+<h3 id="provider"><code class="language-js" >Provider</code></h3>
+<p>React Redux includes a <code class="language-js" >&lt;Provider /&gt;</code> component, which makes the Redux store available to the rest of your app:</p>
+<pre class="language-js" ><code class="language-js" >import React from &#39;react&#39;
 import ReactDOM from &#39;react-dom&#39;
 
 import { Provider } from &#39;react-redux&#39;
@@ -58,8 +58,8 @@ ReactDOM.render(
 )</code></pre>
 <h3 id="hooks">Hooks</h3>
 <p>React Redux provides a pair of custom React hooks that allow your React components to interact with the Redux store.</p>
-<p><code class="language-js >useSelector</code> reads a value from the store state and subscribes to updates, while <code class="language-js >useDispatch</code> returns the store’s <code class="language-js >dispatch</code> method to let you dispatch actions.</p>
-<pre class="language-js ><code class="language-js >import React from &#39;react&#39;
+<p><code class="language-js" >useSelector</code> reads a value from the store state and subscribes to updates, while <code class="language-js" >useDispatch</code> returns the store’s <code class="language-js" >dispatch</code> method to let you dispatch actions.</p>
+<pre class="language-js" ><code class="language-js" >import React from &#39;react&#39;
 import { useSelector, useDispatch } from &#39;react-redux&#39;
 import {
   decrement,

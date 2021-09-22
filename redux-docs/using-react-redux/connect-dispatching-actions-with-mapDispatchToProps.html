@@ -210,47 +210,47 @@
     </header>
     <p> </p>
     <h1 id="connect-dispatching-actions-with-mapdispatchtoprops">
-      Connect: Dispatching Actions with <code class="language-js >mapDispatchToProps</code>
+      Connect: Dispatching Actions with <code class="language-js" >mapDispatchToProps</code>
     </h1>
     <p>
-      As the second argument passed in to <code class="language-js >connect</code>,
-      <code class="language-js >mapDispatchToProps</code> is used for dispatching actions to the
+      As the second argument passed in to <code class="language-js" >connect</code>,
+      <code class="language-js" >mapDispatchToProps</code> is used for dispatching actions to the
       store.
     </p>
     <p>
-      <code class="language-js >dispatch</code> is a function of the Redux store. You call
-      <code class="language-js >store.dispatch</code> to dispatch an action. This is the only way to
+      <code class="language-js" >dispatch</code> is a function of the Redux store. You call
+      <code class="language-js" >store.dispatch</code> to dispatch an action. This is the only way to
       trigger a state change.
     </p>
     <p>
       With React Redux, your components never access the store directly -
-      <code class="language-js >connect</code> does it for you. React Redux gives you two ways to
+      <code class="language-js" >connect</code> does it for you. React Redux gives you two ways to
       let components dispatch actions:
     </p>
     <ul>
       <li>
         By default, a connected component receives
-        <code class="language-js >props.dispatch</code> and can dispatch actions itself.
+        <code class="language-js" >props.dispatch</code> and can dispatch actions itself.
       </li>
       <li>
-        <code class="language-js >connect</code> can accept an argument called
-        <code class="language-js >mapDispatchToProps</code>, which lets you create functions that
+        <code class="language-js" >connect</code> can accept an argument called
+        <code class="language-js" >mapDispatchToProps</code>, which lets you create functions that
         dispatch when called, and pass those functions as props to your
         component.
       </li>
     </ul>
     <p>
-      The <code class="language-js >mapDispatchToProps</code> functions are normally referred to as
-      <code class="language-js >mapDispatch</code> for short, but the actual variable name used can
+      The <code class="language-js" >mapDispatchToProps</code> functions are normally referred to as
+      <code class="language-js" >mapDispatch</code> for short, but the actual variable name used can
       be whatever you want.
     </p>
     <h2 id="approaches-for-dispatching">Approaches for Dispatching</h2>
     <h3 id="default-dispatch-as-a-prop">
-      Default: <code class="language-js >dispatch</code> as a Prop
+      Default: <code class="language-js" >dispatch</code> as a Prop
     </h3>
     <p>
-      If you don’t specify the second argument to <code class="language-js >connect()</code>, your
-      component will receive <code class="language-js >dispatch</code> by default. For example:
+      If you don’t specify the second argument to <code class="language-js" >connect()</code>, your
+      component will receive <code class="language-js" >dispatch</code> by default. For example:
     </p>
     <div class="sourceCode" id="cb1">
       <pre class="language-js 
@@ -264,7 +264,7 @@
     </div>
     <p>
       Once you have connected your component in this way, your component
-      receives <code class="language-js >props.dispatch</code>. You may use it to dispatch actions
+      receives <code class="language-js" >props.dispatch</code>. You may use it to dispatch actions
       to the store.
     </p>
     <div class="sourceCode" id="cb2">
@@ -282,14 +282,14 @@
 <a class="sourceLine" id="cb2-10" title="10"><span class="op">}</span></a></code></pre>
     </div>
     <h3 id="providing-a-mapdispatchtoprops-parameter">
-      Providing A <code class="language-js >mapDispatchToProps</code> Parameter
+      Providing A <code class="language-js" >mapDispatchToProps</code> Parameter
     </h3>
     <p>
-      Providing a <code class="language-js >mapDispatchToProps</code> allows you to specify which
+      Providing a <code class="language-js" >mapDispatchToProps</code> allows you to specify which
       actions your component might need to dispatch. It lets you provide action
       dispatching functions as props. Therefore, instead of calling
-      <code class="language-js >props.dispatch(() =&gt; increment())</code>, you may call
-      <code class="language-js >props.increment()</code> directly. There are a few reasons why you
+      <code class="language-js" >props.dispatch(() =&gt; increment())</code>, you may call
+      <code class="language-js" >props.increment()</code> directly. There are a few reasons why you
       might want to do that.
     </p>
     <h4 id="more-declarative">More Declarative</h4>
@@ -302,7 +302,7 @@
     <p>
       A good example would be dispatching an action when a button is clicked.
       Connecting the button directly probably doesn’t make sense conceptually,
-      and neither does having the button reference <code class="language-js >dispatch</code>.
+      and neither does having the button reference <code class="language-js" >dispatch</code>.
     </p>
     <div class="sourceCode" id="cb3">
       <pre class="language-js 
@@ -315,11 +315,11 @@
     </div>
     <p>
       Once you’ve wrapped all our action creators with functions that dispatch
-      the actions, the component is free of the need of <code class="language-js >dispatch</code>.
+      the actions, the component is free of the need of <code class="language-js" >dispatch</code>.
       Therefore,
       <strong
-        >if you define your own <code class="language-js >mapDispatchToProps</code>, the connected
-        component will no longer receive <code class="language-js >dispatch</code>.</strong
+        >if you define your own <code class="language-js" >mapDispatchToProps</code>, the connected
+        component will no longer receive <code class="language-js" >dispatch</code>.</strong
       >
     </p>
     <h4 id="pass-down-action-dispatching-logic-to-unconnected-child-components">
@@ -330,7 +330,7 @@
       functions to child ( likely unconnected ) components. This allows more
       components to dispatch actions, while keeping them “unaware” of Redux.
     </p>
-    <pre class="language-js  class="jsx"><code class="language-js >// pass down toggleTodo to child component
+    <pre class="language-js  class="jsx"><code class="language-js" >// pass down toggleTodo to child component
 // making Todo able to dispatch the toggleTodo action
 const TodoList = ({ todos, toggleTodo }) =&gt; (
   &lt;div&gt;
@@ -340,22 +340,22 @@ const TodoList = ({ todos, toggleTodo }) =&gt; (
   &lt;/div&gt;
 )</code></pre>
     <p>
-      This is what React Redux’s <code class="language-js >connect</code> does — it encapsulates the
+      This is what React Redux’s <code class="language-js" >connect</code> does — it encapsulates the
       logic of talking to the Redux store and lets you not worry about it. And
       this is what you should totally make full use of in your implementation.
     </p>
     <h2 id="two-forms-of-mapdispatchtoprops">
-      Two Forms of <code class="language-js >mapDispatchToProps</code>
+      Two Forms of <code class="language-js" >mapDispatchToProps</code>
     </h2>
     <p>
-      The <code class="language-js >mapDispatchToProps</code> parameter can be of two forms. While
+      The <code class="language-js" >mapDispatchToProps</code> parameter can be of two forms. While
       the function form allows more customization, the object form is easy to
       use.
     </p>
     <ul>
       <li>
         <strong>Function form</strong>: Allows more customization, gains access
-        to <code class="language-js >dispatch</code> and optionally <code class="language-js >ownProps</code>
+        to <code class="language-js" >dispatch</code> and optionally <code class="language-js" >ownProps</code>
       </li>
       <li>
         <strong>Object shorthand form</strong>: More declarative and easier to
@@ -365,36 +365,36 @@ const TodoList = ({ todos, toggleTodo }) =&gt; (
     <blockquote>
       <p>
         ⭐ <strong>Note:</strong> We recommend using the object form of
-        <code class="language-js >mapDispatchToProps</code> unless you specifically need to
+        <code class="language-js" >mapDispatchToProps</code> unless you specifically need to
         customize dispatching behavior in some way.
       </p>
     </blockquote>
     <h2 id="defining-mapdispatchtoprops-as-a-function">
-      Defining <code class="language-js >mapDispatchToProps</code> As A Function
+      Defining <code class="language-js" >mapDispatchToProps</code> As A Function
     </h2>
     <p>
-      Defining <code class="language-js >mapDispatchToProps</code> as a function gives you the most
+      Defining <code class="language-js" >mapDispatchToProps</code> as a function gives you the most
       flexibility in customizing the functions your component receives, and how
-      they dispatch actions. You gain access to <code class="language-js >dispatch</code> and
-      <code class="language-js >ownProps</code>. You may use this chance to write customized
+      they dispatch actions. You gain access to <code class="language-js" >dispatch</code> and
+      <code class="language-js" >ownProps</code>. You may use this chance to write customized
       functions to be called by your connected components.
     </p>
     <h3 id="arguments">Arguments</h3>
     <ol type="1">
       <li>
-        <strong><code class="language-js >dispatch</code></strong>
+        <strong><code class="language-js" >dispatch</code></strong>
       </li>
       <li>
-        <strong><code class="language-js >ownProps</code> (optional)</strong>
+        <strong><code class="language-js" >ownProps</code> (optional)</strong>
       </li>
     </ol>
     <p>
-      <strong><code class="language-js >dispatch</code></strong>
+      <strong><code class="language-js" >dispatch</code></strong>
     </p>
     <p>
-      The <code class="language-js >mapDispatchToProps</code> function will be called with
-      <code class="language-js >dispatch</code> as the first argument. You will normally make use of
-      this by returning new functions that call <code class="language-js >dispatch()</code> inside
+      The <code class="language-js" >mapDispatchToProps</code> function will be called with
+      <code class="language-js" >dispatch</code> as the first argument. You will normally make use of
+      this by returning new functions that call <code class="language-js" >dispatch()</code> inside
       themselves, and either pass in a plain action object directly or pass in
       the result of an action creator.
     </p>
@@ -428,19 +428,19 @@ const TodoList = ({ todos, toggleTodo }) =&gt; (
 <a class="sourceLine" id="cb6-10" title="10"><span class="op">}</span></a></code></pre>
     </div>
     <p>
-      <strong><code class="language-js >ownProps</code> ( optional )</strong>
+      <strong><code class="language-js" >ownProps</code> ( optional )</strong>
     </p>
     <p>
-      If your <code class="language-js >mapDispatchToProps</code> function is declared as taking two
-      parameters, it will be called with <code class="language-js >dispatch</code> as the first
-      parameter and the <code class="language-js >props</code> passed to the connected component as
+      If your <code class="language-js" >mapDispatchToProps</code> function is declared as taking two
+      parameters, it will be called with <code class="language-js" >dispatch</code> as the first
+      parameter and the <code class="language-js" >props</code> passed to the connected component as
       the second parameter, and will be re-invoked whenever the connected
       component receives new props.
     </p>
     <p>
-      This means, instead of re-binding new <code class="language-js >props</code> to action
+      This means, instead of re-binding new <code class="language-js" >props</code> to action
       dispatchers upon component re-rendering, you may do so when your
-      component’s <code class="language-js >props</code> change.
+      component’s <code class="language-js" >props</code> change.
     </p>
     <p><strong>Binds on component mount</strong></p>
     <div class="sourceCode" id="cb7">
@@ -457,7 +457,7 @@ const TodoList = ({ todos, toggleTodo }) =&gt; (
 <a class="sourceLine" id="cb7-9" title="9"><span class="op">}</span></a></code></pre>
     </div>
     <p>
-      <strong>Binds on <code class="language-js >props</code> change</strong>
+      <strong>Binds on <code class="language-js" >props</code> change</strong>
     </p>
     <div class="sourceCode" id="cb8">
       <pre class="language-js 
@@ -474,7 +474,7 @@ const TodoList = ({ todos, toggleTodo }) =&gt; (
     </div>
     <h3 id="return">Return</h3>
     <p>
-      Your <code class="language-js >mapDispatchToProps</code> function should return a plain
+      Your <code class="language-js" >mapDispatchToProps</code> function should return a plain
       object:
     </p>
     <ul>
@@ -485,7 +485,7 @@ const TodoList = ({ todos, toggleTodo }) =&gt; (
       </li>
       <li>
         If you use action creators ( as oppose to plain object actions ) inside
-        <code class="language-js >dispatch</code>, it is a convention to simply name the field key
+        <code class="language-js" >dispatch</code>, it is a convention to simply name the field key
         the same name as the action creator:
       </li>
     </ul>
@@ -506,7 +506,7 @@ const TodoList = ({ todos, toggleTodo }) =&gt; (
 <a class="sourceLine" id="cb9-12" title="12"><span class="op">}</span></a></code></pre>
     </div>
     <p>
-      The return of the <code class="language-js >mapDispatchToProps</code> function will be merged
+      The return of the <code class="language-js" >mapDispatchToProps</code> function will be merged
       to your connected component as props. You may call them directly to
       dispatch its action.
     </p>
@@ -529,8 +529,8 @@ const TodoList = ({ todos, toggleTodo }) =&gt; (
       <a href="https://codesandbox.io/s/yv6kqo1yw9">in this CodeSandbox</a>)
     </p>
     <h3 id="defining-the-mapdispatchtoprops-function-with-bindactioncreators">
-      Defining the <code class="language-js >mapDispatchToProps</code> Function with
-      <code class="language-js >bindActionCreators</code>
+      Defining the <code class="language-js" >mapDispatchToProps</code> Function with
+      <code class="language-js" >bindActionCreators</code>
     </h3>
     <p>
       Wrapping these functions by hand is tedious, so Redux provides a function
@@ -538,30 +538,30 @@ const TodoList = ({ todos, toggleTodo }) =&gt; (
     </p>
     <blockquote>
       <p>
-        <code class="language-js >bindActionCreators</code> turns an object whose values are
+        <code class="language-js" >bindActionCreators</code> turns an object whose values are
         <a href="https://redux.js.org/glossary#action-creator"
           >action creators</a
         >, into an object with the same keys, but with every action creator
         wrapped into a
         <a href="https://redux.js.org/api/store#dispatch"
-          ><code class="language-js >dispatch</code></a
+          ><code class="language-js" >dispatch</code></a
         >
         call so they may be invoked directly. See
         <a href="https://redux.js.org/api/bindactioncreators"
-          >Redux Docs on <code class="language-js >bindActionCreators</code></a
+          >Redux Docs on <code class="language-js" >bindActionCreators</code></a
         >
       </p>
     </blockquote>
-    <p><code class="language-js >bindActionCreators</code> accepts two parameters:</p>
+    <p><code class="language-js" >bindActionCreators</code> accepts two parameters:</p>
     <ol type="1">
       <li>
-        A <strong><code class="language-js >function</code></strong> (an action creator) or an
-        <strong><code class="language-js >object</code></strong> (each field an action creator)
+        A <strong><code class="language-js" >function</code></strong> (an action creator) or an
+        <strong><code class="language-js" >object</code></strong> (each field an action creator)
       </li>
-      <li><code class="language-js >dispatch</code></li>
+      <li><code class="language-js" >dispatch</code></li>
     </ol>
     <p>
-      The wrapper functions generated by <code class="language-js >bindActionCreators</code> will
+      The wrapper functions generated by <code class="language-js" >bindActionCreators</code> will
       automatically forward all of their arguments, so you don’t need to do that
       by hand.
     </p>
@@ -591,8 +591,8 @@ const TodoList = ({ todos, toggleTodo }) =&gt; (
 <a class="sourceLine" id="cb11-21" title="21"><span class="co">// }</span></a></code></pre>
     </div>
     <p>
-      To use <code class="language-js >bindActionCreators</code> in our
-      <code class="language-js >mapDispatchToProps</code> function:
+      To use <code class="language-js" >bindActionCreators</code> in our
+      <code class="language-js" >mapDispatchToProps</code> function:
     </p>
     <div class="sourceCode" id="cb12">
       <pre class="language-js 
@@ -608,13 +608,13 @@ const TodoList = ({ todos, toggleTodo }) =&gt; (
 <a class="sourceLine" id="cb12-9" title="9"><span class="at">connect</span>(<span class="kw">null</span><span class="op">,</span> mapDispatchToProps)(Counter)</a></code></pre>
     </div>
     <h3 id="manually-injecting-dispatch">
-      Manually Injecting <code class="language-js >dispatch</code>
+      Manually Injecting <code class="language-js" >dispatch</code>
     </h3>
     <p>
-      If the <code class="language-js >mapDispatchToProps</code> argument is supplied, the component
-      will no longer receive the default <code class="language-js >dispatch</code>. You may bring it
+      If the <code class="language-js" >mapDispatchToProps</code> argument is supplied, the component
+      will no longer receive the default <code class="language-js" >dispatch</code>. You may bring it
       back by adding it manually to the return of your
-      <code class="language-js >mapDispatchToProps</code>, although most of the time you shouldn’t
+      <code class="language-js" >mapDispatchToProps</code>, although most of the time you shouldn’t
       need to do this:
     </p>
     <div class="sourceCode" id="cb13">
@@ -631,37 +631,37 @@ const TodoList = ({ todos, toggleTodo }) =&gt; (
 <a class="sourceLine" id="cb13-9" title="9"><span class="op">}</span></a></code></pre>
     </div>
     <h2 id="defining-mapdispatchtoprops-as-an-object">
-      Defining <code class="language-js >mapDispatchToProps</code> As An Object
+      Defining <code class="language-js" >mapDispatchToProps</code> As An Object
     </h2>
     <p>
       You’ve seen that the setup for dispatching Redux actions in a React
       component follows a very similar process: define an action creator, wrap
       it in another function that looks like
-      <code class="language-js >(…args) =&gt; dispatch(actionCreator(…args))</code>, and pass that
+      <code class="language-js" >(…args) =&gt; dispatch(actionCreator(…args))</code>, and pass that
       wrapper function as a prop to your component.
     </p>
     <p>
-      Because this is so common, <code class="language-js >connect</code> supports an “object
-      shorthand” form for the <code class="language-js >mapDispatchToProps</code> argument: if you
+      Because this is so common, <code class="language-js" >connect</code> supports an “object
+      shorthand” form for the <code class="language-js" >mapDispatchToProps</code> argument: if you
       pass an object full of action creators instead of a function,
-      <code class="language-js >connect</code> will automatically call
-      <code class="language-js >bindActionCreators</code> for you internally.
+      <code class="language-js" >connect</code> will automatically call
+      <code class="language-js" >bindActionCreators</code> for you internally.
     </p>
     <p>
       <strong
         >We recommend always using the “object shorthand” form of
-        <code class="language-js >mapDispatchToProps</code>, unless you have a specific reason to
+        <code class="language-js" >mapDispatchToProps</code>, unless you have a specific reason to
         customize the dispatching behavior.</strong
       >
     </p>
     <p>Note that:</p>
     <ul>
       <li>
-        Each field of the <code class="language-js >mapDispatchToProps</code> object is assumed to
+        Each field of the <code class="language-js" >mapDispatchToProps</code> object is assumed to
         be an action creator
       </li>
       <li>
-        Your component will no longer receive <code class="language-js >dispatch</code> as a prop
+        Your component will no longer receive <code class="language-js" >dispatch</code> as a prop
       </li>
     </ul>
     <div class="sourceCode" id="cb14">
@@ -670,7 +670,7 @@ const TodoList = ({ todos, toggleTodo }) =&gt; (
       ><code class="language-js  class="sourceCode javascript"><a class="sourceLine" id="cb14-1" title="1"><span class="co">// React Redux does this for you automatically:</span></a>
 <a class="sourceLine" id="cb14-2" title="2"><span class="op">;</span>(dispatch) <span class="kw">=&gt;</span> <span class="at">bindActionCreators</span>(mapDispatchToProps<span class="op">,</span> dispatch)</a></code></pre>
     </div>
-    <p>Therefore, our <code class="language-js >mapDispatchToProps</code> can simply be:</p>
+    <p>Therefore, our <code class="language-js" >mapDispatchToProps</code> can simply be:</p>
     <div class="sourceCode" id="cb15">
       <pre class="language-js 
         class="sourceCode js"
@@ -682,8 +682,8 @@ const TodoList = ({ todos, toggleTodo }) =&gt; (
     </div>
     <p>
       Since the actual name of the variable is up to you, you might want to give
-      it a name like <code class="language-js >actionCreators</code>, or even define the object
-      inline in the call to <code class="language-js >connect</code>:
+      it a name like <code class="language-js" >actionCreators</code>, or even define the object
+      inline in the call to <code class="language-js" >connect</code>:
     </p>
     <div class="sourceCode" id="cb16">
       <pre class="language-js 
@@ -703,7 +703,7 @@ const TodoList = ({ todos, toggleTodo }) =&gt; (
     </div>
     <h2 id="common-problems">Common Problems</h2>
     <h3 id="why-is-my-component-not-receiving-dispatch">
-      Why is my component not receiving <code class="language-js >dispatch</code>?
+      Why is my component not receiving <code class="language-js" >dispatch</code>?
     </h3>
     <p>Also known as</p>
     <div class="sourceCode" id="cb17">
@@ -713,19 +713,19 @@ const TodoList = ({ todos, toggleTodo }) =&gt; (
     </div>
     <p>
       This is a common error that happens when you try to call
-      <code class="language-js >this.props.dispatch</code> , but <code class="language-js >dispatch</code> is not
+      <code class="language-js" >this.props.dispatch</code> , but <code class="language-js" >dispatch</code> is not
       injected to your component.
     </p>
     <p>
-      <code class="language-js >dispatch</code> is injected to your component <em>only</em> when:
+      <code class="language-js" >dispatch</code> is injected to your component <em>only</em> when:
     </p>
     <p>
-      <strong>1. You do not provide <code class="language-js >mapDispatchToProps</code></strong>
+      <strong>1. You do not provide <code class="language-js" >mapDispatchToProps</code></strong>
     </p>
     <p>
-      The default <code class="language-js >mapDispatchToProps</code> is simply
-      <code class="language-js >dispatch =&gt; ({ dispatch })</code>. If you do not provide
-      <code class="language-js >mapDispatchToProps</code>, <code class="language-js >dispatch</code> will be provided as
+      The default <code class="language-js" >mapDispatchToProps</code> is simply
+      <code class="language-js" >dispatch =&gt; ({ dispatch })</code>. If you do not provide
+      <code class="language-js" >mapDispatchToProps</code>, <code class="language-js" >dispatch</code> will be provided as
       mentioned above.
     </p>
     <p>In another words, if you do:</p>
@@ -737,13 +737,13 @@ const TodoList = ({ todos, toggleTodo }) =&gt; (
     </div>
     <p>
       <strong
-        >2. Your customized <code class="language-js >mapDispatchToProps</code> function return
-        specifically contains <code class="language-js >dispatch</code></strong
+        >2. Your customized <code class="language-js" >mapDispatchToProps</code> function return
+        specifically contains <code class="language-js" >dispatch</code></strong
       >
     </p>
     <p>
-      You may bring back <code class="language-js >dispatch</code> by providing your customized
-      <code class="language-js >mapDispatchToProps</code> function:
+      You may bring back <code class="language-js" >dispatch</code> by providing your customized
+      <code class="language-js" >mapDispatchToProps</code> function:
     </p>
     <div class="sourceCode" id="cb19">
       <pre class="language-js 
@@ -757,7 +757,7 @@ const TodoList = ({ todos, toggleTodo }) =&gt; (
 <a class="sourceLine" id="cb19-7" title="7">  <span class="op">}</span></a>
 <a class="sourceLine" id="cb19-8" title="8"><span class="op">}</span></a></code></pre>
     </div>
-    <p>Or alternatively, with <code class="language-js >bindActionCreators</code>:</p>
+    <p>Or alternatively, with <code class="language-js" >bindActionCreators</code>:</p>
     <div class="sourceCode" id="cb20">
       <pre class="language-js 
         class="sourceCode js"
@@ -778,8 +778,8 @@ const TodoList = ({ todos, toggleTodo }) =&gt; (
     </p>
     <p>
       There are discussions regarding whether to provide
-      <code class="language-js >dispatch</code> to your components when you specify
-      <code class="language-js >mapDispatchToProps</code> (
+      <code class="language-js" >dispatch</code> to your components when you specify
+      <code class="language-js" >mapDispatchToProps</code> (
       <a
         href="https://github.com/reduxjs/react-redux/issues/255#issuecomment-172089874"
         >Dan Abramov’s response to #255</a
@@ -788,14 +788,14 @@ const TodoList = ({ todos, toggleTodo }) =&gt; (
       implementation intention.
     </p>
     <h3 id="can-i-mapdispatchtoprops-without-mapstatetoprops-in-redux">
-      Can I <code class="language-js >mapDispatchToProps</code> without
-      <code class="language-js >mapStateToProps</code> in Redux?
+      Can I <code class="language-js" >mapDispatchToProps</code> without
+      <code class="language-js" >mapStateToProps</code> in Redux?
     </h3>
     <p>
-      Yes. You can skip the first parameter by passing <code class="language-js >undefined</code> or
-      <code class="language-js >null</code>. Your component will not subscribe to the store, and
+      Yes. You can skip the first parameter by passing <code class="language-js" >undefined</code> or
+      <code class="language-js" >null</code>. Your component will not subscribe to the store, and
       will still receive the dispatch props defined by
-      <code class="language-js >mapDispatchToProps</code>.
+      <code class="language-js" >mapDispatchToProps</code>.
     </p>
     <div class="sourceCode" id="cb21">
       <pre class="language-js 
@@ -803,7 +803,7 @@ const TodoList = ({ todos, toggleTodo }) =&gt; (
       ><code class="language-js  class="sourceCode javascript"><a class="sourceLine" id="cb21-1" title="1"><span class="at">connect</span>(<span class="kw">null</span><span class="op">,</span> mapDispatchToProps)(MyComponent)</a></code></pre>
     </div>
     <h3 id="can-i-call-store.dispatch">
-      Can I call <code class="language-js >store.dispatch</code>?
+      Can I call <code class="language-js" >store.dispatch</code>?
     </h3>
     <p>
       It’s an anti-pattern to interact with the store directly in a React
@@ -813,8 +813,8 @@ const TodoList = ({ todos, toggleTodo }) =&gt; (
         href="https://redux.js.org/faq/storesetup#can-or-should-i-create-multiple-stores-can-i-import-my-store-directly-and-use-it-in-components-myself"
         >Redux FAQ entry on store setup</a
       >
-      for more details). Let React Redux’s <code class="language-js >connect</code> handle the
-      access to the store, and use the <code class="language-js >dispatch</code> it passes to the
+      for more details). Let React Redux’s <code class="language-js" >connect</code> handle the
+      access to the store, and use the <code class="language-js" >dispatch</code> it passes to the
       props to dispatch actions.
     </p>
     <h2 id="links-and-references">Links and References</h2>
@@ -822,7 +822,7 @@ const TodoList = ({ todos, toggleTodo }) =&gt; (
     <ul>
       <li>
         <a href="https://daveceddia.com/redux-mapdispatchtoprops-object-form/"
-          >You Might Not Need the <code class="language-js >mapDispatchToProps</code> Function</a
+          >You Might Not Need the <code class="language-js" >mapDispatchToProps</code> Function</a
         >
       </li>
     </ul>
@@ -830,7 +830,7 @@ const TodoList = ({ todos, toggleTodo }) =&gt; (
     <ul>
       <li>
         <a href="https://redux.js.org/api/bindactioncreators"
-          >Redux Doc on <code class="language-js >bindActionCreators</code></a
+          >Redux Doc on <code class="language-js" >bindActionCreators</code></a
         >
       </li>
     </ul>
@@ -839,28 +839,28 @@ const TodoList = ({ todos, toggleTodo }) =&gt; (
       <li>
         <a
           href="https://stackoverflow.com/questions/34458261/how-to-get-simple-dispatch-from-this-props-using-connect-w-redux"
-          >How to get simple dispatch from <code class="language-js >this.props</code> using connect
+          >How to get simple dispatch from <code class="language-js" >this.props</code> using connect
           with Redux?</a
         >
       </li>
       <li>
         <a href="https://github.com/reduxjs/react-redux/issues/255"
-          ><code class="language-js >this.props.dispatch</code> is <code class="language-js >undefined</code> if using
-          <code class="language-js >mapDispatchToProps</code></a
+          ><code class="language-js" >this.props.dispatch</code> is <code class="language-js" >undefined</code> if using
+          <code class="language-js" >mapDispatchToProps</code></a
         >
       </li>
       <li>
         <a href="https://github.com/reduxjs/redux/issues/916"
-          >Do not call <code class="language-js >store.dispatch</code>, call
-          <code class="language-js >this.props.dispatch</code> injected by
-          <code class="language-js >connect</code> instead</a
+          >Do not call <code class="language-js" >store.dispatch</code>, call
+          <code class="language-js" >this.props.dispatch</code> injected by
+          <code class="language-js" >connect</code> instead</a
         >
       </li>
       <li>
         <a
           href="https://stackoverflow.com/questions/47657365/can-i-mapdispatchtoprops-without-mapstatetoprops-in-redux"
-          >Can I <code class="language-js >mapDispatchToProps</code> without
-          <code class="language-js >mapStateToProps</code> in Redux?</a
+          >Can I <code class="language-js" >mapDispatchToProps</code> without
+          <code class="language-js" >mapStateToProps</code> in Redux?</a
         >
       </li>
       <li>

@@ -95,10 +95,17 @@
       as="script"
     />
     <link rel="preload" href="../assets/js/main.8520a084.js" as="script" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css"
+    />
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
-    </head>
+    <script
+      async
+      defer
+      src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"
+    ></script>
+  </head>
   <body>
     <script>
       !(function () {
@@ -1102,8 +1109,11 @@
                               <li>
                                 <a
                                   href="#how-does-combinereducers-use-shallow-equality-checking"
-                                  >How does <code class="language-js >combineReducers</code> use
-                                  shallow equality checking?</a
+                                  >How does
+                                  <code class="language-js"
+                                    >combineReducers</code
+                                  >
+                                  use shallow equality checking?</a
                                 >
                               </li>
                               <li>
@@ -1148,9 +1158,11 @@
                                   href="#why-does-a-selector-mutating-and-returning-a-persistent-object-to-mapstatetoprops-prevent-react-redux-from-re-rendering-a-wrapped-component"
                                   >Why does a selector mutating and returning a
                                   persistent object to
-                                  <code class="language-js >mapStateToProps</code> prevent
-                                  React-Redux from re-rendering a wrapped
-                                  component?</a
+                                  <code class="language-js"
+                                    >mapStateToProps</code
+                                  >
+                                  prevent React-Redux from re-rendering a
+                                  wrapped component?</a
                                 >
                               </li>
                               <li>
@@ -1293,21 +1305,24 @@
                               href="#how-do-shallow-and-deep-equality-checking-differ"
                               >shallow equality checking</a
                             >. In particular: - Redux&#x27;s
-                            <code class="language-js >combineReducers</code> utility
+                            <code class="language-js">combineReducers</code>
+                            utility
                             <a
                               href="#how-does-redux-use-shallow-equality-checking"
                               >shallowly checks for reference changes</a
                             >
                             caused by the reducers that it calls. -
-                            React-Redux&#x27;s <code class="language-js >connect</code> method
+                            React-Redux&#x27;s
+                            <code class="language-js">connect</code> method
                             generates components that
                             <a
                               href="#how-does-react-redux-use-shallow-equality-checking"
                               >shallowly check reference changes to the root
                               state</a
                             >, and the return values from the
-                            <code class="language-js >mapStateToProps</code> function to see if the
-                            wrapped components actually need to re-render. Such
+                            <code class="language-js">mapStateToProps</code>
+                            function to see if the wrapped components actually
+                            need to re-render. Such
                             <a
                               href="#why-will-shallow-equality-checking-not-work-with-mutable-objects"
                               >shallow checking requires immutability</a
@@ -1405,10 +1420,10 @@
                         </p>
                         <p>
                           A shallow equality check is therefore as simple (and
-                          as fast) as <code class="language-js >a === b</code>, whereas a deep
-                          equality check involves a recursive traversal through
-                          the properties of two objects, comparing the value of
-                          each property at each step.
+                          as fast) as <code class="language-js">a === b</code>,
+                          whereas a deep equality check involves a recursive
+                          traversal through the properties of two objects,
+                          comparing the value of each property at each step.
                         </p>
                         <p>
                           It&#x27;s for this improvement in performance that
@@ -1456,10 +1471,10 @@
                         </h3>
                         <p>
                           Redux uses shallow equality checking in its
-                          <code class="language-js >combineReducers</code> function to return either
-                          a new mutated copy of the root state object, or, if no
-                          mutations have been made, the current root state
-                          object.
+                          <code class="language-js">combineReducers</code>
+                          function to return either a new mutated copy of the
+                          root state object, or, if no mutations have been made,
+                          the current root state object.
                         </p>
                         <h4>
                           <a
@@ -1490,8 +1505,9 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="how-does-combinereducers-use-shallow-equality-checking"
                           ></a
-                          >How does <code class="language-js >combineReducers</code> use shallow
-                          equality checking?<a
+                          >How does
+                          <code class="language-js">combineReducers</code> use
+                          shallow equality checking?<a
                             class="hash-link"
                             href="#how-does-combinereducers-use-shallow-equality-checking"
                             title="Direct link to heading"
@@ -1509,18 +1525,20 @@
                           each individual data slice.
                         </p>
                         <p>
-                          <code class="language-js >combineReducers</code> makes working with this
-                          style of structure easier by taking a
-                          <code class="language-js >reducers</code> argument that’s defined as a
-                          hash table comprising a set of key/value pairs, where
-                          each key is the name of a state slice, and the
-                          corresponding value is the reducer function that will
-                          act on it.
+                          <code class="language-js">combineReducers</code> makes
+                          working with this style of structure easier by taking
+                          a <code class="language-js">reducers</code> argument
+                          that’s defined as a hash table comprising a set of
+                          key/value pairs, where each key is the name of a state
+                          slice, and the corresponding value is the reducer
+                          function that will act on it.
                         </p>
                         <p>
                           So, for example, if your state shape is
-                          <code class="language-js >{ todos, counter }</code>, the call to
-                          <code class="language-js >combineReducers</code> would be:
+                          <code class="language-js">{ todos, counter }</code>,
+                          the call to
+                          <code class="language-js">combineReducers</code> would
+                          be:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -1595,20 +1613,22 @@
                         <p>where:</p>
                         <ul>
                           <li>
-                            the keys <code class="language-js >todos</code> and
-                            <code class="language-js >counter</code> each refer to a separate state
-                            slice;
+                            the keys <code class="language-js">todos</code> and
+                            <code class="language-js">counter</code> each refer
+                            to a separate state slice;
                           </li>
                           <li>
-                            the values <code class="language-js >myTodosReducer</code> and
-                            <code class="language-js >myCounterReducer</code> are reducer functions,
-                            with each acting on the state slice identified by
-                            the respective key.
+                            the values
+                            <code class="language-js">myTodosReducer</code> and
+                            <code class="language-js">myCounterReducer</code>
+                            are reducer functions, with each acting on the state
+                            slice identified by the respective key.
                           </li>
                         </ul>
                         <p>
-                          <code class="language-js >combineReducers</code> iterates through each of
-                          these key/value pairs. For each iteration, it:
+                          <code class="language-js">combineReducers</code>
+                          iterates through each of these key/value pairs. For
+                          each iteration, it:
                         </p>
                         <ul>
                           <li>
@@ -1626,39 +1646,44 @@
                         </ul>
                         <p>
                           As it continues through the iterations,
-                          <code class="language-js >combineReducers</code> will construct a new
-                          state object with the state slices returned from each
-                          reducer. This new state object may or may not be
-                          different from the current state object. It is here
-                          that <code class="language-js >combineReducers</code> uses shallow
-                          equality checking to determine whether the state has
-                          changed.
+                          <code class="language-js">combineReducers</code> will
+                          construct a new state object with the state slices
+                          returned from each reducer. This new state object may
+                          or may not be different from the current state object.
+                          It is here that
+                          <code class="language-js">combineReducers</code> uses
+                          shallow equality checking to determine whether the
+                          state has changed.
                         </p>
                         <p>
                           Specifically, at each stage of the iteration,
-                          <code class="language-js >combineReducers</code> performs a shallow
-                          equality check on the current state slice and the
-                          state slice returned from the reducer. If the reducer
-                          returns a new object, the shallow equality check will
-                          fail, and <code class="language-js >combineReducers</code> will set a
-                          <code class="language-js >hasChanged</code> flag to true.
+                          <code class="language-js">combineReducers</code>
+                          performs a shallow equality check on the current state
+                          slice and the state slice returned from the reducer.
+                          If the reducer returns a new object, the shallow
+                          equality check will fail, and
+                          <code class="language-js">combineReducers</code> will
+                          set a <code class="language-js">hasChanged</code> flag
+                          to true.
                         </p>
                         <p>
                           After the iterations have completed,
-                          <code class="language-js >combineReducers</code> will check the state of
-                          the <code class="language-js >hasChanged</code> flag. If it’s true, the
-                          newly-constructed state object will be returned. If
-                          it’s false, the <em>current</em> state object is
-                          returned.
+                          <code class="language-js">combineReducers</code> will
+                          check the state of the
+                          <code class="language-js">hasChanged</code> flag. If
+                          it’s true, the newly-constructed state object will be
+                          returned. If it’s false, the <em>current</em> state
+                          object is returned.
                         </p>
                         <p>
                           This is worth emphasizing:
                           <em
                             >If the reducers all return the same
-                            <code class="language-js >state</code> object passed to them, then
-                            <code class="language-js >combineReducers</code> will return the
-                            <em>current</em> root state object, not the newly
-                            updated one.</em
+                            <code class="language-js">state</code> object passed
+                            to them, then
+                            <code class="language-js">combineReducers</code>
+                            will return the <em>current</em> root state object,
+                            not the newly updated one.</em
                           >
                         </p>
                         <h4>
@@ -1686,7 +1711,8 @@
                             <a href="reducers.html#reducers-share-state"
                               >Redux FAQ - How do I share state between two
                               reducers? do I have to use
-                              <code class="language-js >combineReducers</code>?</a
+                              <code class="language-js">combineReducers</code
+                              >?</a
                             >
                           </li>
                         </ul>
@@ -1734,7 +1760,8 @@
                         <p>
                           By assuming the wrapped component is pure, it need
                           only check whether the root state object or the values
-                          returned from <code class="language-js >mapStateToProps</code> have
+                          returned from
+                          <code class="language-js">mapStateToProps</code> have
                           changed. If they haven’t, the wrapped component does
                           not need re-rendering.
                         </p>
@@ -1743,7 +1770,8 @@
                           state object, and a reference to
                           <em>each value</em> in the props object that&#x27;s
                           returned from the
-                          <code class="language-js >mapStateToProps</code> function.
+                          <code class="language-js">mapStateToProps</code>
+                          function.
                         </p>
                         <p>
                           It then runs a shallow equality check on its reference
@@ -1751,7 +1779,8 @@
                           to it, and a separate series of shallow checks on each
                           reference to the props object’s values and those that
                           are returned from running the
-                          <code class="language-js >mapStateToProps</code> function again.
+                          <code class="language-js">mapStateToProps</code>
+                          function again.
                         </p>
                         <h4>
                           <a
@@ -1786,7 +1815,9 @@
                               target="_blank"
                               rel="noopener noreferrer"
                               >API: React-Redux’s connect function and
-                              <code class="language-js >mapStateToProps</code></a
+                              <code class="language-js"
+                                >mapStateToProps</code
+                              ></a
                             >
                           </li>
                           <li>
@@ -1794,7 +1825,8 @@
                               href="react-redux.html#why-isnt-my-component-re-rendering-or-my-mapstatetoprops-running"
                               >Redux FAQ: Why isn&#x27;t my component
                               re-rendering, or my
-                              <code class="language-js >mapStateToProps</code> running?</a
+                              <code class="language-js">mapStateToProps</code>
+                              running?</a
                             >
                           </li>
                         </ul>
@@ -1807,7 +1839,7 @@
                           ></a
                           >Why does React-Redux shallowly check each value
                           within the props object returned from
-                          <code class="language-js >mapStateToProp</code>?<a
+                          <code class="language-js">mapStateToProp</code>?<a
                             class="hash-link"
                             href="#why-does-react-redux-shallowly-check-each-value-within-the-props-object-returned-from-mapstatetoprop"
                             title="Direct link to heading"
@@ -2008,8 +2040,9 @@
                         <p>
                           As such, a shallow equality check of the props object
                           returned from repeated calls to
-                          <code class="language-js >mapStateToProps</code> would always fail, as a
-                          new object would be returned each time.
+                          <code class="language-js">mapStateToProps</code> would
+                          always fail, as a new object would be returned each
+                          time.
                         </p>
                         <p>
                           React-Redux therefore maintains separate references to
@@ -2056,20 +2089,23 @@
                           >
                         </h3>
                         <p>
-                          Each time React-Redux’s <code class="language-js >connect</code> function
-                          is called, it will perform a shallow equality check on
+                          Each time React-Redux’s
+                          <code class="language-js">connect</code> function is
+                          called, it will perform a shallow equality check on
                           its stored reference to the root state object, and the
                           current root state object passed to it from the store.
                           If the check passes, the root state object has not
                           been updated, and so there is no need to re-render the
-                          component, or even call <code class="language-js >mapStateToProps</code>.
+                          component, or even call
+                          <code class="language-js">mapStateToProps</code>.
                         </p>
                         <p>
                           If the check fails, however, the root state object
                           <em>has</em> been updated, and so
-                          <code class="language-js >connect</code> will call
-                          <code class="language-js >mapStateToProps</code>to see if the props for
-                          the wrapped component have been updated.
+                          <code class="language-js">connect</code> will call
+                          <code class="language-js">mapStateToProps</code>to see
+                          if the props for the wrapped component have been
+                          updated.
                         </p>
                         <p>
                           It does this by performing a shallow equality check on
@@ -2077,10 +2113,12 @@
                           only trigger a re-render if one of those checks fails.
                         </p>
                         <p>
-                          In the example below, if <code class="language-js >state.todos</code> and
-                          the value returned from
-                          <code class="language-js >getVisibleTodos()</code> do not change on
-                          successive calls to <code class="language-js >connect</code>, then the
+                          In the example below, if
+                          <code class="language-js">state.todos</code> and the
+                          value returned from
+                          <code class="language-js">getVisibleTodos()</code> do
+                          not change on successive calls to
+                          <code class="language-js">connect</code>, then the
                           component will not re-render .
                         </p>
                         <div class="codeBlockContainer_K1bP">
@@ -2266,8 +2304,9 @@
                         <p>
                           Conversely, in this next example (below), the
                           component will <em>always</em> re-render, as the value
-                          of <code class="language-js >todos</code> is always a new object,
-                          regardless of whether or not its values change:
+                          of <code class="language-js">todos</code> is always a
+                          new object, regardless of whether or not its values
+                          change:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -2480,7 +2519,8 @@
                         </div>
                         <p>
                           If the shallow equality check fails between the new
-                          values returned from <code class="language-js >mapStateToProps</code> and
+                          values returned from
+                          <code class="language-js">mapStateToProps</code> and
                           the previous values that React-Redux kept a reference
                           to, then a re-rendering of the component will be
                           triggered.
@@ -2535,7 +2575,9 @@
                               target="_blank"
                               rel="noopener noreferrer"
                               >#1816: Component connected to state with
-                              <code class="language-js >mapStateToProps</code></a
+                              <code class="language-js"
+                                >mapStateToProps</code
+                              ></a
                             >
                           </li>
                           <li>
@@ -2755,15 +2797,19 @@
                           </div>
                         </div>
                         <p>
-                          The shallow check of <code class="language-js >param</code> and
-                          <code class="language-js >returnValue</code> simply checks whether both
-                          variables reference the same object, which they
-                          do.<code class="language-js >mutateObj()</code> may return a mutated
-                          version of <code class="language-js >obj</code>, but it&#x27;s still the
-                          same object as that passed in. The fact that its
-                          values have been changed within
-                          <code class="language-js >mutateObj</code> matters not at all to a shallow
-                          check.
+                          The shallow check of
+                          <code class="language-js">param</code> and
+                          <code class="language-js">returnValue</code> simply
+                          checks whether both variables reference the same
+                          object, which they do.<code class="language-js"
+                            >mutateObj()</code
+                          >
+                          may return a mutated version of
+                          <code class="language-js">obj</code>, but it&#x27;s
+                          still the same object as that passed in. The fact that
+                          its values have been changed within
+                          <code class="language-js">mutateObj</code> matters not
+                          at all to a shallow check.
                         </p>
                         <h4>
                           <a
@@ -2816,25 +2862,29 @@
                         </p>
                         <p>
                           Specifically, if the state slice passed to a reducer
-                          by <code class="language-js >combineReducers</code> is a mutable object,
-                          the reducer can modify it directly and return it.
+                          by <code class="language-js">combineReducers</code> is
+                          a mutable object, the reducer can modify it directly
+                          and return it.
                         </p>
                         <p>
                           If it does, the shallow equality check that
-                          <code class="language-js >combineReducers</code> performs will always
-                          pass, as the values of the state slice returned by the
-                          reducer may have been mutated, but the object itself
-                          has not - it’s still the same object that was passed
-                          to the reducer.
+                          <code class="language-js">combineReducers</code>
+                          performs will always pass, as the values of the state
+                          slice returned by the reducer may have been mutated,
+                          but the object itself has not - it’s still the same
+                          object that was passed to the reducer.
                         </p>
                         <p>
-                          Accordingly, <code class="language-js >combineReducers</code> will not set
-                          its <code class="language-js >hasChanged</code> flag, even though the
-                          state has changed. If none of the other reducers
-                          return a new, updated state slice, the
-                          <code class="language-js >hasChanged</code> flag will remain set to false,
-                          causing <code class="language-js >combineReducers</code> to return the
-                          <em>existing</em> root state object.
+                          Accordingly,
+                          <code class="language-js">combineReducers</code> will
+                          not set its
+                          <code class="language-js">hasChanged</code> flag, even
+                          though the state has changed. If none of the other
+                          reducers return a new, updated state slice, the
+                          <code class="language-js">hasChanged</code> flag will
+                          remain set to false, causing
+                          <code class="language-js">combineReducers</code> to
+                          return the <em>existing</em> root state object.
                         </p>
                         <p>
                           The store will still be updated with the new values
@@ -2937,8 +2987,9 @@
                           ></a
                           >Why does a selector mutating and returning a
                           persistent object to
-                          <code class="language-js >mapStateToProps</code> prevent React-Redux from
-                          re-rendering a wrapped component?<a
+                          <code class="language-js">mapStateToProps</code>
+                          prevent React-Redux from re-rendering a wrapped
+                          component?<a
                             class="hash-link"
                             href="#why-does-a-selector-mutating-and-returning-a-persistent-object-to-mapstatetoprops-prevent-react-redux-from-re-rendering-a-wrapped-component"
                             title="Direct link to heading"
@@ -2947,10 +2998,11 @@
                         </h3>
                         <p>
                           If one of the values of the props object returned from
-                          <code class="language-js >mapStateToProps</code> is an object that
-                          persists across calls to <code class="language-js >connect</code> (such
-                          as, potentially, the root state object), yet is
-                          directly mutated and returned by a selector function,
+                          <code class="language-js">mapStateToProps</code> is an
+                          object that persists across calls to
+                          <code class="language-js">connect</code> (such as,
+                          potentially, the root state object), yet is directly
+                          mutated and returned by a selector function,
                           React-Redux will not be able to detect the mutation,
                           and so will not trigger a re-render of the wrapped
                           component.
@@ -2964,8 +3016,8 @@
                         </p>
                         <p>
                           For example, the following
-                          <code class="language-js >mapStateToProps</code> function will never
-                          trigger a re-render:
+                          <code class="language-js">mapStateToProps</code>
+                          function will never trigger a re-render:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -3504,19 +3556,20 @@
                           That’s perfectly OK when you mutate the copy, but in
                           the context of a reducer, if you return a copy that
                           <em>hasn’t</em> been mutated, Redux’s
-                          <code class="language-js >combineReducers</code> function will still think
-                          that the state needs to be updated, as you&#x27;re
-                          returning an entirely different object from the state
-                          slice object that was passed in.
+                          <code class="language-js">combineReducers</code>
+                          function will still think that the state needs to be
+                          updated, as you&#x27;re returning an entirely
+                          different object from the state slice object that was
+                          passed in.
                         </p>
                         <p>
-                          <code class="language-js >combineReducers</code> will then return this new
-                          root state object to the store. The new object will
-                          have the same values as the current root state object,
-                          but because it&#x27;s a different object, it will
-                          cause the store to be updated, which will ultimately
-                          cause all connected components to be re-rendered
-                          unnecessarily.
+                          <code class="language-js">combineReducers</code> will
+                          then return this new root state object to the store.
+                          The new object will have the same values as the
+                          current root state object, but because it&#x27;s a
+                          different object, it will cause the store to be
+                          updated, which will ultimately cause all connected
+                          components to be re-rendered unnecessarily.
                         </p>
                         <p>
                           To prevent this from happening, you must
@@ -3567,8 +3620,8 @@
                             id="how-can-immutability-in-mapstatetoprops-cause-components-to-render-unnecessarily"
                           ></a
                           >How can immutability in
-                          <code class="language-js >mapStateToProps</code> cause components to
-                          render unnecessarily?<a
+                          <code class="language-js">mapStateToProps</code> cause
+                          components to render unnecessarily?<a
                             class="hash-link"
                             href="#how-can-immutability-in-mapstatetoprops-cause-components-to-render-unnecessarily"
                             title="Direct link to heading"
@@ -3582,10 +3635,11 @@
                         </p>
                         <p>
                           If such an operation is used as a selector function in
-                          <code class="language-js >mapStateToProps</code>, the shallow equality
-                          check that React-Redux performs on each value in the
-                          props object that’s returned will always fail, as the
-                          selector is returning a new object each time.
+                          <code class="language-js">mapStateToProps</code>, the
+                          shallow equality check that React-Redux performs on
+                          each value in the props object that’s returned will
+                          always fail, as the selector is returning a new object
+                          each time.
                         </p>
                         <p>
                           As such, even though the values of that new object
@@ -4507,7 +4561,8 @@
                               class="table-of-contents__link"
                               >Why does React-Redux shallowly check each value
                               within the props object returned from
-                              <code class="language-js >mapStateToProp</code>?</a
+                              <code class="language-js">mapStateToProp</code
+                              >?</a
                             >
                           </li>
                           <li>
@@ -4550,8 +4605,9 @@
                               class="table-of-contents__link"
                               >Why does a selector mutating and returning a
                               persistent object to
-                              <code class="language-js >mapStateToProps</code> prevent React-Redux
-                              from re-rendering a wrapped component?</a
+                              <code class="language-js">mapStateToProps</code>
+                              prevent React-Redux from re-rendering a wrapped
+                              component?</a
                             >
                           </li>
                           <li>
@@ -4575,8 +4631,8 @@
                               href="#how-can-immutability-in-mapstatetoprops-cause-components-to-render-unnecessarily"
                               class="table-of-contents__link"
                               >How can immutability in
-                              <code class="language-js >mapStateToProps</code> cause components to
-                              render unnecessarily?</a
+                              <code class="language-js">mapStateToProps</code>
+                              cause components to render unnecessarily?</a
                             >
                           </li>
                         </ul>

@@ -1091,14 +1091,14 @@
                             <ul>
                               <li>
                                 How to create memoized selector functions with
-                                <code class="language-js >createSelector</code>
+                                <code class="language-js" >createSelector</code>
                               </li>
                               <li>
                                 Patterns for optimizing component rendering
                                 performance
                               </li>
                               <li>
-                                How to use <code class="language-js >createEntityAdapter</code> to
+                                How to use <code class="language-js" >createEntityAdapter</code> to
                                 store and update normalized data
                               </li>
                             </ul>
@@ -1163,7 +1163,7 @@
                         </p>
                         <p>
                           So far, most of our functionality has been centered
-                          around the <code class="language-js >posts</code> feature. We&#x27;re
+                          around the <code class="language-js" >posts</code> feature. We&#x27;re
                           going to add a couple new sections of the app. After
                           those are added, we&#x27;ll look at some specific
                           details of how we&#x27;ve built things, and talk about
@@ -1195,9 +1195,9 @@
                         </p>
                         <p>
                           We&#x27;ll start by adding a new
-                          <code class="language-js >&lt;UsersList&gt;</code> component. It follows
+                          <code class="language-js" >&lt;UsersList&gt;</code> component. It follows
                           the usual pattern of reading some data from the store
-                          with <code class="language-js >useSelector</code>, and mapping over the
+                          with <code class="language-js" >useSelector</code>, and mapping over the
                           array to show a list of users with links to their
                           individual pages:
                         </p>
@@ -1879,9 +1879,9 @@
                         </div>
                         <p>
                           We don&#x27;t yet have a
-                          <code class="language-js >selectAllUsers</code> selector, so we&#x27;ll
-                          need to add that to <code class="language-js >usersSlice.js</code> along
-                          with a <code class="language-js >selectUserById</code> selector:
+                          <code class="language-js" >selectAllUsers</code> selector, so we&#x27;ll
+                          need to add that to <code class="language-js" >usersSlice.js</code> along
+                          with a <code class="language-js" >selectUserById</code> selector:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -2106,10 +2106,10 @@
                           </div>
                         </div>
                         <p>
-                          And we&#x27;ll add a <code class="language-js >&lt;UserPage&gt;</code>,
+                          And we&#x27;ll add a <code class="language-js" >&lt;UserPage&gt;</code>,
                           which is similar to our
-                          <code class="language-js >&lt;SinglePostPage&gt;</code> in taking a
-                          <code class="language-js >userId</code> parameter from the router:
+                          <code class="language-js" >&lt;SinglePostPage&gt;</code> in taking a
+                          <code class="language-js" >userId</code> parameter from the router:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -3026,13 +3026,13 @@
                         </div>
                         <p>
                           As we&#x27;ve seen before, we can take data from one
-                          <code class="language-js >useSelector</code> call, or from props, and use
+                          <code class="language-js" >useSelector</code> call, or from props, and use
                           that to help decide what to read from the store in
-                          another <code class="language-js >useSelector</code> call.
+                          another <code class="language-js" >useSelector</code> call.
                         </p>
                         <p>
                           Add routes for these components in
-                          <code class="language-js >&lt;App&gt;</code>:
+                          <code class="language-js" >&lt;App&gt;</code>:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -3556,9 +3556,9 @@
                         </div>
                         <p>
                           And add another tab in
-                          <code class="language-js >&lt;Navbar&gt;</code> that links to
-                          <code class="language-js >/users</code> so that we can click and go to
-                          <code class="language-js >&lt;UsersList&gt;</code>.
+                          <code class="language-js" >&lt;Navbar&gt;</code> that links to
+                          <code class="language-js" >/users</code> so that we can click and go to
+                          <code class="language-js" >&lt;UsersList&gt;</code>.
                         </p>
                         <h2>
                           <a
@@ -4412,13 +4412,13 @@
                         </div>
                         <p>
                           As with the other slices, import
-                          <code class="language-js >notificationsReducer</code> into
-                          <code class="language-js >store.js</code> and add it to the
-                          <code class="language-js >configureStore()</code> call.
+                          <code class="language-js" >notificationsReducer</code> into
+                          <code class="language-js" >store.js</code> and add it to the
+                          <code class="language-js" >configureStore()</code> call.
                         </p>
                         <p>
                           We&#x27;ve written an async thunk called
-                          <code class="language-js >fetchNotifications</code>, which will retrieve a
+                          <code class="language-js" >fetchNotifications</code>, which will retrieve a
                           list of new notifications from the server. As part of
                           that, we want to use the creation timestamp of the
                           most recent notification as part of our request, so
@@ -4428,14 +4428,14 @@
                         <p>
                           We know that we will be getting back an array of
                           notifications, so we can pass them as separate
-                          arguments to <code class="language-js >state.push()</code>, and the array
+                          arguments to <code class="language-js" >state.push()</code>, and the array
                           will add each item. We also want to make sure that
                           they&#x27;re sorted so that the most recent
                           notification is last in the array, just in case the
                           server were to send them out of order. (As a reminder,
-                          <code class="language-js >array.sort()</code> always mutates the existing
+                          <code class="language-js" >array.sort()</code> always mutates the existing
                           array - this is only safe because we&#x27;re using
-                          <code class="language-js >createSlice</code> and Immer inside.)
+                          <code class="language-js" >createSlice</code> and Immer inside.)
                         </p>
                         <h3>
                           <a
@@ -4453,36 +4453,36 @@
                         </h3>
                         <p>
                           If you look at our
-                          <code class="language-js >fetchNotifications</code> thunk, it has
+                          <code class="language-js" >fetchNotifications</code> thunk, it has
                           something new that we haven&#x27;t seen before.
                           Let&#x27;s talk about thunk arguments for a minute.
                         </p>
                         <p>
                           We&#x27;ve already seen that we can pass an argument
                           into a thunk action creator when we dispatch it, like
-                          <code class="language-js >dispatch(addPost(newPost))</code>. For
-                          <code class="language-js >createAsyncThunk</code> specifically, you can
+                          <code class="language-js" >dispatch(addPost(newPost))</code>. For
+                          <code class="language-js" >createAsyncThunk</code> specifically, you can
                           only pass in one argument, and whatever we pass in
                           becomes the first argument of the payload creation
                           callback.
                         </p>
                         <p>
                           The second argument to our payload creator is a
-                          <code class="language-js >thunkAPI</code> object containing several useful
+                          <code class="language-js" >thunkAPI</code> object containing several useful
                           functions and pieces of information:
                         </p>
                         <ul>
                           <li>
-                            <code class="language-js >dispatch</code> and <code class="language-js >getState</code>: the
-                            actual <code class="language-js >dispatch</code> and
-                            <code class="language-js >getState</code> methods from our Redux store.
+                            <code class="language-js" >dispatch</code> and <code class="language-js" >getState</code>: the
+                            actual <code class="language-js" >dispatch</code> and
+                            <code class="language-js" >getState</code> methods from our Redux store.
                             You can use these inside the thunk to dispatch more
                             actions, or get the latest Redux store state (such
                             as reading an updated value after another action is
                             dispatched).
                           </li>
                           <li>
-                            <code class="language-js >extra</code>: the &quot;extra argument&quot;
+                            <code class="language-js" >extra</code>: the &quot;extra argument&quot;
                             that can be passed into the thunk middleware when
                             creating the store. This is typically some kind of
                             API wrapper, such as a set of functions that know
@@ -4492,26 +4492,26 @@
                             directly inside.
                           </li>
                           <li>
-                            <code class="language-js >requestId</code>: a unique random ID value for
+                            <code class="language-js" >requestId</code>: a unique random ID value for
                             this thunk call. Useful for tracking status of an
                             individual request.
                           </li>
                           <li>
-                            <code class="language-js >signal</code>: An
-                            <code class="language-js >AbortController.signal</code> function that
+                            <code class="language-js" >signal</code>: An
+                            <code class="language-js" >AbortController.signal</code> function that
                             can be used to cancel an in-progress request.
                           </li>
                           <li>
-                            <code class="language-js >rejectWithValue</code>: a utility that helps
+                            <code class="language-js" >rejectWithValue</code>: a utility that helps
                             customize the contents of a
-                            <code class="language-js >rejected</code> action if the thunk receives
+                            <code class="language-js" >rejected</code> action if the thunk receives
                             an error.
                           </li>
                         </ul>
                         <p>
                           (If you&#x27;re writing a thunk by hand instead of
-                          using <code class="language-js >createAsyncThunk</code>, the thunk
-                          function will get<code class="language-js >(dispatch, getState)</code> as
+                          using <code class="language-js" >createAsyncThunk</code>, the thunk
+                          function will get<code class="language-js" >(dispatch, getState)</code> as
                           separate arguments, instead of putting them together
                           in one object.)
                         </p>
@@ -4542,7 +4542,7 @@
                                 href="../../../redux-toolkit.js.org/api/createAsyncThunk.html"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                >the <code class="language-js >createAsyncThunk</code> API reference
+                                >the <code class="language-js" >createAsyncThunk</code> API reference
                                 page</a
                               >.
                             </p>
@@ -4552,10 +4552,10 @@
                           In this case, we know that the list of notifications
                           is in our Redux store state, and that the latest
                           notification should be first in the array. We can
-                          destructure the <code class="language-js >getState</code> function out of
-                          the <code class="language-js >thunkAPI</code> object, call it to read the
+                          destructure the <code class="language-js" >getState</code> function out of
+                          the <code class="language-js" >thunkAPI</code> object, call it to read the
                           state value, and use the
-                          <code class="language-js >selectAllNotifications</code> selector to give
+                          <code class="language-js" >selectAllNotifications</code> selector to give
                           us just the array of notifications. Since the array of
                           notifications is sorted newest first, we can grab the
                           latest one using array destructuring.
@@ -4576,7 +4576,7 @@
                         </h3>
                         <p>
                           With that slice created, we can add a
-                          <code class="language-js >&lt;NotificationsList&gt;</code> component:
+                          <code class="language-js" >&lt;NotificationsList&gt;</code> component:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -5587,7 +5587,7 @@
                         </p>
                         <p>
                           We also need to update the
-                          <code class="language-js >&lt;Navbar&gt;</code> to add a
+                          <code class="language-js" >&lt;Navbar&gt;</code> to add a
                           &quot;Notifications&quot; tab, and a new button to
                           fetch some notifications:
                         </p>
@@ -6513,7 +6513,7 @@
                           </div>
                         </div>
                         <p>
-                          Lastly, we need to update <code class="language-js >App.js</code> with the
+                          Lastly, we need to update <code class="language-js" >App.js</code> with the
                           &quot;Notifications&quot; route so we can navigate to
                           it:
                         </p>
@@ -6896,8 +6896,8 @@
                           server while we&#x27;re looking at other parts of the
                           UI. We can do something similar by clicking
                           &quot;Refresh Notifications&quot; while we&#x27;re
-                          looking at the <code class="language-js >&lt;PostsList&gt;</code> or
-                          <code class="language-js >&lt;UserPage&gt;</code>. But, right now we have
+                          looking at the <code class="language-js" >&lt;PostsList&gt;</code> or
+                          <code class="language-js" >&lt;UserPage&gt;</code>. But, right now we have
                           no idea how many notifications just arrived, and if we
                           keep clicking the button, there could be many
                           notifications we haven&#x27;t read yet. Let&#x27;s add
@@ -6910,13 +6910,13 @@
                         </p>
                         <p>
                           Our fake API is already sending back the notification
-                          entries with <code class="language-js >isNew</code> and
-                          <code class="language-js >read</code> fields, so we can use those in our
+                          entries with <code class="language-js" >isNew</code> and
+                          <code class="language-js" >read</code> fields, so we can use those in our
                           code.
                         </p>
                         <p>
                           First, we&#x27;ll update
-                          <code class="language-js >notificationsSlice</code> to have a reducer that
+                          <code class="language-js" >notificationsSlice</code> to have a reducer that
                           marks all notifications as read, and some logic to
                           handle marking existing notifications as &quot;not
                           new&quot;:
@@ -7574,13 +7574,13 @@
                         </div>
                         <p>
                           We want to mark these notifications as read whenever
-                          our <code class="language-js >&lt;NotificationsList&gt;</code> component
+                          our <code class="language-js" >&lt;NotificationsList&gt;</code> component
                           renders, either because we clicked on the tab to view
                           the notifications, or because we already have it open
                           and we just received some additional notifications. We
                           can do this by dispatching
-                          <code class="language-js >allNotificationsRead</code> in a
-                          <code class="language-js >useEffect</code> hook. We also want to add an
+                          <code class="language-js" >allNotificationsRead</code> in a
+                          <code class="language-js" >useEffect</code> hook. We also want to add an
                           additional classname to any notification list entries
                           in the page, to highlight them:
                         </p>
@@ -8821,20 +8821,20 @@
                         </p>
                         <p>
                           Let&#x27;s say we have fetched some notifications
-                          while looking at the <code class="language-js >&lt;PostsList&gt;</code>,
+                          while looking at the <code class="language-js" >&lt;PostsList&gt;</code>,
                           and then click the &quot;Notifications&quot; tab. The
-                          <code class="language-js >&lt;NotificationsList&gt;</code> component will
-                          mount, and the <code class="language-js >useEffect</code> callback will
+                          <code class="language-js" >&lt;NotificationsList&gt;</code> component will
+                          mount, and the <code class="language-js" >useEffect</code> callback will
                           run after that first render and dispatch
-                          <code class="language-js >allNotificationsRead</code>. Our
-                          <code class="language-js >notificationsSlice</code> will handle that by
+                          <code class="language-js" >allNotificationsRead</code>. Our
+                          <code class="language-js" >notificationsSlice</code> will handle that by
                           updating the notification entries in the store. This
-                          creates a new <code class="language-js >state.notifications</code> array
+                          creates a new <code class="language-js" >state.notifications</code> array
                           containing the immutably-updated entries, which forces
                           our component to render again because it sees a new
-                          array returned from the <code class="language-js >useSelector</code>, and
-                          the <code class="language-js >useEffect</code> hook runs again and
-                          dispatches <code class="language-js >allNotificationsRead</code> a second
+                          array returned from the <code class="language-js" >useSelector</code>, and
+                          the <code class="language-js" >useEffect</code> hook runs again and
+                          dispatches <code class="language-js" >allNotificationsRead</code> a second
                           time. The reducer runs again, but this time no data
                           changes, so the component doesn&#x27;t re-render.
                         </p>
@@ -9700,7 +9700,7 @@
                           We can use the React DevTools Profiler to view some
                           graphs of what components re-render when state is
                           updated. Try clicking over to the
-                          <code class="language-js >&lt;UserPage&gt;</code> for a single user. Open
+                          <code class="language-js" >&lt;UserPage&gt;</code> for a single user. Open
                           up your browser&#x27;s DevTools, and in the React
                           &quot;Profiler&quot; tab, click the circle
                           &quot;Record&quot; button in the upper-left. Then,
@@ -9716,21 +9716,21 @@
                         </p>
                         <p>
                           We can see that the
-                          <code class="language-js >&lt;Navbar&gt;</code> re-rendered, which makes
+                          <code class="language-js" >&lt;Navbar&gt;</code> re-rendered, which makes
                           sense because it had to show the updated &quot;unread
                           notifications&quot; badge in the tab. But, why did our
-                          <code class="language-js >&lt;UserPage&gt;</code> re-render?
+                          <code class="language-js" >&lt;UserPage&gt;</code> re-render?
                         </p>
                         <p>
                           If we inspect the last couple dispatched actions in
                           the Redux DevTools, we can see that only the
                           notifications state updated. Since the
-                          <code class="language-js >&lt;UserPage&gt;</code> doesn&#x27;t read any
+                          <code class="language-js" >&lt;UserPage&gt;</code> doesn&#x27;t read any
                           notifications, it shouldn&#x27;t have re-rendered.
                           Something must be wrong with the component.
                         </p>
                         <p>
-                          If we look at <code class="language-js >&lt;UserPage&gt;</code> carefully,
+                          If we look at <code class="language-js" >&lt;UserPage&gt;</code> carefully,
                           there&#x27;s a specific problem:
                         </p>
                         <div class="codeBlockContainer_K1bP">
@@ -10075,18 +10075,18 @@
                           </div>
                         </div>
                         <p>
-                          We know that <code class="language-js >useSelector</code> will re-run
+                          We know that <code class="language-js" >useSelector</code> will re-run
                           every time an action is dispatched, and that it forces
                           the component to re-render if we return a new
                           reference value.
                         </p>
                         <p>
-                          We&#x27;re calling <code class="language-js >filter()</code> inside of our
-                          <code class="language-js >useSelector</code> hook, so that we only return
+                          We&#x27;re calling <code class="language-js" >filter()</code> inside of our
+                          <code class="language-js" >useSelector</code> hook, so that we only return
                           the list of posts that belong to this user.
                           Unfortunately,
                           <strong
-                            >this means that <code class="language-js >useSelector</code>
+                            >this means that <code class="language-js" >useSelector</code>
                             <em>always</em> returns a new array reference, and
                             so our component will re-render after
                             <em>every</em> action even if the posts data
@@ -10109,8 +10109,8 @@
                         </h3>
                         <p>
                           What we really need is a way to only calculate the new
-                          filtered array if either <code class="language-js >state.posts</code> or
-                          <code class="language-js >userId</code> have changed. If they
+                          filtered array if either <code class="language-js" >state.posts</code> or
+                          <code class="language-js" >userId</code> have changed. If they
                           <em>haven&#x27;t</em> changed, we want to return the
                           same filtered array reference as the last time.
                         </p>
@@ -10138,7 +10138,7 @@
                             is a library for creating memoized selector
                             functions</strong
                           >, and was specifically designed to be used with
-                          Redux. It has a <code class="language-js >createSelector</code> function
+                          Redux. It has a <code class="language-js" >createSelector</code> function
                           that generates memoized selectors that will only
                           recalculate results when the inputs change. Redux
                           Toolkit
@@ -10146,12 +10146,12 @@
                             href="../../../redux-toolkit.js.org/api/createSelector.html"
                             target="_blank"
                             rel="noopener noreferrer"
-                            >exports the <code class="language-js >createSelector</code> function</a
+                            >exports the <code class="language-js" >createSelector</code> function</a
                           >, so we already have it available.
                         </p>
                         <p>
                           Let&#x27;s make a new
-                          <code class="language-js >selectPostsByUser</code> selector function,
+                          <code class="language-js" >selectPostsByUser</code> selector function,
                           using Reselect, and use it here.
                         </p>
                         <div class="codeBlockContainer_K1bP">
@@ -10581,11 +10581,11 @@
                           </div>
                         </div>
                         <p>
-                          <code class="language-js >createSelector</code> takes one or more
+                          <code class="language-js" >createSelector</code> takes one or more
                           &quot;input selector&quot; functions as argument, plus
                           an &quot;output selector&quot; function. When we call
-                          <code class="language-js >selectPostsByUser(state, userId)</code>,
-                          <code class="language-js >createSelector</code> will pass all of the
+                          <code class="language-js" >selectPostsByUser(state, userId)</code>,
+                          <code class="language-js" >createSelector</code> will pass all of the
                           arguments into each of our input selectors. Whatever
                           those input selectors return becomes the arguments for
                           the output selector.
@@ -10594,22 +10594,22 @@
                           In this case, we know that we need the array of all
                           posts and the user ID as the two arguments for our
                           output selector. We can reuse our existing
-                          <code class="language-js >selectAllPosts</code> selector to extract the
+                          <code class="language-js" >selectAllPosts</code> selector to extract the
                           posts array. Since the user ID is the second argument
                           we&#x27;re passing into
-                          <code class="language-js >selectPostsByUser</code>, we can write a small
-                          selector that just returns <code class="language-js >userId</code>.
+                          <code class="language-js" >selectPostsByUser</code>, we can write a small
+                          selector that just returns <code class="language-js" >userId</code>.
                         </p>
                         <p>
-                          Our output selector then takes <code class="language-js >posts</code> and
-                          <code class="language-js >userId</code>, and returns the filtered array of
+                          Our output selector then takes <code class="language-js" >posts</code> and
+                          <code class="language-js" >userId</code>, and returns the filtered array of
                           posts for just that user.
                         </p>
                         <p>
                           If we try calling
-                          <code class="language-js >selectPostsByUser</code> multiple times, it will
+                          <code class="language-js" >selectPostsByUser</code> multiple times, it will
                           only re-run the output selector if either
-                          <code class="language-js >posts</code> or <code class="language-js >userId</code> has changed:
+                          <code class="language-js" >posts</code> or <code class="language-js" >userId</code> has changed:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -10972,9 +10972,9 @@
                         </div>
                         <p>
                           If we call this selector in
-                          <code class="language-js >&lt;UserPage&gt;</code> and re-run the React
+                          <code class="language-js" >&lt;UserPage&gt;</code> and re-run the React
                           profiler while fetching notifications, we should see
-                          that <code class="language-js >&lt;UserPage&gt;</code> doesn&#x27;t
+                          that <code class="language-js" >&lt;UserPage&gt;</code> doesn&#x27;t
                           re-render this time:
                         </p>
                         <div class="codeBlockContainer_K1bP">
@@ -11253,13 +11253,13 @@
                         </h3>
                         <p>
                           If we go back to our
-                          <code class="language-js >&lt;PostsList&gt;</code> and try clicking a
+                          <code class="language-js" >&lt;PostsList&gt;</code> and try clicking a
                           reaction button on one of the posts while capturing a
                           React profiler trace, we&#x27;ll see that not only did
-                          the <code class="language-js >&lt;PostsList&gt;</code> and the updated
-                          <code class="language-js >&lt;PostExcerpt&gt;</code> instance render,
+                          the <code class="language-js" >&lt;PostsList&gt;</code> and the updated
+                          <code class="language-js" >&lt;PostExcerpt&gt;</code> instance render,
                           <em>all</em> of the
-                          <code class="language-js >&lt;PostExcerpt&gt;</code> components rendered:
+                          <code class="language-js" >&lt;PostExcerpt&gt;</code> components rendered:
                         </p>
                         <p>
                           <img
@@ -11282,12 +11282,12 @@
                               render all child components inside of it!</strong
                             ></a
                           >. The immutable update of one post object also
-                          created a new <code class="language-js >posts</code> array. Our
-                          <code class="language-js >&lt;PostsList&gt;</code> had to re-render
-                          because the <code class="language-js >posts</code> array was a new
+                          created a new <code class="language-js" >posts</code> array. Our
+                          <code class="language-js" >&lt;PostsList&gt;</code> had to re-render
+                          because the <code class="language-js" >posts</code> array was a new
                           reference, so after it rendered, React continued
                           downwards and re-rendered all of the
-                          <code class="language-js >&lt;PostExcerpt&gt;</code> components too.
+                          <code class="language-js" >&lt;PostExcerpt&gt;</code> components too.
                         </p>
                         <p>
                           This isn&#x27;t a serious problem for our small
@@ -11298,16 +11298,16 @@
                         </p>
                         <p>
                           There&#x27;s a few different ways we could optimize
-                          this behavior in <code class="language-js >&lt;PostsList&gt;</code>.
+                          this behavior in <code class="language-js" >&lt;PostsList&gt;</code>.
                         </p>
                         <p>
                           First, we could wrap the
-                          <code class="language-js >&lt;PostExcerpt&gt;</code> component in
+                          <code class="language-js" >&lt;PostExcerpt&gt;</code> component in
                           <a
                             href="../../../reactjs.org/docs/react-api.html#reactmemo"
                             target="_blank"
                             rel="noopener noreferrer"
-                            ><code class="language-js >React.memo()</code></a
+                            ><code class="language-js" >React.memo()</code></a
                           >, which will ensure that the component inside of it
                           only re-renders if the props have actually changed.
                           This will actually work quite well - try it out and
@@ -11457,23 +11457,23 @@
                         </div>
                         <p>
                           Another option is to rewrite
-                          <code class="language-js >&lt;PostsList&gt;</code> so that it only selects
+                          <code class="language-js" >&lt;PostsList&gt;</code> so that it only selects
                           a list of post IDs from the store instead of the
-                          entire <code class="language-js >posts</code> array, and rewrite
-                          <code class="language-js >&lt;PostExcerpt&gt;</code> so that it receives a
-                          <code class="language-js >postId</code> prop and calls
-                          <code class="language-js >useSelector</code> to read the post object it
-                          needs. If <code class="language-js >&lt;PostsList&gt;</code> gets the same
+                          entire <code class="language-js" >posts</code> array, and rewrite
+                          <code class="language-js" >&lt;PostExcerpt&gt;</code> so that it receives a
+                          <code class="language-js" >postId</code> prop and calls
+                          <code class="language-js" >useSelector</code> to read the post object it
+                          needs. If <code class="language-js" >&lt;PostsList&gt;</code> gets the same
                           list of IDs as before, it won&#x27;t need to
                           re-render, and so only our one changed
-                          <code class="language-js >&lt;PostExcerpt&gt;</code> component should have
+                          <code class="language-js" >&lt;PostExcerpt&gt;</code> component should have
                           to render.
                         </p>
                         <p>
                           Unfortunately, this gets tricky because we also need
                           to have all our posts sorted by date and rendered in
                           the right order. We could update our
-                          <code class="language-js >postsSlice</code> to keep the array sorted at
+                          <code class="language-js" >postsSlice</code> to keep the array sorted at
                           all times, so we don&#x27;t have to sort it in the
                           component, and use a memoized selector to extract just
                           the list of post IDs. We could also
@@ -11482,10 +11482,10 @@
                             target="_blank"
                             rel="noopener noreferrer"
                             >customize the comparison function that
-                            <code class="language-js >useSelector</code> runs to check the
+                            <code class="language-js" >useSelector</code> runs to check the
                             results</a
                           >, like
-                          <code class="language-js >useSelector(selectPostIds, shallowEqual)</code>,
+                          <code class="language-js" >useSelector(selectPostIds, shallowEqual)</code>,
                           so that will skip re-rendering if the
                           <em>contents</em> of the IDs array haven&#x27;t
                           changed.
@@ -11495,14 +11495,14 @@
                           reducer keep a separate array of IDs for all the
                           posts, and only modify that array when posts are added
                           or removed, and do the same rewrite of
-                          <code class="language-js >&lt;PostsList&gt;</code> and
-                          <code class="language-js >&lt;PostExcerpt&gt;</code>. This way,
-                          <code class="language-js >&lt;PostsList&gt;</code> only needs to re-render
+                          <code class="language-js" >&lt;PostsList&gt;</code> and
+                          <code class="language-js" >&lt;PostExcerpt&gt;</code>. This way,
+                          <code class="language-js" >&lt;PostsList&gt;</code> only needs to re-render
                           when that IDs array changes.
                         </p>
                         <p>
                           Conveniently, Redux Toolkit has a
-                          <code class="language-js >createEntityAdapter</code> function that will
+                          <code class="language-js" >createEntityAdapter</code> function that will
                           help us do just that.
                         </p>
                         <h2>
@@ -11524,7 +11524,7 @@
                           looking up items by their ID field. Since we&#x27;ve
                           been storing our data in arrays, that means we have to
                           loop over all the items in the array using
-                          <code class="language-js >array.find()</code> until we find the item with
+                          <code class="language-js" >array.find()</code> until we find the item with
                           the ID we&#x27;re looking for.
                         </p>
                         <p>
@@ -11571,7 +11571,7 @@
                           similar to &quot;maps&quot; or
                           &quot;dictionaries&quot; in other languages.
                           Here&#x27;s what the normalized state for a group of
-                          <code class="language-js >user</code> objects might look like:
+                          <code class="language-js" >user</code> objects might look like:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -11839,7 +11839,7 @@
                         </div>
                         <p>
                           This makes it easy to find a particular
-                          <code class="language-js >user</code> object by its ID, without having to
+                          <code class="language-js" >user</code> object by its ID, without having to
                           loop through all the other user objects in an array:
                         </p>
                         <div class="codeBlockContainer_K1bP">
@@ -11968,7 +11968,7 @@
                             id="managing-normalized-state-with-createentityadapter"
                           ></a
                           >Managing Normalized State with
-                          <code class="language-js >createEntityAdapter</code
+                          <code class="language-js" >createEntityAdapter</code
                           ><a
                             class="hash-link"
                             href="#managing-normalized-state-with-createentityadapter"
@@ -11978,10 +11978,10 @@
                         </h3>
                         <p>
                           Redux Toolkit&#x27;s
-                          <code class="language-js >createEntityAdapter</code> API provides a
+                          <code class="language-js" >createEntityAdapter</code> API provides a
                           standardized way to store your data in a slice by
                           taking a collection of items and putting them into the
-                          shape of <code class="language-js >{ ids: [], entities: {} }</code>. Along
+                          shape of <code class="language-js" >{ ids: [], entities: {} }</code>. Along
                           with this predefined state shape, it generates a set
                           of reducer functions and selectors that know how to
                           work with that data.
@@ -11993,25 +11993,25 @@
                             normalization ourselves
                           </li>
                           <li>
-                            <code class="language-js >createEntityAdapter</code>&#x27;s pre-built
+                            <code class="language-js" >createEntityAdapter</code>&#x27;s pre-built
                             reducer functions handle common cases like &quot;add
                             all these items&quot;, &quot;update one item&quot;,
                             or &quot;remove multiple items&quot;
                           </li>
                           <li>
-                            <code class="language-js >createEntityAdapter</code> can keep the ID
+                            <code class="language-js" >createEntityAdapter</code> can keep the ID
                             array in a sorted order based on the contents of the
                             items, and will only update that array if items are
                             added / removed or the sorting order changes.
                           </li>
                         </ul>
                         <p>
-                          <code class="language-js >createEntityAdapter</code> accepts an options
+                          <code class="language-js" >createEntityAdapter</code> accepts an options
                           object that may include a
-                          <code class="language-js >sortComparer</code> function, which will be used
+                          <code class="language-js" >sortComparer</code> function, which will be used
                           to keep the item IDs array in sorted order by
                           comparing two items (and works the same way as
-                          <code class="language-js >Array.sort()</code>).
+                          <code class="language-js" >Array.sort()</code>).
                         </p>
                         <p>
                           It returns an object that contains
@@ -12025,22 +12025,22 @@
                           >. These reducer functions can either be used as a
                           case reducer for a specific action type, or as a
                           &quot;mutating&quot; utility function within another
-                          reducer in <code class="language-js >createSlice</code>.
+                          reducer in <code class="language-js" >createSlice</code>.
                         </p>
                         <p>
                           The adapter object also has a
-                          <code class="language-js >getSelectors</code> function. You can pass in a
+                          <code class="language-js" >getSelectors</code> function. You can pass in a
                           selector that returns this particular slice of state
                           from the Redux root state, and it will generate
-                          selectors like <code class="language-js >selectAll</code> and
-                          <code class="language-js >selectById</code>.
+                          selectors like <code class="language-js" >selectAll</code> and
+                          <code class="language-js" >selectById</code>.
                         </p>
                         <p>
                           Finally, the adapter object has a
-                          <code class="language-js >getInitialState</code> function that generates
-                          an empty <code class="language-js >{ids: [], entities: {}}</code> object.
+                          <code class="language-js" >getInitialState</code> function that generates
+                          an empty <code class="language-js" >{ids: [], entities: {}}</code> object.
                           You can pass in more fields to
-                          <code class="language-js >getInitialState</code>, and those will be merged
+                          <code class="language-js" >getInitialState</code>, and those will be merged
                           in.
                         </p>
                         <h3>
@@ -12059,8 +12059,8 @@
                         </h3>
                         <p>
                           With that in mind, let&#x27;s update our
-                          <code class="language-js >postsSlice</code> to use
-                          <code class="language-js >createEntityAdapter</code>:
+                          <code class="language-js" >postsSlice</code> to use
+                          <code class="language-js" >createEntityAdapter</code>:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -13478,69 +13478,69 @@
                           down.
                         </p>
                         <p>
-                          First, we import <code class="language-js >createEntityAdapter</code>, and
+                          First, we import <code class="language-js" >createEntityAdapter</code>, and
                           call it to create our
-                          <code class="language-js >postsAdapter</code> object. We know that we want
+                          <code class="language-js" >postsAdapter</code> object. We know that we want
                           to keep an array of all post IDs sorted with the
                           newest post first, so we pass in a
-                          <code class="language-js >sortComparer</code> function that will sort
+                          <code class="language-js" >sortComparer</code> function that will sort
                           newer items to the front based on the
-                          <code class="language-js >post.date</code> field.
+                          <code class="language-js" >post.date</code> field.
                         </p>
                         <p>
-                          <code class="language-js >getInitialState()</code> returns an empty
-                          <code class="language-js >{ids: [], entities: {}}</code> normalized state
-                          object. Our <code class="language-js >postsSlice</code> needs to keep the
-                          <code class="language-js >status</code> and <code class="language-js >error</code> fields for
+                          <code class="language-js" >getInitialState()</code> returns an empty
+                          <code class="language-js" >{ids: [], entities: {}}</code> normalized state
+                          object. Our <code class="language-js" >postsSlice</code> needs to keep the
+                          <code class="language-js" >status</code> and <code class="language-js" >error</code> fields for
                           loading state too, so we pass those in to
-                          <code class="language-js >getInitialState()</code>.
+                          <code class="language-js" >getInitialState()</code>.
                         </p>
                         <p>
                           Now that our posts are being kept as a lookup table in
-                          <code class="language-js >state.entities</code>, we can change our
-                          <code class="language-js >reactionAdded</code> and
-                          <code class="language-js >postUpdated</code> reducers to directly look up
+                          <code class="language-js" >state.entities</code>, we can change our
+                          <code class="language-js" >reactionAdded</code> and
+                          <code class="language-js" >postUpdated</code> reducers to directly look up
                           the right posts by their IDs, instead of having to
-                          loop over the old <code class="language-js >posts</code> array.
+                          loop over the old <code class="language-js" >posts</code> array.
                         </p>
                         <p>
                           When we receive the
-                          <code class="language-js >fetchPosts.fulfilled</code> action, we can use
-                          the <code class="language-js >postsAdapter.upsertMany</code> function to
+                          <code class="language-js" >fetchPosts.fulfilled</code> action, we can use
+                          the <code class="language-js" >postsAdapter.upsertMany</code> function to
                           add all of the incoming posts to the state, by passing
-                          in the draft <code class="language-js >state</code> and the array of posts
-                          in <code class="language-js >action.payload</code>. If there&#x27;s any
-                          items in <code class="language-js >action.payload</code> that already
+                          in the draft <code class="language-js" >state</code> and the array of posts
+                          in <code class="language-js" >action.payload</code>. If there&#x27;s any
+                          items in <code class="language-js" >action.payload</code> that already
                           existing in our state, the
-                          <code class="language-js >upsertMany</code> function will merge them
+                          <code class="language-js" >upsertMany</code> function will merge them
                           together based on matching IDs.
                         </p>
                         <p>
                           When we receive the
-                          <code class="language-js >addNewPost.fulfilled</code> action, we know we
+                          <code class="language-js" >addNewPost.fulfilled</code> action, we know we
                           need to add that one new post object to our state. We
                           can use the adapter functions as reducers directly, so
-                          we&#x27;ll pass <code class="language-js >postsAdapter.addOne</code> as
+                          we&#x27;ll pass <code class="language-js" >postsAdapter.addOne</code> as
                           the reducer function to use to handle that action.
                         </p>
                         <p>
                           Finally, we can replace the old hand-written
-                          <code class="language-js >selectAllPosts</code> and
-                          <code class="language-js >selectPostById</code> selector functions with
+                          <code class="language-js" >selectAllPosts</code> and
+                          <code class="language-js" >selectPostById</code> selector functions with
                           the ones generated by
-                          <code class="language-js >postsAdapter.getSelectors</code>. Since the
+                          <code class="language-js" >postsAdapter.getSelectors</code>. Since the
                           selectors are called with the root Redux state object,
                           they need to know where to find our posts data in the
                           Redux state, so we pass in a small selector that
-                          returns <code class="language-js >state.posts</code>. The generated
+                          returns <code class="language-js" >state.posts</code>. The generated
                           selector functions are always called
-                          <code class="language-js >selectAll</code> and <code class="language-js >selectById</code>, so
+                          <code class="language-js" >selectAll</code> and <code class="language-js" >selectById</code>, so
                           we can use ES6 destructuring syntax to rename them as
                           we export them and match the old selector names.
-                          We&#x27;ll also export <code class="language-js >selectPostIds</code> the
+                          We&#x27;ll also export <code class="language-js" >selectPostIds</code> the
                           same way, since we want to read the list of sorted
                           post IDs in our
-                          <code class="language-js >&lt;PostsList&gt;</code> component.
+                          <code class="language-js" >&lt;PostsList&gt;</code> component.
                         </p>
                         <h3>
                           <a
@@ -13558,15 +13558,15 @@
                         </h3>
                         <p>
                           Now that our posts slice is using
-                          <code class="language-js >createEntityAdapter</code>, we can update
-                          <code class="language-js >&lt;PostsList&gt;</code> to optimize its
+                          <code class="language-js" >createEntityAdapter</code>, we can update
+                          <code class="language-js" >&lt;PostsList&gt;</code> to optimize its
                           rendering behavior.
                         </p>
                         <p>
-                          We&#x27;ll update <code class="language-js >&lt;PostsList&gt;</code> to
+                          We&#x27;ll update <code class="language-js" >&lt;PostsList&gt;</code> to
                           read just the sorted array of post IDs, and pass
-                          <code class="language-js >postId</code> to each
-                          <code class="language-js >&lt;PostExcerpt&gt;</code>:
+                          <code class="language-js" >postId</code> to each
+                          <code class="language-js" >&lt;PostExcerpt&gt;</code>:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -14443,7 +14443,7 @@
                         <p>
                           We&#x27;re almost done. As a final cleanup step,
                           we&#x27;ll update our other two slices to use
-                          <code class="language-js >createEntityAdapter</code> as well.
+                          <code class="language-js" >createEntityAdapter</code> as well.
                         </p>
                         <h3>
                           <a
@@ -14460,7 +14460,7 @@
                           >
                         </h3>
                         <p>
-                          The <code class="language-js >usersSlice</code> is fairly small, so
+                          The <code class="language-js" >usersSlice</code> is fairly small, so
                           we&#x27;ve only got a few things to change:
                         </p>
                         <div class="codeBlockContainer_K1bP">
@@ -15098,15 +15098,15 @@
                           The only action we&#x27;re handling here always
                           replaces the entire list of users with the array we
                           fetched from the server. We can use
-                          <code class="language-js >usersAdapter.setAll</code> to implement that
+                          <code class="language-js" >usersAdapter.setAll</code> to implement that
                           instead.
                         </p>
                         <p>
-                          Our <code class="language-js >&lt;AddPostForm&gt;</code> is still trying
-                          to read <code class="language-js >state.users</code> as an array, as is
-                          <code class="language-js >&lt;PostAuthor&gt;</code>. Update them to use
-                          <code class="language-js >selectAllUsers</code> and
-                          <code class="language-js >selectUserById</code>, respectively.
+                          Our <code class="language-js" >&lt;AddPostForm&gt;</code> is still trying
+                          to read <code class="language-js" >state.users</code> as an array, as is
+                          <code class="language-js" >&lt;PostAuthor&gt;</code>. Update them to use
+                          <code class="language-js" >selectAllUsers</code> and
+                          <code class="language-js" >selectUserById</code>, respectively.
                         </p>
                         <h3>
                           <a
@@ -15124,7 +15124,7 @@
                         </h3>
                         <p>
                           Last but not least, we&#x27;ll update
-                          <code class="language-js >notificationsSlice</code> as well:
+                          <code class="language-js" >notificationsSlice</code> as well:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -16102,9 +16102,9 @@
                           </div>
                         </div>
                         <p>
-                          We again import <code class="language-js >createEntityAdapter</code>, call
+                          We again import <code class="language-js" >createEntityAdapter</code>, call
                           it, and call
-                          <code class="language-js >notificationsAdapter.getInitialState()</code> to
+                          <code class="language-js" >notificationsAdapter.getInitialState()</code> to
                           help set up the slice.
                         </p>
                         <p>
@@ -16112,11 +16112,11 @@
                           we need to loop over all notification objects and
                           update them. Since those are no longer being kept in
                           an array, we have to use
-                          <code class="language-js >Object.values(state.entities)</code> to get an
+                          <code class="language-js" >Object.values(state.entities)</code> to get an
                           array of those notifications and loop over that. On
                           the other hand, we can replace the previous fetch
                           update logic with
-                          <code class="language-js >notificationsAdapter.upsertMany</code>.
+                          <code class="language-js" >notificationsAdapter.upsertMany</code>.
                         </p>
                         <p>And with that... we&#x27;re done!</p>
                         <h2>
@@ -16175,7 +16175,7 @@
                                 <ul>
                                   <li>
                                     Redux Toolkit re-exports the
-                                    <code class="language-js >createSelector</code> function from
+                                    <code class="language-js" >createSelector</code> function from
                                     Reselect, which generates memoized selectors
                                   </li>
                                   <li>
@@ -16199,23 +16199,23 @@
                                 <ul>
                                   <li>
                                     Avoid creating new object/array references
-                                    inside of <code class="language-js >useSelector</code> - those
+                                    inside of <code class="language-js" >useSelector</code> - those
                                     will cause unnecessary re-renders
                                   </li>
                                   <li>
                                     Memoized selector functions can be passed to
-                                    <code class="language-js >useSelector</code> to optimize
+                                    <code class="language-js" >useSelector</code> to optimize
                                     rendering
                                   </li>
                                   <li>
-                                    <code class="language-js >useSelector</code> can accept an
+                                    <code class="language-js" >useSelector</code> can accept an
                                     alternate comparison function like
-                                    <code class="language-js >shallowEqual</code> instead of
+                                    <code class="language-js" >shallowEqual</code> instead of
                                     reference equality
                                   </li>
                                   <li>
                                     Components can be wrapped in
-                                    <code class="language-js >React.memo()</code> to only re-render
+                                    <code class="language-js" >React.memo()</code> to only re-render
                                     if their props change
                                   </li>
                                   <li>
@@ -16240,42 +16240,42 @@
                                   </li>
                                   <li>
                                     Normalized state shape usually looks like
-                                    <code class="language-js >{ids: [], entities: {}}</code>
+                                    <code class="language-js" >{ids: [], entities: {}}</code>
                                   </li>
                                 </ul>
                               </li>
                               <li>
                                 <strong
                                   >Redux Toolkit&#x27;s
-                                  <code class="language-js >createEntityAdapter</code> API helps
+                                  <code class="language-js" >createEntityAdapter</code> API helps
                                   manage normalized data in a slice</strong
                                 >
                                 <ul>
                                   <li>
                                     Item IDs can be kept in sorted order by
                                     passing in a
-                                    <code class="language-js >sortComparer</code> option
+                                    <code class="language-js" >sortComparer</code> option
                                   </li>
                                   <li>
                                     The adapter object includes:
                                     <ul>
                                       <li>
-                                        <code class="language-js >adapter.getInitialState</code>,
+                                        <code class="language-js" >adapter.getInitialState</code>,
                                         which can accept additional state fields
                                         like loading state
                                       </li>
                                       <li>
                                         Prebuilt reducers for common cases, like
-                                        <code class="language-js >setAll</code>,
-                                        <code class="language-js >addMany</code>,
-                                        <code class="language-js >upsertOne</code>, and
-                                        <code class="language-js >removeMany</code>
+                                        <code class="language-js" >setAll</code>,
+                                        <code class="language-js" >addMany</code>,
+                                        <code class="language-js" >upsertOne</code>, and
+                                        <code class="language-js" >removeMany</code>
                                       </li>
                                       <li>
-                                        <code class="language-js >adapter.getSelectors</code>, which
+                                        <code class="language-js" >adapter.getSelectors</code>, which
                                         generates selectors like
-                                        <code class="language-js >selectAll</code> and
-                                        <code class="language-js >selectById</code>
+                                        <code class="language-js" >selectAll</code> and
+                                        <code class="language-js" >selectById</code>
                                       </li>
                                     </ul>
                                   </li>
@@ -16372,7 +16372,7 @@
                             href="../../../www.reactiflux.com/index.html"
                             target="_blank"
                             rel="noopener noreferrer"
-                            >the <code class="language-js >#redux</code> channel in the Reactiflux
+                            >the <code class="language-js" >#redux</code> channel in the Reactiflux
                             server on Discord</a
                           >.
                         </p>
@@ -16524,7 +16524,7 @@
                               href="#managing-normalized-state-with-createentityadapter"
                               class="table-of-contents__link"
                               >Managing Normalized State with
-                              <code class="language-js >createEntityAdapter</code></a
+                              <code class="language-js" >createEntityAdapter</code></a
                             >
                           </li>
                           <li>

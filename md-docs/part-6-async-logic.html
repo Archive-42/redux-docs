@@ -137,7 +137,7 @@
 <li><a href="../official/api/bindactioncreators.html" class="menu__link">bindActionCreators</a></li>
 <li><a href="../official/api/compose.html" class="menu__link">compose</a></li>
 </ul></li>
-<li><a href="#!" class="menu__link menu__link--sublist">Redux Toolkit</a>
+
 <ul>
 <li><a href="../official/redux-toolkit/overview.html" class="menu__link">Redux Toolkit: Overview</a></li>
 </ul></li>
@@ -155,13 +155,13 @@
 <li>Understanding asynchronous logic in JS, including Promises</li>
 </ul>
 <h2 id="introduction"><span id="introduction" class="anchor enhancedAnchor_2LWZ"></span>Introduction<a href="#introduction" class="hash-link" title="Direct link to heading">#</a></h2>
-<p>In <a href="part-5-ui-react.html">Part 5: UI and React</a>, we saw how to use the React-Redux library to let our React components interact with a Redux store, including calling <code class="language-js >useSelector</code> to read Redux state, calling <code class="language-js >useDispatch</code> to give us access to the <code class="language-js >dispatch</code> function, and wrapping our app in a <code class="language-js >&lt;Provider&gt;</code> component to give those hooks access to the store.</p>
+<p>In <a href="part-5-ui-react.html">Part 5: UI and React</a>, we saw how to use the React-Redux library to let our React components interact with a Redux store, including calling <code class="language-js" >useSelector</code> to read Redux state, calling <code class="language-js" >useDispatch</code> to give us access to the <code class="language-js" >dispatch</code> function, and wrapping our app in a <code class="language-js" >&lt;Provider&gt;</code> component to give those hooks access to the store.</p>
 <p>So far, all the data we’ve worked with has been directly inside of our React+Redux client application. However, most real applications need to work with data from a server, by making HTTP API calls to fetch and save items.</p>
 <p>In this section, we’ll update our todo app to fetch the todos from an API, and add new todos by saving them to the API.</p>
 <h3 id="example-rest-api-and-client"><span id="example-rest-api-and-client" class="anchor enhancedAnchor_2LWZ"></span>Example REST API and Client<a href="#example-rest-api-and-client" class="hash-link" title="Direct link to heading">#</a></h3>
-<p>To keep the example project isolated but realistic, the initial project setup already included a fake in-memory REST API for our data (configured using <a href="../../../miragejs.com/index.html">the Mirage.js mock API tool</a>). The API uses <code class="language-js >/fakeApi</code> as the base URL for the endpoints, and supports the typical <code class="language-js >GET/POST/PUT/DELETE</code> HTTP methods for <code class="language-js >/fakeApi/todos</code>. It’s defined in <code class="language-js >src/api/server.js</code>.</p>
-<p>The project also includes a small HTTP API client object that exposes <code class="language-js >client.get()</code> and <code class="language-js >client.post()</code> methods, similar to popular HTTP libraries like <code class="language-js >axios</code>. It’s defined in <code class="language-js >src/api/client.js</code>.</p>
-<p>We’ll use the <code class="language-js >client</code> object to make HTTP calls to our in-memory fake REST API for this section.</p>
+<p>To keep the example project isolated but realistic, the initial project setup already included a fake in-memory REST API for our data (configured using <a href="../../../miragejs.com/index.html">the Mirage.js mock API tool</a>). The API uses <code class="language-js" >/fakeApi</code> as the base URL for the endpoints, and supports the typical <code class="language-js" >GET/POST/PUT/DELETE</code> HTTP methods for <code class="language-js" >/fakeApi/todos</code>. It’s defined in <code class="language-js" >src/api/server.js</code>.</p>
+<p>The project also includes a small HTTP API client object that exposes <code class="language-js" >client.get()</code> and <code class="language-js" >client.post()</code> methods, similar to popular HTTP libraries like <code class="language-js" >axios</code>. It’s defined in <code class="language-js" >src/api/client.js</code>.</p>
+<p>We’ll use the <code class="language-js" >client</code> object to make HTTP calls to our in-memory fake REST API for this section.</p>
 <h2 id="redux-middleware-and-side-effects"><span id="redux-middleware-and-side-effects" class="anchor enhancedAnchor_2LWZ"></span>Redux Middleware and Side Effects<a href="#redux-middleware-and-side-effects" class="hash-link" title="Direct link to heading">#</a></h2>
 <p>By itself, a Redux store doesn’t know anything about async logic. It only knows how to synchronously dispatch actions, update the state by calling the root reducer function, and notify the UI that something has changed. Any asynchronicity has to happen outside the store.</p>
 <p>Earlier, we said that Redux reducers must never contain “side effects”. <strong>A “side effect” is any change to state or behavior that can be seen outside of returning a value from a function</strong>. Some common kinds of side effects are things like:</p>
@@ -171,12 +171,12 @@
 <li>Setting an async timer</li>
 <li>Making an AJAX HTTP request</li>
 <li>Modifying some state that exists outside of a function, or mutating arguments to a function</li>
-<li>Generating random numbers or unique random IDs (such as <code class="language-js >Math.random()</code> or <code class="language-js >Date.now()</code>)</li>
+<li>Generating random numbers or unique random IDs (such as <code class="language-js" >Math.random()</code> or <code class="language-js" >Date.now()</code>)</li>
 </ul>
 <p>However, any real app will need to do these kinds of things <em>somewhere</em>. So, if we can’t put side effects in reducers, where <em>can</em> we put them?</p>
 <p><strong>Redux middleware were designed to enable writing logic that has side effects</strong>.</p>
-<p>As we said <a href="part-4-store.html#middleware-use-cases">in Part 4</a>, a Redux middleware can do <em>anything</em> when it sees a dispatched action: log something, modify the action, delay the action, make an async call, and more. Also, since middleware form a pipeline around the real <code class="language-js >store.dispatch</code> function, this also means that we could actually pass something that <em>isn’t</em> a plain action object to <code class="language-js >dispatch</code>, as long as a middleware intercepts that value and doesn’t let it reach the reducers.</p>
-<p>Middleware also have access to <code class="language-js >dispatch</code> and <code class="language-js >getState</code>. That means you could write some async logic in a middleware, and still have the ability to interact with the Redux store by dispatching actions.</p>
+<p>As we said <a href="part-4-store.html#middleware-use-cases">in Part 4</a>, a Redux middleware can do <em>anything</em> when it sees a dispatched action: log something, modify the action, delay the action, make an async call, and more. Also, since middleware form a pipeline around the real <code class="language-js" >store.dispatch</code> function, this also means that we could actually pass something that <em>isn’t</em> a plain action object to <code class="language-js" >dispatch</code>, as long as a middleware intercepts that value and doesn’t let it reach the reducers.</p>
+<p>Middleware also have access to <code class="language-js" >dispatch</code> and <code class="language-js" >getState</code>. That means you could write some async logic in a middleware, and still have the ability to interact with the Redux store by dispatching actions.</p>
 <h3 id="using-middleware-to-enable-async-logic"><span id="using-middleware-to-enable-async-logic" class="anchor enhancedAnchor_2LWZ"></span>Using Middleware to Enable Async Logic<a href="#using-middleware-to-enable-async-logic" class="hash-link" title="Direct link to heading">#</a></h3>
 <p>Let’s look at a couple examples of how middleware can enable us to write some kind of async logic that interacts with the Redux store.</p>
 <p>One possibility is writing a middleware that looks for specific action types, and runs async logic when it sees those actions, like these examples:</p>
@@ -213,8 +213,8 @@
 <li><a href="../../../stackoverflow.com/questions/34570758/why-do-we-need-middleware-for-async-flow-in-redux/34599594.html#34599594">“Why do we need middleware for async flow?”</a></li>
 </ul>
 <h3 id="writing-an-async-function-middleware"><span id="writing-an-async-function-middleware" class="anchor enhancedAnchor_2LWZ"></span>Writing an Async Function Middleware<a href="#writing-an-async-function-middleware" class="hash-link" title="Direct link to heading">#</a></h3>
-<p>Both of the middleware in that last section were very specific and only do one thing. It would be nice if we had a way to write <em>any</em> async logic ahead of time, separate from the middleware itself, and still have access to <code class="language-js >dispatch</code> and <code class="language-js >getState</code> so that we can interact with the store.</p>
-<p><strong>What if we wrote a middleware that let us pass a <em>function</em> to <code class="language-js >dispatch</code>, instead of an action object</strong>? We could have our middleware check to see if the “action” is actually a function instead, and if it’s a function, call the function right away. That would let us write async logic in separate functions, outside of the middleware definition.</p>
+<p>Both of the middleware in that last section were very specific and only do one thing. It would be nice if we had a way to write <em>any</em> async logic ahead of time, separate from the middleware itself, and still have access to <code class="language-js" >dispatch</code> and <code class="language-js" >getState</code> so that we can interact with the store.</p>
+<p><strong>What if we wrote a middleware that let us pass a <em>function</em> to <code class="language-js" >dispatch</code>, instead of an action object</strong>? We could have our middleware check to see if the “action” is actually a function instead, and if it’s a function, call the function right away. That would let us write async logic in separate functions, outside of the middleware definition.</p>
 <p>Here’s what that middleware might look like:</p>
 <p>Example async function middleware</p>
 <p><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">asyncFunctionMiddleware</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token parameter">storeAPI</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token parameter">next</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token parameter">action</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
@@ -248,17 +248,17 @@
 <p><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">fetchSomeData</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token comment" style="color: #c6cad2">// logs: ‘Number of todos after loading: ###’</span></p>
 <p>Copy</p>
-<p>Again, notice that <strong>this “async function middleware” let us pass a <em>function</em> to <code class="language-js >dispatch</code>!</strong> Inside that function, we were able to write some async logic (an HTTP request), then dispatch a normal action object when the request completed.</p>
+<p>Again, notice that <strong>this “async function middleware” let us pass a <em>function</em> to <code class="language-js" >dispatch</code>!</strong> Inside that function, we were able to write some async logic (an HTTP request), then dispatch a normal action object when the request completed.</p>
 <h2 id="redux-async-data-flow"><span id="redux-async-data-flow" class="anchor enhancedAnchor_2LWZ"></span>Redux Async Data Flow<a href="#redux-async-data-flow" class="hash-link" title="Direct link to heading">#</a></h2>
 <p>So how do middleware and async logic affect the overall data flow of a Redux app?</p>
-<p>Just like with a normal action, we first need to handle a user event in the application, such as a click on a button. Then, we call <code class="language-js >dispatch()</code>, and pass in <em>something</em>, whether it be a plain action object, a function, or some other value that a middleware can look for.</p>
+<p>Just like with a normal action, we first need to handle a user event in the application, such as a click on a button. Then, we call <code class="language-js" >dispatch()</code>, and pass in <em>something</em>, whether it be a plain action object, a function, or some other value that a middleware can look for.</p>
 <p>Once that dispatched value reaches a middleware, it can make an async call, and then dispatch a real action object when the async call completes.</p>
 <p>Earlier, we saw <a href="part-2-concepts-data-flow.html#redux-application-data-flow">a diagram that represents the normal synchronous Redux data flow</a>. When we add async logic to a Redux app, we add an extra step where middleware can run logic like AJAX requests, then dispatch actions. That makes the async data flow look like this:</p>
 <figure>
 <img src="../../../d33wubrfki0l68.cloudfront.net/08d01ed85246d3ece01963408572f3f6dfb49d41/4bc12/assets/images/reduxasyncdataflowdiagram-d97ff38a0f4da0f327163170ccc" alt="Redux async data flow diagram" /><figcaption>Redux async data flow diagram</figcaption>
 </figure>
 <h2 id="using-the-redux-thunk-middleware"><span id="using-the-redux-thunk-middleware" class="anchor enhancedAnchor_2LWZ"></span>Using the Redux Thunk Middleware<a href="#using-the-redux-thunk-middleware" class="hash-link" title="Direct link to heading">#</a></h2>
-<p>As it turns out, Redux already has an official version of that “async function middleware”, called the <a href="../../../github.com/reduxjs/redux-thunk.html"><strong>Redux “Thunk” middleware</strong></a>. The thunk middleware allows us to write functions that get <code class="language-js >dispatch</code> and <code class="language-js >getState</code> as arguments. The thunk functions can have any async logic we want inside, and that logic can dispatch actions and read the store state as needed.</p>
+<p>As it turns out, Redux already has an official version of that “async function middleware”, called the <a href="../../../github.com/reduxjs/redux-thunk.html"><strong>Redux “Thunk” middleware</strong></a>. The thunk middleware allows us to write functions that get <code class="language-js" >dispatch</code> and <code class="language-js" >getState</code> as arguments. The thunk functions can have any async logic we want inside, and that logic can dispatch actions and read the store state as needed.</p>
 <p><strong>Writing async logic as thunk functions allows us to reuse that logic without knowing what Redux store we’re using ahead of time</strong>.</p>
 <h5 id="info-1"><span class="admonition-icon"> </span>info</h5>
 <p>The word “thunk” is a programming term that means <a href="../../../en.wikipedia.org/wiki/Thunk.html">“a piece of code that does some delayed work”</a>. For more details, see these posts:</p>
@@ -267,7 +267,7 @@
 <li><a href="../../../medium.com/fullstack-academy/thunks-in-redux-the-basics-85e538a3fe60.html">Thunks in Redux: the basics</a></li>
 </ul>
 <h3 id="configuring-the-store"><span id="configuring-the-store" class="anchor enhancedAnchor_2LWZ"></span>Configuring the Store<a href="#configuring-the-store" class="hash-link" title="Direct link to heading">#</a></h3>
-<p>The Redux thunk middleware is available on NPM as a package called <code class="language-js >redux-thunk</code>. We need to install that package to use it in our app:</p>
+<p>The Redux thunk middleware is available on NPM as a package called <code class="language-js" >redux-thunk</code>. We need to install that package to use it in our app:</p>
 <p><span class="token function" style="color: #e6d874">npm</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">install</span><span class="token plain"> redux-thunk</span></p>
 <p>Copy</p>
 <p>Once it’s installed, we can update the Redux store in our todo app to use that middleware:</p>
@@ -285,7 +285,7 @@
 <p>Copy</p>
 <h3 id="fetching-todos-from-a-server"><span id="fetching-todos-from-a-server" class="anchor enhancedAnchor_2LWZ"></span>Fetching Todos from a Server<a href="#fetching-todos-from-a-server" class="hash-link" title="Direct link to heading">#</a></h3>
 <p>Right now our todo entries can only exist in the client’s browser. We need a way to load a list of todos from the server when the app starts up.</p>
-<p>We’ll start by writing a thunk function that makes an AJAX call to our <code class="language-js >/fakeApi/todos</code> endpoint to request an array of todo objects, and then dispatch an action containing that array as the payload. Since this is related to the todos feature in general, we’ll write the thunk function in the <code class="language-js >todosSlice.js</code> file:</p>
+<p>We’ll start by writing a thunk function that makes an AJAX call to our <code class="language-js" >/fakeApi/todos</code> endpoint to request an array of todo objects, and then dispatch an action containing that array as the payload. Since this is related to the todos feature in general, we’ll write the thunk function in the <code class="language-js" >todosSlice.js</code> file:</p>
 <p>src/features/todos/todosSlice.js</p>
 <p><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> client </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘../../api/client’</span><span class="token plain"></span></p>
 <p><span class="token plain" style="display: inline-block"> </span></p>
@@ -303,11 +303,11 @@
 <p>Copy</p>
 <p>We only want to make this API call once, when the application loads for the first time. There’s a few places we <em>could</em> put this:</p>
 <ul>
-<li>In the <code class="language-js >&lt;App&gt;</code> component, in a <code class="language-js >useEffect</code> hook</li>
-<li>In the <code class="language-js >&lt;TodoList&gt;</code> component, in a <code class="language-js >useEffect</code> hook</li>
-<li>In the <code class="language-js >index.js</code> file directly, right after we import the store</li>
+<li>In the <code class="language-js" >&lt;App&gt;</code> component, in a <code class="language-js" >useEffect</code> hook</li>
+<li>In the <code class="language-js" >&lt;TodoList&gt;</code> component, in a <code class="language-js" >useEffect</code> hook</li>
+<li>In the <code class="language-js" >index.js</code> file directly, right after we import the store</li>
 </ul>
-<p>For now, let’s try putting this directly in <code class="language-js >index.js</code>:</p>
+<p>For now, let’s try putting this directly in <code class="language-js" >index.js</code>:</p>
 <p>src/index.js</p>
 <p><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">React</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘react’</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">ReactDOM</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘react-dom’</span><span class="token plain"></span></p>
@@ -331,12 +331,12 @@
 <p><span class="token plain"> </span><span class="token dom variable" style="color: #f8f8f2">document</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getElementById</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">‘root’</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">)</span></p>
 <p>Copy</p>
-<p>If we reload the page, there’s no visible change in the UI. However, if we open up the Redux DevTools extension, we should now see that a <code class="language-js >'todos/todosLoaded'</code> action was dispatched, and it should contain some todo objects that were generated by our fake server API:</p>
+<p>If we reload the page, there’s no visible change in the UI. However, if we open up the Redux DevTools extension, we should now see that a <code class="language-js" >'todos/todosLoaded'</code> action was dispatched, and it should contain some todo objects that were generated by our fake server API:</p>
 <figure>
 <img src="../../../d33wubrfki0l68.cloudfront.net/c96c315f5e60b87fa093e49d8d30a5a1fb66c580/9fd52/assets/images/devtools-todosloaded-action-0f8f36d9f37404a85e5cbc20b" alt="Devtools - todosLoaded action contents" /><figcaption>Devtools - todosLoaded action contents</figcaption>
 </figure>
 <p>Notice that even though we’ve dispatched an action, nothing’s happening to change the state. <strong>We need to handle this action in our todos reducer to have the state updated.</strong></p>
-<p>Let’s add a case to the reducer to load this data into the store. Since we’re fetching the data from the server, we want to completely replace any existing todos, so we can return the <code class="language-js >action.payload</code> array to make it be the new todos <code class="language-js >state</code> value:</p>
+<p>Let’s add a case to the reducer to load this data into the store. Since we’re fetching the data from the server, we want to completely replace any existing todos, so we can return the <code class="language-js" >action.payload</code> array to make it be the new todos <code class="language-js" >state</code> value:</p>
 <p>src/features/todos/todosSlice.js</p>
 <p><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> client </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘../../api/client’</span><span class="token plain"></span></p>
 <p><span class="token plain" style="display: inline-block"> </span></p>
@@ -359,7 +359,7 @@
 <p><span class="token plain"> </span><span class="token function" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘todos/todosLoaded’</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> response</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">todos</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
 <p>Copy</p>
-<p>Since dispatching an action immediately updates the store, we can also call <code class="language-js >getState</code> in the thunk to read the updated state value after we dispatch. For example, we could log the number of total todos to the console before and after dispatching the <code class="language-js >'todos/todosLoaded'</code> action:</p>
+<p>Since dispatching an action immediately updates the store, we can also call <code class="language-js" >getState</code> in the thunk to read the updated state value after we dispatch. For example, we could log the number of total todos to the console before and after dispatching the <code class="language-js" >'todos/todosLoaded'</code> action:</p>
 <p><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">async</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">fetchTodos</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">dispatch</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> getState</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> response </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">await</span><span class="token plain"> client</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">get</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">‘/fakeApi/todos’</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span></p>
 <p><span class="token plain" style="display: inline-block"> </span></p>
@@ -373,8 +373,8 @@
 <p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
 <p>Copy</p>
 <h3 id="saving-todo-items"><span id="saving-todo-items" class="anchor enhancedAnchor_2LWZ"></span>Saving Todo Items<a href="#saving-todo-items" class="hash-link" title="Direct link to heading">#</a></h3>
-<p>We also need to update the server whenever we try to create a new todo item. Instead of dispatching the <code class="language-js >'todos/todoAdded'</code> action right away, we should make an API call to the server with the initial data, wait for the server to send back a copy of the newly saved todo item, and <em>then</em> dispatch an action with that todo item.</p>
-<p>However, if we start trying to write this logic as a thunk function, we’re going to run into a problem: since we’re writing the thunk as a separate function in the <code class="language-js >todosSlice.js</code> file, the code that makes the API call doesn’t know what the new todo text is supposed to be:</p>
+<p>We also need to update the server whenever we try to create a new todo item. Instead of dispatching the <code class="language-js" >'todos/todoAdded'</code> action right away, we should make an API call to the server with the initial data, wait for the server to send back a copy of the newly saved todo item, and <em>then</em> dispatch an action with that todo item.</p>
+<p>However, if we start trying to write this logic as a thunk function, we’re going to run into a problem: since we’re writing the thunk as a separate function in the <code class="language-js" >todosSlice.js</code> file, the code that makes the API call doesn’t know what the new todo text is supposed to be:</p>
 <p>src/features/todos/todosSlice.js</p>
 <p><span class="token keyword" style="color: #f92672">async</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">saveNewTodo</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">dispatch</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> getState</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// ❌ We need to have the text of the new todo, but where is it coming from?</span><span class="token plain"></span></p>
@@ -383,7 +383,7 @@
 <p><span class="token plain"> </span><span class="token function" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘todos/todoAdded’</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> response</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">todo</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
 <p>Copy</p>
-<p>We need a way to write one function that accepts <code class="language-js >text</code> as its parameter, but then creates the actual thunk function so that it can use the <code class="language-js >text</code> value to make the API call. Our outer function should then return the thunk function so that we can pass to <code class="language-js >dispatch</code> in our component.</p>
+<p>We need a way to write one function that accepts <code class="language-js" >text</code> as its parameter, but then creates the actual thunk function so that it can use the <code class="language-js" >text</code> value to make the API call. Our outer function should then return the thunk function so that we can pass to <code class="language-js" >dispatch</code> in our component.</p>
 <p>src/features/todos/todosSlice.js</p>
 <p><span class="token comment" style="color: #c6cad2">// Write a synchronous outer function that receives the `text` parameter:</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">saveNewTodo</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">text</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
@@ -396,7 +396,7 @@
 <p><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
 <p>Copy</p>
-<p>Now we can use this in our <code class="language-js >&lt;Header&gt;</code> component:</p>
+<p>Now we can use this in our <code class="language-js" >&lt;Header&gt;</code> component:</p>
 <p>src/features/header/Header.js</p>
 <p><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports maybe-class-name">React</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> useState </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘react’</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> useDispatch </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘react-redux’</span><span class="token plain"></span></p>
@@ -424,7 +424,7 @@
 <p><span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// omit rendering output</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
 <p>Copy</p>
-<p>Since we know we’re going to immediately pass the thunk function to <code class="language-js >dispatch</code> in the component, we can skip creating the temporary variable. Instead, we can call <code class="language-js >saveNewTodo(text)</code>, and pass the resulting thunk function straight to <code class="language-js >dispatch</code>:</p>
+<p>Since we know we’re going to immediately pass the thunk function to <code class="language-js" >dispatch</code> in the component, we can skip creating the temporary variable. Instead, we can call <code class="language-js" >saveNewTodo(text)</code>, and pass the resulting thunk function straight to <code class="language-js" >dispatch</code>:</p>
 <p>src/features/header/Header.js</p>
 <p><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">handleKeyDown</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token parameter">e</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// If the user pressed the Enter key:</span><span class="token plain"></span></p>
@@ -436,13 +436,13 @@
 <p><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
 <p>Copy</p>
-<p>Now the component doesn’t actually know that it’s even dispatching a thunk function - the <code class="language-js >saveNewTodo</code> function is encapsulating what’s actually happening. The <code class="language-js >&lt;Header&gt;</code> component only knows that it needs to dispatch <em>some value</em> when the user presses enter.</p>
-<p>This pattern of writing a function to prepare something that will get passed to <code class="language-js >dispatch</code> is called <strong>the “action creator” pattern</strong>, and we’ll talk about that more in <a href="part-7-standard-patterns.html">the next section</a>.</p>
-<p>We can now see the updated <code class="language-js >'todos/todoAdded'</code> action being dispatched:</p>
+<p>Now the component doesn’t actually know that it’s even dispatching a thunk function - the <code class="language-js" >saveNewTodo</code> function is encapsulating what’s actually happening. The <code class="language-js" >&lt;Header&gt;</code> component only knows that it needs to dispatch <em>some value</em> when the user presses enter.</p>
+<p>This pattern of writing a function to prepare something that will get passed to <code class="language-js" >dispatch</code> is called <strong>the “action creator” pattern</strong>, and we’ll talk about that more in <a href="part-7-standard-patterns.html">the next section</a>.</p>
+<p>We can now see the updated <code class="language-js" >'todos/todoAdded'</code> action being dispatched:</p>
 <figure>
 <img src="../../../d33wubrfki0l68.cloudfront.net/52ab1ed7f21b4f57d190500e45138ed0a6b47f09/dd472/assets/images/devtools-async-todoadded-action-b3eac966d8c8110fc96f4" alt="Devtools - async todoAdded action contents" /><figcaption>Devtools - async todoAdded action contents</figcaption>
 </figure>
-<p>The last thing we need to change here is updating our todos reducer. When we make a POST request to <code class="language-js >/fakeApi/todos</code>, the server will return a completely new todo object (including a new ID value). That means our reducer doesn’t have to calculate a new ID, or fill out the other fields - it only needs to create a new <code class="language-js >state</code> array that includes the new todo item:</p>
+<p>The last thing we need to change here is updating our todos reducer. When we make a POST request to <code class="language-js" >/fakeApi/todos</code>, the server will return a completely new todo object (including a new ID value). That means our reducer doesn’t have to calculate a new ID, or fill out the other fields - it only needs to create a new <code class="language-js" >state</code> array that includes the new todo item:</p>
 <p>src/features/todos/todosSlice.js</p>
 <p><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> initialState </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">[</span><span class="token punctuation" style="color: #f8f8f2">]</span><span class="token plain"></span></p>
 <p><span class="token plain" style="display: inline-block"> </span></p>
@@ -463,7 +463,7 @@
 <img src="../../../d33wubrfki0l68.cloudfront.net/7b06b4966e3cfc821fed6c95c21ba0d4c4013b0b/e9fb9/assets/images/devtools-async-todoadded-diff-5f18f236969280dec2dad1a" alt="Devtools - async todoAdded state diff" /><figcaption>Devtools - async todoAdded state diff</figcaption>
 </figure>
 <h5 id="tip"><span class="admonition-icon"> </span>tip</h5>
-<p>Thunk functions can be used for both asynchronous <em>and</em> synchronous logic. Thunks provide a way to write any reusable logic that needs access to <code class="language-js >dispatch</code> and <code class="language-js >getState</code>.</p>
+<p>Thunk functions can be used for both asynchronous <em>and</em> synchronous logic. Thunks provide a way to write any reusable logic that needs access to <code class="language-js" >dispatch</code> and <code class="language-js" >getState</code>.</p>
 <h2 id="what-youve-learned"><span id="what-youve-learned" class="anchor enhancedAnchor_2LWZ"></span>What You’ve Learned<a href="#what-youve-learned" class="hash-link" title="Direct link to heading">#</a></h2>
 <p>We’ve now succesfully updated our todo app so that we can fetch a list of todo items and save new todo items, using “thunk” functions to make the AJAX calls to our fake server API.</p>
 <p>In the process, we saw how Redux middleware are used to let us make async calls and interact with the store by dispatching actions with after the async calls have completed.</p>
@@ -476,13 +476,13 @@
 </ul></li>
 <li><strong>Middleware add an extra step to the standard Redux data flow</strong>
 <ul>
-<li>Middleware can intercept other values passed to <code class="language-js >dispatch</code></li>
-<li>Middleware have access to <code class="language-js >dispatch</code> and <code class="language-js >getState</code>, so they can dispatch more actions as part of async logic</li>
+<li>Middleware can intercept other values passed to <code class="language-js" >dispatch</code></li>
+<li>Middleware have access to <code class="language-js" >dispatch</code> and <code class="language-js" >getState</code>, so they can dispatch more actions as part of async logic</li>
 </ul></li>
-<li><strong>The Redux “Thunk” middleware lets us pass functions to <code class="language-js >dispatch</code></strong>
+<li><strong>The Redux “Thunk” middleware lets us pass functions to <code class="language-js" >dispatch</code></strong>
 <ul>
 <li>“Thunk” functions let us write async logic ahead of time, without knowing what Redux store is being used</li>
-<li>A Redux thunk function receives <code class="language-js >dispatch</code> and <code class="language-js >getState</code> as arguments, and can dispatch actions like “this data was received from an API response”</li>
+<li>A Redux thunk function receives <code class="language-js" >dispatch</code> and <code class="language-js" >getState</code> as arguments, and can dispatch actions like “this data was received from an API response”</li>
 </ul></li>
 </ul>
 <h2 id="whats-next"><span id="whats-next" class="anchor enhancedAnchor_2LWZ"></span>What’s Next?<a href="#whats-next" class="hash-link" title="Direct link to heading">#</a></h2>

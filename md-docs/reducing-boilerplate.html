@@ -19,12 +19,6 @@
 
 <ul>
 
-<ul>
-
-
-
-<ul>
-
 
 
 
@@ -39,13 +33,7 @@
 </ul></li>
 
 
-
-</ul></li>
-
-<ul>
-
-</ul></li>
-</ul></li>
+</li>
 <li><a href="#!" class="menu__link menu__link--sublist">FAQ</a>
 <ul>
 
@@ -56,12 +44,6 @@
 </ul></li>
 
 
-</ul></li>
-<li><a href="#!" class="menu__link menu__link--sublist">Redux Toolkit</a>
-<ul>
-
-</ul></li>
-</ul>
 <h1 id="reducing-boilerplate"><span id="reducing-boilerplate" class="anchor enhancedAnchor_2LWZ"></span>Reducing Boilerplate<a href="#reducing-boilerplate" class="hash-link" title="Direct link to heading">#</a></h1>
 <p>Redux is in part <a href="../understanding/history-and-design/prior-art.html">inspired by Flux</a>, and the most common complaint about Flux is how it makes you write a lot of boilerplate. In this recipe, we will consider how Redux lets us choose how verbose we’d like our code to be, depending on personal style, team preferences, longer term maintainability, and so on.</p>
 <h2 id="actions"><span id="actions" class="anchor enhancedAnchor_2LWZ"></span>Actions<a href="#actions" class="hash-link" title="Direct link to heading">#</a></h2>
@@ -83,12 +65,12 @@
 <li>It helps keep the naming consistent because all action types are gathered in a single place.</li>
 <li>Sometimes you want to see all existing actions before working on a new feature. It may be that the action you need was already added by somebody on the team, but you didn’t know.</li>
 <li>The list of action types that were added, removed, and changed in a Pull Request helps everyone on the team keep track of scope and implementation of new features.</li>
-<li>If you make a typo when importing an action constant, you will get <code class="language-js >undefined</code>. Redux will immediately throw when dispatching such an action, and you’ll find the mistake sooner.</li>
+<li>If you make a typo when importing an action constant, you will get <code class="language-js" >undefined</code>. Redux will immediately throw when dispatching such an action, and you’ll find the mistake sooner.</li>
 </ul>
 <p>It is up to you to choose the conventions for your project. You may start by using inline strings, and later transition to constants, and maybe later group them into a single file. Redux does not have any opinion here, so use your best judgment.</p>
 <h2 id="action-creators"><span id="action-creators" class="anchor enhancedAnchor_2LWZ"></span>Action Creators<a href="#action-creators" class="hash-link" title="Direct link to heading">#</a></h2>
 <p>It is another common convention that, instead of creating action objects inline in the places where you dispatch the actions, you would create functions generating them.</p>
-<p>For example, instead of calling <code class="language-js >dispatch</code> with an object literal:</p>
+<p>For example, instead of calling <code class="language-js" >dispatch</code> with an object literal:</p>
 <p><span class="token comment" style="color: #c6cad2">// somewhere in an event handler</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token function" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
 <p><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘ADD_TODO’</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span></p>
@@ -96,7 +78,7 @@
 <p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span></p>
 <p>Copy</p>
 <p>You might write an action creator in a separate file, and import it into your component:</p>
-<h4 id="actioncreators.js"><span id="actioncreatorsjs" class="anchor enhancedAnchor_2LWZ"></span><code class="language-js >actionCreators.js</code><a href="#actioncreatorsjs" class="hash-link" title="Direct link to heading">#</a></h4>
+<h4 id="actioncreators.js"><span id="actioncreatorsjs" class="anchor enhancedAnchor_2LWZ"></span><code class="language-js" >actionCreators.js</code><a href="#actioncreatorsjs" class="hash-link" title="Direct link to heading">#</a></h4>
 <p><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">addTodo</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">text</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
 <p><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘ADD_TODO’</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span></p>
@@ -104,7 +86,7 @@
 <p><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
 <p>Copy</p>
-<h4 id="addtodo.js"><span id="addtodojs" class="anchor enhancedAnchor_2LWZ"></span><code class="language-js >AddTodo.js</code><a href="#addtodojs" class="hash-link" title="Direct link to heading">#</a></h4>
+<h4 id="addtodo.js"><span id="addtodojs" class="anchor enhancedAnchor_2LWZ"></span><code class="language-js" >AddTodo.js</code><a href="#addtodojs" class="hash-link" title="Direct link to heading">#</a></h4>
 <p><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> addTodo </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘./actionCreators’</span><span class="token plain"></span></p>
 <p><span class="token plain" style="display: inline-block"> </span></p>
 <p><span class="token plain"></span><span class="token comment" style="color: #c6cad2">// somewhere in an event handler</span><span class="token plain"></span></p>
@@ -131,9 +113,9 @@
 <p><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
 <p>Copy</p>
-<p>We just modified how the <code class="language-js >addTodo</code> action creator behaves, completely invisible to the calling code. <strong>We don’t have to worry about looking at each place where todos are being added, to make sure they have this check.</strong> Action creators let you decouple additional logic around dispatching an action, from the actual components emitting those actions. It’s very handy when the application is under heavy development, and the requirements change often.</p>
+<p>We just modified how the <code class="language-js" >addTodo</code> action creator behaves, completely invisible to the calling code. <strong>We don’t have to worry about looking at each place where todos are being added, to make sure they have this check.</strong> Action creators let you decouple additional logic around dispatching an action, from the actual components emitting those actions. It’s very handy when the application is under heavy development, and the requirements change often.</p>
 <h3 id="generating-action-creators"><span id="generating-action-creators" class="anchor enhancedAnchor_2LWZ"></span>Generating Action Creators<a href="#generating-action-creators" class="hash-link" title="Direct link to heading">#</a></h3>
-<p>Some frameworks like <a href="../../github.com/acdlite/flummox.html">Flummox</a> generate action type constants automatically from the action creator function definitions. The idea is that you don’t need to both define <code class="language-js >ADD_TODO</code> constant and <code class="language-js >addTodo()</code> action creator. Under the hood, such solutions still generate action type constants, but they’re created implicitly so it’s a level of indirection and can cause confusion. We recommend creating your action type constants explicitly.</p>
+<p>Some frameworks like <a href="../../github.com/acdlite/flummox.html">Flummox</a> generate action type constants automatically from the action creator function definitions. The idea is that you don’t need to both define <code class="language-js" >ADD_TODO</code> constant and <code class="language-js" >addTodo()</code> action creator. Under the hood, such solutions still generate action type constants, but they’re created implicitly so it’s a level of indirection and can cause confusion. We recommend creating your action type constants explicitly.</p>
 <p>Writing simple action creators can be tiresome and often ends up generating redundant boilerplate code:</p>
 <p><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">addTodo</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">text</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
@@ -179,8 +161,8 @@
 <p>There are also utility libraries to aid in generating action creators, such as <a href="../../github.com/pauldijou/redux-act.html">redux-act</a> and <a href="../../github.com/redux-utilities/redux-actions.html">redux-actions</a>. These can help reduce boilerplate code and enforce adherence to standards such as <a href="../../github.com/redux-utilities/flux-standard-action.html">Flux Standard Action (FSA)</a>.</p>
 <h2 id="async-action-creators"><span id="async-action-creators" class="anchor enhancedAnchor_2LWZ"></span>Async Action Creators<a href="#async-action-creators" class="hash-link" title="Direct link to heading">#</a></h2>
 <p><a href="../understanding/thinking-in-redux/glossary.html#middleware">Middleware</a> lets you inject custom logic that interprets every action object before it is dispatched. Async actions are the most common use case for middleware.</p>
-<p>Without any middleware, <a href="../api/store.html#dispatchaction"><code class="language-js >dispatch</code></a> only accepts a plain object, so we have to perform AJAX calls inside our components:</p>
-<h4 id="actioncreators.js-1"><span id="actioncreatorsjs-1" class="anchor enhancedAnchor_2LWZ"></span><code class="language-js >actionCreators.js</code><a href="#actioncreatorsjs-1" class="hash-link" title="Direct link to heading">#</a></h4>
+<p>Without any middleware, <a href="../api/store.html#dispatchaction"><code class="language-js" >dispatch</code></a> only accepts a plain object, so we have to perform AJAX calls inside our components:</p>
+<h4 id="actioncreators.js-1"><span id="actioncreatorsjs-1" class="anchor enhancedAnchor_2LWZ"></span><code class="language-js" >actionCreators.js</code><a href="#actioncreatorsjs-1" class="hash-link" title="Direct link to heading">#</a></h4>
 <p><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">loadPostsSuccess</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">userId</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> response</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
 <p><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘LOAD_POSTS_SUCCESS’</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span></p>
@@ -204,7 +186,7 @@
 <p><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
 <p>Copy</p>
-<h4 id="userinfo.js"><span id="userinfojs" class="anchor enhancedAnchor_2LWZ"></span><code class="language-js >UserInfo.js</code><a href="#userinfojs" class="hash-link" title="Direct link to heading">#</a></h4>
+<h4 id="userinfo.js"><span id="userinfojs" class="anchor enhancedAnchor_2LWZ"></span><code class="language-js" >UserInfo.js</code><a href="#userinfojs" class="hash-link" title="Direct link to heading">#</a></h4>
 <p><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> </span><span class="token imports maybe-class-name">Component</span><span class="token imports"> </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘react’</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> connect </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘react-redux’</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"></span></p>
@@ -264,13 +246,13 @@
 <p>Copy</p>
 <p>However, this quickly gets repetitive because different components request data from the same API endpoints. Moreover, we want to reuse some of this logic (e.g., early exit when there is cached data available) from many components.</p>
 <p><strong>Middleware lets us write more expressive, potentially async action creators.</strong> It lets us dispatch something other than plain objects, and interprets the values. For example, middleware can “catch” dispatched Promises and turn them into a pair of request and success/failure actions.</p>
-<p>The simplest example of middleware is <a href="../../github.com/reduxjs/redux-thunk.html">redux-thunk</a>. <strong>“Thunk” middleware lets you write action creators as “thunks”, that is, functions returning functions.</strong> This inverts the control: you will get <code class="language-js >dispatch</code> as an argument, so you can write an action creator that dispatches many times.</p>
+<p>The simplest example of middleware is <a href="../../github.com/reduxjs/redux-thunk.html">redux-thunk</a>. <strong>“Thunk” middleware lets you write action creators as “thunks”, that is, functions returning functions.</strong> This inverts the control: you will get <code class="language-js" >dispatch</code> as an argument, so you can write an action creator that dispatches many times.</p>
 <blockquote>
 <h5 id="note"><span id="note" class="anchor enhancedAnchor_2LWZ"></span>Note<a href="#note" class="hash-link" title="Direct link to heading">#</a></h5>
 <p>Thunk middleware is just one example of middleware. Middleware is not about “letting you dispatch functions”. It’s about letting you dispatch anything that the particular middleware you use knows how to handle. Thunk middleware adds a specific behavior when you dispatch functions, but it really depends on the middleware you use.</p>
 </blockquote>
 <p>Consider the code above rewritten with <a href="../../github.com/reduxjs/redux-thunk.html">redux-thunk</a>:</p>
-<h4 id="actioncreators.js-2"><span id="actioncreatorsjs-2" class="anchor enhancedAnchor_2LWZ"></span><code class="language-js >actionCreators.js</code><a href="#actioncreatorsjs-2" class="hash-link" title="Direct link to heading">#</a></h4>
+<h4 id="actioncreators.js-2"><span id="actioncreatorsjs-2" class="anchor enhancedAnchor_2LWZ"></span><code class="language-js" >actionCreators.js</code><a href="#actioncreatorsjs-2" class="hash-link" title="Direct link to heading">#</a></h4>
 <p><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">loadPosts</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">userId</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Interpreted by the thunk middleware:</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">dispatch</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> getState</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
@@ -303,7 +285,7 @@
 <p><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
 <p>Copy</p>
-<h4 id="userinfo.js-1"><span id="userinfojs-1" class="anchor enhancedAnchor_2LWZ"></span><code class="language-js >UserInfo.js</code><a href="#userinfojs-1" class="hash-link" title="Direct link to heading">#</a></h4>
+<h4 id="userinfo.js-1"><span id="userinfojs-1" class="anchor enhancedAnchor_2LWZ"></span><code class="language-js" >UserInfo.js</code><a href="#userinfojs-1" class="hash-link" title="Direct link to heading">#</a></h4>
 <p><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> </span><span class="token imports maybe-class-name">Component</span><span class="token imports"> </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘react’</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> connect </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘react-redux’</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> loadPosts </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘./actionCreators’</span><span class="token plain"></span></p>
@@ -337,7 +319,7 @@
 <p><span class="token plain"> isFetching</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">isFetching</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token maybe-class-name">Posts</span><span class="token punctuation" style="color: #f8f8f2">)</span></p>
 <p>Copy</p>
-<p>This is much less typing! If you’d like, you can still have “vanilla” action creators like <code class="language-js >loadPostsSuccess</code> which you’d use from a container <code class="language-js >loadPosts</code> action creator.</p>
+<p>This is much less typing! If you’d like, you can still have “vanilla” action creators like <code class="language-js" >loadPostsSuccess</code> which you’d use from a container <code class="language-js" >loadPosts</code> action creator.</p>
 <p><strong>Finally, you can write your own middleware.</strong> Let’s say you want to generalize the pattern above and describe your async action creators like this instead:</p>
 <p><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">loadPosts</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">userId</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
@@ -405,7 +387,7 @@
 <p><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
 <p>Copy</p>
-<p>After passing it once to <a href="../api/applymiddleware.html"><code class="language-js >applyMiddleware(...middlewares)</code></a>, you can write all your API-calling action creators the same way:</p>
+<p>After passing it once to <a href="../api/applymiddleware.html"><code class="language-js" >applyMiddleware(...middlewares)</code></a>, you can write all your API-calling action creators the same way:</p>
 <p><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">loadPosts</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">userId</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
 <p><span class="token plain"> types</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">[</span><span class="token string" style="color: #a6e22e">‘LOAD_POSTS_REQUEST’</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘LOAD_POSTS_SUCCESS’</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘LOAD_POSTS_FAILURE’</span><span class="token punctuation" style="color: #f8f8f2">]</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span></p>
@@ -481,10 +463,10 @@
 <p><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
 <p>Copy</p>
-<p>The <code class="language-js >switch</code> statement is <em>not</em> the real boilerplate. The real boilerplate of Flux is conceptual: the need to emit an update, the need to register the Store with a Dispatcher, the need for the Store to be an object (and the complications that arise when you want a universal app).</p>
-<p>It’s unfortunate that many still choose Flux framework based on whether it uses <code class="language-js >switch</code> statements in the documentation. If you don’t like <code class="language-js >switch</code>, you can solve this with a single function, as we show below.</p>
+<p>The <code class="language-js" >switch</code> statement is <em>not</em> the real boilerplate. The real boilerplate of Flux is conceptual: the need to emit an update, the need to register the Store with a Dispatcher, the need for the Store to be an object (and the complications that arise when you want a universal app).</p>
+<p>It’s unfortunate that many still choose Flux framework based on whether it uses <code class="language-js" >switch</code> statements in the documentation. If you don’t like <code class="language-js" >switch</code>, you can solve this with a single function, as we show below.</p>
 <h3 id="generating-reducers"><span id="generating-reducers" class="anchor enhancedAnchor_2LWZ"></span>Generating Reducers<a href="#generating-reducers" class="hash-link" title="Direct link to heading">#</a></h3>
-<p>Let’s write a function that lets us express reducers as an object mapping from action types to handlers. For example, if we want our <code class="language-js >todos</code> reducers to be defined like this:</p>
+<p>Let’s write a function that lets us express reducers as an object mapping from action types to handlers. For example, if we want our <code class="language-js" >todos</code> reducers to be defined like this:</p>
 <p><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> todos </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createReducer</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">[</span><span class="token punctuation" style="color: #f8f8f2">]</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">[</span><span class="token maybe-class-name">ActionTypes</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token constant" style="color: #f92672">ADD_TODO</span><span class="token punctuation" style="color: #f8f8f2">]</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> text </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">text</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">trim</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span></p>
@@ -504,7 +486,7 @@
 <p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
 <p>Copy</p>
 <p>This wasn’t difficult, was it? Redux doesn’t provide such a helper function by default because there are many ways to write it. Maybe you want it to automatically convert plain JS objects to Immutable objects to hydrate the server state. Maybe you want to merge the returned state with the current state. There may be different approaches to a “catch all” handler. All of this depends on the conventions you choose for your team on a specific project.</p>
-<p>The Redux reducer API is <code class="language-js >(state, action) =&gt; newState</code>, but how you create those reducers is up to you.</p>
+<p>The Redux reducer API is <code class="language-js" >(state, action) =&gt; newState</code>, but how you create those reducers is up to you.</p>
 <p><a href="using-object-spread-operator.html" class="pagination-nav__link"></a></p>
 
 <p>« Using Object Spread Operator</p>

@@ -129,14 +129,14 @@
 <li><a href="../official/api/bindactioncreators.html" class="menu__link">bindActionCreators</a></li>
 <li><a href="../official/api/compose.html" class="menu__link">compose</a></li>
 </ul></li>
-<li><a href="#!" class="menu__link menu__link--sublist">Redux Toolkit</a>
+
 <ul>
 <li><a href="../official/redux-toolkit/overview.html" class="menu__link">Redux Toolkit: Overview</a></li>
 </ul></li>
 </ul>
 <h1 id="structuring-reducers"><span id="structuring-reducers" class="anchor enhancedAnchor_2LWZ"></span>Structuring Reducers<a href="#structuring-reducers" class="hash-link" title="Direct link to heading">#</a></h1>
 <p>At its core, Redux is really a fairly simple design pattern: all your “write” logic goes into a single function, and the only way to run that logic is to give Redux a plain object that describes something that has happened. The Redux store calls that write logic function and passes in the current state tree and the descriptive object, the write logic function returns some new state tree, and the Redux store notifies any subscribers that the state tree has changed.</p>
-<p>Redux puts some basic constraints on how that write logic function should work. As described in <a href="../../tutorials/fundamentals/part-3-state-actions-reducers.html">“Redux Fundamentals” Part 3: State, Actions, and Reducers</a>, it has to have a signature of <code class="language-js >(previousState, action) =&gt; newState</code>, is known as a <strong><em>reducer function</em></strong>, and must be <em>pure</em> and predictable.</p>
+<p>Redux puts some basic constraints on how that write logic function should work. As described in <a href="../../tutorials/fundamentals/part-3-state-actions-reducers.html">“Redux Fundamentals” Part 3: State, Actions, and Reducers</a>, it has to have a signature of <code class="language-js" >(previousState, action) =&gt; newState</code>, is known as a <strong><em>reducer function</em></strong>, and must be <em>pure</em> and predictable.</p>
 <p>Beyond that, Redux does not really care how you actually structure your logic inside that reducer function, as long as it obeys those basic rules. This is both a source of freedom and a source of confusion. However, there are a number of common patterns that are widely used when writing reducers, as well as a number of related topics and concepts to be aware of. As an application grows, these patterns play a crucial role in managing reducer code complexity, handling real-world data, and optimizing UI performance.</p>
 <h3 id="prerequisite-concepts-for-writing-reducers"><span id="prerequisite-concepts-for-writing-reducers" class="anchor enhancedAnchor_2LWZ"></span>Prerequisite Concepts for Writing Reducers<a href="#prerequisite-concepts-for-writing-reducers" class="hash-link" title="Direct link to heading">#</a></h3>
 <p>Some of these concepts are already described elsewhere in the Redux documentation. Others are generic and applicable outside of Redux itself, and there are numerous existing articles that cover these concepts in detail. These concepts and techniques form the foundation of writing solid Redux reducer logic.</p>
@@ -148,8 +148,8 @@
 <li><a href="basic-reducer-structure.html">Basic Reducer Structure</a></li>
 <li><a href="splitting-reducer-logic.html">Splitting Reducer Logic</a></li>
 <li><a href="refactoring-reducer-example.html">Refactoring Reducers Example</a></li>
-<li><a href="using-combinereducers.html">Using <code class="language-js >combineReducers</code></a></li>
-<li><a href="beyond-combinereducers.html">Beyond <code class="language-js >combineReducers</code></a></li>
+<li><a href="using-combinereducers.html">Using <code class="language-js" >combineReducers</code></a></li>
+<li><a href="beyond-combinereducers.html">Beyond <code class="language-js" >combineReducers</code></a></li>
 <li><a href="normalizing-state-shape.html">Normalizing State Shape</a></li>
 <li><a href="updating-normalized-data.html">Updating Normalized Data</a></li>
 <li><a href="reusing-reducer-logic.html">Reusing Reducer Logic</a></li>

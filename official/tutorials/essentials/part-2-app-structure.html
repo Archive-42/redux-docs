@@ -1362,13 +1362,13 @@
                           <li>
                             When we clicked the &quot;+&quot; button, an action
                             with a type of
-                            <code class="language-js >&quot;counter/increment&quot;</code> was
+                            <code class="language-js" >&quot;counter/increment&quot;</code> was
                             dispatched to the store
                           </li>
                           <li>
                             When that action was dispatched, the
-                            <code class="language-js >state.counter.value</code> field changed from
-                            <code class="language-js >0</code> to <code class="language-js >1</code>
+                            <code class="language-js" >state.counter.value</code> field changed from
+                            <code class="language-js" >0</code> to <code class="language-js" >1</code>
                           </li>
                         </ul>
                         <p>Now try these steps:</p>
@@ -1400,7 +1400,7 @@
                           Go back to the Redux DevTools. You should see a total
                           of five actions dispatched, one for each time we
                           clicked a button . Now select the last
-                          <code class="language-js >&quot;counter/incrementByAmount&quot;</code>
+                          <code class="language-js" >&quot;counter/incrementByAmount&quot;</code>
                           entry from the list on the left, and click the
                           &quot;Action&quot; tab on the right side:
                         </p>
@@ -1489,8 +1489,8 @@
                         </div>
                         <p>
                           And if you click the &quot;Diff&quot; tab, you can see
-                          that the <code class="language-js >state.counter.value</code> field
-                          changed from a <code class="language-js >3</code> to a <code class="language-js >6</code> in
+                          that the <code class="language-js" >state.counter.value</code> field
+                          changed from a <code class="language-js" >3</code> to a <code class="language-js" >6</code> in
                           response to that action.
                         </p>
                         <p>
@@ -1507,7 +1507,7 @@
                           that were executing when the action reached the store.
                           One line in particular should be highlighted: the line
                           of code where we dispatched this action from the
-                          <code class="language-js >&lt;Counter&gt;</code> component:
+                          <code class="language-js" >&lt;Counter&gt;</code> component:
                         </p>
                         <p>
                           <img
@@ -1542,38 +1542,38 @@
                         </p>
                         <ul>
                           <li>
-                            <code class="language-js >/src</code>
+                            <code class="language-js" >/src</code>
                             <ul>
                               <li>
-                                <code class="language-js >index.js</code>: the starting point for
+                                <code class="language-js" >index.js</code>: the starting point for
                                 the app
                               </li>
                               <li>
-                                <code class="language-js >App.js</code>: the top-level React
+                                <code class="language-js" >App.js</code>: the top-level React
                                 component
                               </li>
                               <li>
-                                <code class="language-js >/app</code>
+                                <code class="language-js" >/app</code>
                                 <ul>
                                   <li>
-                                    <code class="language-js >store.js</code>: creates the Redux
+                                    <code class="language-js" >store.js</code>: creates the Redux
                                     store instance
                                   </li>
                                 </ul>
                               </li>
                               <li>
-                                <code class="language-js >/features</code>
+                                <code class="language-js" >/features</code>
                                 <ul>
                                   <li>
-                                    <code class="language-js >/counter</code>
+                                    <code class="language-js" >/counter</code>
                                     <ul>
                                       <li>
-                                        <code class="language-js >Counter.js</code>: a React
+                                        <code class="language-js" >Counter.js</code>: a React
                                         component that shows the UI for the
                                         counter feature
                                       </li>
                                       <li>
-                                        <code class="language-js >counterSlice.js</code>: the Redux
+                                        <code class="language-js" >counterSlice.js</code>: the Redux
                                         logic for the counter feature
                                       </li>
                                     </ul>
@@ -1602,7 +1602,7 @@
                           >
                         </h3>
                         <p>
-                          Open up <code class="language-js >app/store.js</code>, which should look
+                          Open up <code class="language-js" >app/store.js</code>, which should look
                           like this:
                         </p>
                         <div class="codeBlockContainer_K1bP">
@@ -1768,40 +1768,40 @@
                         </div>
                         <p>
                           The Redux store is created using the
-                          <code class="language-js >configureStore</code> function from Redux
-                          Toolkit. <code class="language-js >configureStore</code> requires that we
-                          pass in a <code class="language-js >reducer</code> argument.
+                          <code class="language-js" >configureStore</code> function from Redux
+                          Toolkit. <code class="language-js" >configureStore</code> requires that we
+                          pass in a <code class="language-js" >reducer</code> argument.
                         </p>
                         <p>
                           Our application might be made up of many different
                           features, and each of those features might have its
                           own reducer function. When we call
-                          <code class="language-js >configureStore</code>, we can pass in all of the
+                          <code class="language-js" >configureStore</code>, we can pass in all of the
                           different reducers in an object. The key names in the
                           object will define the keys in our final state value.
                         </p>
                         <p>
                           We have a file named
-                          <code class="language-js >features/counter/counterSlice.js</code> that
+                          <code class="language-js" >features/counter/counterSlice.js</code> that
                           exports a reducer function for the counter logic. We
-                          can import that <code class="language-js >counterReducer</code> function
+                          can import that <code class="language-js" >counterReducer</code> function
                           here, and include it when we create the store.
                         </p>
                         <p>
                           When we pass in an object like
-                          <code class="language-js >{counter: counterReducer}</code>, that says that
-                          we want to have a <code class="language-js >state.counter</code> section
+                          <code class="language-js" >{counter: counterReducer}</code>, that says that
+                          we want to have a <code class="language-js" >state.counter</code> section
                           of our Redux state object, and that we want the
-                          <code class="language-js >counterReducer</code> function to be in charge
+                          <code class="language-js" >counterReducer</code> function to be in charge
                           of deciding if and how to update the
-                          <code class="language-js >state.counter</code> section whenever an action
+                          <code class="language-js" >state.counter</code> section whenever an action
                           is dispatched.
                         </p>
                         <p>
                           Redux allows store setup to be customized with
                           different kinds of plugins (&quot;middleware&quot; and
                           &quot;enhancers&quot;).
-                          <code class="language-js >configureStore</code> automatically adds several
+                          <code class="language-js" >configureStore</code> automatically adds several
                           middleware to the store setup by default to provide a
                           good developer experience, and also sets up the store
                           so that the Redux DevTools Extension can inspect its
@@ -2057,12 +2057,12 @@
                           </div>
                         </div>
                         <p>
-                          In that example, <code class="language-js >state.users</code>,
-                          <code class="language-js >state.posts</code>, and
-                          <code class="language-js >state.comments</code> are each a separate
+                          In that example, <code class="language-js" >state.users</code>,
+                          <code class="language-js" >state.posts</code>, and
+                          <code class="language-js" >state.comments</code> are each a separate
                           &quot;slice&quot; of the Redux state. Since
-                          <code class="language-js >usersReducer</code> is responsible for updating
-                          the <code class="language-js >state.users</code> slice, we refer to it as
+                          <code class="language-js" >usersReducer</code> is responsible for updating
+                          the <code class="language-js" >state.users</code> slice, we refer to it as
                           a &quot;slice reducer&quot; function.
                         </p>
                         <details class="detailed-explanation">
@@ -2322,7 +2322,7 @@
                           <p>
                             Redux has a function called
                             <a href="../../api/combinereducers.html"
-                              ><code class="language-js >combineReducers</code></a
+                              ><code class="language-js" >combineReducers</code></a
                             >
                             that does this for us automatically. It accepts an
                             object full of slice reducers as its argument, and
@@ -2331,7 +2331,7 @@
                             each slice reducer are all combined together into a
                             single object as the final result. We can do the
                             same thing as the previous example using
-                            <code class="language-js >combineReducers</code>:
+                            <code class="language-js" >combineReducers</code>:
                           </p>
                           <div class="codeBlockContainer_K1bP">
                             <div class="codeBlockContent_hGly js">
@@ -2455,14 +2455,14 @@
                           </div>
                           <p>
                             When we pass an object of slice reducers to
-                            <code class="language-js >configureStore</code>, it passes those to
-                            <code class="language-js >combineReducers</code> for us to generate the
+                            <code class="language-js" >configureStore</code>, it passes those to
+                            <code class="language-js" >combineReducers</code> for us to generate the
                             root reducer.
                           </p>
                           <p>
                             As we saw earlier, you can also pass a reducer
                             function directly as the
-                            <code class="language-js >reducer</code> argument:
+                            <code class="language-js" >reducer</code> argument:
                           </p>
                           <div class="codeBlockContainer_K1bP">
                             <div class="codeBlockContent_hGly js">
@@ -2566,8 +2566,8 @@
                         </h3>
                         <p>
                           Since we know that the
-                          <code class="language-js >counterReducer</code> function is coming from
-                          <code class="language-js >features/counter/counterSlice.js</code>,
+                          <code class="language-js" >counterReducer</code> function is coming from
+                          <code class="language-js" >features/counter/counterSlice.js</code>,
                           let&#x27;s see what&#x27;s in that file, piece by
                           piece.
                         </p>
@@ -3064,10 +3064,10 @@
                         </p>
                         <ul>
                           <li>
-                            <code class="language-js >{type: &quot;counter/increment&quot;}</code>
+                            <code class="language-js" >{type: &quot;counter/increment&quot;}</code>
                           </li>
                           <li>
-                            <code class="language-js >{type: &quot;counter/decrement&quot;}</code>
+                            <code class="language-js" >{type: &quot;counter/decrement&quot;}</code>
                           </li>
                           <li>
                             <code class="language-js 
@@ -3078,7 +3078,7 @@
                         </ul>
                         <p>
                           We know that actions are plain objects with a
-                          <code class="language-js >type</code> field, the <code class="language-js >type</code> field
+                          <code class="language-js" >type</code> field, the <code class="language-js" >type</code> field
                           is always a string, and we typically have &quot;action
                           creator&quot; functions that create and return the
                           action objects. So where are those action objects,
@@ -3093,29 +3093,29 @@
                         </p>
                         <p>
                           Redux Toolkit has a function called
-                          <code class="language-js >createSlice</code>, which takes care of the work
+                          <code class="language-js" >createSlice</code>, which takes care of the work
                           of generating action type strings, action creator
                           functions, and action objects. All you have to do is
                           define a name for this slice, write an object that has
                           some reducer functions in it, and it generates the
                           corresponding action code automatically. The string
-                          from the <code class="language-js >name</code> option is used as the first
+                          from the <code class="language-js" >name</code> option is used as the first
                           part of each action type, and the key name of each
                           reducer function is used as the second part. So, the
-                          <code class="language-js >&quot;counter&quot;</code> name + the
-                          <code class="language-js >&quot;increment&quot;</code> reducer function
+                          <code class="language-js" >&quot;counter&quot;</code> name + the
+                          <code class="language-js" >&quot;increment&quot;</code> reducer function
                           generated an action type of
-                          <code class="language-js >{type: &quot;counter/increment&quot;}</code>.
+                          <code class="language-js" >{type: &quot;counter/increment&quot;}</code>.
                           (After all, why write this by hand if the computer can
                           do it for us!)
                         </p>
                         <p>
-                          In addition to the <code class="language-js >name</code> field,
-                          <code class="language-js >createSlice</code> needs us to pass in the
+                          In addition to the <code class="language-js" >name</code> field,
+                          <code class="language-js" >createSlice</code> needs us to pass in the
                           initial state value for the reducers, so that there is
-                          a <code class="language-js >state</code> the first time it gets called. In
+                          a <code class="language-js" >state</code> the first time it gets called. In
                           this case, we&#x27;re providing an object with a
-                          <code class="language-js >value</code> field that starts off at 0.
+                          <code class="language-js" >value</code> field that starts off at 0.
                         </p>
                         <p>
                           We can see here that there are three reducer
@@ -3124,7 +3124,7 @@
                           different buttons.
                         </p>
                         <p>
-                          <code class="language-js >createSlice</code> automatically generates
+                          <code class="language-js" >createSlice</code> automatically generates
                           action creators with the same names as the reducer
                           functions we wrote. We can check that by calling one
                           of them and seeing what it returns:
@@ -3407,14 +3407,14 @@
                         <ul>
                           <li>
                             They should only calculate the new state value based
-                            on the <code class="language-js >state</code> and
-                            <code class="language-js >action</code> arguments
+                            on the <code class="language-js" >state</code> and
+                            <code class="language-js" >action</code> arguments
                           </li>
                           <li>
                             They are not allowed to modify the existing
-                            <code class="language-js >state</code>. Instead, they must make
+                            <code class="language-js" >state</code>. Instead, they must make
                             <em>immutable updates</em>, by copying the existing
-                            <code class="language-js >state</code> and making changes to the copied
+                            <code class="language-js" >state</code> and making changes to the copied
                             values.
                           </li>
                           <li>
@@ -3716,12 +3716,12 @@
                         <p>
                           <strong
                             >That&#x27;s why Redux Toolkit&#x27;s
-                            <code class="language-js >createSlice</code> function lets you write
+                            <code class="language-js" >createSlice</code> function lets you write
                             immutable updates an easier way!</strong
                           >
                         </p>
                         <p>
-                          <code class="language-js >createSlice</code> uses a library called
+                          <code class="language-js" >createSlice</code> uses a library called
                           <a
                             href="../../../immerjs.github.io/immer/index.html"
                             target="_blank"
@@ -3729,7 +3729,7 @@
                             >Immer</a
                           >
                           inside. Immer uses a special JS tool called a
-                          <code class="language-js >Proxy</code> to wrap the data you provide, and
+                          <code class="language-js" >Proxy</code> to wrap the data you provide, and
                           lets you write code that &quot;mutates&quot; that
                           wrapped data. But,
                           <strong
@@ -4169,8 +4169,8 @@
                               <strong
                                 >You can <em>only</em> write
                                 &quot;mutating&quot; logic in Redux
-                                Toolkit&#x27;s <code class="language-js >createSlice</code> and
-                                <code class="language-js >createReducer</code> because they use
+                                Toolkit&#x27;s <code class="language-js" >createSlice</code> and
+                                <code class="language-js" >createReducer</code> because they use
                                 Immer inside! If you write mutating logic in
                                 reducers without Immer, it <em>will</em> mutate
                                 the state and cause bugs!</strong
@@ -4560,31 +4560,31 @@
                           </div>
                         </div>
                         <p>
-                          We can see that the <code class="language-js >increment</code> reducer
-                          will always add 1 to <code class="language-js >state.value</code>. Because
+                          We can see that the <code class="language-js" >increment</code> reducer
+                          will always add 1 to <code class="language-js" >state.value</code>. Because
                           Immer knows we&#x27;ve made changes to the draft
-                          <code class="language-js >state</code> object, we don&#x27;t have to
+                          <code class="language-js" >state</code> object, we don&#x27;t have to
                           actually return anything here. In the same way, the
-                          <code class="language-js >decrement</code> reducer subtracts 1.
+                          <code class="language-js" >decrement</code> reducer subtracts 1.
                         </p>
                         <p>
                           In both of those reducers, we don&#x27;t actually need
                           to have our code look at the
-                          <code class="language-js >action</code> object. It will be passed in
+                          <code class="language-js" >action</code> object. It will be passed in
                           anyway, but since we don&#x27;t need it, we can skip
-                          declaring <code class="language-js >action</code> as a parameter for the
+                          declaring <code class="language-js" >action</code> as a parameter for the
                           reducers.
                         </p>
                         <p>
                           On the other hand, the
-                          <code class="language-js >incrementByAmount</code> reducer
+                          <code class="language-js" >incrementByAmount</code> reducer
                           <em>does</em> need to know something: how much it
                           should be adding to the counter value. So, we declare
-                          the reducer as having both <code class="language-js >state</code> and
-                          <code class="language-js >action</code> arguments. In this case, we know
+                          the reducer as having both <code class="language-js" >state</code> and
+                          <code class="language-js" >action</code> arguments. In this case, we know
                           that the amount we typed into the textbox is being put
-                          into the <code class="language-js >action.payload</code> field, so we can
-                          add that to <code class="language-js >state.value</code>.
+                          into the <code class="language-js" >action.payload</code> field, so we can
+                          add that to <code class="language-js" >state.value</code>.
                         </p>
                         <div
                           class="admonition admonition-info alert alert--info"
@@ -4657,7 +4657,7 @@
                         <ul>
                           <li>
                             An inside thunk function, which gets
-                            <code class="language-js >dispatch</code> and <code class="language-js >getState</code> as
+                            <code class="language-js" >dispatch</code> and <code class="language-js" >getState</code> as
                             arguments
                           </li>
                           <li>
@@ -4667,7 +4667,7 @@
                         </ul>
                         <p>
                           The next function that&#x27;s exported from
-                          <code class="language-js >counterSlice</code> is an example of a thunk
+                          <code class="language-js" >counterSlice</code> is an example of a thunk
                           action creator:
                         </p>
                         <div class="codeBlockContainer_K1bP">
@@ -4949,10 +4949,10 @@
                         </div>
                         <p>
                           However, using thunks requires that the
-                          <code class="language-js >redux-thunk</code> <em>middleware</em> (a type
+                          <code class="language-js" >redux-thunk</code> <em>middleware</em> (a type
                           of plugin for Redux) be added to the Redux store when
                           it&#x27;s created. Fortunately, Redux Toolkit&#x27;s
-                          <code class="language-js >configureStore</code> function already sets that
+                          <code class="language-js" >configureStore</code> function already sets that
                           up for us automatically, so we can go ahead and use
                           thunks here.
                         </p>
@@ -5264,7 +5264,7 @@
                           <p>
                             If we have access to the Redux store, we could write
                             some async code and call
-                            <code class="language-js >store.dispatch()</code> when we&#x27;re done:
+                            <code class="language-js" >store.dispatch()</code> when we&#x27;re done:
                           </p>
                           <div class="codeBlockContainer_K1bP">
                             <div class="codeBlockContent_hGly js">
@@ -5465,13 +5465,13 @@
                             code that can have async logic, but still talk to
                             the store at the same time. They can also modify the
                             store so that we can call
-                            <code class="language-js >dispatch()</code> and pass in values that are
+                            <code class="language-js" >dispatch()</code> and pass in values that are
                             <em>not</em> plain action objects, like functions or
                             Promises.
                           </p>
                           <p>
                             The Redux Thunk middleware modifies the store to let
-                            you pass functions into <code class="language-js >dispatch</code>. In
+                            you pass functions into <code class="language-js" >dispatch</code>. In
                             fact, it&#x27;s short enough we can paste it here:
                           </p>
                           <div class="codeBlockContainer_K1bP">
@@ -5718,7 +5718,7 @@
                           </div>
                           <p>
                             It looks to see if the &quot;action&quot; that was
-                            passed into <code class="language-js >dispatch</code> is actually a
+                            passed into <code class="language-js" >dispatch</code> is actually a
                             function instead of a plain action object. If
                             it&#x27;s actually a function, it calls the
                             function, and returns the result. Otherwise, since
@@ -5728,13 +5728,13 @@
                           <p>
                             This gives us a way to write whatever sync or async
                             code we want, while still having access to
-                            <code class="language-js >dispatch</code> and <code class="language-js >getState</code>.
+                            <code class="language-js" >dispatch</code> and <code class="language-js" >getState</code>.
                           </p>
                         </details>
                         <p>
                           There&#x27;s one more function in this file, but
                           we&#x27;ll talk about that in a minute when we look at
-                          the <code class="language-js >&lt;Counter&gt;</code> UI component.
+                          the <code class="language-js" >&lt;Counter&gt;</code> UI component.
                         </p>
                         <div
                           class="admonition admonition-info alert alert--info"
@@ -5796,14 +5796,14 @@
                         </h3>
                         <p>
                           Earlier, we saw what a standalone React
-                          <code class="language-js >&lt;Counter&gt;</code> component looks like. Our
+                          <code class="language-js" >&lt;Counter&gt;</code> component looks like. Our
                           React+Redux app has a similar
-                          <code class="language-js >&lt;Counter&gt;</code> component, but it does a
+                          <code class="language-js" >&lt;Counter&gt;</code> component, but it does a
                           few things differently.
                         </p>
                         <p>
                           We&#x27;ll start by looking at the
-                          <code class="language-js >Counter.js</code> component file:
+                          <code class="language-js" >Counter.js</code> component file:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -7040,19 +7040,19 @@
                         </div>
                         <p>
                           Like with the earlier plain React example, we have a
-                          function component called <code class="language-js >Counter</code>, that
-                          stores some data in a <code class="language-js >useState</code> hook.
+                          function component called <code class="language-js" >Counter</code>, that
+                          stores some data in a <code class="language-js" >useState</code> hook.
                         </p>
                         <p>
                           However, in our component, it doesn&#x27;t look like
                           we&#x27;re storing the actual current counter value as
                           state. There <em>is</em> a variable called
-                          <code class="language-js >count</code>, but it&#x27;s not coming from a
-                          <code class="language-js >useState</code> hook.
+                          <code class="language-js" >count</code>, but it&#x27;s not coming from a
+                          <code class="language-js" >useState</code> hook.
                         </p>
                         <p>
                           While React includes several built-in hooks like
-                          <code class="language-js >useState</code> and <code class="language-js >useEffect</code>,
+                          <code class="language-js" >useState</code> and <code class="language-js" >useEffect</code>,
                           other libraries can create their own
                           <a
                             href="../../../reactjs.org/docs/hooks-custom.html"
@@ -7086,7 +7086,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="reading-data-with-useselector"
                           ></a
-                          >Reading Data with <code class="language-js >useSelector</code
+                          >Reading Data with <code class="language-js" >useSelector</code
                           ><a
                             class="hash-link"
                             href="#reading-data-with-useselector"
@@ -7095,17 +7095,17 @@
                           >
                         </h4>
                         <p>
-                          First, the <code class="language-js >useSelector</code> hook lets our
+                          First, the <code class="language-js" >useSelector</code> hook lets our
                           component extract whatever pieces of data it needs
                           from the Redux store state.
                         </p>
                         <p>
                           Earlier, we saw that we can write &quot;selector&quot;
-                          functions, which take <code class="language-js >state</code> as an
+                          functions, which take <code class="language-js" >state</code> as an
                           argument and return some part of the state value.
                         </p>
                         <p>
-                          Our <code class="language-js >counterSlice.js</code> has this selector
+                          Our <code class="language-js" >counterSlice.js</code> has this selector
                           function at the bottom:
                         </p>
                         <div class="codeBlockContainer_K1bP">
@@ -7335,10 +7335,10 @@
                           Our components can&#x27;t talk to the Redux store
                           directly, because we&#x27;re not allowed to import it
                           into component files. But,
-                          <code class="language-js >useSelector</code> takes care of talking to the
+                          <code class="language-js" >useSelector</code> takes care of talking to the
                           Redux store behind the scenes for us. If we pass in a
                           selector function, it calls
-                          <code class="language-js >someSelector(store.getState())</code> for us,
+                          <code class="language-js" >someSelector(store.getState())</code> for us,
                           and returns the result.
                         </p>
                         <p>
@@ -7404,7 +7404,7 @@
                           We don&#x27;t have to <em>only</em> use selectors that
                           have already been exported, either. For example, we
                           could write a selector function as an inline argument
-                          to <code class="language-js >useSelector</code>:
+                          to <code class="language-js" >useSelector</code>:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -7492,10 +7492,10 @@
                         </div>
                         <p>
                           Any time an action has been dispatched and the Redux
-                          store has been updated, <code class="language-js >useSelector</code> will
+                          store has been updated, <code class="language-js" >useSelector</code> will
                           re-run our selector function. If the selector returns
                           a different value than last time,
-                          <code class="language-js >useSelector</code> will make sure our component
+                          <code class="language-js" >useSelector</code> will make sure our component
                           re-renders with the new value.
                         </p>
                         <h4>
@@ -7505,7 +7505,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="dispatching-actions-with-usedispatch"
                           ></a
-                          >Dispatching Actions with <code class="language-js >useDispatch</code
+                          >Dispatching Actions with <code class="language-js" >useDispatch</code
                           ><a
                             class="hash-link"
                             href="#dispatching-actions-with-usedispatch"
@@ -7517,14 +7517,14 @@
                           Similarly, we know that if we had access to a Redux
                           store, we could dispatch actions using action
                           creators, like
-                          <code class="language-js >store.dispatch(increment())</code>. Since we
+                          <code class="language-js" >store.dispatch(increment())</code>. Since we
                           don&#x27;t have access to the store itself, we need
                           some way to have access to just the
-                          <code class="language-js >dispatch</code> method.
+                          <code class="language-js" >dispatch</code> method.
                         </p>
                         <p>
-                          The <code class="language-js >useDispatch</code> hook does that for us,
-                          and gives us the actual <code class="language-js >dispatch</code> method
+                          The <code class="language-js" >useDispatch</code> hook does that for us,
+                          and gives us the actual <code class="language-js" >dispatch</code> method
                           from the Redux store:
                         </p>
                         <div class="codeBlockContainer_K1bP">
@@ -9117,24 +9117,24 @@
                         <p>
                           We <em>could</em> keep the current number string in
                           the Redux store, by dispatching an action in the
-                          input&#x27;s <code class="language-js >onChange</code> handler and keeping
+                          input&#x27;s <code class="language-js" >onChange</code> handler and keeping
                           it in our reducer. But, that doesn&#x27;t give us any
                           benefit. The only place that text string is used is
-                          here, in the <code class="language-js >&lt;Counter&gt;</code> component.
+                          here, in the <code class="language-js" >&lt;Counter&gt;</code> component.
                           (Sure, there&#x27;s only one other component in this
-                          example: <code class="language-js >&lt;App&gt;</code>. But even if we had
+                          example: <code class="language-js" >&lt;App&gt;</code>. But even if we had
                           a larger application with many components, only
-                          <code class="language-js >&lt;Counter&gt;</code> cares about this input
+                          <code class="language-js" >&lt;Counter&gt;</code> cares about this input
                           value.)
                         </p>
                         <p>
                           So, it makes sense to keep that value in a
-                          <code class="language-js >useState</code> hook here in the
-                          <code class="language-js >&lt;Counter&gt;</code> component.
+                          <code class="language-js" >useState</code> hook here in the
+                          <code class="language-js" >&lt;Counter&gt;</code> component.
                         </p>
                         <p>
                           Similarly, if we had a boolean flag called
-                          <code class="language-js >isDropdownOpen</code>, no other components in
+                          <code class="language-js" >isDropdownOpen</code>, no other components in
                           the app would care about that - it should really stay
                           local to this component.
                         </p>
@@ -9192,8 +9192,8 @@
                         </p>
                         <p>
                           One other thing to note before we move on: remember
-                          that <code class="language-js >incrementAsync</code> thunk from
-                          <code class="language-js >counterSlice.js</code>? We&#x27;re using it here
+                          that <code class="language-js" >incrementAsync</code> thunk from
+                          <code class="language-js" >counterSlice.js</code>? We&#x27;re using it here
                           in this component. Notice that we use it the same way
                           we dispatch the other normal action creators. This
                           component doesn&#x27;t care whether we&#x27;re
@@ -9217,8 +9217,8 @@
                         </h3>
                         <p>
                           We&#x27;ve seen that our components can use the
-                          <code class="language-js >useSelector</code> and
-                          <code class="language-js >useDispatch</code> hooks to talk to the Redux
+                          <code class="language-js" >useSelector</code> and
+                          <code class="language-js" >useDispatch</code> hooks to talk to the Redux
                           store. But, since we didn&#x27;t import the store, how
                           do those hooks know what Redux store to talk to?
                         </p>
@@ -9587,27 +9587,27 @@
                         </div>
                         <p>
                           We always have to call
-                          <code class="language-js >ReactDOM.render(&lt;App /&gt;)</code> to tell
+                          <code class="language-js" >ReactDOM.render(&lt;App /&gt;)</code> to tell
                           React to start rendering our root
-                          <code class="language-js >&lt;App&gt;</code> component. In order for our
-                          hooks like <code class="language-js >useSelector</code> to work right, we
+                          <code class="language-js" >&lt;App&gt;</code> component. In order for our
+                          hooks like <code class="language-js" >useSelector</code> to work right, we
                           need to use a component called
-                          <code class="language-js >&lt;Provider&gt;</code> to pass down the Redux
+                          <code class="language-js" >&lt;Provider&gt;</code> to pass down the Redux
                           store behind the scenes so they can access it.
                         </p>
                         <p>
                           We already created our store in
-                          <code class="language-js >app/store.js</code>, so we can import it here.
+                          <code class="language-js" >app/store.js</code>, so we can import it here.
                           Then, we put our
-                          <code class="language-js >&lt;Provider&gt;</code> component around the
-                          whole <code class="language-js >&lt;App&gt;</code>, and pass in the store:
-                          <code class="language-js >&lt;Provider store={store}&gt;</code>.
+                          <code class="language-js" >&lt;Provider&gt;</code> component around the
+                          whole <code class="language-js" >&lt;App&gt;</code>, and pass in the store:
+                          <code class="language-js" >&lt;Provider store={store}&gt;</code>.
                         </p>
                         <p>
                           Now, any React components that call
-                          <code class="language-js >useSelector</code> or
-                          <code class="language-js >useDispatch</code> will be talking to the Redux
-                          store we gave to the <code class="language-js >&lt;Provider&gt;</code>.
+                          <code class="language-js" >useSelector</code> or
+                          <code class="language-js" >useDispatch</code> will be talking to the Redux
+                          store we gave to the <code class="language-js" >&lt;Provider&gt;</code>.
                         </p>
                         <h2>
                           <a
@@ -9653,16 +9653,16 @@
                                 <strong
                                   >We can create a Redux store using the Redux
                                   Toolkit
-                                  <code class="language-js >configureStore</code> API</strong
+                                  <code class="language-js" >configureStore</code> API</strong
                                 >
                                 <ul>
                                   <li>
-                                    <code class="language-js >configureStore</code> accepts a
-                                    <code class="language-js >reducer</code> function as a named
+                                    <code class="language-js" >configureStore</code> accepts a
+                                    <code class="language-js" >reducer</code> function as a named
                                     argument
                                   </li>
                                   <li>
-                                    <code class="language-js >configureStore</code> automatically
+                                    <code class="language-js" >configureStore</code> automatically
                                     sets up the store with good default settings
                                   </li>
                                 </ul>
@@ -9680,7 +9680,7 @@
                                   </li>
                                   <li>
                                     Redux Toolkit&#x27;s
-                                    <code class="language-js >createSlice</code> API generates
+                                    <code class="language-js" >createSlice</code> API generates
                                     action creators and action types for each
                                     individual reducer function you provide
                                   </li>
@@ -9694,8 +9694,8 @@
                                 <ul>
                                   <li>
                                     Should only calculate a new state value
-                                    based on the <code class="language-js >state</code> and
-                                    <code class="language-js >action</code> arguments
+                                    based on the <code class="language-js" >state</code> and
+                                    <code class="language-js" >action</code> arguments
                                   </li>
                                   <li>
                                     Must make <em>immutable updates</em> by
@@ -9707,7 +9707,7 @@
                                   </li>
                                   <li>
                                     Redux Toolkit&#x27;s
-                                    <code class="language-js >createSlice</code> API uses Immer to
+                                    <code class="language-js" >createSlice</code> API uses Immer to
                                     allow &quot;mutating&quot; immutable updates
                                   </li>
                                 </ul>
@@ -9719,12 +9719,12 @@
                                 >
                                 <ul>
                                   <li>
-                                    Thunks receive <code class="language-js >dispatch</code> and
-                                    <code class="language-js >getState</code> as arguments
+                                    Thunks receive <code class="language-js" >dispatch</code> and
+                                    <code class="language-js" >getState</code> as arguments
                                   </li>
                                   <li>
                                     Redux Toolkit enables the
-                                    <code class="language-js >redux-thunk</code> middleware by
+                                    <code class="language-js" >redux-thunk</code> middleware by
                                     default
                                   </li>
                                 </ul>
@@ -9737,7 +9737,7 @@
                                 <ul>
                                   <li>
                                     Wrapping the app with
-                                    <code class="language-js >&lt;Provider store={store}&gt;</code>
+                                    <code class="language-js" >&lt;Provider store={store}&gt;</code>
                                     enables all components to use the store
                                   </li>
                                   <li>

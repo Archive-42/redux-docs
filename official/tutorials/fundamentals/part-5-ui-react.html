@@ -105,10 +105,17 @@
       as="script"
     />
     <link rel="preload" href="../../assets/js/main.8520a084.js" as="script" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css"
+    />
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
-    </head>
+    <script
+      async
+      defer
+      src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"
+    ></script>
+  </head>
   <body>
     <script>
       !(function () {
@@ -1841,8 +1848,9 @@
                             >production</a
                           >
                           build). The UMD build exports a global called
-                          <code class="language-js >window.ReactRedux</code> if you add it to your
-                          page via a <code class="language-js >&lt;script&gt;</code> tag.)
+                          <code class="language-js">window.ReactRedux</code> if
+                          you add it to your page via a
+                          <code class="language-js">&lt;script&gt;</code> tag.)
                         </p>
                         <p>
                           For this tutorial, we&#x27;ll cover the most important
@@ -1921,22 +1929,33 @@
                         </p>
                         <ul>
                           <li>
-                            <strong><code class="language-js >&lt;App&gt;</code></strong
+                            <strong
+                              ><code class="language-js"
+                                >&lt;App&gt;</code
+                              ></strong
                             >: the root component that renders everything else.
                             <ul>
                               <li>
-                                <strong><code class="language-js >&lt;Header&gt;</code></strong
+                                <strong
+                                  ><code class="language-js"
+                                    >&lt;Header&gt;</code
+                                  ></strong
                                 >: contains the &quot;new todo&quot; text input
                                 and the &quot;complete all todos&quot; checkbox
                               </li>
                               <li>
-                                <strong><code class="language-js >&lt;TodoList&gt;</code></strong
+                                <strong
+                                  ><code class="language-js"
+                                    >&lt;TodoList&gt;</code
+                                  ></strong
                                 >: a list of all currently visible todo items,
                                 based on the filtered results
                                 <ul>
                                   <li>
                                     <strong
-                                      ><code class="language-js >&lt;TodoListItem&gt;</code></strong
+                                      ><code class="language-js"
+                                        >&lt;TodoListItem&gt;</code
+                                      ></strong
                                     >: a single todo list item, with a checkbox
                                     that can be clicked to toggle the
                                     todo&#x27;s completed status, and a color
@@ -1945,7 +1964,10 @@
                                 </ul>
                               </li>
                               <li>
-                                <strong><code class="language-js >&lt;Footer&gt;</code></strong
+                                <strong
+                                  ><code class="language-js"
+                                    >&lt;Footer&gt;</code
+                                  ></strong
                                 >: Shows the number of active todos and controls
                                 for filtering the list based on completed status
                                 and color category
@@ -1957,16 +1979,18 @@
                           Beyond this basic component structure, we could
                           potentially divide the components up in several
                           different ways. For example, the
-                          <code class="language-js >&lt;Footer&gt;</code> component
-                          <em>could</em> be one larger component, or it could
-                          have multiple smaller components inside like
-                          <code class="language-js >&lt;CompletedTodos&gt;</code>,
-                          <code class="language-js >&lt;StatusFilter&gt;</code>, and
-                          <code class="language-js >&lt;ColorFilters&gt;</code>. There&#x27;s no
-                          single right way to divide these, and you&#x27;ll find
-                          that it may be better to write larger components or
-                          split things into many smaller components depending on
-                          your situation.
+                          <code class="language-js">&lt;Footer&gt;</code>
+                          component <em>could</em> be one larger component, or
+                          it could have multiple smaller components inside like
+                          <code class="language-js">&lt;CompletedTodos&gt;</code
+                          >,
+                          <code class="language-js">&lt;StatusFilter&gt;</code>,
+                          and
+                          <code class="language-js">&lt;ColorFilters&gt;</code>.
+                          There&#x27;s no single right way to divide these, and
+                          you&#x27;ll find that it may be better to write larger
+                          components or split things into many smaller
+                          components depending on your situation.
                         </p>
                         <p>
                           For now, we&#x27;ll start with this small list of
@@ -2004,7 +2028,7 @@
                             id="reading-state-from-the-store-with-useselector"
                           ></a
                           >Reading State from the Store with
-                          <code class="language-js >useSelector</code
+                          <code class="language-js">useSelector</code
                           ><a
                             class="hash-link"
                             href="#reading-state-from-the-store-with-useselector"
@@ -2015,10 +2039,11 @@
                         <p>
                           We know that we need to be able to show a list of todo
                           items. Let&#x27;s start by creating a
-                          <code class="language-js >&lt;TodoList&gt;</code> component that can read
-                          the list of todos from the store, loop over them, and
-                          show one <code class="language-js >&lt;TodoListItem&gt;</code> component
-                          for each todo entry.
+                          <code class="language-js">&lt;TodoList&gt;</code>
+                          component that can read the list of todos from the
+                          store, loop over them, and show one
+                          <code class="language-js">&lt;TodoListItem&gt;</code>
+                          component for each todo entry.
                         </p>
                         <p>
                           You should be familiar with
@@ -2026,7 +2051,8 @@
                             href="../../../reactjs.org/docs/hooks-state.html"
                             target="_blank"
                             rel="noopener noreferrer"
-                            >React hooks like <code class="language-js >useState</code></a
+                            >React hooks like
+                            <code class="language-js">useState</code></a
                           >, which can be called in React function components to
                           give them access to React state values. React also
                           lets us write
@@ -2057,7 +2083,10 @@
                             href="../../../react-redux.js.org/api/hooks.html#useselector"
                             target="_blank"
                             rel="noopener noreferrer"
-                            ><strong><code class="language-js >useSelector</code> hook</strong></a
+                            ><strong
+                              ><code class="language-js">useSelector</code>
+                              hook</strong
+                            ></a
                           >, which
                           <strong
                             >lets your React components read data from the Redux
@@ -2065,8 +2094,9 @@
                           >.
                         </p>
                         <p>
-                          <code class="language-js >useSelector</code> accepts a single function,
-                          which we call a <strong>selector</strong> function.
+                          <code class="language-js">useSelector</code> accepts a
+                          single function, which we call a
+                          <strong>selector</strong> function.
                           <strong
                             >A selector is a function that takes the entire
                             Redux store state as its argument, reads some value
@@ -2076,8 +2106,9 @@
                         <p>
                           For example, we know that our todo app&#x27;s Redux
                           state keeps the array of todo items as
-                          <code class="language-js >state.todos</code>. We can write a small
-                          selector function that returns that todos array:
+                          <code class="language-js">state.todos</code>. We can
+                          write a small selector function that returns that
+                          todos array:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -2290,10 +2321,12 @@
                         </p>
                         <p>
                           Let&#x27;s read the array of todos into our
-                          <code class="language-js >&lt;TodoList&gt;</code> component. First,
-                          we&#x27;ll import the <code class="language-js >useSelector</code> hook
-                          from the <code class="language-js >react-redux</code> library, then call
-                          it with a selector function as its argument:
+                          <code class="language-js">&lt;TodoList&gt;</code>
+                          component. First, we&#x27;ll import the
+                          <code class="language-js">useSelector</code> hook from
+                          the
+                          <code class="language-js">react-redux</code> library,
+                          then call it with a selector function as its argument:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -2826,47 +2859,53 @@
                         </div>
                         <p>
                           The first time the
-                          <code class="language-js >&lt;TodoList&gt;</code> component renders, the
-                          <code class="language-js >useSelector</code> hook will call
-                          <code class="language-js >selectTodos</code> and pass in the
-                          <em>entire</em> Redux state object. Whatever the
-                          selector returns will be returned by the hook to your
-                          component. So, the <code class="language-js >const todos</code> in our
+                          <code class="language-js">&lt;TodoList&gt;</code>
+                          component renders, the
+                          <code class="language-js">useSelector</code> hook will
+                          call <code class="language-js">selectTodos</code> and
+                          pass in the <em>entire</em> Redux state object.
+                          Whatever the selector returns will be returned by the
+                          hook to your component. So, the
+                          <code class="language-js">const todos</code> in our
                           component will end up holding the same
-                          <code class="language-js >state.todos</code> array inside our Redux store
-                          state.
+                          <code class="language-js">state.todos</code> array
+                          inside our Redux store state.
                         </p>
                         <p>
                           But, what happens if we dispatch an action like
-                          <code class="language-js >{type: &#x27;todos/todoAdded&#x27;}</code>? The
-                          Redux state will be updated by the reducer, but our
-                          component needs to know that something has changed so
-                          that it can re-render with the new list of todos.
+                          <code class="language-js"
+                            >{type: &#x27;todos/todoAdded&#x27;}</code
+                          >? The Redux state will be updated by the reducer, but
+                          our component needs to know that something has changed
+                          so that it can re-render with the new list of todos.
                         </p>
                         <p>
                           We know that we can call
-                          <code class="language-js >store.subscribe()</code> to listen for changes
-                          to the store, so we <em>could</em> try writing the
-                          code to subscribe to the store in every component.
-                          But, that would quickly get very repetitive and hard
-                          to handle.
+                          <code class="language-js">store.subscribe()</code> to
+                          listen for changes to the store, so we
+                          <em>could</em> try writing the code to subscribe to
+                          the store in every component. But, that would quickly
+                          get very repetitive and hard to handle.
                         </p>
                         <p>
                           Fortunately,
                           <strong
-                            ><code class="language-js >useSelector</code> automatically subscribes
-                            to the Redux store for us!</strong
+                            ><code class="language-js">useSelector</code>
+                            automatically subscribes to the Redux store for
+                            us!</strong
                           >
                           That way, any time an action is dispatched, it will
                           call its selector function again right away.
                           <strong
                             >If the value returned by the selector changes from
-                            the last time it ran, <code class="language-js >useSelector</code> will
+                            the last time it ran,
+                            <code class="language-js">useSelector</code> will
                             force our component to re-render with the new
                             data</strong
                           >. All we have to do is call
-                          <code class="language-js >useSelector()</code> once in our component, and
-                          it does the rest of the work for us.
+                          <code class="language-js">useSelector()</code> once in
+                          our component, and it does the rest of the work for
+                          us.
                         </p>
                         <p>
                           However, there&#x27;s a very important thing to
@@ -2897,8 +2936,9 @@
                           <div class="admonition-content">
                             <p>
                               <strong
-                                ><code class="language-js >useSelector</code> compares its results
-                                using strict <code class="language-js >===</code> reference
+                                ><code class="language-js">useSelector</code>
+                                compares its results using strict
+                                <code class="language-js">===</code> reference
                                 comparisons, so the component will re-render any
                                 time the selector result is a new
                                 reference!</strong
@@ -2913,10 +2953,11 @@
                         </div>
                         <p>
                           For example, passing this selector to
-                          <code class="language-js >useSelector</code> will cause the component to
-                          <em>always</em> re-render, because
-                          <code class="language-js >array.map()</code> always returns a new array
-                          reference:
+                          <code class="language-js">useSelector</code> will
+                          cause the component to <em>always</em> re-render,
+                          because
+                          <code class="language-js">array.map()</code> always
+                          returns a new array reference:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -3087,7 +3128,8 @@
                           It&#x27;s also worth noting that we don&#x27;t have to
                           write a selector function as a separate variable. You
                           can write a selector function directly inside the call
-                          to <code class="language-js >useSelector</code>, like this:
+                          to <code class="language-js">useSelector</code>, like
+                          this:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -3163,7 +3205,8 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="dispatching-actions-with-usedispatch"
                           ></a
-                          >Dispatching Actions with <code class="language-js >useDispatch</code
+                          >Dispatching Actions with
+                          <code class="language-js">useDispatch</code
                           ><a
                             class="hash-link"
                             href="#dispatching-actions-with-usedispatch"
@@ -3176,11 +3219,11 @@
                           our components. But, how can we dispatch actions to
                           the store from a component? We know that outside of
                           React, we can call
-                          <code class="language-js >store.dispatch(action)</code>. Since we
-                          don&#x27;t have access to the store in a component
-                          file, we need some way to get access to the
-                          <code class="language-js >dispatch</code> function by itself inside our
-                          components.
+                          <code class="language-js">store.dispatch(action)</code
+                          >. Since we don&#x27;t have access to the store in a
+                          component file, we need some way to get access to the
+                          <code class="language-js">dispatch</code> function by
+                          itself inside our components.
                         </p>
                         <p>
                           The React-Redux
@@ -3188,24 +3231,36 @@
                             href="../../../react-redux.js.org/api/hooks.html#usedispatch"
                             target="_blank"
                             rel="noopener noreferrer"
-                            ><strong><code class="language-js >useDispatch</code> hook</strong></a
+                            ><strong
+                              ><code class="language-js">useDispatch</code>
+                              hook</strong
+                            ></a
                           >
-                          gives us the store&#x27;s <code class="language-js >dispatch</code> method
-                          as its result. (In fact, the implementation of the
-                          hook really is <code class="language-js >return store.dispatch</code>.)
+                          gives us the store&#x27;s
+                          <code class="language-js">dispatch</code> method as
+                          its result. (In fact, the implementation of the hook
+                          really is
+                          <code class="language-js">return store.dispatch</code
+                          >.)
                         </p>
                         <p>
                           So, we can call
-                          <code class="language-js >const dispatch = useDispatch()</code> in any
-                          component that needs to dispatch actions, and then
-                          call <code class="language-js >dispatch(someAction)</code> as needed.
+                          <code class="language-js"
+                            >const dispatch = useDispatch()</code
+                          >
+                          in any component that needs to dispatch actions, and
+                          then call
+                          <code class="language-js">dispatch(someAction)</code>
+                          as needed.
                         </p>
                         <p>
                           Let&#x27;s try that in our
-                          <code class="language-js >&lt;Header&gt;</code> component. We know that we
-                          need to let the user type in some text for a new todo
-                          item, and then dispatch a
-                          <code class="language-js >{type: &#x27;todos/todoAdded&#x27;}</code>
+                          <code class="language-js">&lt;Header&gt;</code>
+                          component. We know that we need to let the user type
+                          in some text for a new todo item, and then dispatch a
+                          <code class="language-js"
+                            >{type: &#x27;todos/todoAdded&#x27;}</code
+                          >
                           action containing that text.
                         </p>
                         <p>
@@ -4107,7 +4162,8 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="passing-the-store-with-provider"
                           ></a
-                          >Passing the Store with <code class="language-js >Provider</code
+                          >Passing the Store with
+                          <code class="language-js">Provider</code
                           ><a
                             class="hash-link"
                             href="#passing-the-store-with-provider"
@@ -4121,23 +4177,28 @@
                           still missing something. Where and how are the
                           React-Redux hooks finding the right Redux store? A
                           hook is a JS function, so it can&#x27;t automatically
-                          import a store from <code class="language-js >store.js</code> by itself.
+                          import a store from
+                          <code class="language-js">store.js</code> by itself.
                         </p>
                         <p>
                           Instead, we have to specifically tell React-Redux what
                           store we want to use in our components. We do this by
                           <strong
-                            >rendering a <code class="language-js >&lt;Provider&gt;</code> component
-                            around our entire <code class="language-js >&lt;App&gt;</code>, and
+                            >rendering a
+                            <code class="language-js">&lt;Provider&gt;</code>
+                            component around our entire
+                            <code class="language-js">&lt;App&gt;</code>, and
                             passing the Redux store as a prop to
-                            <code class="language-js >&lt;Provider&gt;</code></strong
+                            <code class="language-js"
+                              >&lt;Provider&gt;</code
+                            ></strong
                           >. After we do this once, every component in the
                           application will be able to access the Redux store if
                           needs to.
                         </p>
                         <p>
                           Let&#x27;s add that to our main
-                          <code class="language-js >index.js</code> file:
+                          <code class="language-js">index.js</code> file:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -4541,18 +4602,24 @@
                         </p>
                         <ul>
                           <li>
-                            Call the <code class="language-js >useSelector</code> hook to read data
-                            in React components
+                            Call the
+                            <code class="language-js">useSelector</code> hook to
+                            read data in React components
                           </li>
                           <li>
-                            Call the <code class="language-js >useDispatch</code> hook to dispatch
-                            actions in React components
+                            Call the
+                            <code class="language-js">useDispatch</code> hook to
+                            dispatch actions in React components
                           </li>
                           <li>
                             Put
-                            <code class="language-js >&lt;Provider store={store}&gt;</code> around
-                            your entire <code class="language-js >&lt;App&gt;</code> component so
-                            that other components can talk to the store
+                            <code class="language-js"
+                              >&lt;Provider store={store}&gt;</code
+                            >
+                            around your entire
+                            <code class="language-js">&lt;App&gt;</code>
+                            component so that other components can talk to the
+                            store
                           </li>
                         </ul>
                         <p>
@@ -4614,25 +4681,29 @@
                         </p>
                         <p>
                           A good example of this is the
-                          <code class="language-js >&lt;Header&gt;</code> component we wrote
-                          earlier. We <em>could</em> keep the current text input
-                          string in the Redux store, by dispatching an action in
-                          the input&#x27;s <code class="language-js >onChange</code> handler and
+                          <code class="language-js">&lt;Header&gt;</code>
+                          component we wrote earlier. We <em>could</em> keep the
+                          current text input string in the Redux store, by
+                          dispatching an action in the input&#x27;s
+                          <code class="language-js">onChange</code> handler and
                           keeping it in our reducer. But, that doesn&#x27;t give
                           us any benefit. The only place that text string is
                           used is here, in the
-                          <code class="language-js >&lt;Header&gt;</code> component.
+                          <code class="language-js">&lt;Header&gt;</code>
+                          component.
                         </p>
                         <p>
                           So, it makes sense to keep that value in a
-                          <code class="language-js >useState</code> hook here in the
-                          <code class="language-js >&lt;Header&gt;</code> component.
+                          <code class="language-js">useState</code> hook here in
+                          the
+                          <code class="language-js">&lt;Header&gt;</code>
+                          component.
                         </p>
                         <p>
                           Similarly, if we had a boolean flag called
-                          <code class="language-js >isDropdownOpen</code>, no other components in
-                          the app would care about that - it should really stay
-                          local to this component.
+                          <code class="language-js">isDropdownOpen</code>, no
+                          other components in the app would care about that - it
+                          should really stay local to this component.
                         </p>
                         <div
                           class="admonition admonition-tip alert alert--success"
@@ -4725,14 +4796,16 @@
                         </h3>
                         <p>
                           Right now only our
-                          <code class="language-js >&lt;TodoList&gt;</code> component is reading
-                          data from the store. Let&#x27;s see what it might look
-                          like for the <code class="language-js >&lt;Footer&gt;</code> component to
-                          start reading some data as well.
+                          <code class="language-js">&lt;TodoList&gt;</code>
+                          component is reading data from the store. Let&#x27;s
+                          see what it might look like for the
+                          <code class="language-js">&lt;Footer&gt;</code>
+                          component to start reading some data as well.
                         </p>
                         <p>
-                          The <code class="language-js >&lt;Footer&gt;</code> needs to know three
-                          different pieces of information:
+                          The
+                          <code class="language-js">&lt;Footer&gt;</code> needs
+                          to know three different pieces of information:
                         </p>
                         <ul>
                           <li>How many completed todos there are</li>
@@ -4745,31 +4818,37 @@
                         <p>How can we read these values into the component?</p>
                         <p>
                           <strong
-                            >We can call <code class="language-js >useSelector</code> multiple times
-                            within one component</strong
+                            >We can call
+                            <code class="language-js">useSelector</code>
+                            multiple times within one component</strong
                           >. In fact, this is actually a good idea -
                           <strong
-                            >each call to <code class="language-js >useSelector</code> should always
-                            return the smallest amount of state possible</strong
+                            >each call to
+                            <code class="language-js">useSelector</code> should
+                            always return the smallest amount of state
+                            possible</strong
                           >.
                         </p>
                         <p>
                           We already saw how to write a selector that counts
                           completed todos earlier. For the filters values, both
                           the status filter value and the color filters values
-                          live in the <code class="language-js >state.filters</code> slice. Since
-                          this component needs both of them, we can select the
-                          entire <code class="language-js >state.filters</code> object.
+                          live in the
+                          <code class="language-js">state.filters</code> slice.
+                          Since this component needs both of them, we can select
+                          the entire
+                          <code class="language-js">state.filters</code> object.
                         </p>
                         <p>
                           As we mentioned earlier, we could put all the input
-                          handling directly into <code class="language-js >&lt;Footer&gt;</code>, or
-                          we could split it out into separate components like
-                          <code class="language-js >&lt;StatusFilter&gt;</code>. To keep this
-                          explanation shorter, we&#x27;ll skip the exact details
-                          of writing the input handling and assume we&#x27;ve
-                          got smaller separate components that are given some
-                          data and change handler callbacks as props.
+                          handling directly into
+                          <code class="language-js">&lt;Footer&gt;</code>, or we
+                          could split it out into separate components like
+                          <code class="language-js">&lt;StatusFilter&gt;</code>.
+                          To keep this explanation shorter, we&#x27;ll skip the
+                          exact details of writing the input handling and assume
+                          we&#x27;ve got smaller separate components that are
+                          given some data and change handler callbacks as props.
                         </p>
                         <p>
                           Given that assumption, the React-Redux parts of the
@@ -5853,10 +5932,13 @@
                           >
                         </h3>
                         <p>
-                          Currently, our <code class="language-js >&lt;TodoList&gt;</code> is
-                          reading the entire <code class="language-js >state.todos</code> array and
+                          Currently, our
+                          <code class="language-js">&lt;TodoList&gt;</code> is
+                          reading the entire
+                          <code class="language-js">state.todos</code> array and
                           passing the actual todo objects as a prop to each
-                          <code class="language-js >&lt;TodoListItem&gt;</code> component.
+                          <code class="language-js">&lt;TodoListItem&gt;</code>
+                          component.
                         </p>
                         <p>
                           This works, but there&#x27;s a potential performance
@@ -5866,18 +5948,21 @@
                           <li>
                             Changing one todo object means creating copies of
                             both the todo and the
-                            <code class="language-js >state.todos</code> array, and each copy is a
-                            new reference in memory
+                            <code class="language-js">state.todos</code> array,
+                            and each copy is a new reference in memory
                           </li>
                           <li>
-                            When <code class="language-js >useSelector</code> sees a new reference
-                            as its result, it forces its component to re-render
+                            When
+                            <code class="language-js">useSelector</code> sees a
+                            new reference as its result, it forces its component
+                            to re-render
                           </li>
                           <li>
                             So, any time <em>one</em> todo object is updated
                             (like clicking it to toggle its completed status),
-                            the whole <code class="language-js >&lt;TodoList&gt;</code> parent
-                            component will re-render
+                            the whole
+                            <code class="language-js">&lt;TodoList&gt;</code>
+                            parent component will re-render
                           </li>
                           <li>
                             Then,
@@ -5888,9 +5973,11 @@
                               >because React re-renders all child components
                               recursively by default</a
                             >, it also means that <em>all</em> of the
-                            <code class="language-js >&lt;TodoListItem&gt;</code> components will
-                            re-render, even though most of them didn&#x27;t
-                            actually change at all!
+                            <code class="language-js"
+                              >&lt;TodoListItem&gt;</code
+                            >
+                            components will re-render, even though most of them
+                            didn&#x27;t actually change at all!
                           </li>
                         </ul>
                         <p>
@@ -5908,26 +5995,31 @@
                             target="_blank"
                             rel="noopener noreferrer"
                             >wrap all the
-                            <code class="language-js >&lt;TodoListItem&gt;</code> components in
-                            <code class="language-js >React.memo()</code></a
+                            <code class="language-js"
+                              >&lt;TodoListItem&gt;</code
+                            >
+                            components in
+                            <code class="language-js">React.memo()</code></a
                           >, so that they only re-render when their props
                           actually change. This is often a good choice for
                           improving performance, but it does require that the
                           child component always receives the same props until
                           something really changes. Since each
-                          <code class="language-js >&lt;TodoListItem&gt;</code> component is
-                          receiving a todo item as a prop, only one of them
-                          should actually get a changed prop and have to
+                          <code class="language-js">&lt;TodoListItem&gt;</code>
+                          component is receiving a todo item as a prop, only one
+                          of them should actually get a changed prop and have to
                           re-render.
                         </p>
                         <p>
                           Another option is to have the
-                          <code class="language-js >&lt;TodoList&gt;</code> component only read an
-                          array of todo IDs from the store, and pass those IDs
-                          as props to the child
-                          <code class="language-js >&lt;TodoListItem&gt;</code> components. Then,
-                          each <code class="language-js >&lt;TodoListItem&gt;</code> can use that ID
-                          to find the right todo object it needs.
+                          <code class="language-js">&lt;TodoList&gt;</code>
+                          component only read an array of todo IDs from the
+                          store, and pass those IDs as props to the child
+                          <code class="language-js">&lt;TodoListItem&gt;</code>
+                          components. Then, each
+                          <code class="language-js">&lt;TodoListItem&gt;</code>
+                          can use that ID to find the right todo object it
+                          needs.
                         </p>
                         <p>Let&#x27;s give that a shot.</p>
                         <div class="codeBlockContainer_K1bP">
@@ -6447,17 +6539,22 @@
                         </div>
                         <p>
                           This time, we only select an array of todo IDs from
-                          the store in <code class="language-js >&lt;TodoList&gt;</code>, and we
-                          pass each <code class="language-js >todoId</code> as an
-                          <code class="language-js >id</code> prop to the child
-                          <code class="language-js >&lt;TodoListItem&gt;</code>s.
+                          the store in
+                          <code class="language-js">&lt;TodoList&gt;</code>, and
+                          we pass each
+                          <code class="language-js">todoId</code> as an
+                          <code class="language-js">id</code> prop to the child
+                          <code class="language-js">&lt;TodoListItem&gt;</code
+                          >s.
                         </p>
                         <p>
-                          Then, in <code class="language-js >&lt;TodoListItem&gt;</code>, we can use
-                          that ID value to read our todo item. We can also
-                          update <code class="language-js >&lt;TodoListItem&gt;</code> to dispatch
-                          the &quot;toggled&quot; action based on the
-                          todo&#x27;s ID.
+                          Then, in
+                          <code class="language-js">&lt;TodoListItem&gt;</code>,
+                          we can use that ID value to read our todo item. We can
+                          also update
+                          <code class="language-js">&lt;TodoListItem&gt;</code>
+                          to dispatch the &quot;toggled&quot; action based on
+                          the todo&#x27;s ID.
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div
@@ -7226,29 +7323,32 @@
                             >returning new array references in selectors causes
                             components to re-render every time</strong
                           >, and right now we&#x27;re returning a new IDs array
-                          in <code class="language-js >&lt;TodoList&gt;</code>. In this case, the
-                          <em>contents</em> of the IDs array should be the same
-                          if we&#x27;re toggling a todo, because we&#x27;re
-                          still showing the same todo items - we haven&#x27;t
-                          added or deleted any. But, the array
+                          in <code class="language-js">&lt;TodoList&gt;</code>.
+                          In this case, the <em>contents</em> of the IDs array
+                          should be the same if we&#x27;re toggling a todo,
+                          because we&#x27;re still showing the same todo items -
+                          we haven&#x27;t added or deleted any. But, the array
                           <em>containing</em> those IDs is a new reference, so
-                          <code class="language-js >&lt;TodoList&gt;</code> will re-render when it
-                          really doesn&#x27;t need to.
+                          <code class="language-js">&lt;TodoList&gt;</code> will
+                          re-render when it really doesn&#x27;t need to.
                         </p>
                         <p>
                           One possible solution to this is to change how
-                          <code class="language-js >useSelector</code> compares its values to see if
-                          they&#x27;ve changed. <code class="language-js >useSelector</code> can
-                          take a comparison function as its second argument. A
+                          <code class="language-js">useSelector</code> compares
+                          its values to see if they&#x27;ve changed.
+                          <code class="language-js">useSelector</code> can take
+                          a comparison function as its second argument. A
                           comparison function is called with the old and new
-                          values, and returns <code class="language-js >true</code> if they&#x27;re
+                          values, and returns
+                          <code class="language-js">true</code> if they&#x27;re
                           considered the same. If they&#x27;re the same,
-                          <code class="language-js >useSelector</code> won&#x27;t make the component
-                          re-render.
+                          <code class="language-js">useSelector</code>
+                          won&#x27;t make the component re-render.
                         </p>
                         <p>
-                          React-Redux has a <code class="language-js >shallowEqual</code> comparison
-                          function we can use to check if the items
+                          React-Redux has a
+                          <code class="language-js">shallowEqual</code>
+                          comparison function we can use to check if the items
                           <em>inside</em> the array are still the same.
                           Let&#x27;s try that:
                         </p>
@@ -7781,12 +7881,12 @@
                         <p>
                           Now, if we toggle a todo item, the list of IDs will be
                           considered the same, and
-                          <code class="language-js >&lt;TodoList&gt;</code> won&#x27;t have to
-                          re-render. The one
-                          <code class="language-js >&lt;TodoListItem&gt;</code> will get an updated
-                          todo object and re-render, but all the rest of them
-                          will still have the existing todo object and not have
-                          to re-render at all.
+                          <code class="language-js">&lt;TodoList&gt;</code>
+                          won&#x27;t have to re-render. The one
+                          <code class="language-js">&lt;TodoListItem&gt;</code>
+                          will get an updated todo object and re-render, but all
+                          the rest of them will still have the existing todo
+                          object and not have to re-render at all.
                         </p>
                         <p>
                           As mentioned earlier, you can also use a specialized
@@ -7814,10 +7914,11 @@
                         <p>
                           We now have a working todo app! Our app creates a
                           store, passes the store to the React UI layer using
-                          <code class="language-js >&lt;Provider&gt;</code>, and then calls
-                          <code class="language-js >useSelector</code> and
-                          <code class="language-js >useDispatch</code> to talk to the store in our
-                          React components.
+                          <code class="language-js">&lt;Provider&gt;</code>, and
+                          then calls
+                          <code class="language-js">useSelector</code> and
+                          <code class="language-js">useDispatch</code> to talk
+                          to the store in our React components.
                         </p>
                         <div
                           class="admonition admonition-info alert alert--info"
@@ -7846,17 +7947,23 @@
                             </p>
                             <ul>
                               <li>
-                                In <code class="language-js >&lt;TodoListItem&gt;</code> component,
-                                use the <code class="language-js >useDispatch</code> hook to
-                                dispatch actions to for changing the color
-                                category and deleting the todo
+                                In
+                                <code class="language-js"
+                                  >&lt;TodoListItem&gt;</code
+                                >
+                                component, use the
+                                <code class="language-js">useDispatch</code>
+                                hook to dispatch actions to for changing the
+                                color category and deleting the todo
                               </li>
                               <li>
-                                In <code class="language-js >&lt;Footer&gt;</code>, use the
-                                <code class="language-js >useDispatch</code> hook to dispatch
-                                actions for marking all todos as completed,
-                                clearing completed todos, and changing the
-                                filter values.
+                                In
+                                <code class="language-js">&lt;Footer&gt;</code>,
+                                use the
+                                <code class="language-js">useDispatch</code>
+                                hook to dispatch actions for marking all todos
+                                as completed, clearing completed todos, and
+                                changing the filter values.
                               </li>
                             </ul>
                             <p>
@@ -7920,67 +8027,85 @@
                                 <ul>
                                   <li>
                                     React-Redux is installed as a separate
-                                    <code class="language-js >react-redux</code> package
+                                    <code class="language-js">react-redux</code>
+                                    package
                                   </li>
                                 </ul>
                               </li>
                               <li>
                                 <strong
-                                  >The <code class="language-js >useSelector</code> hook lets React
-                                  components read data from the store</strong
-                                >
-                                <ul>
-                                  <li>
-                                    Selector functions take the entire store
-                                    <code class="language-js >state</code> as an argument, and
-                                    return a value based on that state
-                                  </li>
-                                  <li>
-                                    <code class="language-js >useSelector</code> calls its selector
-                                    function and returns the result from the
-                                    selector
-                                  </li>
-                                  <li>
-                                    <code class="language-js >useSelector</code> subscribes to the
-                                    store, and re-runs the selector each time an
-                                    action is dispatched.
-                                  </li>
-                                  <li>
-                                    Whenever the selector result changes,
-                                    <code class="language-js >useSelector</code> forces the
-                                    component to re-render with the new data
-                                  </li>
-                                </ul>
-                              </li>
-                              <li>
-                                <strong
-                                  >The <code class="language-js >useDispatch</code> hook lets React
-                                  components dispatch actions to the
+                                  >The
+                                  <code class="language-js">useSelector</code>
+                                  hook lets React components read data from the
                                   store</strong
                                 >
                                 <ul>
                                   <li>
-                                    <code class="language-js >useDispatch</code> returns the actual
-                                    <code class="language-js >store.dispatch</code> function
+                                    Selector functions take the entire store
+                                    <code class="language-js">state</code> as an
+                                    argument, and return a value based on that
+                                    state
                                   </li>
                                   <li>
-                                    You can call
-                                    <code class="language-js >dispatch(action)</code> as needed
-                                    inside your components
+                                    <code class="language-js">useSelector</code>
+                                    calls its selector function and returns the
+                                    result from the selector
+                                  </li>
+                                  <li>
+                                    <code class="language-js">useSelector</code>
+                                    subscribes to the store, and re-runs the
+                                    selector each time an action is dispatched.
+                                  </li>
+                                  <li>
+                                    Whenever the selector result changes,
+                                    <code class="language-js">useSelector</code>
+                                    forces the component to re-render with the
+                                    new data
                                   </li>
                                 </ul>
                               </li>
                               <li>
                                 <strong
-                                  >The <code class="language-js >&lt;Provider&gt;</code> component
-                                  makes the store available to other React
-                                  components</strong
+                                  >The
+                                  <code class="language-js">useDispatch</code>
+                                  hook lets React components dispatch actions to
+                                  the store</strong
+                                >
+                                <ul>
+                                  <li>
+                                    <code class="language-js">useDispatch</code>
+                                    returns the actual
+                                    <code class="language-js"
+                                      >store.dispatch</code
+                                    >
+                                    function
+                                  </li>
+                                  <li>
+                                    You can call
+                                    <code class="language-js"
+                                      >dispatch(action)</code
+                                    >
+                                    as needed inside your components
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong
+                                  >The
+                                  <code class="language-js"
+                                    >&lt;Provider&gt;</code
+                                  >
+                                  component makes the store available to other
+                                  React components</strong
                                 >
                                 <ul>
                                   <li>
                                     Render
-                                    <code class="language-js >&lt;Provider store={store}&gt;</code>
-                                    around your entire <code class="language-js >&lt;App&gt;</code>
+                                    <code class="language-js"
+                                      >&lt;Provider store={store}&gt;</code
+                                    >
+                                    around your entire
+                                    <code class="language-js">&lt;App&gt;</code>
                                   </li>
                                 </ul>
                               </li>
@@ -8092,7 +8217,7 @@
                               href="#reading-state-from-the-store-with-useselector"
                               class="table-of-contents__link"
                               >Reading State from the Store with
-                              <code class="language-js >useSelector</code></a
+                              <code class="language-js">useSelector</code></a
                             >
                           </li>
                           <li>
@@ -8100,14 +8225,15 @@
                               href="#dispatching-actions-with-usedispatch"
                               class="table-of-contents__link"
                               >Dispatching Actions with
-                              <code class="language-js >useDispatch</code></a
+                              <code class="language-js">useDispatch</code></a
                             >
                           </li>
                           <li>
                             <a
                               href="#passing-the-store-with-provider"
                               class="table-of-contents__link"
-                              >Passing the Store with <code class="language-js >Provider</code></a
+                              >Passing the Store with
+                              <code class="language-js">Provider</code></a
                             >
                           </li>
                         </ul>

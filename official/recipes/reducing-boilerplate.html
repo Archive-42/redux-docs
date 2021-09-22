@@ -100,10 +100,17 @@
       as="script"
     />
     <link rel="preload" href="../assets/js/main.8520a084.js" as="script" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css"
+    />
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
-    </head>
+    <script
+      async
+      defer
+      src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"
+    ></script>
+  </head>
   <body>
     <script>
       !(function () {
@@ -1405,7 +1412,8 @@
                           </li>
                           <li>
                             If you make a typo when importing an action
-                            constant, you will get <code class="language-js >undefined</code>. Redux
+                            constant, you will get
+                            <code class="language-js">undefined</code>. Redux
                             will immediately throw when dispatching such an
                             action, and you&#x27;ll find the mistake sooner.
                           </li>
@@ -1439,7 +1447,8 @@
                         </p>
                         <p>
                           For example, instead of calling
-                          <code class="language-js >dispatch</code> with an object literal:
+                          <code class="language-js">dispatch</code> with an
+                          object literal:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -1546,7 +1555,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="actioncreatorsjs"
                           ></a
-                          ><code class="language-js >actionCreators.js</code
+                          ><code class="language-js">actionCreators.js</code
                           ><a
                             class="hash-link"
                             href="#actioncreatorsjs"
@@ -1670,7 +1679,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="addtodojs"
                           ></a
-                          ><code class="language-js >AddTodo.js</code
+                          ><code class="language-js">AddTodo.js</code
                           ><a
                             class="hash-link"
                             href="#addtodojs"
@@ -2124,7 +2133,8 @@
                           </div>
                         </div>
                         <p>
-                          We just modified how the <code class="language-js >addTodo</code> action
+                          We just modified how the
+                          <code class="language-js">addTodo</code> action
                           creator behaves, completely invisible to the calling
                           code.
                           <strong
@@ -2163,13 +2173,13 @@
                           generate action type constants automatically from the
                           action creator function definitions. The idea is that
                           you don&#x27;t need to both define
-                          <code class="language-js >ADD_TODO</code> constant and
-                          <code class="language-js >addTodo()</code> action creator. Under the hood,
-                          such solutions still generate action type constants,
-                          but they&#x27;re created implicitly so it&#x27;s a
-                          level of indirection and can cause confusion. We
-                          recommend creating your action type constants
-                          explicitly.
+                          <code class="language-js">ADD_TODO</code> constant and
+                          <code class="language-js">addTodo()</code> action
+                          creator. Under the hood, such solutions still generate
+                          action type constants, but they&#x27;re created
+                          implicitly so it&#x27;s a level of indirection and can
+                          cause confusion. We recommend creating your action
+                          type constants explicitly.
                         </p>
                         <p>
                           Writing simple action creators can be tiresome and
@@ -2989,7 +2999,7 @@
                         <p>
                           Without any middleware,
                           <a href="../api/store.html#dispatchaction"
-                            ><code class="language-js >dispatch</code></a
+                            ><code class="language-js">dispatch</code></a
                           >
                           only accepts a plain object, so we have to perform
                           AJAX calls inside our components:
@@ -3001,7 +3011,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="actioncreatorsjs-1"
                           ></a
-                          ><code class="language-js >actionCreators.js</code
+                          ><code class="language-js">actionCreators.js</code
                           ><a
                             class="hash-link"
                             href="#actioncreatorsjs-1"
@@ -3327,7 +3337,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="userinfojs"
                           ></a
-                          ><code class="language-js >UserInfo.js</code
+                          ><code class="language-js">UserInfo.js</code
                           ><a
                             class="hash-link"
                             href="#userinfojs"
@@ -4551,8 +4561,9 @@
                             functions.</strong
                           >
                           This inverts the control: you will get
-                          <code class="language-js >dispatch</code> as an argument, so you can write
-                          an action creator that dispatches many times.
+                          <code class="language-js">dispatch</code> as an
+                          argument, so you can write an action creator that
+                          dispatches many times.
                         </p>
                         <blockquote>
                           <h5>
@@ -4595,7 +4606,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="actioncreatorsjs-2"
                           ></a
-                          ><code class="language-js >actionCreators.js</code
+                          ><code class="language-js">actionCreators.js</code
                           ><a
                             class="hash-link"
                             href="#actioncreatorsjs-2"
@@ -5114,7 +5125,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="userinfojs-1"
                           ></a
-                          ><code class="language-js >UserInfo.js</code
+                          ><code class="language-js">UserInfo.js</code
                           ><a
                             class="hash-link"
                             href="#userinfojs-1"
@@ -5928,8 +5939,9 @@
                         <p>
                           This is much less typing! If you&#x27;d like, you can
                           still have “vanilla” action creators like
-                          <code class="language-js >loadPostsSuccess</code> which you&#x27;d use
-                          from a container <code class="language-js >loadPosts</code> action
+                          <code class="language-js">loadPostsSuccess</code>
+                          which you&#x27;d use from a container
+                          <code class="language-js">loadPosts</code> action
                           creator.
                         </p>
                         <p>
@@ -7260,7 +7272,9 @@
                         <p>
                           After passing it once to
                           <a href="../api/applymiddleware.html"
-                            ><code class="language-js >applyMiddleware(...middlewares)</code></a
+                            ><code class="language-js"
+                              >applyMiddleware(...middlewares)</code
+                            ></a
                           >, you can write all your API-calling action creators
                           the same way:
                         </p>
@@ -8873,19 +8887,21 @@
                           </div>
                         </div>
                         <p>
-                          The <code class="language-js >switch</code> statement is <em>not</em> the
-                          real boilerplate. The real boilerplate of Flux is
-                          conceptual: the need to emit an update, the need to
-                          register the Store with a Dispatcher, the need for the
-                          Store to be an object (and the complications that
-                          arise when you want a universal app).
+                          The <code class="language-js">switch</code> statement
+                          is <em>not</em> the real boilerplate. The real
+                          boilerplate of Flux is conceptual: the need to emit an
+                          update, the need to register the Store with a
+                          Dispatcher, the need for the Store to be an object
+                          (and the complications that arise when you want a
+                          universal app).
                         </p>
                         <p>
                           It&#x27;s unfortunate that many still choose Flux
                           framework based on whether it uses
-                          <code class="language-js >switch</code> statements in the documentation.
-                          If you don&#x27;t like <code class="language-js >switch</code>, you can
-                          solve this with a single function, as we show below.
+                          <code class="language-js">switch</code> statements in
+                          the documentation. If you don&#x27;t like
+                          <code class="language-js">switch</code>, you can solve
+                          this with a single function, as we show below.
                         </p>
                         <h3>
                           <a
@@ -8905,7 +8921,8 @@
                           Let&#x27;s write a function that lets us express
                           reducers as an object mapping from action types to
                           handlers. For example, if we want our
-                          <code class="language-js >todos</code> reducers to be defined like this:
+                          <code class="language-js">todos</code> reducers to be
+                          defined like this:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -9377,8 +9394,9 @@
                         </p>
                         <p>
                           The Redux reducer API is
-                          <code class="language-js >(state, action) =&gt; newState</code>, but how
-                          you create those reducers is up to you.
+                          <code class="language-js"
+                            >(state, action) =&gt; newState</code
+                          >, but how you create those reducers is up to you.
                         </p>
                       </div>
                     </article>

@@ -105,10 +105,17 @@
       as="script"
     />
     <link rel="preload" href="../../assets/js/main.8520a084.js" as="script" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css"
+    />
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
-    </head>
+    <script
+      async
+      defer
+      src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"
+    ></script>
+  </head>
   <body>
     <script>
       !(function () {
@@ -1117,8 +1124,8 @@
                           into the existing state. In this case, we can use deep
                           recursive merge, not just a shallow copy, to allow for
                           actions with partial items to update stored items. The
-                          Lodash <code class="language-js >merge</code> function can handle this for
-                          us:
+                          Lodash <code class="language-js">merge</code> function
+                          can handle this for us:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -2968,14 +2975,16 @@
                           The example is a bit long, because it&#x27;s showing
                           how all the different slice reducers and case reducers
                           fit together. Note the delegation involved here. The
-                          <code class="language-js >postsById</code> slice reducer delegates the
-                          work for this case to <code class="language-js >addComment</code>, which
+                          <code class="language-js">postsById</code> slice
+                          reducer delegates the work for this case to
+                          <code class="language-js">addComment</code>, which
                           inserts the new Comment&#x27;s ID into the correct
                           Post item. Meanwhile, both the
-                          <code class="language-js >commentsById</code> and
-                          <code class="language-js >allComments</code> slice reducers have their own
-                          case reducers, which update the Comments lookup table
-                          and list of all Comment IDs appropriately.
+                          <code class="language-js">commentsById</code> and
+                          <code class="language-js">allComments</code> slice
+                          reducers have their own case reducers, which update
+                          the Comments lookup table and list of all Comment IDs
+                          appropriately.
                         </p>
                         <h2>
                           <a
@@ -3944,11 +3953,13 @@
                         <p>
                           This approach makes it very clear what&#x27;s
                           happening for the
-                          <code class="language-js >&quot;ADD_COMMENTS&quot;</code> case, but it
-                          does require nested updating logic, and some specific
-                          knowledge of the state tree shape. Depending on how
-                          you want to compose your reducer logic, this may or
-                          may not be desired.
+                          <code class="language-js"
+                            >&quot;ADD_COMMENTS&quot;</code
+                          >
+                          case, but it does require nested updating logic, and
+                          some specific knowledge of the state tree shape.
+                          Depending on how you want to compose your reducer
+                          logic, this may or may not be desired.
                         </p>
                         <h3>
                           <a

@@ -1,13 +1,6 @@
 <a href="../index.html" class="navbar__brand"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
 
 <a href="../introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../faq.html" class="navbar__item navbar__link">FAQ</a><a href="../style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="../index.html" class="navbar__brand"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
 
 - <a href="../introduction/getting-started.html" class="menu__link">Getting Started</a>
@@ -142,7 +135,7 @@ Since those are types, it's safe to export them directly from your store setup f
 
 app/store.ts
 
-<span class="token keyword" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> configureStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
+<span class="token keyword" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > configureStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// ...</span><span class="token plain"></span>
 
@@ -170,11 +163,7 @@ app/store.ts
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">type</span><span class="token plain"> </span><span class="token class-name maybe-class-name">AppDispatch</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">typeof</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">dispatch</span>
-
-Copy
-
-### <span id="define-typed-hooks" class="anchor enhancedAnchor_2LWZ"></span>Define Typed Hooks<a href="#define-typed-hooks" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">type</span><span class="token plain"> </span><span class="token class-name maybe-class-name">AppDispatch</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">typeof</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">dispatch</span>### <span id="define-typed-hooks" class="anchor enhancedAnchor_2LWZ"></span>Define Typed Hooks<a href="#define-typed-hooks" class="hash-link" title="Direct link to heading">#</a>
 
 While it's possible to import the `RootState` and `AppDispatch` types into each component, it's **better to create typed versions of the `useDispatch` and `useSelector` hooks for usage in your application**. . This is important for a couple reasons:
 
@@ -185,7 +174,7 @@ Since these are actual variables, not types, it's important to define them in a 
 
 app/hooks.ts
 
-<span class="token keyword" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> </span><span class="token imports maybe-class-name">TypedUseSelectorHook</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> useDispatch</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> useSelector </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-redux'</span><span class="token plain"></span>
+<span class="token keyword" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > </span><span class="token imports maybe-class-name">TypedUseSelectorHook</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > useDispatch</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > useSelector </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-redux'</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token keyword" style="color: #f92672">import</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">type</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> </span><span class="token maybe-class-name">RootState</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token maybe-class-name">AppDispatch</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./store'</span><span class="token plain"></span>
 
@@ -195,11 +184,7 @@ app/hooks.ts
 
 <span class="token plain"></span><span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">useAppDispatch</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token generic-function function" style="color: #e6d874">useDispatch</span><span class="token generic-function generic class-name operator" style="color: #f8f8f2">&lt;</span><span class="token generic-function generic class-name maybe-class-name">AppDispatch</span><span class="token generic-function generic class-name operator" style="color: #f8f8f2">&gt;</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> useAppSelector</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token maybe-class-name">TypedUseSelectorHook</span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token maybe-class-name">RootState</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> useSelector</span>
-
-Copy
-
-## <span id="application-usage" class="anchor enhancedAnchor_2LWZ"></span>Application Usage<a href="#application-usage" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> useAppSelector</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token maybe-class-name">TypedUseSelectorHook</span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token maybe-class-name">RootState</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> useSelector</span>## <span id="application-usage" class="anchor enhancedAnchor_2LWZ"></span>Application Usage<a href="#application-usage" class="hash-link" title="Direct link to heading">#</a>
 
 ### <span id="define-slice-state-and-action-types" class="anchor enhancedAnchor_2LWZ"></span>Define Slice State and Action Types<a href="#define-slice-state-and-action-types" class="hash-link" title="Direct link to heading">#</a>
 
@@ -211,7 +196,7 @@ You can safely import the `RootState` type from the store file here. It's a circ
 
 features/counter/counterSlice.ts
 
-<span class="token keyword" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createSlice</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> </span><span class="token imports maybe-class-name">PayloadAction</span><span class="token imports"> </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
+<span class="token keyword" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > createSlice</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span > </span><span class="token imports maybe-class-name">PayloadAction</span><span > </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token keyword" style="color: #f92672">import</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">type</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> </span><span class="token maybe-class-name">RootState</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../../app/store'</span><span class="token plain"></span>
 
@@ -283,11 +268,7 @@ features/counter/counterSlice.ts
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">default</span><span class="token plain"> counterSlice</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">reducer</span>
-
-Copy
-
-The generated action creators will be correctly typed to accept a `payload` argument based on the `PayloadAction<T>` type you provided for the reducer. For example, `incrementByAmount` requires a `number` as its argument.
+<span class="token plain"></span><span class="token keyword" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">default</span><span class="token plain"> counterSlice</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">reducer</span>The generated action creators will be correctly typed to accept a `payload` argument based on the `PayloadAction<T>` type you provided for the reducer. For example, `incrementByAmount` requires a `number` as its argument.
 
 In some cases, [TypeScript may unnecessarily tighten the type of the initial state](../../github.com/reduxjs/redux-toolkit/pull/827.html). If that happens, you can work around it by casting the initial state using `as`, instead of declaring the type of the variable:
 
@@ -297,11 +278,7 @@ In some cases, [TypeScript may unnecessarily tighten the type of the initial sta
 
 <span class="token plain"> value</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">0</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">as</span><span class="token plain"> </span><span class="token maybe-class-name">CounterState</span>
-
-Copy
-
-### <span id="use-typed-hooks-in-components" class="anchor enhancedAnchor_2LWZ"></span>Use Typed Hooks in Components<a href="#use-typed-hooks-in-components" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">as</span><span class="token plain"> </span><span class="token maybe-class-name">CounterState</span>### <span id="use-typed-hooks-in-components" class="anchor enhancedAnchor_2LWZ"></span>Use Typed Hooks in Components<a href="#use-typed-hooks-in-components" class="hash-link" title="Direct link to heading">#</a>
 
 In component files, import the pre-typed hooks instead of the standard hooks from React-Redux.
 
@@ -331,17 +308,11 @@ features/counter/Counter.tsx
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// omit rendering logic</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-## <span id="whats-next" class="anchor enhancedAnchor_2LWZ"></span>What's Next?<a href="#whats-next" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>## <span id="whats-next" class="anchor enhancedAnchor_2LWZ"></span>What's Next?<a href="#whats-next" class="hash-link" title="Direct link to heading">#</a>
 
 See [the "Usage with TypeScript" page](../recipes/usage-with-typescript.html) for extended details on how to use Redux Toolkit's APIs with TypeScript.
 
 <a href="quick-start.html" class="pagination-nav__link"></a>
-
-Previous
 
 « Quick Start
 
@@ -380,4 +351,4 @@ Redux Essentials, Part 1: Redux Overview and Concepts »
 
 <a href="../index.html" class="footerLogoLink_MyFc"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" /><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
 
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

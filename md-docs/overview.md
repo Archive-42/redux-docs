@@ -1,13 +1,6 @@
 <a href="https://redux.js.org/" class="navbar__brand"><img src="https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
 
 <a href="https://redux.js.org/introduction/getting-started" class="navbar__item navbar__link">Getting Started</a><a href="https://redux.js.org/tutorials/essentials/part-1-overview-concepts" class="navbar__item navbar__link">Tutorial</a><a href="https://redux.js.org/api/api-reference" class="navbar__item navbar__link">API</a><a href="https://redux.js.org/faq" class="navbar__item navbar__link">FAQ</a><a href="https://redux.js.org/style-guide/style-guide" class="navbar__item navbar__link">Best Practices</a><a href="https://www.github.com/reduxjs/redux" class="navbar__item navbar__link">GitHub</a><a href="https://redux.js.org/introduction/getting-started#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="https://redux.js.org/" class="navbar__brand"><img src="https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
 
 - <a href="https://redux.js.org/introduction/getting-started" class="menu__link">Getting Started</a>
@@ -124,11 +117,7 @@ Redux Toolkit is available as a package on NPM for use with a module bundler or 
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">\# Yarn</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token function" style="color: #e6d874">yarn</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">add</span><span class="token plain"> @reduxjs/toolkit</span>
-
-Copy
-
-## <span id="purpose" class="anchor enhancedAnchor_2LWZ"></span>Purpose<a href="#purpose" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token function" style="color: #e6d874">yarn</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">add</span><span class="token plain"> @reduxjs/toolkit</span>## <span id="purpose" class="anchor enhancedAnchor_2LWZ"></span>Purpose<a href="#purpose" class="hash-link" title="Direct link to heading">#</a>
 
 The Redux core library is deliberately unopinionated. It lets you decide how you want to handle everything, like store setup, what your state contains, and how you want to build your reducers.
 
@@ -185,8 +174,6 @@ The complete Redux Toolkit documentation is available at **[https://redux-toolki
 
 <a href="https://redux.js.org/api/compose" class="pagination-nav__link"></a>
 
-Previous
-
 « compose
 
 - <a href="#what-is-redux-toolkit" class="table-of-contents__link">What is Redux Toolkit?</a>
@@ -217,4 +204,4 @@ Previous
 
 <a href="https://redux.js.org/" class="footerLogoLink_MyFc"><img src="https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" /><img src="https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
 
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

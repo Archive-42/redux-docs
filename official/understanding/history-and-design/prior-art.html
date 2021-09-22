@@ -101,10 +101,17 @@
       as="script"
     />
     <link rel="preload" href="../../assets/js/main.8520a084.js" as="script" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css"
+    />
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
-    </head>
+    <script
+      async
+      defer
+      src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"
+    ></script>
+  </head>
   <body>
     <script>
       !(function () {
@@ -1116,7 +1123,9 @@
                             target="_blank"
                             rel="noopener noreferrer"
                             >described as
-                            <code class="language-js >(state, action) =&gt; state</code></a
+                            <code class="language-js"
+                              >(state, action) =&gt; state</code
+                            ></a
                           >. In this sense, Redux is true to the Flux
                           architecture, but makes it simpler thanks to pure
                           functions.
@@ -1217,15 +1226,17 @@
                             rel="noopener noreferrer"
                             >a “model view update” architecture</a
                           >, where the update has the following signature:
-                          <code class="language-js >(action, state) =&gt; state</code>. Elm
-                          “updaters” serve the same purpose as reducers in
-                          Redux.
+                          <code class="language-js"
+                            >(action, state) =&gt; state</code
+                          >. Elm “updaters” serve the same purpose as reducers
+                          in Redux.
                         </p>
                         <p>
                           Unlike Redux, Elm is a language, so it is able to
                           benefit from many things like enforced purity, static
                           typing, out of the box immutability, and pattern
-                          matching (using the <code class="language-js >case</code> expression).
+                          matching (using the
+                          <code class="language-js">case</code> expression).
                           Even if you don&#x27;t plan to use Elm, you should
                           read about the Elm architecture, and play with it.
                           There is an interesting
@@ -1656,7 +1667,7 @@
                         <p>
                           Similarly, you can compose different asynchronous
                           streams to turn them into actions before feeding them
-                          to <code class="language-js >store.dispatch()</code>.
+                          to <code class="language-js">store.dispatch()</code>.
                         </p>
                         <p>
                           The question is: do you really need Redux if you
@@ -1667,7 +1678,8 @@
                             rel="noopener noreferrer"
                             >re-implement Redux in Rx</a
                           >. Some say it&#x27;s a two-liner using Rx
-                          <code class="language-js >.scan()</code> method. It may very well be!
+                          <code class="language-js">.scan()</code> method. It
+                          may very well be!
                         </p>
                         <p>
                           If you&#x27;re in doubt, check out the Redux source

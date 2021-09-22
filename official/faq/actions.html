@@ -97,10 +97,17 @@
       as="script"
     />
     <link rel="preload" href="../assets/js/main.8520a084.js" as="script" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css"
+    />
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
-    </head>
+    <script
+      async
+      defer
+      src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"
+    ></script>
+  </head>
   <body>
     <script>
       !(function () {
@@ -1087,9 +1094,10 @@
                                   <li>
                                     <a
                                       href="#why-should-type-be-a-string-or-at-least-serializable-why-should-my-action-types-be-constants"
-                                      >Why should <code class="language-js >type</code> be a string,
-                                      or at least serializable? Why should my
-                                      action types be constants?</a
+                                      >Why should
+                                      <code class="language-js">type</code> be a
+                                      string, or at least serializable? Why
+                                      should my action types be constants?</a
                                     >
                                     <ul>
                                       <li>
@@ -1177,9 +1185,9 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="why-should-type-be-a-string-or-at-least-serializable-why-should-my-action-types-be-constants"
                           ></a
-                          >Why should <code class="language-js >type</code> be a string, or at least
-                          serializable? Why should my action types be
-                          constants?<a
+                          >Why should <code class="language-js">type</code> be a
+                          string, or at least serializable? Why should my action
+                          types be constants?<a
                             class="hash-link"
                             href="#why-should-type-be-a-string-or-at-least-serializable-why-should-my-action-types-be-constants"
                             title="Direct link to heading"
@@ -1190,39 +1198,44 @@
                           As with state, serializable actions enable several of
                           Redux&#x27;s defining features, such as time travel
                           debugging, and recording and replaying actions. Using
-                          something like a <code class="language-js >Symbol</code> for the
-                          <code class="language-js >type</code> value or using
-                          <code class="language-js >instanceof</code> checks for actions themselves
-                          would break that. Strings are serializable and easily
-                          self-descriptive, and so are a better choice. Note
-                          that it <em>is</em> okay to use Symbols, Promises, or
-                          other non-serializable values in an action if the
-                          action is intended for use by middleware. Actions only
-                          need to be serializable by the time they actually
-                          reach the store and are passed to the reducers.
+                          something like a
+                          <code class="language-js">Symbol</code> for the
+                          <code class="language-js">type</code> value or using
+                          <code class="language-js">instanceof</code> checks for
+                          actions themselves would break that. Strings are
+                          serializable and easily self-descriptive, and so are a
+                          better choice. Note that it <em>is</em> okay to use
+                          Symbols, Promises, or other non-serializable values in
+                          an action if the action is intended for use by
+                          middleware. Actions only need to be serializable by
+                          the time they actually reach the store and are passed
+                          to the reducers.
                         </p>
                         <p>
                           We can&#x27;t reliably enforce serializable actions
                           for performance reasons, so Redux only checks that
                           every action is a plain object, and that the
-                          <code class="language-js >type</code> is defined. The rest is up to you,
-                          but you might find that keeping everything
-                          serializable helps debug and reproduce issues.
+                          <code class="language-js">type</code> is defined. The
+                          rest is up to you, but you might find that keeping
+                          everything serializable helps debug and reproduce
+                          issues.
                         </p>
                         <p>
                           Encapsulating and centralizing commonly used pieces of
                           code is a key concept in programming. While it is
                           certainly possible to manually create action objects
-                          everywhere, and write each <code class="language-js >type</code> value by
-                          hand, defining reusable constants makes maintaining
-                          code easier. If you put constants in a separate file,
-                          you can
+                          everywhere, and write each
+                          <code class="language-js">type</code> value by hand,
+                          defining reusable constants makes maintaining code
+                          easier. If you put constants in a separate file, you
+                          can
                           <a
                             href="../../www.npmjs.com/package/eslint-plugin-import.html"
                             target="_blank"
                             rel="noopener noreferrer"
-                            >check your <code class="language-js >import</code> statements against
-                            typos</a
+                            >check your
+                            <code class="language-js">import</code> statements
+                            against typos</a
                           >
                           so you can&#x27;t accidentally use the wrong string.
                         </p>
@@ -1439,10 +1452,11 @@
                           of the box, has no place for side effects to be
                           executed. In particular, reducer functions
                           <em>must</em> always be pure functions of
-                          <code class="language-js >(state, action) =&gt; newState</code>. However,
-                          Redux&#x27;s middleware makes it possible to intercept
-                          dispatched actions and add additional complex behavior
-                          around them, including side effects.
+                          <code class="language-js"
+                            >(state, action) =&gt; newState</code
+                          >. However, Redux&#x27;s middleware makes it possible
+                          to intercept dispatched actions and add additional
+                          complex behavior around them, including side effects.
                         </p>
                         <p>
                           In general, Redux suggests that code with side effects
@@ -1706,19 +1720,21 @@
                             href="../../github.com/reduxjs/redux-thunk.html"
                             target="_blank"
                             rel="noopener noreferrer"
-                            ><code class="language-js >redux-thunk</code></a
+                            ><code class="language-js">redux-thunk</code></a
                           >,
                           <a
                             href="../../github.com/redux-saga/redux-saga.html"
                             target="_blank"
                             rel="noopener noreferrer"
-                            ><code class="language-js >redux-saga</code></a
+                            ><code class="language-js">redux-saga</code></a
                           >, and
                           <a
                             href="../../github.com/redux-observable/redux-observable.html"
                             target="_blank"
                             rel="noopener noreferrer"
-                            ><code class="language-js >redux-observable</code></a
+                            ><code class="language-js"
+                              >redux-observable</code
+                            ></a
                           >. These are different tools, with different
                           strengths, weaknesses, and use cases.
                         </p>
@@ -1729,9 +1745,9 @@
                             (especially code that needs access to the entire
                             Redux store state), and simple async logic (like
                             basic AJAX calls). With the use of
-                            <code class="language-js >async/await</code>, it can be reasonable to
-                            use thunks for some more complex promise-based logic
-                            as well.
+                            <code class="language-js">async/await</code>, it can
+                            be reasonable to use thunks for some more complex
+                            promise-based logic as well.
                           </li>
                           <li>
                             Sagas are best for complex async logic and decoupled
@@ -1740,8 +1756,8 @@
                             actions (which is something that can&#x27;t be done
                             with thunks). They require familiarity with ES6
                             generator functions and
-                            <code class="language-js >redux-saga</code>&#x27;s &quot;effects&quot;
-                            operators.
+                            <code class="language-js">redux-saga</code>&#x27;s
+                            &quot;effects&quot; operators.
                           </li>
                           <li>
                             Observables solve the same problems as sagas, but
@@ -2025,9 +2041,10 @@
                             <a
                               href="#why-should-type-be-a-string-or-at-least-serializable-why-should-my-action-types-be-constants"
                               class="table-of-contents__link"
-                              >Why should <code class="language-js >type</code> be a string, or at
-                              least serializable? Why should my action types be
-                              constants?</a
+                              >Why should
+                              <code class="language-js">type</code> be a string,
+                              or at least serializable? Why should my action
+                              types be constants?</a
                             >
                           </li>
                           <li>

@@ -1,13 +1,6 @@
 <a href="../index.html" class="navbar__brand"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
 
 <a href="../introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="../tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../faq.html" class="navbar__item navbar__link">FAQ</a><a href="../style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="../index.html" class="navbar__brand"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><strong>Redux</strong></a>
 
 - <a href="../introduction/getting-started.html" class="menu__link">Getting Started</a>
@@ -141,11 +134,7 @@ For example, the state shape of a counter app might look like this:
 
 <span class="token plain"> counter</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">10</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-If we wanted to implement Undo and Redo in such an app, we'd need to store more state so we can answer the following questions:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>If we wanted to implement Undo and Redo in such an app, we'd need to store more state so we can answer the following questions:
 
 - Is there anything left to undo or redo?
 - What is the current state?
@@ -165,11 +154,7 @@ It is reasonable to suggest that our state shape should change to answer these q
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Now, if user presses “Undo”, we want it to change to move into the past:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Now, if user presses “Undo”, we want it to change to move into the past:
 
 <span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
@@ -183,11 +168,7 @@ Now, if user presses “Undo”, we want it to change to move into the past:
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-And further yet:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>And further yet:
 
 <span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
@@ -201,11 +182,7 @@ And further yet:
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-When the user presses “Redo”, we want to move one step back into the future:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>When the user presses “Redo”, we want to move one step back into the future:
 
 <span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
@@ -219,11 +196,7 @@ When the user presses “Redo”, we want to move one step back into the future:
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Finally, if the user performs an action (e.g. decrement the counter) while we're in the middle of the undo stack, we're going to discard the existing future:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Finally, if the user performs an action (e.g. decrement the counter) while we're in the middle of the undo stack, we're going to discard the existing future:
 
 <span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
@@ -237,11 +210,7 @@ Finally, if the user performs an action (e.g. decrement the counter) while we're
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-The interesting part here is that it does not matter whether we want to keep an undo stack of numbers, strings, arrays, or objects. The structure will always be the same:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>The interesting part here is that it does not matter whether we want to keep an undo stack of numbers, strings, arrays, or objects. The structure will always be the same:
 
 <span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
@@ -255,11 +224,7 @@ The interesting part here is that it does not matter whether we want to keep an 
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-<span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
 <span class="token plain"> todos</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
@@ -295,11 +260,7 @@ Copy
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-In general, it looks like this:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>In general, it looks like this:
 
 <span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
@@ -309,11 +270,7 @@ In general, it looks like this:
 
 <span class="token plain"> future</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token known-class-name class-name">Array</span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token constant" style="color: #f92672">T</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-It is also up to us whether to keep a single top-level history:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>It is also up to us whether to keep a single top-level history:
 
 <span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
@@ -331,11 +288,7 @@ It is also up to us whether to keep a single top-level history:
 
 <span class="token plain"> future</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Or many granular histories so user can undo and redo actions in them independently:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Or many granular histories so user can undo and redo actions in them independently:
 
 <span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
@@ -359,11 +312,7 @@ Or many granular histories so user can undo and redo actions in them independent
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-We will see later how the approach we take lets us choose how granular Undo and Redo need to be.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>We will see later how the approach we take lets us choose how granular Undo and Redo need to be.
 
 ### <span id="designing-the-algorithm" class="anchor enhancedAnchor_2LWZ"></span>Designing the Algorithm<a href="#designing-the-algorithm" class="hash-link" title="Direct link to heading">#</a>
 
@@ -377,11 +326,7 @@ Regardless of the specific data type, the shape of the undo history state is the
 
 <span class="token plain"> future</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token known-class-name class-name">Array</span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token constant" style="color: #f92672">T</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Let's talk through the algorithm to manipulate the state shape described above. We can define two actions to operate on this state: `UNDO` and `REDO`. In our reducer, we will do the following steps to handle these actions:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Let's talk through the algorithm to manipulate the state shape described above. We can define two actions to operate on this state: `UNDO` and `REDO`. In our reducer, we will do the following steps to handle these actions:
 
 #### <span id="handling-undo" class="anchor enhancedAnchor_2LWZ"></span>Handling Undo<a href="#handling-undo" class="hash-link" title="Direct link to heading">#</a>
 
@@ -427,7 +372,7 @@ Let's talk through the algorithm to manipulate the state shape described above. 
 
 <span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> previous </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> past</span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token plain">past</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">length</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">-</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> newPast </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> past</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">slice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token number" style="color: #ae81ff">0</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> past</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">length</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">-</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> newPast </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> past</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">slice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token number" style="color: #ae81ff">0</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> past</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">length</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">-</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
@@ -443,7 +388,7 @@ Let's talk through the algorithm to manipulate the state shape described above. 
 
 <span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> next </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> future</span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token number" style="color: #ae81ff">0</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> newFuture </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> future</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">slice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> newFuture </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> future</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">slice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
@@ -463,11 +408,7 @@ Let's talk through the algorithm to manipulate the state shape described above. 
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-This implementation isn't usable because it leaves out three important questions:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>This implementation isn't usable because it leaves out three important questions:
 
 - Where do we get the initial `present` state from? We don't seem to know it beforehand.
 - Where do we react to the external actions to save the `present` to the `past`?
@@ -493,17 +434,13 @@ A reducer enhancer that doesn't do anything looks like this:
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-A reducer enhancer that combines other reducers might look like this:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>A reducer enhancer that combines other reducers might look like this:
 
 <span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">combineReducers</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">reducers</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state </span><span class="token parameter operator" style="color: #f8f8f2">=</span><span class="token parameter"> </span><span class="token parameter punctuation" style="color: #f8f8f2">{</span><span class="token parameter punctuation" style="color: #f8f8f2">}</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token known-class-name class-name">Object</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">keys</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">reducers</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">reduce</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">nextState</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> key</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token known-class-name class-name">Object</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">keys</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">reducers</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">reduce</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">nextState</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> key</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Call every reducer with the part of the state it manages</span><span class="token plain"></span>
 
@@ -515,11 +452,7 @@ A reducer enhancer that combines other reducers might look like this:
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-### <span id="second-attempt-writing-a-reducer-enhancer" class="anchor enhancedAnchor_2LWZ"></span>Second Attempt: Writing a Reducer Enhancer<a href="#second-attempt-writing-a-reducer-enhancer" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>### <span id="second-attempt-writing-a-reducer-enhancer" class="anchor enhancedAnchor_2LWZ"></span>Second Attempt: Writing a Reducer Enhancer<a href="#second-attempt-writing-a-reducer-enhancer" class="hash-link" title="Direct link to heading">#</a>
 
 Now that we have a better understanding of reducer enhancers, we can see that this is exactly what `undoable` should have been:
 
@@ -553,7 +486,7 @@ Now that we have a better understanding of reducer enhancers, we can see that th
 
 <span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> previous </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> past</span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token plain">past</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">length</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">-</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> newPast </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> past</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">slice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token number" style="color: #ae81ff">0</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> past</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">length</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">-</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> newPast </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> past</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">slice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token number" style="color: #ae81ff">0</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> past</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">length</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">-</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
@@ -569,7 +502,7 @@ Now that we have a better understanding of reducer enhancers, we can see that th
 
 <span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> next </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> future</span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token number" style="color: #ae81ff">0</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> newFuture </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> future</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">slice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> newFuture </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> future</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">slice</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token number" style="color: #ae81ff">1</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
@@ -607,11 +540,7 @@ Now that we have a better understanding of reducer enhancers, we can see that th
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-We can now wrap any reducer into `undoable` reducer enhancer to teach it to react to `UNDO` and `REDO` actions.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>We can now wrap any reducer into `undoable` reducer enhancer to teach it to react to `UNDO` and `REDO` actions.
 
 <span class="token comment" style="color: #c6cad2">// This is a reducer</span><span class="token plain"></span>
 
@@ -629,13 +558,13 @@ We can now wrap any reducer into `undoable` reducer enhancer to teach it to reac
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> store </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createStore</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">undoableTodos</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
 <span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'ADD_TODO'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
 
@@ -645,7 +574,7 @@ We can now wrap any reducer into `undoable` reducer enhancer to teach it to reac
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
 <span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'ADD_TODO'</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
 
@@ -655,15 +584,11 @@ We can now wrap any reducer into `undoable` reducer enhancer to teach it to reac
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
+<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
 <span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'UNDO'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-There is an important gotcha: you need to remember to append `.present` to the current state when you retrieve it. You may also check `.past.length` and `.future.length` to determine whether to enable or to disable the Undo and Redo buttons, respectively.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>There is an important gotcha: you need to remember to append `.present` to the current state when you retrieve it. You may also check `.past.length` and `.future.length` to determine whether to enable or to disable the Undo and Redo buttons, respectively.
 
 You might have heard that Redux was influenced by [Elm Architecture](../../github.com/evancz/elm-architecture-tutorial/index.html). It shouldn't come as a surprise that this example is very similar to [elm-undo-redo package](../../package.elm-lang.org/packages/TheSeamau5/elm-undo-redo/2.0.html).
 
@@ -677,11 +602,7 @@ In this part of the recipe, you will learn how to make a small "todo list" app l
 
 First of all, you need to run
 
-<span class="token plain">npm install redux-undo</span>
-
-Copy
-
-This installs the package that provides the `undoable` reducer enhancer.
+<span class="token plain">npm install redux-undo</span>This installs the package that provides the `undoable` reducer enhancer.
 
 ### <span id="wrapping-the-reducer" class="anchor enhancedAnchor_2LWZ"></span>Wrapping the Reducer<a href="#wrapping-the-reducer" class="hash-link" title="Direct link to heading">#</a>
 
@@ -689,7 +610,7 @@ You will need to wrap the reducer you wish to enhance with `undoable` function. 
 
 #### <span id="reducerstodosjs" class="anchor enhancedAnchor_2LWZ"></span>`reducers/todos.js`<a href="#reducerstodosjs" class="hash-link" title="Direct link to heading">#</a>
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">undoable</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux-undo'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >undoable</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux-undo'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -709,21 +630,17 @@ You will need to wrap the reducer you wish to enhance with `undoable` function. 
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> undoableTodos</span>
-
-Copy
-
-There are [many other options](../../github.com/omnidan/redux-undo.html#configuration) to configure your undoable reducer, like setting the action type for Undo and Redo actions.
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> undoableTodos</span>There are [many other options](../../github.com/omnidan/redux-undo.html#configuration) to configure your undoable reducer, like setting the action type for Undo and Redo actions.
 
 Note that your `combineReducers()` call will stay exactly as it was, but the `todos` reducer will now refer to the reducer enhanced with Redux Undo:
 
 #### <span id="reducersindexjs" class="anchor enhancedAnchor_2LWZ"></span>`reducers/index.js`<a href="#reducersindexjs" class="hash-link" title="Direct link to heading">#</a>
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> combineReducers </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > combineReducers </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">todos</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./todos'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >todos</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./todos'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">visibilityFilter</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./visibilityFilter'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >visibilityFilter</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'./visibilityFilter'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -737,11 +654,7 @@ Note that your `combineReducers()` call will stay exactly as it was, but the `to
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> todoApp</span>
-
-Copy
-
-You may wrap one or more reducers in `undoable` at any level of the reducer composition hierarchy. We choose to wrap `todos` instead of the top-level combined reducer so that changes to `visibilityFilter` are not reflected in the undo history.
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> todoApp</span>You may wrap one or more reducers in `undoable` at any level of the reducer composition hierarchy. We choose to wrap `todos` instead of the top-level combined reducer so that changes to `visibilityFilter` are not reflected in the undo history.
 
 ### <span id="updating-the-selectors" class="anchor enhancedAnchor_2LWZ"></span>Updating the Selectors<a href="#updating-the-selectors" class="hash-link" title="Direct link to heading">#</a>
 
@@ -785,11 +698,7 @@ Now the `todos` part of the state looks like this:
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-This means you need to access your state with `state.todos.present` instead of just `state.todos`:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>This means you need to access your state with `state.todos.present` instead of just `state.todos`:
 
 #### <span id="containersvisibletodolistjs" class="anchor enhancedAnchor_2LWZ"></span>`containers/VisibleTodoList.js`<a href="#containersvisibletodolistjs" class="hash-link" title="Direct link to heading">#</a>
 
@@ -801,11 +710,7 @@ This means you need to access your state with `state.todos.present` instead of j
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-### <span id="adding-the-buttons" class="anchor enhancedAnchor_2LWZ"></span>Adding the Buttons<a href="#adding-the-buttons" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>### <span id="adding-the-buttons" class="anchor enhancedAnchor_2LWZ"></span>Adding the Buttons<a href="#adding-the-buttons" class="hash-link" title="Direct link to heading">#</a>
 
 Now all you need to do is add the buttons for the Undo and Redo actions.
 
@@ -839,11 +744,7 @@ First, create a new container component called `UndoRedo` for these buttons. We 
 
 <span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">&lt;</span><span class="token operator" style="color: #f8f8f2">/</span><span class="token plain">p</span><span class="token operator" style="color: #f8f8f2">&gt;</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-You will use `connect()` from [React Redux](../../github.com/reduxjs/react-redux.html) to generate a container component. To determine whether to enable Undo and Redo buttons, you can check `state.todos.past.length` and `state.todos.future.length`. You won't need to write action creators for performing undo and redo because Redux Undo already provides them:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">)</span>You will use `connect()` from [React Redux](../../github.com/reduxjs/react-redux.html) to generate a container component. To determine whether to enable Undo and Redo buttons, you can check `state.todos.past.length` and `state.todos.future.length`. You won't need to write action creators for performing undo and redo because Redux Undo already provides them:
 
 #### <span id="containersundoredojs-1" class="anchor enhancedAnchor_2LWZ"></span>`containers/UndoRedo.js`<a href="#containersundoredojs-1" class="hash-link" title="Direct link to heading">#</a>
 
@@ -851,9 +752,9 @@ You will use `connect()` from [React Redux](../../github.com/reduxjs/react-redux
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> </span><span class="token imports maybe-class-name">ActionCreators</span><span class="token imports"> </span><span class="token imports keyword module" style="color: #f92672">as</span><span class="token imports"> </span><span class="token imports maybe-class-name">UndoActionCreators</span><span class="token imports"> </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux-undo'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > </span><span class="token imports maybe-class-name">ActionCreators</span><span > </span><span class="token imports keyword module" style="color: #f92672">as</span><span > </span><span class="token imports maybe-class-name">UndoActionCreators</span><span > </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'redux-undo'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> connect </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-redux'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > connect </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'react-redux'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -879,9 +780,9 @@ You will use `connect()` from [React Redux](../../github.com/reduxjs/react-redux
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">onUndo</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token maybe-class-name">UndoActionCreators</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">undo</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">onUndo</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token maybe-class-name">UndoActionCreators</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">undo</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">onRedo</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token maybe-class-name">UndoActionCreators</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">redo</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">onRedo</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token maybe-class-name">UndoActionCreators</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">redo</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
@@ -893,11 +794,7 @@ You will use `connect()` from [React Redux](../../github.com/reduxjs/react-redux
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> </span><span class="token maybe-class-name">UndoRedo</span>
-
-Copy
-
-Now you can add `UndoRedo` component to the `App` component:
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> </span><span class="token maybe-class-name">UndoRedo</span>Now you can add `UndoRedo` component to the `App` component:
 
 #### <span id="componentsappjs" class="anchor enhancedAnchor_2LWZ"></span>`components/App.js`<a href="#componentsappjs" class="hash-link" title="Direct link to heading">#</a>
 
@@ -931,15 +828,9 @@ Now you can add `UndoRedo` component to the `App` component:
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> </span><span class="token maybe-class-name">App</span>
-
-Copy
-
-This is it! Run `npm install` and `npm start` in the [example folder](../../github.com/reduxjs/redux/tree/master/examples/todos-with-undo.html) and try it out!
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> </span><span class="token maybe-class-name">App</span>This is it! Run `npm install` and `npm start` in the [example folder](../../github.com/reduxjs/redux/tree/master/examples/todos-with-undo.html) and try it out!
 
 <a href="computing-derived-data.html" class="pagination-nav__link"></a>
-
-Previous
 
 « Computing Derived Data
 
@@ -981,4 +872,4 @@ Isolating Redux Sub-Apps »
 
 <a href="../index.html" class="footerLogoLink_MyFc"><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" /><img src="../official/d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
 
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

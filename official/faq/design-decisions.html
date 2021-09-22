@@ -108,10 +108,17 @@
       href="https://redux.js.org/assets/js/main.8520a084.js"
       as="script"
     />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css"
+    />
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
-    </head>
+    <script
+      async
+      defer
+      src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"
+    ></script>
+  </head>
   <body>
     <script>
       !(function () {
@@ -1131,17 +1138,19 @@
                             <a
                               href="#why-doesnt-combinereducers-include-a-third-argument-with-the-entire-state-when-it-calls-each-reducer"
                               >Why doesn&#x27;t
-                              <code class="language-js >combineReducers</code> include a third
-                              argument with the entire state when it calls each
-                              reducer?</a
+                              <code class="language-js">combineReducers</code>
+                              include a third argument with the entire state
+                              when it calls each reducer?</a
                             >
                           </li>
                           <li>
                             <a
                               href="#why-doesnt-mapdispatchtoprops-allow-use-of-return-values-from-getstate-or-mapstatetoprops"
                               >Why doesn&#x27;t mapDispatchToProps allow use of
-                              return values from <code class="language-js >getState()</code> or
-                              <code class="language-js >mapStateToProps()</code>?</a
+                              return values from
+                              <code class="language-js">getState()</code> or
+                              <code class="language-js">mapStateToProps()</code
+                              >?</a
                             >
                           </li>
                         </ul>
@@ -1189,11 +1198,12 @@
                         </p>
                         <p>
                           Batching or debouncing is possible by using enhancers
-                          to override <code class="language-js >store.dispatch</code> to change the
-                          way that subscribers are notified. Also, there are
-                          libraries that change Redux to process actions in
-                          batches to optimize performance and avoid repeated
-                          re-rendering:
+                          to override
+                          <code class="language-js">store.dispatch</code> to
+                          change the way that subscribers are notified. Also,
+                          there are libraries that change Redux to process
+                          actions in batches to optimize performance and avoid
+                          repeated re-rendering:
                         </p>
                         <ul>
                           <li>
@@ -1204,8 +1214,8 @@
                               >redux-batch</a
                             >
                             allows passing an array of actions to
-                            <code class="language-js >store.dispatch()</code> with only one
-                            notification,
+                            <code class="language-js">store.dispatch()</code>
+                            with only one notification,
                           </li>
                           <li>
                             <a
@@ -1223,7 +1233,8 @@
                           all subscribers with the most recent state available,
                           but not that it always calls each subscriber for each
                           action. The store state is available in the subscriber
-                          simply by calling <code class="language-js >store.getState()</code>. The
+                          simply by calling
+                          <code class="language-js">store.getState()</code>. The
                           action cannot be made available in the subscribers
                           without breaking the way that actions might be
                           batched.
@@ -1344,9 +1355,10 @@
                           instances for action objects and reducers are not
                           supported because class instances make serialization
                           and deserialization tricky. Deserialization methods
-                          like <code class="language-js >JSON.parse(string)</code> will return a
-                          plain old Javascript object rather than class
-                          instances.
+                          like
+                          <code class="language-js">JSON.parse(string)</code>
+                          will return a plain old Javascript object rather than
+                          class instances.
                         </p>
                         <p>
                           As described in the
@@ -1421,11 +1433,32 @@
                         <p>
                           Redux middleware are written using a triply-nested
                           function structure that looks like
-                          <code class="language-js 
-                            >const middleware = storeAPI =&gt; next =&gt; action
-                            =&gt; {}</code
-                          >, rather than a single function that looks like
-                          <code class="language-js 
+                          <code
+                            class="
+                              language-js
+                              >const
+                              middleware
+                              =
+                              storeAPI
+                              =&gt;
+                              next
+                              =&gt;
+                              action
+                              =&gt;
+                              {}</code
+                              >,
+                              rather
+                              than
+                              a
+                              single
+                              function
+                              that
+                              looks
+                              like
+                              <code
+                              class=
+                            "
+                            language-js
                             >const middleware = (storeAPI, next, action) =&gt;
                             {}</code
                           >. There&#x27;s a few reasons for this.
@@ -1541,8 +1574,10 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="why-does-applymiddleware-use-a-closure-for-dispatch"
                           ></a
-                          >Why does <code class="language-js >applyMiddleware</code> use a closure
-                          for <code class="language-js >dispatch</code>?<a
+                          >Why does
+                          <code class="language-js">applyMiddleware</code> use a
+                          closure for
+                          <code class="language-js">dispatch</code>?<a
                             class="hash-link"
                             href="#why-does-applymiddleware-use-a-closure-for-dispatch"
                             title="Direct link to heading"
@@ -1550,11 +1585,12 @@
                           >
                         </h3>
                         <p>
-                          <code class="language-js >applyMiddleware</code> takes the existing
-                          dispatch from the store and closes over it to create
-                          the initial chain of middlewares that have been
-                          invoked with an object that exposes the getState and
-                          dispatch functions, which enables middlewares that
+                          <code class="language-js">applyMiddleware</code> takes
+                          the existing dispatch from the store and closes over
+                          it to create the initial chain of middlewares that
+                          have been invoked with an object that exposes the
+                          getState and dispatch functions, which enables
+                          middlewares that
                           <a
                             href="https://github.com/reactjs/redux/pull/1592"
                             target="_blank"
@@ -1608,9 +1644,10 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="why-doesnt-combinereducers-include-a-third-argument-with-the-entire-state-when-it-calls-each-reducer"
                           ></a
-                          >Why doesn&#x27;t <code class="language-js >combineReducers</code> include
-                          a third argument with the entire state when it calls
-                          each reducer?<a
+                          >Why doesn&#x27;t
+                          <code class="language-js">combineReducers</code>
+                          include a third argument with the entire state when it
+                          calls each reducer?<a
                             class="hash-link"
                             href="#why-doesnt-combinereducers-include-a-third-argument-with-the-entire-state-when-it-calls-each-reducer"
                             title="Direct link to heading"
@@ -1618,25 +1655,27 @@
                           >
                         </h3>
                         <p>
-                          <code class="language-js >combineReducers</code> is opinionated to
-                          encourage splitting reducer logic by domain. As stated
-                          in
+                          <code class="language-js">combineReducers</code> is
+                          opinionated to encourage splitting reducer logic by
+                          domain. As stated in
                           <a
                             href="https://redux.js.org/recipes/structuring-reducers/beyond-combinereducers"
-                            >Beyond <code class="language-js >combineReducers</code></a
-                          >,<code class="language-js >combineReducers</code> is deliberately limited
-                          to handle a single common use case: updating a state
-                          tree that is a plain Javascript object by delegating
-                          the work of updating each slice of state to a specific
-                          slice reducer.
+                            >Beyond
+                            <code class="language-js">combineReducers</code></a
+                          >,<code class="language-js">combineReducers</code> is
+                          deliberately limited to handle a single common use
+                          case: updating a state tree that is a plain Javascript
+                          object by delegating the work of updating each slice
+                          of state to a specific slice reducer.
                         </p>
                         <p>
                           It&#x27;s not immediately obvious what a potential
                           third argument to each reducer should be: the entire
                           state tree, some callback function, some other part of
                           the state tree, etc. If
-                          <code class="language-js >combineReducers</code> doesn&#x27;t fit your use
-                          case, consider using libraries like
+                          <code class="language-js">combineReducers</code>
+                          doesn&#x27;t fit your use case, consider using
+                          libraries like
                           <a
                             href="https://github.com/ryo33/combine-section-reducers"
                             target="_blank"
@@ -1677,7 +1716,10 @@
                           <li>
                             <a
                               href="https://redux.js.org/recipes/structuring-reducers/beyond-combinereducers"
-                              >Beyond <code class="language-js >combineReducers</code></a
+                              >Beyond
+                              <code class="language-js"
+                                >combineReducers</code
+                              ></a
                             >
                           </li>
                         </ul>
@@ -1700,9 +1742,10 @@
                             id="why-doesnt-mapdispatchtoprops-allow-use-of-return-values-from-getstate-or-mapstatetoprops"
                           ></a
                           >Why doesn&#x27;t
-                          <code class="language-js >mapDispatchToProps</code> allow use of return
-                          values from <code class="language-js >getState()</code> or
-                          <code class="language-js >mapStateToProps()</code>?<a
+                          <code class="language-js">mapDispatchToProps</code>
+                          allow use of return values from
+                          <code class="language-js">getState()</code> or
+                          <code class="language-js">mapStateToProps()</code>?<a
                             class="hash-link"
                             href="#why-doesnt-mapdispatchtoprops-allow-use-of-return-values-from-getstate-or-mapstatetoprops"
                             title="Direct link to heading"
@@ -1711,19 +1754,22 @@
                         </h3>
                         <p>
                           There have been requests to use either the entire
-                          <code class="language-js >state</code> or the return value of
-                          <code class="language-js >mapState</code> inside of
-                          <code class="language-js >mapDispatch</code>, so that when functions are
-                          declared inside of <code class="language-js >mapDispatch</code>, they can
+                          <code class="language-js">state</code> or the return
+                          value of
+                          <code class="language-js">mapState</code> inside of
+                          <code class="language-js">mapDispatch</code>, so that
+                          when functions are declared inside of
+                          <code class="language-js">mapDispatch</code>, they can
                           close over the latest returned values from the store.
                         </p>
                         <p>
                           This approach is not supported in
-                          <code class="language-js >mapDispatch</code> because it would mean also
-                          calling <code class="language-js >mapDispatch</code> every time the store
-                          is updated. This would cause the re-creation of
-                          functions with every state update, thus adding a lot
-                          of performance overhead.
+                          <code class="language-js">mapDispatch</code> because
+                          it would mean also calling
+                          <code class="language-js">mapDispatch</code> every
+                          time the store is updated. This would cause the
+                          re-creation of functions with every state update, thus
+                          adding a lot of performance overhead.
                         </p>
                         <p>
                           The preferred way to handle this use-case--needing to
@@ -1731,11 +1777,12 @@
                           mapDispatchToProps functions--is to work from
                           mergeProps, the third argument to the connect
                           function. If specified, it is passed the result of
-                          <code class="language-js >mapStateToProps()</code>,
-                          <code class="language-js >mapDispatchToProps()</code>, and the container
-                          component&#x27;s props. The plain object returned from
-                          <code class="language-js >mergeProps</code> will be passed as props to the
-                          wrapped component.
+                          <code class="language-js">mapStateToProps()</code>,
+                          <code class="language-js">mapDispatchToProps()</code>,
+                          and the container component&#x27;s props. The plain
+                          object returned from
+                          <code class="language-js">mergeProps</code> will be
+                          passed as props to the wrapped component.
                         </p>
                         <h4>
                           <a
@@ -1848,8 +1895,10 @@
                             <a
                               href="#why-does-applymiddleware-use-a-closure-for-dispatch"
                               class="table-of-contents__link"
-                              >Why does <code class="language-js >applyMiddleware</code> use a
-                              closure for <code class="language-js >dispatch</code>?</a
+                              >Why does
+                              <code class="language-js">applyMiddleware</code>
+                              use a closure for
+                              <code class="language-js">dispatch</code>?</a
                             >
                           </li>
                           <li>
@@ -1857,9 +1906,9 @@
                               href="#why-doesnt-combinereducers-include-a-third-argument-with-the-entire-state-when-it-calls-each-reducer"
                               class="table-of-contents__link"
                               >Why doesn&#39;t
-                              <code class="language-js >combineReducers</code> include a third
-                              argument with the entire state when it calls each
-                              reducer?</a
+                              <code class="language-js">combineReducers</code>
+                              include a third argument with the entire state
+                              when it calls each reducer?</a
                             >
                           </li>
                           <li>
@@ -1867,9 +1916,13 @@
                               href="#why-doesnt-mapdispatchtoprops-allow-use-of-return-values-from-getstate-or-mapstatetoprops"
                               class="table-of-contents__link"
                               >Why doesn&#39;t
-                              <code class="language-js >mapDispatchToProps</code> allow use of
-                              return values from <code class="language-js >getState()</code> or
-                              <code class="language-js >mapStateToProps()</code>?</a
+                              <code class="language-js"
+                                >mapDispatchToProps</code
+                              >
+                              allow use of return values from
+                              <code class="language-js">getState()</code> or
+                              <code class="language-js">mapStateToProps()</code
+                              >?</a
                             >
                           </li>
                         </ul>

@@ -103,10 +103,17 @@
       as="script"
     />
     <link rel="preload" href="../../assets/js/main.8520a084.js" as="script" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css"
+    />
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
-    </head>
+    <script
+      async
+      defer
+      src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"
+    ></script>
+  </head>
   <body>
     <script>
       !(function () {
@@ -5792,7 +5799,8 @@
                           like switch statements, it&#x27;s very common to use a
                           function that creates a lookup table of action types
                           to case functions. We&#x27;ll use the
-                          <code class="language-js >createReducer</code> function described in
+                          <code class="language-js">createReducer</code>
+                          function described in
                           <a href="../reducing-boilerplate.html"
                             >Reducing Boilerplate</a
                           >:
@@ -6647,9 +6655,10 @@
                         </h4>
                         <p>
                           As our last step, we can now use Redux&#x27;s built-in
-                          <code class="language-js >combineReducers</code> utility to handle the
-                          &quot;slice-of-state&quot; logic for our top-level app
-                          reducer. Here&#x27;s the final result:
+                          <code class="language-js">combineReducers</code>
+                          utility to handle the &quot;slice-of-state&quot; logic
+                          for our top-level app reducer. Here&#x27;s the final
+                          result:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -8147,14 +8156,17 @@
                         <p>
                           We now have examples of several kinds of split-up
                           reducer functions: helper utilities like
-                          <code class="language-js >updateObject</code> and
-                          <code class="language-js >createReducer</code>, handlers for specific
-                          cases like <code class="language-js >setVisibilityFilter</code> and
-                          <code class="language-js >addTodo</code>, and slice-of-state handlers like
-                          <code class="language-js >visibilityReducer</code> and
-                          <code class="language-js >todosReducer</code>. We also can see that
-                          <code class="language-js >appReducer</code> is an example of a &quot;root
-                          reducer&quot;.
+                          <code class="language-js">updateObject</code> and
+                          <code class="language-js">createReducer</code>,
+                          handlers for specific cases like
+                          <code class="language-js">setVisibilityFilter</code>
+                          and <code class="language-js">addTodo</code>, and
+                          slice-of-state handlers like
+                          <code class="language-js">visibilityReducer</code> and
+                          <code class="language-js">todosReducer</code>. We also
+                          can see that
+                          <code class="language-js">appReducer</code> is an
+                          example of a &quot;root reducer&quot;.
                         </p>
                         <p>
                           Although the final result in this example is
@@ -8167,10 +8179,10 @@
                           smaller, and the intent is hopefully clearer. Also, in
                           a real application, these functions would probably
                           then be split into separate files such as
-                          <code class="language-js >reducerUtilities.js</code>,
-                          <code class="language-js >visibilityReducer.js</code>,
-                          <code class="language-js >todosReducer.js</code>, and
-                          <code class="language-js >rootReducer.js</code>.
+                          <code class="language-js">reducerUtilities.js</code>,
+                          <code class="language-js">visibilityReducer.js</code>,
+                          <code class="language-js">todosReducer.js</code>, and
+                          <code class="language-js">rootReducer.js</code>.
                         </p>
                       </div>
                     </article>

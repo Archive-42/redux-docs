@@ -1091,7 +1091,7 @@
                           action creator wrapped into a
                           <a
                             href="https://redux.js.org/api/store#dispatchaction"
-                            ><code class="language-js >dispatch</code></a
+                            ><code class="language-js" >dispatch</code></a
                           >
                           call so they may be invoked directly.
                         </p>
@@ -1099,11 +1099,11 @@
                           Normally you should just call
                           <a
                             href="https://redux.js.org/api/store#dispatchaction"
-                            ><code class="language-js >dispatch</code></a
+                            ><code class="language-js" >dispatch</code></a
                           >
                           directly on your
                           <a href="https://redux.js.org/api/store"
-                            ><code class="language-js >Store</code></a
+                            ><code class="language-js" >Store</code></a
                           >
                           instance. If you use Redux with React,
                           <a
@@ -1115,19 +1115,19 @@
                           will provide you with the
                           <a
                             href="https://redux.js.org/api/store#dispatchaction"
-                            ><code class="language-js >dispatch</code></a
+                            ><code class="language-js" >dispatch</code></a
                           >
                           function so you can call it directly, too.
                         </p>
                         <p>
                           The only use case for
-                          <code class="language-js >bindActionCreators</code> is when you want to
+                          <code class="language-js" >bindActionCreators</code> is when you want to
                           pass some action creators down to a component that
                           isn&#x27;t aware of Redux, and you don&#x27;t want to
                           pass
                           <a
                             href="https://redux.js.org/api/store#dispatchaction"
-                            ><code class="language-js >dispatch</code></a
+                            ><code class="language-js" >dispatch</code></a
                           >
                           or the Redux store to it.
                         </p>
@@ -1153,7 +1153,7 @@
                         <ol>
                           <li>
                             <p>
-                              <code class="language-js >actionCreators</code> (<em>Function</em> or
+                              <code class="language-js" >actionCreators</code> (<em>Function</em> or
                               <em>Object</em>): An
                               <a
                                 href="https://redux.js.org/understanding/thinking-in-redux/glossary#action-creator"
@@ -1163,14 +1163,14 @@
                           </li>
                           <li>
                             <p>
-                              <code class="language-js >dispatch</code> (<em>Function</em>): A
+                              <code class="language-js" >dispatch</code> (<em>Function</em>): A
                               <a
                                 href="https://redux.js.org/api/store#dispatchaction"
-                                ><code class="language-js >dispatch</code></a
+                                ><code class="language-js" >dispatch</code></a
                               >
                               function available on the
                               <a href="https://redux.js.org/api/store"
-                                ><code class="language-js >Store</code></a
+                                ><code class="language-js" >Store</code></a
                               >
                               instance.
                             </p>
@@ -1195,7 +1195,7 @@
                           mimicking the original object, but with each function
                           immediately dispatching the action returned by the
                           corresponding action creator. If you passed a function
-                          as <code class="language-js >actionCreators</code>, the return value will
+                          as <code class="language-js" >actionCreators</code>, the return value will
                           also be a single function.
                         </p>
                         <h4>
@@ -1219,7 +1219,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="todoactioncreatorsjs"
                           ></a
-                          ><code class="language-js >TodoActionCreators.js</code
+                          ><code class="language-js" >TodoActionCreators.js</code
                           ><a
                             class="hash-link"
                             href="#todoactioncreatorsjs"
@@ -1431,7 +1431,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="somecomponentjs"
                           ></a
-                          ><code class="language-js >SomeComponent.js</code
+                          ><code class="language-js" >SomeComponent.js</code
                           ><a
                             class="hash-link"
                             href="#somecomponentjs"
@@ -2433,14 +2433,14 @@
                           <li>
                             <p>
                               If you use ES5, instead of
-                              <code class="language-js >import * as</code> syntax you can just pass
+                              <code class="language-js" >import * as</code> syntax you can just pass
                               <code class="language-js 
                                 >require(&#x27;./TodoActionCreators&#x27;)</code
                               >
-                              to <code class="language-js >bindActionCreators</code> as the first
+                              to <code class="language-js" >bindActionCreators</code> as the first
                               argument. The only thing it cares about is that
                               the values of the
-                              <code class="language-js >actionCreators</code> properties are
+                              <code class="language-js" >actionCreators</code> properties are
                               functions. The module system doesn&#x27;t matter.
                             </p>
                           </li>

@@ -1,13 +1,6 @@
 <a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 <a href="../official/introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../official/api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../official/faq.html" class="navbar__item navbar__link">FAQ</a><a href="../official/style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/../github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../official/introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 - <a href="../official/introduction/getting-started.html" class="menu__link">Getting Started</a>
@@ -129,11 +122,7 @@ Here's the live version of the project. You can play around with it by clicking 
 
 If you'd like to try create this project on your own computer, you can [start a new Create-React-App project](../../../create-react-app.dev/docs/getting-started/index.html#selecting-a-template) using our Redux template:
 
-<span class="token plain">npx create-react-app redux-essentials-example --template redux</span>
-
-Copy
-
-### <span id="using-the-counter-app" class="anchor enhancedAnchor_2LWZ"></span>Using the Counter App<a href="#using-the-counter-app" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain">npx create-react-app redux-essentials-example --template redux</span>### <span id="using-the-counter-app" class="anchor enhancedAnchor_2LWZ"></span>Using the Counter App<a href="#using-the-counter-app" class="hash-link" title="Direct link to heading">#</a>
 
 The counter app has already been set up to let us watch what happens inside as we use it.
 
@@ -151,11 +140,7 @@ On the right, we can see that our Redux store is starting off with an app state 
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-The DevTools will show us how the store state changes as we use the app.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>The DevTools will show us how the store state changes as we use the app.
 
 Let's play with the app first to see what it does. Click the "+" button in the app, then look at the "Diff" tab in the Redux DevTools:
 
@@ -186,11 +171,7 @@ We can see that this action object looked like this:
 
 <span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">3</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-And if you click the "Diff" tab, you can see that the `state.counter.value` field changed from a `3` to a `6` in response to that action.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>And if you click the "Diff" tab, you can see that the `state.counter.value` field changed from a `3` to a `6` in response to that action.
 
 The ability to see what is happening inside of our app and how our state is changing over time is very powerful!
 
@@ -224,9 +205,9 @@ Open up `app/store.js`, which should look like this:
 
 app/store.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> configureStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > configureStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">counterReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../features/counter/counterSlice'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >counterReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../features/counter/counterSlice'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -238,11 +219,7 @@ app/store.js
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-The Redux store is created using the `configureStore` function from Redux Toolkit. `configureStore` requires that we pass in a `reducer` argument.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>The Redux store is created using the `configureStore` function from Redux Toolkit. `configureStore` requires that we pass in a `reducer` argument.
 
 Our application might be made up of many different features, and each of those features might have its own reducer function. When we call `configureStore`, we can pass in all of the different reducers in an object. The key names in the object will define the keys in our final state value.
 
@@ -258,13 +235,13 @@ Redux allows store setup to be customized with different kinds of plugins ("midd
 
 For example, in a blogging app, our store setup might look like:
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> configureStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > configureStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">usersReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../features/users/usersSlice'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >usersReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../features/users/usersSlice'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">postsReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../features/posts/postsSlice'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >postsReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../features/posts/postsSlice'</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">commentsReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../features/comments/commentsSlice'</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span >commentsReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'../features/comments/commentsSlice'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -280,11 +257,7 @@ For example, in a blogging app, our store setup might look like:
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-In that example, `state.users`, `state.posts`, and `state.comments` are each a separate "slice" of the Redux state. Since `usersReducer` is responsible for updating the `state.users` slice, we refer to it as a "slice reducer" function.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>In that example, `state.users`, `state.posts`, and `state.comments` are each a separate "slice" of the Redux state. Since `usersReducer` is responsible for updating the `state.users` slice, we refer to it as a "slice reducer" function.
 
 #### Detailed Explanation: Reducers and State Structure
 
@@ -304,11 +277,7 @@ If we tried calling all of the slice reducers by hand, it might look like this:
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-That calls each slice reducer individually, passes in the specific slice of the Redux state, and includes each return value in the final new Redux state object.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>That calls each slice reducer individually, passes in the specific slice of the Redux state, and includes each return value in the final new Redux state object.
 
 Redux has a function called [`combineReducers`](../../api/combinereducers.html) that does this for us automatically. It accepts an object full of slice reducers as its argument, and returns a function that calls each slice reducer whenever an action is dispatched. The result from each slice reducer are all combined together into a single object as the final result. We can do the same thing as the previous example using `combineReducers`:
 
@@ -320,11 +289,7 @@ Redux has a function called [`combineReducers`](../../api/combinereducers.html) 
 
 <span class="token plain"> comments</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> commentsReducer</span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-When we pass an object of slice reducers to `configureStore`, it passes those to `combineReducers` for us to generate the root reducer.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>When we pass an object of slice reducers to `configureStore`, it passes those to `combineReducers` for us to generate the root reducer.
 
 As we saw earlier, you can also pass a reducer function directly as the `reducer` argument:
 
@@ -332,17 +297,13 @@ As we saw earlier, you can also pass a reducer function directly as the `reducer
 
 <span class="token plain"> reducer</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> rootReducer</span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-### <span id="creating-slice-reducers-and-actions" class="anchor enhancedAnchor_2LWZ"></span>Creating Slice Reducers and Actions<a href="#creating-slice-reducers-and-actions" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>### <span id="creating-slice-reducers-and-actions" class="anchor enhancedAnchor_2LWZ"></span>Creating Slice Reducers and Actions<a href="#creating-slice-reducers-and-actions" class="hash-link" title="Direct link to heading">#</a>
 
 Since we know that the `counterReducer` function is coming from `features/counter/counterSlice.js`, let's see what's in that file, piece by piece.
 
 features/counter/counterSlice.js
 
-<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createSlice </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
+<span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span > createSlice </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">'@reduxjs/toolkit'</span><span class="token plain"></span>
 
 <span class="token plain" style="display: inline-block"> </span>
 
@@ -394,11 +355,7 @@ features/counter/counterSlice.js
 
 <span class="token plain" style="display: inline-block"> </span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> counterSlice</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">reducer</span>
-
-Copy
-
-Earlier, we saw that clicking the different buttons in the UI dispatched three different Redux action types:
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> counterSlice</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">reducer</span>Earlier, we saw that clicking the different buttons in the UI dispatched three different Redux action types:
 
 - `{type: "counter/increment"}`
 - `{type: "counter/decrement"}`
@@ -416,29 +373,21 @@ We can see here that there are three reducer functions, and that corresponds to 
 
 `createSlice` automatically generates action creators with the same names as the reducer functions we wrote. We can check that by calling one of them and seeing what it returns:
 
-<span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">counterSlice</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">actions</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">increment</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">counterSlice</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">actions</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">increment</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// {type: "counter/increment"}</span>
+<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// {type: "counter/increment"}</span>It also generates the slice reducer function that knows how to respond to all these action types:
 
-Copy
-
-It also generates the slice reducer function that knows how to respond to all these action types:
-
-<span class="token keyword" style="color: #f92672">const</span><span class="token plain"> newState </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> counterSlice</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">reducer</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain"></span>
+<span class="token keyword" style="color: #f92672">const</span><span class="token plain"> newState </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> counterSlice</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">reducer</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> value</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">10</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"></span>
 
-<span class="token plain"> counterSlice</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">actions</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">increment</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> counterSlice</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">actions</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">increment</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">newState</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">newState</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// {value: 11}</span>
-
-Copy
-
-### <span id="rules-of-reducers" class="anchor enhancedAnchor_2LWZ"></span>Rules of Reducers<a href="#rules-of-reducers" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// {value: 11}</span>### <span id="rules-of-reducers" class="anchor enhancedAnchor_2LWZ"></span>Rules of Reducers<a href="#rules-of-reducers" class="hash-link" title="Direct link to heading">#</a>
 
 We said earlier that reducers must **always** follow some special rules:
 
@@ -463,11 +412,7 @@ In Redux, **our reducers are _never_ allowed to mutate the original / current st
 
 <span class="token comment" style="color: #c6cad2">// ❌ Illegal - by default, this will mutate the state!</span><span class="token plain"></span>
 
-<span class="token plain">state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">value</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">123</span>
-
-Copy
-
-There are several reasons why you must not mutate state in Redux:
+<span class="token plain">state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">value</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">123</span>There are several reasons why you must not mutate state in Redux:
 
 - It causes bugs, such as the UI not updating properly to show the latest values
 - It makes it harder to understand why and how the state has been updated
@@ -489,11 +434,7 @@ So if we can't change the originals, how do we return an updated state?
 
 <span class="token plain"> value</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">123</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-We already saw that we can [write immutable updates by hand](part-1-overview-concepts.html#immutability), by using JavaScript's array / object spread operators and other functions that return copies of the original values. However, if you're thinking that "writing immutable updates by hand this way looks hard to remember and do correctly"... yeah, you're right! :)
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>We already saw that we can [write immutable updates by hand](part-1-overview-concepts.html#immutability), by using JavaScript's array / object spread operators and other functions that return copies of the original values. However, if you're thinking that "writing immutable updates by hand this way looks hard to remember and do correctly"... yeah, you're right! :)
 
 Writing immutable update logic by hand _is_ hard, and accidentally mutating state in reducers is the single most common mistake Redux users make.
 
@@ -531,21 +472,13 @@ So, instead of this:
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-You can write code that looks like this:
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>You can write code that looks like this:
 
 <span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">reducerWithImmer</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
 <span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">first</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">second</span><span class="token punctuation" style="color: #f8f8f2">\[</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">someId</span><span class="token punctuation" style="color: #f8f8f2">\]</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">fourth</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">someValue</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-That's a lot easier to read!
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>That's a lot easier to read!
 
 But, here's something _very_ important to remember:
 
@@ -597,11 +530,7 @@ features/counter/counterSlice.js
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-We can see that the `increment` reducer will always add 1 to `state.value`. Because Immer knows we've made changes to the draft `state` object, we don't have to actually return anything here. In the same way, the `decrement` reducer subtracts 1.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span>We can see that the `increment` reducer will always add 1 to `state.value`. Because Immer knows we've made changes to the draft `state` object, we don't have to actually return anything here. In the same way, the `decrement` reducer subtracts 1.
 
 In both of those reducers, we don't actually need to have our code look at the `action` object. It will be passed in anyway, but since we don't need it, we can skip declaring `action` as a parameter for the reducers.
 
@@ -640,17 +569,9 @@ features/counter/counterSlice.js
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">1000</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>We can use them the same way we use a typical Redux action creator:
 
-Copy
-
-We can use them the same way we use a typical Redux action creator:
-
-<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token function" style="color: #e6d874">incrementAsync</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token number" style="color: #ae81ff">5</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-However, using thunks requires that the `redux-thunk` _middleware_ (a type of plugin for Redux) be added to the Redux store when it's created. Fortunately, Redux Toolkit's `configureStore` function already sets that up for us automatically, so we can go ahead and use thunks here.
+<span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token function" style="color: #e6d874">incrementAsync</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token number" style="color: #ae81ff">5</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span>However, using thunks requires that the `redux-thunk` _middleware_ (a type of plugin for Redux) be added to the Redux store when it's created. Fortunately, Redux Toolkit's `configureStore` function already sets that up for us automatically, so we can go ahead and use thunks here.
 
 When you need to make AJAX calls to fetch data from the server, you can put that call in a thunk. Here's an example that's written a bit longer, so you can see how it's defined:
 
@@ -668,7 +589,7 @@ features/counter/counterSlice.js
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// make an async call in the thunk</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> user </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">await</span><span class="token plain"> userAPI</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">fetchById</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">userId</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> user </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">await</span><span class="token plain"> userAPI</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">fetchById</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">userId</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
 <span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// dispatch an action when we get the response back</span><span class="token plain"></span>
 
@@ -682,11 +603,7 @@ features/counter/counterSlice.js
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-We'll see thunks being used in [Part 5: Async Logic and Data Fetching](part-5-async-logic.html)
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>We'll see thunks being used in [Part 5: Async Logic and Data Fetching](part-5-async-logic.html)
 
 #### Detailed Explanation: Thunks and Async Logic
 
@@ -700,13 +617,9 @@ If we have access to the Redux store, we could write some async code and call `s
 
 <span class="token plain"></span><span class="token function" style="color: #e6d874">setTimeout</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span>
 
-<span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token function" style="color: #e6d874">increment</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
+<span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token function" style="color: #e6d874">increment</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">250</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-But, in a real Redux app, we're not allowed to import the store into other files, especially in our React components, because it makes that code harder to test and reuse.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">250</span><span class="token punctuation" style="color: #f8f8f2">)</span>But, in a real Redux app, we're not allowed to import the store into other files, especially in our React components, because it makes that code harder to test and reuse.
 
 In addition, we often need to write some async logic that we know will be used with _some_ store, eventually, but we don't know _which_ store.
 
@@ -732,11 +645,7 @@ The Redux Thunk middleware modifies the store to let you pass functions into `di
 
 <span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">next</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-It looks to see if the "action" that was passed into `dispatch` is actually a function instead of a plain action object. If it's actually a function, it calls the function, and returns the result. Otherwise, since this must be an action object, it passes the action forward to the store.
+<span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span>It looks to see if the "action" that was passed into `dispatch` is actually a function instead of a plain action object. If it's actually a function, it calls the function, and returns the result. Otherwise, since this must be an action object, it passes the action forward to the store.
 
 This gives us a way to write whatever sync or async code we want, while still having access to `dispatch` and `getState`.
 
@@ -830,11 +739,7 @@ features/counter/Counter.js
 
 <span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>
-
-Copy
-
-Like with the earlier plain React example, we have a function component called `Counter`, that stores some data in a `useState` hook.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span>Like with the earlier plain React example, we have a function component called `Counter`, that stores some data in a `useState` hook.
 
 However, in our component, it doesn't look like we're storing the actual current counter value as state. There _is_ a variable called `count`, but it's not coming from a `useState` hook.
 
@@ -858,35 +763,19 @@ features/counter/counterSlice.js
 
 <span class="token plain"></span><span class="token comment" style="color: #c6cad2">// in the slice file. For example: \`useSelector((state) =&gt; state.counter.value)\`</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">selectCount</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token parameter">state</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">counter</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">value</span>
+<span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">selectCount</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token parameter">state</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">counter</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">value</span>If we had access to a Redux store, we could retrieve the current counter value as:
 
-Copy
+<span class="token keyword" style="color: #f92672">const</span><span class="token plain"> count </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">selectCount</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-If we had access to a Redux store, we could retrieve the current counter value as:
+<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span  style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">count</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token keyword" style="color: #f92672">const</span><span class="token plain"> count </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">selectCount</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
-
-<span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">count</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
-
-<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// 0</span>
-
-Copy
-
-Our components can't talk to the Redux store directly, because we're not allowed to import it into component files. But, `useSelector` takes care of talking to the Redux store behind the scenes for us. If we pass in a selector function, it calls `someSelector(store.getState())` for us, and returns the result.
+<span class="token plain"></span><span class="token comment" style="color: #c6cad2">// 0</span>Our components can't talk to the Redux store directly, because we're not allowed to import it into component files. But, `useSelector` takes care of talking to the Redux store behind the scenes for us. If we pass in a selector function, it calls `someSelector(store.getState())` for us, and returns the result.
 
 So, we can get the current store counter value by doing:
 
-<span class="token keyword" style="color: #f92672">const</span><span class="token plain"> count </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">useSelector</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">selectCount</span><span class="token punctuation" style="color: #f8f8f2">)</span>
+<span class="token keyword" style="color: #f92672">const</span><span class="token plain"> count </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">useSelector</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">selectCount</span><span class="token punctuation" style="color: #f8f8f2">)</span>We don't have to _only_ use selectors that have already been exported, either. For example, we could write a selector function as an inline argument to `useSelector`:
 
-Copy
-
-We don't have to _only_ use selectors that have already been exported, either. For example, we could write a selector function as an inline argument to `useSelector`:
-
-<span class="token keyword" style="color: #f92672">const</span><span class="token plain"> countPlusTwo </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">useSelector</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">counter</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">value</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">+</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">2</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-Any time an action has been dispatched and the Redux store has been updated, `useSelector` will re-run our selector function. If the selector returns a different value than last time, `useSelector` will make sure our component re-renders with the new value.
+<span class="token keyword" style="color: #f92672">const</span><span class="token plain"> countPlusTwo </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">useSelector</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">counter</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">value</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">+</span><span class="token plain"> </span><span class="token number" style="color: #ae81ff">2</span><span class="token punctuation" style="color: #f8f8f2">)</span>Any time an action has been dispatched and the Redux store has been updated, `useSelector` will re-run our selector function. If the selector returns a different value than last time, `useSelector` will make sure our component re-renders with the new value.
 
 #### <span id="dispatching-actions-with-usedispatch" class="anchor enhancedAnchor_2LWZ"></span>Dispatching Actions with `useDispatch`<a href="#dispatching-actions-with-usedispatch" class="hash-link" title="Direct link to heading">#</a>
 
@@ -894,11 +783,7 @@ Similarly, we know that if we had access to a Redux store, we could dispatch act
 
 The `useDispatch` hook does that for us, and gives us the actual `dispatch` method from the Redux store:
 
-<span class="token keyword" style="color: #f92672">const</span><span class="token plain"> dispatch </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">useDispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-From there, we can dispatch actions when the user does something like clicking on a button:
+<span class="token keyword" style="color: #f92672">const</span><span class="token plain"> dispatch </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">useDispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span>From there, we can dispatch actions when the user does something like clicking on a button:
 
 features/counter/Counter.js
 
@@ -914,11 +799,7 @@ features/counter/Counter.js
 
 <span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">+</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token tag punctuation" style="color: #f8f8f2">&lt;/</span><span class="token tag" style="color: #f92672">button</span><span class="token tag punctuation" style="color: #f8f8f2">&gt;</span>
-
-Copy
-
-### <span id="component-state-and-forms" class="anchor enhancedAnchor_2LWZ"></span>Component State and Forms<a href="#component-state-and-forms" class="hash-link" title="Direct link to heading">#</a>
+<span class="token plain"></span><span class="token tag punctuation" style="color: #f8f8f2">&lt;/</span><span class="token tag" style="color: #f92672">button</span><span class="token tag punctuation" style="color: #f8f8f2">&gt;</span>### <span id="component-state-and-forms" class="anchor enhancedAnchor_2LWZ"></span>Component State and Forms<a href="#component-state-and-forms" class="hash-link" title="Direct link to heading">#</a>
 
 By now you might be wondering, "Do I always have to put all my app's state into the Redux store?"
 
@@ -976,11 +857,7 @@ features/counter/Counter.js
 
 <span class="token plain"> </span><span class="token tag punctuation" style="color: #f8f8f2">&lt;/</span><span class="token tag" style="color: #f92672">div</span><span class="token tag punctuation" style="color: #f8f8f2">&gt;</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-We _could_ keep the current number string in the Redux store, by dispatching an action in the input's `onChange` handler and keeping it in our reducer. But, that doesn't give us any benefit. The only place that text string is used is here, in the `<Counter>` component. (Sure, there's only one other component in this example: `<App>`. But even if we had a larger application with many components, only `<Counter>` cares about this input value.)
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">)</span>We _could_ keep the current number string in the Redux store, by dispatching an action in the input's `onChange` handler and keeping it in our reducer. But, that doesn't give us any benefit. The only place that text string is used is here, in the `<Counter>` component. (Sure, there's only one other component in this example: `<App>`. But even if we had a larger application with many components, only `<Counter>` cares about this input value.)
 
 So, it makes sense to keep that value in a `useState` hook here in the `<Counter>` component.
 
@@ -1035,11 +912,7 @@ index.js
 
 <span class="token plain"> document</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token function" style="color: #e6d874">getElementById</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">'root'</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span>
 
-<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">)</span>
-
-Copy
-
-We always have to call `ReactDOM.render(<App />)` to tell React to start rendering our root `<App>` component. In order for our hooks like `useSelector` to work right, we need to use a component called `<Provider>` to pass down the Redux store behind the scenes so they can access it.
+<span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">)</span>We always have to call `ReactDOM.render(<App />)` to tell React to start rendering our root `<App>` component. In order for our hooks like `useSelector` to work right, we need to use a component called `<Provider>` to pass down the Redux store behind the scenes so they can access it.
 
 We already created our store in `app/store.js`, so we can import it here. Then, we put our `<Provider>` component around the whole `<App>`, and pass in the store: `<Provider store={store}>`.
 
@@ -1076,8 +949,6 @@ Now that you've seen all the pieces of a Redux app in action, it's time to write
 Continue on to [Part 3: Basic Redux Data Flow](part-3-data-flow.html) to get started building the example app.
 
 <a href="part-1-overview-concepts.html" class="pagination-nav__link"></a>
-
-Previous
 
 « Redux Essentials, Part 1: Redux Overview and Concepts
 
@@ -1121,4 +992,4 @@ Redux Essentials, Part 3: Basic Redux Data Flow »
 - [![Deploys by Netlify](../../../www.netlify.com/img/global/badges/netlify-color-accent.svg)](../../../www.netlify.com/index.html)
 
 <a href="../official/index.html" class="footerLogoLink_MyFc"><img src="../official/../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

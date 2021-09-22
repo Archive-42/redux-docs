@@ -274,7 +274,7 @@
     <p>
       If you are using TypeScript, the React Redux types are maintained
       separately in DefinitelyTyped, but included as a dependency of the
-      <code class="language-js >react-redux</code> package, so they should be installed
+      <code class="language-js" >react-redux</code> package, so they should be installed
       automatically. If you still need to install them manually, run:
     </p>
     <div class="sourceCode" id="cb3">
@@ -283,12 +283,12 @@
       ><code class="language-js  class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">npm</span> install @types/react-redux</a></code></pre>
     </div>
     <h2 id="api-overview">API Overview</h2>
-    <h3 id="provider"><code class="language-js >Provider</code></h3>
+    <h3 id="provider"><code class="language-js" >Provider</code></h3>
     <p>
-      React Redux includes a <code class="language-js >&lt;Provider /&gt;</code> component, which
+      React Redux includes a <code class="language-js" >&lt;Provider /&gt;</code> component, which
       makes the Redux store available to the rest of your app:
     </p>
-    <pre class="language-js  class="jsx"><code class="language-js >import React from &#39;react&#39;
+    <pre class="language-js  class="jsx"><code class="language-js" >import React from &#39;react&#39;
 import ReactDOM from &#39;react-dom&#39;
 
 import { Provider } from &#39;react-redux&#39;
@@ -309,11 +309,11 @@ ReactDOM.render(
       components to interact with the Redux store.
     </p>
     <p>
-      <code class="language-js >useSelector</code> reads a value from the store state and subscribes
-      to updates, while <code class="language-js >useDispatch</code> returns the store’s
-      <code class="language-js >dispatch</code> method to let you dispatch actions.
+      <code class="language-js" >useSelector</code> reads a value from the store state and subscribes
+      to updates, while <code class="language-js" >useDispatch</code> returns the store’s
+      <code class="language-js" >dispatch</code> method to let you dispatch actions.
     </p>
-    <pre class="language-js  class="jsx"><code class="language-js >import React from &#39;react&#39;
+    <pre class="language-js  class="jsx"><code class="language-js" >import React from &#39;react&#39;
 import { useSelector, useDispatch } from &#39;react-redux&#39;
 import {
   decrement,

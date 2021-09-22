@@ -1,13 +1,6 @@
 <a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 <a href="../official/introduction/getting-started.html" class="navbar__item navbar__link">Getting Started</a><a href="../official/tutorials/essentials/part-1-overview-concepts.html" class="navbar__item navbar__link">Tutorial</a><a href="../official/api/api-reference.html" class="navbar__item navbar__link">API</a><a href="../official/faq.html" class="navbar__item navbar__link">FAQ</a><a href="../official/style-guide/style-guide.html" class="navbar__item navbar__link">Best Practices</a><a href="../official/../github.com/reduxjs/redux.html" class="navbar__item navbar__link">GitHub</a><a href="../official/introduction/getting-started.html#help-and-discussion" class="navbar__item navbar__link">Need help?</a>
-
-<span class="toggle_71bT">🌜</span>
-
-<span class="toggle_71bT">🌞</span>
-
-<span class="DocSearch-Button-Placeholder">Search</span>
-
 <a href="../official/index.html" class="navbar__brand"><strong>Redux</strong></a>
 
 - <a href="../official/introduction/getting-started.html" class="menu__link">Getting Started</a>
@@ -46,10 +39,6 @@
     - <a href="../official/tutorials/fundamentals/part-7-standard-patterns.html" class="menu__link">Standard Redux Patterns</a>
     - <a href="../official/tutorials/fundamentals/part-8-modern-redux.html" class="menu__link">Modern Redux with Redux Toolkit</a>
 - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Recipes</a>
-  - <a href="../recipe-index.html" class="menu__link">Recipes: Index</a>
-  - <a href="../configuring-your-store.html" class="menu__link">Configuring Your Store</a>
-  - <a href="../usage-with-typescript.html" class="menu__link">Usage With TypeScript</a>
-  - <a href="../migrating-to-redux.html" class="menu__link">Migrating to Redux</a>
   - <a href="../using-object-spread-operator.html" class="menu__link">Using Object Spread Operator</a>
   - <a href="../reducing-boilerplate.html" class="menu__link">Reducing Boilerplate</a>
   - <a href="../server-rendering.html" class="menu__link">Server Rendering</a>
@@ -62,15 +51,7 @@
   - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Structuring Reducers</a>
     - <a href="structuring-reducers.html" class="menu__link">Structuring Reducers</a>
     - <a href="prerequisite-concepts.html" class="menu__link menu__link--active active">Prerequisite Concepts</a>
-    - <a href="basic-reducer-structure.html" class="menu__link">Basic Reducer Structure</a>
-    - <a href="splitting-reducer-logic.html" class="menu__link">Splitting Reducer Logic</a>
-    - <a href="refactoring-reducer-example.html" class="menu__link">Refactoring Reducers Example</a>
-    - <a href="using-combinereducers.html" class="menu__link">Using combineReducers</a>
-    - <a href="beyond-combinereducers.html" class="menu__link">Beyond combineReducers</a>
-    - <a href="normalizing-state-shape.html" class="menu__link">Normalizing State Shape</a>
-    - <a href="updating-normalized-data.html" class="menu__link">Updating Normalized Data</a>
-    - <a href="reusing-reducer-logic.html" class="menu__link">Reusing Reducer Logic</a>
-    - <a href="immutable-update-patterns.html" class="menu__link">Immutable Update Patterns</a>
+      - <a href="immutable-update-patterns.html" class="menu__link">Immutable Update Patterns</a>
     - <a href="initializing-state.html" class="menu__link">Initializing State</a>
 - <a href="#!" class="menu__link menu__link--sublist">Understanding Redux</a>
   - <a href="#!" class="menu__link menu__link--sublist">Thinking in Redux</a>
@@ -200,8 +181,6 @@ Because of these rules, it's important that the following core concepts are full
 
 <a href="structuring-reducers.html" class="pagination-nav__link"></a>
 
-Previous
-
 « Structuring Reducers
 
 <a href="basic-reducer-structure.html" class="pagination-nav__link"></a>
@@ -229,4 +208,4 @@ Basic Reducer Structure »
 - [![Deploys by Netlify](../../../www.netlify.com/img/global/badges/netlify-color-accent.svg)](../../../www.netlify.com/index.html)
 
 <a href="../official/index.html" class="footerLogoLink_MyFc"><img src="../official/../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" />
-Copyright © 2015–2021 Dan Abramov and the Redux documentation authors.
+

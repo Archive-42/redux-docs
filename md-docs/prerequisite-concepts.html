@@ -129,7 +129,7 @@
 <li><a href="../official/api/bindactioncreators.html" class="menu__link">bindActionCreators</a></li>
 <li><a href="../official/api/compose.html" class="menu__link">compose</a></li>
 </ul></li>
-<li><a href="#!" class="menu__link menu__link--sublist">Redux Toolkit</a>
+
 <ul>
 <li><a href="../official/redux-toolkit/overview.html" class="menu__link">Redux Toolkit: Overview</a></li>
 </ul></li>
@@ -137,20 +137,20 @@
 <h1 id="prerequisite-reducer-concepts"><span id="prerequisite-reducer-concepts" class="anchor enhancedAnchor_2LWZ"></span>Prerequisite Reducer Concepts<a href="#prerequisite-reducer-concepts" class="hash-link" title="Direct link to heading">#</a></h1>
 <p>As described in <a href="../../tutorials/fundamentals/part-3-state-actions-reducers.html">“Redux Fundamentals” Part 3: State, Actions, and Reducers</a>, a Redux reducer function:</p>
 <ul>
-<li>Should have a signature of <code class="language-js >(previousState, action) =&gt; newState</code>, similar to the type of function you would pass to <a href="../../../developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce-2.html"><code class="language-js >Array.prototype.reduce(reducer, ?initialValue)</code></a></li>
+<li>Should have a signature of <code class="language-js" >(previousState, action) =&gt; newState</code>, similar to the type of function you would pass to <a href="../../../developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce-2.html"><code class="language-js" >Array.prototype.reduce(reducer, ?initialValue)</code></a></li>
 <li>Should be “pure”, which means the reducer:
 <ul>
 <li>Does not <em>perform side effects</em> (such as calling API’s or modifying non-local objects or variables).</li>
-<li>Does not <em>call non-pure functions</em> (like <code class="language-js >Date.now</code> or <code class="language-js >Math.random</code>).</li>
+<li>Does not <em>call non-pure functions</em> (like <code class="language-js" >Date.now</code> or <code class="language-js" >Math.random</code>).</li>
 <li>Does not <em>mutate</em> its arguments. If the reducer updates state, it should not <em>modify</em> the <strong>existing</strong> state object in-place. Instead, it should generate a <strong>new</strong> object containing the necessary changes. The same approach should be used for any sub-objects within state that the reducer updates.</li>
 </ul></li>
 </ul>
 <blockquote>
 <h5 id="note-on-immutability-side-effects-and-mutation"><span id="note-on-immutability-side-effects-and-mutation" class="anchor enhancedAnchor_2LWZ"></span>Note on immutability, side effects, and mutation<a href="#note-on-immutability-side-effects-and-mutation" class="hash-link" title="Direct link to heading">#</a></h5>
-<p>Mutation is discouraged because it generally breaks time-travel debugging, and React Redux’s <code class="language-js >connect</code> function:</p>
+<p>Mutation is discouraged because it generally breaks time-travel debugging, and React Redux’s <code class="language-js" >connect</code> function:</p>
 <ul>
 <li>For time traveling, the Redux DevTools expect that replaying recorded actions would output a state value, but not change anything else. <strong>Side effects like mutation or asynchronous behavior will cause time travel to alter behavior between steps, breaking the application</strong>.</li>
-<li>For React Redux, <code class="language-js >connect</code> checks to see if the props returned from a <code class="language-js >mapStateToProps</code> function have changed in order to determine if a component needs to update. To improve performance, <code class="language-js >connect</code> takes some shortcuts that rely on the state being immutable, and uses shallow reference equality checks to detect changes. This means that <strong>changes made to objects and arrays by direct mutation will not be detected, and components will not re-render</strong>.</li>
+<li>For React Redux, <code class="language-js" >connect</code> checks to see if the props returned from a <code class="language-js" >mapStateToProps</code> function have changed in order to determine if a component needs to update. To improve performance, <code class="language-js" >connect</code> takes some shortcuts that rely on the state being immutable, and uses shallow reference equality checks to detect changes. This means that <strong>changes made to objects and arrays by direct mutation will not be detected, and components will not re-render</strong>.</li>
 </ul>
 <p>Other side effects like generating unique IDs or timestamps in a reducer also make the code unpredictable and harder to debug and test.</p>
 </blockquote>
@@ -168,10 +168,10 @@
 <li><a href="../../tutorials/fundamentals/part-3-state-actions-reducers.html">“Redux Fundamentals” Part 3: State, Actions, and Reducers</a></li>
 <li><a href="../reducing-boilerplate.html">Redux Docs: Reducing Boilerplate</a></li>
 <li><a href="../implementing-undo-history.html">Redux Docs: Implementing Undo History</a></li>
-<li><a href="../../api/combinereducers.html">Redux Docs: <code class="language-js >combineReducers</code></a></li>
+<li><a href="../../api/combinereducers.html">Redux Docs: <code class="language-js" >combineReducers</code></a></li>
 <li><a href="../../../slides.com/omnidan/hor.html#/">The Power of Higher-Order Reducers</a></li>
-<li><a href="../../../stackoverflow.com/questions/33749759/read-stores-initial-state-in-redux-reducer.html">Stack Overflow: Store initial state and <code class="language-js >combineReducers</code></a></li>
-<li><a href="../../../stackoverflow.com/questions/35667775/state-in-redux-react-app-has-a-property-with-the-name-of-the-reducer.html">Stack Overflow: State key names and <code class="language-js >combineReducers</code></a></li>
+<li><a href="../../../stackoverflow.com/questions/33749759/read-stores-initial-state-in-redux-reducer.html">Stack Overflow: Store initial state and <code class="language-js" >combineReducers</code></a></li>
+<li><a href="../../../stackoverflow.com/questions/35667775/state-in-redux-react-app-has-a-property-with-the-name-of-the-reducer.html">Stack Overflow: State key names and <code class="language-js" >combineReducers</code></a></li>
 </ul>
 <h4 id="pure-functions-and-side-effects"><span id="pure-functions-and-side-effects" class="anchor enhancedAnchor_2LWZ"></span>Pure Functions and Side Effects<a href="#pure-functions-and-side-effects" class="hash-link" title="Direct link to heading">#</a></h4>
 <p><strong>Key Concepts</strong>:</p>

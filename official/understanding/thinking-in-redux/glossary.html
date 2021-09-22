@@ -1133,7 +1133,7 @@
                           refers to the single state value that is managed by
                           the store and returned by
                           <a href="../../api/store.html#getState"
-                            ><code class="language-js >getState()</code></a
+                            ><code class="language-js" >getState()</code></a
                           >. It represents the entire state of a Redux
                           application, which is often a deeply nested object.
                         </p>
@@ -1212,11 +1212,11 @@
                           actions.
                         </p>
                         <p>
-                          Actions must have a <code class="language-js >type</code> field that
+                          Actions must have a <code class="language-js" >type</code> field that
                           indicates the type of action being performed. Types
                           can be defined as constants and imported from another
                           module. It&#x27;s better to use strings for
-                          <code class="language-js >type</code> than
+                          <code class="language-js" >type</code> than
                           <a
                             href="../../../developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol.html"
                             target="_blank"
@@ -1226,7 +1226,7 @@
                           because strings are serializable.
                         </p>
                         <p>
-                          Other than <code class="language-js >type</code>, the structure of an
+                          Other than <code class="language-js" >type</code>, the structure of an
                           action object is really up to you. If you&#x27;re
                           interested, check out
                           <a
@@ -1368,7 +1368,7 @@
                             href="../../../developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce-2.html"
                             target="_blank"
                             rel="noopener noreferrer"
-                            ><code class="language-js >Array.prototype.reduce()</code></a
+                            ><code class="language-js" >Array.prototype.reduce()</code></a
                           >.
                         </p>
                         <p>
@@ -1520,7 +1520,7 @@
                           We must distinguish between dispatching functions in
                           general and the base
                           <a href="../../api/store.html#dispatchaction"
-                            ><code class="language-js >dispatch</code></a
+                            ><code class="language-js" >dispatch</code></a
                           >
                           function provided by the store instance without any
                           middleware.
@@ -1693,7 +1693,7 @@
                           does not dispatch it. You need to call the
                           store&#x27;s
                           <a href="../../api/store.html#dispatchaction"
-                            ><code class="language-js >dispatch</code></a
+                            ><code class="language-js" >dispatch</code></a
                           >
                           function to actually cause the mutation. Sometimes we
                           say <em>bound action creators</em> to mean functions
@@ -1768,7 +1768,7 @@
                           <a href="#middleware">middleware</a> into an action
                           (or a series of actions) before being sent to the base
                           <a href="../../api/store.html#dispatchaction"
-                            ><code class="language-js >dispatch()</code></a
+                            ><code class="language-js" >dispatch()</code></a
                           >
                           function. Async actions may have different types,
                           depending on the middleware you use. They are often
@@ -1957,7 +1957,7 @@
                         <p>
                           See
                           <a href="../../api/applymiddleware.html"
-                            ><code class="language-js >applyMiddleware(...middlewares)</code></a
+                            ><code class="language-js" >applyMiddleware(...middlewares)</code></a
                           >
                           for a detailed look at middleware.
                         </p>
@@ -2186,26 +2186,26 @@
                         <ul>
                           <li>
                             <a href="../../api/store.html#dispatchaction"
-                              ><code class="language-js >dispatch(action)</code></a
+                              ><code class="language-js" >dispatch(action)</code></a
                             >
                             is the base dispatch function described above.
                           </li>
                           <li>
                             <a href="../../api/store.html#getState"
-                              ><code class="language-js >getState()</code></a
+                              ><code class="language-js" >getState()</code></a
                             >
                             returns the current state of the store.
                           </li>
                           <li>
                             <a href="../../api/store.html#subscribelistener"
-                              ><code class="language-js >subscribe(listener)</code></a
+                              ><code class="language-js" >subscribe(listener)</code></a
                             >
                             registers a function to be called on state changes.
                           </li>
                           <li>
                             <a
                               href="../../api/store.html#replacereducernextreducer"
-                              ><code class="language-js >replaceReducer(nextReducer)</code></a
+                              ><code class="language-js" >replaceReducer(nextReducer)</code></a
                             >
                             can be used to implement hot reloading and code
                             splitting. Most likely you won&#x27;t use it.
@@ -2431,7 +2431,7 @@
                           easily created and modified without mutating the
                           original store. There is an example in
                           <a href="../../api/compose.html"
-                            ><code class="language-js >compose</code></a
+                            ><code class="language-js" >compose</code></a
                           >
                           documentation demonstrating that.
                         </p>

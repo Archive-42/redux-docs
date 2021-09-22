@@ -129,16 +129,16 @@
 <li><a href="../official/api/bindactioncreators.html" class="menu__link">bindActionCreators</a></li>
 <li><a href="../official/api/compose.html" class="menu__link">compose</a></li>
 </ul></li>
-<li><a href="#!" class="menu__link menu__link--sublist">Redux Toolkit</a>
+
 <ul>
 <li><a href="../official/redux-toolkit/overview.html" class="menu__link">Redux Toolkit: Overview</a></li>
 </ul></li>
 </ul>
 <h1 id="basic-reducer-structure-and-state-shape"><span id="basic-reducer-structure-and-state-shape" class="anchor enhancedAnchor_2LWZ"></span>Basic Reducer Structure and State Shape<a href="#basic-reducer-structure-and-state-shape" class="hash-link" title="Direct link to heading">#</a></h1>
 <h2 id="basic-reducer-structure"><span id="basic-reducer-structure" class="anchor enhancedAnchor_2LWZ"></span>Basic Reducer Structure<a href="#basic-reducer-structure" class="hash-link" title="Direct link to heading">#</a></h2>
-<p>First and foremost, it’s important to understand that your entire application really only has <strong>one single reducer function</strong>: the function that you’ve passed into <code class="language-js >createStore</code> as the first argument. That one single reducer function ultimately needs to do several things:</p>
+<p>First and foremost, it’s important to understand that your entire application really only has <strong>one single reducer function</strong>: the function that you’ve passed into <code class="language-js" >createStore</code> as the first argument. That one single reducer function ultimately needs to do several things:</p>
 <ul>
-<li>The first time the reducer is called, the <code class="language-js >state</code> value will be <code class="language-js >undefined</code>. The reducer needs to handle this case by supplying a default state value before handling the incoming action.</li>
+<li>The first time the reducer is called, the <code class="language-js" >state</code> value will be <code class="language-js" >undefined</code>. The reducer needs to handle this case by supplying a default state value before handling the incoming action.</li>
 <li>It needs to look at the previous state and the dispatched action, and determine what kind of work needs to be done</li>
 <li>Assuming actual changes need to occur, it needs to create new objects and arrays with the updated data and return those</li>
 <li>If no changes are needed, it should return the existing state as-is.</li>
@@ -159,7 +159,7 @@
 <p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
 <p>Copy</p>
 <p>Notice that this simple function fulfills all the basic requirements. It returns a default value if none exists, initializing the store; it determines what sort of update needs to be done based on the type of the action, and returns new values; and it returns the previous state if no work needs to be done.</p>
-<p>There are some simple tweaks that can be made to this reducer. First, repeated <code class="language-js >if</code>/<code class="language-js >else</code> statements quickly grow tiresome, so it’s very common to use <code class="language-js >switch</code> statements instead. Second, we can use ES6’s default parameter values to handle the initial “no existing data” case. With those changes, the reducer would look like:</p>
+<p>There are some simple tweaks that can be made to this reducer. First, repeated <code class="language-js" >if</code>/<code class="language-js" >else</code> statements quickly grow tiresome, so it’s very common to use <code class="language-js" >switch</code> statements instead. Second, we can use ES6’s default parameter values to handle the initial “no existing data” case. With those changes, the reducer would look like:</p>
 <p><span class="token keyword" style="color: #f92672">function</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">counter</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token parameter">state </span><span class="token parameter operator" style="color: #f8f8f2">=</span><span class="token parameter"> </span><span class="token parameter number" style="color: #ae81ff">0</span><span class="token parameter punctuation" style="color: #f8f8f2">,</span><span class="token parameter"> action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">switch</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">type</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token keyword" style="color: #f92672">case</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘INCREMENT’</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"></span></p>
@@ -189,14 +189,14 @@
 <p><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">]</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
 <p>Copy</p>
-<p>In this example, <code class="language-js >todos</code> and <code class="language-js >visibilityFilter</code> are both top-level keys in the state, and each represents a “slice” of data for some particular concept.</p>
+<p>In this example, <code class="language-js" >todos</code> and <code class="language-js" >visibilityFilter</code> are both top-level keys in the state, and each represents a “slice” of data for some particular concept.</p>
 <p>Most applications deal with multiple types of data, which can be broadly divided into three categories:</p>
 <ul>
 <li><em>Domain data</em>: data that the application needs to show, use, or modify (such as “all of the Todos retrieved from the server”)</li>
 <li><em>App state</em>: data that is specific to the application’s behavior (such as “Todo #5 is currently selected”, or “there is a request in progress to fetch Todos”)</li>
 <li><em>UI state</em>: data that represents how the UI is currently displayed (such as “The EditTodo modal dialog is currently open”)</li>
 </ul>
-<p>Because the store represents the core of your application, you should <strong>define your state shape in terms of your domain data and app state, not your UI component tree</strong>. As an example, a shape of <code class="language-js >state.leftPane.todoList.todos</code> would be a bad idea, because the idea of “todos” is central to the whole application, not just a single part of the UI. The <code class="language-js >todos</code> slice should be at the top of the state tree instead.</p>
+<p>Because the store represents the core of your application, you should <strong>define your state shape in terms of your domain data and app state, not your UI component tree</strong>. As an example, a shape of <code class="language-js" >state.leftPane.todoList.todos</code> would be a bad idea, because the idea of “todos” is central to the whole application, not just a single part of the UI. The <code class="language-js" >todos</code> slice should be at the top of the state tree instead.</p>
 <p>There will <em>rarely</em> be a 1-to-1 correspondence between your UI tree and your state shape. The exception to that might be if you are explicitly tracking various aspects of UI data in your Redux store as well, but even then the shape of the UI data and the shape of the domain data would likely be different.</p>
 <p>A typical app’s state shape might look roughly like:</p>
 <p><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>

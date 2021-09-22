@@ -95,10 +95,17 @@
       as="script"
     />
     <link rel="preload" href="../assets/js/main.8520a084.js" as="script" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css"
+    />
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
-    </head>
+    <script
+      async
+      defer
+      src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"
+    ></script>
+  </head>
   <body>
     <script>
       !(function () {
@@ -1488,12 +1495,13 @@
                           common suggested pattern is to have a separate
                           sub-reducer function that is responsible for managing
                           updates to a particular slice of state at a specific
-                          key. The <code class="language-js >combineReducers()</code> that comes
-                          with Redux is one of the many possible ways to achieve
-                          this. It&#x27;s also highly suggested to keep your
-                          store state as flat and as normalized as possible.
-                          Ultimately, though, you are in charge of organizing
-                          your reducer logic any way you want.
+                          key. The
+                          <code class="language-js">combineReducers()</code>
+                          that comes with Redux is one of the many possible ways
+                          to achieve this. It&#x27;s also highly suggested to
+                          keep your store state as flat and as normalized as
+                          possible. Ultimately, though, you are in charge of
+                          organizing your reducer logic any way you want.
                         </p>
                         <p>
                           However, even if you happen to have many different
@@ -1502,8 +1510,9 @@
                           problem. JavaScript engines are capable of running a
                           very large number of function calls per second, and
                           most of your reducers are probably just using a
-                          <code class="language-js >switch</code> statement and returning the
-                          existing state by default in response to most actions.
+                          <code class="language-js">switch</code> statement and
+                          returning the existing state by default in response to
+                          most actions.
                         </p>
                         <p>
                           If you actually are concerned about reducer
@@ -1608,11 +1617,11 @@
                         <p>
                           In addition, deep cloning state creates new references
                           for every field. Since the React-Redux
-                          <code class="language-js >connect</code> function relies on reference
-                          comparisons to determine if data has changed, this
-                          means that UI components will be forced to re-render
-                          unnecessarily even though the other data hasn&#x27;t
-                          meaningfully changed.
+                          <code class="language-js">connect</code> function
+                          relies on reference comparisons to determine if data
+                          has changed, this means that UI components will be
+                          forced to re-render unnecessarily even though the
+                          other data hasn&#x27;t meaningfully changed.
                         </p>
                         <p>
                           However, you <em>do</em> need to create a copied and
@@ -1763,17 +1772,19 @@
                             rel="noopener noreferrer"
                             >React-Redux v7</a
                           >
-                          a new <code class="language-js >batch</code> public API is available to
-                          help minimize the number of React re-renders when
-                          dispatching actions outside of React event handlers.
-                          It wraps React&#x27;s
-                          <code class="language-js >unstable_batchedUpdate()</code> API, allows any
-                          React updates in an event loop tick to be batched
-                          together into a single render pass. React already uses
-                          this internally for its own event handler callbacks.
-                          This API is actually part of the renderer packages
-                          like ReactDOM and React Native, not the React core
-                          itself.
+                          a new <code class="language-js">batch</code> public
+                          API is available to help minimize the number of React
+                          re-renders when dispatching actions outside of React
+                          event handlers. It wraps React&#x27;s
+                          <code class="language-js"
+                            >unstable_batchedUpdate()</code
+                          >
+                          API, allows any React updates in an event loop tick to
+                          be batched together into a single render pass. React
+                          already uses this internally for its own event handler
+                          callbacks. This API is actually part of the renderer
+                          packages like ReactDOM and React Native, not the React
+                          core itself.
                         </p>
                         <p>
                           Since React-Redux needs to work in both ReactDOM and
@@ -1781,9 +1792,10 @@
                           importing this API from the correct renderer at build
                           time for our own use. We also now re-export this
                           function publicly ourselves, renamed to
-                          <code class="language-js >batch()</code>. You can use it to ensure that
-                          multiple actions dispatched outside of React only
-                          result in a single render update, like this:
+                          <code class="language-js">batch()</code>. You can use
+                          it to ensure that multiple actions dispatched outside
+                          of React only result in a single render update, like
+                          this:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">

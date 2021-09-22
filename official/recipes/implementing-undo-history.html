@@ -99,10 +99,17 @@
       as="script"
     />
     <link rel="preload" href="../assets/js/main.8520a084.js" as="script" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css"
+    />
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
-    </head>
+    <script
+      async
+      defer
+      src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"
+    ></script>
+  </head>
   <body>
     <script>
       !(function () {
@@ -1133,12 +1140,14 @@
                           </li>
                           <li>
                             The reducer
-                            <code class="language-js >(state, action) =&gt; state</code> signature
-                            makes it natural to implement generic “reducer
-                            enhancers” or “higher order reducers”. They are
-                            functions that take your reducer and enhance it with
-                            some additional functionality while preserving its
-                            signature. Undo history is exactly such a case.
+                            <code class="language-js"
+                              >(state, action) =&gt; state</code
+                            >
+                            signature makes it natural to implement generic
+                            “reducer enhancers” or “higher order reducers”. They
+                            are functions that take your reducer and enhance it
+                            with some additional functionality while preserving
+                            its signature. Undo history is exactly such a case.
                           </li>
                         </ul>
                         <p>
@@ -3578,9 +3587,10 @@
                           Let&#x27;s talk through the algorithm to manipulate
                           the state shape described above. We can define two
                           actions to operate on this state:
-                          <code class="language-js >UNDO</code> and <code class="language-js >REDO</code>. In our
-                          reducer, we will do the following steps to handle
-                          these actions:
+                          <code class="language-js">UNDO</code> and
+                          <code class="language-js">REDO</code>. In our reducer,
+                          we will do the following steps to handle these
+                          actions:
                         </p>
                         <h4>
                           <a
@@ -3599,15 +3609,17 @@
                         <ul>
                           <li>
                             Remove the <em>last</em> element from the
-                            <code class="language-js >past</code>.
+                            <code class="language-js">past</code>.
                           </li>
                           <li>
-                            Set the <code class="language-js >present</code> to the element we
-                            removed in the previous step.
+                            Set the <code class="language-js">present</code> to
+                            the element we removed in the previous step.
                           </li>
                           <li>
-                            Insert the old <code class="language-js >present</code> state at the
-                            <em>beginning</em> of the <code class="language-js >future</code>.
+                            Insert the old
+                            <code class="language-js">present</code> state at
+                            the <em>beginning</em> of the
+                            <code class="language-js">future</code>.
                           </li>
                         </ul>
                         <h4>
@@ -3627,15 +3639,17 @@
                         <ul>
                           <li>
                             Remove the <em>first</em> element from the
-                            <code class="language-js >future</code>.
+                            <code class="language-js">future</code>.
                           </li>
                           <li>
-                            Set the <code class="language-js >present</code> to the element we
-                            removed in the previous step.
+                            Set the <code class="language-js">present</code> to
+                            the element we removed in the previous step.
                           </li>
                           <li>
-                            Insert the old <code class="language-js >present</code> state at the
-                            <em>end</em> of the <code class="language-js >past</code>.
+                            Insert the old
+                            <code class="language-js">present</code> state at
+                            the <em>end</em> of the
+                            <code class="language-js">past</code>.
                           </li>
                         </ul>
                         <h4>
@@ -3654,14 +3668,17 @@
                         </h4>
                         <ul>
                           <li>
-                            Insert the <code class="language-js >present</code> at the end of the
-                            <code class="language-js >past</code>.
+                            Insert the
+                            <code class="language-js">present</code> at the end
+                            of the <code class="language-js">past</code>.
                           </li>
                           <li>
-                            Set the <code class="language-js >present</code> to the new state after
-                            handling the action.
+                            Set the <code class="language-js">present</code> to
+                            the new state after handling the action.
                           </li>
-                          <li>Clear the <code class="language-js >future</code>.</li>
+                          <li>
+                            Clear the <code class="language-js">future</code>.
+                          </li>
                         </ul>
                         <h3>
                           <a
@@ -4305,16 +4322,18 @@
                         <ul>
                           <li>
                             Where do we get the initial
-                            <code class="language-js >present</code> state from? We don&#x27;t seem
-                            to know it beforehand.
+                            <code class="language-js">present</code> state from?
+                            We don&#x27;t seem to know it beforehand.
                           </li>
                           <li>
                             Where do we react to the external actions to save
-                            the <code class="language-js >present</code> to the <code class="language-js >past</code>?
+                            the <code class="language-js">present</code> to the
+                            <code class="language-js">past</code>?
                           </li>
                           <li>
                             How do we actually delegate the control over the
-                            <code class="language-js >present</code> state to a custom reducer?
+                            <code class="language-js">present</code> state to a
+                            custom reducer?
                           </li>
                         </ul>
                         <p>
@@ -4360,7 +4379,9 @@
                           actions it doesn&#x27;t understand. This isn&#x27;t a
                           new pattern—technically,
                           <a href="../api/combinereducers.html"
-                            ><code class="language-js >combineReducers()</code></a
+                            ><code class="language-js"
+                              >combineReducers()</code
+                            ></a
                           >
                           is also a reducer enhancer because it takes reducers
                           and returns a new reducer.
@@ -4814,7 +4835,8 @@
                         <p>
                           Now that we have a better understanding of reducer
                           enhancers, we can see that this is exactly what
-                          <code class="language-js >undoable</code> should have been:
+                          <code class="language-js">undoable</code> should have
+                          been:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -5662,9 +5684,10 @@
                         </div>
                         <p>
                           We can now wrap any reducer into
-                          <code class="language-js >undoable</code> reducer enhancer to teach it to
-                          react to <code class="language-js >UNDO</code> and
-                          <code class="language-js >REDO</code> actions.
+                          <code class="language-js">undoable</code> reducer
+                          enhancer to teach it to react to
+                          <code class="language-js">UNDO</code> and
+                          <code class="language-js">REDO</code> actions.
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -6076,12 +6099,13 @@
                         </div>
                         <p>
                           There is an important gotcha: you need to remember to
-                          append <code class="language-js >.present</code> to the current state when
-                          you retrieve it. You may also check
-                          <code class="language-js >.past.length</code> and
-                          <code class="language-js >.future.length</code> to determine whether to
-                          enable or to disable the Undo and Redo buttons,
-                          respectively.
+                          append <code class="language-js">.present</code> to
+                          the current state when you retrieve it. You may also
+                          check
+                          <code class="language-js">.past.length</code> and
+                          <code class="language-js">.future.length</code> to
+                          determine whether to enable or to disable the Undo and
+                          Redo buttons, respectively.
                         </p>
                         <p>
                           You might have heard that Redux was influenced by
@@ -6116,7 +6140,8 @@
                         <p>
                           This was all very informative, but can&#x27;t we just
                           drop a library and use it instead of implementing
-                          <code class="language-js >undoable</code> ourselves? Sure, we can! Meet
+                          <code class="language-js">undoable</code> ourselves?
+                          Sure, we can! Meet
                           <a
                             href="../../github.com/omnidan/redux-undo.html"
                             target="_blank"
@@ -6133,8 +6158,8 @@
                             href="../../github.com/reduxjs/redux/tree/master/examples/todos-with-undo.html"
                             target="_blank"
                             rel="noopener noreferrer"
-                            ><code class="language-js >todos-with-undo</code> example that comes
-                            with Redux</a
+                            ><code class="language-js">todos-with-undo</code>
+                            example that comes with Redux</a
                           >.
                         </p>
                         <h3>
@@ -6188,7 +6213,8 @@
                         </div>
                         <p>
                           This installs the package that provides the
-                          <code class="language-js >undoable</code> reducer enhancer.
+                          <code class="language-js">undoable</code> reducer
+                          enhancer.
                         </p>
                         <h3>
                           <a
@@ -6206,10 +6232,13 @@
                         </h3>
                         <p>
                           You will need to wrap the reducer you wish to enhance
-                          with <code class="language-js >undoable</code> function. For example, if
-                          you exported a <code class="language-js >todos</code> reducer from a
+                          with
+                          <code class="language-js">undoable</code> function.
+                          For example, if you exported a
+                          <code class="language-js">todos</code> reducer from a
                           dedicated file, you will want to change it to export
-                          the result of calling <code class="language-js >undoable()</code> with the
+                          the result of calling
+                          <code class="language-js">undoable()</code> with the
                           reducer you wrote:
                         </p>
                         <h4>
@@ -6219,7 +6248,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="reducerstodosjs"
                           ></a
-                          ><code class="language-js >reducers/todos.js</code
+                          ><code class="language-js">reducers/todos.js</code
                           ><a
                             class="hash-link"
                             href="#reducerstodosjs"
@@ -6438,10 +6467,11 @@
                           action type for Undo and Redo actions.
                         </p>
                         <p>
-                          Note that your <code class="language-js >combineReducers()</code> call
-                          will stay exactly as it was, but the
-                          <code class="language-js >todos</code> reducer will now refer to the
-                          reducer enhanced with Redux Undo:
+                          Note that your
+                          <code class="language-js">combineReducers()</code>
+                          call will stay exactly as it was, but the
+                          <code class="language-js">todos</code> reducer will
+                          now refer to the reducer enhanced with Redux Undo:
                         </p>
                         <h4>
                           <a
@@ -6450,7 +6480,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="reducersindexjs"
                           ></a
-                          ><code class="language-js >reducers/index.js</code
+                          ><code class="language-js">reducers/index.js</code
                           ><a
                             class="hash-link"
                             href="#reducersindexjs"
@@ -6636,12 +6666,12 @@
                         </div>
                         <p>
                           You may wrap one or more reducers in
-                          <code class="language-js >undoable</code> at any level of the reducer
-                          composition hierarchy. We choose to wrap
-                          <code class="language-js >todos</code> instead of the top-level combined
-                          reducer so that changes to
-                          <code class="language-js >visibilityFilter</code> are not reflected in the
-                          undo history.
+                          <code class="language-js">undoable</code> at any level
+                          of the reducer composition hierarchy. We choose to
+                          wrap <code class="language-js">todos</code> instead of
+                          the top-level combined reducer so that changes to
+                          <code class="language-js">visibilityFilter</code> are
+                          not reflected in the undo history.
                         </p>
                         <h3>
                           <a
@@ -6658,8 +6688,8 @@
                           >
                         </h3>
                         <p>
-                          Now the <code class="language-js >todos</code> part of the state looks
-                          like this:
+                          Now the <code class="language-js">todos</code> part of
+                          the state looks like this:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -7071,8 +7101,9 @@
                         </div>
                         <p>
                           This means you need to access your state with
-                          <code class="language-js >state.todos.present</code> instead of just
-                          <code class="language-js >state.todos</code>:
+                          <code class="language-js">state.todos.present</code>
+                          instead of just
+                          <code class="language-js">state.todos</code>:
                         </p>
                         <h4>
                           <a
@@ -7081,7 +7112,8 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="containersvisibletodolistjs"
                           ></a
-                          ><code class="language-js >containers/VisibleTodoList.js</code
+                          ><code class="language-js"
+                            >containers/VisibleTodoList.js</code
                           ><a
                             class="hash-link"
                             href="#containersvisibletodolistjs"
@@ -7241,9 +7273,10 @@
                         </p>
                         <p>
                           First, create a new container component called
-                          <code class="language-js >UndoRedo</code> for these buttons. We won&#x27;t
-                          bother to split the presentational part into a
-                          separate file because it is very small:
+                          <code class="language-js">UndoRedo</code> for these
+                          buttons. We won&#x27;t bother to split the
+                          presentational part into a separate file because it is
+                          very small:
                         </p>
                         <h4>
                           <a
@@ -7252,7 +7285,8 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="containersundoredojs"
                           ></a
-                          ><code class="language-js >containers/UndoRedo.js</code
+                          ><code class="language-js"
+                            >containers/UndoRedo.js</code
                           ><a
                             class="hash-link"
                             href="#containersundoredojs"
@@ -7571,7 +7605,8 @@
                           </div>
                         </div>
                         <p>
-                          You will use <code class="language-js >connect()</code> from
+                          You will use
+                          <code class="language-js">connect()</code> from
                           <a
                             href="../../github.com/reduxjs/react-redux.html"
                             target="_blank"
@@ -7580,10 +7615,15 @@
                           >
                           to generate a container component. To determine
                           whether to enable Undo and Redo buttons, you can check
-                          <code class="language-js >state.todos.past.length</code> and
-                          <code class="language-js >state.todos.future.length</code>. You won&#x27;t
-                          need to write action creators for performing undo and
-                          redo because Redux Undo already provides them:
+                          <code class="language-js"
+                            >state.todos.past.length</code
+                          >
+                          and
+                          <code class="language-js"
+                            >state.todos.future.length</code
+                          >. You won&#x27;t need to write action creators for
+                          performing undo and redo because Redux Undo already
+                          provides them:
                         </p>
                         <h4>
                           <a
@@ -7592,7 +7632,8 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="containersundoredojs-1"
                           ></a
-                          ><code class="language-js >containers/UndoRedo.js</code
+                          ><code class="language-js"
+                            >containers/UndoRedo.js</code
                           ><a
                             class="hash-link"
                             href="#containersundoredojs-1"
@@ -8136,8 +8177,9 @@
                           </div>
                         </div>
                         <p>
-                          Now you can add <code class="language-js >UndoRedo</code> component to the
-                          <code class="language-js >App</code> component:
+                          Now you can add
+                          <code class="language-js">UndoRedo</code> component to
+                          the <code class="language-js">App</code> component:
                         </p>
                         <h4>
                           <a
@@ -8146,7 +8188,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="componentsappjs"
                           ></a
-                          ><code class="language-js >components/App.js</code
+                          ><code class="language-js">components/App.js</code
                           ><a
                             class="hash-link"
                             href="#componentsappjs"
@@ -8473,8 +8515,9 @@
                           </div>
                         </div>
                         <p>
-                          This is it! Run <code class="language-js >npm install</code> and
-                          <code class="language-js >npm start</code> in the
+                          This is it! Run
+                          <code class="language-js">npm install</code> and
+                          <code class="language-js">npm start</code> in the
                           <a
                             href="../../github.com/reduxjs/redux/tree/master/examples/todos-with-undo.html"
                             target="_blank"

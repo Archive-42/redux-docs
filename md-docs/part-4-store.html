@@ -137,7 +137,7 @@
 <li><a href="../official/api/bindactioncreators.html" class="menu__link">bindActionCreators</a></li>
 <li><a href="../official/api/compose.html" class="menu__link">compose</a></li>
 </ul></li>
-<li><a href="#!" class="menu__link menu__link--sublist">Redux Toolkit</a>
+
 <ul>
 <li><a href="../official/redux-toolkit/overview.html" class="menu__link">Redux Toolkit: Overview</a></li>
 </ul></li>
@@ -151,21 +151,21 @@
 <li>How to set up the Redux DevTools Extension to debug your app</li>
 </ul>
 <h2 id="introduction"><span id="introduction" class="anchor enhancedAnchor_2LWZ"></span>Introduction<a href="#introduction" class="hash-link" title="Direct link to heading">#</a></h2>
-<p>In <a href="part-3-state-actions-reducers.html">Part 3: State, Actions, and Reducers</a>, we started writing our example todo app. We listed business requirements, defined the <strong>state</strong> structure we need to make the app work, and created a series of action types to describe “what happened” and match the kinds of events that can happen as a user interacts with our app. We also wrote <strong>reducer</strong> functions that can handle updating our <code class="language-js >state.todos</code> and <code class="language-js >state.filters</code> sections, and saw how we can use the Redux <code class="language-js >combineReducers</code> function to create a “root reducer” based on the different “slice reducers” for each feature in our app.</p>
+<p>In <a href="part-3-state-actions-reducers.html">Part 3: State, Actions, and Reducers</a>, we started writing our example todo app. We listed business requirements, defined the <strong>state</strong> structure we need to make the app work, and created a series of action types to describe “what happened” and match the kinds of events that can happen as a user interacts with our app. We also wrote <strong>reducer</strong> functions that can handle updating our <code class="language-js" >state.todos</code> and <code class="language-js" >state.filters</code> sections, and saw how we can use the Redux <code class="language-js" >combineReducers</code> function to create a “root reducer” based on the different “slice reducers” for each feature in our app.</p>
 <p>Now, it’s time to pull those pieces together, with the central piece of a Redux app: the <strong>store</strong>.</p>
 <h2 id="redux-store"><span id="redux-store" class="anchor enhancedAnchor_2LWZ"></span>Redux Store<a href="#redux-store" class="hash-link" title="Direct link to heading">#</a></h2>
 <p>The Redux <strong>store</strong> brings together the state, actions, and reducers that make up your app. The store has several responsibilities:</p>
 <ul>
 <li>Holds the current application state inside</li>
-<li>Allows access to the current state via <a href="../../api/store.html#getState"><code class="language-js >store.getState()</code></a>;</li>
-<li>Allows state to be updated via <a href="../../api/store.html#dispatch"><code class="language-js >store.dispatch(action)</code></a>;</li>
-<li>Registers listener callbacks via <a href="../../api/store.html#subscribe"><code class="language-js >store.subscribe(listener)</code></a>;</li>
-<li>Handles unregistering of listeners via the <code class="language-js >unsubscribe</code> function returned by <a href="../../api/store.html#subscribe"><code class="language-js >store.subscribe(listener)</code></a>.</li>
+<li>Allows access to the current state via <a href="../../api/store.html#getState"><code class="language-js" >store.getState()</code></a>;</li>
+<li>Allows state to be updated via <a href="../../api/store.html#dispatch"><code class="language-js" >store.dispatch(action)</code></a>;</li>
+<li>Registers listener callbacks via <a href="../../api/store.html#subscribe"><code class="language-js" >store.subscribe(listener)</code></a>;</li>
+<li>Handles unregistering of listeners via the <code class="language-js" >unsubscribe</code> function returned by <a href="../../api/store.html#subscribe"><code class="language-js" >store.subscribe(listener)</code></a>.</li>
 </ul>
 <p>It’s important to note that <strong>you’ll only have a single store in a Redux application</strong>. When you want to split your data handling logic, you’ll use <a href="part-3-state-actions-reducers.html#splitting-reducers">reducer composition</a> and create multiple reducers that can be combined together, instead of creating separate stores.</p>
 <h3 id="creating-a-store"><span id="creating-a-store" class="anchor enhancedAnchor_2LWZ"></span>Creating a Store<a href="#creating-a-store" class="hash-link" title="Direct link to heading">#</a></h3>
-<p><strong>Every Redux store has a single root reducer function</strong>. In the previous section, we <a href="part-3-state-actions-reducers.html#combinereducers">created a root reducer function using <code class="language-js >combineReducers</code></a>. That root reducer is currently defined in <code class="language-js >src/reducer.js</code> in our example app. Let’s import that root reducer and create our first store.</p>
-<p>The Redux core library has <a href="../../api/createstore.html"><strong>a <code class="language-js >createStore</code> API</strong></a> that will create the store. Add a new file called <code class="language-js >store.js</code>, and import <code class="language-js >createStore</code> and the root reducer. Then, call <code class="language-js >createStore</code> and pass in the root reducer:</p>
+<p><strong>Every Redux store has a single root reducer function</strong>. In the previous section, we <a href="part-3-state-actions-reducers.html#combinereducers">created a root reducer function using <code class="language-js" >combineReducers</code></a>. That root reducer is currently defined in <code class="language-js" >src/reducer.js</code> in our example app. Let’s import that root reducer and create our first store.</p>
+<p>The Redux core library has <a href="../../api/createstore.html"><strong>a <code class="language-js" >createStore</code> API</strong></a> that will create the store. Add a new file called <code class="language-js" >store.js</code>, and import <code class="language-js" >createStore</code> and the root reducer. Then, call <code class="language-js" >createStore</code> and pass in the root reducer:</p>
 <p>src/store.js</p>
 <p><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘redux’</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">rootReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘./reducer’</span><span class="token plain"></span></p>
@@ -175,7 +175,7 @@
 <p><span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> store</span></p>
 <p>Copy</p>
 <h3 id="loading-initial-state"><span id="loading-initial-state" class="anchor enhancedAnchor_2LWZ"></span>Loading Initial State<a href="#loading-initial-state" class="hash-link" title="Direct link to heading">#</a></h3>
-<p><code class="language-js >createStore</code> can also accept a <code class="language-js >preloadedState</code> value as its second argument. You could use this to add initial data when the store is created, such as values that were included in an HTML page sent from the server, or persisted in <code class="language-js >localStorage</code> and read back when the user visits the page again, like this:</p>
+<p><code class="language-js" >createStore</code> can also accept a <code class="language-js" >preloadedState</code> value as its second argument. You could use this to add initial data when the store is created, such as values that were included in an HTML page sent from the server, or persisted in <code class="language-js" >localStorage</code> and read back when the user visits the page again, like this:</p>
 <p>storeStatePersistenceExample.js</p>
 <p><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘redux’</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">rootReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘./reducer’</span><span class="token plain"></span></p>
@@ -194,7 +194,7 @@
 <h2 id="dispatching-actions"><span id="dispatching-actions" class="anchor enhancedAnchor_2LWZ"></span>Dispatching Actions<a href="#dispatching-actions" class="hash-link" title="Direct link to heading">#</a></h2>
 <p>Now that we have created a store, let’s verify our program works! Even without any UI, we can already test the update logic.</p>
 <h5 id="tip"><span class="admonition-icon"> </span>tip</h5>
-<p>Before you run this code, try going back to <code class="language-js >src/features/todos/todosSlice.js</code>, and remove all the example todo objects from the <code class="language-js >initialState</code> so that it’s an empty array. That will make the output from this example a bit easier to read.</p>
+<p>Before you run this code, try going back to <code class="language-js" >src/features/todos/todosSlice.js</code>, and remove all the example todo objects from the <code class="language-js" >initialState</code> so that it’s an empty array. That will make the output from this example a bit easier to read.</p>
 <p>src/index.js</p>
 <p><span class="token comment" style="color: #c6cad2">// Omit existing React imports</span><span class="token plain"></span></p>
 <p><span class="token plain" style="display: inline-block"> </span></p>
@@ -235,24 +235,24 @@
 <p><span class="token plain" style="display: inline-block"> </span></p>
 <p><span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Omit existing React rendering logic</span></p>
 <p>Copy</p>
-<p>Remember, every time we call <code class="language-js >store.dispatch(action)</code>:</p>
+<p>Remember, every time we call <code class="language-js" >store.dispatch(action)</code>:</p>
 <ul>
-<li>The store calls <code class="language-js >rootReducer(state, action)</code>
+<li>The store calls <code class="language-js" >rootReducer(state, action)</code>
 <ul>
-<li>That root reducer may call other slice reducers inside of itself, like <code class="language-js >todosReducer(state.todos, action)</code></li>
+<li>That root reducer may call other slice reducers inside of itself, like <code class="language-js" >todosReducer(state.todos, action)</code></li>
 </ul></li>
 <li>The store saves the <em>new</em> state value inside</li>
 <li>The store calls all the listener subscription callbacks</li>
-<li>If a listener has access to the <code class="language-js >store</code>, it can now call <code class="language-js >store.getState()</code> to read the latest state value</li>
+<li>If a listener has access to the <code class="language-js" >store</code>, it can now call <code class="language-js" >store.getState()</code> to read the latest state value</li>
 </ul>
 <p>If we look at the console log output from that example, you can see how the Redux state changes as each action was dispatched:</p>
 <figure>
 <img src="../../../d33wubrfki0l68.cloudfront.net/9d150ae03734f187be6fd7782d7a1d87a78441db/cd37e/assets/images/initial-state-updates-67635eb69036940412b749502d6f1e5" alt="Logged Redux state after dispatching actions" /><figcaption>Logged Redux state after dispatching actions</figcaption>
 </figure>
-<p>Notice that our app did <em>not</em> log anything from the last action. That’s because we removed the listener callback when we called <code class="language-js >unsubscribe()</code>, so nothing else ran after the action was dispatched.</p>
+<p>Notice that our app did <em>not</em> log anything from the last action. That’s because we removed the listener callback when we called <code class="language-js" >unsubscribe()</code>, so nothing else ran after the action was dispatched.</p>
 <p>We specified the behavior of our app before we even started writing the UI. That helps give us confidence that the app will work as intended.</p>
 <h5 id="info"><span class="admonition-icon"> </span>info</h5>
-<p>If you want, you can now try writing tests for your reducers. Because they’re <a href="../../understanding/thinking-in-redux/three-principles.html#changes-are-made-with-pure-functions">pure functions</a>, it should be straightforward to test them. Call them with an example <code class="language-js >state</code> and <code class="language-js >action</code>, take the result, and check to see if it matches what you expect:</p>
+<p>If you want, you can now try writing tests for your reducers. Because they’re <a href="../../understanding/thinking-in-redux/three-principles.html#changes-are-made-with-pure-functions">pure functions</a>, it should be straightforward to test them. Call them with an example <code class="language-js" >state</code> and <code class="language-js" >action</code>, take the result, and check to see if it matches what you expect:</p>
 <p>todosSlice.spec.js</p>
 <p><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">todosReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘./todosSlice’</span><span class="token plain"></span></p>
 <p><span class="token plain" style="display: inline-block"> </span></p>
@@ -293,40 +293,40 @@
 <p><span class="token plain"> </span><span class="token keyword control-flow" style="color: #f92672">return</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> dispatch</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> subscribe</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> getState </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token punctuation" style="color: #f8f8f2">}</span></p>
 <p>Copy</p>
-<p>This small version of a Redux store works well enough that you could use it to replace the actual Redux <code class="language-js >createStore</code> function you’ve been using in your app so far. (Try it and see for yourself!) <a href="../../../github.com/reduxjs/redux/blob/v4.0.5/src/createStore.html">The actual Redux store implementation is longer and a bit more complicated</a>, but most of that is comments, warning messages, and handling some edge cases.</p>
+<p>This small version of a Redux store works well enough that you could use it to replace the actual Redux <code class="language-js" >createStore</code> function you’ve been using in your app so far. (Try it and see for yourself!) <a href="../../../github.com/reduxjs/redux/blob/v4.0.5/src/createStore.html">The actual Redux store implementation is longer and a bit more complicated</a>, but most of that is comments, warning messages, and handling some edge cases.</p>
 <p>As you can see, the actual logic here is fairly short:</p>
 <ul>
-<li>The store has the current <code class="language-js >state</code> value and <code class="language-js >reducer</code> function inside of itself</li>
-<li><code class="language-js >getState</code> returns the current state value</li>
-<li><code class="language-js >subscribe</code> keeps an array of listener callbacks and returns a function to remove the new callback</li>
-<li><code class="language-js >dispatch</code> calls the reducer, saves the state, and runs the listeners</li>
+<li>The store has the current <code class="language-js" >state</code> value and <code class="language-js" >reducer</code> function inside of itself</li>
+<li><code class="language-js" >getState</code> returns the current state value</li>
+<li><code class="language-js" >subscribe</code> keeps an array of listener callbacks and returns a function to remove the new callback</li>
+<li><code class="language-js" >dispatch</code> calls the reducer, saves the state, and runs the listeners</li>
 <li>The store dispatches one action on startup to initialize the reducers with their state</li>
-<li>The store API is an object with <code class="language-js >{dispatch, subscribe, getState}</code> inside</li>
+<li>The store API is an object with <code class="language-js" >{dispatch, subscribe, getState}</code> inside</li>
 </ul>
-<p>To emphasize one of those in particular: notice that <code class="language-js >getState</code> just returns whatever the current <code class="language-js >state</code> value is. That means that <strong>by default, nothing prevents you from accidentally mutating the current state value!</strong> This code will run without any errors, but it’s incorrect:</p>
+<p>To emphasize one of those in particular: notice that <code class="language-js" >getState</code> just returns whatever the current <code class="language-js" >state</code> value is. That means that <strong>by default, nothing prevents you from accidentally mutating the current state value!</strong> This code will run without any errors, but it’s incorrect:</p>
 <p><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> state </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">getState</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token comment" style="color: #c6cad2">// ❌ Don’t do this - it mutates the current state!</span><span class="token plain"></span></p>
 <p><span class="token plain">state</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">filters</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token property-access">status</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘Active’</span></p>
 <p>Copy</p>
 <p>In other words:</p>
 <ul>
-<li>The Redux store doesn’t make an extra copy of the <code class="language-js >state</code> value when you call <code class="language-js >getState()</code>. It’s exactly the same reference that was returned from the root reducer function</li>
+<li>The Redux store doesn’t make an extra copy of the <code class="language-js" >state</code> value when you call <code class="language-js" >getState()</code>. It’s exactly the same reference that was returned from the root reducer function</li>
 <li>The Redux store doesn’t do anything else to prevent accidental mutations. It <em>is</em> possible to mutate the state, either inside a reducer or outside the store, and you must always be careful to avoid mutations.</li>
 </ul>
-<p>One common cause of accidental mutations is sorting arrays. <a href="../../../doesitmutate.xyz/sort/index.html"><strong>Calling <code class="language-js >array.sort()</code> actually mutates the existing array</strong></a>. If we called <code class="language-js >const sortedTodos = state.todos.sort()</code>, we’d end up mutating the real store state unintentionally.</p>
+<p>One common cause of accidental mutations is sorting arrays. <a href="../../../doesitmutate.xyz/sort/index.html"><strong>Calling <code class="language-js" >array.sort()</code> actually mutates the existing array</strong></a>. If we called <code class="language-js" >const sortedTodos = state.todos.sort()</code>, we’d end up mutating the real store state unintentionally.</p>
 <h5 id="tip-1"><span class="admonition-icon"> </span>tip</h5>
 <p>In <a href="part-8-modern-redux.html">Part 8: Modern Redux</a>, we’ll see how Redux Toolkit helps avoid mutations in reducers, and detects and warns about accidental mutations outside of reducers.</p>
 <h2 id="configuring-the-store"><span id="configuring-the-store" class="anchor enhancedAnchor_2LWZ"></span>Configuring the Store<a href="#configuring-the-store" class="hash-link" title="Direct link to heading">#</a></h2>
-<p>We’ve already seen that we can pass <code class="language-js >rootReducer</code> and <code class="language-js >preloadedState</code> arguments to <code class="language-js >createStore</code>. However, <code class="language-js >createStore</code> can also take one more argument, which is used to customize the store’s abilities and give it new powers.</p>
-<p>Redux stores are customized using something called a <strong>store enhancer</strong>. A store enhancer is like a special version of <code class="language-js >createStore</code> that adds another layer wrapping around the original Redux store. An enhanced store can then change how the store behaves, by supplying its own versions of the store’s <code class="language-js >dispatch</code>, <code class="language-js >getState</code>, and <code class="language-js >subscribe</code> functions instead of the originals.</p>
+<p>We’ve already seen that we can pass <code class="language-js" >rootReducer</code> and <code class="language-js" >preloadedState</code> arguments to <code class="language-js" >createStore</code>. However, <code class="language-js" >createStore</code> can also take one more argument, which is used to customize the store’s abilities and give it new powers.</p>
+<p>Redux stores are customized using something called a <strong>store enhancer</strong>. A store enhancer is like a special version of <code class="language-js" >createStore</code> that adds another layer wrapping around the original Redux store. An enhanced store can then change how the store behaves, by supplying its own versions of the store’s <code class="language-js" >dispatch</code>, <code class="language-js" >getState</code>, and <code class="language-js" >subscribe</code> functions instead of the originals.</p>
 <p>For this tutorial, we won’t go into details about how store enhancers actually work - we’ll focus on how to use them.</p>
 <h3 id="creating-a-store-with-enhancers"><span id="creating-a-store-with-enhancers" class="anchor enhancedAnchor_2LWZ"></span>Creating a Store with Enhancers<a href="#creating-a-store-with-enhancers" class="hash-link" title="Direct link to heading">#</a></h3>
-<p>Our project has two small example store enhancers available, in the <code class="language-js >src/exampleAddons/enhancers.js</code> file:</p>
+<p>Our project has two small example store enhancers available, in the <code class="language-js" >src/exampleAddons/enhancers.js</code> file:</p>
 <ul>
-<li><code class="language-js >sayHiOnDispatch</code>: an enhancer that always logs <code class="language-js >'Hi'!</code> to the console every time an action is dispatched</li>
-<li><code class="language-js >includeMeaningOfLife</code>: an enhancer that always adds the field <code class="language-js >meaningOfLife: 42</code> to the value returned from <code class="language-js >getState()</code></li>
+<li><code class="language-js" >sayHiOnDispatch</code>: an enhancer that always logs <code class="language-js" >'Hi'!</code> to the console every time an action is dispatched</li>
+<li><code class="language-js" >includeMeaningOfLife</code>: an enhancer that always adds the field <code class="language-js" >meaningOfLife: 42</code> to the value returned from <code class="language-js" >getState()</code></li>
 </ul>
-<p>Let’s start by using <code class="language-js >sayHiOnDispatch</code>. First, we’ll import it, and pass it to <code class="language-js >createStore</code>:</p>
+<p>Let’s start by using <code class="language-js" >sayHiOnDispatch</code>. First, we’ll import it, and pass it to <code class="language-js" >createStore</code>:</p>
 <p>src/store.js</p>
 <p><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createStore </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘redux’</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">rootReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘./reducer’</span><span class="token plain"></span></p>
@@ -336,7 +336,7 @@
 <p><span class="token plain" style="display: inline-block"> </span></p>
 <p><span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> store</span></p>
 <p>Copy</p>
-<p>We don’t have a <code class="language-js >preloadedState</code> value here, so we’ll pass <code class="language-js >undefined</code> as the second argument instead.</p>
+<p>We don’t have a <code class="language-js" >preloadedState</code> value here, so we’ll pass <code class="language-js" >undefined</code> as the second argument instead.</p>
 <p>Next, let’s try dispatching an action:</p>
 <p>src/index.js</p>
 <p><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">store</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘./store’</span><span class="token plain"></span></p>
@@ -345,14 +345,14 @@
 <p><span class="token plain">store</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">dispatch</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"> type</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘todos/todoAdded’</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> payload</span><span class="token operator" style="color: #f8f8f2">:</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘Learn about actions’</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">}</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color: #f8f8f2">.</span><span class="token method function property-access" style="color: #e6d874">log</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token string" style="color: #a6e22e">‘Dispatch complete’</span><span class="token punctuation" style="color: #f8f8f2">)</span></p>
 <p>Copy</p>
-<p>Now look at the console. You should see <code class="language-js >'Hi!'</code> logged there, in between the other two log statements:</p>
+<p>Now look at the console. You should see <code class="language-js" >'Hi!'</code> logged there, in between the other two log statements:</p>
 <figure>
 <img src="data:image/png;base64,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" alt="sayHi store enhancer logging" /><figcaption>sayHi store enhancer logging</figcaption>
 </figure>
-<p>The <code class="language-js >sayHiOnDispatch</code> enhancer wrapped the original <code class="language-js >store.dispatch</code> function with its own specialized version of <code class="language-js >dispatch</code>. When we called <code class="language-js >store.dispatch()</code>, we were actually calling the wrapper function from <code class="language-js >sayHiOnDispatch</code>, which called the original and then printed ‘Hi’.</p>
-<p>Now, let’s try adding a second enhancer. We can import <code class="language-js >includeMeaningOfLife</code> from that same file… but we have a problem. <strong><code class="language-js >createStore</code> only accepts one enhancer as its third argument!</strong> How can we pass <em>two</em> enhancers at the same time?</p>
-<p>What we really need is some way to merge both the <code class="language-js >sayHiOnDispatch</code> enhancer and the <code class="language-js >includeMeaningOfLife</code> enhancer into a single combined enhancer, and then pass that instead.</p>
-<p>Fortunately, <strong>the Redux core includes <a href="../../api/compose.html">a <code class="language-js >compose</code> function</a> that can be used to merge multiple enhancers together</strong>. Let’s use that here:</p>
+<p>The <code class="language-js" >sayHiOnDispatch</code> enhancer wrapped the original <code class="language-js" >store.dispatch</code> function with its own specialized version of <code class="language-js" >dispatch</code>. When we called <code class="language-js" >store.dispatch()</code>, we were actually calling the wrapper function from <code class="language-js" >sayHiOnDispatch</code>, which called the original and then printed ‘Hi’.</p>
+<p>Now, let’s try adding a second enhancer. We can import <code class="language-js" >includeMeaningOfLife</code> from that same file… but we have a problem. <strong><code class="language-js" >createStore</code> only accepts one enhancer as its third argument!</strong> How can we pass <em>two</em> enhancers at the same time?</p>
+<p>What we really need is some way to merge both the <code class="language-js" >sayHiOnDispatch</code> enhancer and the <code class="language-js" >includeMeaningOfLife</code> enhancer into a single combined enhancer, and then pass that instead.</p>
+<p>Fortunately, <strong>the Redux core includes <a href="../../api/compose.html">a <code class="language-js" >compose</code> function</a> that can be used to merge multiple enhancers together</strong>. Let’s use that here:</p>
 <p>src/store.js</p>
 <p><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createStore</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> compose </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘redux’</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">rootReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘./reducer’</span><span class="token plain"></span></p>
@@ -381,22 +381,22 @@
 <figure>
 <img src="../../../d33wubrfki0l68.cloudfront.net/3ad0cba4033646d27f22f76eb8c38e27faedae3d/bcbac/assets/images/meaningoflife-enhancer-logging-46b98c1363a85b3657bd6e" alt="meaningOfLife store enhancer logging" /><figcaption>meaningOfLife store enhancer logging</figcaption>
 </figure>
-<p>So, we can see that both enhancers are modifying the behavior of the store at the same time. <code class="language-js >sayHiOnDispatch</code> has changed how <code class="language-js >dispatch</code> works, and <code class="language-js >includeMeaningOfLife</code> has changed how <code class="language-js >getState</code> works.</p>
+<p>So, we can see that both enhancers are modifying the behavior of the store at the same time. <code class="language-js" >sayHiOnDispatch</code> has changed how <code class="language-js" >dispatch</code> works, and <code class="language-js" >includeMeaningOfLife</code> has changed how <code class="language-js" >getState</code> works.</p>
 <p>Store enhancers are a very powerful way to modify the store, and almost all Redux apps will include at least one enhancer when setting up the store.</p>
 <h5 id="tip-2"><span class="admonition-icon"> </span>tip</h5>
-<p>If you don’t have any <code class="language-js >preloadedState</code> to pass in, you can pass the <code class="language-js >enhancer</code> as the second argument instead:</p>
+<p>If you don’t have any <code class="language-js" >preloadedState</code> to pass in, you can pass the <code class="language-js" >enhancer</code> as the second argument instead:</p>
 <p><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> store </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createStore</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">rootReducer</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> storeEnhancer</span><span class="token punctuation" style="color: #f8f8f2">)</span></p>
 <p>Copy</p>
 <h2 id="middleware"><span id="middleware" class="anchor enhancedAnchor_2LWZ"></span>Middleware<a href="#middleware" class="hash-link" title="Direct link to heading">#</a></h2>
-<p>Enhancers are powerful because they can override or replace any of the store’s methods: <code class="language-js >dispatch</code>, <code class="language-js >getState</code>, and <code class="language-js >subscribe</code>.</p>
-<p>But, much of the time, we only need to customize how <code class="language-js >dispatch</code> behaves. It would be nice if there was a way to add some customized behavior when <code class="language-js >dispatch</code> runs.</p>
-<p>Redux uses a special kind of addon called <strong>middleware</strong> to let us customize the <code class="language-js >dispatch</code> function.</p>
+<p>Enhancers are powerful because they can override or replace any of the store’s methods: <code class="language-js" >dispatch</code>, <code class="language-js" >getState</code>, and <code class="language-js" >subscribe</code>.</p>
+<p>But, much of the time, we only need to customize how <code class="language-js" >dispatch</code> behaves. It would be nice if there was a way to add some customized behavior when <code class="language-js" >dispatch</code> runs.</p>
+<p>Redux uses a special kind of addon called <strong>middleware</strong> to let us customize the <code class="language-js" >dispatch</code> function.</p>
 <p>If you’ve ever used a library like Express or Koa, you might already be familiar with the idea of adding middleware to customize behavior. In these frameworks, middleware is some code you can put between the framework receiving a request, and the framework generating a response. For example, Express or Koa middleware may add CORS headers, logging, compression, and more. The best feature of middleware is that it’s composable in a chain. You can use multiple independent third-party middleware in a single project.</p>
 <p>Redux middleware solves different problems than Express or Koa middleware, but in a conceptually similar way. <strong>Redux middleware provides a third-party extension point between dispatching an action, and the moment it reaches the reducer.</strong> People use Redux middleware for logging, crash reporting, talking to an asynchronous API, routing, and more.</p>
 <p>First, we’ll look at how to add middleware to the store, then we’ll show how you can write your own.</p>
 <h3 id="using-middleware"><span id="using-middleware" class="anchor enhancedAnchor_2LWZ"></span>Using Middleware<a href="#using-middleware" class="hash-link" title="Direct link to heading">#</a></h3>
-<p>We already saw that you can customize a Redux store using store enhancers. Redux middleware are actually implemented on top of a very special store enhancer that comes built in with Redux, called <strong><code class="language-js >applyMiddleware</code></strong>.</p>
-<p>Since we already know how to add enhancers to our store, we should be able to do that now. We’ll start with <code class="language-js >applyMiddleware</code> by itself, and we’ll add three example middleware that have been included in this project.</p>
+<p>We already saw that you can customize a Redux store using store enhancers. Redux middleware are actually implemented on top of a very special store enhancer that comes built in with Redux, called <strong><code class="language-js" >applyMiddleware</code></strong>.</p>
+<p>Since we already know how to add enhancers to our store, we should be able to do that now. We’ll start with <code class="language-js" >applyMiddleware</code> by itself, and we’ll add three example middleware that have been included in this project.</p>
 <p>src/store.js</p>
 <p><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createStore</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> applyMiddleware </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘redux’</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports">rootReducer</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘./reducer’</span><span class="token plain"></span></p>
@@ -424,20 +424,20 @@
 <img src="data:image/png;base64,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" alt="print middleware logging" /><figcaption>print middleware logging</figcaption>
 </figure>
 <p>So how does that work?</p>
-<p><strong>Middleware form a pipeline around the store’s <code class="language-js >dispatch</code> method</strong>. When we call <code class="language-js >store.dispatch(action)</code>, we’re <em>actually</em> calling the first middleware in the pipeline. That middleware can then do anything it wants when it sees the action. Typically, a middleware will check to see if the action is a specific type that it cares about, much like a reducer would. If it’s the right type, the middleware might run some custom logic. Otherwise, it passes the action to the next middleware in the pipeline.</p>
+<p><strong>Middleware form a pipeline around the store’s <code class="language-js" >dispatch</code> method</strong>. When we call <code class="language-js" >store.dispatch(action)</code>, we’re <em>actually</em> calling the first middleware in the pipeline. That middleware can then do anything it wants when it sees the action. Typically, a middleware will check to see if the action is a specific type that it cares about, much like a reducer would. If it’s the right type, the middleware might run some custom logic. Otherwise, it passes the action to the next middleware in the pipeline.</p>
 <p><em>Unlike</em> a reducer, <strong>middleware can have side effects inside</strong>, including timeouts and other async logic.</p>
 <p>In this case, the action is passed through:</p>
 <ol type="1">
-<li>The <code class="language-js >print1</code> middleware (which we see as <code class="language-js >store.dispatch</code>)</li>
-<li>The <code class="language-js >print2</code> middleware</li>
-<li>The <code class="language-js >print3</code> middleware</li>
-<li>The original <code class="language-js >store.dispatch</code></li>
-<li>The root reducer inside <code class="language-js >store</code></li>
+<li>The <code class="language-js" >print1</code> middleware (which we see as <code class="language-js" >store.dispatch</code>)</li>
+<li>The <code class="language-js" >print2</code> middleware</li>
+<li>The <code class="language-js" >print3</code> middleware</li>
+<li>The original <code class="language-js" >store.dispatch</code></li>
+<li>The root reducer inside <code class="language-js" >store</code></li>
 </ol>
-<p>And since these are all function calls, they all <em>return</em> from that call stack. So, the <code class="language-js >print1</code> middleware is the first to run, and the last to finish.</p>
+<p>And since these are all function calls, they all <em>return</em> from that call stack. So, the <code class="language-js" >print1</code> middleware is the first to run, and the last to finish.</p>
 <h3 id="writing-custom-middleware"><span id="writing-custom-middleware" class="anchor enhancedAnchor_2LWZ"></span>Writing Custom Middleware<a href="#writing-custom-middleware" class="hash-link" title="Direct link to heading">#</a></h3>
 <p>We can also write our own middleware. You might not need to do this all the time, but custom middleware are a great way to add specific behaviors to a Redux application.</p>
-<p><strong>Redux middleware are written as a series of three nested functions</strong>. Let’s see what that pattern looks like. We’ll start by trying to write this middleware using the <code class="language-js >function</code> keyword, so that it’s more clear what’s happening:</p>
+<p><strong>Redux middleware are written as a series of three nested functions</strong>. Let’s see what that pattern looks like. We’ll start by trying to write this middleware using the <code class="language-js" >function</code> keyword, so that it’s more clear what’s happening:</p>
 <p><span class="token comment" style="color: #c6cad2">// Middleware written as ES5 functions</span><span class="token plain"></span></p>
 <p><span class="token plain" style="display: inline-block"> </span></p>
 <p><span class="token plain"></span><span class="token comment" style="color: #c6cad2">// Outer function:</span><span class="token plain"></span></p>
@@ -455,18 +455,18 @@
 <p>Copy</p>
 <p>Let’s break down what these three functions do and what their arguments are.</p>
 <ul>
-<li><code class="language-js >exampleMiddleware</code>: The outer function is actually the “middleware” itself. It will be called by <code class="language-js >applyMiddleware</code>, and receives a <code class="language-js >storeAPI</code> object containing the store’s <code class="language-js >{dispatch, getState}</code> functions. These are the same <code class="language-js >dispatch</code> and <code class="language-js >getState</code> functions that are actually part of the store. If you call this <code class="language-js >dispatch</code> function, it will send the action to the <em>start</em> of the middleware pipeline. This is only called once.</li>
-<li><code class="language-js >wrapDispatch</code>: The middle function receives a function called <code class="language-js >next</code> as its argument. This function is actually the <em>next middleware</em> in the pipeline. If this middleware is the last one in the sequence, then <code class="language-js >next</code> is actually the original <code class="language-js >store.dispatch</code> function instead. Calling <code class="language-js >next(action)</code> passes the middleware to the <em>next</em> middleware in the pipeline. This is also only called once</li>
-<li><code class="language-js >handleAction</code>: Finally, the inner function receives the current <code class="language-js >action</code> as its argument, and will be called <em>every</em> time an action is dispatched.</li>
+<li><code class="language-js" >exampleMiddleware</code>: The outer function is actually the “middleware” itself. It will be called by <code class="language-js" >applyMiddleware</code>, and receives a <code class="language-js" >storeAPI</code> object containing the store’s <code class="language-js" >{dispatch, getState}</code> functions. These are the same <code class="language-js" >dispatch</code> and <code class="language-js" >getState</code> functions that are actually part of the store. If you call this <code class="language-js" >dispatch</code> function, it will send the action to the <em>start</em> of the middleware pipeline. This is only called once.</li>
+<li><code class="language-js" >wrapDispatch</code>: The middle function receives a function called <code class="language-js" >next</code> as its argument. This function is actually the <em>next middleware</em> in the pipeline. If this middleware is the last one in the sequence, then <code class="language-js" >next</code> is actually the original <code class="language-js" >store.dispatch</code> function instead. Calling <code class="language-js" >next(action)</code> passes the middleware to the <em>next</em> middleware in the pipeline. This is also only called once</li>
+<li><code class="language-js" >handleAction</code>: Finally, the inner function receives the current <code class="language-js" >action</code> as its argument, and will be called <em>every</em> time an action is dispatched.</li>
 </ul>
 <h5 id="tip-3"><span class="admonition-icon"> </span>tip</h5>
 <p>You can give these middleware functions any names you want, but it can help to use these names to remember what each one does:</p>
 <ul>
-<li>Outer: <code class="language-js >someCustomMiddleware</code> (or whatever your middleware is called)</li>
-<li>Middle: <code class="language-js >wrapDispatch</code></li>
-<li>Inner: <code class="language-js >handleAction</code></li>
+<li>Outer: <code class="language-js" >someCustomMiddleware</code> (or whatever your middleware is called)</li>
+<li>Middle: <code class="language-js" >wrapDispatch</code></li>
+<li>Inner: <code class="language-js" >handleAction</code></li>
 </ul>
-<p>Because these are normal functions, we can also write them using ES6 arrow functions. This lets us write them shorter because arrow functions don’t have to have a <code class="language-js >return</code> statement, but it can also be a bit harder to read if you’re not yet familiar with arrow functions and implicit returns.</p>
+<p>Because these are normal functions, we can also write them using ES6 arrow functions. This lets us write them shorter because arrow functions don’t have to have a <code class="language-js" >return</code> statement, but it can also be a bit harder to read if you’re not yet familiar with arrow functions and implicit returns.</p>
 <p>Here’s the same example as above, using arrow functions:</p>
 <p><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">anotherExampleMiddleware</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token parameter">storeAPI</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token parameter">next</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token parameter">action</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Do something in here, when each action is dispatched</span><span class="token plain"></span></p>
@@ -489,13 +489,13 @@
 <p>Copy</p>
 <p>Whenever an action is dispatched:</p>
 <ul>
-<li>The first part of the <code class="language-js >handleAction</code> function runs, and we print <code class="language-js >'dispatching'</code></li>
-<li>We pass the action to the <code class="language-js >next</code> section, which may be another middleware or the real <code class="language-js >store.dispatch</code></li>
-<li>Eventually the reducers run and the state is updated, and the <code class="language-js >next</code> function returns</li>
-<li>We can now call <code class="language-js >storeAPI.getState()</code> and see what the new state is</li>
-<li>We finish by returning whatever <code class="language-js >result</code> value came from the <code class="language-js >next</code> middleware</li>
+<li>The first part of the <code class="language-js" >handleAction</code> function runs, and we print <code class="language-js" >'dispatching'</code></li>
+<li>We pass the action to the <code class="language-js" >next</code> section, which may be another middleware or the real <code class="language-js" >store.dispatch</code></li>
+<li>Eventually the reducers run and the state is updated, and the <code class="language-js" >next</code> function returns</li>
+<li>We can now call <code class="language-js" >storeAPI.getState()</code> and see what the new state is</li>
+<li>We finish by returning whatever <code class="language-js" >result</code> value came from the <code class="language-js" >next</code> middleware</li>
 </ul>
-<p>Any middleware can return any value, and the return value from the first middleware in the pipeline is actually returned when you call <code class="language-js >store.dispatch()</code>. For example:</p>
+<p>Any middleware can return any value, and the return value from the first middleware in the pipeline is actually returned when you call <code class="language-js" >store.dispatch()</code>. For example:</p>
 <p><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: #e6d874">alwaysReturnHelloMiddleware</span><span class="token plain"> </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token parameter">storeAPI</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> </span><span class="token parameter">next</span><span class="token plain"> </span><span class="token arrow operator" style="color: #f8f8f2">=&gt;</span><span class="token plain"> action </span><span class="token punctuation" style="color: #f8f8f2">{</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> originalResult </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">next</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">action</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token punctuation" style="color: #f8f8f2">;</span><span class="token plain"></span></p>
 <p><span class="token plain"> </span><span class="token comment" style="color: #c6cad2">// Ignore the original result, return something else</span><span class="token plain"></span></p>
@@ -532,7 +532,7 @@
 <li>Pause the action or even stop it entirely</li>
 </ul>
 <p>and anything else you can think of.</p>
-<p>In particular, <strong>middleware are <em>intended</em> to contain logic with side effects</strong>. In addition, <strong>middleware can modify <code class="language-js >dispatch</code> to accept things that are <em>not</em> plain action objects</strong>. We’ll talk more about both of these <a href="part-6-async-logic.html">in Part 6: Async Logic</a>.</p>
+<p>In particular, <strong>middleware are <em>intended</em> to contain logic with side effects</strong>. In addition, <strong>middleware can modify <code class="language-js" >dispatch</code> to accept things that are <em>not</em> plain action objects</strong>. We’ll talk more about both of these <a href="part-6-async-logic.html">in Part 6: Async Logic</a>.</p>
 <h2 id="redux-devtools"><span id="redux-devtools" class="anchor enhancedAnchor_2LWZ"></span>Redux DevTools<a href="#redux-devtools" class="hash-link" title="Direct link to heading">#</a></h2>
 <p>Finally, there’s one more very important thing to cover with configuring the store.</p>
 <p><strong>Redux was specifically designed to make it easier to understand when, where, why, and how your state has changed over time</strong>. As part of that, Redux was built to enable the use of the <strong>Redux DevTools</strong> - an addon that shows you a history of what actions were dispatched, what those actions contained, and how the state changed after each dispatched action.</p>
@@ -540,7 +540,7 @@
 <p>Once that’s installed, open up the browser’s DevTools window. You should now see a new “Redux” tab there. It doesn’t do anything, yet - we’ve got to set it up to talk to a Redux store first.</p>
 <h3 id="adding-the-devtools-to-the-store"><span id="adding-the-devtools-to-the-store" class="anchor enhancedAnchor_2LWZ"></span>Adding the DevTools to the Store<a href="#adding-the-devtools-to-the-store" class="hash-link" title="Direct link to heading">#</a></h3>
 <p>Once the extension is installed, we need to configure the store so that the DevTools can see what’s happening inside. The DevTools require a specific store enhancer to be added to make that possible.</p>
-<p>The <a href="../../../github.com/zalmoxisus/redux-devtools-extension.html">Redux DevTools Extension docs</a> have some instructions on how to set up the store, but the steps listed are a bit complicated. However, there’s an NPM package called <code class="language-js >redux-devtools-extension</code> that takes care of the complicated part. That package exports a specialized <code class="language-js >composeWithDevTools</code> function that we can use instead of the original Redux <code class="language-js >compose</code> function.</p>
+<p>The <a href="../../../github.com/zalmoxisus/redux-devtools-extension.html">Redux DevTools Extension docs</a> have some instructions on how to set up the store, but the steps listed are a bit complicated. However, there’s an NPM package called <code class="language-js" >redux-devtools-extension</code> that takes care of the complicated part. That package exports a specialized <code class="language-js" >composeWithDevTools</code> function that we can use instead of the original Redux <code class="language-js" >compose</code> function.</p>
 <p>Here’s how that looks:</p>
 <p>src/store.js</p>
 <p><span class="token keyword module" style="color: #f92672">import</span><span class="token plain"> </span><span class="token imports punctuation" style="color: #f8f8f2">{</span><span class="token imports"> createStore</span><span class="token imports punctuation" style="color: #f8f8f2">,</span><span class="token imports"> applyMiddleware </span><span class="token imports punctuation" style="color: #f8f8f2">}</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">from</span><span class="token plain"> </span><span class="token string" style="color: #a6e22e">‘redux’</span><span class="token plain"></span></p>
@@ -557,7 +557,7 @@
 <p><span class="token plain"></span><span class="token keyword" style="color: #f92672">const</span><span class="token plain"> store </span><span class="token operator" style="color: #f8f8f2">=</span><span class="token plain"> </span><span class="token function" style="color: #e6d874">createStore</span><span class="token punctuation" style="color: #f8f8f2">(</span><span class="token plain">rootReducer</span><span class="token punctuation" style="color: #f8f8f2">,</span><span class="token plain"> composedEnhancer</span><span class="token punctuation" style="color: #f8f8f2">)</span><span class="token plain"></span></p>
 <p><span class="token plain"></span><span class="token keyword module" style="color: #f92672">export</span><span class="token plain"> </span><span class="token keyword module" style="color: #f92672">default</span><span class="token plain"> store</span></p>
 <p>Copy</p>
-<p>Make sure that <code class="language-js >index.js</code> is still dispatching an action after importing the store. Now, open up the Redux DevTools tab in the browser’s DevTools window. You should see something that looks like this:</p>
+<p>Make sure that <code class="language-js" >index.js</code> is still dispatching an action after importing the store. Now, open up the Redux DevTools tab in the browser’s DevTools window. You should see something that looks like this:</p>
 <figure>
 <img src="../../../d33wubrfki0l68.cloudfront.net/2cbd2d01597bd210d8ef106cf1a751607856f699/9e971/assets/images/devtools-action-tab-d48da9ccb10f938ecc9d520555dbfe62" alt="Redux DevTools Extension: action tab" /><figcaption>Redux DevTools Extension: action tab</figcaption>
 </figure>
@@ -566,7 +566,7 @@
 <li>The contents of that action object</li>
 <li>The entire Redux state as it looked after the reducer ran</li>
 <li>The diff between the previous state and this state</li>
-<li>If enabled, the function stack trace leading back to the line of code that called <code class="language-js >store.dispatch()</code> in the first place</li>
+<li>If enabled, the function stack trace leading back to the line of code that called <code class="language-js" >store.dispatch()</code> in the first place</li>
 </ul>
 <p>Here’s what the “State” and “Diff” tabs look like after we dispatched that “add todo” action:</p>
 <figure>
@@ -584,24 +584,24 @@
 <ul>
 <li><strong>Redux apps always have a single store</strong>
 <ul>
-<li>Stores are created with the Redux <code class="language-js >createStore</code> API</li>
+<li>Stores are created with the Redux <code class="language-js" >createStore</code> API</li>
 <li>Every store has a single root reducer function</li>
 </ul></li>
 <li><strong>Stores have three main methods</strong>
 <ul>
-<li><code class="language-js >getState</code> returns the current state</li>
-<li><code class="language-js >dispatch</code> sends an action to the reducer to update the state</li>
-<li><code class="language-js >subscribe</code> takes a listener callback that runs each time an action is dispatched</li>
+<li><code class="language-js" >getState</code> returns the current state</li>
+<li><code class="language-js" >dispatch</code> sends an action to the reducer to update the state</li>
+<li><code class="language-js" >subscribe</code> takes a listener callback that runs each time an action is dispatched</li>
 </ul></li>
 <li><strong>Store enhancers let us customize the store when it’s created</strong>
 <ul>
 <li>Enhancers wrap the store and can override its methods</li>
-<li><code class="language-js >createStore</code> accepts one enhancer as an argument</li>
-<li>Multiple enhancers can be merged together using the <code class="language-js >compose</code> API</li>
+<li><code class="language-js" >createStore</code> accepts one enhancer as an argument</li>
+<li>Multiple enhancers can be merged together using the <code class="language-js" >compose</code> API</li>
 </ul></li>
 <li><strong>Middleware are the main way to customize the store</strong>
 <ul>
-<li>Middleware are added using the <code class="language-js >applyMiddleware</code> enhancer</li>
+<li>Middleware are added using the <code class="language-js" >applyMiddleware</code> enhancer</li>
 <li>Middleware are written as three nested functions inside each other</li>
 <li>Middleware run each time an action is dispatched</li>
 <li>Middleware can have side effects inside</li>
@@ -609,7 +609,7 @@
 <li><strong>The Redux DevTools let you see what’s changed in your app over time</strong>
 <ul>
 <li>The DevTools Extension can be installed in your browser</li>
-<li>The store needs the DevTools enhancer added, using <code class="language-js >composeWithDevTools</code></li>
+<li>The store needs the DevTools enhancer added, using <code class="language-js" >composeWithDevTools</code></li>
 <li>The DevTools show dispatched actions and changes in state over time</li>
 </ul></li>
 </ul>

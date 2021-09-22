@@ -101,10 +101,17 @@
       as="script"
     />
     <link rel="preload" href="../assets/js/main.8520a084.js" as="script" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.css"
+    />
 
-<script async defer src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"></script>
-    </head>
+    <script
+      async
+      defer
+      src="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/prism.js"
+    ></script>
+  </head>
   <body>
     <script>
       !(function () {
@@ -1108,8 +1115,8 @@
                         </h2>
                         <p>
                           First, let&#x27;s look at the original
-                          <code class="language-js >index.js</code> file in which we created our
-                          store:
+                          <code class="language-js">index.js</code> file in
+                          which we created our store:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -1454,16 +1461,19 @@
                         </div>
                         <p>
                           In this code, we pass our reducers to the Redux
-                          <code class="language-js >createStore</code> function, which returns a
-                          <code class="language-js >store</code> object. We then pass this object to
-                          the <code class="language-js >react-redux</code>
-                          <code class="language-js >Provider</code> component, which is rendered at
-                          the top of our component tree.
+                          <code class="language-js">createStore</code> function,
+                          which returns a
+                          <code class="language-js">store</code> object. We then
+                          pass this object to the
+                          <code class="language-js">react-redux</code>
+                          <code class="language-js">Provider</code> component,
+                          which is rendered at the top of our component tree.
                         </p>
                         <p>
                           This ensures that any time we connect to Redux in our
-                          app via <code class="language-js >react-redux</code> <code class="language-js >connect</code>,
-                          the store is available to our components.
+                          app via <code class="language-js">react-redux</code>
+                          <code class="language-js">connect</code>, the store is
+                          available to our components.
                         </p>
                         <h2>
                           <a
@@ -1486,8 +1496,8 @@
                             >(note: middleware is common, enhancers are less
                             common)</em
                           >. Middleware adds extra functionality to the Redux
-                          <code class="language-js >dispatch</code> function; enhancers add extra
-                          functionality to the Redux store.
+                          <code class="language-js">dispatch</code> function;
+                          enhancers add extra functionality to the Redux store.
                         </p>
                         <p>We will add two middlewares and one enhancer:</p>
                         <ul>
@@ -1497,7 +1507,8 @@
                               href="../../github.com/reduxjs/redux-thunk.html"
                               target="_blank"
                               rel="noopener noreferrer"
-                              ><code class="language-js >redux-thunk</code> middleware</a
+                              ><code class="language-js">redux-thunk</code>
+                              middleware</a
                             >, which allows simple asynchronous use of dispatch.
                           </li>
                           <li>
@@ -1516,7 +1527,7 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="install-redux-thunk"
                           ></a
-                          >Install <code class="language-js >redux-thunk</code
+                          >Install <code class="language-js">redux-thunk</code
                           ><a
                             class="hash-link"
                             href="#install-redux-thunk"
@@ -2363,49 +2374,64 @@
                         </div>
                         <p>
                           Let&#x27;s add these to our existing
-                          <code class="language-js >index.js</code>.
+                          <code class="language-js">index.js</code>.
                         </p>
                         <ul>
                           <li>
                             <p>
                               First, we need to import
-                              <code class="language-js >redux-thunk</code> plus our
-                              <code class="language-js >loggerMiddleware</code> and
-                              <code class="language-js >monitorReducerEnhancer</code>, plus two
-                              extra functions provided by Redux:
-                              <code class="language-js >applyMiddleware</code> and
-                              <code class="language-js >compose</code>.
+                              <code class="language-js">redux-thunk</code> plus
+                              our
+                              <code class="language-js">loggerMiddleware</code>
+                              and
+                              <code class="language-js"
+                                >monitorReducerEnhancer</code
+                              >, plus two extra functions provided by Redux:
+                              <code class="language-js">applyMiddleware</code>
+                              and <code class="language-js">compose</code>.
                             </p>
                           </li>
                           <li>
                             <p>
-                              We then use <code class="language-js >applyMiddleware</code> to create
-                              a store enhancer which will apply our
-                              <code class="language-js >loggerMiddleware</code> and the
-                              <code class="language-js >thunkMiddleware</code> to the store&#x27;s
-                              dispatch function.
+                              We then use
+                              <code class="language-js">applyMiddleware</code>
+                              to create a store enhancer which will apply our
+                              <code class="language-js">loggerMiddleware</code>
+                              and the
+                              <code class="language-js">thunkMiddleware</code>
+                              to the store&#x27;s dispatch function.
                             </p>
                           </li>
                           <li>
                             <p>
-                              Next, we use <code class="language-js >compose</code> to compose our
-                              new <code class="language-js >middlewareEnhancer</code> and our
-                              <code class="language-js >monitorReducerEnhancer</code> into one
-                              function.
+                              Next, we use
+                              <code class="language-js">compose</code> to
+                              compose our new
+                              <code class="language-js"
+                                >middlewareEnhancer</code
+                              >
+                              and our
+                              <code class="language-js"
+                                >monitorReducerEnhancer</code
+                              >
+                              into one function.
                             </p>
                             <p>
                               This is needed because you can only pass one
-                              enhancer into <code class="language-js >createStore</code>. To use
-                              multiple enhancers, you must first compose them
-                              into a single larger enhancer, as shown in this
-                              example.
+                              enhancer into
+                              <code class="language-js">createStore</code>. To
+                              use multiple enhancers, you must first compose
+                              them into a single larger enhancer, as shown in
+                              this example.
                             </p>
                           </li>
                           <li>
                             <p>
                               Finally, we pass this new
-                              <code class="language-js >composedEnhancers</code> function into
-                              <code class="language-js >createStore</code> as its third argument.
+                              <code class="language-js">composedEnhancers</code>
+                              function into
+                              <code class="language-js">createStore</code> as
+                              its third argument.
                               <em
                                 >Note: the second argument, which we will
                                 ignore, lets you preloaded state into the
@@ -2942,9 +2968,10 @@
                         <p>
                           Most apps use more than one middleware, and each
                           middleware often requires some initial setup. The
-                          extra noise added to the <code class="language-js >index.js</code> can
-                          quickly make it hard to maintain, because the logic is
-                          not cleanly organised.
+                          extra noise added to the
+                          <code class="language-js">index.js</code> can quickly
+                          make it hard to maintain, because the logic is not
+                          cleanly organised.
                         </p>
                         <h2>
                           <a
@@ -2953,7 +2980,8 @@
                             class="anchor enhancedAnchor_2LWZ"
                             id="the-solution-configurestore"
                           ></a
-                          >The solution: <code class="language-js >configureStore</code
+                          >The solution:
+                          <code class="language-js">configureStore</code
                           ><a
                             class="hash-link"
                             href="#the-solution-configurestore"
@@ -2963,13 +2991,15 @@
                         </h2>
                         <p>
                           The solution to this problem is to create a new
-                          <code class="language-js >configureStore</code> function which
-                          encapsulates our store creation logic, which can then
-                          be located in its own file to ease extensibility.
+                          <code class="language-js">configureStore</code>
+                          function which encapsulates our store creation logic,
+                          which can then be located in its own file to ease
+                          extensibility.
                         </p>
                         <p>
-                          The end goal is for our <code class="language-js >index.js</code> to look
-                          like this:
+                          The end goal is for our
+                          <code class="language-js">index.js</code> to look like
+                          this:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -3289,8 +3319,9 @@
                           enhancers - is handled in a dedicated file.
                         </p>
                         <p>
-                          To achieve this, <code class="language-js >configureStore</code> function
-                          looks like this:
+                          To achieve this,
+                          <code class="language-js">configureStore</code>
+                          function looks like this:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -3704,9 +3735,11 @@
                         <ul>
                           <li>
                             <p>
-                              Both <code class="language-js >middlewares</code> and
-                              <code class="language-js >enhancers</code> are defined as arrays,
-                              separate from the functions which consume them.
+                              Both
+                              <code class="language-js">middlewares</code> and
+                              <code class="language-js">enhancers</code> are
+                              defined as arrays, separate from the functions
+                              which consume them.
                             </p>
                             <p>
                               This allows us to easily add more middleware or
@@ -3841,14 +3874,17 @@
                           </li>
                           <li>
                             <p>
-                              A <code class="language-js >preloadedState</code> variable is passed
-                              through to <code class="language-js >createStore</code> in case we
-                              want to add this later.
+                              A
+                              <code class="language-js">preloadedState</code>
+                              variable is passed through to
+                              <code class="language-js">createStore</code> in
+                              case we want to add this later.
                             </p>
                           </li>
                         </ul>
                         <p>
-                          This also makes our <code class="language-js >createStore</code> function
+                          This also makes our
+                          <code class="language-js">createStore</code> function
                           easier to reason about - each step is clearly
                           separated, which makes it more obvious what exactly is
                           happening.
@@ -3870,7 +3906,10 @@
                         <p>
                           Another common feature which you may wish to add to
                           your app is the
-                          <code class="language-js >redux-devtools-extension</code> integration.
+                          <code class="language-js"
+                            >redux-devtools-extension</code
+                          >
+                          integration.
                         </p>
                         <p>
                           The extension is a suite of tools which give you
@@ -3927,11 +3966,16 @@
                           </div>
                         </div>
                         <p>
-                          Next, we remove the <code class="language-js >compose</code> function
-                          which we imported from <code class="language-js >redux</code>, and replace
-                          it with a new
-                          <code class="language-js >composeWithDevTools</code> function imported
-                          from <code class="language-js >redux-devtools-extension</code>.
+                          Next, we remove the
+                          <code class="language-js">compose</code> function
+                          which we imported from
+                          <code class="language-js">redux</code>, and replace it
+                          with a new
+                          <code class="language-js">composeWithDevTools</code>
+                          function imported from
+                          <code class="language-js"
+                            >redux-devtools-extension</code
+                          >.
                         </p>
                         <p>The final code looks like this:</p>
                         <div class="codeBlockContainer_K1bP">
@@ -4407,7 +4451,8 @@
                         </p>
                         <p>
                           First, let&#x27;s add it to our
-                          <code class="language-js >configureStore</code> function:
+                          <code class="language-js">configureStore</code>
+                          function:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -4961,24 +5006,28 @@
                         </div>
                         <p>
                           The new code is wrapped in an
-                          <code class="language-js >if</code> statement, so it only runs when our
-                          app is not in production mode, and only if the
-                          <code class="language-js >module.hot</code> feature is available.
+                          <code class="language-js">if</code> statement, so it
+                          only runs when our app is not in production mode, and
+                          only if the
+                          <code class="language-js">module.hot</code> feature is
+                          available.
                         </p>
                         <p>
                           Bundlers like Webpack and Parcel support a
-                          <code class="language-js >module.hot.accept</code> method to specify which
-                          module should be hot reloaded, and what should happen
-                          when the module changes. In this case, we&#x27;re
-                          watching the <code class="language-js >./reducers</code> module, and
-                          passing the updated <code class="language-js >rootReducer</code> to the
-                          <code class="language-js >store.replaceReducer</code> method when it
-                          changes.
+                          <code class="language-js">module.hot.accept</code>
+                          method to specify which module should be hot reloaded,
+                          and what should happen when the module changes. In
+                          this case, we&#x27;re watching the
+                          <code class="language-js">./reducers</code> module,
+                          and passing the updated
+                          <code class="language-js">rootReducer</code> to the
+                          <code class="language-js">store.replaceReducer</code>
+                          method when it changes.
                         </p>
                         <p>
                           We&#x27;ll also use the same pattern in our
-                          <code class="language-js >index.js</code> to hot reload any changes to our
-                          React components:
+                          <code class="language-js">index.js</code> to hot
+                          reload any changes to our React components:
                         </p>
                         <div class="codeBlockContainer_K1bP">
                           <div class="codeBlockContent_hGly js">
@@ -5461,8 +5510,8 @@
                         <p>
                           The only extra change here is that we have
                           encapsulated our app&#x27;s rendering into a new
-                          <code class="language-js >renderApp</code> function, which we now call to
-                          re-render the app.
+                          <code class="language-js">renderApp</code> function,
+                          which we now call to re-render the app.
                         </p>
                         <h2>
                           <a
@@ -5509,7 +5558,8 @@
                             href="../../redux-toolkit.js.org/api/configureStore.html"
                             target="_blank"
                             rel="noopener noreferrer"
-                            ><code class="language-js >configureStore</code> function</a
+                            ><code class="language-js">configureStore</code>
+                            function</a
                           >
                           like the one shown in the earlier examples.
                         </p>
@@ -5672,24 +5722,28 @@
                           to make it clearer what you&#x27;re passing in.
                         </p>
                         <p>
-                          By default, <code class="language-js >configureStore</code> from Redux
-                          Toolkit will:
+                          By default,
+                          <code class="language-js">configureStore</code> from
+                          Redux Toolkit will:
                         </p>
                         <ul>
                           <li>
-                            Call <code class="language-js >applyMiddleware</code> with
+                            Call
+                            <code class="language-js">applyMiddleware</code>
+                            with
                             <a
                               href="../../redux-toolkit.js.org/api/getDefaultMiddleware.html"
                               target="_blank"
                               rel="noopener noreferrer"
                               >a default list of middleware, including
-                              <code class="language-js >redux-thunk</code></a
+                              <code class="language-js">redux-thunk</code></a
                             >, and some development-only middleware that catch
                             common mistakes like mutating state
                           </li>
                           <li>
-                            Call <code class="language-js >composeWithDevTools</code> to set up the
-                            Redux DevTools Extension
+                            Call
+                            <code class="language-js">composeWithDevTools</code>
+                            to set up the Redux DevTools Extension
                           </li>
                         </ul>
                         <p>
@@ -6196,7 +6250,8 @@
                             target="_blank"
                             rel="noopener noreferrer"
                             >look at the Redux Toolkit
-                            <code class="language-js >configureStore</code> API</a
+                            <code class="language-js">configureStore</code>
+                            API</a
                           >, or take a closer look at some of the
                           <a
                             href="../introduction/ecosystem.html#debuggers-and-viewers"
@@ -6270,7 +6325,8 @@
                         <a
                           href="#the-solution-configurestore"
                           class="table-of-contents__link"
-                          >The solution: <code class="language-js >configureStore</code></a
+                          >The solution:
+                          <code class="language-js">configureStore</code></a
                         >
                       </li>
                       <li>

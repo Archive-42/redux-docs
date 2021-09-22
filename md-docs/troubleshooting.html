@@ -23,26 +23,26 @@
 <p>In short,</p>
 <ul>
 <li>Reducers should never mutate state, they must return new objects, or React Redux won’t see the updates.</li>
-<li>Make sure you are actually <em>dispatching</em> actions. For example, if you have an action creator like <code class="language-js >addTodo</code>, just calling the imported <code class="language-js >addTodo()</code> function by itself won’t do anything because it just <em>returns</em> an action, but does not <em>dispatch</em> it. You either need to call <code class="language-js >dispatch(addTodo())</code> (if using the hooks API) or <code class="language-js >props.addTodo()</code> (if using <code class="language-js >connect</code> + <code class="language-js >mapDispatch</code>).</li>
+<li>Make sure you are actually <em>dispatching</em> actions. For example, if you have an action creator like <code class="language-js" >addTodo</code>, just calling the imported <code class="language-js" >addTodo()</code> function by itself won’t do anything because it just <em>returns</em> an action, but does not <em>dispatch</em> it. You either need to call <code class="language-js" >dispatch(addTodo())</code> (if using the hooks API) or <code class="language-js" >props.addTodo()</code> (if using <code class="language-js" >connect</code> + <code class="language-js" >mapDispatch</code>).</li>
 </ul>
 <h3 id="could-not-find-store-in-either-the-context-or-props">Could not find “store” in either the context or props</h3>
 <p>If you have context issues,</p>
 <ol type="1">
 <li><a href="https://medium.com/@dan_abramov/two-weird-tricks-that-fix-react-7cf9bbdef375">Make sure you don’t have a duplicate instance of React</a> on the page.</li>
-<li>Make sure you didn’t forget to wrap your root or some other ancestor component in <a href="#provider-store"><code class="language-js >&lt;Provider&gt;</code></a>.</li>
+<li>Make sure you didn’t forget to wrap your root or some other ancestor component in <a href="#provider-store"><code class="language-js" >&lt;Provider&gt;</code></a>.</li>
 <li>Make sure you’re running the latest versions of React and React Redux.</li>
 </ol>
 <h3 id="invariant-violation-addcomponentasrefto-only-a-reactowner-can-have-refs.-this-usually-means-that-youre-trying-to-add-a-ref-to-a-component-that-doesnt-have-an-owner">Invariant Violation: addComponentAsRefTo(…): Only a ReactOwner can have refs. This usually means that you’re trying to add a ref to a component that doesn’t have an owner</h3>
 <p>If you’re using React for web, this usually means you have a <a href="https://medium.com/@dan_abramov/two-weird-tricks-that-fix-react-7cf9bbdef375">duplicate React</a>. Follow the linked instructions to fix this.</p>
 <h3 id="im-getting-a-warning-about-uselayouteffect-in-my-unit-tests">I’m getting a warning about useLayoutEffect in my unit tests</h3>
-<p>ReactDOM emits this warning if <code class="language-js >useLayoutEffect</code> is used “on the server”. React Redux tries to get around the issue by detecting whether it is running within a browser context. Jest, by default, defines enough of the browser environment that React Redux thinks it’s running in a browser, causing these warnings.</p>
-<p>You can prevent the warning by setting the <code class="language-js >@jest-environment</code> for a single test file:</p>
-<pre class="language-js ><code class="language-js >// my.test.jsx
+<p>ReactDOM emits this warning if <code class="language-js" >useLayoutEffect</code> is used “on the server”. React Redux tries to get around the issue by detecting whether it is running within a browser context. Jest, by default, defines enough of the browser environment that React Redux thinks it’s running in a browser, causing these warnings.</p>
+<p>You can prevent the warning by setting the <code class="language-js" >@jest-environment</code> for a single test file:</p>
+<pre class="language-js" ><code class="language-js" >// my.test.jsx
 /**
  * @jest-environment node
  */</code></pre>
 <p>Or by setting it globally:</p>
-<pre class="language-js ><code class="language-js >// package.json
+<pre class="language-js" ><code class="language-js" >// package.json
 {
   &quot;name&quot;: &quot;my-project&quot;,
   &quot;jest&quot;: {
