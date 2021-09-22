@@ -38,7 +38,7 @@
     - <a href="part-6-async-logic.html" class="menu__link">Async Logic and Data Fetching</a>
     - <a href="part-7-standard-patterns.html" class="menu__link">Standard Redux Patterns</a>
     - <a href="part-8-modern-redux.html" class="menu__link menu__link--active active">Modern Redux with Redux Toolkit</a>
-- <a href="#!" class="menu__link menu__link--sublist">Recipes</a>
+
   - <a href="../official/recipes/recipe-index.html" class="menu__link">Recipes: Index</a>
   - <a href="../official/recipes/configuring-your-store.html" class="menu__link">Configuring Your Store</a>
   - <a href="../official/recipes/usage-with-typescript.html" class="menu__link">Usage With TypeScript</a>

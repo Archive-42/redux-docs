@@ -35,7 +35,7 @@ Menu
     - <a href="../tutorials/essentials/part-4-using-data.html" class="menu__link">Using Redux Data</a>
     - <a href="../tutorials/essentials/part-5-async-logic.html" class="menu__link">Async Logic and Data Fetching</a>
     - <a href="../tutorials/essentials/part-6-performance-normalization.html" class="menu__link">Performance and Normalizing Data</a>
-  - <a href="#!" class="menu__link menu__link--sublist">Redux Fundamentals</a>
+
     - <a href="../tutorials/fundamentals/part-1-overview.html" class="menu__link">Redux Overview</a>
     - <a href="../tutorials/fundamentals/part-2-concepts-data-flow.html" class="menu__link">Redux Concepts and Data Flow</a>
     - <a href="../tutorials/fundamentals/part-3-state-actions-reducers.html" class="menu__link">State, Actions, and Reducers</a>
@@ -44,7 +44,7 @@ Menu
     - <a href="../tutorials/fundamentals/part-6-async-logic.html" class="menu__link">Async Logic and Data Fetching</a>
     - <a href="../tutorials/fundamentals/part-7-standard-patterns.html" class="menu__link">Standard Redux Patterns</a>
     - <a href="../tutorials/fundamentals/part-8-modern-redux.html" class="menu__link">Modern Redux with Redux Toolkit</a>
-- <a href="#!" class="menu__link menu__link--sublist">Recipes</a>
+
   - <a href="../recipes/recipe-index.html" class="menu__link">Recipes: Index</a>
   - <a href="../recipes/configuring-your-store.html" class="menu__link">Configuring Your Store</a>
   - <a href="../recipes/usage-with-typescript.html" class="menu__link">Usage With TypeScript</a>
@@ -350,5 +350,3 @@ Performance »
 - [![Deploys by Netlify](../../www.netlify.com/img/global/badges/netlify-color-accent.svg)](../../www.netlify.com/index.html)
 
 <a href="../index.html" class="footerLogoLink_MyFc"><img src="../../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" /><img src="../../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
-
-

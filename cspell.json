@@ -3,7 +3,10 @@
     "ignorePaths": [],
     "dictionaryDefinitions": [],
     "dictionaries": [],
-    "words": [],
+    "words": [
+        "Reactiflux",
+        "todos"
+    ],
     "ignoreWords": [],
     "import": []
 }

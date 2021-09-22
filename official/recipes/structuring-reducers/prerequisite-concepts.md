@@ -4,20 +4,20 @@ Menu
 
 <a href="../../index.html" class="navbar__brand"><img src="../../../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><img src="../../../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m navbar__logo" /><strong>Redux</strong></a><a href="../../index.html" class="navbar__brand"><img src="../../../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo" /><img src="../../../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m navbar__logo" /><strong>Redux</strong></a>
 
-  - <a href="../using-object-spread-operator.html" class="menu__link">Using Object Spread Operator</a>
-  - <a href="../reducing-boilerplate.html" class="menu__link">Reducing Boilerplate</a>
-  - <a href="../server-rendering.html" class="menu__link">Server Rendering</a>
-  - <a href="../writing-tests.html" class="menu__link">Writing Tests</a>
-  - <a href="../computing-derived-data.html" class="menu__link">Computing Derived Data</a>
-  - <a href="../implementing-undo-history.html" class="menu__link">Implementing Undo History</a>
-  - <a href="../isolating-redux-sub-apps.html" class="menu__link">Isolating Redux Sub-Apps</a>
-  - <a href="../code-splitting.html" class="menu__link">Code Splitting</a>
-  - <a href="../troubleshooting.html" class="menu__link">Troubleshooting</a>
-  - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Structuring Reducers</a>
-    - <a href="structuring-reducers.html" class="menu__link">Structuring Reducers</a>
-    - <a href="prerequisite-concepts.html" class="menu__link menu__link--active active">Prerequisite Concepts</a>
-      - <a href="immutable-update-patterns.html" class="menu__link">Immutable Update Patterns</a>
-    - <a href="initializing-state.html" class="menu__link">Initializing State</a>
+- <a href="../using-object-spread-operator.html" class="menu__link">Using Object Spread Operator</a>
+- <a href="../reducing-boilerplate.html" class="menu__link">Reducing Boilerplate</a>
+- <a href="../server-rendering.html" class="menu__link">Server Rendering</a>
+- <a href="../writing-tests.html" class="menu__link">Writing Tests</a>
+- <a href="../computing-derived-data.html" class="menu__link">Computing Derived Data</a>
+- <a href="../implementing-undo-history.html" class="menu__link">Implementing Undo History</a>
+- <a href="../isolating-redux-sub-apps.html" class="menu__link">Isolating Redux Sub-Apps</a>
+- <a href="../code-splitting.html" class="menu__link">Code Splitting</a>
+- <a href="../troubleshooting.html" class="menu__link">Troubleshooting</a>
+- <a href="#!" class="menu__link menu__link--sublist menu__link--active">Structuring Reducers</a>
+  - <a href="structuring-reducers.html" class="menu__link">Structuring Reducers</a>
+  - <a href="prerequisite-concepts.html" class="menu__link menu__link--active active">Prerequisite Concepts</a>
+    - <a href="immutable-update-patterns.html" class="menu__link">Immutable Update Patterns</a>
+  - <a href="initializing-state.html" class="menu__link">Initializing State</a>
 - <a href="#!" class="menu__link menu__link--sublist">Understanding Redux</a>
   - <a href="#!" class="menu__link menu__link--sublist">Thinking in Redux</a>
     - <a href="../../understanding/thinking-in-redux/motivation.html" class="menu__link">Motivation</a>
@@ -27,6 +27,7 @@ Menu
     - <a href="../../understanding/history-and-design/prior-art.html" class="menu__link">Prior Art</a>
     - <a href="../../understanding/history-and-design/middleware.html" class="menu__link">Middleware</a>
 - <a href="#!" class="menu__link menu__link--sublist">FAQ</a>
+
   - <a href="../../faq.html" class="menu__link">FAQ Index</a>
   - <a href="../../faq/general.html" class="menu__link">General</a>
   - <a href="../../faq/reducers.html" class="menu__link">Reducers</a>
@@ -37,8 +38,7 @@ Menu
   - <a href="../../faq/code-structure.html" class="menu__link">Code Structure</a>
   - <a href="../../faq/performance.html" class="menu__link">Performance</a>
   - <a href="../../faq/design-decisions.html" class="menu__link">Design Decisions</a>
-  - <a href="../../faq/react-redux.html" class="menu__link">React Redux</a>
-  - <a href="../../faq/miscellaneous.html" class="menu__link">Miscellaneous</a>
+
 - <a href="#!" class="menu__link menu__link--sublist">Style Guide</a>
   - <a href="../../style-guide/style-guide.html" class="menu__link">Style Guide: Best Practices</a>
 - <a href="#!" class="menu__link menu__link--sublist">API Reference</a>
@@ -141,10 +141,4 @@ Next
 
 Basic Reducer Structure »
 
-
-
-
-
 <img src="../../../d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
-
-

@@ -34,7 +34,7 @@ Menu
     - <a href="../../tutorials/essentials/part-4-using-data.html" class="menu__link">Using Redux Data</a>
     - <a href="../../tutorials/essentials/part-5-async-logic.html" class="menu__link">Async Logic and Data Fetching</a>
     - <a href="../../tutorials/essentials/part-6-performance-normalization.html" class="menu__link">Performance and Normalizing Data</a>
-  - <a href="#!" class="menu__link menu__link--sublist">Redux Fundamentals</a>
+
     - <a href="../../tutorials/fundamentals/part-1-overview.html" class="menu__link">Redux Overview</a>
     - <a href="../../tutorials/fundamentals/part-2-concepts-data-flow.html" class="menu__link">Redux Concepts and Data Flow</a>
     - <a href="../../tutorials/fundamentals/part-3-state-actions-reducers.html" class="menu__link">State, Actions, and Reducers</a>
@@ -43,21 +43,8 @@ Menu
     - <a href="../../tutorials/fundamentals/part-6-async-logic.html" class="menu__link">Async Logic and Data Fetching</a>
     - <a href="../../tutorials/fundamentals/part-7-standard-patterns.html" class="menu__link">Standard Redux Patterns</a>
     - <a href="../../tutorials/fundamentals/part-8-modern-redux.html" class="menu__link">Modern Redux with Redux Toolkit</a>
-- <a href="#!" class="menu__link menu__link--sublist">Recipes</a>
-  - <a href="../../recipes/recipe-index.html" class="menu__link">Recipes: Index</a>
-  - <a href="../../recipes/configuring-your-store.html" class="menu__link">Configuring Your Store</a>
-  - <a href="../../recipes/usage-with-typescript.html" class="menu__link">Usage With TypeScript</a>
-  - <a href="../../recipes/migrating-to-redux.html" class="menu__link">Migrating to Redux</a>
-  - <a href="../../recipes/using-object-spread-operator.html" class="menu__link">Using Object Spread Operator</a>
-  - <a href="../../recipes/reducing-boilerplate.html" class="menu__link">Reducing Boilerplate</a>
-  - <a href="../../recipes/server-rendering.html" class="menu__link">Server Rendering</a>
-  - <a href="../../recipes/writing-tests.html" class="menu__link">Writing Tests</a>
-  - <a href="../../recipes/computing-derived-data.html" class="menu__link">Computing Derived Data</a>
-  - <a href="../../recipes/implementing-undo-history.html" class="menu__link">Implementing Undo History</a>
-  - <a href="../../recipes/isolating-redux-sub-apps.html" class="menu__link">Isolating Redux Sub-Apps</a>
-  - <a href="../../recipes/code-splitting.html" class="menu__link">Code Splitting</a>
-  - <a href="../../recipes/troubleshooting.html" class="menu__link">Troubleshooting</a>
-  - <a href="#!" class="menu__link menu__link--sublist">Structuring Reducers</a>
+
+
     - <a href="../../recipes/structuring-reducers/structuring-reducers.html" class="menu__link">Structuring Reducers</a>
     - <a href="../../recipes/structuring-reducers/prerequisite-concepts.html" class="menu__link">Prerequisite Concepts</a>
     - <a href="../../recipes/structuring-reducers/basic-reducer-structure.html" class="menu__link">Basic Reducer Structure</a>
@@ -89,20 +76,8 @@ Menu
   - <a href="../../faq/code-structure.html" class="menu__link">Code Structure</a>
   - <a href="../../faq/performance.html" class="menu__link">Performance</a>
   - <a href="../../faq/design-decisions.html" class="menu__link">Design Decisions</a>
-  - <a href="../../faq/react-redux.html" class="menu__link">React Redux</a>
-  - <a href="../../faq/miscellaneous.html" class="menu__link">Miscellaneous</a>
-- <a href="#!" class="menu__link menu__link--sublist">Style Guide</a>
-  - <a href="../../style-guide/style-guide.html" class="menu__link">Style Guide: Best Practices</a>
-- <a href="#!" class="menu__link menu__link--sublist">API Reference</a>
-  - <a href="../../api/api-reference.html" class="menu__link">API Reference</a>
-  - <a href="../../api/createstore.html" class="menu__link">createStore</a>
-  - <a href="../../api/store.html" class="menu__link">Store</a>
-  - <a href="../../api/combinereducers.html" class="menu__link">combineReducers</a>
-  - <a href="../../api/applymiddleware.html" class="menu__link">applyMiddleware</a>
-  - <a href="../../api/bindactioncreators.html" class="menu__link">bindActionCreators</a>
-  - <a href="../../api/compose.html" class="menu__link">compose</a>
-- <a href="#!" class="menu__link menu__link--sublist">Redux Toolkit</a>
-  - <a href="../../redux-toolkit/overview.html" class="menu__link">Redux Toolkit: Overview</a>
+ 
+
 
 # <span id="middleware" class="anchor enhancedAnchor_2LWZ"></span>Middleware<a href="#middleware" class="hash-link" title="Direct link to heading">#</a>
 

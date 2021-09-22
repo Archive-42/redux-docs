@@ -41,7 +41,7 @@
     - <a href="essentials/part-4-using-data.html" class="menu__link">Using Redux Data</a>
     - <a href="essentials/part-5-async-logic.html" class="menu__link">Async Logic and Data Fetching</a>
     - <a href="essentials/part-6-performance-normalization.html" class="menu__link">Performance and Normalizing Data</a>
-  - <a href="#!" class="menu__link menu__link--sublist">Redux Fundamentals</a>
+
     - <a href="fundamentals/part-1-overview.html" class="menu__link">Redux Overview</a>
     - <a href="fundamentals/part-2-concepts-data-flow.html" class="menu__link">Redux Concepts and Data Flow</a>
     - <a href="fundamentals/part-3-state-actions-reducers.html" class="menu__link">State, Actions, and Reducers</a>
@@ -50,7 +50,7 @@
     - <a href="fundamentals/part-6-async-logic.html" class="menu__link">Async Logic and Data Fetching</a>
     - <a href="fundamentals/part-7-standard-patterns.html" class="menu__link">Standard Redux Patterns</a>
     - <a href="fundamentals/part-8-modern-redux.html" class="menu__link">Modern Redux with Redux Toolkit</a>
-- <a href="#!" class="menu__link menu__link--sublist">Recipes</a>
+
   - <a href="../recipes/recipe-index.html" class="menu__link">Recipes: Index</a>
   - <a href="../recipes/configuring-your-store.html" class="menu__link">Configuring Your Store</a>
   - <a href="../recipes/usage-with-typescript.html" class="menu__link">Usage With TypeScript</a>

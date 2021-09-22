@@ -35,7 +35,7 @@ Menu
     - <a href="https://redux.js.org/tutorials/essentials/part-4-using-data" class="menu__link">Using Redux Data</a>
     - <a href="https://redux.js.org/tutorials/essentials/part-5-async-logic" class="menu__link">Async Logic and Data Fetching</a>
     - <a href="https://redux.js.org/tutorials/essentials/part-6-performance-normalization" class="menu__link">Performance and Normalizing Data</a>
-  - <a href="#!" class="menu__link menu__link--sublist">Redux Fundamentals</a>
+
     - <a href="https://redux.js.org/tutorials/fundamentals/part-1-overview" class="menu__link">Redux Overview</a>
     - <a href="https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow" class="menu__link">Redux Concepts and Data Flow</a>
     - <a href="https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers" class="menu__link">State, Actions, and Reducers</a>
@@ -44,7 +44,7 @@ Menu
     - <a href="https://redux.js.org/tutorials/fundamentals/part-6-async-logic" class="menu__link">Async Logic and Data Fetching</a>
     - <a href="https://redux.js.org/tutorials/fundamentals/part-7-standard-patterns" class="menu__link">Standard Redux Patterns</a>
     - <a href="https://redux.js.org/tutorials/fundamentals/part-8-modern-redux" class="menu__link">Modern Redux with Redux Toolkit</a>
-- <a href="#!" class="menu__link menu__link--sublist">Recipes</a>
+
   - <a href="https://redux.js.org/recipes/recipe-index" class="menu__link">Recipes: Index</a>
   - <a href="https://redux.js.org/recipes/configuring-your-store" class="menu__link">Configuring Your Store</a>
   - <a href="https://redux.js.org/recipes/usage-with-typescript" class="menu__link">Usage With TypeScript</a>
@@ -262,5 +262,3 @@ React Redux »
 - [![Deploys by Netlify](https://www.netlify.com/img/global/badges/netlify-color-accent.svg)](https://www.netlify.com/)
 
 <a href="https://redux.js.org/" class="footerLogoLink_MyFc"><img src="https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--light_3UqQ footer__logo" /><img src="https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" alt="Redux Logo" class="themedImage_1VuW themedImage--dark_hz6m footer__logo" /></a>
-
-

@@ -39,7 +39,7 @@
     - <a href="../official/tutorials/essentials/part-4-using-data.html" class="menu__link">Using Redux Data</a>
     - <a href="../official/tutorials/essentials/part-5-async-logic.html" class="menu__link">Async Logic and Data Fetching</a>
     - <a href="../official/tutorials/essentials/part-6-performance-normalization.html" class="menu__link">Performance and Normalizing Data</a>
-  - <a href="#!" class="menu__link menu__link--sublist">Redux Fundamentals</a>
+
     - <a href="../official/tutorials/fundamentals/part-1-overview.html" class="menu__link">Redux Overview</a>
     - <a href="../official/tutorials/fundamentals/part-2-concepts-data-flow.html" class="menu__link">Redux Concepts and Data Flow</a>
     - <a href="../official/tutorials/fundamentals/part-3-state-actions-reducers.html" class="menu__link">State, Actions, and Reducers</a>
@@ -48,7 +48,7 @@
     - <a href="../official/tutorials/fundamentals/part-6-async-logic.html" class="menu__link">Async Logic and Data Fetching</a>
     - <a href="../official/tutorials/fundamentals/part-7-standard-patterns.html" class="menu__link">Standard Redux Patterns</a>
     - <a href="../official/tutorials/fundamentals/part-8-modern-redux.html" class="menu__link">Modern Redux with Redux Toolkit</a>
-- <a href="#!" class="menu__link menu__link--sublist">Recipes</a>
+
   - <a href="../official/recipes/recipe-index.html" class="menu__link">Recipes: Index</a>
   - <a href="../official/recipes/configuring-your-store.html" class="menu__link">Configuring Your Store</a>
   - <a href="../official/recipes/usage-with-typescript.html" class="menu__link">Usage With TypeScript</a>
@@ -77,8 +77,8 @@
     - <a href="../official/recipes/structuring-reducers/initializing-state.html" class="menu__link">Initializing State</a>
 - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Understanding Redux</a>
   - <a href="#!" class="menu__link menu__link--sublist menu__link--active">Thinking in Redux</a>
-    - <a href="motivation.html" class="menu__link">Motivation</a>
-    - <a href="three-principles.html" class="menu__link menu__link--active active">Three Principles</a>
+
+
     - <a href="glossary.html" class="menu__link">Glossary</a>
   - <a href="#!" class="menu__link menu__link--sublist">History and Design</a>
     - <a href="../history-and-design/prior-art.html" class="menu__link">Prior Art</a>

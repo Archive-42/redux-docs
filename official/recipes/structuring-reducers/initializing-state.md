@@ -1,5 +1,5 @@
-
 # <span id="initializing-state" class="anchor enhancedAnchor_2LWZ">
+
 </span>Initializing State<a href="#initializing-state" class="hash-link" title="Direct link to heading">#</a>
 
 There are two main ways to initialize state for your application. The `createStore` method can accept an optional `preloadedState` value as its second argument. Reducers can also specify an initial value by looking for an incoming state argument that is `undefined`, and returning the value they'd like to use as a default. This can either be done with an explicit check inside the reducer, or by using the ES6 default argument value syntax: `Summary# `
@@ -13,9 +13,11 @@ With `combineReducers()` the behavior is more nuanced. Those reducers whose stat
 _Note: Reducers whose initial state is populated using `preloadedState` will **still need to provide a default value** to handle when passed a `state` of `undefined`. All reducers are passed `undefined` on initialization, so they should be written such that when given `undefined`, some value should be returned. This can be any non-`undefined` value; there's no need to duplicate the section of `preloadedState` here as the default._
 
 ## <span id="in-depth" class="anchor enhancedAnchor_2LWZ">
+
 </span>In Depth<a href="#in-depth" class="hash-link" title="Direct link to heading">#</a>
 
 ### <span id="single-simple-reducer" class="anchor enhancedAnchor_2LWZ">
+
 </span>Single Simple Reducer<a href="#single-simple-reducer" class="hash-link" title="Direct link to heading">#</a>
 
 First let's consider a case where you have a single reducer. Say you don't use `combineReducers()`.
@@ -144,6 +146,7 @@ Let's consider a different scenario:
 <span class="token comment" style="color: #c6cad2">// 42</span>Why is it `42`, and not `0`, this time? Because `createStore` was called with `42` as the second argument. This argument becomes the `state` passed to your reducer along with the dummy action. **This time, `state` is not undefined (it's `42`!), so ES6 default argument syntax has no effect.** The `state` is `42`, and `42` is returned from the reducer.
 
 ### <span id="combined-reducers" class="anchor enhancedAnchor_2LWZ">
+
 </span>Combined Reducers<a href="#combined-reducers" class="hash-link" title="Direct link to heading">#</a>
 
 Now let's consider a case where you use `combineReducers()`. You have two reducers:
@@ -207,7 +210,7 @@ Now let's consider a case where you use `combineReducers()`. You have two reduce
 <span  style="color: #f8f8f2">{</span>
 </span>
 
- a</span>
+a</span>
 <span class="token operator" style="color: #f8f8f2">:</span> </span>
 <span class="token function" style="color: #e6d874">a</span>
 <span  style="color: #f8f8f2">(</span>state</span>
@@ -218,7 +221,7 @@ Now let's consider a case where you use `combineReducers()`. You have two reduce
 <span  style="color: #f8f8f2">,</span>
 </span>
 
- b</span>
+b</span>
 <span class="token operator" style="color: #f8f8f2">:</span> </span>
 <span class="token function" style="color: #e6d874">b</span>
 <span  style="color: #f8f8f2">(</span>state</span>
@@ -321,7 +324,7 @@ Let's recall what the combined reducer does:
 <span  style="color: #f8f8f2">{</span>
 </span>
 
- a</span>
+a</span>
 <span class="token operator" style="color: #f8f8f2">:</span> </span>
 <span class="token function" style="color: #e6d874">a</span>
 <span  style="color: #f8f8f2">(</span>state</span>
@@ -332,7 +335,7 @@ Let's recall what the combined reducer does:
 <span  style="color: #f8f8f2">,</span>
 </span>
 
- b</span>
+b</span>
 <span class="token operator" style="color: #f8f8f2">:</span> </span>
 <span class="token function" style="color: #e6d874">b</span>
 <span  style="color: #f8f8f2">(</span>state</span>
@@ -359,10 +362,3 @@ To sum this up, if you stick to Redux conventions and return the initial state f
 <a href="../../understanding/thinking-in-redux/motivation.html" class="pagination-nav__link">
 </a>
 Motivation »
-
-
-
-
-
-
-

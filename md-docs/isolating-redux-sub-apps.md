@@ -29,7 +29,7 @@
     - <a href="../tutorials/essentials/part-4-using-data.html" class="menu__link">Using Redux Data</a>
     - <a href="../tutorials/essentials/part-5-async-logic.html" class="menu__link">Async Logic and Data Fetching</a>
     - <a href="../tutorials/essentials/part-6-performance-normalization.html" class="menu__link">Performance and Normalizing Data</a>
-  - <a href="#!" class="menu__link menu__link--sublist">Redux Fundamentals</a>
+
     - <a href="../tutorials/fundamentals/part-1-overview.html" class="menu__link">Redux Overview</a>
     - <a href="../tutorials/fundamentals/part-2-concepts-data-flow.html" class="menu__link">Redux Concepts and Data Flow</a>
     - <a href="../tutorials/fundamentals/part-3-state-actions-reducers.html" class="menu__link">State, Actions, and Reducers</a>
